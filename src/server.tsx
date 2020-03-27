@@ -32,8 +32,8 @@ const localeFileMap: { [key: string]: string[] } = {};
 const localeFiles: string[] = fs.readdirSync(`${process.env.RAZZLE_PUBLIC_DIR}/strings`, "UTF8") as string[];
 
 localeFiles.forEach((fileName: string) => {
-	const regexResult: RegExpExecArray = localeFileNameRegex.exec(fileName);
-	let localeCode: string = regexResult && regexResult[1];
+	const regexResult: RegExpExecArray | null = localeFileNameRegex.exec(fileName);
+	let localeCode: string | null = regexResult && regexResult[1];
 
 	if (!localeCode) {
 		return;
@@ -100,7 +100,7 @@ const server: express.Application = express()
 							? `<link rel="stylesheet" href="${assets.client.css}">`
 							: ""
 					}
-					<link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Cinzel&display=swap" rel="stylesheet">
+					<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500&display=swap" rel="stylesheet">
 				</head>
 				<body>
 					<div id="root">${markup}</div>
