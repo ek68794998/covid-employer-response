@@ -35,6 +35,8 @@ class EmployersController extends RoutedControllerBase {
 				const fileContents: string = fs.readFileSync(`${folder}/${fileName}`, "UTF8");
 				const record: EmployerRecord = yaml.parse(fileContents);
 
+				record.id = regexResult[1].toString();
+
 				loadedEmployers.push(record);
 			});
 
