@@ -1,7 +1,7 @@
 {
   "name": "covid-employer-response",
   "version": "1.0.0",
-  "license": "GPLV3",
+  "license": "GPL-3.0",
   "scripts": {
     "start": "razzle start",
     "build": "razzle build",
