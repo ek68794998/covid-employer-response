@@ -1,8 +1,9 @@
-import { EmployerRecord } from "../../common/EmployerRecord";
+import { EmployersState } from "./EmployersState";
+
 import { LocalizedStrings } from "../../common/LocalizedStrings";
 
 export interface AppState {
-	employers: EmployerRecord[]; /* TODO Fix to not use array */
+	employers: EmployersState;
 
 	strings: LocalizedStrings;
 }
