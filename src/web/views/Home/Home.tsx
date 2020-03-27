@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import EmployerDetails from "../EmployerDetails/EmployerDetails";
+import EmployerList from "../EmployerList/EmployerList";
 
 import { AppState } from "../../state/AppState";
 import { getEmployers as dispatchGetEmployers } from "../../state/ducks/employers/actions";
@@ -33,7 +33,7 @@ const Home: React.FC = (): React.ReactElement => {
 				<title>{strings.home}</title>
 			</Helmet>
 			<div className="content">
-				{employers && employers.map((e: EmployerRecord) => <EmployerDetails key={e.id} employer={e} />)}
+				<EmployerList employers={employers} />
 			</div>
 		</main>
 	);
