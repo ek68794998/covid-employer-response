@@ -1,8 +1,10 @@
-import { AnyAction } from "redux";
+import { GetAllType, GetStringsActionTypes } from "./types";
 
-export const getLocalizedStringsSuccess = (payload: any): AnyAction => {
+import { LocalizedStrings } from "../../../../common/LocalizedStrings";
+
+export const getLocalizedStringsSuccess = (payload: LocalizedStrings): GetStringsActionTypes => {
 	return {
 		payload,
-		type: "getLocalizedStringsSuccess",
+		type: GetAllType,
 	};
 };

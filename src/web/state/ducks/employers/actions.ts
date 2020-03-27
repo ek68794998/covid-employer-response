@@ -1,38 +1,27 @@
-import { AnyAction } from "redux";
-
 import { getEmployersApi, GetEmployersApiResponse } from "./api";
+import { GetAllErrorType, GetAllType, GetEmployersActionTypes } from "./types";
 
 import { EmployerRecord } from "../../../../common/EmployerRecord";
 
-export const getEmployersError = (): AnyAction => {
+export const getEmployersError = (): GetEmployersActionTypes => {
 	return {
-		type: "getEmployersError",
+		type: GetAllErrorType,
 	};
 };
 
-export const getEmployersRequest = (): AnyAction => {
-	return {
-		type: "getEmployersRequest",
-	};
-};
-
-export const getEmployersSuccess = (payload: EmployerRecord[]): AnyAction => {
+export const getEmployersSuccess = (payload: EmployerRecord[]): GetEmployersActionTypes => {
 	return {
 		payload,
-		type: "getEmployersSuccess",
+		type: GetAllType,
 	};
 };
 
-export const getEmployers = (dispatch: React.Dispatch<AnyAction>): Promise<void> => {
-	dispatch(getEmployersRequest());
-
-	return (
-		getEmployersApi().then((result: GetEmployersApiResponse) => {
-			if (result.response.status === 200) {
-				dispatch(getEmployersSuccess(result.employers));
-			} else {
-				dispatch(getEmployersError());
-			}
-		})
-	);
-};
+export const getEmployers = (dispatch: React.Dispatch<GetEmployersActionTypes>): Promise<void> => (
+	getEmployersApi().then((result: GetEmployersApiResponse) => {
+		if (result.response.status === 200) {
+			dispatch(getEmployersSuccess(result.employers));
+		} else {
+			dispatch(getEmployersError());
+		}
+	})
+);
