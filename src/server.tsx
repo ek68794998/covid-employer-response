@@ -26,14 +26,14 @@ const syncLoadAssets = (): void => {
 
 syncLoadAssets();
 
-const localeFileNameRegex: RegExp = /^(.*)\.(.*)\.json$/;
+const localeFileNameRegex: RegExp = /^(.*)\.json$/;
 
 const localeFileMap: { [key: string]: string[] } = {};
 const localeFiles: string[] = fs.readdirSync(`${process.env.RAZZLE_PUBLIC_DIR}/strings`, "UTF8") as string[];
 
 localeFiles.forEach((fileName: string) => {
 	const regexResult: RegExpExecArray = localeFileNameRegex.exec(fileName);
-	let localeCode: string = regexResult && regexResult[2];
+	let localeCode: string = regexResult && regexResult[1];
 
 	if (!localeCode) {
 		return;
@@ -63,17 +63,15 @@ const server: express.Application = express()
 		const preloadedState: {} = {}; // TODO
 
 		const localeCode: string = request.languageCode.toLowerCase();
-		const localeData: LocalizedStrings = {};
+		let localeData: LocalizedStrings = {};
 
 		localeFileMap[localeCode].forEach((fileName: string) => {
 			const jsonString: string =
 				fs.readFileSync(`${process.env.RAZZLE_PUBLIC_DIR}/strings/${fileName}`, "UTF8");
 
-			const jsonObject: LocalizedStrings = JSON.parse(jsonString);
+			const jsonData: LocalizedStrings = JSON.parse(jsonString);
 
-			const key: string = localeFileNameRegex.exec(fileName)[1];
-
-			localeData[key] = jsonObject;
+			localeData = { ...localeData, ...jsonData };
 		});
 
 		const store: Store<{}, AnyAction> = configureStore(preloadedState);
