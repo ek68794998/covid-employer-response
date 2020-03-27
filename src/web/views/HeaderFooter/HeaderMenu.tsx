@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 
 import { AppState } from "../../state/AppState";
