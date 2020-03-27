@@ -25,6 +25,7 @@ const HeaderMenu: React.FC<HeaderMenuProps> = (props: HeaderMenuProps): React.Re
 				</div>
 				<ul id="menu">
 					<li><Link to="/">{strings.home}</Link></li>
+					<li><Link to="/about">{strings.about}</Link></li>
 				</ul>
 			</div>
 		</header>
