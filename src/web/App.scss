@@ -1,0 +1,21 @@
+body {
+	background: #000;
+	color: #eee;
+	font: 14px "Meiryo UI";
+	margin: 0;
+
+	#root {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		width: 100%;
+
+		> div {
+			flex: 1;
+		}
+	}
+
+	.loader > div {
+		margin: 8px auto;
+	}
+}
