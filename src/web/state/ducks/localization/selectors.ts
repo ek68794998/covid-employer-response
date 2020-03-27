@@ -1,2 +1,5 @@
-export const getStrings = (state: any): { [key: string]: string } =>
-	state && state.localization && state.localization.strings;
+import { AppState } from "../../AppState";
+
+import { LocalizedStrings } from "../../../../common/LocalizedStrings";
+
+export const getStrings = (state: AppState): LocalizedStrings => state && state.strings;

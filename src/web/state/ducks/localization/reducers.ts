@@ -1,6 +1,4 @@
-import { combineReducers } from "redux";
-
-const getLocalizedStrings = (state: {} = {}, action: any): {} => {
+export const getLocalizedStrings = (state: {} = {}, action: any): {} => {
 	switch (action.type) {
 		case "getLocalizedStringsSuccess":
 			return { ...state, ...action.payload };
@@ -9,7 +7,3 @@ const getLocalizedStrings = (state: {} = {}, action: any): {} => {
 			return state;
 	}
 };
-
-export default combineReducers({
-	strings: getLocalizedStrings,
-});

@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
-import LocalizationReducers from "./localization/reducers";
+import { getLocalizedStrings } from "./localization/reducers";
 
 export default combineReducers({
-	localization: LocalizationReducers,
+	strings: getLocalizedStrings,
 });

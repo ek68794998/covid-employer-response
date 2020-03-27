@@ -29,12 +29,13 @@ export class LocalizationMiddleware {
 		let userLanguage: string = this.defaultLanguage;
 
 		try {
-			const languageHeader: string = request.header("Accept-Language");
+			const languageHeader: string = request.header("Accept-Language") ?? "";
 			const languages: Language[] = parser.parse(languageHeader);
 
 			for (const language of languages) {
 				const languageCode: string = language.code;
-				const regionCode: string = languageCode && language.region && `${languageCode}-${language.region}`;
+				const regionCode: string =
+					(languageCode && language.region && `${languageCode}-${language.region}`) || "";
 
 				if (isValidLanguage(regionCode)) {
 					userLanguage = regionCode;
