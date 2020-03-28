@@ -18,7 +18,7 @@ class EmployersController extends RoutedControllerBase {
 	}
 
 	protected getEmployersList(req: express.Request, res: express.Response): void {
-		if (this.employers.length === 0) {
+		if (!req.header("if-none-match") || this.employers.length === 0) {
 			const folder: string = `${process.env.RAZZLE_PUBLIC_DIR}/employers`;
 
 			const loadedEmployers: EmployerRecord[] = [];
