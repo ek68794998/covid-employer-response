@@ -53,13 +53,27 @@ const getDetailComponents = (employer: EmployerRecord, strings: LocalizedStrings
 		</span>
 	);
 
-	if (employer.employeesBeforeMax > 0) {
+	let employeeCountString: string | null = null;
+
+	if (employer.employeesBeforeMin > 0 || employer.employeesBeforeMax > 0) {
+		if (employer.employeesBeforeMin === employer.employeesBeforeMax) {
+			employeeCountString = employer.employeesBeforeMin.toLocaleString();
+		} else if (employer.employeesBeforeMin > 0 && employer.employeesBeforeMax > 0) {
+			employeeCountString = `${employer.employeesBeforeMin.toLocaleString()} ${String.fromCharCode(0x2013)} ${employer.employeesBeforeMax.toLocaleString()}`;
+		} else if (employer.employeesBeforeMin > 0) {
+			employeeCountString = `More than ${employer.employeesBeforeMin.toLocaleString()}`;
+		} else if (employer.employeesBeforeMax > 0) {
+			employeeCountString = `Less than ${employer.employeesBeforeMax.toLocaleString()}`;
+		}
+	}
+
+	if (employeeCountString) {
 		detailComponents.push(
 			<span key={detailComponents.length} title={strings.detailDescriptions.employees}>
 				<EmployerDetail
 					icon={"people"}
 					iconSize={iconSize}
-					text={`${employer.employeesBeforeMin} ${String.fromCharCode(0x2013)} ${employer.employeesBeforeMax}`}
+					text={employeeCountString}
 				/>
 			</span>
 		);
