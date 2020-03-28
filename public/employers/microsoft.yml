@@ -13,7 +13,7 @@ summary: Microsoft has gone all-in on King County's advice to urge staff to work
 citations:
   - summary: Microsoft employees were advised to stay home on the evening of March 4th, and by March 6th, less than 7,000 Seattle-area employees were working in-office.
     positivity: 1
-    type: publishedNews
+    type: publication
     sources:
       - name: New York Times
         link: https://www.nytimes.com/2020/03/15/technology/microsoft-coronavirus-response.html
@@ -23,7 +23,7 @@ citations:
         date: 2020-03-04T16:44:14Z
   - summary: Two Microsoft employees tested positive for COVID-19, and have received full support from the company.
     positivity: 1
-    type: publishedNews
+    type: publication
     sources:
       - name: Business Insider
         link: https://www.businessinsider.com/microsoft-employees-coronavirus-cases-linkedin-2020-3
@@ -33,7 +33,7 @@ citations:
         date: 2020-03-06T14:04:00Z
   - summary: Vendors working for Microsoft, including cafeteria staff and shuttle drivers, were announced to be receiving full pay through the coronavirus pandemic.
     positivity: 1
-    type: publishedNews
+    type: publication
     sources:
       - name: Microsoft Company Blog
         link: https://blogs.microsoft.com/on-the-issues/2020/03/05/covid-19-microsoft-hourly-workers/
@@ -41,6 +41,6 @@ citations:
   - summary: The work-from-home policy for Microsoft employees is in effect until at least April 7th.
     positivity: 1
     type: hearsay
-  - summary: Builds affected by employees who tested positive for COVID-19 have reportedly been sanitized.
+  - summary: Buildings affected by employees who tested positive for COVID-19 have reportedly been sanitized.
     positivity: 1
     type: hearsay
