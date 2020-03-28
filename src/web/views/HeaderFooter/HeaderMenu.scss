@@ -3,25 +3,35 @@
 header {
 	border-bottom: 1px solid $outline-color;
 	font: 400 24px 'Baloo Chettan 2';
-	padding: 16px 60px;
+	height: 62px;
+	padding: 0 60px;
 	position: fixed;
 	width: 100%;
 
 	.header-container {
 		display: flex;
+		height: 100%;
 		margin: 0 auto;
 		max-width: 1440px;
 	}
 
 	div#brand {
+		align-self: center;
 		flex: 1;
 		font-weight: 600;
+
+		.brand-large {
+			display: block;
+			font-size: 70%;
+			font-weight: 400;
+			margin-top: -10px;
+			opacity: 0.7;
+		}
 	}
 
 	a {
 		color: inherit;
 		opacity: 0.7;
-		padding: 4px 8px 6px;
 		text-decoration: none;
 		transition: 0.3s opacity;
 
@@ -31,16 +41,20 @@ header {
 		}
 	}
 
-	ul#menu {
+	div.menu-link {
+		align-items: center;
+		display: flex;
 		flex: 0;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		white-space: nowrap;
+		height: 100%;
+		margin-left: 16px;
+		padding: 4px 8px 6px;
+	}
+}
 
-		li {
-			display: inline-block;
-			margin-left: 16px;
+@media (max-width: 800px) {
+	header {
+		div#brand .brand-large {
+			display: none;
 		}
 	}
 }

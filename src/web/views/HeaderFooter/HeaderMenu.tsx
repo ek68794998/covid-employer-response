@@ -16,12 +16,11 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		<header>
 			<div className="header-container">
 				<div id="brand">
-					<Link to="/">{strings.appTitle}</Link>
+					<Link to="/">{strings.appTitleShort}</Link>
+					<div className="brand-large">{strings.appTitle}</div>
 				</div>
-				<ul id="menu">
-					<li><Link to="/">{strings.home}</Link></li>
-					<li><Link to="/about">{strings.about}</Link></li>
-				</ul>
+				<div className="menu-link"><Link to="/">{strings.home}</Link></div>
+				<div className="menu-link"><Link to="/about">{strings.about}</Link></div>
 			</div>
 		</header>
 	);

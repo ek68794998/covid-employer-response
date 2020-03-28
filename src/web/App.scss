@@ -9,6 +9,7 @@ body {
 	color: $body-font;
 	font: 14px Merriweather;
 	margin: 0;
+	min-width: 420px;
 
 	#root {
 		display: flex;

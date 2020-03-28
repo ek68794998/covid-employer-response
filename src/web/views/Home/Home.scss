@@ -1,11 +1,18 @@
+@import "../Dimensions.scss";
+
 main#home {
 	margin: 68px auto;
-	max-width: 1440px;
-	padding: 16px 0;
+	padding: 16px $page-padding;
 	width: 100%;
 
-	div.filters {
+	> div {
 		margin: 0 auto;
+		max-width: $body-max-width;
+	}
+
+	div.filters {
+		max-width: ($body-max-width - $page-padding * 2);
+		min-width: ($body-min-width - $page-padding * 2);
 		width: 50%;
 	}
 
