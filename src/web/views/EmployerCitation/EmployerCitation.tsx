@@ -52,7 +52,7 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 			</span>
 			:
 			<span className="citation-summary">{citation.summary}</span>
-			<span className="citation-references">{citation.sources.map(getCitationSourceComponent)}</span>
+			{citation.sources && <span className="citation-references">{citation.sources.map(getCitationSourceComponent)}</span>}
 		</span>
 	);
 };

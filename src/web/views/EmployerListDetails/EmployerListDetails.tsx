@@ -36,7 +36,7 @@ const citationSort = (a: Citation, b: Citation): number => {
 		return bType - aType;
 	}
 
-	return b.sources.length - a.sources.length;
+	return (b.sources ? b.sources.length : 0) - (a.sources ? a.sources.length : 0);
 };
 
 const getDetailComponents = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element[] => {
@@ -153,7 +153,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				.map((value: Citation, i: number) => {
 					const citationSourceBase: number = globalCitationSourceBase;
 
-					globalCitationSourceBase += value.sources.length;
+					globalCitationSourceBase += (value.sources ? value.sources.length : 0);
 
 					return (
 						<li key={i}>

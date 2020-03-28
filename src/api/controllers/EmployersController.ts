@@ -27,15 +27,16 @@ class EmployersController extends RoutedControllerBase {
 
 			employerFileNames.forEach((fileName: string) => {
 				const regexResult: RegExpExecArray | null = EmployersController.employerFileNameRegex.exec(fileName);
+				const recordId: string | null = regexResult && regexResult[1].toString();
 
-				if (!regexResult) {
+				if (!recordId || recordId === "sample") {
 					return;
 				}
 
 				const fileContents: string = fs.readFileSync(`${folder}/${fileName}`, "UTF8");
 				const record: EmployerRecord = yaml.parse(fileContents);
 
-				record.id = regexResult[1].toString();
+				record.id = recordId;
 
 				loadedEmployers.push(record);
 			});
