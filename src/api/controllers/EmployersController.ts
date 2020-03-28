@@ -41,7 +41,9 @@ class EmployersController extends RoutedControllerBase {
 				loadedEmployers.push(record);
 			});
 
-			this.employers = loadedEmployers;
+			this.employers =
+				loadedEmployers.sort(
+					(a: EmployerRecord, b: EmployerRecord) => a.name.localeCompare(b.name));
 		}
 
 		res.setHeader("Content-Type", "application/json");
