@@ -1,3 +1,5 @@
+@import "../Dimensions.scss";
+
 $indicator-glow-size: 3px;
 $indicator-size: 8px;
 
@@ -43,8 +45,10 @@ $indicator-positive: #4caf50;
 	margin-left: 4px;
 }
 
-sup {
+.citation-references {
+	font-size: smaller;
 	line-height: 0;
+	vertical-align: super;
 
 	a {
 		color: #616161;
@@ -53,5 +57,13 @@ sup {
 		&:hover {
 			color: #1565c0;
 		}
+	}
+}
+
+@media (max-width: $body-reduced-width) {
+	.citation-references {
+		font-size: inherit;
+		margin-left: 4px;
+		vertical-align: initial;
 	}
 }
