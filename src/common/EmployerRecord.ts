@@ -1,5 +1,6 @@
 import { Citation } from "./Citation";
 import { EmployerLocation } from "./EmployerLocation";
+import { EmployerRating } from "./EmployerRating";
 
 export class EmployerRecord {
 	public citations: Citation[] = [];
@@ -16,7 +17,7 @@ export class EmployerRecord {
 
 	public officialWebsite?: string;
 
-	public rating: number = 0;
+	public rating: EmployerRating = "fair";
 
 	public summary: string = "";
 
