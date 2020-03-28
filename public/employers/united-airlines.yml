@@ -1,7 +1,3 @@
-# This is a sample YAML file representing a fake employer.
-# It can be used as a template to create others.
-# This file will not be shown in the UI if named 'sample.yml'.
-
 name: Contoso
 wiki: Example
 officialWebsite: https://www.united.com
@@ -13,18 +9,18 @@ location:
   wiki: Chicago
 employeesBeforeMax: 96000
 employeesBeforeMin: 96000
-summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.
+summary: Allowed employees to take voluntary, unpaid leave, and did not plan layoffs. However, after receiving an aid package that was considered insufficient, it was announced that layoffs could be expected.
 citations:
   - summary: United announced on March 4th that they would ask workers to apply for voluntary, unpaid leave to alleviate financial burden on the company. At that time, they had announced that there was no plan to lay off employees.
     positivity: 0
-    type: publishedNews
+    type: publication
     sources:
       - name: Market Watch
         link: https://www.marketwatch.com/story/united-airlines-reduces-us-flights-asks-workers-to-take-unpaid-leave-amid-coronavirus-outbreak-2020-03-04
         date: 2020-03-04T17:48:00-04:00
   - summary: United received a portion of a $25 billion government bailout, with the stipulation that they not lay off any workers through September 30th. They then immediately warned that they expected to cut a number of jobs after September 30th.
     positivity: -1
-    type: publishedNews
+    type: publication
     sources:
       - name: CNBC
         link: https://www.cnbc.com/2020/03/27/corovanirus-fallout-united-airlines-warns-aid-isnt-enough-to-avoid-workforce-cuts.html
