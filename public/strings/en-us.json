@@ -23,9 +23,9 @@
   "noResults": "No results.",
   "officialWebsite": "Official website",
   "ratingLabels": {
-    "0": "Poor",
-    "1": "Fair",
-    "2": "Good"
+    "poor": "Poor",
+    "fair": "Fair",
+    "good": "Good"
   },
   "search": "Search",
   "wikipedia": "Wikipedia page"
