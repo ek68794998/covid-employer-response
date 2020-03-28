@@ -22,8 +22,12 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 
 	const citationType: CitationType = citation.type || "hearsay";
 
+	const indicatorType: string =
+		citation.positivity < 0 ? "negative" : citation.positivity > 0 ? "positive" : "neutral";
+
 	return (
 		<span>
+			<span className={`indicator indicator-${indicatorType}`} />
 			<span
 				className="citation-type"
 				title={strings.citationTypeDescriptions[citationType]}
@@ -31,7 +35,7 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 				{strings.citationTypes[citationType]}
 			</span>
 			:
-			{citation.summary}
+			<span className="citation-summary">{citation.summary}</span>
 		</span>
 	);
 };

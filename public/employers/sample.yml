@@ -11,14 +11,14 @@ employeesBeforeMin: 200
 summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.
 citations:
   - summary: Business does not meet "essential" qualifications but requested to be classified as essential.
-    influence: 0
+    positivity: 0
     type: independentNews
     sources:
       - name: K5 News
         link: http://example.com/king5/1.html
         date: 2020-03-25T08:42:19Z
   - summary: Employees who requested paid time off were rejected.
-    influence: -1
+    positivity: -1
     type: corroboratedNews
     sources:
       - name: New York Times
@@ -28,7 +28,7 @@ citations:
         link: http://example.com/cnn/2.html
         date: 2020-03-20T21:42:11Z
   - summary: Sick employee was reported in workspace and was not sent home.
-    influence: -1
+    positivity: -1
     type: hearsay
     sources:
       - name: "Twitter: John Doe"

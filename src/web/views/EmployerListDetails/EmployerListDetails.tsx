@@ -47,12 +47,14 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	}
 
 	return (
-		<div>
-			{employer.name}
-			<button onClick={onClick}>Click</button>
-			<ul>
-				{citations}
-			</ul>
+		<div className="employer-container">
+			<button className="employer-header" onClick={onClick}>
+				<div className="employer-title">{employer.name}</div>
+				<span>&#x25BC;</span>
+			</button>
+			<div className="employer-body">
+				{citations.length > 0 && <ul className="employer-citations">{citations}</ul>}
+			</div>
 		</div>
 	);
 };
