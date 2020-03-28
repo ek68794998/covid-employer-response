@@ -2,29 +2,29 @@
 # It can be used as a template to create others.
 # This file will not be shown in the UI if named 'sample.yml'.
 
-name: Contoso
-wiki: Example
-officialWebsite: http://example.com
-rating: 1
+name: Contoso # The official name of the company.
+wiki: Example # The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
+officialWebsite: http://example.com # The root URL of the company's webpage, if any.
+rating: fair # 'poor', 'fair', or 'good'
 location:
   city: Seattle
   state: WA
   country: USA
-  wiki: Seattle
-employeesBeforeMax: 500
-employeesBeforeMin: 200
+  wiki: Seattle # The subpath for the location's English Wikipedia page, if any.
+employeesBeforeMax: 500 # The upper bound (if known) for the range of company employees prior to 2020.
+employeesBeforeMin: 200 # The lower bound (if known) for the range of company employees prior to 2020.
 summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.
 citations:
   - summary: Business does not meet "essential" qualifications but requested to be classified as essential.
     positivity: 0
-    type: independentNews
+    type: statement # Indicates that the **original** fact source is a published statement from an employee, whether they are a current, former, or anonymous source.
     sources:
       - name: K5 News
         link: http://example.com/king5/1.html
         date: 2020-03-25T08:42:19Z
   - summary: Employees who requested paid time off were rejected.
     positivity: -1
-    type: corroboratedNews
+    type: publication # Indicates that the **original** fact source is an open publication such as a PR statement, company blog, leaked document, or government report.
     sources:
       - name: New York Times
         link: http://example.com/nyt/1.html
@@ -34,7 +34,7 @@ citations:
         date: 2020-03-20T21:42:11Z
   - summary: Sick employee was reported in workspace and was not sent home.
     positivity: -1
-    type: hearsay
+    type: hearsay # Indicates that the **original** fact source is word of mouth, a rumor, or an unconfirmed (or impossible-to-confirm) statement.
     sources:
       - name: "Twitter: John Doe"
         link: http://twitter.com/not-a-real-twitter-acct/13814781

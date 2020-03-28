@@ -48,7 +48,7 @@ const getDetailComponents = (employer: EmployerRecord, strings: LocalizedStrings
 			<EmployerDetail
 				icon={"thumbs_up_down"}
 				iconSize={iconSize}
-				text={strings.ratingLabels[`${employer.rating}`]}
+				text={strings.ratingLabels[employer.rating]}
 			/>
 		</span>
 	);
