@@ -1,5 +1,6 @@
 import React from "react";
 import { hydrate } from "react-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { AnyAction, Store } from "redux";
@@ -11,9 +12,11 @@ const store: Store<{}, AnyAction> = configureStore((window as any).__PRELOADED_S
 
 hydrate(
 	<Provider store={store}>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
+		<HelmetProvider>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</HelmetProvider>
 	</Provider>,
 	document.getElementById("root"),
 );

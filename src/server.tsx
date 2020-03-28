@@ -2,7 +2,7 @@ import express from "express";
 import fs from "fs";
 import React from "react";
 import { renderToString } from "react-dom/server";
-import { Helmet, HelmetData } from "react-helmet";
+import { FilledContext, HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
 import { StaticRouter } from "react-router-dom";
 import { AnyAction, Store } from "redux";
@@ -77,15 +77,19 @@ const server: express.Application = express()
 		const store: Store<{}, AnyAction> = configureStore(preloadedState);
 		store.dispatch(getLocalizedStringsSuccess(localeData));
 
+		const helmetContext: {} = {};
+
 		const markup: string = renderToString(
 			<Provider store={store}>
-				<StaticRouter context={context} location={req.url}>
-					<App />
-				</StaticRouter>
+				<HelmetProvider context={helmetContext}>
+					<StaticRouter context={context} location={req.url}>
+						<App />
+					</StaticRouter>
+				</HelmetProvider>
 			</Provider>,
 		);
 
-		const helmet: HelmetData = Helmet.renderStatic();
+		const { helmet } = helmetContext as FilledContext;
 
 		res.send(
 			`<!doctype html>
