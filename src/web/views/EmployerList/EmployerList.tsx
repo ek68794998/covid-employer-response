@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { LocalizedStrings } from "../../../common/LocalizedStrings";
+
+import { AppState } from "../../state/AppState";
+import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";
 
@@ -16,32 +21,38 @@ interface Props extends RouteComponentProps {
 }
 
 const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
-	const [ openRow, setOpenRow ] = useState(-1);
-
+	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
 	const { employers, searchFilter } = props;
 
-	const onClick = (i: number): void => {
-		setOpenRow(openRow === i ? -1 : i);
-	};
+	const [ openRow, setOpenRow ] = useState("");
 
-	const getEmployerComponent = (e: EmployerRecord, i: number): JSX.Element | null => {
-		if (!EmployerListSearchFilter.isMatch(searchFilter, e)) {
-			return null;
-		}
+	const filteredEmployers: EmployerRecord[] =
+		employers ? employers.filter((e: EmployerRecord) => EmployerListSearchFilter.isMatch(searchFilter, e)) : [];
 
+	if (!filteredEmployers.length) {
 		return (
-			<EmployerListDetails
-				key={`${i}-${e.id}`}
-				employer={e}
-				isOpen={openRow === i}
-				onClick={(): void => onClick(i)}
-			/>
+			<div className="no-results">
+				{strings.noResults}
+			</div>
 		);
+	}
+
+	const onClick = (id: string): void => {
+		setOpenRow(openRow === id ? "" : id);
 	};
+
+	const getEmployerComponent = (e: EmployerRecord, i: number): JSX.Element | null => (
+		<EmployerListDetails
+			key={`${i}-${e.id}`}
+			employer={e}
+			isOpen={openRow === e.id}
+			onClick={(): void => onClick(e.id)}
+		/>
+	);
 
 	return (
 		<div>
-			{employers && employers.map(getEmployerComponent)}
+			{employers.map(getEmployerComponent)}
 		</div>
 	);
 };
