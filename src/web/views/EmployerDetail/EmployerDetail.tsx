@@ -23,7 +23,7 @@ const EmployerDetail: React.FC<Props> = (props: Props): React.ReactElement => {
 	return (
 		<>
 			<i className="icon material-icons" style={style}>{icon}</i>
-			{link ? <a href={link} target="_blank">{text}</a> : <>{text}</>}
+			{link ? <a className="label" href={link} target="_blank">{text}</a> : <span className="label">{text}</span>}
 		</>
 	);
 };

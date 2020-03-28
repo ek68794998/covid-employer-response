@@ -44,65 +44,69 @@ const getDetailComponents = (employer: EmployerRecord, strings: LocalizedStrings
 	const detailComponents: JSX.Element[] = [];
 
 	detailComponents.push(
-		<li key={detailComponents.length} title={strings.detailDescriptions.rating}>
+		<span key={detailComponents.length} title={strings.detailDescriptions.rating}>
 			<EmployerDetail
 				icon={"thumbs_up_down"}
 				iconSize={iconSize}
 				text={strings.ratingLabels[`${employer.rating}`]}
 			/>
-		</li>
+		</span>
 	);
 
 	if (employer.employeesBeforeMax > 0) {
 		detailComponents.push(
-			<li key={detailComponents.length} title={strings.detailDescriptions.employees}>
+			<span key={detailComponents.length} title={strings.detailDescriptions.employees}>
 				<EmployerDetail
 					icon={"people"}
 					iconSize={iconSize}
 					text={`${employer.employeesBeforeMin} ${String.fromCharCode(0x2013)} ${employer.employeesBeforeMax}`}
 				/>
-			</li>
+			</span>
 		);
 	}
+
+	detailComponents.push(
+		<span className="break" />
+	);
 
 	const locationWikipediaUrl: string | null = getWikipediaUrl(employer.location.wiki);
 
 	detailComponents.push(
-		<li key={detailComponents.length} title={strings.detailDescriptions.location}>
+		<span key={detailComponents.length} title={strings.detailDescriptions.location}>
 			<EmployerDetail
 				icon={"place"}
 				iconSize={iconSize}
 				link={locationWikipediaUrl}
 				text={employerLocationToString(employer.location)}
 			/>
-		</li>
+		</span>
 	);
 
 	const employerWikipediaUrl: string | null = getWikipediaUrl(employer.wiki);
 
 	if (employerWikipediaUrl) {
 		detailComponents.push(
-			<li key={detailComponents.length} title={strings.detailDescriptions.wikipedia}>
+			<span key={detailComponents.length} className="label-hides" title={strings.detailDescriptions.wikipedia}>
 				<EmployerDetail
 					icon={"language"}
 					iconSize={iconSize}
 					link={employerWikipediaUrl}
 					text={strings.wikipedia}
 				/>
-			</li>
+			</span>
 		);
 	}
 
 	if (employer.officialWebsite) {
 		detailComponents.push(
-			<li key={detailComponents.length} title={strings.detailDescriptions.officialWebsite}>
+			<span key={detailComponents.length} className="label-hides" title={strings.detailDescriptions.officialWebsite}>
 				<EmployerDetail
 					icon={"home"}
 					iconSize={iconSize}
 					link={employer.officialWebsite}
 					text={strings.officialWebsite}
 				/>
-			</li>
+			</span>
 		);
 	}
 
@@ -146,9 +150,9 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 
 		body = (
 			<div className="employer-body">
-				<ul className="employer-details">
+				<div className="employer-details">
 					{getDetailComponents(employer, strings)}
-				</ul>
+				</div>
 				<div className="employer-summary">{employer.summary}</div>
 				{citations.length > 0 && <ul className="employer-citations">{citations}</ul>}
 			</div>
