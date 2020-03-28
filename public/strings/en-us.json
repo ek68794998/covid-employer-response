@@ -12,5 +12,19 @@
     "independentNews": "News (Single)",
     "hearsay": "Hearsay"
   },
-  "home": "Home"
+  "detailDescriptions": {
+    "employees": "The approximate number of employees the company had prior to the Coronavirus pandemic.",
+    "location": "The city where the employer is located.",
+    "officialWebsite": "The employer's official website link.",
+    "rating": "The general rating of the employer.",
+    "wikipedia": "The employer's page on the English Wikipedia."
+  },
+  "home": "Home",
+  "officialWebsite": "Official website",
+  "ratingLabels": {
+    "0": "Poor",
+    "1": "Fair",
+    "2": "Good"
+  },
+  "wikipedia": "Wikipedia page"
 }

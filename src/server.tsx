@@ -104,7 +104,7 @@ const server: express.Application = express()
 							? `<link rel="stylesheet" href="${assets.client.css}">`
 							: ""
 					}
-					<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Baloo+Chettan+2:wght@400;500&display=swap" rel="stylesheet">
+					<link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Merriweather:wght@300&family=Baloo+Chettan+2:wght@400;500&display=swap" rel="stylesheet">
 				</head>
 				<body>
 					<div id="root">${markup}</div>

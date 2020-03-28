@@ -10,7 +10,7 @@ export class EmployerRecord {
 
 	public id: string = "";
 
-	public location?: EmployerLocation;
+	public location: EmployerLocation = new EmployerLocation();
 
 	public name: string = "";
 

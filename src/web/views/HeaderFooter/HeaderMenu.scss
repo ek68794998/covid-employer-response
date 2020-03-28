@@ -4,6 +4,7 @@
 
 header {
 	background: #37474f;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 	color: #eceff1;
 	font: 400 24px 'Baloo Chettan 2';
 	padding: 16px 60px;
@@ -21,6 +22,17 @@ header {
 		font-weight: 600;
 	}
 
+	a {
+		color: inherit;
+		opacity: 0.7;
+		padding: 4px 8px 6px;
+		text-decoration: none;
+
+		&:hover {
+			opacity: 1.0;
+		}
+	}
+
 	ul#menu {
 		flex: 0;
 		list-style: none;
@@ -31,17 +43,6 @@ header {
 		li {
 			display: inline-block;
 			margin-left: 16px;
-
-			a {
-				color: inherit;
-				opacity: 0.7;
-				padding: 4px 8px 6px;
-				text-decoration: none;
-
-				&:hover {
-					opacity: 1.0;
-				}
-			}
 		}
 	}
 }

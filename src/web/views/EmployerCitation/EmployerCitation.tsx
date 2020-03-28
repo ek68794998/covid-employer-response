@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
+import { CitationSource } from "../../../common/CitationSource";
 import { CitationType } from "../../../common/CitationType";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -13,12 +14,18 @@ import "./EmployerCitation.scss";
 
 interface Props extends RouteComponentProps {
 	citation: Citation;
+
+	citationSourceBase: number;
 }
 
 const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
 
-	const { citation } = props;
+	const { citation, citationSourceBase } = props;
+
+	const getCitationSourceComponent =
+		(s: CitationSource, i: number): JSX.Element =>
+			<a key={i} href={s.link} target="_blank" title={s.name}>[{i + citationSourceBase}]</a>;
 
 	const citationType: CitationType = citation.type || "hearsay";
 
@@ -36,6 +43,7 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 			</span>
 			:
 			<span className="citation-summary">{citation.summary}</span>
+			<sup>{citation.sources.map(getCitationSourceComponent)}</sup>
 		</span>
 	);
 };

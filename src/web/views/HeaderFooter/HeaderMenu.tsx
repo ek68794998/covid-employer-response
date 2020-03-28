@@ -16,7 +16,7 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		<header>
 			<div className="header-container">
 				<div id="brand">
-					{strings.appTitle}
+					<Link to="/">{strings.appTitle}</Link>
 				</div>
 				<ul id="menu">
 					<li><Link to="/">{strings.home}</Link></li>

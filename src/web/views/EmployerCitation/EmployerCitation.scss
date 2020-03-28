@@ -42,3 +42,16 @@ $indicator-positive: #4caf50;
 .citation-summary {
 	margin-left: 4px;
 }
+
+sup {
+	line-height: 0;
+
+	a {
+		color: #616161;
+		text-decoration: none;
+
+		&:hover {
+			color: #1565c0;
+		}
+	}
+}
