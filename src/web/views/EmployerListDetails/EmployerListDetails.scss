@@ -17,7 +17,7 @@ div.employer-container {
 }
 
 button.employer-header {
-	background: none;
+	background-color: rgba(0, 0, 0, 0);
 	border: 0;
 	border-radius: $border-radius;
 	cursor: pointer;
@@ -25,10 +25,11 @@ button.employer-header {
 	outline: none;
 	padding: 8px $padding-sides;
 	text-align: left;
+	transition: 0.1s background-color;
 	width: 100%;
 
 	&:hover {
-		background: rgba(0, 0, 0, 0.08);
+		background-color: rgba(0, 0, 0, 0.08);
 	}
 
 	.employer-title {
