@@ -1,11 +1,12 @@
 name: Contoso
 wiki: Example
 officialWebsite: http://example.com
-rating: 2
+rating: 1
 location:
   city: Seattle
   state: WA
   country: USA
+  wiki: Seattle
 employeesBeforeMax: 500
 employeesBeforeMin: 200
 summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.

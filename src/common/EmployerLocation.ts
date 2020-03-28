@@ -4,6 +4,8 @@ export class EmployerLocation {
 	public country: string = "";
 
 	public state?: string;
+
+	public wiki?: string;
 }
 
 export const employerLocationToString = (location: EmployerLocation): string => {

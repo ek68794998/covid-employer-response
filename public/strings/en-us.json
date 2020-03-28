@@ -14,7 +14,7 @@
   },
   "detailDescriptions": {
     "employees": "The approximate number of employees the company had prior to the Coronavirus pandemic.",
-    "location": "The city where the employer is located.",
+    "location": "The city in which the employer is based.",
     "officialWebsite": "The employer's official website link.",
     "rating": "The general rating of the employer.",
     "wikipedia": "The employer's page on the English Wikipedia."

@@ -24,8 +24,17 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 	const { citation, citationSourceBase } = props;
 
 	const getCitationSourceComponent =
-		(s: CitationSource, i: number): JSX.Element =>
-			<a key={i} href={s.link} target="_blank" title={s.name}>[{i + citationSourceBase}]</a>;
+		(s: CitationSource, i: number): JSX.Element => {
+			const date: Date | undefined = s.date && new Date(s.date);
+
+			let title: string = s.name;
+
+			if (date) {
+				title = `${title} (${date.toLocaleDateString()} ${date.toLocaleTimeString()})`;
+			}
+
+			return <a key={i} href={s.link} target="_blank" title={title}>[{i + citationSourceBase}]</a>;
+		};
 
 	const citationType: CitationType = citation.type || "hearsay";
 

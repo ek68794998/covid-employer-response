@@ -65,25 +65,28 @@ const getDetailComponents = (employer: EmployerRecord, strings: LocalizedStrings
 		);
 	}
 
+	const locationWikipediaUrl: string | null = getWikipediaUrl(employer.location.wiki);
+
 	detailComponents.push(
 		<li key={detailComponents.length} title={strings.detailDescriptions.location}>
 			<EmployerDetail
 				icon={"place"}
 				iconSize={iconSize}
+				link={locationWikipediaUrl}
 				text={employerLocationToString(employer.location)}
 			/>
 		</li>
 	);
 
-	const wikipediaUrl: string | null = getWikipediaUrl(employer);
+	const employerWikipediaUrl: string | null = getWikipediaUrl(employer.wiki);
 
-	if (wikipediaUrl) {
+	if (employerWikipediaUrl) {
 		detailComponents.push(
 			<li key={detailComponents.length} title={strings.detailDescriptions.wikipedia}>
 				<EmployerDetail
 					icon={"language"}
 					iconSize={iconSize}
-					link={wikipediaUrl}
+					link={employerWikipediaUrl}
 					text={strings.wikipedia}
 				/>
 			</li>
@@ -106,15 +109,15 @@ const getDetailComponents = (employer: EmployerRecord, strings: LocalizedStrings
 	return detailComponents;
 };
 
-const getWikipediaUrl = (employer: EmployerRecord): string | null => {
-	if (!employer.wiki) {
+const getWikipediaUrl = (pageName?: string): string | null => {
+	if (!pageName) {
 		return null;
 	}
 
 	const wikipediaUrlBase: string = "https://en.wikipedia.org/wiki/__PAGE__";
-	const pageName: string = employer.wiki.replace(" ", "_");
+	const pageNameSubpath: string = pageName.replace(" ", "_");
 
-	return wikipediaUrlBase.replace("__PAGE__", pageName);
+	return wikipediaUrlBase.replace("__PAGE__", pageNameSubpath);
 };
 
 const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement => {
@@ -146,6 +149,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				<ul className="employer-details">
 					{getDetailComponents(employer, strings)}
 				</ul>
+				<div className="employer-summary">{employer.summary}</div>
 				{citations.length > 0 && <ul className="employer-citations">{citations}</ul>}
 			</div>
 		);

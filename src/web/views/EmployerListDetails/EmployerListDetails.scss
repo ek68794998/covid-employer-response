@@ -3,12 +3,14 @@
 $body-color: $outline-color;
 $border-radius: 8px;
 $box-shadow-color: rgba(0, 0, 0, 0.2);
+$padding-interior: 12px;
 $padding-sides: 24px;
 
 div.employer-container {
 	border: 1px solid $body-color;
 	border-radius: $border-radius;
 	box-shadow: 0 0 0 $box-shadow-color;
+	font-size: 16px;
 	transition: 0.1s box-shadow;
 
 	&:hover {
@@ -45,8 +47,9 @@ button.employer-header {
 
 ul.employer-details {
 	display: flex;
+	font-size: 14px;
 	list-style: none;
-	margin: 12px $padding-sides;
+	margin: 12px $padding-sides $padding-interior;
 	padding: 0;
 	width: 100%;
 
@@ -67,13 +70,19 @@ ul.employer-details {
 	}
 }
 
+div.employer-summary {
+	border-left: 4px solid rgba(0, 0, 0, 0.4);
+	line-height: 190%;
+	margin: ($padding-interior * 2) $padding-sides;
+	padding-left: 16px;
+}
+
 ul.employer-citations {
-	font-size: 16px;
-	margin: 16px $padding-sides;
+	margin: $padding-interior $padding-sides;
 	padding: 0;
 
 	li {
 		list-style: none;
-		margin: 16px 4px;
+		margin: $padding-interior 4px;
 	}
 }
