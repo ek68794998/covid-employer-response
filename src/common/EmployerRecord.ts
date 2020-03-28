@@ -1,6 +1,9 @@
+import { Citation } from "./Citation";
 import { EmployerLocation } from "./EmployerLocation";
 
 export class EmployerRecord {
+	public citations: Citation[] = [];
+
 	public employeesBeforeMax: number = -1;
 
 	public employeesBeforeMin: number = -1;

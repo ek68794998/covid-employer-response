@@ -1,6 +1,16 @@
 {
-	"about": "About",
-	"appTitle": "Coronavirus Employer Response Tracker",
-	"appTitleShort": "Cempres",
-	"home": "Home"
+  "about": "About",
+  "appTitle": "Coronavirus Employer Response Tracker",
+  "appTitleShort": "Cempres",
+  "citationTypeDescriptions": {
+    "corroboratedNews": "News corroborated by multiple, independent sources.",
+    "independentNews": "News published by a single, independent source.",
+    "hearsay": "Word-of-mouth or unsourced information."
+  },
+  "citationTypes": {
+    "corroboratedNews": "News (Multiple)",
+    "independentNews": "News (Single)",
+    "hearsay": "Hearsay"
+  },
+  "home": "Home"
 }
