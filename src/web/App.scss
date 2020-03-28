@@ -1,6 +1,12 @@
+@import "./views/Colors.scss";
+
+* {
+	box-sizing: border-box;
+}
+
 body {
-	background: #eceff1;
-	color: #080b0c;
+	background: $background;
+	color: $body-font;
 	font: 14px Merriweather;
 	margin: 0;
 

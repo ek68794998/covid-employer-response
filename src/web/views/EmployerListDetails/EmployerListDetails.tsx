@@ -115,7 +115,7 @@ const getWikipediaUrl = (employer: EmployerRecord): string | null => {
 	const pageName: string = employer.wiki.replace(" ", "_");
 
 	return wikipediaUrlBase.replace("__PAGE__", pageName);
-}
+};
 
 const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
@@ -152,7 +152,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	}
 
 	return (
-		<div className="employer-container">
+		<div className={`employer-container ${isOpen ? "employer-container-open" : "employer-container-closed"}`}>
 			<button className="employer-header" onClick={onClick}>
 				<div className="employer-title">{employer.name}</div>
 				{isOpen ? <span>&#x25B2;</span> : <span>&#x25BC;</span>}
