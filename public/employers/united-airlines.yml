@@ -6,10 +6,11 @@ location:
   city: Chicago
   state: IL
   country: USA
+  international: true
   wiki: Chicago
 employeesBeforeMax: 96000
 employeesBeforeMin: 96000
-summary: Allowed employees to take voluntary, unpaid leave, and did not plan layoffs. However, after receiving an aid package that was considered insufficient, it was announced that layoffs could be expected.
+summary: Allowed employees to take voluntary, unpaid leave, and did not plan layoffs. However, after receiving an aid package that the company considered insufficient, it was announced that layoffs could be expected.
 citations:
   - summary: United announced on March 4th that they would ask workers to apply for voluntary, unpaid leave to alleviate financial burden on the company. At that time, they had announced that there was no plan to lay off employees.
     positivity: 0

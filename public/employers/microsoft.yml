@@ -6,6 +6,7 @@ location:
   city: Redmond
   state: WA
   country: USA
+  international: true
   wiki: Redmond, Washington
 employeesBeforeMax: 151163
 employeesBeforeMin: 151163
