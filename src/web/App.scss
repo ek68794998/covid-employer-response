@@ -17,12 +17,22 @@ body {
 		height: 100vh;
 		width: 100%;
 
-		> div {
+		main {
 			flex: 1;
 		}
 	}
 
 	.loader > div {
 		margin: 8px auto;
+	}
+
+}
+
+a {
+	color: #5c6bc0;
+	text-decoration: none;
+
+	&:hover {
+		color: #283593;
 	}
 }

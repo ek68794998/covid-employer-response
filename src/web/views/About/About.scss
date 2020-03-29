@@ -1,13 +1,10 @@
-* {
-	box-sizing: border-box;
-}
-
 main#about {
-	margin-top: 68px;
-	padding: 16px 0;
+	margin: 0 auto;
+	width: 100%;
 
 	div.content {
 		margin: 0 auto;
 		max-width: 1440px;
+		padding: 48px 96px;
 	}
 }
