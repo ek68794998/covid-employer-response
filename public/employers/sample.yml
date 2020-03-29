@@ -6,10 +6,11 @@ name: Contoso # The official name of the company.
 wiki: Example # The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
 officialWebsite: http://example.com # The root URL of the company's webpage, if any.
 rating: fair # 'poor', 'fair', or 'good'
-location:
+location: # Where the company is originally based.
   city: Seattle
   state: WA
   country: USA
+  international: false # If the company has grown internationally, this should be set to true.
   wiki: Seattle # The subpath for the location's English Wikipedia page, if any.
 employeesBeforeMax: 500 # The upper bound (if known) for the range of company employees prior to 2020.
 employeesBeforeMin: 200 # The lower bound (if known) for the range of company employees prior to 2020.

@@ -3,15 +3,18 @@ export class EmployerLocation {
 
 	public country: string = "";
 
+	public international: boolean = false;
+
 	public state?: string;
 
 	public wiki?: string;
 }
 
 export const employerLocationToString = (location: EmployerLocation): string => {
-	if (location.state) {
-		return `${location.city}, ${location.state}, ${location.country}`;
-	}
+	const cityAsString: string =
+		location.state
+			? `${location.city}, ${location.state}, ${location.country}`
+			: `${location.city}, ${location.country}`;
 
-	return `${location.city}, ${location.country}`;
+	return location.international ? `International (${cityAsString})` : cityAsString;
 };
