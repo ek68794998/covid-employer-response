@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
-import { CitationSource } from "../../../common/CitationSource";
 import { CitationType } from "../../../common/CitationType";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 

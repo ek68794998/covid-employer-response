@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
-import { CitationType, getCitationTypeValue } from "../../../common/CitationType";
+import { CitationType } from "../../../common/CitationType";
 import { employerLocationToString } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
