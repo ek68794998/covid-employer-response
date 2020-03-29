@@ -80,7 +80,7 @@ const getDetailComponents = (employer: EmployerRecord, strings: LocalizedStrings
 	}
 
 	detailComponents.push(
-		<span className="break" />
+		<span key={detailComponents.length} className="break" />
 	);
 
 	const locationWikipediaUrl: string | null = getWikipediaUrl(employer.location.wiki);
