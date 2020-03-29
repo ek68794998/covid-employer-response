@@ -1,0 +1,17 @@
+ul.employer-citations {
+	font-size: 14px;
+	padding: 0;
+
+	li {
+		list-style: none;
+		margin: 8px 0;
+	}
+}
+
+h3.citation-type {
+	border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+	cursor: help;
+	display: inline;
+	font-size: 16px;
+	margin: 0;
+}

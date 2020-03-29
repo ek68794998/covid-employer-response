@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
-import { getCitationTypeValue } from "../../../common/CitationType";
+import { CitationType, getCitationTypeValue } from "../../../common/CitationType";
 import { employerLocationToString } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
@@ -12,6 +12,7 @@ import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerCitation from "../EmployerCitation/EmployerCitation";
+import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
 import EmployerDetail from "../EmployerDetail/EmployerDetail";
 
 import "./EmployerListDetails.scss";
@@ -27,13 +28,6 @@ interface Props extends RouteComponentProps {
 const citationSort = (a: Citation, b: Citation): number => {
 	if (a.positivity !== b.positivity) {
 		return b.positivity - a.positivity;
-	}
-
-	const aType: number = getCitationTypeValue(a.type);
-	const bType: number = getCitationTypeValue(b.type);
-
-	if (aType !== bType) {
-		return bType - aType;
 	}
 
 	return (b.sources ? b.sources.length : 0) - (a.sources ? a.sources.length : 0);
@@ -147,20 +141,28 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	if (isOpen) {
 		let globalCitationSourceBase: number = 1;
 
-		const citations: JSX.Element[] =
-			employer.citations
-				.sort(citationSort)
-				.map((value: Citation, i: number) => {
-					const citationSourceBase: number = globalCitationSourceBase;
+		const components: Partial<{ [key in CitationType]: JSX.Element | null }> = {};
 
-					globalCitationSourceBase += (value.sources ? value.sources.length : 0);
+		for (const type of [ "publication", "statement", "hearsay" ]) {
+			const citations: Citation[] =
+				employer.citations
+					.filter((citation: Citation) => citation.type === type)
+					.sort(citationSort);
 
-					return (
-						<li key={i}>
-							<EmployerCitation citation={value} citationSourceBase={citationSourceBase} />
-						</li>
-					);
-				});
+			if (citations.length === 0) {
+				continue;
+			}
+
+			components[type] = (
+				<EmployerCitationList
+					citations={citations}
+					citationSourceBase={globalCitationSourceBase}
+					citationType={type}
+				/>
+			);
+
+			citations.forEach((citation: Citation) => globalCitationSourceBase += citation.sources?.length || 0);
+		}
 
 		body = (
 			<div className="employer-body">
@@ -168,7 +170,9 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 					{getDetailComponents(employer, strings)}
 				</div>
 				<div className="employer-summary">{employer.summary}</div>
-				{citations.length > 0 && <ul className="employer-citations">{citations}</ul>}
+				{components.publication}
+				{components.statement}
+				{components.hearsay}
 			</div>
 		);
 	}
