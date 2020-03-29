@@ -1,5 +1,5 @@
 export class CitationSource {
-	public date?: Date;
+	public date?: string;
 
 	public link: string = "";
 
