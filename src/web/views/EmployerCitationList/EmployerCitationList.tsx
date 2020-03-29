@@ -27,9 +27,16 @@ const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement
 
 	const { citations, citationSourceBase, citationType } = props;
 
-	const getCitationComponent = (c: Citation, i: number): JSX.Element => (
-		<li key={i}>{<EmployerCitation citation={c} citationSourceBase={citationSourceBase} />}</li>
-	);
+	let citationSource: number = citationSourceBase;
+
+	const getCitationComponent = (c: Citation, i: number): JSX.Element => {
+		const component: JSX.Element =
+			<li key={i}>{<EmployerCitation citation={c} citationSourceBase={citationSource} />}</li>;
+
+		citationSource += c.sources?.length || 0;
+
+		return component;
+	};
 
 	return (
 		<div>
