@@ -4,26 +4,23 @@ import { BrowserRouter } from "react-router-dom";
 
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import HeaderMenu from "./HeaderMenu";
+import FooterMenu from "./FooterMenu";
 
 jest.mock("react-redux", () => ({
 	useSelector: (): {} => ({
 		getStrings: (): LocalizedStrings => ({
-			about: "About",
 			appTitle: "App Title",
-			appTitleShort: "AT",
-			home: "Home",
 		}),
 	}),
 }));
 
-describe("<HeaderMenu />", () => {
+describe("<FooterMenu />", () => {
 	test("renders without exploding", () => {
 		const div: HTMLDivElement = document.createElement("div");
 
 		render(
 			<BrowserRouter>
-				<HeaderMenu.WrappedComponent />
+				<FooterMenu.WrappedComponent />
 			</BrowserRouter>,
 			div,
 		);
