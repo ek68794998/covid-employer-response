@@ -25,4 +25,14 @@ body {
 	.loader > div {
 		margin: 8px auto;
 	}
+
+}
+
+a {
+	color: #5c6bc0;
+	text-decoration: none;
+
+	&:hover {
+		color: #283593;
+	}
 }
