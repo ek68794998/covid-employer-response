@@ -58,7 +58,11 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 		const employerRecordIds: string[] = await this.getAllIdsAsync();
 
 		for (const recordId of employerRecordIds) {
-			loadedEmployers.push(await this.loadAsync(recordId));
+			const loadedEmployer: EmployerRecord = await this.loadAsync(recordId);
+
+			loadedEmployer.id = recordId;
+
+			loadedEmployers.push(loadedEmployer);
 		}
 
 		return (
