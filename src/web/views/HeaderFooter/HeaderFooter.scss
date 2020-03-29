@@ -1,20 +1,24 @@
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
-header {
-	border-bottom: 1px solid $outline-color;
+header, footer {
+	flex: 0;
 	font: 400 24px 'Baloo Chettan 2';
-	height: 62px;
+	height: $header-height;
 	padding: 0 60px;
-	position: fixed;
 	width: 100%;
 
-	.header-container {
+	.container {
 		display: flex;
 		height: 100%;
 		margin: 0 auto;
 		max-width: 1440px;
 	}
+}
+
+header {
+	background: #212121;
+	color: $background;
 
 	div#brand {
 		align-self: center;
@@ -49,6 +53,27 @@ header {
 		height: 100%;
 		margin-left: 16px;
 		padding: 4px 8px 6px;
+	}
+}
+
+footer {
+	background: $background;
+	border-top: 1px solid $outline-color;
+	font-size: 14px;
+
+	.container {
+		align-items: center;
+		justify-content: space-between;
+		opacity: 0.8;
+
+		a {
+			color: #3949ab;
+			text-decoration: none;
+
+			&:hover {
+				color: #5c6bc0;
+			}
+		}
 	}
 }
 
