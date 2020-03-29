@@ -25,7 +25,7 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 
 	const getCitationSourceComponent =
 		(s: CitationSource, i: number): JSX.Element => {
-			const date: Date | undefined = s.date && new Date(s.date);
+			const date: Date | null = s.date ? new Date(s.date) : null;
 
 			let title: string = s.name;
 
