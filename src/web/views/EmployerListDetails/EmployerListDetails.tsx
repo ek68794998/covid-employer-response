@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
-import { GetCitationTypeValue } from "../../../common/CitationType";
+import { getCitationTypeValue } from "../../../common/CitationType";
 import { employerLocationToString } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
@@ -29,8 +29,8 @@ const citationSort = (a: Citation, b: Citation): number => {
 		return b.positivity - a.positivity;
 	}
 
-	const aType: number = GetCitationTypeValue(a.type);
-	const bType: number = GetCitationTypeValue(b.type);
+	const aType: number = getCitationTypeValue(a.type);
+	const bType: number = getCitationTypeValue(b.type);
 
 	if (aType !== bType) {
 		return bType - aType;

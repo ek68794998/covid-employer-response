@@ -3,7 +3,7 @@ export type CitationType =
 	| "statement"
 	| "publication";
 
-export const GetCitationTypeValue = (type?: CitationType): number => {
+export const getCitationTypeValue = (type?: CitationType): number => {
 	switch (type) {
 		case "hearsay": return 0;
 		case "statement": return 10;
