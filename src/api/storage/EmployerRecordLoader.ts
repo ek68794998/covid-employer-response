@@ -48,8 +48,11 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 		}
 
 		const fileContents: string = await readFileAsync(fileName, "UTF8");
+		const loadedEmployer: EmployerRecord = yaml.parse(fileContents);
 
-		return yaml.parse(fileContents);
+		loadedEmployer.id = id;
+
+		return loadedEmployer;
 	}
 
 	public async loadAllAsync(): Promise<EmployerRecord[]> {
@@ -58,11 +61,7 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 		const employerRecordIds: string[] = await this.getAllIdsAsync();
 
 		for (const recordId of employerRecordIds) {
-			const loadedEmployer: EmployerRecord = await this.loadAsync(recordId);
-
-			loadedEmployer.id = recordId;
-
-			loadedEmployers.push(loadedEmployer);
+			loadedEmployers.push(await this.loadAsync(recordId));
 		}
 
 		return (

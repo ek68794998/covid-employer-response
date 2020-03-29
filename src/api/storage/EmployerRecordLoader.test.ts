@@ -49,6 +49,7 @@ describe("EmployerRecordLoader", () => {
 
 		const record: EmployerRecord = await loader.loadAsync("sample");
 
+		expect(record.id).toBe("sample");
 		expect(record.name).toBe("Contoso");
 		expect(record.wiki).toBe("Example");
 		expect(record.officialWebsite).toBe("http://example.com");
