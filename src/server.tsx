@@ -107,13 +107,13 @@ const server: express.Application = express()
 				<head>
 					${helmet.title}
 					<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-					<meta charSet="utf-8" />
+					<meta charset="utf-8" />
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
 					<meta property="og:title" content="${localeData.appTitle}" />
 					<meta property="og:url" content="${completeUrl}" />
 					<meta property="og:image" content="${baseUrl}/favicon-32x32.png" />
 					<meta property="og:type" content="website" />
-					<meta property="og:description" content="[TODO]" />
+					<meta property="og:description" content="A collaborative, open-source project designed to track the responses of employers to the coronavirus (COVID-19) pandemic of 2019-2020." />
 					<meta property="og:locale" content="${localeCode}" />
 					${alternateLocaleMetaTags}
 					<meta property="og:site_name" content="${localeData.appTitle}" />
