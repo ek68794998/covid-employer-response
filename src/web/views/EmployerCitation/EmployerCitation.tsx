@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
