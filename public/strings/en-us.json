@@ -8,8 +8,8 @@
     "hearsay": "Word-of-mouth, rumors, or unconfirmed information."
   },
   "citationTypes": {
-    "publication": "Publication",
-    "statement": "Statement",
+    "publication": "Publications",
+    "statement": "Statements",
     "hearsay": "Hearsay"
   },
   "detailDescriptions": {

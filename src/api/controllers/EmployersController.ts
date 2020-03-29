@@ -1,9 +1,10 @@
 import express from "express";
 
-import { RoutedControllerBase } from "./RoutedControllerBase";
-
 import { EmployerRecord } from "../../common/EmployerRecord";
+
 import { EmployerRecordLoader } from "../storage/EmployerRecordLoader";
+
+import { RoutedControllerBase } from "./RoutedControllerBase";
 
 class EmployersController extends RoutedControllerBase {
 	public static readonly SUBPATH: string = "employers";
@@ -18,7 +19,7 @@ class EmployersController extends RoutedControllerBase {
 			this.employers = await this.recordLoader.loadAllAsync();
 		}
 
-		res.setHeader("Content-Type", "application/json");
+		res.setHeader("content-type", "application/json");
 		res.send(this.employers);
 	}
 
