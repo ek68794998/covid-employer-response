@@ -13,11 +13,7 @@ class EmployersController extends RoutedControllerBase {
 
 	private employers: EmployerRecord[] = [];
 
-	protected initializeRoutes(): void {
-		this.router.get(`/${EmployersController.SUBPATH}`, this.getEmployersList.bind(this));
-	}
-
-	protected getEmployersList(req: express.Request, res: express.Response): void {
+	public getEmployersList(req: express.Request, res: express.Response): void {
 		if (!req.header("if-none-match") || this.employers.length === 0) {
 			const folder: string = `${process.env.RAZZLE_PUBLIC_DIR}/employers`;
 
@@ -48,6 +44,10 @@ class EmployersController extends RoutedControllerBase {
 
 		res.setHeader("Content-Type", "application/json");
 		res.send(this.employers);
+	}
+
+	protected initializeRoutes(): void {
+		this.router.get(`/${EmployersController.SUBPATH}`, this.getEmployersList.bind(this));
 	}
 }
 
