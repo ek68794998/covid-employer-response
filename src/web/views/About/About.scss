@@ -7,12 +7,12 @@ main#about {
 	div.content {
 		margin: 0 auto;
 		max-width: 1440px;
-		padding: 0 ($page-padding * 2);
+		padding: $page-padding ($page-padding * 2);
 	}
 }
 
 @media (max-width: $body-narrow-width) {
 	main#about div.content {
-		padding: 0 ($page-padding-narrow * 2);
+		padding: $page-padding-narrow ($page-padding-narrow * 2);
 	}
 }
