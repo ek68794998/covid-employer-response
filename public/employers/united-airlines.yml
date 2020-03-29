@@ -6,6 +6,7 @@ location:
   city: Chicago
   state: IL
   country: USA
+  international: true
   wiki: Chicago
 employeesBeforeMax: 96000
 employeesBeforeMin: 96000
