@@ -8,7 +8,7 @@ export abstract class RoutedControllerBase {
 	}
 
 	public get hasRoutes(): boolean {
-		return this.router.stack && this.router.stack.length > 0;
+		return this.router.stack?.length > 0;
 	}
 
 	protected abstract initializeRoutes(): void;
