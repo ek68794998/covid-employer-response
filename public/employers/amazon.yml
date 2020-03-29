@@ -1,0 +1,80 @@
+name: Amazon
+wiki: Amazon (company)
+officialWebsite: https://amazon.com
+rating: fair
+location:
+  city: Bellevue
+  state: WA
+  country: USA
+  international: true
+  wiki: Bellevue, Washington
+employeesBeforeMax: 798000
+employeesBeforeMin: 798000
+summary: Though Amazon touts a work-from-home policy for engineers and pay raises for service workers, there are additional reports of mandatory overtime and complaints of management not immediately reporting COVID-19 cases.
+citations:
+  - summary: Amazon began canceling large events and tours, and began routinely and thoroughly sanitizing "all facilities globally."
+    positivity: 1
+    type: publication
+    sources:
+      - name: Amazon Blog - COVID-19 Blog
+        link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
+        date: 2020-02-28T12:00:00-07:00 # Estimate based on entry date of 02/28/2020.
+  - summary: Amazon requested that "all employees who can work from home to do so through April 10."
+    positivity: 1
+    type: publication
+    sources:
+      - name: Amazon Blog - COVID-19 Blog
+        link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
+        date: 2020-03-06T12:00:00-07:00 # Estimate based on entry date of 03/06/2020.
+  - summary: Amazon provided two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Amazon Blog - COVID-19 Update
+        link: https://blog.aboutamazon.com/working-at-amazon/covid-19-update-more-ways-amazon-is-supporting-employees-and-contractors
+        date: 2020-03-11T20:00:12.347Z
+  - summary: Amazon opened 100,000 new roles and increased pay though the end of April for employees working in roles related to fulfillment, transport, delivery, and other similar roles.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Amazon Blog - Amazon ramps hiring, opening 100,000 new roles
+        link: https://blog.aboutamazon.com/operations/amazon-opening-100000-new-roles
+        date: 2020-03-16T19:55:21.478Z
+  - summary: Employees in roles that continue to work through COVID-19 have been advised to stay six feet apart from each other.
+    positivity: 1
+    type: statement
+    sources:
+      - name: CBS News
+        link: https://www.cbsnews.com/news/coronavirus-work-during-pandemic-fear-health-risks-amazon-warehouse-employee/
+        date: 2020-03-26T08:39:00-08:00
+  - summary: An Amazon warehouse in Shepherdsville, KY was shut down and remained closed for several days after three workers there tested positive for COVID-19. Workers stationed there will continue to receive pay.
+    positivity: 1
+    type: publication
+    sources:
+      - name: WDRB
+        link: https://www.wdrb.com/in-depth/kentucky-amazon-warehouse-with-covid--cases-to-remain-closed/article_01f47e9a-6ecd-11ea-83dc-9f73f2c6a979.html
+        date: 2020-03-25T20:15:00-04:00
+  - summary: Workers in labor roles at Amazon are being called in for an additional 10-hour shift every week to handle demand for Amazon shopping during the COVID-19 pandemic.
+    positivity: -1
+    type: statement
+    sources:
+      - name: Occupational Health & Safety
+        link: https://ohsonline.com/articles/2020/03/23/amazon-workers-being-worked-overtime-for-covid19.aspx
+        date: 2020-03-23T12:00:00-07:00 # Estimate based on article date of 03/23/2020.
+  - summary: Warehouse workers at Amazon who tested positive for COVID-19 were first reported through Facebook rumors, and only several days later, and after employees confronted management, did Amazon actually confirm that their coworkers may have been exposed to the virus.
+    positivity: -1
+    type: statement
+    sources:
+      - name: The Verge
+        link: https://www.theverge.com/2020/3/26/21194739/amazon-warehouse-workers-coronavirus-covid-19-outraged-informed
+        date: 2020-03-26T12:28:05Z
+  - summary: Despite an estimated net worth of over $100 billion and reports that he sold $3.4 billion in stock in February 2020, Amazon CEO Jeff Bezos has asked the public to donate to an Amazon "relief fund" for employees and partners.
+    positivity: -1
+    type: publication
+    sources:
+      - name: Independent
+        link: https://www.independent.co.uk/news/world/americas/coronavirus-amazon-jeff-bezos-relief-fund-covid-19-billionaire-net-worth-a9422236.html
+        date: 2020-03-25T09:39:29Z
+      - name: The Guardian
+        link: https://www.theguardian.com/business/2020/mar/27/jeff-bezos-sold-34bn-of-amazon-stock-just-before-covid-19-collapse
+        date: 2020-03-27T11:34:51-04:00
