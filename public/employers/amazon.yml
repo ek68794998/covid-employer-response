@@ -54,6 +54,16 @@ citations:
       - name: WDRB
         link: https://www.wdrb.com/in-depth/kentucky-amazon-warehouse-with-covid--cases-to-remain-closed/article_01f47e9a-6ecd-11ea-83dc-9f73f2c6a979.html
         date: 2020-03-25T20:15:00-04:00
+  - summary: Amazon has cut ties with several independent delivery contractors. Given that the timing coincides with the COVID-19 pandemic, it is speculated to be related to the ongoing crisis; however, this has not yet been publicly confirmed.
+    positivity: 0
+    type: publication
+    sources:
+      - name: San Antonio Business Journal <1>
+        link: https://www.bizjournals.com/seattle/news/2020/02/20/amazon-ends-delivery-firm-contracts.html
+        date: 2020-02-20T12:14:00-08:00
+      - name: San Antonio Business Journal <2>
+        link: https://www.bizjournals.com/sanantonio/news/2020/03/17/amazon-delivery-service-to-close-doors-lay-off.html
+        date: 2020-03-17T15:40:00-05:00
   - summary: Workers in labor roles at Amazon are being called in for an additional 10-hour shift every week to handle demand for Amazon shopping during the COVID-19 pandemic.
     positivity: -1
     type: statement
@@ -68,6 +78,16 @@ citations:
       - name: The Verge
         link: https://www.theverge.com/2020/3/26/21194739/amazon-warehouse-workers-coronavirus-covid-19-outraged-informed
         date: 2020-03-26T12:28:05Z
+  - summary: Despite public statements of various safety policies (including a six-foot distance between all employees), warehouse and delivery workers at Amazon report that these conditions are not being met, and report being "terrified" of continuing to work during the crisis.
+    positivity: -1
+    type: statement
+    sources:
+      - name: CNBC
+        link: https://www.cnbc.com/2020/03/26/amazon-warehouse-employees-grapple-with-coronavirus-risks.html
+        date: 2020-03-26T12:00:00-04:00
+      - name: Reddit
+        link: https://www.reddit.com/r/amazon/comments/fpfny0/theyre_putting_us_all_at_risk_what_its_like/
+        date: 2020-03-26T10:29:50-07:00
   - summary: Despite an estimated net worth of over $100 billion and reports that he sold $3.4 billion in stock in February 2020, Amazon CEO Jeff Bezos has asked the public to donate to an Amazon "relief fund" for employees and partners.
     positivity: -1
     type: publication
