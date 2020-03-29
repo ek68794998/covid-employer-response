@@ -1,22 +1,35 @@
+@import "../Colors.scss";
 @import "../Dimensions.scss";
 
+$division-padding: 16px;
+
 main#home {
-	margin: 68px auto;
-	padding: 16px $page-padding;
+	margin: 0 auto;
 	width: 100%;
 
 	> div {
 		margin: 0 auto;
-		max-width: $body-max-width;
+		padding: 0 $page-padding;
 	}
 
 	div.filters {
-		max-width: ($body-max-width - $page-padding * 2);
-		min-width: ($body-min-width - $page-padding * 2);
-		width: 50%;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+		background: $background;
+		padding: $division-padding;
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		
+		> div {
+			margin: 0 auto;
+			max-width: ($body-max-width - $page-padding * 2);
+			min-width: ($body-min-width - $page-padding * 2);
+			width: 50%;
+		}
 	}
 
 	div.content {
-		padding-top: 16px;
+		max-width: $body-max-width;
+		padding-top: $division-padding;
 	}
 }
