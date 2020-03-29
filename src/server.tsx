@@ -77,6 +77,16 @@ const server: express.Application = express()
 		const store: Store<{}, AnyAction> = configureStore(preloadedState);
 		store.dispatch(getLocalizedStringsSuccess(localeData));
 
+		const baseUrl: string =
+			`${req.protocol}://${req.get("host")}`;
+
+		const completeUrl: string =
+			`${baseUrl}${req.originalUrl}`;
+
+		const alternateLocaleMetaTags: string[] =
+			Object.keys(localeFileMap)
+				.map((key: string) => `<meta property="og:locale:alternate" content="${key}" />`);
+
 		const helmetContext: {} = {};
 
 		const markup: string = renderToString(
@@ -98,13 +108,22 @@ const server: express.Application = express()
 					${helmet.title}
 					<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 					<meta charSet="utf-8" />
-					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<meta name="viewport" content="width=device-width, initial-scale=1" />
+					<meta property="og:title" content="${localeData.appTitle}" />
+					<meta property="og:url" content="${completeUrl}" />
+					<meta property="og:image" content="${baseUrl}/favicon-32x32.png" />
+					<meta property="og:type" content="website" />
+					<meta property="og:description" content="[TODO]" />
+					<meta property="og:locale" content="${localeCode}" />
+					${alternateLocaleMetaTags}
+					<meta property="og:site_name" content="${localeData.appTitle}" />
+					<meta property="og:determiner" content="the" />
 					${
 						assets.client.css
-							? `<link rel="stylesheet" href="${assets.client.css}">`
+							? `<link rel="stylesheet" href="${assets.client.css}" />`
 							: ""
 					}
-					<link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Merriweather:wght@300&family=Baloo+Chettan+2:wght@400;500&display=swap" rel="stylesheet">
+					<link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Merriweather:wght@300&family=Baloo+Chettan+2:wght@400;500&display=swap" rel="stylesheet" />
 				</head>
 				<body>
 					<div id="root">${markup}</div>
