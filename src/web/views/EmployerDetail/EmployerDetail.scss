@@ -1,7 +1,17 @@
-i {
-	margin-right: 8px;
+span.employer-detail {
+	cursor: default;
 }
 
-a {
+.employer-detail {
+	display: flex;
+	padding: 0 4px;
 	text-decoration: none;
+
+	i + span {
+		margin-left: 8px;
+	}
+
+	> span {
+		margin-top: 3px;
+	}
 }

@@ -20,11 +20,22 @@ const EmployerDetail: React.FC<Props> = (props: Props): React.ReactElement => {
 		fontSize: iconSize || 24,
 	};
 
+	const iconElement: JSX.Element = <i className="icon material-icons" style={style}>{icon}</i>;
+
+	if (link) {
+		return (
+			<a className="employer-detail" href={link} target="_blank">
+				{iconElement}
+				<span className="label">{text}</span>
+			</a>
+		);
+	}
+
 	return (
-		<>
-			<i className="icon material-icons" style={style}>{icon}</i>
-			{link ? <a className="label" href={link} target="_blank">{text}</a> : <span className="label">{text}</span>}
-		</>
+		<span className="employer-detail">
+			{iconElement}
+			<span className="label">{text}</span>
+		</span>
 	);
 };
 
