@@ -48,8 +48,11 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 		}
 
 		const fileContents: string = await readFileAsync(fileName, "UTF8");
+		const loadedEmployer: EmployerRecord = yaml.parse(fileContents);
 
-		return yaml.parse(fileContents);
+		loadedEmployer.id = id;
+
+		return loadedEmployer;
 	}
 
 	public async loadAllAsync(): Promise<EmployerRecord[]> {

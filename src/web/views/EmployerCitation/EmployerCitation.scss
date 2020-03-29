@@ -1,44 +1,32 @@
 @import "../Dimensions.scss";
 
 $indicator-glow-size: 3px;
-$indicator-size: 8px;
 
 $indicator-negative: #f44336;
 $indicator-neutral: #90a4ae;
 $indicator-positive: #4caf50;
 
-.indicator {
-	border-radius: ($indicator-size / 2);
-	display: inline-block;
-	margin-right: 8px;
-	height: $indicator-size;
-	width: $indicator-size;
+.citation {
+	display: flex;
 
-	&.indicator-negative {
-		background: $indicator-negative;
-		box-shadow:
-			0 0 $indicator-glow-size $indicator-negative,
-			0 0 $indicator-glow-size $indicator-negative;
+	.indicator {
+		align-self: center;
+		flex: 0;
+		margin-right: 8px;
+		margin-top: -3px;
+	
+		&.indicator-negative {
+			color: $indicator-negative;
+		}
+	
+		&.indicator-neutral {
+			color: $indicator-neutral;
+		}
+	
+		&.indicator-positive {
+			color: $indicator-positive;
+		}
 	}
-
-	&.indicator-neutral {
-		background: $indicator-neutral;
-		box-shadow:
-			0 0 $indicator-glow-size $indicator-neutral,
-			0 0 $indicator-glow-size $indicator-neutral;
-	}
-
-	&.indicator-positive {
-		background: $indicator-positive;
-		box-shadow:
-			0 0 $indicator-glow-size $indicator-positive,
-			0 0 $indicator-glow-size $indicator-positive;
-	}
-}
-
-.citation-type {
-	border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
-	cursor: help;
 }
 
 .citation-summary {

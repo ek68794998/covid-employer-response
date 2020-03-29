@@ -7,6 +7,10 @@ $box-shadow-color: rgba(0, 0, 0, 0.2);
 $padding-interior: 12px;
 $padding-sides: 24px;
 
+div.employer-body > div {
+	padding: 8px $padding-sides;
+}
+
 div.employer-container {
 	border: 1px solid $body-color;
 	border-radius: $border-radius;
@@ -54,7 +58,6 @@ div.employer-details {
 	justify-content: space-between;
 	list-style: none;
 	margin: 12px 0 $padding-interior;
-	padding: 0 $padding-sides;
 
 	> span {
 		color: #757575;
@@ -78,19 +81,8 @@ div.employer-details {
 div.employer-summary {
 	border-left: 4px solid rgba(0, 0, 0, 0.4);
 	line-height: 190%;
-	margin: ($padding-interior * 2) $padding-sides;
+	margin: ($padding-interior * 2) $padding-sides $padding-interior;
 	padding-left: 16px;
-}
-
-ul.employer-citations {
-	font-size: 14px;
-	margin: $padding-interior $padding-sides;
-	padding: 0;
-
-	li {
-		list-style: none;
-		margin: $padding-interior 4px;
-	}
 }
 
 @media (max-width: $body-narrow-width) {
