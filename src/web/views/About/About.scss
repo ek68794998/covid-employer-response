@@ -7,7 +7,15 @@ main#about {
 	div.content {
 		margin: 0 auto;
 		max-width: 1440px;
-		padding: $page-padding ($page-padding * 2);
+		padding: $page-padding;
+	}
+
+	h2 {
+		margin-top: 32px;
+
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -17,6 +25,6 @@ main#about {
 
 @media (max-width: $body-narrow-width) {
 	main#about div.content {
-		padding: $page-padding-narrow ($page-padding-narrow * 2);
+		padding: $page-padding-narrow;
 	}
 }

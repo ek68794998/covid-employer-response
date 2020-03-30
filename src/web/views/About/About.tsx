@@ -23,6 +23,7 @@ const About: React.FC = (): React.ReactElement => {
 				<title>{strings.about}</title>
 			</Helmet>
 			<div className="content">
+				<h2>What is {strings.appTitleShort}?</h2>
 				<p>
 					<strong>{strings.appTitleShort}</strong> ({strings.appTitle}) is a collaborative, open-source project designed to
 					track the responses of employers to the <a href={coronavirusWikipediaUrl} target="_blank">coronavirus</a>
@@ -33,6 +34,33 @@ const About: React.FC = (): React.ReactElement => {
 				<p>
 					For more information on the project, or to contribute, please visit&nbsp;
 					<a href={ProjectUrl} target="_blank">the project's page on GitHub</a>.
+				</p>
+
+				<h2>What are employer reports and claims?</h2>
+				<p>
+					TODO
+				</p>
+
+				<h2>How do employer claims get processed?</h2>
+				<p>
+					TODO
+				</p>
+
+				<h2>What determines the rating of a company?</h2>
+				<p>
+					TODO
+				</p>
+
+				<h2>How do I submit, change, or dispute a claim?</h2>
+				<p>
+					TODO
+				</p>
+
+				<h2>
+					What is the difference between "{strings.citationTypes.publication}", "{strings.citationTypes.statement}",
+					and "{strings.citationTypes.hearsay}"?</h2>
+				<p>
+					TODO
 				</p>
 			</div>
 		</main>
