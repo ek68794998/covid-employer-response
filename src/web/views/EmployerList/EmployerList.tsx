@@ -26,8 +26,16 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	const [ openRow, setOpenRow ] = useState("");
 
+	if (!employers) {
+		return (
+			<div className="loading">
+				{strings.loading}
+			</div>
+		);
+	}
+
 	const filteredEmployers: EmployerRecord[] =
-		employers ? employers.filter((e: EmployerRecord) => EmployerListSearchFilter.isMatch(searchFilter, e)) : [];
+		employers.filter((e: EmployerRecord) => EmployerListSearchFilter.isMatch(searchFilter, e));
 
 	if (!filteredEmployers.length) {
 		return (
@@ -52,7 +60,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	return (
 		<div>
-			{employers.map(getEmployerComponent)}
+			{filteredEmployers.map(getEmployerComponent)}
 		</div>
 	);
 };
