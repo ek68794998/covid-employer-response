@@ -5,7 +5,7 @@ header, footer {
 	flex: 0;
 	font: 400 24px 'Baloo Chettan 2';
 	height: $header-height;
-	padding: 0 60px;
+	padding: 0 $page-padding;
 	width: 100%;
 
 	.container {
@@ -24,6 +24,7 @@ header {
 		align-self: center;
 		flex: 1;
 		font-weight: 600;
+		margin-top: -4px;
 
 		.brand-large {
 			display: block;
@@ -41,6 +42,7 @@ header {
 		transition: 0.3s opacity;
 
 		&:hover {
+			color: inherit;
 			opacity: 1.0;
 			transition: 0.05s opacity;
 		}
@@ -50,6 +52,7 @@ header {
 		align-items: center;
 		display: flex;
 		flex: 0;
+		font-size: 18px;
 		height: 100%;
 		margin-left: 16px;
 		padding: 4px 8px 6px;
@@ -70,8 +73,23 @@ footer {
 
 @media (max-width: $body-narrow-width) {
 	header {
+		padding: 0 $page-padding-narrow;
+
 		div#brand .brand-large {
 			display: none;
+		}
+	}
+
+	footer {
+		flex-direction: column;
+
+		span {
+			margin-bottom: 12px;
+			text-align: center;
+
+			&:first-child {
+				margin-top: 12px;
+			}
 		}
 	}
 }

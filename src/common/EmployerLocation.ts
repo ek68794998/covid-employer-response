@@ -16,5 +16,5 @@ export const employerLocationToString = (location: EmployerLocation): string => 
 			? `${location.city}, ${location.state}, ${location.country}`
 			: `${location.city}, ${location.country}`;
 
-	return location.international ? `International (${cityAsString})` : cityAsString;
+	return location.international ? `${cityAsString} (Int'l)` : cityAsString;
 };

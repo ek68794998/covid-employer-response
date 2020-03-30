@@ -33,3 +33,16 @@ main#home {
 		padding-top: $division-padding;
 	}
 }
+
+@media (max-width: $body-narrow-width) {
+	main#home {
+		> div {
+			padding: 0 $page-padding-narrow;
+		}
+
+		div.filters > div {
+			max-width: ($body-max-width - $page-padding-narrow * 2);
+			min-width: ($body-min-width - $page-padding-narrow * 2);
+		}
+	}
+}

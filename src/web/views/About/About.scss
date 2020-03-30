@@ -1,3 +1,5 @@
+@import "../Dimensions.scss";
+
 main#about {
 	margin: 0 auto;
 	width: 100%;
@@ -5,6 +7,12 @@ main#about {
 	div.content {
 		margin: 0 auto;
 		max-width: 1440px;
-		padding: 48px 96px;
+		padding: $page-padding ($page-padding * 2);
+	}
+}
+
+@media (max-width: $body-narrow-width) {
+	main#about div.content {
+		padding: $page-padding-narrow ($page-padding-narrow * 2);
 	}
 }
