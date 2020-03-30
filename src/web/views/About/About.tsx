@@ -20,7 +20,7 @@ const About: React.FC = (): React.ReactElement => {
 	return (
 		<main id="about">
 			<Helmet>
-				<title>{strings.about}</title>
+				<title>{strings.about} | {strings.appTitle}</title>
 			</Helmet>
 			<div className="content">
 				<h2>What is {strings.appTitleShort}?</h2>

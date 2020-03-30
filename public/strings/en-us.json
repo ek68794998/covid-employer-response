@@ -1,5 +1,5 @@
 {
-  "about": "About",
+  "about": "FAQs",
   "appTitle": "Coronavirus Employer Response Tracker",
   "appTitleShort": "Cempres",
   "citationTypeDescriptions": {
@@ -19,7 +19,7 @@
     "rating": "The general rating of the employer.",
     "wikipedia": "The employer's page on the English Wikipedia."
   },
-  "home": "Home",
+  "home": "Employers",
   "loading": "Loading...",
   "noResults": "No results.",
   "officialWebsite": "Official website",

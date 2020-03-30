@@ -38,7 +38,7 @@ const Home: React.FC = (): React.ReactElement => {
 	return (
 		<main id="home">
 			<Helmet>
-				<title>{strings.home}</title>
+				<title>{strings.home} | {strings.appTitle}</title>
 			</Helmet>
 			<div className="filters">
 				<SearchInput onChange={setSearchText} />
