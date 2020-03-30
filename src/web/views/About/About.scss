@@ -11,6 +11,10 @@ main#about {
 	}
 }
 
+.material-icons {
+	user-select: none;
+}
+
 @media (max-width: $body-narrow-width) {
 	main#about div.content {
 		padding: $page-padding-narrow ($page-padding-narrow * 2);
