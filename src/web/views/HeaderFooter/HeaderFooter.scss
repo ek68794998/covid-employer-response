@@ -48,7 +48,7 @@ header {
 		}
 	}
 
-	div.menu-link {
+	a.menu-link {
 		align-items: center;
 		display: flex;
 		flex: 0;
@@ -56,6 +56,11 @@ header {
 		height: 100%;
 		margin-left: 16px;
 		padding: 4px 8px 6px;
+
+		&.active {
+			border-bottom: 4px solid #5c6bc0;
+			padding-bottom: 2px;
+		}
 	}
 }
 
@@ -68,6 +73,15 @@ footer {
 		align-items: center;
 		justify-content: space-between;
 		opacity: 0.8;
+		transition: 0.2s opacity;
+
+		&:hover {
+			opacity: 1.0;
+		}
+
+		#project-source {
+			text-align: right;
+		}
 	}
 }
 
@@ -80,12 +94,12 @@ footer {
 		}
 	}
 
-	footer {
+	footer .container {
 		flex-direction: column;
 
 		span {
 			margin-bottom: 12px;
-			text-align: center;
+			text-align: center !important;
 
 			&:first-child {
 				margin-top: 12px;

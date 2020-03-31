@@ -1,9 +1,9 @@
 {
-  "about": "About",
+  "about": "FAQs",
   "appTitle": "Coronavirus Employer Response Tracker",
   "appTitleShort": "Cempres",
   "citationTypeDescriptions": {
-    "publication": "Publications such as a company blog, PR statement, government report, or leaked document.",
+    "publication": "Published articles such as a company blog, PR statement, government report, or leaked document.",
     "statement": "Published statements from employees (former, anonymous, or otherwise).",
     "hearsay": "Word-of-mouth, rumors, or unconfirmed information."
   },
@@ -19,7 +19,7 @@
     "rating": "The general rating of the employer.",
     "wikipedia": "The employer's page on the English Wikipedia."
   },
-  "home": "Home",
+  "home": "Employers",
   "loading": "Loading...",
   "noResults": "No results.",
   "officialWebsite": "Official website",

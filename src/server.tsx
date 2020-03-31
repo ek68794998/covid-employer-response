@@ -108,7 +108,7 @@ const server: express.Application = express()
 					${helmet.title}
 					<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 					<meta charset="utf-8" />
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
+					<meta name="viewport" content="width=device-width" />
 					<meta property="og:title" content="${localeData.appTitle}" />
 					<meta property="og:url" content="${completeUrl}" />
 					<meta property="og:image" content="${baseUrl}/favicon-32x32.png" />

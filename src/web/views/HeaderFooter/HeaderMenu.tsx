@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
 import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -17,14 +17,12 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		<header>
 			<div className="container">
 				<div id="brand">
-					<Link to="/">{strings.appTitleShort}</Link>
+					<NavLink to="/">{strings.appTitleShort}</NavLink>
 					<div className="brand-large">{strings.appTitle}</div>
 				</div>
-				<div className="menu-link"><Link to="/">{strings.home}</Link></div>
-				<div className="menu-link"><Link to="/about">{strings.about}</Link></div>
-				<div className="menu-link">
-					<a href={`${ProjectIssueSubmissionUrl}`} target="_blank">{strings.submit}</a>
-				</div>
+				<NavLink exact={true} className="menu-link" to="/">{strings.home}</NavLink>
+				<NavLink exact={true} className="menu-link" to="/about">{strings.about}</NavLink>
+				<a className="menu-link" href={`${ProjectIssueSubmissionUrl}`} target="_blank">{strings.submit}</a>
 			</div>
 		</header>
 	);
