@@ -27,7 +27,7 @@ jobs:
         yarn build
         # Test -- disabled for now. # yarn test --watchAll=false
       env:
-        RAZZLE_PUBLIC_DIR: /home/site/wwwroot/build/
+        RAZZLE_PUBLIC_DIR: /home/site/wwwroot/build/public
         PORT: 8080
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
