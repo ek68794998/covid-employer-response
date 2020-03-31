@@ -78,6 +78,10 @@ footer {
 		&:hover {
 			opacity: 1.0;
 		}
+
+		#project-source {
+			text-align: right;
+		}
 	}
 }
 
@@ -90,12 +94,12 @@ footer {
 		}
 	}
 
-	footer {
+	footer .container {
 		flex-direction: column;
 
 		span {
 			margin-bottom: 12px;
-			text-align: center;
+			text-align: center !important;
 
 			&:first-child {
 				margin-top: 12px;
