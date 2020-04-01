@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteComponentProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationSource } from "../../../common/CitationSource";
@@ -50,4 +50,4 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 	);
 };
 
-export default withRouter(EmployerCitation) as any;
+export default EmployerCitation as any;

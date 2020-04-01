@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -28,4 +28,4 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default withRouter(HeaderMenu) as any;
+export default HeaderMenu as any;

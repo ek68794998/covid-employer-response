@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -9,7 +9,7 @@ import { getStrings } from "../../state/ducks/localization/selectors";
 
 import "./SearchInput.scss";
 
-interface Props extends RouteComponentProps {
+interface Props extends RouteProps {
 	onChange: (value: string) => void;
 }
 
@@ -29,4 +29,4 @@ const SearchInput: React.FC<Props> = (props: Props): React.ReactElement => {
 	);
 };
 
-export default withRouter(SearchInput) as any;
+export default SearchInput as any;

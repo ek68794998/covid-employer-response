@@ -1,9 +1,9 @@
 import React from "react";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
 import "./EmployerDetail.scss";
 
-interface Props extends RouteComponentProps {
+interface Props extends RouteProps {
 	icon: string;
 
 	iconSize: number;
@@ -39,4 +39,4 @@ const EmployerDetail: React.FC<Props> = (props: Props): React.ReactElement => {
 	);
 };
 
-export default withRouter(EmployerDetail) as any;
+export default EmployerDetail as any;

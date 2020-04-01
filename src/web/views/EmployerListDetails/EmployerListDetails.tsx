@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
@@ -11,13 +11,12 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
-import EmployerCitation from "../EmployerCitation/EmployerCitation";
 import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
 import EmployerDetail from "../EmployerDetail/EmployerDetail";
 
 import "./EmployerListDetails.scss";
 
-interface Props extends RouteComponentProps {
+interface Props extends RouteProps {
 	employer: EmployerRecord;
 
 	isOpen: boolean;
@@ -188,4 +187,4 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	);
 };
 
-export default withRouter(EmployerListDetails) as any;
+export default EmployerListDetails as any;

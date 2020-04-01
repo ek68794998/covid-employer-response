@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { withRouter } from "react-router-dom";
 
 import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -27,4 +26,4 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default withRouter(HeaderMenu) as any;
+export default HeaderMenu as any;

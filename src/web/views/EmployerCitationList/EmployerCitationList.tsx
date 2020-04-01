@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
@@ -13,7 +13,7 @@ import EmployerCitation from "../EmployerCitation/EmployerCitation";
 
 import "./EmployerCitationList.scss";
 
-interface Props extends RouteComponentProps {
+interface Props extends RouteProps {
 	citations: Citation[];
 
 	citationSourceBase: number;
@@ -52,4 +52,4 @@ const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement
 	);
 };
 
-export default withRouter(EmployerCitationList) as any;
+export default EmployerCitationList as any;
