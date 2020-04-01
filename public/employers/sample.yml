@@ -4,6 +4,7 @@
 
 name: Contoso # The official name of the company.
 wiki: Example # The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
+image: sample.svg # An optional name of a logo, in SVG format, in the 'public/images/employers' directory.
 officialWebsite: http://example.com # The root URL of the company's webpage, if any.
 rating: fair # 'poor', 'fair', or 'good'
 location: # Where the company is originally based.
