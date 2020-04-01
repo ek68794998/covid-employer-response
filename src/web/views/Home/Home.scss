@@ -12,7 +12,7 @@ main#home {
 		padding: 0 $page-padding;
 	}
 
-	div.filters {
+	div.Home__Filters {
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 		background: $background;
 		padding: $division-padding;
@@ -28,7 +28,7 @@ main#home {
 		}
 	}
 
-	div.content {
+	div.Home__Content {
 		max-width: $body-max-width;
 		padding-top: $division-padding;
 	}

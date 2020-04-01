@@ -11,6 +11,8 @@ export class EmployerRecord {
 
 	public id: string = "";
 
+	public image?: string;
+
 	public location: EmployerLocation = new EmployerLocation();
 
 	public name: string = "";

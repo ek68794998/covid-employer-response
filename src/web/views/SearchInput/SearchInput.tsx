@@ -18,7 +18,7 @@ const SearchInput: React.FC<Props> = (props: Props): React.ReactElement => {
 	const { onChange } = props;
 
 	return (
-		<div className="search-input-container">
+		<div className="SearchInput__Container">
 			<i className="material-icons">search</i>
 			<input
 				onInput={(e: React.FormEvent<HTMLInputElement>): void => onChange(e.currentTarget.value)}

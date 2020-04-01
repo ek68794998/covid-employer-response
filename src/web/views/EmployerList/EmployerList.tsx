@@ -10,6 +10,7 @@ import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";
+import EmployerPageDetails from "../EmployerPageDetails/EmployerPageDetails";
 
 import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
@@ -29,7 +30,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	if (!employers) {
 		return (
-			<div className="loading">
+			<div className="EmployerList__Container--Loading">
 				{strings.loading}
 			</div>
 		);
@@ -40,7 +41,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	if (!filteredEmployers.length) {
 		return (
-			<div className="no-results">
+			<div className="EmployerList__Container--NoResults">
 				{strings.noResults}
 			</div>
 		);
@@ -55,18 +56,24 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 	};
 
 	const getEmployerComponent = (e: EmployerRecord, i: number): JSX.Element | null => (
-		<EmployerListDetails
-			key={`${i}-${e.id}`}
-			employer={e}
-			isOpen={openRow === e.id}
-			onClick={(): void => openModal(e.id)}
-		/>
+		<div className="EmployerList__Item">
+			<EmployerListDetails
+				key={`${i}-${e.id}`}
+				employer={e}
+				isOpen={openRow === e.id}
+				onClick={(): void => openModal(e.id)}
+			/>
+		</div>
 	);
 
+	const employer: EmployerRecord | undefined = employers.find((e: EmployerRecord) => e.id === openRow);
+
 	return (
-		<div>
+		<div className="EmployerList__Container">
 			{filteredEmployers.map(getEmployerComponent)}
-			<Modal isOpen={!!openRow.length} onRequestClose={closeModal}>Test</Modal>
+			<Modal isOpen={!!(employer && openRow.length)} onRequestClose={closeModal}>
+				<EmployerPageDetails employer={employer} />
+			</Modal>
 		</div>
 	);
 };

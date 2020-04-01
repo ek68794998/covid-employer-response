@@ -1,7 +1,30 @@
 @import "../ReactModal.scss";
 
-div.no-results {
+div.EmployerList__Container--Loading, div.EmployerList__Container--NoResults {
 	font: 400 20px 'Baloo Chettan 2';
 	margin: 16px auto;
 	text-align: center;
+}
+
+div.EmployerList__Container {
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-gap: 16px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+div.EmployerList__Item {
+	height: 100%;
+}
+
+@media (max-width: $body-narrow-width) {
+	div.EmployerList__Container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (max-width: $body-reduced-width) and (min-width: $body-narrow-width) {
+	div.EmployerList__Container {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }

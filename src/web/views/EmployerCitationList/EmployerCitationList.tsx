@@ -40,12 +40,12 @@ const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement
 	return (
 		<div>
 			<h3
-				className="citation-type"
+				className="EmployerCitationList__Header"
 				title={strings.citationTypeDescriptions[citationType]}
 			>
 				{strings.citationTypes[citationType]}
 			</h3>
-			<ul className="employer-citations">
+			<ul className="EmployerCitationList__Citations">
 				{citations.map(getCitationComponent)}
 			</ul>
 		</div>

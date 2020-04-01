@@ -14,7 +14,7 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 
 	return (
 		<footer>
-			<div className="container">
+			<div className="HeaderFooter__Container">
 				<span id="maintained-by">
 					Maintained by <a href={AuthorUrl}>Eric Kumlin</a>
 				</span>

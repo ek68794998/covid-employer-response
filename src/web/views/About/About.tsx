@@ -22,7 +22,7 @@ const About: React.FC = (): React.ReactElement => {
 			<Helmet>
 				<title>{strings.about} | {strings.appTitle}</title>
 			</Helmet>
-			<div className="content">
+			<div className="About__Content">
 				<h2 id="what-is">What is {strings.appTitleShort}?</h2>
 				<p>
 					<strong>{strings.appTitleShort}</strong> ({strings.appTitle}) is a collaborative, open-source project designed to

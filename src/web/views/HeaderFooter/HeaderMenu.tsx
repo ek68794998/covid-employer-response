@@ -15,14 +15,14 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 
 	return (
 		<header>
-			<div className="container">
+			<div className="HeaderFooter__Container">
 				<div id="brand">
 					<NavLink to="/">{strings.appTitleShort}</NavLink>
-					<div className="brand-large">{strings.appTitle}</div>
+					<div className="HeaderMenu__BrandLarge">{strings.appTitle}</div>
 				</div>
-				<NavLink exact={true} className="menu-link" to="/">{strings.home}</NavLink>
-				<NavLink exact={true} className="menu-link" to="/about">{strings.about}</NavLink>
-				<a className="menu-link" href={`${ProjectIssueSubmissionUrl}`} target="_blank">{strings.submit}</a>
+				<NavLink exact={true} className="HeaderMenu__Link" to="/">{strings.home}</NavLink>
+				<NavLink exact={true} className="HeaderMenu__Link" to="/about">{strings.about}</NavLink>
+				<a className="HeaderMenu__Link" href={`${ProjectIssueSubmissionUrl}`} target="_blank">{strings.submit}</a>
 			</div>
 		</header>
 	);
