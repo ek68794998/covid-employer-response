@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Modal from "react-modal";
 import { useSelector } from "react-redux";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
@@ -14,7 +15,7 @@ import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
 import "./EmployerList.scss";
 
-interface Props extends RouteComponentProps {
+interface Props extends RouteProps {
 	employers: EmployerRecord[];
 
 	searchFilter: EmployerListSearchFilter;
@@ -45,8 +46,12 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 		);
 	}
 
-	const onClick = (id: string): void => {
-		setOpenRow(openRow === id ? "" : id);
+	const openModal = (id: string): void => {
+		setOpenRow(id);
+	};
+
+	const closeModal = (): void => {
+		setOpenRow("");
 	};
 
 	const getEmployerComponent = (e: EmployerRecord, i: number): JSX.Element | null => (
@@ -54,15 +59,16 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 			key={`${i}-${e.id}`}
 			employer={e}
 			isOpen={openRow === e.id}
-			onClick={(): void => onClick(e.id)}
+			onClick={(): void => openModal(e.id)}
 		/>
 	);
 
 	return (
 		<div>
 			{filteredEmployers.map(getEmployerComponent)}
+			<Modal isOpen={!!openRow.length} onRequestClose={closeModal}>Test</Modal>
 		</div>
 	);
 };
 
-export default withRouter(EmployerList) as any;
+export default EmployerList as any;

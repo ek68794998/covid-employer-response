@@ -15,6 +15,10 @@ body {
 	margin: 0;
 	min-width: 420px;
 
+	&.modal-open {
+		position: fixed;
+	}
+
 	#root {
 		display: flex;
 		flex-direction: column;
@@ -29,7 +33,6 @@ body {
 	.loader > div {
 		margin: 8px auto;
 	}
-
 }
 
 a {

@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "react-modal";
 import { Route, Switch } from "react-router-dom";
 
 import About from "./views/About/About";
@@ -7,6 +8,8 @@ import HeaderMenu from "./views/HeaderFooter/HeaderMenu";
 import Home from "./views/Home/Home";
 
 import "./App.scss";
+
+Modal.setAppElement("#root");
 
 export default (): JSX.Element => (
 	<React.Fragment>

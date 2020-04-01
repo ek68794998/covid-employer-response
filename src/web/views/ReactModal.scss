@@ -1,0 +1,22 @@
+@import "./Dimensions.scss";
+
+body.ReactModal__Body--open {
+	overflow-y: hidden;
+}
+
+.ReactModal__Overlay {
+	background-color: rgba(0, 0, 0, 0.6) !important;
+	flex-direction: column;
+	display: flex;
+	padding: $page-padding;
+	z-index: 20;
+
+	.ReactModal__Content {
+		border: none !important;
+		box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.4);
+		margin: 0 auto;
+		max-width: $body-max-width;
+		position: initial !important;
+		width: 100%;
+	}
+}
