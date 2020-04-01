@@ -66,22 +66,33 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	}
 
 	return (
-		<div className={`EmployerListDetails__Container EmployerListDetails__Rating--${employer.rating}`} onClick={onClick}>
+		<div className={`EmployerListDetails__Container EmployerListDetails__Rating--${employer.rating}`}>
 			<div className="EmployerListDetails__Title">
 				{employer.image && <img className="EmployerListDetails__Icon" src={`/images/employers/${employer.image}`} />}
-				<h2>{employer.name}</h2>
+				<h2>
+					<a href="#" onClick={onClick}>{employer.name}</a>
+				</h2>
 				<span className="EmployerListDetails__Links">
 					{employerWikipediaUrl && <a href={employerWikipediaUrl}><i className="material-icons">language</i></a>}
 					{employer.officialWebsite && <a href={employer.officialWebsite}><i className="material-icons">home</i></a>}
 				</span>
 				<span className="EmployerListDetails__Rating">
 					{strings.ratingLabels[employer.rating]}
+					<i className="material-icons EmployerListDetails__RatingIcon">{indicatorIcon}</i>
 				</span>
-				<i className="material-icons EmployerListDetails__RatingIcon">{indicatorIcon}</i>
 			</div>
 			<div className="EmployerListDetails__Subtitle">
 				<a href={locationWikipediaUrl}>{employerLocationToString(employer.location)}</a>
 				{employeeCountString && <span>{employeeCountString} <i className="material-icons">people</i></span>}
+			</div>
+			<div className="EmployerListDetails__Summary">
+				{employer.summary}
+			</div>
+			<div className="EmployerListDetails__Actions">
+				<a href="#" onClick={onClick}>
+					Read more
+					<i className="material-icons">fullscreen</i>
+				</a>
 			</div>
 		</div>
 	);

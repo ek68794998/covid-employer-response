@@ -56,9 +56,8 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 	};
 
 	const getEmployerComponent = (e: EmployerRecord, i: number): JSX.Element | null => (
-		<div className="EmployerList__Item">
+		<div className="EmployerList__Item" key={`${i}-${e.id}`}>
 			<EmployerListDetails
-				key={`${i}-${e.id}`}
 				employer={e}
 				isOpen={openRow === e.id}
 				onClick={(): void => openModal(e.id)}

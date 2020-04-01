@@ -12,9 +12,12 @@ $padding-sides: 12px;
 	border: 1px solid $body-color;
 	border-radius: $border-radius;
 	box-shadow: 0 0 0 $box-shadow-color;
+	display: flex;
+	flex-direction: column;
 	font-size: 16px;
 	height: 100%;
 	margin-bottom: $padding-interior;
+	padding: 0 $padding-sides;
 	transition: 0.1s all;
 	width: 100%;
 
@@ -25,19 +28,19 @@ $padding-sides: 12px;
 
 	&.EmployerListDetails__Rating--good {
 		.EmployerListDetails__Rating, .EmployerListDetails__RatingIcon {
-			color: $indicator-positive;
+			background: $indicator-positive;
 		}
 	}
 
 	&.EmployerListDetails__Rating--fair {
 		.EmployerListDetails__Rating, .EmployerListDetails__RatingIcon {
-			color: $indicator-neutral;
+			background: $indicator-neutral;
 		}
 	}
 
 	&.EmployerListDetails__Rating--poor {
 		.EmployerListDetails__Rating, .EmployerListDetails__RatingIcon {
-			color: $indicator-negative;
+			background: $indicator-negative;
 		}
 	}
 }
@@ -52,13 +55,16 @@ $padding-sides: 12px;
 .EmployerListDetails__Title {
 	align-items: center;
 	display: flex;
-	flex: 1;
 	font-family: 'Baloo Chettan 2';
-	margin: $padding-interior $padding-sides;
+	margin: $padding-interior 0;
 
 	h2 {
 		font-weight: 400;
-		margin: 0;
+		margin: 0 4px;
+
+		a {
+			color: inherit;
+		}
 	}
 
 	.EmployerListDetails__Links {
@@ -76,8 +82,16 @@ $padding-sides: 12px;
 	}
 }
 
+.EmployerListDetails__Rating {
+	border-radius: 16px;
+	color: #fff;
+	height: 32px;
+	padding: 3px 12px 13px 12px;
+}
+
 .EmployerListDetails__RatingIcon {
 	margin-left: $padding-interior;
+	vertical-align: bottom;
 }
 
 .EmployerListDetails__Subtitle {
@@ -85,10 +99,10 @@ $padding-sides: 12px;
 	font-size: 12px;
 	display: flex;
 	justify-content: space-between;
-	margin: $padding-interior $padding-sides;
+	margin: $padding-interior 0;
 	transition: 0.2s all;
 
-	&:hover {
+	> *:hover {
 		color: #212121;
 	}
 
@@ -98,15 +112,31 @@ $padding-sides: 12px;
 
 	i {
 		font-size: 18px;
-		line-height: 0;
+		margin-left: 4px;
+		vertical-align: bottom;
 	}
 }
 
 .EmployerListDetails__Summary {
-	border-left: 4px solid rgba(0, 0, 0, 0.4);
-	line-height: 190%;
-	margin: ($padding-interior * 2) $padding-sides $padding-interior;
-	padding-left: 16px;
+	flex: 1;
+	font-size: 14px;
+	line-height: 180%;
+}
+
+.EmployerListDetails__Actions {
+	display: flex;
+	font-family: 'Baloo Chettan 2';
+	justify-content: flex-end;
+	margin: ($padding-interior / 2) 0 $padding-interior;
+
+	a {
+		align-items: center;
+		display: flex;
+
+		i {
+			margin-left: 4px;
+		}
+	}
 }
 
 @media (max-width: $body-narrow-width) {
