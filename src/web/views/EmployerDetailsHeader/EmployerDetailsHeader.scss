@@ -10,7 +10,7 @@ $padding-sides: 16px;
 
 .EmployerDetailsHeader__Icon {
 	border-radius: ($icon-size / 2) ($icon-size / 2);
-	height: auto;
+	height: $icon-size;
 	margin-right: $padding-interior;
 	width: $icon-size;
 }
