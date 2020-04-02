@@ -6,7 +6,6 @@ import { withRouter } from "react-router-dom";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getEmployers as getEmployersRequest } from "../../state/ducks/employers/actions";
 import { getEmployers } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -50,4 +49,4 @@ const Home: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default withRouter(Home) as any;
+export default withRouter(Home);

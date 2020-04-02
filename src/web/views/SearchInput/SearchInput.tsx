@@ -28,4 +28,4 @@ const SearchInput: React.FC<Props> = (props: Props): React.ReactElement => {
 	);
 };
 
-export default SearchInput as any;
+export default SearchInput;

@@ -43,4 +43,4 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	);
 };
 
-export default EmployerListDetails as any;
+export default EmployerListDetails;

@@ -27,4 +27,4 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default HeaderMenu as any;
+export default HeaderMenu;

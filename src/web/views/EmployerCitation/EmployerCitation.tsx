@@ -1,12 +1,12 @@
 import React from "react";
-import { RouteComponentProps } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationSource } from "../../../common/CitationSource";
 
 import "./EmployerCitation.scss";
 
-interface Props extends RouteComponentProps {
+interface Props extends RouteProps {
 	citation: Citation;
 
 	citationSourceBase: number;
@@ -59,4 +59,4 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 	);
 };
 
-export default EmployerCitation as any;
+export default EmployerCitation;

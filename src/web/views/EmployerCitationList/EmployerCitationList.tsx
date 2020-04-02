@@ -51,4 +51,4 @@ const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement
 	);
 };
 
-export default EmployerCitationList as any;
+export default EmployerCitationList;

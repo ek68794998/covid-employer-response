@@ -47,7 +47,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			<EmployerCitationList
 				citations={citations}
 				citationSourceBase={globalCitationSourceBase}
-				citationType={type}
+				citationType={type as CitationType}
 			/>
 		);
 
@@ -56,7 +56,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={employer} />
+			<EmployerDetailsHeader employer={employer} onClickEmployerName={(): void => { /* Nothing */ }} />
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
 					{employer.summary}
@@ -69,4 +69,4 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	);
 };
 
-export default EmployerPageDetails as any;
+export default EmployerPageDetails;

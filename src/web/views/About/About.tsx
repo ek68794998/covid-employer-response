@@ -85,4 +85,4 @@ const About: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default withRouter(About) as any;
+export default withRouter(About);

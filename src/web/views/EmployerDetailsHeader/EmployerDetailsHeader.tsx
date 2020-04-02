@@ -177,4 +177,4 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 	);
 };
 
-export default EmployerDetailsHeader as any;
+export default EmployerDetailsHeader;
