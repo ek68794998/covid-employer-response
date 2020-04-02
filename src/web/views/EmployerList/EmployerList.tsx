@@ -73,7 +73,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 			{filteredEmployers.map(getEmployerComponent)}
 			<Modal isOpen={isOpen} onRequestClose={closeModal}>
 				<button className="EmployerList__CloseModal" onClick={closeModal}>
-					<i class="material-icons">close</i>
+					<i className="material-icons">close</i>
 				</button>
 				<EmployerPageDetails employer={employer} />
 			</Modal>
