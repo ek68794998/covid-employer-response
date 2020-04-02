@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
+import { ProjectUrl } from "../../../common/constants/UrlConstants";
 import { EmployerLocation, employerLocationToString } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
@@ -15,7 +16,50 @@ interface Props extends RouteProps {
 	employer: EmployerRecord;
 
 	onClickEmployerName: () => void;
+
+	useShortText?: boolean;
 }
+
+const getEmployerEditComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+	if (!employer.officialWebsite) {
+		return null;
+	}
+
+	const editUrl: string = `${ProjectUrl}/blob/master/public/employers/${employer.id}.yml`;
+
+	return (
+		<a href={editUrl} target="_blank" title={strings.detailDescriptions.edit}>
+			{materialIcon("edit")}
+		</a>
+	);
+};
+
+const getEmployerEmployeeCountComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+	let employeeCountString: string | null = null;
+
+	if (employer.employeesBeforeMin > 0 || employer.employeesBeforeMax > 0) {
+		if (employer.employeesBeforeMin === employer.employeesBeforeMax) {
+			employeeCountString = employer.employeesBeforeMin.toLocaleString();
+		} else if (employer.employeesBeforeMin > 0 && employer.employeesBeforeMax > 0) {
+			employeeCountString = `${employer.employeesBeforeMin.toLocaleString()} ${String.fromCharCode(0x2013)} ${employer.employeesBeforeMax.toLocaleString()}`;
+		} else if (employer.employeesBeforeMin > 0) {
+			employeeCountString = `More than ${employer.employeesBeforeMin.toLocaleString()}`;
+		} else if (employer.employeesBeforeMax > 0) {
+			employeeCountString = `Less than ${employer.employeesBeforeMax.toLocaleString()}`;
+		}
+	}
+
+	if (!employeeCountString) {
+		return null;
+	}
+
+	return (
+		<span title={strings.detailDescriptions.employees}>
+			{employeeCountString}
+			{materialIcon("people")}
+		</span>
+	);
+};
 
 const getEmployerWebsiteComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
 	if (!employer.officialWebsite) {
@@ -43,19 +87,20 @@ const getEmployerWikipediaComponent = (employer: EmployerRecord, strings: Locali
 	);
 };
 
-const getLocationWikipediaComponent = (location: EmployerLocation, strings: LocalizedStrings): JSX.Element | null => {
-	const locationWikipediaUrl: string | null = getWikipediaUrl(location.wiki);
+const getLocationWikipediaComponent =
+	(location: EmployerLocation, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
+		const locationWikipediaUrl: string | null = getWikipediaUrl(location.wiki);
 
-	if (!locationWikipediaUrl) {
-		return null;
-	}
+		if (!locationWikipediaUrl) {
+			return null;
+		}
 
-	return (
-		<a href={locationWikipediaUrl} target="_blank" title={strings.detailDescriptions.location}>
-			{employerLocationToString(location)}
-		</a>
-	);
-};
+		return (
+			<a href={locationWikipediaUrl} target="_blank" title={strings.detailDescriptions.location}>
+				{employerLocationToString(location, useShortText)}
+			</a>
+		);
+	};
 
 const getWikipediaUrl = (pageName?: string): string | null => {
 	if (!pageName) {
@@ -72,21 +117,7 @@ const materialIcon = (name: string): JSX.Element => <i className="material-icons
 
 const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
-	const { employer, onClickEmployerName } = props;
-
-	let employeeCountString: string | null = null;
-
-	if (employer.employeesBeforeMin > 0 || employer.employeesBeforeMax > 0) {
-		if (employer.employeesBeforeMin === employer.employeesBeforeMax) {
-			employeeCountString = employer.employeesBeforeMin.toLocaleString();
-		} else if (employer.employeesBeforeMin > 0 && employer.employeesBeforeMax > 0) {
-			employeeCountString = `${employer.employeesBeforeMin.toLocaleString()} ${String.fromCharCode(0x2013)} ${employer.employeesBeforeMax.toLocaleString()}`;
-		} else if (employer.employeesBeforeMin > 0) {
-			employeeCountString = `More than ${employer.employeesBeforeMin.toLocaleString()}`;
-		} else if (employer.employeesBeforeMax > 0) {
-			employeeCountString = `Less than ${employer.employeesBeforeMax.toLocaleString()}`;
-		}
-	}
+	const { employer, onClickEmployerName, useShortText } = props;
 
 	let indicatorIcon: "trending_up" | "trending_flat" | "trending_down";
 
@@ -109,11 +140,14 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 			<div className="EmployerDetailsHeader__Title">
 				{employer.image && <img className="EmployerDetailsHeader__Icon" src={`/images/employers/${employer.image}`} />}
 				<h2>
-					<a href="#" onClick={onClickEmployerName}>{employer.name}</a>
+					<a href="#" onClick={onClickEmployerName}>
+						{(useShortText && employer.shortName) ? employer.shortName : employer.name}
+					</a>
 				</h2>
 				<span className="EmployerDetailsHeader__Links">
 					{getEmployerWikipediaComponent(employer, strings)}
 					{getEmployerWebsiteComponent(employer, strings)}
+					{getEmployerEditComponent(employer, strings)}
 				</span>
 				<span
 					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${employer.rating}`}
@@ -124,8 +158,8 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 				</span>
 			</div>
 			<div className="EmployerDetailsHeader__Subtitle">
-				{getLocationWikipediaComponent(employer.location, strings)}
-				{employeeCountString && <span title={strings.detailDescriptions.employees}>{employeeCountString}{materialIcon("people")}</span>}
+				{getLocationWikipediaComponent(employer.location, strings, useShortText || false)}
+				{getEmployerEmployeeCountComponent(employer, strings)}
 			</div>
 		</>
 	);

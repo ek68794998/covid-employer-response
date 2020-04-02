@@ -3,6 +3,7 @@
 # This file will not be shown in the UI if named 'sample.yml'.
 
 name: Contoso # The official name of the company.
+shortName: Co. # An optional shortened version of the company's name.
 wiki: Example # The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
 image: sample.svg # An optional name of a logo, in SVG format, in the 'public/images/employers' directory.
 officialWebsite: http://example.com # The root URL of the company's webpage, if any.

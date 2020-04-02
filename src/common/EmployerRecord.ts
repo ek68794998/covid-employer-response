@@ -21,6 +21,8 @@ export class EmployerRecord {
 
 	public rating: EmployerRating = "fair";
 
+	public shortName?: string;
+
 	public summary: string = "";
 
 	public wiki?: string;

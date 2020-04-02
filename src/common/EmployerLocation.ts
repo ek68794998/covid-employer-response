@@ -10,11 +10,14 @@ export class EmployerLocation {
 	public wiki?: string;
 }
 
-export const employerLocationToString = (location: EmployerLocation): string => {
-	const cityAsString: string =
-		location.state
-			? `${location.city}, ${location.state}, ${location.country}`
-			: `${location.city}, ${location.country}`;
+export const employerLocationToString =
+	(location: EmployerLocation, useShortText: boolean = false): string => {
+		const cityAsString: string =
+			useShortText
+				? location.city
+				: location.state
+					? `${location.city}, ${location.state}, ${location.country}`
+					: `${location.city}, ${location.country}`;
 
-	return location.international ? `${cityAsString} (Int'l)` : cityAsString;
-};
+		return location.international ? `${cityAsString} (Int'l)` : cityAsString;
+	};

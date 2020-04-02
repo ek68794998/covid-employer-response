@@ -89,3 +89,9 @@ $padding-sides: 16px;
 		vertical-align: bottom;
 	}
 }
+
+@media (max-width: $body-narrow-width) {
+	.EmployerDetailsHeader__RatingIcon {
+		display: none;
+	}
+}
