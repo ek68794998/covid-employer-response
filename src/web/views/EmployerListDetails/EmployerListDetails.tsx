@@ -1,7 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { LocalizedStrings } from "../../../common/LocalizedStrings";
+
+import { AppState } from "../../state/AppState";
+import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";
 
@@ -16,6 +21,7 @@ interface Props extends RouteProps {
 const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
 const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement => {
+	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
 	const { employer, onClick } = props;
 
 	return (
@@ -27,7 +33,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			</div>
 			<div className="EmployerListDetails__Actions">
 				<a href="#" onClick={onClick}>
-					Read more
+					{strings.readMore}
 					{materialIcon("fullscreen")}
 				</a>
 			</div>

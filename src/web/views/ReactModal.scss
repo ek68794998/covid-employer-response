@@ -21,6 +21,7 @@ body.ReactModal__Body--open {
 		box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.4);
 		margin: 0 auto;
 		max-width: $body-max-width;
+		overflow-y: scroll !important;
 		position: initial !important;
 		padding-right: (20px - $scrollbar-width) !important; /* 20px is React modal default padding. */
 		scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
