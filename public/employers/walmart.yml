@@ -1,56 +1,57 @@
 name: Walmart
-wiki: Walmart 
-officialWebsite: http://Walmart.com 
-rating: fair 
-location: 
+wiki: Walmart
+image: walmart.svg
+officialWebsite: http://Walmart.com
+rating: fair
+location:
   city: Bentonville
   state: AR
   country: USA
-  international: true 
-  wiki: Bentonville, Arkansas 
+  international: true
+  wiki: Bentonville, Arkansas
 employeesBeforeMax: 2200000
 employeesBeforeMin: 2200000
 summary: As an essential retail chain, Walmart must remain open amidst the pandemic. During the early stages of the pandemic, Walmart did not give any special treatments to its workers. However Walmart has increased wages for its employees, devised new retail procedures, and provided more protection for its workers.
 citations:
-  - summary: Walmart introduces huge changes to its store
+  - summary: Walmart introduces huge changes to its store, notably to increase social distancing.
     positivity: 1
-    type: publication 
+    type: publication
     sources:
       - name: Yahoo! Finance
         link: https://finance.yahoo.com/news/walmart-makes-a-huge-change-to-its-stores-because-of-the-coronavirus-pandemic-single-direction-aisles-161441040.html
-        date: 2020-03-31T08:42:19Z
-  - summary: Walmart and Sam's Club taking cautious measures for employees.
+        date: 2020-03-31T16:14:41Z
+  - summary: Walmart and Sam's Club taking cautious measures for employees, including having employees check their temperature when reporting to work.
     positivity: 1
-    type: publication 
+    type: publication
     sources:
       - name: WBNG.com
         link: https://wbng.com/2020/04/01/walmart-sams-club-taking-cautious-measures-for-employees/
-        date: 2020-04-01T11:29:19Z
+        date: 2020-04-01T08:19:00-07:00
   - summary: Customers are forced to be corraled and line up in groups, potentially increasing spread.
     positivity: -1
-    type: hearsay 
+    type: hearsay
     sources:
       - name: "Reddit r/walmart"
         link: https://www.reddit.com/r/walmart/comments/fszn8j/this_is_why_this_pandemic_is_going_ro_continue/
-        date: 2020-04-01T20:14:14Z
+        date: 2020-04-01T06:19:59-07:00
   - summary: Walmart increased wage for its warehouse workers but not its retail workers.
     positivity: 0
     type: publication
     sources:
       - name: Reuters
         link: https://www.reuters.com/article/us-health-coronavirus-walmart/walmart-ups-minimum-wage-in-e-commerce-warehouses-by-2-as-orders-surge-on-virus-worries-idUSKBN21A0BO
-        date: 2020-04-01T20:14:14Z
+        date: 2020-03-22T21:04:00-07:00
   - summary: Walmart gave out bonuses and are hiring temporary staffers amidst the pandemic.
     positivity: 1
     type: publication
-    sources: 
+    sources:
       - name: Wall Street Journal
         link: https://www.wsj.com/articles/walmart-to-pay-550-million-in-staff-bonuses-hire-150-000-temporary-workers-11584664622
-        date: 2020-04-01T20:14:14Z
+        date: 2020-03-20T13:39:00-04:00
   - summary: Walmart employees fearing for their job and their health.
     positivity: -1
     type: statement
     sources:
       - name: Business Insider
         link: https://www.businessinsider.com/walmart-target-workers-describe-working-conditions-during-coronavirus-2020-3
-        date: 2020-03-05T20:14:14Z
+        date: 2020-03-05T14:37:53Z

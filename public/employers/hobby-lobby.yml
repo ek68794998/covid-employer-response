@@ -1,42 +1,43 @@
-name: Hobby Lobby 
-wiki: Hobby Lobby 
-officialWebsite: http://hobbylobby.com 
-rating: poor 
-location: 
+name: Hobby Lobby
+wiki: Hobby Lobby
+image: hobby-lobby.svg
+officialWebsite: http://hobbylobby.com
+rating: poor
+location:
   city: Oklahoma City
   state: OK
   country: USA
-  international: false 
-  wiki: Oklahoma City 
-employeesBeforeMax: 37500 
-employeesBeforeMin: 37500 
+  international: false
+  wiki: Oklahoma City
+employeesBeforeMax: 37500
+employeesBeforeMin: 37500
 summary: This employer has has stores that remained opened despite authorities forcing them to close. The stores that did closed promised to partially pay out its employees.
 citations:
   - summary: Business argues that it is essential, but authorities are not convinced and closed down stores in different states.
     positivity: -1
-    type: publication 
+    type: publication
     sources:
       - name: CBS News
         link: https://www.cbsnews.com/news/hobby-lobby-open-essential-business-stay-at-home-orders/
-        date: 2020-01-01T08:42:19Z
+        date: 2020-04-01T13:14:00-04:00
   - summary: Employees who are sick will be able to use their PTO and will be paid 75% of their total wage.
     positivity: 1
-    type: publication 
+    type: publication
     sources:
       - name: Religion News Service
         link: https://religionnews.com/2020/03/31/hobby-lobby-clarifies-sick-leave-policy-amid-coronavirus/
-        date: 2020-03-20T11:29:19Z
+        date: 2020-03-31T12:00:00-07:00 # Estimate based on article date of 03/31/2020.
   - summary: Hobby Lobby quietly reopened stores defying shutdowns and requiring police intervention.
     positivity: -1
-    type: publication 
+    type: publication
     sources:
       - name: "Business Insider"
         link: https://www.businessinsider.com/hobby-lobby-reopened-stores-in-states-with-coronavirus-lockdowns-2020-3
-        date: 2020-03-31T20:14:14Z
+        date: 2020-03-31T17:47:00Z
   - summary: Most Hobby Lobby stores remain open amid pandemic.
     positivity: -1
-    type: publication 
+    type: publication
     sources:
       - name: "The Oklahoman"
         link: https://oklahoman.com/article/5658630/coronavirus-in-oklahoma-most-hobby-lobby-remain-open-amid-pandemic
-        date: 2020-03-26T13:04:14Z
+        date: 2020-03-26T13:04:14-05:00
