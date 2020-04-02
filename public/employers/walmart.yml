@@ -1,0 +1,60 @@
+# This is a sample YAML file representing a fake employer.
+# It can be used as a template to create others.
+# This file will not be shown in the UI if named 'sample.yml'.
+
+name: Walmart # The official name of the company.
+wiki: Walmart # The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
+officialWebsite: http://Walmart.com # The root URL of the company's webpage, if any.
+rating: fair # 'poor', 'fair', or 'good'
+location: # Where the company is originally based.
+  city: Bentonville
+  state: AR
+  country: USA
+  international: true # If the company has grown internationally, this should be set to true.
+  wiki: Bentonville, Arkansas # The subpath for the location's English Wikipedia page, if any.
+employeesBeforeMax: 2.2 million # The upper bound (if known) for the range of company employees prior to 2020.
+employeesBeforeMin: 2.2 million # The lower bound (if known) for the range of company employees prior to 2020.
+summary: As an essential retail chain, Walmart must remain open amidst the pandemic. During the early stages of the pandemic, employees were not able to call in sick as they fear getting fired  and they are overworked due to the panic buying. Since then however, the company has responded to the pandemic by making substantial changes to its operation such as introducing one-way aisles, ensuring that all workers coming in to work are healthy, provide masks and gloves for its employees, and keeping customers and staff apart in stores. However, some stores have questionable practices, causing customers to be corraled in groups, potentially increasing COVID spread. Employees also have asked for pay increases. Walmart has increased wages for its employees, but not for its frontline retail store workers. It did gave bonuses to its hourly workers and hired 150000 temporary staffers.
+citations:
+  - summary: Walmart introduces huge changes to its store
+    positivity: 1
+    type: publication # Indicates that the **original** fact source is a published statement from an employee, whether they are a current, former, or anonymous source.
+    sources:
+      - name: Yahoo! Finance
+        link: https://finance.yahoo.com/news/walmart-makes-a-huge-change-to-its-stores-because-of-the-coronavirus-pandemic-single-direction-aisles-161441040.html
+        date: 2020-03-31T08:42:19Z
+  - summary: Walmart and Sam's Club taking cautious measures for employees
+    positivity: 1
+    type: publication # Indicates that the **original** fact source is an open publication such as a PR statement, company blog, leaked document, or government report.
+    sources:
+      - name: WBNG.com
+        link: https://wbng.com/2020/04/01/walmart-sams-club-taking-cautious-measures-for-employees/
+        date: 2020-04-01T11:29:19Z
+  - summary: Customers are forced to be corraled and line up in groups, potentially increasing spread
+    positivity: -1
+    type: hearsay # Indicates that the **original** fact source is word of mouth, a rumor, or an unconfirmed (or impossible-to-confirm) statement.
+    sources:
+      - name: "Reddit r/walmart"
+        link: https://www.reddit.com/r/walmart/comments/fszn8j/this_is_why_this_pandemic_is_going_ro_continue/
+        date: 2020-04-01T20:14:14Z
+  - summary: Walmart increased wage for its warehouse workers but not its retail workers
+    positivity: 0
+    type: publication
+    sources:
+      - name: Reuters
+        link: https://www.reuters.com/article/us-health-coronavirus-walmart/walmart-ups-minimum-wage-in-e-commerce-warehouses-by-2-as-orders-surge-on-virus-worries-idUSKBN21A0BO
+        date: 2020-04-01T20:14:14Z
+  - summary: Walmart gave out bonuses and are hiring temporary staffers amidst the pandemic
+    positivity: 1
+    type: publication
+    sources: 
+      - name: Wall Street Journal
+        link: https://www.wsj.com/articles/walmart-to-pay-550-million-in-staff-bonuses-hire-150-000-temporary-workers-11584664622
+        date: 2020-04-01T20:14:14Z
+  - summary: Walmart employees fearing for their job and their health
+    positivity: -1
+    type: statement
+    sources:
+      - name: Business Insider
+        link: https://www.businessinsider.com/walmart-target-workers-describe-working-conditions-during-coronavirus-2020-3
+        date: 2020-03-05T20:14:14Z
