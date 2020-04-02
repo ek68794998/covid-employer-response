@@ -2,112 +2,59 @@
 @import "../Dimensions.scss";
 
 $body-color: $outline-color;
-$border-radius: 8px;
+$border-radius: 12px;
 $box-shadow-color: rgba(0, 0, 0, 0.2);
+$icon-size: 32px;
 $padding-interior: 12px;
-$padding-sides: 24px;
+$padding-sides: 16px;
 
-div.employer-body > div {
-	padding: 8px $padding-sides;
-}
-
-div.employer-container {
+.EmployerListDetails__Container {
 	border: 1px solid $body-color;
 	border-radius: $border-radius;
 	box-shadow: 0 0 0 $box-shadow-color;
-	font-size: 16px;
-	margin-bottom: 16px;
-	transition: 0.1s box-shadow;
-
-	&:hover {
-		box-shadow: 0px 3px 6px $box-shadow-color;
-	}
-}
-
-button.employer-header {
-	background-color: rgba(0, 0, 0, 0);
-	border: 0;
-	border-radius: $border-radius;
-	cursor: pointer;
 	display: flex;
-	outline: none;
-	padding: 8px $padding-sides;
-	text-align: left;
-	transition: 0.1s background-color;
+	flex-direction: column;
+	font-size: 16px;
+	height: 250px;
+	padding: $padding-interior $padding-sides;
+	transition: 0.1s all;
 	width: 100%;
 
 	&:hover {
-		background-color: rgba(0, 0, 0, 0.08);
-	}
-
-	.employer-title {
-		flex: 1;
-		font: 400 20px 'Baloo Chettan 2';
-	}
-
-	span {
-		font-size: 24px;
-		opacity: 0.5;
+		box-shadow: 0px 3px 6px $box-shadow-color;
+		transform: translateY(-1px);
 	}
 }
 
-div.employer-details {
-	display: flex;
-	flex-wrap: wrap;
+.EmployerListDetails__Summary {
+	flex: 1;
 	font-size: 14px;
-	justify-content: space-between;
-	list-style: none;
-	margin: 12px 0 $padding-interior;
+	line-height: 180%;
+	overflow-y: hidden;
+	position: relative;
 
-	> span {
-		color: #757575;
+	.EmployerListDetails__OverflowScreen {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 30px;
+		background: linear-gradient(to top, $background, rgba(255, 255, 255, 0));
+	}
+}
+
+.EmployerListDetails__Actions {
+	display: flex;
+	font-family: 'Baloo Chettan 2';
+	justify-content: flex-end;
+	margin: 3px 0 0;
+
+	a {
+		align-items: center;
 		display: flex;
-		transition: 0.2s all;
 
-		&.break {
-			display: none;
-		}
-
-		&:hover {
-			color: #212121;
-		}
-
-		a {
-			color: inherit;
-		}
-	}
-}
-
-div.employer-summary {
-	border-left: 4px solid rgba(0, 0, 0, 0.4);
-	line-height: 190%;
-	margin: ($padding-interior * 2) $padding-sides $padding-interior;
-	padding-left: 16px;
-}
-
-@media (max-width: $body-narrow-width) {
-	div.employer-details {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: $body-min-width;
-
-		span.break {
-			display: block;
-			flex-basis: 100%;
-			height: 12px;
-			width: 0;
-		}
-	}
-}
-
-@media (max-width: $body-reduced-width) {
-	div.employer-details .label-hides {
-		.icon {
-			margin: 0;
-		}
-
-		.label {
-			display: none;
+		i {
+			margin-left: 4px;
 		}
 	}
 }

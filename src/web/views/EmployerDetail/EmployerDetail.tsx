@@ -1,9 +1,9 @@
 import React from "react";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
 import "./EmployerDetail.scss";
 
-interface Props extends RouteComponentProps {
+interface Props extends RouteProps {
 	icon: string;
 
 	iconSize: number;
@@ -20,23 +20,23 @@ const EmployerDetail: React.FC<Props> = (props: Props): React.ReactElement => {
 		fontSize: iconSize || 24,
 	};
 
-	const iconElement: JSX.Element = <i className="icon material-icons" style={style}>{icon}</i>;
+	const iconElement: JSX.Element = <i className="EmployerDetail__Icon material-icons" style={style}>{icon}</i>;
 
 	if (link) {
 		return (
-			<a className="employer-detail" href={link} target="_blank">
+			<a className="EmployerDetail__Container" href={link} target="_blank">
 				{iconElement}
-				<span className="label">{text}</span>
+				<span className="EmployerDetail__Label">{text}</span>
 			</a>
 		);
 	}
 
 	return (
-		<span className="employer-detail">
+		<span className="EmployerDetail__Container">
 			{iconElement}
-			<span className="label">{text}</span>
+			<span className="EmployerDetail__Label">{text}</span>
 		</span>
 	);
 };
 
-export default withRouter(EmployerDetail) as any;
+export default EmployerDetail as any;

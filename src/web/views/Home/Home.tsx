@@ -40,10 +40,10 @@ const Home: React.FC = (): React.ReactElement => {
 			<Helmet>
 				<title>{strings.home} | {strings.appTitle}</title>
 			</Helmet>
-			<div className="filters">
+			<div className="Home__Filters">
 				<SearchInput onChange={setSearchText} />
 			</div>
-			<div className="content">
+			<div className="Home__Content">
 				<EmployerList employers={employers} searchFilter={searchFilter} />
 			</div>
 		</main>

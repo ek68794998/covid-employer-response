@@ -1,5 +1,7 @@
 name: United Airlines
+shortName: United
 wiki: United Airlines
+image: united.svg
 officialWebsite: https://www.united.com
 rating: fair
 location:

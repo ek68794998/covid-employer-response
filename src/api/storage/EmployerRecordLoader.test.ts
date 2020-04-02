@@ -51,6 +51,7 @@ describe("EmployerRecordLoader", () => {
 
 		expect(record.id).toBe("sample");
 		expect(record.name).toBe("Contoso");
+		expect(record.shortName).toBe("Co.");
 		expect(record.wiki).toBe("Example");
 		expect(record.officialWebsite).toBe("http://example.com");
 		expect(record.rating).toBe("fair");

@@ -11,6 +11,8 @@ export class EmployerRecord {
 
 	public id: string = "";
 
+	public image?: string;
+
 	public location: EmployerLocation = new EmployerLocation();
 
 	public name: string = "";
@@ -18,6 +20,8 @@ export class EmployerRecord {
 	public officialWebsite?: string;
 
 	public rating: EmployerRating = "fair";
+
+	public shortName?: string;
 
 	public summary: string = "";
 

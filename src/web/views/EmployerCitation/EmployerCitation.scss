@@ -1,39 +1,35 @@
+@import "../Colors.scss";
 @import "../Dimensions.scss";
 
 $indicator-glow-size: 3px;
 
-$indicator-negative: #f44336;
-$indicator-neutral: #90a4ae;
-$indicator-positive: #4caf50;
-
-.citation {
+.EmployerCitation__Container {
 	display: flex;
+	line-height: 180%;
 
-	.indicator {
-		align-self: center;
+	.EmployerCitation__Indicator {
 		flex: 0;
 		margin-right: 8px;
-		margin-top: -3px;
 	
-		&.indicator-negative {
+		&.EmployerCitation__Indicator--Negative {
 			color: $indicator-negative;
 		}
 	
-		&.indicator-neutral {
+		&.EmployerCitation__Indicator--Neutral {
 			color: $indicator-neutral;
 		}
 	
-		&.indicator-positive {
+		&.EmployerCitation__Indicator--Positive {
 			color: $indicator-positive;
 		}
 	}
 }
 
-.citation-summary {
+.EmployerCitation__Summary {
 	margin-left: 4px;
 }
 
-.citation-references {
+.EmployerCitation__References {
 	font-size: smaller;
 	line-height: 0;
 	vertical-align: super;

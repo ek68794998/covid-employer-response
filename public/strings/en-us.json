@@ -13,6 +13,7 @@
     "hearsay": "Hearsay"
   },
   "detailDescriptions": {
+    "edit": "The employer's data file where edits can be made.",
     "employees": "The approximate number of employees the company had prior to the Coronavirus pandemic.",
     "location": "The city in which the employer is originally based.",
     "officialWebsite": "The employer's official website link.",
@@ -28,6 +29,7 @@
     "fair": "Fair",
     "good": "Good"
   },
+  "readMore": "Read more",
   "search": "Search",
   "submit": "Submit",
   "wikipedia": "Wikipedia page"

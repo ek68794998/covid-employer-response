@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteComponentProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationSource } from "../../../common/CitationSource";
@@ -28,26 +28,29 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 			return <a key={i} href={s.link} target="_blank" title={title}>[{i + citationSourceBase}]</a>;
 		};
 
-	let indicatorClass: "neutral" | "positive" | "negative" = "neutral";
+	let indicatorClass: "Neutral" | "Positive" | "Negative" = "Neutral";
 	let indicatorIcon: "thumb_up" | "info" | "thumb_down" = "info";
 
 	if (citation.positivity > 0) {
-		indicatorClass = "positive";
+		indicatorClass = "Positive";
 		indicatorIcon = "thumb_up";
 	} else if (citation.positivity < 0) {
-		indicatorClass = "negative";
+		indicatorClass = "Negative";
 		indicatorIcon = "thumb_down";
 	}
 
+	const iconClass: string =
+		`material-icons EmployerCitation__Indicator EmployerCitation__Indicator--${indicatorClass}`;
+
 	return (
-		<div className="citation">
-			<i className={`material-icons indicator indicator-${indicatorClass}`}>{indicatorIcon}</i>
-			<span className="citation-summary">
+		<div className="EmployerCitation__Container">
+			<i className={iconClass}>{indicatorIcon}</i>
+			<span className="EmployerCitation__Summary">
 				{citation.summary}
-				{citation.sources && <span className="citation-references">{citation.sources.map(getLinkComponent)}</span>}
+				{citation.sources && <span className="EmployerCitation__References">{citation.sources.map(getLinkComponent)}</span>}
 			</span>
 		</div>
 	);
 };
 
-export default withRouter(EmployerCitation) as any;
+export default EmployerCitation as any;
