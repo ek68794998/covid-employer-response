@@ -70,13 +70,11 @@ const About: React.FC = (): React.ReactElement => {
 					What is the difference between "{strings.citationTypes.publication}", "{strings.citationTypes.statement}",
 					and "{strings.citationTypes.hearsay}"?
 				</h2>
-				<p>
-					<ul>
-						<li>{strings.citationTypes.publication}: {strings.citationTypeDescriptions.publication}</li>
-						<li>{strings.citationTypes.statement}: {strings.citationTypeDescriptions.statement}</li>
-						<li>{strings.citationTypes.hearsay}: {strings.citationTypeDescriptions.hearsay}</li>
-					</ul>
-				</p>
+				<ul>
+					<li>{strings.citationTypes.publication}: {strings.citationTypeDescriptions.publication}</li>
+					<li>{strings.citationTypes.statement}: {strings.citationTypeDescriptions.statement}</li>
+					<li>{strings.citationTypes.hearsay}: {strings.citationTypeDescriptions.hearsay}</li>
+				</ul>
 
 				<h2 id="employer-ratings">What determines the rating of an employer?</h2>
 				<p>

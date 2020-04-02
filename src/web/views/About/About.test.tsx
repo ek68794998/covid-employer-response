@@ -6,8 +6,19 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import About from "./About";
 
 jest.mock("react-redux", () => ({
-	useSelector: (): {} => ({
-		getStrings: (): LocalizedStrings => ({ about: "About" }),
+	useSelector: jest.fn().mockReturnValue({
+		about: "About",
+		appTitle: "Test App",
+		citationTypeDescriptions: {
+			hearsay: "hearsay description",
+			publication: "publication description",
+			statement: "statement description",
+		},
+		citationTypes: {
+			hearsay: "hearsay",
+			publication: "publication",
+			statement: "statement",
+		},
 	}),
 }));
 

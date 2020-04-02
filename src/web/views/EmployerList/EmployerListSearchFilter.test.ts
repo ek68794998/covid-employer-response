@@ -10,7 +10,7 @@ describe("EmployerListSearchFilter", () => {
 	};
 
 	test.each([
-		[ { text: "" }, createEmployerRecordDataRow({}), true ],
+		[ { text: "" }, createEmployerRecordDataRow({}), false ],
 		[ { text: "" }, createEmployerRecordDataRow({ name: "foo" }), true ],
 		[ { text: "f" }, createEmployerRecordDataRow({ name: "foo" }), true ],
 		[ { text: "o" }, createEmployerRecordDataRow({ name: "foo" }), true ],

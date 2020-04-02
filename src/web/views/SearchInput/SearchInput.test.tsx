@@ -16,7 +16,7 @@ describe("<SearchInput />", () => {
 		const div: HTMLDivElement = document.createElement("div");
 
 		render(
-			<SearchInput.WrappedComponent />,
+			<SearchInput />,
 			div,
 		);
 	});
