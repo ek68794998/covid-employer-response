@@ -1,7 +1,3 @@
-# This is a sample YAML file representing a fake employer.
-# It can be used as a template to create others.
-# This file will not be shown in the UI if named 'sample.yml'.
-
 name: Hobby Lobby # The official name of the company.
 wiki: Hobby Lobby # The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
 officialWebsite: http://hobbylobby.com # The root URL of the company's webpage, if any.
@@ -14,9 +10,9 @@ location: # Where the company is originally based.
   wiki: Oklahoma City # The subpath for the location's English Wikipedia page, if any.
 employeesBeforeMax: 37500 # The upper bound (if known) for the range of company employees prior to 2020.
 employeesBeforeMin: 37500 # The lower bound (if known) for the range of company employees prior to 2020.
-summary: This employer has fought hard to gain status as an essential business, claiming that it sells masks and educational supplies. However, most authorities have closed their stores. It has forced employees to come in to work for stores that are located in states that has stay-at-home or similar kind of order. It has complied with authorities in states that forced them to close. The company has promised its employees to provide sick leave for those who have caught the virus and paid time off to employees in stores that have closed down. The pay will be 75% of their total wage. The company has also quietly opened up stores that were initially closed down by authorities.
+summary: This employer has remained opened despite authorities forcing them to close. The stores that did closed promised to partially pay out its employees.
 citations:
-  - summary: Business argues that it is essential, but authorities are not convinced and closed down stores in different states
+  - summary: Business argues that it is essential, but authorities are not convinced and closed down stores in different states.
     positivity: -1
     type: publication # Indicates that the **original** fact source is a published statement from an employee, whether they are a current, former, or anonymous source.
     sources:
@@ -37,7 +33,7 @@ citations:
       - name: "Business Insider"
         link: https://www.businessinsider.com/hobby-lobby-reopened-stores-in-states-with-coronavirus-lockdowns-2020-3
         date: 2020-03-31T20:14:14Z
-  - summary: Most Hobby Lobby stores remain open amid pandemic
+  - summary: Most Hobby Lobby stores remain open amid pandemic.
     positivity: -1
     type: publication # Indicates that the **original** fact source is word of mouth, a rumor, or an unconfirmed (or impossible-to-confirm) statement.
     sources:
