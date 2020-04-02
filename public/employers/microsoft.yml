@@ -9,8 +9,10 @@ location:
   country: USA
   international: true
   wiki: Redmond, Washington
-employeesBeforeMax: 151163
-employeesBeforeMin: 151163
+employeesBefore:
+  type: exactly
+  upperBound: 151163
+  year: 2019
 summary: Microsoft has gone all-in on King County's advice to urge staff to work from home, and has taken steps upon learning of employees testing positive for COVID-19.
 citations:
   - summary: Microsoft employees were advised to stay home on the evening of March 4th, and by March 6th, less than 7,000 Seattle-area employees were working in-office.

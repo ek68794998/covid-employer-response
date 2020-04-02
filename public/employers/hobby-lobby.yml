@@ -9,8 +9,10 @@ location:
   country: USA
   international: false
   wiki: Oklahoma City
-employeesBeforeMax: 37500
-employeesBeforeMin: 37500
+employeesBefore:
+  type: exactly
+  upperBound: 37500
+  year: 2018
 summary: This employer has has stores that remained opened despite authorities forcing them to close. The stores that did closed promised to partially pay out its employees.
 citations:
   - summary: Business argues that it is essential, but authorities are not convinced and closed down stores in different states.
