@@ -29,14 +29,20 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 		};
 
 	let indicatorClass: "Neutral" | "Positive" | "Negative" = "Neutral";
-	let indicatorIcon: "thumb_up" | "info" | "thumb_down" = "info";
+	let indicatorIcon:
+		"add_circle"
+		| "add_circle_outline"
+		| "error_outline"
+		| "remove_circle_outline"
+		| "remove_circle"
+		= "error_outline";
 
 	if (citation.positivity > 0) {
 		indicatorClass = "Positive";
-		indicatorIcon = "thumb_up";
+		indicatorIcon = citation.positivity > 1 ? "add_circle" : "add_circle_outline";
 	} else if (citation.positivity < 0) {
 		indicatorClass = "Negative";
-		indicatorIcon = "thumb_down";
+		indicatorIcon = citation.positivity < -1 ? "remove_circle" : "remove_circle_outline";
 	}
 
 	const iconClass: string =
