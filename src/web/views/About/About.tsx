@@ -12,7 +12,7 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import "./About.scss";
 
 const About: React.FC = (): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 
 	const coronavirusWikipediaUrl: string = "https://en.wikipedia.org/wiki/Coronavirus_disease_2019";
 	const coronavirusPandemicWikipediaUrl: string = "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic";

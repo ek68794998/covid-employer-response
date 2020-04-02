@@ -23,7 +23,7 @@ interface Props extends RouteProps {
 }
 
 const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 	const { employers, searchFilter } = props;
 
 	const [ openRow, setOpenRow ] = useState("");

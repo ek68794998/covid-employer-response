@@ -22,7 +22,7 @@ interface Props extends RouteProps {
 }
 
 const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 
 	const { citations, citationSourceBase, citationType } = props;
 

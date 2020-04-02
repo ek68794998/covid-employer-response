@@ -11,7 +11,7 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import "./HeaderFooter.scss";
 
 const HeaderMenu: React.FC = (): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 
 	return (
 		<header>

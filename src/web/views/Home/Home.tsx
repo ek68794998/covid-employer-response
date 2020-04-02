@@ -20,8 +20,8 @@ import "./Home.scss";
 const Home: React.FC = (): React.ReactElement => {
 	const [ searchText, setSearchText ] = useState("");
 
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
-	const employers: EmployerRecord[] = useSelector((state: AppState) => getEmployers(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
+	const employers: EmployerRecord[] = useSelector(getEmployers);
 
 	const dispatch: React.Dispatch<any> = useDispatch();
 

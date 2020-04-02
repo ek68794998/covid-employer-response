@@ -14,7 +14,7 @@ interface Props extends RouteProps {
 }
 
 const SearchInput: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 	const { onChange } = props;
 
 	return (

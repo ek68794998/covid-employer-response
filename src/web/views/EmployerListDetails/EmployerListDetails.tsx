@@ -22,7 +22,7 @@ interface Props extends RouteProps {
 const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
 const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 	const { employer, onClick } = props;
 
 	const rating: EmployerRating = EmployerRecord.getRating(employer);
