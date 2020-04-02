@@ -4,6 +4,8 @@ import { EmployerLocation } from "./EmployerLocation";
 import { EmployerRating } from "./EmployerRating";
 
 export class EmployerRecord {
+	public aliases?: string[];
+
 	public citations: Citation[] = [];
 
 	public employeesBefore?: EmployerEmployeeProfile;

@@ -137,7 +137,15 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 			indicatorIcon = "trending_flat";
 	}
 
-	const displayName: string = (useShortText && employer.shortName) ? employer.shortName : employer.name;
+	let displayName: string = employer.name;
+
+	if (useShortText) {
+		if (employer.shortName) {
+			displayName = employer.shortName;
+		}
+	} else if (employer.aliases && employer.aliases.length > 0) {
+		displayName = `${displayName} (${employer.aliases.join(", ")})`;
+	}
 
 	return (
 		<>

@@ -1,4 +1,6 @@
 name: Google
+aliases:
+  - Alphabet
 wiki: Google
 image: google.svg
 officialWebsite: https://google.com
