@@ -1,8 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
 
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
-
 import About from "./About";
 
 jest.mock("react-redux", () => ({
