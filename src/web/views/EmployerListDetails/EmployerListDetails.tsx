@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
-import { employerLocationToString } from "../../../common/EmployerLocation";
+import { EmployerLocation, employerLocationToString } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -17,6 +17,46 @@ interface Props extends RouteProps {
 	onClick: () => void;
 }
 
+const getEmployerWebsiteComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+	if (!employer.officialWebsite) {
+		return null;
+	}
+
+	return (
+		<a href={employer.officialWebsite} target="_blank" title={strings.detailDescriptions.officialWebsite}>
+			{materialIcon("home")}
+		</a>
+	);
+};
+
+const getEmployerWikipediaComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+	const employerWikipediaUrl: string | null = getWikipediaUrl(employer.wiki);
+
+	if (!employerWikipediaUrl) {
+		return null;
+	}
+
+	return (
+		<a href={employerWikipediaUrl} target="_blank" title={strings.detailDescriptions.wikipedia}>
+			{materialIcon("language")}
+		</a>
+	);
+};
+
+const getLocationWikipediaComponent = (location: EmployerLocation, strings: LocalizedStrings): JSX.Element | null => {
+	const locationWikipediaUrl: string | null = getWikipediaUrl(location.wiki);
+
+	if (!locationWikipediaUrl) {
+		return null;
+	}
+
+	return (
+		<a href={locationWikipediaUrl} target="_blank" title={strings.detailDescriptions.location}>
+			{employerLocationToString(location)}
+		</a>
+	);
+};
+
 const getWikipediaUrl = (pageName?: string): string | null => {
 	if (!pageName) {
 		return null;
@@ -27,6 +67,8 @@ const getWikipediaUrl = (pageName?: string): string | null => {
 
 	return wikipediaUrlBase.replace("__PAGE__", pageNameSubpath);
 };
+
+const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
 const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
@@ -45,9 +87,6 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			employeeCountString = `Less than ${employer.employeesBeforeMax.toLocaleString()}`;
 		}
 	}
-
-	const employerWikipediaUrl: string | null = getWikipediaUrl(employer.wiki);
-	const locationWikipediaUrl: string = getWikipediaUrl(employer.location.wiki) || "";
 
 	let indicatorIcon: "trending_up" | "trending_flat" | "trending_down";
 
@@ -73,17 +112,17 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 					<a href="#" onClick={onClick}>{employer.name}</a>
 				</h2>
 				<span className="EmployerListDetails__Links">
-					{employerWikipediaUrl && <a href={employerWikipediaUrl}><i className="material-icons">language</i></a>}
-					{employer.officialWebsite && <a href={employer.officialWebsite}><i className="material-icons">home</i></a>}
+					{getEmployerWikipediaComponent(employer, strings)}
+					{getEmployerWebsiteComponent(employer, strings)}
 				</span>
-				<span className="EmployerListDetails__Rating">
+				<span className="EmployerListDetails__Rating" title={strings.detailDescriptions.rating}>
 					{strings.ratingLabels[employer.rating]}
 					<i className="material-icons EmployerListDetails__RatingIcon">{indicatorIcon}</i>
 				</span>
 			</div>
 			<div className="EmployerListDetails__Subtitle">
-				<a href={locationWikipediaUrl}>{employerLocationToString(employer.location)}</a>
-				{employeeCountString && <span>{employeeCountString} <i className="material-icons">people</i></span>}
+				{getLocationWikipediaComponent(employer.location, strings)}
+				{employeeCountString && <span title={strings.detailDescriptions.employees}>{employeeCountString}{materialIcon("people")}</span>}
 			</div>
 			<div className="EmployerListDetails__Summary">
 				{employer.summary}
@@ -92,7 +131,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			<div className="EmployerListDetails__Actions">
 				<a href="#" onClick={onClick}>
 					Read more
-					<i className="material-icons">fullscreen</i>
+					{materialIcon("fullscreen")}
 				</a>
 			</div>
 		</div>

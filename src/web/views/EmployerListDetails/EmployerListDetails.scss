@@ -76,16 +76,14 @@ $padding-sides: 16px;
 	}
 
 	.EmployerListDetails__Rating {
+		border-radius: 16px;
+		color: #fff;
+		cursor: default;
 		font-size: 18px;
 		font-weight: 600;
+		height: 32px;
+		padding: 3px 12px 13px 12px;
 	}
-}
-
-.EmployerListDetails__Rating {
-	border-radius: 16px;
-	color: #fff;
-	height: 32px;
-	padding: 3px 12px 13px 12px;
 }
 
 .EmployerListDetails__RatingIcon {
@@ -95,14 +93,18 @@ $padding-sides: 16px;
 
 .EmployerListDetails__Subtitle {
 	color: #757575;
+	cursor: default;
 	font-size: 12px;
 	display: flex;
 	justify-content: space-between;
 	margin: $padding-interior 0;
-	transition: 0.2s all;
 
-	> *:hover {
-		color: #212121;
+	> a, > span {
+		transition: 0.2s all;
+
+		&:hover {
+			color: #212121;
+		}
 	}
 
 	a {
