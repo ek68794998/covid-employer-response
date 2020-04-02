@@ -2,11 +2,11 @@
 @import "../Dimensions.scss";
 
 $body-color: $outline-color;
-$border-radius: 8px;
+$border-radius: 12px;
 $box-shadow-color: rgba(0, 0, 0, 0.2);
 $icon-size: 32px;
-$padding-interior: 8px;
-$padding-sides: 12px;
+$padding-interior: 12px;
+$padding-sides: 16px;
 
 .EmployerListDetails__Container {
 	border: 1px solid $body-color;
@@ -15,8 +15,7 @@ $padding-sides: 12px;
 	display: flex;
 	flex-direction: column;
 	font-size: 16px;
-	height: 100%;
-	margin-bottom: $padding-interior;
+	height: 250px;
 	padding: 0 $padding-sides;
 	transition: 0.1s all;
 	width: 100%;
@@ -56,7 +55,7 @@ $padding-sides: 12px;
 	align-items: center;
 	display: flex;
 	font-family: 'Baloo Chettan 2';
-	margin: $padding-interior 0;
+	margin-top: $padding-interior;
 
 	h2 {
 		font-weight: 400;
@@ -121,13 +120,24 @@ $padding-sides: 12px;
 	flex: 1;
 	font-size: 14px;
 	line-height: 180%;
+	overflow-y: hidden;
+	position: relative;
+
+	.EmployerListDetails__OverflowScreen {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 30px;
+		background: linear-gradient(to top, $background, rgba(255, 255, 255, 0));
+	}
 }
 
 .EmployerListDetails__Actions {
 	display: flex;
 	font-family: 'Baloo Chettan 2';
 	justify-content: flex-end;
-	margin: ($padding-interior / 2) 0 $padding-interior;
+	margin: 3px 0 $padding-interior;
 
 	a {
 		align-items: center;

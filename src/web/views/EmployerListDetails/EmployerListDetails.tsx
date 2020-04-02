@@ -87,6 +87,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			</div>
 			<div className="EmployerListDetails__Summary">
 				{employer.summary}
+				<div className="EmployerListDetails__OverflowScreen" />
 			</div>
 			<div className="EmployerListDetails__Actions">
 				<a href="#" onClick={onClick}>
