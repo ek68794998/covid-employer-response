@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import { AuthorUrl, ProjectUrl } from "../../../common/constants/UrlConstants";

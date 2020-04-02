@@ -4,7 +4,6 @@ import { RouteProps } from "react-router-dom";
 
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import "./SearchInput.scss";

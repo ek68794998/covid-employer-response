@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import { ProjectUrl } from "../../../common/constants/UrlConstants";

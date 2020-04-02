@@ -6,7 +6,6 @@ import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";

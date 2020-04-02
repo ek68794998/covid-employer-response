@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import { ProjectIssueSubmissionUrl } from "../../../common/constants/UrlConstants";

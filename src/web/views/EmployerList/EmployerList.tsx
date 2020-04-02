@@ -6,7 +6,6 @@ import { RouteProps } from "react-router-dom";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";

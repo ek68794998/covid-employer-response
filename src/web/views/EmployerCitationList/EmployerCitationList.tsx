@@ -6,7 +6,6 @@ import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerCitation from "../EmployerCitation/EmployerCitation";
