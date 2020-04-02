@@ -2,6 +2,7 @@
 
 $scrollbar-track-color: transparent;
 $scrollbar-thumb-color: rgba(0, 0, 0, 0.4);
+$scrollbar-width: 18px;
 
 body.ReactModal__Body--open {
 	overflow-y: hidden;
@@ -21,12 +22,13 @@ body.ReactModal__Body--open {
 		margin: 0 auto;
 		max-width: $body-max-width;
 		position: initial !important;
+		padding-right: (20px - $scrollbar-width) !important; /* 20px is React modal default padding. */
 		scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
 		scrollbar-width: thin;
 		width: 100%;
 
 		&::-webkit-scrollbar {
-			width: 18px;
+			width: $scrollbar-width;
 		}
 
 		&::-webkit-scrollbar-track {

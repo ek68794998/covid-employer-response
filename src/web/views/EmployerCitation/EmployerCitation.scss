@@ -5,12 +5,11 @@ $indicator-glow-size: 3px;
 
 .EmployerCitation__Container {
 	display: flex;
+	line-height: 180%;
 
 	.EmployerCitation__Indicator {
-		align-self: center;
 		flex: 0;
 		margin-right: 8px;
-		margin-top: -3px;
 	
 		&.EmployerCitation__Indicator--Negative {
 			color: $indicator-negative;
