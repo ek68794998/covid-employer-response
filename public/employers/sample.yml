@@ -16,10 +16,10 @@ location: # Where the company is originally based.
   wiki: Seattle # The subpath for the location's English Wikipedia page, if any.
 employeesBefore: # The number of company employees prior to 2020.
   lowerBound: 200 # The lower bound of the employee count. Used only if specifying a range.
-  type: approximately # 'range', 'approximately', or 'exactly'.
+  type: range # 'range', 'approximately', or 'exactly'.
   upperBound: 500 # The upper bound of the employee count, or the true number if not specifying a range.
   year: 2019 # The year in which the measure was reported.
-  yearQuarter: # The optional quarter (Q1, Q2, ...) of the calendar year in which the measure was reported.
+  yearQuarter: Q1 # The optional quarter (Q1, Q2, ...) of the calendar year in which the measure was reported.
 summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.
 citations:
   - summary: Business does not meet "essential" qualifications but requested to be classified as essential.

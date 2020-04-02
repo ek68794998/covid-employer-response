@@ -6,13 +6,13 @@ import { EmployerRating } from "./EmployerRating";
 export class EmployerRecord {
 	public citations: Citation[] = [];
 
-	public employeesBefore: EmployerEmployeeProfile = new EmployerEmployeeProfile();
+	public employeesBefore?: EmployerEmployeeProfile;
 
 	public id: string = "";
 
 	public image?: string;
 
-	public location: EmployerLocation = new EmployerLocation();
+	public location?: EmployerLocation;
 
 	public name: string = "";
 

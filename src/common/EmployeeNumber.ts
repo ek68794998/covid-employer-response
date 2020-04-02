@@ -14,7 +14,7 @@ export class EmployeeNumber {
 
 		this.value =
 			this.magnitude
-				? Math.round(1234567 / Math.pow(10, this.magnitude - 1)) / 10
+				? Math.round(value / Math.pow(10, this.magnitude - 1)) / 10
 				: value;
 	}
 
@@ -32,11 +32,11 @@ export class EmployeeNumber {
 		}
 
 		if (value >= 1000000000) {
-			return 6;
+			return 9;
 		}
 
 		if (value >= 1000000) {
-			return 9;
+			return 6;
 		}
 
 		return null;

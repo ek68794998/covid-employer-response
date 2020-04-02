@@ -17,10 +17,6 @@ export class EmployerEmployeeProfile {
 	public yearQuarter?: "Q1" | "Q2" | "Q3" | "Q4";
 
 	public static toString(p: EmployerEmployeeProfile, includeDate: boolean, useShortText: boolean): string | null {
-		if (!p || p.upperBound <= 0) {
-			return null;
-		}
-
 		const lowerBound: EmployeeNumber | null =
 			(p.lowerBound && p.lowerBound > 0) ? new EmployeeNumber(p.lowerBound) : null;
 
@@ -49,9 +45,9 @@ export class EmployerEmployeeProfile {
 							? `${lowerBound.value} ${String.fromCharCode(0x2013)} ${upperBound.toString()}`
 							: `${lowerBound.toString()} ${String.fromCharCode(0x2013)} ${upperBound.toString()}`;
 				} else if (lowerBound) {
-					employeeCountString = `More than ${lowerBound.toString()}`;
+					employeeCountString = useShortText ? `${String.fromCharCode(0x2265)} ${lowerBound.toString()}` : `More than ${lowerBound.toString()}`;
 				} else if (upperBound) {
-					employeeCountString = `Less than ${upperBound.toString()}`;
+					employeeCountString = useShortText ? `${String.fromCharCode(0x2264)} ${upperBound.toString()}` : `Less than ${upperBound.toString()}`;
 				} else {
 					throw new Error("Invalid lower and upper bounds specified for range string.");
 				}
