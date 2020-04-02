@@ -18,5 +18,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn test --watchAll=false
+    - name: Install packages
+      run: yarn install
+    - name: Run unit tests
+      run: |
+        yarn test --watchAll=false
+        echo "Process exited with status code $?."
