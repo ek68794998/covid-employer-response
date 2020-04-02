@@ -22,5 +22,5 @@ jobs:
       run: yarn install
     - name: Run unit tests
       run: |
-        yarn test --watchAll=false
+        yarn test:ci
         echo "Process exited with status code $?."
