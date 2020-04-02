@@ -10,7 +10,7 @@ location: # Where the company is originally based.
   wiki: Oklahoma City # The subpath for the location's English Wikipedia page, if any.
 employeesBeforeMax: 37500 # The upper bound (if known) for the range of company employees prior to 2020.
 employeesBeforeMin: 37500 # The lower bound (if known) for the range of company employees prior to 2020.
-summary: This employer has remained opened despite authorities forcing them to close. The stores that did closed promised to partially pay out its employees.
+summary: This employer has has stores that remained opened despite authorities forcing them to close. The stores that did closed promised to partially pay out its employees.
 citations:
   - summary: Business argues that it is essential, but authorities are not convinced and closed down stores in different states.
     positivity: -1
@@ -26,7 +26,7 @@ citations:
       - name: Religion News Service
         link: https://religionnews.com/2020/03/31/hobby-lobby-clarifies-sick-leave-policy-amid-coronavirus/
         date: 2020-03-20T11:29:19Z
-  - summary: Hobby Lobby quietly reopened stores defying shutdowns and requiring police intervention
+  - summary: Hobby Lobby quietly reopened stores defying shutdowns and requiring police intervention.
     positivity: -1
     type: publication # Indicates that the **original** fact source is word of mouth, a rumor, or an unconfirmed (or impossible-to-confirm) statement.
     sources:
