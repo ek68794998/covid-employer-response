@@ -24,98 +24,6 @@ $padding-sides: 16px;
 		box-shadow: 0px 3px 6px $box-shadow-color;
 		transform: translateY(-1px);
 	}
-
-	&.EmployerListDetails__Rating--good {
-		.EmployerListDetails__Rating, .EmployerListDetails__RatingIcon {
-			background: $indicator-positive;
-		}
-	}
-
-	&.EmployerListDetails__Rating--fair {
-		.EmployerListDetails__Rating, .EmployerListDetails__RatingIcon {
-			background: $indicator-neutral;
-		}
-	}
-
-	&.EmployerListDetails__Rating--poor {
-		.EmployerListDetails__Rating, .EmployerListDetails__RatingIcon {
-			background: $indicator-negative;
-		}
-	}
-}
-
-.EmployerListDetails__Icon {
-	border-radius: ($icon-size / 2) ($icon-size / 2);
-	height: auto;
-	margin-right: $padding-interior;
-	width: $icon-size;
-}
-
-.EmployerListDetails__Title {
-	align-items: center;
-	display: flex;
-	font-family: 'Baloo Chettan 2';
-	margin-top: $padding-interior;
-
-	h2 {
-		font-weight: 400;
-		margin: 0 4px;
-
-		a {
-			color: inherit;
-		}
-	}
-
-	.EmployerListDetails__Links {
-		align-content: center;
-		flex: 1;
-
-		i {
-			margin: 4px 0 0 6px;
-		}
-	}
-
-	.EmployerListDetails__Rating {
-		border-radius: 16px;
-		color: #fff;
-		cursor: default;
-		font-size: 18px;
-		font-weight: 600;
-		height: 32px;
-		padding: 3px 12px 13px 12px;
-	}
-}
-
-.EmployerListDetails__RatingIcon {
-	margin-left: $padding-interior;
-	vertical-align: bottom;
-}
-
-.EmployerListDetails__Subtitle {
-	color: #757575;
-	cursor: default;
-	font-size: 12px;
-	display: flex;
-	justify-content: space-between;
-	margin: $padding-interior 0;
-
-	> a, > span {
-		transition: 0.2s all;
-
-		&:hover {
-			color: #212121;
-		}
-	}
-
-	a {
-		color: inherit;
-	}
-
-	i {
-		font-size: 18px;
-		margin-left: 4px;
-		vertical-align: bottom;
-	}
 }
 
 .EmployerListDetails__Summary {
@@ -147,33 +55,6 @@ $padding-sides: 16px;
 
 		i {
 			margin-left: 4px;
-		}
-	}
-}
-
-@media (max-width: $body-narrow-width) {
-	.EmployerListDetails__Details {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: $body-min-width;
-
-		span.break {
-			display: block;
-			flex-basis: 100%;
-			height: 12px;
-			width: 0;
-		}
-	}
-}
-
-@media (max-width: $body-reduced-width) {
-	.EmployerListDetails__Details .label-hides {
-		.icon {
-			margin: 0;
-		}
-
-		.label {
-			display: none;
 		}
 	}
 }

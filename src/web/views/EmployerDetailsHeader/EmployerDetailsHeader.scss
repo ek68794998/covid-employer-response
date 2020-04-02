@@ -1,0 +1,92 @@
+@import "../Colors.scss";
+@import "../Dimensions.scss";
+
+$body-color: $outline-color;
+$border-radius: 12px;
+$box-shadow-color: rgba(0, 0, 0, 0.2);
+$icon-size: 32px;
+$padding-interior: 12px;
+$padding-sides: 16px;
+
+.EmployerDetailsHeader__Icon {
+	border-radius: ($icon-size / 2) ($icon-size / 2);
+	height: auto;
+	margin-right: $padding-interior;
+	width: $icon-size;
+}
+
+.EmployerDetailsHeader__Title {
+	align-items: center;
+	display: flex;
+	font-family: 'Baloo Chettan 2';
+	margin-top: $padding-interior;
+
+	h2 {
+		font-weight: 400;
+		margin: 0 4px;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	.EmployerDetailsHeader__Links {
+		align-content: center;
+		flex: 1;
+
+		i {
+			margin: 4px 0 0 6px;
+		}
+	}
+
+	.EmployerDetailsHeader__Rating {
+		background: $indicator-neutral;
+		border-radius: 16px;
+		color: #fff;
+		cursor: default;
+		font-size: 18px;
+		font-weight: 600;
+		height: 32px;
+		padding: 3px 12px 13px 12px;
+
+		&.EmployerDetailsHeader__Rating--good {
+			background: $indicator-positive;
+		}
+	
+		&.EmployerDetailsHeader__Rating--poor {
+			background: $indicator-negative;
+		}
+	}
+}
+
+.EmployerDetailsHeader__RatingIcon {
+	margin-left: $padding-interior;
+	vertical-align: bottom;
+}
+
+.EmployerDetailsHeader__Subtitle {
+	color: #757575;
+	cursor: default;
+	font-size: 12px;
+	display: flex;
+	justify-content: space-between;
+	margin: $padding-interior 0;
+
+	> a, > span {
+		transition: 0.2s all;
+
+		&:hover {
+			color: #212121;
+		}
+	}
+
+	a {
+		color: inherit;
+	}
+
+	i {
+		font-size: 18px;
+		margin-left: 4px;
+		vertical-align: bottom;
+	}
+}
