@@ -55,8 +55,8 @@ const getEmployerEmployeeCountComponent = (employer: EmployerRecord, strings: Lo
 
 	return (
 		<span title={strings.detailDescriptions.employees}>
-			{employeeCountString}
 			{materialIcon("people")}
+			{employeeCountString}
 		</span>
 	);
 };
@@ -97,6 +97,7 @@ const getLocationWikipediaComponent =
 
 		return (
 			<a href={locationWikipediaUrl} target="_blank" title={strings.detailDescriptions.location}>
+				{materialIcon("place")}
 				{employerLocationToString(location, useShortText)}
 			</a>
 		);
@@ -157,7 +158,7 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 					<i className="material-icons EmployerDetailsHeader__RatingIcon">{indicatorIcon}</i>
 				</span>
 			</div>
-			<div className="EmployerDetailsHeader__Subtitle">
+			<div className={`EmployerDetailsHeader__Subtitle ${useShortText ? "" : "EmployerDetailsHeader__Subtitle--noShort"}`}>
 				{getLocationWikipediaComponent(employer.location, strings, useShortText || false)}
 				{getEmployerEmployeeCountComponent(employer, strings)}
 			</div>

@@ -48,3 +48,17 @@ body.ReactModal__Body--open {
 		}
 	}
 }
+
+@media (max-width: $body-narrow-width) {
+	.ReactModal__Overlay {
+		padding-left: $page-padding-narrow;
+		padding-right: $page-padding-narrow;
+	}
+}
+
+@media (max-height: 500px) {
+	.ReactModal__Overlay {
+		padding-bottom: $page-padding-narrow;
+		padding-top: $page-padding-narrow;
+	}
+}
