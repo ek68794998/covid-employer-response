@@ -1,5 +1,8 @@
 @import "./Dimensions.scss";
 
+$scrollbar-track-color: transparent;
+$scrollbar-thumb-color: rgba(0, 0, 0, 0.4);
+
 body.ReactModal__Body--open {
 	overflow-y: hidden;
 }
@@ -13,10 +16,32 @@ body.ReactModal__Body--open {
 
 	.ReactModal__Content {
 		border: none !important;
+		border-radius: 12px !important;
 		box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.4);
 		margin: 0 auto;
 		max-width: $body-max-width;
 		position: initial !important;
+		scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+		scrollbar-width: thin;
 		width: 100%;
+
+		&::-webkit-scrollbar {
+			width: 18px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: $scrollbar-track-color;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $scrollbar-thumb-color;
+			border: 7px solid transparent;
+			border-radius: 9px;
+			background-clip: padding-box;
+		}
+
+		&:not(:hover)::-webkit-scrollbar-thumb {
+			background-color: transparent;
+		}
 	}
 }
