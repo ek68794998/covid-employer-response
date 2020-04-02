@@ -7,7 +7,6 @@ shortName: Co. # An optional shortened version of the company's name.
 wiki: Example # The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
 image: sample.svg # An optional name of a logo, in SVG format, in the 'public/images/employers' directory.
 officialWebsite: http://example.com # The root URL of the company's webpage, if any.
-rating: fair # 'poor', 'fair', or 'good'
 location: # Where the company is originally based.
   city: Seattle
   state: WA
@@ -20,10 +19,10 @@ employeesBefore: # The number of company employees prior to 2020.
   upperBound: 500 # The upper bound of the employee count, or the true number if not specifying a range.
   year: 2019 # The year in which the measure was reported.
   yearQuarter: Q1 # The optional quarter (Q1, Q2, ...) of the calendar year in which the measure was reported.
-summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.
+summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home. # A summary about the company. Should be 100-350 characters.
 citations:
   - summary: Business does not meet "essential" qualifications but requested to be classified as essential.
-    positivity: 0
+    positivity: 0 # A value from -2 to +2 that indicates how positive the news is. -2 would be severely negative; 0 would be neutral; +2 would be incredibly positive.
     type: statement # Indicates that the **original** fact source is a published statement from an employee, whether they are a current, former, or anonymous source.
     sources:
       - name: K5 News

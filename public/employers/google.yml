@@ -2,7 +2,6 @@ name: Google
 wiki: Google
 image: google.svg
 officialWebsite: https://google.com
-rating: fair
 location:
   city: Menlo Park
   state: CA
@@ -17,7 +16,7 @@ employeesBefore:
 summary: Google (as part of its parent company, Alphabet) has provided a number of COVID-19 related information services and is investing in testing for the disease, as well as permitted many of its employees to work from home. However, it falls short in supporting its YouTube communities, contractors, and providing good work-from-home situations.
 citations:
   - summary: A subdivison of Alphabet, Verily, has begun ramping up a drive-thru COVID-19 test; it has begun efforts in select counties of California, but plans for expansion have been announced.
-    positivity: 1
+    positivity: 2
     type: publication
     sources:
       - name: The Verge
