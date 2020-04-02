@@ -23,7 +23,7 @@ describe("<HeaderMenu />", () => {
 
 		render(
 			<BrowserRouter>
-				<HeaderMenu.WrappedComponent />
+				<HeaderMenu />
 			</BrowserRouter>,
 			div,
 		);

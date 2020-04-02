@@ -9,8 +9,10 @@ location:
   country: USA
   international: true
   wiki: Bellevue, Washington
-employeesBeforeMax: 798000
-employeesBeforeMin: 798000
+employeesBefore:
+  type: approximately
+  upperBound: 798000
+  year: 2019
 summary: Though Amazon touts a work-from-home policy for engineers and pay raises for service workers, there are additional reports of mandatory overtime and complaints of management not immediately reporting COVID-19 cases.
 citations:
   - summary: Amazon began canceling large events and tours, and began routinely and thoroughly sanitizing "all facilities globally."

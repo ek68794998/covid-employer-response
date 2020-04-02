@@ -1,19 +1,18 @@
 import { Citation } from "./Citation";
+import { EmployerEmployeeProfile } from "./EmployerEmployeeProfile";
 import { EmployerLocation } from "./EmployerLocation";
 import { EmployerRating } from "./EmployerRating";
 
 export class EmployerRecord {
 	public citations: Citation[] = [];
 
-	public employeesBeforeMax: number = -1;
-
-	public employeesBeforeMin: number = -1;
+	public employeesBefore?: EmployerEmployeeProfile;
 
 	public id: string = "";
 
 	public image?: string;
 
-	public location: EmployerLocation = new EmployerLocation();
+	public location?: EmployerLocation;
 
 	public name: string = "";
 

@@ -10,7 +10,7 @@ describe("EmployerListSearchFilter", () => {
 	};
 
 	test.each([
-		[ { text: "" }, createEmployerRecordDataRow({}), true ],
+		[ { text: "" }, createEmployerRecordDataRow({}), false ],
 		[ { text: "" }, createEmployerRecordDataRow({ name: "foo" }), true ],
 		[ { text: "f" }, createEmployerRecordDataRow({ name: "foo" }), true ],
 		[ { text: "o" }, createEmployerRecordDataRow({ name: "foo" }), true ],
@@ -25,7 +25,10 @@ describe("EmployerListSearchFilter", () => {
 		[ { text: "Foo" }, createEmployerRecordDataRow({ name: "FOO" }), true ],
 		[ { text: "aFOO" }, createEmployerRecordDataRow({ name: "FOO" }), false ],
 		[ { text: "FOOa" }, createEmployerRecordDataRow({ name: "FOO" }), false ],
-	])("properly matches inputs with isMatch", (f: EmployerListSearchFilter, r: EmployerRecord, expected: boolean) => {
-		expect(EmployerListSearchFilter.isMatch(f, r)).toBe(expected);
-	});
+	])(
+		"properly matches inputs with isMatch (%#)",
+		(f: EmployerListSearchFilter, r: EmployerRecord, expected: boolean) => {
+			expect(EmployerListSearchFilter.isMatch(f, r)).toBe(expected);
+		},
+	);
 });

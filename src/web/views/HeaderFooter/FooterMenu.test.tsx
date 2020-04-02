@@ -20,7 +20,7 @@ describe("<FooterMenu />", () => {
 
 		render(
 			<BrowserRouter>
-				<FooterMenu.WrappedComponent />
+				<FooterMenu />
 			</BrowserRouter>,
 			div,
 		);

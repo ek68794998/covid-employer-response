@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { ProjectUrl } from "../../../common/constants/UrlConstants";
-import { EmployerLocation, employerLocationToString } from "../../../common/EmployerLocation";
+import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
+import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -34,32 +35,24 @@ const getEmployerEditComponent = (employer: EmployerRecord, strings: LocalizedSt
 	);
 };
 
-const getEmployerEmployeeCountComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
-	let employeeCountString: string | null = null;
+const getEmployerEmployeeCountComponent =
+	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
+		const employeeCountString: string | null =
+			employer.employeesBefore
+				? EmployerEmployeeProfile.toString(employer.employeesBefore, !useShortText, useShortText)
+				: null;
 
-	if (employer.employeesBeforeMin > 0 || employer.employeesBeforeMax > 0) {
-		if (employer.employeesBeforeMin === employer.employeesBeforeMax) {
-			employeeCountString = employer.employeesBeforeMin.toLocaleString();
-		} else if (employer.employeesBeforeMin > 0 && employer.employeesBeforeMax > 0) {
-			employeeCountString = `${employer.employeesBeforeMin.toLocaleString()} ${String.fromCharCode(0x2013)} ${employer.employeesBeforeMax.toLocaleString()}`;
-		} else if (employer.employeesBeforeMin > 0) {
-			employeeCountString = `More than ${employer.employeesBeforeMin.toLocaleString()}`;
-		} else if (employer.employeesBeforeMax > 0) {
-			employeeCountString = `Less than ${employer.employeesBeforeMax.toLocaleString()}`;
+		if (!employeeCountString) {
+			return null;
 		}
-	}
 
-	if (!employeeCountString) {
-		return null;
-	}
-
-	return (
-		<span title={strings.detailDescriptions.employees}>
-			{materialIcon("people")}
-			{employeeCountString}
-		</span>
-	);
-};
+		return (
+			<span title={strings.detailDescriptions.employees}>
+				{materialIcon("people")}
+				{employeeCountString}
+			</span>
+		);
+	};
 
 const getEmployerWebsiteComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
 	if (!employer.officialWebsite) {
@@ -88,17 +81,22 @@ const getEmployerWikipediaComponent = (employer: EmployerRecord, strings: Locali
 };
 
 const getLocationWikipediaComponent =
-	(location: EmployerLocation, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
-		const locationWikipediaUrl: string | null = getWikipediaUrl(location.wiki);
+	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
+		if (!employer.location) {
+			return null;
+		}
+
+		const locationString: string = EmployerLocation.toString(employer.location, useShortText);
+		const locationWikipediaUrl: string | null = getWikipediaUrl(employer.location.wiki);
 
 		if (!locationWikipediaUrl) {
-			return null;
+			return <span>{locationString}</span>;
 		}
 
 		return (
 			<a href={locationWikipediaUrl} target="_blank" title={strings.detailDescriptions.location}>
 				{materialIcon("place")}
-				{employerLocationToString(location, useShortText)}
+				{locationString}
 			</a>
 		);
 	};
@@ -162,8 +160,8 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 				</span>
 			</div>
 			<div className="EmployerDetailsHeader__Subtitle">
-				{getLocationWikipediaComponent(employer.location, strings, useShortText || false)}
-				{getEmployerEmployeeCountComponent(employer, strings)}
+				{getLocationWikipediaComponent(employer, strings, useShortText || false)}
+				{getEmployerEmployeeCountComponent(employer, strings, useShortText || false)}
 			</div>
 		</>
 	);

@@ -9,8 +9,11 @@ location:
   country: USA
   international: true
   wiki: Grapevine, Texas
-employeesBeforeMax: 61000
-employeesBeforeMin: 39000
+employeesBefore:
+  lowerBound: 39000
+  type: range
+  upperBound: 61000
+  year: 2018
 summary: GameStop initially attempted to be classified as an "essential service" to avoid closing physical locations. They publicly reversed this decision, but continued to operate illegally in some locations such as Massachusetts.
 citations:
   - summary: A day after announcing that they intended to keep all physical stores open and after significant backlash, GameStop announced that they would switch to online orders and curbside pickup only.

@@ -9,8 +9,10 @@ location:
   country: USA
   international: true
   wiki: Bentonville, Arkansas
-employeesBeforeMax: 2200000
-employeesBeforeMin: 2200000
+employeesBefore:
+  type: approximately
+  upperBound: 2200000
+  year: 2018
 summary: As an essential retail chain, Walmart must remain open amidst the pandemic. During the early stages of the pandemic, Walmart did not give any special treatments to its workers. However Walmart has increased wages for its employees, devised new retail procedures, and provided more protection for its workers.
 citations:
   - summary: Walmart introduces huge changes to its store, notably to increase social distancing.
