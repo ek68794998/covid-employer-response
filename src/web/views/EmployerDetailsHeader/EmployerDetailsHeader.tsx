@@ -5,6 +5,7 @@ import { RouteProps } from "react-router-dom";
 import { ProjectUrl } from "../../../common/constants/UrlConstants";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
+import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -120,7 +121,9 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 
 	let indicatorIcon: "trending_up" | "trending_flat" | "trending_down";
 
-	switch (employer.rating) {
+	const rating: EmployerRating = EmployerRecord.getRating(employer);
+
+	switch (rating) {
 		case "good":
 			indicatorIcon = "trending_up";
 			break;
@@ -152,10 +155,10 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 					{getEmployerEditComponent(employer, strings)}
 				</span>
 				<span
-					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${employer.rating}`}
+					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${rating}`}
 					title={strings.detailDescriptions.rating}
 				>
-					{strings.ratingLabels[employer.rating]}
+					{strings.ratingLabels[rating]}
 					<i className="material-icons EmployerDetailsHeader__RatingIcon">{indicatorIcon}</i>
 				</span>
 			</div>

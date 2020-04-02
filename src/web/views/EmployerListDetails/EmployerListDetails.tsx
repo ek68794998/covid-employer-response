@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
+import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -24,8 +25,10 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
 	const { employer, onClick } = props;
 
+	const rating: EmployerRating = EmployerRecord.getRating(employer);
+
 	return (
-		<div className={`EmployerListDetails__Container EmployerListDetails__Rating--${employer.rating}`}>
+		<div className={`EmployerListDetails__Container EmployerListDetails__Rating--${rating}`}>
 			<EmployerDetailsHeader employer={employer} onClickEmployerName={onClick} useShortText={true} />
 			<div className="EmployerListDetails__Summary">
 				{employer.summary}

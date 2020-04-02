@@ -18,11 +18,25 @@ export class EmployerRecord {
 
 	public officialWebsite?: string;
 
-	public rating: EmployerRating = "fair";
-
 	public shortName?: string;
 
 	public summary: string = "";
 
 	public wiki?: string;
+
+	public static getRating(e: EmployerRecord): EmployerRating {
+		const citationScore: number =
+			e.citations
+				.map((c: Citation) => c.positivity)
+				.reduce((prev: number, curr: number) => prev + curr);
+
+		const citationCount: number = e.citations.length;
+		const normalizedScore: number = citationCount / 2;
+
+		if (citationScore < normalizedScore && citationScore > -normalizedScore) {
+			return "fair";
+		}
+
+		return citationScore > 0 ? "good" : "poor";
+	}
 }
