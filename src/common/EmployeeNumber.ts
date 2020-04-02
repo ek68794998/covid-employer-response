@@ -19,11 +19,15 @@ export class EmployeeNumber {
 	}
 
 	public get magnitudeLabel(): string | null {
-		return this.magnitude === 6 ? "million" : this.magnitude === 9 ? "billion" : null;
+		switch (this.magnitude) {
+			case 6: return "million";
+			case 9: return "billion";
+			default: return null;
+		}
 	}
 
 	public toString(): string {
-		return this.magnitude ? `${this.value} ${this.getEmployeeMagnitudeName()}` : this.value.toLocaleString();
+		return this.magnitude ? `${this.value} ${this.magnitudeLabel}` : this.value.toLocaleString();
 	}
 
 	private static getEmployeeMagnitude(value: number): EmployeeMagnitude {
@@ -36,13 +40,5 @@ export class EmployeeNumber {
 		}
 
 		return null;
-	}
-
-	private getEmployeeMagnitudeName(): string | null {
-		switch (this.magnitude) {
-			case 6: return "million";
-			case 9: return "billion";
-			default: return null;
-		}
 	}
 }
