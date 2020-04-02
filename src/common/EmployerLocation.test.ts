@@ -1,6 +1,16 @@
 import { EmployerLocation } from "./EmployerLocation";
 
 describe("EmployerLocation", () => {
+	test("initializes with default values", () => {
+		const l: EmployerLocation = new EmployerLocation();
+
+		expect(l.city).toBe("");
+		expect(l.country).toBe("");
+		expect(l.international).toBe(false);
+		expect(l.state).toBeFalsy();
+		expect(l.wiki).toBeFalsy();
+	});
+
 	test.each([
 		[ { city: "Foo", country: "Bar", international: false }, false, "Foo, Bar" ],
 		[ { city: "Foo Bar", country: "Baz", international: false }, false, "Foo Bar, Baz" ],

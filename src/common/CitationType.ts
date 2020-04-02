@@ -8,6 +8,6 @@ export const getCitationTypeValue = (type?: CitationType): number => {
 		case "hearsay": return 0;
 		case "statement": return 10;
 		case "publication": return 20;
-		default: return 0;
+		default: return -1;
 	}
 };

@@ -7,6 +7,25 @@ const tc = (t: EmployerEmployeeProfileType): EmployerEmployeeProfileType => t;
 const yq = (t: "Q1" | "Q2" | "Q3" | "Q4"): "Q1" | "Q2" | "Q3" | "Q4" => t;
 
 describe("EmployerEmployeeProfile", () => {
+	test("initializes with default values", () => {
+		const p: EmployerEmployeeProfile = new EmployerEmployeeProfile();
+
+		expect(p.lowerBound).toBeUndefined();
+		expect(p.type).toBe("exactly");
+		expect(p.upperBound).toBe(0);
+		expect(p.year).toBe(0);
+		expect(p.yearQuarter).toBeUndefined();
+	});
+
+	test.each([
+		[ { type: tc("approximately"), upperBound: 0, year: 2010 } ],
+		[ { type: tc("exactly"), upperBound: 0, year: 2010 } ],
+		[ { lowerBound: 50, type: tc("range"), upperBound: 5, year: 2010 } ],
+		[ { lowerBound: 0, type: tc("range"), upperBound: 0, year: 2010 } ],
+	])("errors out when invalid bounds are provided (%#)", (p: EmployerEmployeeProfile) => {
+		expect(() => EmployerEmployeeProfile.toString(p, false, false)).toThrowError();
+	});
+
 	test.each([
 		[ { type: tc("exactly"), upperBound: 1, year: 2010 }, false, false, "1" ],
 		[ { type: tc("exactly"), upperBound: 1000, year: 2010 }, false, false, "1,000" ],

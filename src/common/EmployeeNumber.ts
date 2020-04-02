@@ -27,10 +27,6 @@ export class EmployeeNumber {
 	}
 
 	private static getEmployeeMagnitude(value: number): EmployeeMagnitude {
-		if (!value) {
-			return null;
-		}
-
 		if (value >= 1000000000) {
 			return 9;
 		}
