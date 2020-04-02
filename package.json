@@ -6,9 +6,9 @@
     "build": "razzle build",
     "debug": "razzle start --inspect --inspect-port=9230",
     "start": "razzle start",
-    "start:prod": "set NODE_ENV=production && node build/server.js",
+    "start:prod": "cross-env NODE_ENV=production node build/server.js",
     "test": "razzle test --env=jsdom",
-    "test:ci": "set CI=true && razzle test --env=jsdom --watchAll=false"
+    "test:ci": "cross-env CI=true razzle test --env=jsdom --watchAll=false"
   },
   "dependencies": {
     "accept-language-parser": "^1.5.0",
@@ -41,6 +41,7 @@
     "@types/serialize-javascript": "^1.5.0",
     "@types/webpack-env": "^1.13.6",
     "@types/yaml": "^1.2.0",
+    "cross-env": "^7.0.2",
     "jest": "^25.2.3",
     "razzle": "^3.0.0",
     "razzle-plugin-scss": "^3.0.0",
