@@ -66,11 +66,15 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 	);
 
 	const employer: EmployerRecord | undefined = employers.find((e: EmployerRecord) => e.id === openRow);
+	const isOpen: boolean = !!(employer && openRow.length);
 
 	return (
 		<div className="EmployerList__Container">
 			{filteredEmployers.map(getEmployerComponent)}
-			<Modal isOpen={!!(employer && openRow.length)} onRequestClose={closeModal}>
+			<Modal isOpen={isOpen} onRequestClose={closeModal}>
+				<button className="EmployerList__CloseModal" onClick={closeModal}>
+					<i class="material-icons">close</i>
+				</button>
 				<EmployerPageDetails employer={employer} />
 			</Modal>
 		</div>

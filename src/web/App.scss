@@ -14,10 +14,7 @@ body {
 	font: 14px Merriweather;
 	margin: 0;
 	min-width: 420px;
-
-	&.modal-open {
-		position: fixed;
-	}
+	position: relative;
 
 	#root {
 		display: flex;
