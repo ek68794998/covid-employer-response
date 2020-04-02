@@ -31,11 +31,9 @@ describe("EmployerRecordLoader", () => {
 			expect(record.id).not.toBeNull();
 			expect(record.name).not.toBeNull();
 			expect(record.name.length).toBeGreaterThan(0);
-			expect(record.location).not.toBeNull();
-			expect(record.rating).not.toBeNull();
-			expect(record.rating.length).toBeGreaterThan(0);
 			expect(record.summary).not.toBeNull();
-			expect(record.summary.length).toBeGreaterThan(0);
+			expect(record.summary.length).toBeGreaterThanOrEqual(100);
+			expect(record.summary.length).toBeLessThanOrEqual(350);
 		});
 	});
 
@@ -54,7 +52,6 @@ describe("EmployerRecordLoader", () => {
 		expect(record.shortName).toBe("Co.");
 		expect(record.wiki).toBe("Example");
 		expect(record.officialWebsite).toBe("http://example.com");
-		expect(record.rating).toBe("fair");
 		expect(record.employeesBefore?.lowerBound).toBe(200);
 		expect(record.employeesBefore?.type).toBe("range");
 		expect(record.employeesBefore?.upperBound).toBe(500);

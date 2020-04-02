@@ -78,8 +78,8 @@ const About: React.FC = (): React.ReactElement => {
 
 				<h2 id="employer-ratings">What determines the rating of an employer?</h2>
 				<p>
-					Currently, employer ratings are heuristically determined based on the number and severity of positive and negative
-					reports for that employer. Work is currently planned to make the rating determined algorithmically to reduce bias.
+					Ratings are algorithmically determined based on the positivity and negativity of the claims that it has. Claims
+					that are more safety-critical have a higher weight than those which are not, and thus are not factored as heavily.
 				</p>
 			</div>
 		</main>

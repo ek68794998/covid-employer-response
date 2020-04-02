@@ -2,7 +2,6 @@ name: Amazon
 wiki: Amazon (company)
 image: amazon.svg
 officialWebsite: https://amazon.com
-rating: fair
 location:
   city: Bellevue
   state: WA
@@ -37,7 +36,7 @@ citations:
         link: https://blog.aboutamazon.com/working-at-amazon/covid-19-update-more-ways-amazon-is-supporting-employees-and-contractors
         date: 2020-03-11T20:00:12.347Z
   - summary: Amazon opened 100,000 new roles and increased pay though the end of April for employees working in roles related to fulfillment, transport, delivery, and other similar roles.
-    positivity: 1
+    positivity: 2
     type: publication
     sources:
       - name: Amazon Blog - Amazon ramps hiring, opening 100,000 new roles
@@ -51,7 +50,7 @@ citations:
         link: https://www.cbsnews.com/news/coronavirus-work-during-pandemic-fear-health-risks-amazon-warehouse-employee/
         date: 2020-03-26T08:39:00-08:00
   - summary: An Amazon warehouse in Shepherdsville, KY was shut down and remained closed for several days after three workers there tested positive for COVID-19. Workers stationed there will continue to receive pay.
-    positivity: 1
+    positivity: 2
     type: publication
     sources:
       - name: WDRB
@@ -75,7 +74,7 @@ citations:
         link: https://ohsonline.com/articles/2020/03/23/amazon-workers-being-worked-overtime-for-covid19.aspx
         date: 2020-03-23T12:00:00-07:00 # Estimate based on article date of 03/23/2020.
   - summary: Warehouse workers at Amazon who tested positive for COVID-19 were first reported through Facebook rumors, and only several days later, and after employees confronted management, did Amazon actually confirm that their coworkers may have been exposed to the virus.
-    positivity: -1
+    positivity: -2
     type: statement
     sources:
       - name: The Verge

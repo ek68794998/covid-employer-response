@@ -2,7 +2,6 @@ name: GameStop
 wiki: GameStop
 image: gamestop.png
 officialWebsite: https://gamestop.com
-rating: poor
 location:
   city: Grapevine
   state: TX
@@ -48,14 +47,14 @@ citations:
         link: https://www.reddit.com/r/GameStop/comments/fjvj26/last_chance_a_call_to_action/
         date: 2020-03-16T17:17:00-07:00
   - summary: GameStop claimed that they are an "essential service", refusing to close doors amid various statewide shutdowns of nonessential businesses. (They did later reverse this claim; however, the initial claim remains valid.)
-    positivity: -1
+    positivity: -2
     type: publication
     sources:
       - name: ABC-7 Chicago
         link: https://abc7chicago.com/business/gamestop-says-its-an-essential-business-amid-state-covid-19-shutdowns/6035735/
         date: 2020-03-21T12:00:00-07:00 # Estimate based on article date of 03/21/2020.
   - summary: GameStop continues to operate in Massachusetts with curbside service, violating a government order to shut down all nonessential businesses. They have implemented a requirement that employees wrap their hands in plastic bags when handling customer payment cards.
-    positivity: -1
+    positivity: -2
     type: publication
     sources:
       - name: Boston Globe
