@@ -136,15 +136,18 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 			indicatorIcon = "trending_flat";
 	}
 
+	const displayName: string = (useShortText && employer.shortName) ? employer.shortName : employer.name;
+
 	return (
 		<>
-			<div className="EmployerDetailsHeader__Title">
+			<div className={`EmployerDetailsHeader__Title ${useShortText ? "" : "EmployerDetailsHeader__Title--noShort"}`}>
 				{employer.image && <img className="EmployerDetailsHeader__Icon" src={`/images/employers/${employer.image}`} />}
 				<h2>
-					<a href="#" onClick={onClickEmployerName}>
-						{(useShortText && employer.shortName) ? employer.shortName : employer.name}
+					<a href="#" onClick={onClickEmployerName} title={employer.name !== displayName ? employer.name : ""}>
+						{displayName}
 					</a>
 				</h2>
+				<span className="EmployerDetailsHeader__LinkBreak" />
 				<span className="EmployerDetailsHeader__Links">
 					{getEmployerWikipediaComponent(employer, strings)}
 					{getEmployerWebsiteComponent(employer, strings)}
@@ -158,7 +161,7 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 					<i className="material-icons EmployerDetailsHeader__RatingIcon">{indicatorIcon}</i>
 				</span>
 			</div>
-			<div className={`EmployerDetailsHeader__Subtitle ${useShortText ? "" : "EmployerDetailsHeader__Subtitle--noShort"}`}>
+			<div className="EmployerDetailsHeader__Subtitle">
 				{getLocationWikipediaComponent(employer.location, strings, useShortText || false)}
 				{getEmployerEmployeeCountComponent(employer, strings)}
 			</div>

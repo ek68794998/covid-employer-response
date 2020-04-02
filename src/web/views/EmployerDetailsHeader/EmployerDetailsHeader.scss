@@ -90,14 +90,29 @@ $padding-sides: 16px;
 }
 
 @media (max-width: $body-narrow-width) {
-	.EmployerDetailsHeader__RatingIcon {
-		display: none;
+	.EmployerDetailsHeader__Title {
+		flex-wrap: wrap;
 	}
 
-	.EmployerDetailsHeader__Subtitle--noShort {
-		> a, > span {
-			display: block;
-			margin-top: 8px;
+	.EmployerDetailsHeader__Title--noShort {
+		.EmployerDetailsHeader__Subtitle {
+			> a, > span {
+				display: block;
+				margin-top: 8px;
+			}
 		}
+
+		.EmployerDetailsHeader__Links i {
+			margin: 8px 6px 0 0 !important;
+		}
+	
+		.EmployerDetailsHeader__LinkBreak {
+			flex-basis: 100%;
+			height: 0;
+		}
+	}
+
+	.EmployerDetailsHeader__RatingIcon {
+		display: none;
 	}
 }
