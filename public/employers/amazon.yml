@@ -3,11 +3,11 @@ wiki: Amazon (company)
 image: amazon.svg
 officialWebsite: https://amazon.com
 location:
-  city: Bellevue
+  city: Seattle
   state: WA
   country: USA
   international: true
-  wiki: Bellevue, Washington
+  wiki: Seattle
 employeesBefore:
   type: approximately
   upperBound: 798000
