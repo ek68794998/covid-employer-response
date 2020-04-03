@@ -58,7 +58,7 @@ header {
 		padding: 4px 8px 6px;
 
 		&.active {
-			border-bottom: 4px solid #5c6bc0;
+			border-bottom: 4px solid $link-normal;
 			padding-bottom: 2px;
 		}
 	}
