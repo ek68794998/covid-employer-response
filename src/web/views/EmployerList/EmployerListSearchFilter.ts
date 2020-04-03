@@ -9,6 +9,10 @@ export class EmployerListSearchFilter {
 			e.location?.city.toLowerCase(),
 		];
 
+		if (e.aliases) {
+			e.aliases.forEach((a: string) => fieldsToSearch.push(a));
+		}
+
 		return fieldsToSearch.some((field?: string) => field && field.indexOf(f.text.toLowerCase()) >= 0);
 	}
 }
