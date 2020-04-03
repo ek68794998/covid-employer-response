@@ -16,6 +16,15 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
         style={Object {}}
       >
         AT
+        <span
+          style={
+            Object {
+              "color": "red",
+            }
+          }
+        >
+            [DEV]
+        </span>
       </a>
       <div
         className="HeaderMenu__BrandLarge"
