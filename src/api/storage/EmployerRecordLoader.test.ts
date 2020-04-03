@@ -34,6 +34,31 @@ describe("EmployerRecordLoader", () => {
 			expect(record.summary).not.toBeNull();
 			expect(record.summary.length).toBeGreaterThanOrEqual(100);
 			expect(record.summary.length).toBeLessThanOrEqual(350);
+
+			if (record.location) {
+				expect(record.location.city).toBeTruthy();
+				expect(record.location.country).toBeTruthy();
+			}
+
+			expect(record.citations.length).toBeGreaterThan(0);
+
+			for (const citation of record.citations) {
+				expect(citation.positivity).toBeGreaterThanOrEqual(-2);
+				expect(citation.positivity).toBeLessThanOrEqual(2);
+				expect(citation.summary.length).toBeGreaterThanOrEqual(10);
+
+				if (!citation.sources) {
+					continue;
+				}
+
+				for (const source of citation.sources) {
+					if (!source.date) {
+						continue;
+					}
+
+					expect(new Date(source.date) > new Date("2019-11-01T00:00:00Z")).toBe(true);
+				}
+			}
 		});
 	});
 
