@@ -1,0 +1,61 @@
+name: Starbucks
+wiki: Starbucks
+image: starbucks.svg
+officialWebsite: https://www.starbucks.com
+location:
+  city: Seattle
+  state: AR
+  country: USA
+  international: true
+  wiki: Seattle
+employeesBefore:
+  type: approximately
+  upperBound: 291000
+  year: 2018
+summary: Starbucks has gone above and beyond, providing "catastrophe" pay and benefits to employees, and free services and product to front-line responders.
+citations:
+  - summary: Starbucks has donated over $3 million USD to COVID-19 relief efforts.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Starbucks Stories & News
+        link: https://stories.starbucks.com/press/2020/the-starbucks-foundation-donates-more-than-3m-to-global-covid-19-relief-efforts/
+        date: 2020-04-01T12:00:00-07:00 # Estimate based on article date of 04/01/2020.
+  - summary: Starbucks has both offered coffee at no charge, as well as donated over $500,000 USD, to front-line responders during the COVID-19 crisis.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Starbucks Stories & News
+        link: https://stories.starbucks.com/stories/2020/navigating-through-covid-19/
+        date: 2020-03-25T06:00:00-07:00
+  - summary: Starbucks has gone drive-thru only at nearly all American locations as a reflection of the promoted "stay home" mentality.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Eater
+        link: https://www.eater.com/2020/3/20/21188935/starbucks-drive-thru-only-response-to-coronavirus
+        date: 2020-03-20T23:40:51Z
+  - summary: There have been numerous reports of stores, in which employees have been diagnosed with COVID-19, remaining open.
+    positivity: -2
+    type: statement
+    sources:
+      - name: BuzzFeed News
+        link: https://www.buzzfeednews.com/article/albertsamaha/coronavirus-starbucks-stores-open-retail-employees-scared
+        date: 2020-00-00T00:00:00Z
+  - summary: After requests from employees who felt they had to choose between work or health, Starbucks stated that its employees would receive pay for their scheduled hours, regardless of whether they showed up to work, through April 19.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Eater
+        link: https://www.eater.com/2020/3/19/21186635/employees-petition-to-temporarily-close-starbucks-over-coronavirus-covid-19-concerns
+        date: 2020-03-19T16:21:12Z
+      - name: Starbucks Stories & News
+        link: https://stories.starbucks.com/stories/2020/navigating-through-covid-19/
+        date: 2020-03-22T14:30:00-07:00
+  - summary: Starbucks has extended its catastrophe pay and benefits beyond those of most companies; as of April 2, it plans to provide said benefits through May 3.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Nation's Restaurant News
+        link: https://www.nrn.com/quick-service/starbucks-extends-coronavirus-caf-closures-catastrophe-pay-and-benefits-until-may-3
+        date: 2020-04-02T15:46:00Z
