@@ -17,7 +17,7 @@ import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSear
 import "./Home.scss";
 
 const Home: React.FC = (): React.ReactElement => {
-	const [ searchText, setSearchText ] = useState("");
+	const [ searchFilters, setSearchFilters ] = useState(new EmployerListSearchFilter());
 	const [ isTopButtonVisible, setIsTopButtonVisible ] = useState(false);
 
 	const strings: LocalizedStrings = useSelector(getStrings);
@@ -47,10 +47,6 @@ const Home: React.FC = (): React.ReactElement => {
 		},
 		[]);
 
-	const searchFilter: EmployerListSearchFilter = {
-		text: searchText,
-	};
-
 	const backToTopComponent: JSX.Element =
 		<button className="Home__BackToTop" onClick={(): void => { window.scrollTo(window.scrollX, 0); }}>
 			<i className="material-icons">arrow_upward</i>
@@ -62,10 +58,10 @@ const Home: React.FC = (): React.ReactElement => {
 				<title>{strings.home} | {strings.appTitle}</title>
 			</Helmet>
 			<div className="Home__Filters">
-				<EmployerListSearch onChange={setSearchText} />
+				<EmployerListSearch onChange={setSearchFilters} />
 			</div>
 			<div className="Home__Content">
-				<EmployerList employers={employers} searchFilter={searchFilter} />
+				<EmployerList employers={employers} searchFilter={searchFilters} />
 			</div>
 			{isTopButtonVisible && backToTopComponent}
 		</main>
