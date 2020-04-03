@@ -20,7 +20,7 @@ citations:
     sources:
       - name: USA Today via Microsoft News
         link: https://www.msn.com/en-us/money/companies/mcdonalds-to-shut-seating-play-areas-due-to-covid-19/ar-BB11hdBv
-        date: 2020-03-17T02:00:00.000Z
+        date: 2020-03-17T02:00:00Z
   - summary: McDonald's is supporting franchisees who are providing free lunches to students and free food and drinks to first responders, in both Europe and the US.
     positivity: 1
     type: publication
