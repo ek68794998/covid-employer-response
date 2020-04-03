@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerList /> renders without exploding 1`] = `
+<div
+  className="EmployerList__Container--NoResults"
+>
+  NoResults
+</div>
+`;

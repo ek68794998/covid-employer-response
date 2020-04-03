@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderMenu /> renders without exploding 1`] = `
+<header>
+  <div
+    className="HeaderFooter__Container"
+  >
+    <div
+      id="brand"
+    >
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        AT
+      </a>
+      <div
+        className="HeaderMenu__BrandLarge"
+      >
+        App Title
+      </div>
+    </div>
+    <a
+      aria-current="page"
+      className="HeaderMenu__Link active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+    <a
+      aria-current={null}
+      className="HeaderMenu__Link"
+      href="/about"
+      onClick={[Function]}
+    >
+      About
+    </a>
+    <a
+      className="HeaderMenu__Link"
+      href="https://github.com/ekumlin/covid-employer-response/issues/new/choose"
+      target="_blank"
+    />
+  </div>
+</header>
+`;

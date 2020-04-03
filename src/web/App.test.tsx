@@ -5,7 +5,6 @@ import { MemoryRouter } from "react-router-dom";
 import { AnyAction, Store } from "redux";
 
 import App from "./App";
-
 import { AppState } from "./state/AppState";
 import configureStore from "./state/configureStore";
 

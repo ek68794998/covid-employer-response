@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FooterMenu /> renders without exploding 1`] = `
+<footer>
+  <div
+    className="HeaderFooter__Container"
+  >
+    <span
+      id="maintained-by"
+    >
+      Maintained by 
+      <a
+        href="https://github.com/ekumlin"
+      >
+        Eric Kumlin
+      </a>
+    </span>
+    <span
+      id="project-source"
+    >
+      <em>
+        App Title
+      </em>
+       is open-source and open-data, hosted on 
+      <a
+        href="https://github.com/ekumlin/covid-employer-response"
+      >
+        GitHub
+      </a>
+      .
+    </span>
+  </div>
+</footer>
+`;

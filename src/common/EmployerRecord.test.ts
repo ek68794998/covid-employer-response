@@ -6,6 +6,7 @@ const er = (t: EmployerRating): EmployerRating => t;
 
 describe("EmployerRecord", () => {
 	test.each([
+		[ [], er("fair") ],
 		[ [ -2 ], er("poor") ],
 		[ [ -2, 2, 0 ], er("fair") ],
 		[ [ 2 ], er("good") ],

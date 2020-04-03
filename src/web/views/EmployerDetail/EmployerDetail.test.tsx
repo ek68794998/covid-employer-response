@@ -7,21 +7,22 @@ import { AnyAction, Store } from "redux";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import SearchInput from "./SearchInput";
+import EmployerDetail from "./EmployerDetail";
 
-describe("<SearchInput />", () => {
+describe("<EmployerDetail />", () => {
 	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				search: "Search",
-			},
-		});
+		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<SearchInput onChange={(): void => { /* Do nothing. */ }} />
+						<EmployerDetail
+							icon={"people"}
+							iconSize={36}
+							link={"http://example.com"}
+							text={"test"}
+						/>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

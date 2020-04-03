@@ -4,16 +4,20 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { EmployerRecord } from "../../../common/EmployerRecord";
+
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import SearchInput from "./SearchInput";
+import EmployerList from "./EmployerList";
+import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
-describe("<SearchInput />", () => {
+describe("<EmployerList />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				search: "Search",
+				loading: "Loading",
+				noResults: "NoResults",
 			},
 		});
 
@@ -21,7 +25,10 @@ describe("<SearchInput />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<SearchInput onChange={(): void => { /* Do nothing. */ }} />
+						<EmployerList
+							employers={[ new EmployerRecord() ]}
+							searchFilter={new EmployerListSearchFilter()}
+						/>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

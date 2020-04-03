@@ -7,13 +7,15 @@ import { AnyAction, Store } from "redux";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import SearchInput from "./SearchInput";
+import Home from "./Home";
 
-describe("<SearchInput />", () => {
+describe("<Home />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				search: "Search",
+				about: "About",
+				appTitle: "Test App",
+				home: "Home",
 			},
 		});
 
@@ -21,7 +23,7 @@ describe("<SearchInput />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<SearchInput onChange={(): void => { /* Do nothing. */ }} />
+						<Home />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

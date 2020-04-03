@@ -4,26 +4,30 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { Citation } from "../../../common/Citation";
+import { EmployerRecord } from "../../../common/EmployerRecord";
+
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import About from "./About";
+import EmployerDetailsHeader from "./EmployerDetailsHeader";
 
-describe("<About />", () => {
+describe("<EmployerDetailsHeader />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				about: "About",
-				appTitle: "Test App",
-				citationTypeDescriptions: {
-					hearsay: "hearsay description",
-					publication: "publication description",
-					statement: "statement description",
+				detailDescriptions: {
+					edit: "edit string",
+					employees: "employees string",
+					location: "location string",
+					officialWebsite: "officialWebsite string",
+					rating: "rating string",
+					wikipedia: "wikipedia string",
 				},
-				citationTypes: {
-					hearsay: "hearsay",
-					publication: "publication",
-					statement: "statement",
+				ratingLabels: {
+					fair: "fair string",
+					good: "good string",
+					poor: "poor string",
 				},
 			},
 		});
@@ -32,7 +36,10 @@ describe("<About />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<About />
+						<EmployerDetailsHeader
+							employer={new EmployerRecord()}
+							onClickEmployerName={(): void => { /* Do nothing. */ }}
+						/>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

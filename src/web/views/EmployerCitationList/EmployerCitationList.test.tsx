@@ -4,16 +4,27 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { Citation } from "../../../common/Citation";
+
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import SearchInput from "./SearchInput";
+import EmployerCitationList from "./EmployerCitationList";
 
-describe("<SearchInput />", () => {
+describe("<EmployerCitationList />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				search: "Search",
+				citationTypeDescriptions: {
+					hearsay: "hearsay desc value",
+					publication: "publication desc value",
+					statement: "statement desc value",
+				},
+				citationTypes: {
+					hearsay: "hearsay value",
+					publication: "publication value",
+					statement: "statement value",
+				},
 			},
 		});
 
@@ -21,7 +32,11 @@ describe("<SearchInput />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<SearchInput onChange={(): void => { /* Do nothing. */ }} />
+						<EmployerCitationList
+							citations={[ new Citation() ]}
+							citationSourceBase={0}
+							citationType={"publication"}
+						/>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
