@@ -1,3 +1,9 @@
+/* istanbul ignore file */
+/*
+  No test coverage since testing module hydration is not really feasible.
+  Please keep as much logic out of this as possible.
+*/
+
 import React from "react";
 import { hydrate } from "react-dom";
 import { HelmetProvider } from "react-helmet-async";

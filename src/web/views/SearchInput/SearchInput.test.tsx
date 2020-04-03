@@ -1,23 +1,31 @@
 import React from "react";
-import { render } from "react-dom";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import { AnyAction, Store } from "redux";
 
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { AppState } from "../../state/AppState";
+import configureStore from "../../state/configureStore";
 
 import SearchInput from "./SearchInput";
 
-jest.mock("react-redux", () => ({
-	useSelector: (): {} => ({
-		getStrings: (): LocalizedStrings => ({ search: "Search" }),
-	}),
-}));
-
 describe("<SearchInput />", () => {
 	test("renders without exploding", () => {
-		const div: HTMLDivElement = document.createElement("div");
+		const store: Store<AppState, AnyAction> = configureStore({
+			strings: {
+				search: "Search",
+			},
+		});
 
-		render(
-			<SearchInput />,
-			div,
-		);
+		const renderedValue: ReactTestRendererJSON | null =
+			renderer.create(
+				<Provider store={store}>
+					<BrowserRouter>
+						<SearchInput onChange={(): void => { /* Do nothing. */ }} />
+					</BrowserRouter>
+				</Provider>,
+			).toJSON();
+
+		expect(renderedValue).toMatchSnapshot();
 	});
 });

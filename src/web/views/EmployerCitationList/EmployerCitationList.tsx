@@ -6,7 +6,6 @@ import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerCitation from "../EmployerCitation/EmployerCitation";
@@ -22,7 +21,7 @@ interface Props extends RouteProps {
 }
 
 const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 
 	const { citations, citationSourceBase, citationType } = props;
 
@@ -52,4 +51,4 @@ const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement
 	);
 };
 
-export default EmployerCitationList as any;
+export default EmployerCitationList;

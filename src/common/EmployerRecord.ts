@@ -27,6 +27,10 @@ export class EmployerRecord {
 	public wiki?: string;
 
 	public static getRating(e: EmployerRecord): EmployerRating {
+		if (!e.citations.length) {
+			return "fair";
+		}
+
 		const citationScore: number =
 			e.citations
 				.map((c: Citation) => c.positivity)

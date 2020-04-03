@@ -6,7 +6,6 @@ import { withRouter } from "react-router-dom";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getEmployers as getEmployersRequest } from "../../state/ducks/employers/actions";
 import { getEmployers } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -20,8 +19,8 @@ import "./Home.scss";
 const Home: React.FC = (): React.ReactElement => {
 	const [ searchText, setSearchText ] = useState("");
 
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
-	const employers: EmployerRecord[] = useSelector((state: AppState) => getEmployers(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
+	const employers: EmployerRecord[] = useSelector(getEmployers);
 
 	const dispatch: React.Dispatch<any> = useDispatch();
 
@@ -50,4 +49,4 @@ const Home: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default withRouter(Home) as any;
+export default withRouter(Home);

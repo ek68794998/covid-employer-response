@@ -4,7 +4,6 @@ import { RouteProps } from "react-router-dom";
 
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import "./SearchInput.scss";
@@ -14,7 +13,7 @@ interface Props extends RouteProps {
 }
 
 const SearchInput: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 	const { onChange } = props;
 
 	return (
@@ -29,4 +28,4 @@ const SearchInput: React.FC<Props> = (props: Props): React.ReactElement => {
 	);
 };
 
-export default SearchInput as any;
+export default SearchInput;

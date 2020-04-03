@@ -9,7 +9,6 @@ import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import "./EmployerDetailsHeader.scss";
@@ -116,7 +115,7 @@ const getWikipediaUrl = (pageName?: string): string | null => {
 const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
 const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 	const { employer, onClickEmployerName, useShortText } = props;
 
 	let indicatorIcon: "trending_up" | "trending_flat" | "trending_down";
@@ -178,4 +177,4 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 	);
 };
 
-export default EmployerDetailsHeader as any;
+export default EmployerDetailsHeader;

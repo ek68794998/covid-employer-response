@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerDetail /> renders without exploding 1`] = `
+<a
+  className="EmployerDetail__Container"
+  href="http://example.com"
+  target="_blank"
+>
+  <i
+    className="EmployerDetail__Icon material-icons"
+    style={
+      Object {
+        "fontSize": 36,
+      }
+    }
+  >
+    people
+  </i>
+  <span
+    className="EmployerDetail__Label"
+  >
+    test
+  </span>
+</a>
+`;

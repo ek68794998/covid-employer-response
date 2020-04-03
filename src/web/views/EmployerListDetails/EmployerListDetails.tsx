@@ -6,7 +6,6 @@ import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";
@@ -22,7 +21,7 @@ interface Props extends RouteProps {
 const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
 const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 	const { employer, onClick } = props;
 
 	const rating: EmployerRating = EmployerRecord.getRating(employer);
@@ -44,4 +43,4 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	);
 };
 
-export default EmployerListDetails as any;
+export default EmployerListDetails;

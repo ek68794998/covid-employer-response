@@ -6,7 +6,6 @@ import { RouteProps } from "react-router-dom";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";
@@ -23,7 +22,7 @@ interface Props extends RouteProps {
 }
 
 const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 	const { employers, searchFilter } = props;
 
 	const [ openRow, setOpenRow ] = useState("");
@@ -59,7 +58,6 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 		<div className="EmployerList__Item" key={`${i}-${e.id}`}>
 			<EmployerListDetails
 				employer={e}
-				isOpen={openRow === e.id}
 				onClick={(): void => openModal(e.id)}
 			/>
 		</div>
@@ -75,10 +73,10 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 				<button className="EmployerList__CloseModal" onClick={closeModal}>
 					<i className="material-icons">close</i>
 				</button>
-				<EmployerPageDetails employer={employer} />
+				{employer && <EmployerPageDetails employer={employer} />}
 			</Modal>
 		</div>
 	);
 };
 
-export default EmployerList as any;
+export default EmployerList;

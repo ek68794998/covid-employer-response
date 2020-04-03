@@ -1,5 +1,10 @@
+/* istanbul ignore file */
+/*
+  No test coverage since testing express initialization is not really feasible.
+  Please keep as much logic out of this as possible.
+*/
+
 import express from "express";
-import fs from "fs";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { FilledContext, HelmetProvider } from "react-helmet-async";
@@ -11,6 +16,7 @@ import serialize from "serialize-javascript";
 import { LocalizationMiddleware } from "./api/middleware/LocalizationMiddleware";
 import { HttpRequest } from "./api/models/HttpRequest";
 import apiRoutes from "./api/routes";
+import { LocaleLoader } from "./api/storage/LocaleLoader";
 import { LocalizedStrings } from "./common/LocalizedStrings";
 import App from "./web/App";
 import configureStore from "./web/state/configureStore";
@@ -26,53 +32,25 @@ const syncLoadAssets = (): void => {
 
 syncLoadAssets();
 
-const localeFileNameRegex: RegExp = /^(.*)\.json$/;
-
-const localeFileMap: { [key: string]: string[] } = {};
-const localeFiles: string[] = fs.readdirSync(`${process.env.RAZZLE_PUBLIC_DIR}/strings`, "UTF8") as string[];
-
-localeFiles.forEach((fileName: string) => {
-	const regexResult: RegExpExecArray | null = localeFileNameRegex.exec(fileName);
-	let localeCode: string | null = regexResult && regexResult[1];
-
-	if (!localeCode) {
-		return;
-	}
-
-	localeCode = localeCode.toLowerCase();
-
-	if (!(localeCode in localeFileMap)) {
-		localeFileMap[localeCode] = [];
-	}
-
-	localeFileMap[localeCode].push(fileName);
-});
+const localeLoader: LocaleLoader =
+	new LocaleLoader(process.env.RAZZLE_PUBLIC_DIR || "", "strings");
 
 const localizationMiddleware: LocalizationMiddleware =
-	new LocalizationMiddleware(DEFAULT_LANGUAGE, Object.keys(localeFileMap));
+	new LocalizationMiddleware(DEFAULT_LANGUAGE, localeLoader);
 
 const server: express.Application = express()
 	.disable("x-powered-by")
 	.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
-	.use(localizationMiddleware.invoke.bind(localizationMiddleware))
+	.use(localizationMiddleware.invokeAsync.bind(localizationMiddleware))
 	.use("/api", apiRoutes)
-	.get("/*", (req: express.Request, res: express.Response) => {
+	.get("/*", async (req: express.Request, res: express.Response) => {
 		const isProd: boolean = process.env.NODE_ENV === "production";
 		const request: HttpRequest = req as HttpRequest;
 		const context: {} = {}; // TODO
 		const preloadedState: {} = {}; // TODO
 
 		const localeCode: string = request.languageCode.toLowerCase();
-		let localeData: LocalizedStrings = {};
-
-		localeFileMap[localeCode].forEach((fileName: string) => {
-			const jsonString: string =
-				fs.readFileSync(`${process.env.RAZZLE_PUBLIC_DIR}/strings/${fileName}`, "UTF8");
-
-			const jsonData: LocalizedStrings = JSON.parse(jsonString);
-
-			localeData = { ...localeData, ...jsonData };
-		});
+		const localeData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
 
 		const store: Store<{}, AnyAction> = configureStore(preloadedState);
 		store.dispatch(getLocalizedStringsSuccess(localeData));
@@ -84,7 +62,7 @@ const server: express.Application = express()
 			`${baseUrl}${req.originalUrl}`;
 
 		const alternateLocaleMetaTags: string[] =
-			Object.keys(localeFileMap)
+			Object.keys(localizationMiddleware.languages)
 				.map((key: string) => `<meta property="og:locale:alternate" content="${key}" />`);
 
 		const helmetContext: {} = {};

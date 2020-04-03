@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerDetailsHeader /> renders without exploding 1`] = `
+Array [
+  <div
+    className="EmployerDetailsHeader__Title EmployerDetailsHeader__Title--noShort"
+  >
+    <h2>
+      <a
+        href="#"
+        onClick={[Function]}
+        title=""
+      >
+        
+      </a>
+    </h2>
+    <span
+      className="EmployerDetailsHeader__LinkBreak"
+    />
+    <span
+      className="EmployerDetailsHeader__Links"
+    />
+    <span
+      className="EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--fair"
+      title="rating string"
+    >
+      fair string
+      <i
+        className="material-icons EmployerDetailsHeader__RatingIcon"
+      >
+        trending_flat
+      </i>
+    </span>
+  </div>,
+  <div
+    className="EmployerDetailsHeader__Subtitle"
+  />,
+]
+`;

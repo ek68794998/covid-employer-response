@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerCitationList /> renders without exploding 1`] = `
+<div>
+  <h3
+    className="EmployerCitationList__Header"
+    title="publication desc value"
+  >
+    publication value
+  </h3>
+  <ul
+    className="EmployerCitationList__Citations"
+  >
+    <li>
+      <div
+        className="EmployerCitation__Container"
+      >
+        <i
+          className="material-icons EmployerCitation__Indicator EmployerCitation__Indicator--Neutral"
+        >
+          error_outline
+        </i>
+        <span
+          className="EmployerCitation__Summary"
+        >
+          
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

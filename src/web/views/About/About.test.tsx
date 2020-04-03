@@ -1,32 +1,42 @@
 import React from "react";
-import { render } from "react-dom";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import { AnyAction, Store } from "redux";
+
+import { AppState } from "../../state/AppState";
+import configureStore from "../../state/configureStore";
 
 import About from "./About";
 
-jest.mock("react-redux", () => ({
-	useSelector: jest.fn().mockReturnValue({
-		about: "About",
-		appTitle: "Test App",
-		citationTypeDescriptions: {
-			hearsay: "hearsay description",
-			publication: "publication description",
-			statement: "statement description",
-		},
-		citationTypes: {
-			hearsay: "hearsay",
-			publication: "publication",
-			statement: "statement",
-		},
-	}),
-}));
-
 describe("<About />", () => {
 	test("renders without exploding", () => {
-		const div: HTMLDivElement = document.createElement("div");
+		const store: Store<AppState, AnyAction> = configureStore({
+			strings: {
+				about: "About",
+				appTitle: "Test App",
+				citationTypeDescriptions: {
+					hearsay: "hearsay description",
+					publication: "publication description",
+					statement: "statement description",
+				},
+				citationTypes: {
+					hearsay: "hearsay",
+					publication: "publication",
+					statement: "statement",
+				},
+			},
+		});
 
-		render(
-			<About.WrappedComponent />,
-			div,
-		);
+		const renderedValue: ReactTestRendererJSON | null =
+			renderer.create(
+				<Provider store={store}>
+					<BrowserRouter>
+						<About />
+					</BrowserRouter>
+				</Provider>,
+			).toJSON();
+
+		expect(renderedValue).toMatchSnapshot();
 	});
 });

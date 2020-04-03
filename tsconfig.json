@@ -29,7 +29,8 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "razzle.config.js"
+    "razzle.config.js",
+    "coverage"
   ],
   "types": ["typePatches", "node", "webpack-env"]
 }

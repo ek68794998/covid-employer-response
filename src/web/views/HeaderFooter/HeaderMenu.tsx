@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import { ProjectIssueSubmissionUrl } from "../../../common/constants/UrlConstants";
@@ -11,7 +10,7 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import "./HeaderFooter.scss";
 
 const HeaderMenu: React.FC = (): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 
 	return (
 		<header>
@@ -28,4 +27,4 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default HeaderMenu as any;
+export default HeaderMenu;
