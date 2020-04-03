@@ -1,0 +1,51 @@
+name: McDonald's
+wiki: McDonald's
+image: mcdonalds.svg
+officialWebsite: https://mcdonalds.com
+location:
+  city: Chicago
+  state: IL
+  country: USA
+  international: true
+  wiki: Chicago
+employeesBefore:
+  type: approximately
+  upperBound: 210000
+  year: 2018
+summary: McDonald's has generally shown goodwill during the COVID-19 pandemic, closing public areas but continuing drive-thru, and providing providing free lunches and free delivery.
+citations:
+  - summary: McDonald's has been considered an essential service but has closed seating areas and play places; it has begun operating in a no-contact manner, allowing drive-thru and curbside pickup.
+    positivity: 1
+    type: publication
+    sources:
+      - name: USA Today via Microsoft News
+        link: https://www.msn.com/en-us/money/companies/mcdonalds-to-shut-seating-play-areas-due-to-covid-19/ar-BB11hdBv
+        date: 2020-03-17T02:00:00.000Z
+  - summary: McDonald's is supporting franchisees who are providing free lunches to students and free food and drinks to first responders, in both Europe and the US.
+    positivity: 1
+    type: publication
+    sources:
+      - name: McDonald's company news
+        link: https://news.mcdonalds.com/news-releases/news-release-details/our-focus-supporting-franchisees-crew-and-communities-time
+        date: 2020-03-20T12:00:00-07:00 # Estimate based on article date of 03/20/2020.
+  - summary: McDonald's elected to not inform 80% of staff members at one of their Sydney locations that a coworker had tested positive for COVID-19.
+    positivity: -1
+    type: publication
+    sources:
+      - name: ABC News Australia
+        link: https://mobile.abc.net.au/news/2020-03-30/mcdonalds-gregory-hills-coronavirus-case/12102590?pfmredir=sm
+        date: 2020-03-30T03:55:30.000Z
+  - summary: McDonald's has temporarily closed 50 of its locations for safety reasons.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Nation's Restaurant News
+        link: https://www.nrn.com/quick-service/coronavirus-pandemic-prompts-mcdonalds-temporarily-close-50-restaurants
+        date: 2020-03-20T12:00:00-07:00 # Estimate based on article date of 03/20/2020.
+  - summary: McDonald's has provided free delivery via UberEats and DoorDash through at least April 6.
+    positivity: 1
+    type: publication
+    sources:
+      - name: McDonald's company news
+        link: https://news.mcdonalds.com/news-release/news-release-details/McDelivery-UberEats-DoorDash%20
+        date: 2020-03-25T12:00:00-07:00 # Estimate based on article date of 03/25/2020.
