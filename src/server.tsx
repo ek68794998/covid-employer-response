@@ -19,7 +19,9 @@ import apiRoutes from "./api/routes";
 import { LocaleLoader } from "./api/storage/LocaleLoader";
 import { LocalizedStrings } from "./common/LocalizedStrings";
 import App from "./web/App";
+import { AppState } from "./web/state/AppState";
 import configureStore from "./web/state/configureStore";
+import { getIsProd } from "./web/state/ducks/environment/selectors";
 import { getLocalizedStringsSuccess } from "./web/state/ducks/localization/actions";
 
 export const DEFAULT_LANGUAGE: string = "en-us";
@@ -44,15 +46,14 @@ const server: express.Application = express()
 	.use(localizationMiddleware.invokeAsync.bind(localizationMiddleware))
 	.use("/api", apiRoutes)
 	.get("/*", async (req: express.Request, res: express.Response) => {
-		const isProd: boolean = process.env.NODE_ENV === "production";
 		const request: HttpRequest = req as HttpRequest;
-		const context: {} = {}; // TODO
-		const preloadedState: {} = {}; // TODO
+		const context: {} = {};
+		const preloadedState: Partial<AppState> = {};
 
 		const localeCode: string = request.languageCode.toLowerCase();
 		const localeData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
 
-		const store: Store<{}, AnyAction> = configureStore(preloadedState);
+		const store: Store<AppState, AnyAction> = configureStore(preloadedState);
 		store.dispatch(getLocalizedStringsSuccess(localeData));
 
 		const baseUrl: string =
@@ -78,6 +79,8 @@ const server: express.Application = express()
 		);
 
 		const { helmet } = helmetContext as FilledContext;
+
+		const appState: AppState = store.getState();
 
 		res.send(
 			`<!doctype html>
@@ -106,10 +109,10 @@ const server: express.Application = express()
 				<body>
 					<div id="root">${markup}</div>
 					<script>
-						window.__PRELOADED_STATE__ = ${serialize(store.getState())}
+						window.__PRELOADED_STATE__ = ${serialize(appState)}
 					</script>
 					${
-						isProd
+						getIsProd(appState)
 							? `<script src="${assets.client.js}" defer></script>`
 							: `<script src="${assets.client.js}" defer crossorigin></script>`
 					}
