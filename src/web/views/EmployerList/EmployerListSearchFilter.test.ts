@@ -3,7 +3,7 @@ import { EmployerRecord } from "../../../common/EmployerRecord";
 import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
 describe("EmployerListSearchFilter", () => {
-	const createEmployerRecordDataRow = (overrides: {}): EmployerRecord => {
+	const createEmployerRecordDataRow = (overrides: Partial<EmployerRecord>): EmployerRecord => {
 		const base: EmployerRecord = new EmployerRecord();
 
 		return { ...base, ...overrides };
@@ -25,6 +25,10 @@ describe("EmployerListSearchFilter", () => {
 		[ { text: "Foo" }, createEmployerRecordDataRow({ name: "FOO" }), true ],
 		[ { text: "aFOO" }, createEmployerRecordDataRow({ name: "FOO" }), false ],
 		[ { text: "FOOa" }, createEmployerRecordDataRow({ name: "FOO" }), false ],
+		[ { text: "fO" }, createEmployerRecordDataRow({ aliases: [ "bar", "foo" ] }), true ],
+		[ { text: "Foooo" }, createEmployerRecordDataRow({ aliases: [ "bar", "foo" ] }), false ],
+		[ { text: "BA" }, createEmployerRecordDataRow({ aliases: [ "bar", "foo" ] }), true ],
+		[ { text: "barr" }, createEmployerRecordDataRow({ aliases: [ "bar", "foo" ] }), false ],
 	])(
 		"properly matches inputs with isMatch (%#)",
 		(f: EmployerListSearchFilter, r: EmployerRecord, expected: boolean) => {
