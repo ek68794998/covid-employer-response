@@ -2,6 +2,8 @@
 @import "../Dimensions.scss";
 
 $division-padding: 16px;
+$top-button-size: 48px;
+$top-button-size-small: 32px;
 
 main#home {
 	margin: 0 auto;
@@ -27,11 +29,32 @@ main#home {
 			width: 50%;
 		}
 	}
-
+	
 	div.Home__Content {
 		max-width: $body-max-width;
 		padding-bottom: $division-padding;
 		padding-top: $division-padding;
+	}
+}
+
+button.Home__BackToTop {
+	background: $background;
+	border: 0;
+	border-radius: ($top-button-size / 2);
+	bottom: ($page-padding / 2);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	position: fixed;
+	height: $top-button-size;
+	outline: none;
+	pointer-events: initial;
+	right: ($page-padding / 2);
+	width: $top-button-size;
+	z-index: 21;
+
+	i {
+		font-size: 36px;
+		margin-top: 2px;
 	}
 }
 
@@ -44,6 +67,18 @@ main#home {
 		div.filters > div {
 			max-width: ($body-max-width - $page-padding-narrow * 2);
 			min-width: ($body-min-width - $page-padding-narrow * 2);
+		}
+	}
+
+	button.Home__BackToTop {
+		bottom: ($page-padding-narrow / 2);
+		height: $top-button-size-small;
+		right: ($page-padding-narrow / 2);
+		width: $top-button-size-small;
+
+		i {
+			font-size: 24px;
+			margin-left: -2px;
 		}
 	}
 }

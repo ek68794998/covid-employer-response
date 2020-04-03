@@ -18,11 +18,28 @@ import "./Home.scss";
 
 const Home: React.FC = (): React.ReactElement => {
 	const [ searchText, setSearchText ] = useState("");
+	const [ isTopButtonVisible, setIsTopButtonVisible ] = useState(false);
 
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const employers: EmployerRecord[] = useSelector(getEmployers);
 
 	const dispatch: React.Dispatch<any> = useDispatch();
+
+	if (typeof window !== "undefined") {
+		const trackScrolling = (): void => {
+			setIsTopButtonVisible(window.scrollY > 0);
+		};
+
+		useEffect(
+			() => {
+				window.addEventListener("scroll", trackScrolling);
+
+				return (): void => {
+					window.removeEventListener("scroll", trackScrolling);
+				};
+			},
+			[]);
+	}
 
 	useEffect(
 		() => {
@@ -33,6 +50,11 @@ const Home: React.FC = (): React.ReactElement => {
 	const searchFilter: EmployerListSearchFilter = {
 		text: searchText,
 	};
+
+	const backToTopComponent: JSX.Element =
+		<button className="Home__BackToTop" onClick={(): void => { window.scrollTo(window.scrollX, 0); }}>
+			<i className="material-icons">arrow_upward</i>
+		</button>;
 
 	return (
 		<main id="home">
@@ -45,6 +67,7 @@ const Home: React.FC = (): React.ReactElement => {
 			<div className="Home__Content">
 				<EmployerList employers={employers} searchFilter={searchFilter} />
 			</div>
+			{isTopButtonVisible && backToTopComponent}
 		</main>
 	);
 };
