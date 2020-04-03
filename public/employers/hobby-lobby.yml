@@ -29,7 +29,7 @@ citations:
         link: https://religionnews.com/2020/03/31/hobby-lobby-clarifies-sick-leave-policy-amid-coronavirus/
         date: 2020-03-31T12:00:00-07:00 # Estimate based on article date of 03/31/2020.
   - summary: Hobby Lobby has quietly reopened stores starting March 31, defying shutdowns and requiring police intervention.
-    positivity: -1
+    positivity: -2
     type: publication
     sources:
       - name: "Business Insider"
@@ -49,3 +49,13 @@ citations:
       - name: popculture.
         link: https://popculture.com/trending/2020/03/30/hobby-lobby-closes-stores-slashes-salaries-following-god-control-remarks-social-media-thoughts/
         date: 2020-03-30T21:47:00-04:00
+  - summary: Hobby Lobby has continued to defy orders to close down as they are not considered an essential business, and has therefore received official cease-and-desists in both Colorado and Ohio.
+    positivity: -2
+    type: publication
+    sources:
+      - name: RawStory
+        link: https://www.rawstory.com/2020/04/officials-in-two-states-issue-cease-and-desist-letters-after-hobby-lobby-defies-coronavirus-lockdowns/
+        date: 2020-04-02T15:30:00-07:00 # Estimate based on '19 hours ago' when discovered.
+      - name: New York Times
+        link: https://www.nytimes.com/2020/04/02/us/hobby-lobby-colorado-virus.html
+        date: 2020-04-02T00:52:02-04:00
