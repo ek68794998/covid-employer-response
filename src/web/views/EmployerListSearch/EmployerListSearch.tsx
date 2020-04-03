@@ -6,18 +6,18 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
-import "./SearchInput.scss";
+import "./EmployerListSearch.scss";
 
 interface Props extends RouteProps {
 	onChange: (value: string) => void;
 }
 
-const SearchInput: React.FC<Props> = (props: Props): React.ReactElement => {
+const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const { onChange } = props;
 
 	return (
-		<div className="SearchInput__Container">
+		<div className="EmployerListSearch__Container">
 			<i className="material-icons">search</i>
 			<input
 				onInput={(e: React.FormEvent<HTMLInputElement>): void => onChange(e.currentTarget.value)}
@@ -28,4 +28,4 @@ const SearchInput: React.FC<Props> = (props: Props): React.ReactElement => {
 	);
 };
 
-export default SearchInput;
+export default EmployerListSearch;

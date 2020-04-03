@@ -8,7 +8,7 @@ exports[`<Home /> renders without exploding 1`] = `
     className="Home__Filters"
   >
     <div
-      className="SearchInput__Container"
+      className="EmployerListSearch__Container"
     >
       <i
         className="material-icons"

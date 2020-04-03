@@ -9,8 +9,9 @@ import { EmployerRecord } from "../../../common/EmployerRecord";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
+import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
+
 import EmployerList from "./EmployerList";
-import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
 describe("<EmployerList />", () => {
 	test("renders without exploding", () => {

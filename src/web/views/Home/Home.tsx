@@ -11,8 +11,8 @@ import { getEmployers } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerList from "../EmployerList/EmployerList";
-import { EmployerListSearchFilter } from "../EmployerList/EmployerListSearchFilter";
-import SearchInput from "../SearchInput/SearchInput";
+import EmployerListSearch from "../EmployerListSearch/EmployerListSearch";
+import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 
 import "./Home.scss";
 
@@ -40,7 +40,7 @@ const Home: React.FC = (): React.ReactElement => {
 				<title>{strings.home} | {strings.appTitle}</title>
 			</Helmet>
 			<div className="Home__Filters">
-				<SearchInput onChange={setSearchText} />
+				<EmployerListSearch onChange={setSearchText} />
 			</div>
 			<div className="Home__Content">
 				<EmployerList employers={employers} searchFilter={searchFilter} />
