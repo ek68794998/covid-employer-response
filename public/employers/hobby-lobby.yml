@@ -12,9 +12,9 @@ employeesBefore:
   type: exactly
   upperBound: 37500
   year: 2018
-summary: This employer has has stores that remained opened despite authorities forcing them to close. The stores that did closed promised to partially pay out its employees.
+summary: Hobby Lobby has had stores that remained opened despite authorities forcing them to close. The stores that did close promised to partially pay out its employees.
 citations:
-  - summary: Business argues that it is essential, but authorities are not convinced and closed down stores in different states.
+  - summary: Hobby Lobby argues that it is essential, but authorities are not convinced and have closed down stores in different states.
     positivity: -1
     type: publication
     sources:
@@ -28,17 +28,24 @@ citations:
       - name: Religion News Service
         link: https://religionnews.com/2020/03/31/hobby-lobby-clarifies-sick-leave-policy-amid-coronavirus/
         date: 2020-03-31T12:00:00-07:00 # Estimate based on article date of 03/31/2020.
-  - summary: Hobby Lobby quietly reopened stores defying shutdowns and requiring police intervention.
+  - summary: Hobby Lobby has quietly reopened stores starting March 31, defying shutdowns and requiring police intervention.
     positivity: -1
     type: publication
     sources:
       - name: "Business Insider"
         link: https://www.businessinsider.com/hobby-lobby-reopened-stores-in-states-with-coronavirus-lockdowns-2020-3
         date: 2020-03-31T17:47:00Z
-  - summary: Most Hobby Lobby stores remain open amid pandemic.
+  - summary: Most Hobby Lobby stores have remained open amid pandemic.
     positivity: -1
     type: publication
     sources:
       - name: "The Oklahoman"
         link: https://oklahoman.com/article/5658630/coronavirus-in-oklahoma-most-hobby-lobby-remain-open-amid-pandemic
         date: 2020-03-26T13:04:14-05:00
+  - summary: As of March 30, Hobby Lobby has closed stores and slashed salaries, as well as terminated a number of employees.
+    positivity: -1
+    type: publication
+    sources:
+      - name: popculture.
+        link: https://popculture.com/trending/2020/03/30/hobby-lobby-closes-stores-slashes-salaries-following-god-control-remarks-social-media-thoughts/
+        date: 2020-03-30T21:47:00-04:00
