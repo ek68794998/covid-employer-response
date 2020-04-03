@@ -41,7 +41,7 @@ citations:
     sources:
       - name: Nation's Restaurant News
         link: https://www.nrn.com/quick-service/coronavirus-pandemic-prompts-mcdonalds-temporarily-close-50-restaurants
-        date: 2020-03-20T12:00:00-07:00 # Estimate based on article date of 03/20/2020.
+        date: 2020-03-20T20:51:56Z
   - summary: McDonald's has provided free delivery via UberEats and DoorDash through at least April 6.
     positivity: 1
     type: publication
