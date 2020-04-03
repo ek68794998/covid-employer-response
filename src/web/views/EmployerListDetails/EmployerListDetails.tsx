@@ -29,7 +29,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	return (
 		<div className={`EmployerListDetails__Container EmployerListDetails__Rating--${rating}`}>
 			<EmployerDetailsHeader employer={employer} onClickEmployerName={onClick} useShortText={true} />
-			<div className="EmployerListDetails__Summary">
+			<div className="EmployerListDetails__Summary" onClick={onClick}>
 				{employer.summary}
 				<div className="EmployerListDetails__OverflowScreen" />
 			</div>
