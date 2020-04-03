@@ -31,11 +31,9 @@ describe("EmployerRecordLoader", () => {
 			expect(record.id).not.toBeNull();
 			expect(record.name).not.toBeNull();
 			expect(record.name.length).toBeGreaterThan(0);
-			expect(record.location).not.toBeNull();
-			expect(record.rating).not.toBeNull();
-			expect(record.rating.length).toBeGreaterThan(0);
 			expect(record.summary).not.toBeNull();
-			expect(record.summary.length).toBeGreaterThan(0);
+			expect(record.summary.length).toBeGreaterThanOrEqual(100);
+			expect(record.summary.length).toBeLessThanOrEqual(350);
 		});
 	});
 
@@ -51,18 +49,21 @@ describe("EmployerRecordLoader", () => {
 
 		expect(record.id).toBe("sample");
 		expect(record.name).toBe("Contoso");
+		expect(record.shortName).toBe("Co.");
 		expect(record.wiki).toBe("Example");
 		expect(record.officialWebsite).toBe("http://example.com");
-		expect(record.rating).toBe("fair");
-		expect(record.employeesBeforeMax).toBe(500);
-		expect(record.employeesBeforeMin).toBe(200);
+		expect(record.employeesBefore?.lowerBound).toBe(200);
+		expect(record.employeesBefore?.type).toBe("range");
+		expect(record.employeesBefore?.upperBound).toBe(500);
+		expect(record.employeesBefore?.year).toBe(2019);
+		expect(record.employeesBefore?.yearQuarter).toBe("Q1");
 		expect(record.summary).toBe("Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.");
 
-		expect(record.location.city).toBe("Seattle");
-		expect(record.location.state).toBe("WA");
-		expect(record.location.country).toBe("USA");
-		expect(record.location.international).toBe(false);
-		expect(record.location.wiki).toBe("Seattle");
+		expect(record.location?.city).toBe("Seattle");
+		expect(record.location?.state).toBe("WA");
+		expect(record.location?.country).toBe("USA");
+		expect(record.location?.international).toBe(false);
+		expect(record.location?.wiki).toBe("Seattle");
 
 		expect(record.citations.length).toBe(3);
 

@@ -1,28 +1,31 @@
 import React from "react";
-import { render } from "react-dom";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
+import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import { AnyAction, Store } from "redux";
 
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { AppState } from "../../state/AppState";
+import configureStore from "../../state/configureStore";
 
 import FooterMenu from "./FooterMenu";
 
-jest.mock("react-redux", () => ({
-	useSelector: (): {} => ({
-		getStrings: (): LocalizedStrings => ({
-			appTitle: "App Title",
-		}),
-	}),
-}));
-
 describe("<FooterMenu />", () => {
 	test("renders without exploding", () => {
-		const div: HTMLDivElement = document.createElement("div");
+		const store: Store<AppState, AnyAction> = configureStore({
+			strings: {
+				appTitle: "App Title",
+			},
+		});
 
-		render(
-			<BrowserRouter>
-				<FooterMenu.WrappedComponent />
-			</BrowserRouter>,
-			div,
-		);
+		const renderedValue: ReactTestRendererJSON | null =
+			renderer.create(
+				<Provider store={store}>
+					<BrowserRouter>
+						<FooterMenu />
+					</BrowserRouter>
+				</Provider>,
+			).toJSON();
+
+		expect(renderedValue).toMatchSnapshot();
 	});
 });

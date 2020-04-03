@@ -8,13 +8,15 @@ export class EmployerLocation {
 	public state?: string;
 
 	public wiki?: string;
+
+	public static toString(location: EmployerLocation, useShortText: boolean = false): string {
+		const cityAsString: string =
+			useShortText
+				? location.city
+				: location.state
+					? `${location.city}, ${location.state}, ${location.country}`
+					: `${location.city}, ${location.country}`;
+
+		return location.international ? `${cityAsString} (Int'l)` : cityAsString;
+	}
 }
-
-export const employerLocationToString = (location: EmployerLocation): string => {
-	const cityAsString: string =
-		location.state
-			? `${location.city}, ${location.state}, ${location.country}`
-			: `${location.city}, ${location.country}`;
-
-	return location.international ? `${cityAsString} (Int'l)` : cityAsString;
-};

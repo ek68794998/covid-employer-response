@@ -1,8 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { withRouter } from "react-router-dom";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import { AuthorUrl, ProjectUrl } from "../../../common/constants/UrlConstants";
@@ -11,11 +9,11 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import "./HeaderFooter.scss";
 
 const HeaderMenu: React.FC = (): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 
 	return (
 		<footer>
-			<div className="container">
+			<div className="HeaderFooter__Container">
 				<span id="maintained-by">
 					Maintained by <a href={AuthorUrl}>Eric Kumlin</a>
 				</span>
@@ -27,4 +25,4 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default withRouter(HeaderMenu) as any;
+export default HeaderMenu;

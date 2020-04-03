@@ -1,19 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { RouteComponentProps, withRouter } from "react-router-dom";
+import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerCitation from "../EmployerCitation/EmployerCitation";
 
 import "./EmployerCitationList.scss";
 
-interface Props extends RouteComponentProps {
+interface Props extends RouteProps {
 	citations: Citation[];
 
 	citationSourceBase: number;
@@ -22,7 +21,7 @@ interface Props extends RouteComponentProps {
 }
 
 const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector((state: AppState) => getStrings(state));
+	const strings: LocalizedStrings = useSelector(getStrings);
 
 	const { citations, citationSourceBase, citationType } = props;
 
@@ -40,16 +39,16 @@ const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement
 	return (
 		<div>
 			<h3
-				className="citation-type"
+				className="EmployerCitationList__Header"
 				title={strings.citationTypeDescriptions[citationType]}
 			>
 				{strings.citationTypes[citationType]}
 			</h3>
-			<ul className="employer-citations">
+			<ul className="EmployerCitationList__Citations">
 				{citations.map(getCitationComponent)}
 			</ul>
 		</div>
 	);
 };
 
-export default withRouter(EmployerCitationList) as any;
+export default EmployerCitationList;

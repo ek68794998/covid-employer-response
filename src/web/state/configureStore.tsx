@@ -1,14 +1,15 @@
 import { AnyAction, applyMiddleware, compose, createStore, Store } from "redux";
 import thunk from "redux-thunk";
 
+import { AppState } from "./AppState";
 import rootReducer from "./ducks";
 
-const configureStore = (preloadedState: any): Store<{}, AnyAction> => {
+const configureStore = (preloadedState: Partial<AppState>): Store<AppState, AnyAction> => {
 	const isProd: boolean = process.env.NODE_ENV === "production";
 	const composeEnhancers: any =
 		(!isProd && typeof window !== "undefined" && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
-	const store: Store<{}, AnyAction> = createStore(
+	const store: Store<AppState, AnyAction> = createStore(
 		rootReducer,
 		preloadedState,
 		composeEnhancers(applyMiddleware(thunk)),

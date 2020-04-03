@@ -1,5 +1,3 @@
-import fs from "fs";
-
 export abstract class DataFileLoader<T> {
 	protected directoryPath: string;
 

@@ -9,12 +9,12 @@ import Home from "./views/Home/Home";
 import "./App.scss";
 
 export default (): JSX.Element => (
-	<React.Fragment>
+	<>
 		<HeaderMenu />
 		<Switch>
 			<Route exact={true} path="/" component={Home} />
 			<Route path="/about" component={About} />
 		</Switch>
 		<FooterMenu />
-	</React.Fragment>
+	</>
 );

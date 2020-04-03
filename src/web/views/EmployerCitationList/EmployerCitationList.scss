@@ -1,5 +1,6 @@
-ul.employer-citations {
+ul.EmployerCitationList__Citations {
 	font-size: 14px;
+	margin: 12px 0 0;
 	padding: 0;
 
 	li {
@@ -8,10 +9,9 @@ ul.employer-citations {
 	}
 }
 
-h3.citation-type {
+h3.EmployerCitationList__Header {
 	border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
 	cursor: help;
 	display: inline;
-	font-size: 16px;
-	margin: 0;
+	font-size: 20px;
 }

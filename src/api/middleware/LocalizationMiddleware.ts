@@ -2,6 +2,7 @@ import parser from "accept-language-parser";
 import express from "express";
 
 import { HttpRequest } from "../models/HttpRequest";
+import { LocaleLoader } from "../storage/LocaleLoader";
 
 interface Language {
 	code: string;
@@ -10,26 +11,33 @@ interface Language {
 }
 
 export class LocalizationMiddleware {
-	private defaultLanguage: string;
+	private readonly defaultLanguage: string;
 
-	private supportedLanguages: string[];
+	private readonly localeLoader: LocaleLoader;
 
-	public constructor(defaultLanguageCode: string, supportedLanguageCodeList: string[]) {
-		this.defaultLanguage = defaultLanguageCode || "en-us";
-		this.supportedLanguages =
-			supportedLanguageCodeList
-			&& supportedLanguageCodeList.map((value: string) => value.toLowerCase())
-			|| [];
+	private supportedLanguages: string[] = [];
+
+	public constructor(defaultLanguageCode: string, localeLoader: LocaleLoader) {
+		this.defaultLanguage = defaultLanguageCode;
+		this.localeLoader = localeLoader;
 	}
 
-	public invoke(req: express.Request, res: express.Response, next: express.NextFunction): void {
+	public get languages(): string[] {
+		return this.supportedLanguages;
+	}
+
+	public async invokeAsync(req: express.Request, res: express.Response, next: express.NextFunction): Promise<void> {
+		if (!req.header("if-none-match") || this.supportedLanguages.length === 0) {
+			this.supportedLanguages = await this.localeLoader.getAllIdsAsync();
+		}
+
 		const request: HttpRequest = req as HttpRequest;
 		const isValidLanguage = (code: string): boolean => this.supportedLanguages.indexOf(code && code.toLowerCase()) >= 0;
 
 		let userLanguage: string = this.defaultLanguage;
 
 		try {
-			const languageHeader: string = request.header("Accept-Language") ?? "";
+			const languageHeader: string = request.header("accept-language") ?? "";
 			const languages: Language[] = parser.parse(languageHeader);
 
 			for (const language of languages) {

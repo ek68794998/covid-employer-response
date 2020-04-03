@@ -5,13 +5,19 @@ import { MemoryRouter } from "react-router-dom";
 import { AnyAction, Store } from "redux";
 
 import App from "./App";
-
+import { AppState } from "./state/AppState";
 import configureStore from "./state/configureStore";
 
 describe("<App />", () => {
 	test("renders without exploding", () => {
 		const div: HTMLDivElement = document.createElement("div");
-		const store: Store<{}, AnyAction> = configureStore({});
+		const store: Store<AppState, AnyAction> = configureStore({
+			strings: {
+				about: "About",
+				appTitle: "Test App",
+				home: "Home",
+			},
+		});
 
 		render(
 			<Provider store={store}>

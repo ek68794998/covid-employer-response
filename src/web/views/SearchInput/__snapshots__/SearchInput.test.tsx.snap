@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchInput /> renders without exploding 1`] = `
+<div
+  className="SearchInput__Container"
+>
+  <i
+    className="material-icons"
+  >
+    search
+  </i>
+  <input
+    onInput={[Function]}
+    placeholder="Search"
+    type="search"
+  />
+</div>
+`;

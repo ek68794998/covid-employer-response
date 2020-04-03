@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> renders without exploding 1`] = `
+<main
+  id="home"
+>
+  <div
+    className="Home__Filters"
+  >
+    <div
+      className="SearchInput__Container"
+    >
+      <i
+        className="material-icons"
+      >
+        search
+      </i>
+      <input
+        onInput={[Function]}
+        type="search"
+      />
+    </div>
+  </div>
+  <div
+    className="Home__Content"
+  >
+    <div
+      className="EmployerList__Container--Loading"
+    />
+  </div>
+</main>
+`;

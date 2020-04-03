@@ -1,0 +1,54 @@
+name: Google
+aliases:
+  - Alphabet
+wiki: Google
+image: google.svg
+officialWebsite: https://google.com
+location:
+  city: Menlo Park
+  state: CA
+  country: USA
+  international: true
+  wiki: Menlo Park, California
+employeesBefore:
+  type: exactly
+  upperBound: 114096
+  year: 2018
+  yearQuarter: Q3
+summary: Google (as part of its parent company, Alphabet) has provided a number of COVID-19 related information services and is investing in testing for the disease, as well as permitted many of its employees to work from home. However, it falls short in supporting its YouTube communities, contractors, and providing good work-from-home situations.
+citations:
+  - summary: A subdivison of Alphabet, Verily, has begun ramping up a drive-thru COVID-19 test; it has begun efforts in select counties of California, but plans for expansion have been announced.
+    positivity: 2
+    type: publication
+    sources:
+      - name: The Verge
+        link: https://www.cnbc.com/2020/03/26/alphabet-verily-ramps-up-covid-19-screens-with-1000-google-volunteers.html
+        date: 2020-03-26T18:30:00-04:00
+  - summary: Full-time Google employees are permitted to work from home during the COVID-19 pandemic.
+    positivity: 1
+    type: publication
+    sources:
+      - name: The Verge
+        link: https://www.theverge.com/2020/3/17/21184495/google-employees-memo-contract-workers-coronavirus-covid-19
+        date: 2020-03-17T20:15:00-04:00
+  - summary: Google's performance reviews and promotions have been put on hold for at least six months due to the COVID-19 pandemic. Based on the company's message to employees, they expect to hand out twice as many promotions in November 2020 to compensate.
+    positivity: 0
+    type: publication
+    sources:
+      - name: Business Insider
+        link: https://www.businessinsider.com/google-delays-employee-performance-reviews-promotions-covid-19-2020-3
+        date: 2020-03-18T16:03:34Z
+  - summary: YouTube, owned by Google, has significantly reduced the number of human content moderators during COVID-19, allowing automated systems to take over more of the job. The company expects this to result in a significant increase in false positives (and thus, videos removed from the site).
+    positivity: -1
+    type: publication
+    sources:
+      - name: YouTube Creator Blog
+        link: https://youtube-creators.googleblog.com/2020/03/protecting-our-extended-workforce-and.html
+        date: 2020-03-16T12:00:00-07:00 # Estimate based on article date of 03/16/2020.
+  - summary: Numerous contractors for Google (which number almost as highly as full-time employees) were not permitted to work from home and, as a result, formed peaceful protests against the company. One contractor company, HCL, and Google have since been able to allow a number of these employees to work from home.
+    positivity: -1
+    type: publication
+    sources:
+      - name: The Verge
+        link: https://www.theverge.com/2020/3/17/21184495/google-employees-memo-contract-workers-coronavirus-covid-19
+        date: 2020-03-17T20:15:00-04:00

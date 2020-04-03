@@ -1,3 +1,9 @@
+/* istanbul ignore file */
+/*
+  No test coverage since testing express startup is not really feasible.
+  Please keep as much logic out of this as possible.
+*/
+
 import express from "express";
 
 // this require is necessary for server HMR to recover from error

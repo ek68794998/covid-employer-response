@@ -1,5 +1,7 @@
 # Cempres (**C**oronavirus **Emp**loyer **Res**ponse Tracker)
-This website tracks and cites sources for information about how employers have acted during the Coronavirus (COVID-19) pandemic.
+This website tracks and cites sources for information about how employers have acted during the Coronavirus (COVID-19) pandemic. Cempres aims to have an open, Wikipedia-style organization of data where users can freely submit, edit, or change information regarding employers' response on the pandemic. 
+
+The main website can be found here: https://cempres.org/
 
 ## Contributing information
 There are multiple ways to contribute employer information to this project.
@@ -10,7 +12,7 @@ You may create a fork of this repository and modify the YAML (`yml`) files in `.
 For instructions on how to use YAML, please see [this documentation on YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html). If you'd like to see a sample employer data file, please look at `./public/employers/sample.yml`.
 
 ### Submit an issue
-You may open an issue in this repository providing the information you'd like to submit, and another contributor can create or update the YAML files for you.
+You may open an Employer Information Claim issue in this repository providing the information you'd like to submit, and another contributor can create or update the YAML files for you. In order to ensure quality, please submit a source to the claim you are making. The more reliable the source is, the better. 
 
 ### Submit an anonymous tip
 This is not yet supported. In the future, we plan to support an anonymous form of submission such as Google Forms or email. Keep an eye out here for updates on that.

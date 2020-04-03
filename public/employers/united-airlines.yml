@@ -1,25 +1,29 @@
 name: United Airlines
+shortName: United
 wiki: United Airlines
+image: united.svg
 officialWebsite: https://www.united.com
-rating: fair
 location:
   city: Chicago
   state: IL
   country: USA
   international: true
   wiki: Chicago
-employeesBeforeMax: 96000
-employeesBeforeMin: 96000
+employeesBefore:
+  type: approximately
+  upperBound: 96000
+  year: 2019
+  yearQuarter: Q4
 summary: Allowed employees to take voluntary, unpaid leave, and did not plan layoffs. However, after receiving an aid package that the company considered insufficient, it was announced that layoffs could be expected.
 citations:
-  - summary: United announced on March 4th that they would ask workers to apply for voluntary, unpaid leave to alleviate financial burden on the company. At that time, they had announced that there was no plan to lay off employees.
+  - summary: United announced on March 4 that they would ask workers to apply for voluntary, unpaid leave to alleviate financial burden on the company. At that time, they had announced that there was no plan to lay off employees.
     positivity: 0
     type: publication
     sources:
       - name: Market Watch
         link: https://www.marketwatch.com/story/united-airlines-reduces-us-flights-asks-workers-to-take-unpaid-leave-amid-coronavirus-outbreak-2020-03-04
         date: 2020-03-04T17:48:00-04:00
-  - summary: United received a portion of a $25 billion government bailout, with the stipulation that they not lay off any workers through September 30th. They then immediately warned that they expected to cut a number of jobs after September 30th.
+  - summary: United received a portion of a $25 billion government bailout, with the stipulation that they not lay off any workers through September 30. They then immediately warned that they expected to cut a number of jobs after September 30.
     positivity: -1
     type: publication
     sources:
