@@ -23,7 +23,7 @@ citations:
     sources:
       - name: Financial Times (via Mothership)
         link: https://mothership.sg/2020/04/trump-3m-10-million-masks/
-        date: 2000-04-03T21:36:00-07:00
+        date: 2020-04-03T21:36:00-07:00
       - name: Vox
         link: https://www.vox.com/2020/4/3/21206779/coronavirus-update-trump-p-act-comfort-face-coverings
         date: 2020-04-03T17:50:00Z
@@ -45,6 +45,6 @@ citations:
     positivity: 0
     type: hearsay
     sources:
-      - name: LinkedIn
-        link: https://www.linkedin.com/pulse/update-3ms-response-covid-19-mike-roman/
-        date: 2020-03-22T12:00:00-07:00 # Estimate based on post date of 03/22/2020.
+      - name: GlassDoor Reviews
+        link: https://www.glassdoor.com/Reviews/Employee-Review-3M-RVW32401927.htm
+        date: 2020-03-17T16:17:49-07:00
