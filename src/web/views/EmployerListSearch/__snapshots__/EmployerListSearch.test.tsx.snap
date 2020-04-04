@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerListSearch /> renders without exploding 1`] = `
+<div
+  className="EmployerListSearch__Container"
+>
+  <div
+    className="EmployerListSearch__InputContainer"
+  >
+    <i
+      className="material-icons"
+    >
+      search
+    </i>
+    <input
+      onInput={[Function]}
+      placeholder="Search"
+      type="search"
+    />
+    <button
+      className="EmployerListSearch__ExpandFilters"
+      onClick={[Function]}
+    >
+      <i
+        className="material-icons"
+      >
+        expand_more
+      </i>
+    </button>
+  </div>
+</div>
+`;

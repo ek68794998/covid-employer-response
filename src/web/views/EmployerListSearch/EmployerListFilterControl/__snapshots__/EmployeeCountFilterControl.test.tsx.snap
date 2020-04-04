@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployeeCountFilterControl /> renders without exploding 1`] = `
+<div
+  className="EmployerListFilterControl__Container"
+>
+  <button
+    className="EmployerListFilterControl__Button"
+    onClick={[Function]}
+  >
+    <div>
+      employeesDefault string
+    </div>
+  </button>
+</div>
+`;

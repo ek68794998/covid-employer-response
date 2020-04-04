@@ -9,16 +9,17 @@ import { EmployerRecord } from "../../../common/EmployerRecord";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
+import EmployerListSearchFiltersPopup from "./EmployerListSearchFiltersPopup";
 
-import EmployerList from "./EmployerList";
-
-describe("<EmployerList />", () => {
+describe("<EmployerListSearchFiltersPopup />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				loading: "Loading",
-				noResults: "NoResults",
+				filters: {
+					locationDefault: "locationDefault string",
+					locationInternational: "locationInternational string",
+					locationNational: "locationNational string",
+				},
 			},
 		});
 
@@ -26,10 +27,7 @@ describe("<EmployerList />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerList
-							employers={[ new EmployerRecord() ]}
-							searchFilter={new EmployerListSearchFilter()}
-						/>
+						<EmployerListSearchFiltersPopup childProps={[]} multiselect={false} onClose={(): void => { /* Do nothing. */ }} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

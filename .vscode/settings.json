@@ -1,5 +1,13 @@
 {
-    "editor.insertSpaces": false,
+	"[json]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[yml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"files.exclude": {
 		"**/.git": true,

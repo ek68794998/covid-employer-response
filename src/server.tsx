@@ -4,6 +4,7 @@
   Please keep as much logic out of this as possible.
 */
 
+import deepmerge from "deepmerge";
 import express from "express";
 import React from "react";
 import { renderToString } from "react-dom/server";
@@ -51,7 +52,11 @@ const server: express.Application = express()
 		const preloadedState: Partial<AppState> = {};
 
 		const localeCode: string = request.languageCode.toLowerCase();
-		const localeData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
+
+		const defaultLocaleData: LocalizedStrings = await localeLoader.loadAsync(DEFAULT_LANGUAGE);
+		const currentLocaleData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
+
+		const localeData: LocalizedStrings = deepmerge(defaultLocaleData, currentLocaleData);
 
 		const store: Store<AppState, AnyAction> = configureStore(preloadedState);
 		store.dispatch(getLocalizedStringsSuccess(localeData));
@@ -96,7 +101,7 @@ const server: express.Application = express()
 					<meta property="og:type" content="website" />
 					<meta property="og:description" content="A collaborative, open-source project designed to track the responses of employers to the coronavirus (COVID-19) pandemic of 2019-2020." />
 					<meta property="og:locale" content="${localeCode}" />
-					${alternateLocaleMetaTags}
+					${alternateLocaleMetaTags.join("")}
 					<meta property="og:site_name" content="${localeData.appTitle}" />
 					<meta property="og:determiner" content="the" />
 					${
