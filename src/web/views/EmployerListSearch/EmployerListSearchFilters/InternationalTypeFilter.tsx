@@ -5,10 +5,9 @@ import { LocalizedStrings } from "../../../../common/LocalizedStrings";
 
 import { getStrings } from "../../../state/ducks/localization/selectors";
 
-import { EmployerListSearchFilter } from "../EmployerListSearchFilter";
-import { EmployerListSearchFilterProps } from "../EmployerListSearchFilterProps";
+import EmployerListSearchFiltersPopup, { SelectorProps } from "../../EmployerListSearchFiltersPopup/EmployerListSearchFiltersPopup";
 
-import EmployerListSearchFiltersPopup, { SelectorProps } from "./EmployerListSearchFiltersPopup/EmployerListSearchFiltersPopup";
+import { EmployerListSearchFilterProps } from "../EmployerListSearchFilterProps";
 
 import "./EmployerListSearchFilters.scss";
 

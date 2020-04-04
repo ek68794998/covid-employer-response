@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
-import { LocalizedStrings } from "../../../../../common/LocalizedStrings";
+import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { getStrings } from "../../../../state/ducks/localization/selectors";
+import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListSearchFiltersSelector from "../EmployerListSearchFiltersSelector/EmployerListSearchFiltersSelector";
 import "./EmployerListSearchFiltersPopup.scss";
