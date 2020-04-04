@@ -4,6 +4,7 @@
   Please keep as much logic out of this as possible.
 */
 
+import deepmerge from "deepmerge";
 import express from "express";
 import React from "react";
 import { renderToString } from "react-dom/server";
@@ -55,7 +56,7 @@ const server: express.Application = express()
 		const defaultLocaleData: LocalizedStrings = await localeLoader.loadAsync(DEFAULT_LANGUAGE);
 		const currentLocaleData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
 
-		const localeData: LocalizedStrings = { ...defaultLocaleData, ...currentLocaleData };
+		const localeData: LocalizedStrings = deepmerge(defaultLocaleData, currentLocaleData);
 
 		const store: Store<AppState, AnyAction> = configureStore(preloadedState);
 		store.dispatch(getLocalizedStringsSuccess(localeData));
