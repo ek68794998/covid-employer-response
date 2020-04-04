@@ -14,15 +14,32 @@ $filter-button-height: 32px;
 	color: $link-hover;
 	cursor: pointer;
 	height: $filter-button-height;
-	overflow: hidden;
 	outline: none;
 	padding: 0 ($filter-button-height / 3);
-	text-overflow: ellipsis;
 	white-space: nowrap;
 	width: 120px;
 
 	&.EmployerListSearchFilters__Button--Active {
 		background: $link-background;
 		border-color: transparent;
+		padding-left: 4px;
+
+		i {
+			border-radius: 50%;
+			float: left;
+			font-size: 18px;
+			margin: 1px 0;
+			padding: 2px;
+
+			&:hover {
+				cursor: pointer;
+				background: $link-normal;
+			}
+		}
+	}
+
+	div {
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 }

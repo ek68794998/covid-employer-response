@@ -22,6 +22,13 @@ const InternationalTypeFilter: React.FC<EmployerListSearchFilterProps> =
 
 		const { onUpdateFilterValue } = props;
 
+		const clear = (e: React.MouseEvent<HTMLElement>): void => {
+			setShowNational(false);
+			setShowInternational(false);
+
+			e.stopPropagation();
+		};
+
 		useEffect(
 			(): void => {
 				let internationalType: boolean | undefined;
@@ -65,10 +72,19 @@ const InternationalTypeFilter: React.FC<EmployerListSearchFilterProps> =
 				)
 				: null;
 
+		const isActive: boolean = showNational !== showInternational;
+
+		const buttonClasses: string[] = [ "EmployerListSearchFilters__Button" ];
+
+		if (isActive) {
+			buttonClasses.push("EmployerListSearchFilters__Button--Active");
+		}
+
 		return (
 			<div className="EmployerListSearchFilters__Container">
-				<button className="EmployerListSearchFilters__Button" onClick={(): void => setIsPopupOpen(!isPopupOpen)}>
-					{displayText}
+				<button className={buttonClasses.join(" ")} onClick={(): void => setIsPopupOpen(!isPopupOpen)}>
+					{isActive && <i className="material-icons" onClick={clear}>clear</i>}
+					<div>{displayText}</div>
 				</button>
 				{popup}
 			</div>
