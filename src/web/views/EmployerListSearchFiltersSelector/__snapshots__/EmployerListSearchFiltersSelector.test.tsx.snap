@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerListSearchFiltersSelector /> renders without exploding 1`] = `
+<span>
+  <input
+    defaultChecked={true}
+    id="EmployerListSearchFiltersSelector-3739635f"
+    onChange={[Function]}
+    type="radio"
+  />
+  <label
+    htmlFor="EmployerListSearchFiltersSelector-3739635f"
+  >
+    foo
+  </label>
+</span>
+`;

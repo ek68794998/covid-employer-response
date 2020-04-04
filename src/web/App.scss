@@ -33,10 +33,10 @@ body {
 }
 
 a {
-	color: #5c6bc0;
+	color: $link-normal;
 	text-decoration: none;
 
 	&:hover {
-		color: #283593;
+		color: $link-hover;
 	}
 }

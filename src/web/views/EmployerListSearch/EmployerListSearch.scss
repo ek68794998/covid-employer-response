@@ -1,0 +1,62 @@
+@import "../Colors.scss";
+@import "../Dimensions.scss";
+
+$input-buffer: 8px;
+$input-height: 40px;
+
+div.EmployerListSearch__Container {
+	align-items: center;
+	border: 1px solid $outline-color;
+	border-radius: ($input-height / 2);
+	display: flex;
+	flex-direction: column;
+	font: 400 16px 'Baloo Chettan 2';
+
+	input, button {
+		font: inherit;
+	}
+}
+
+div.EmployerListSearch__InputContainer {
+	align-items: center;
+	display: flex;
+	flex: 1;
+	height: 100%;
+	padding: $input-buffer;
+	width: 100%;
+
+	> i {
+		opacity: 0.5;
+	}
+
+	input[type=search] {
+		background: none;
+		border: 0;
+		font: 400 16px 'Baloo Chettan 2';
+		outline: 0;
+		width: 100%;
+	}
+
+	.EmployerListSearch__ExpandFilters {
+		background: none;
+		border: none;
+		cursor: pointer;
+		line-height: 0;
+		margin: 0;
+		outline: none;
+	}
+}
+
+div.EmployerListSearch__FilterContainer {
+	align-items: center;
+	border-top: 1px solid $outline-color;
+	display: flex;
+	flex: 0;
+	height: 100%;
+	padding: $input-buffer;
+	width: 100%;
+
+	> div {
+		margin-right: 8px;
+	}
+}

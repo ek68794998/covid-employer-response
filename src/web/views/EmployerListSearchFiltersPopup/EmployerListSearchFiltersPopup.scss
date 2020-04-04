@@ -1,0 +1,61 @@
+@import "../Colors.scss";
+
+.EmployerListSearchFiltersPopup__Container {
+	background: $background;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px $box-shadow-color;
+	display: flex;
+	flex-direction: column;
+	margin-top: 4px;
+	padding: 8px;
+	position: absolute;
+	width: 200px;
+	z-index: 25;
+
+	h3 {
+		font-size: 18px;
+		margin: 0;
+		padding: 4px;
+	}
+
+	span {
+		align-items: center;
+		display: flex;
+		padding: 4px;
+
+		input {
+			appearance: none;
+			background: $background;
+			border: 2px solid $outline-color;
+			border-radius: 2px;
+			margin-left: 0;
+			margin-right: 8px;
+			outline: none;
+			padding: 8px;
+			position: relative;
+			transition: 0.1s all;
+
+			&:checked {
+				background: $link-normal;
+				border-color: $link-normal;
+
+				&::after {
+					color: $background;
+					content: "\2714";
+					left: 2px;
+					position: absolute;
+					top: -3.5px;
+				}
+			}
+		}
+	}
+}
+
+.EmployerListSearchFiltersPopup__Overlay {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 24;
+}

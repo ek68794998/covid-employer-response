@@ -1,12 +1,8 @@
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
-$body-color: $outline-color;
-$border-radius: 12px;
-$box-shadow-color: rgba(0, 0, 0, 0.2);
 $icon-size: 32px;
 $padding-interior: 12px;
-$padding-sides: 16px;
 
 .EmployerDetailsHeader__Icon {
 	border-radius: ($icon-size / 2) ($icon-size / 2);
@@ -89,7 +85,7 @@ $padding-sides: 16px;
 	}
 }
 
-@media (max-width: $body-narrow-width) {
+@media (max-width: $body-reduced-width) {
 	.EmployerDetailsHeader__Title {
 		flex-wrap: wrap;
 	}

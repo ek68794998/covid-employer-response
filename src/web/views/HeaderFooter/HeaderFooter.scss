@@ -1,3 +1,4 @@
+@import "../BurgerMenu.scss";
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
@@ -17,8 +18,10 @@ header, footer {
 }
 
 header {
-	background: #212121;
+	background: $header;
 	color: $background;
+	position: relative;
+	z-index: 12;
 
 	div#brand {
 		align-self: center;
@@ -56,10 +59,25 @@ header {
 		height: 100%;
 		margin-left: 16px;
 		padding: 4px 8px 6px;
+		white-space: nowrap;
 
 		&.active {
-			border-bottom: 4px solid #5c6bc0;
+			border-bottom: 4px solid $link-normal;
 			padding-bottom: 2px;
+		}
+	}
+
+	.HeaderFooter__OpenHamburgerMenu {
+		background: none;
+		border: none;
+		color: inherit;
+		display: none;
+		outline: none;
+		margin: 0 16px 0 0;
+		padding: 0;
+
+		i {
+			font-size: 36px;
 		}
 	}
 }
@@ -91,6 +109,14 @@ footer {
 
 		div#brand .HeaderMenu__BrandLarge {
 			display: none;
+		}
+
+		.HeaderFooter__OpenHamburgerMenu {
+			display: block;
+		}
+
+		.HeaderMenu__Link {
+			display: none !important;
 		}
 	}
 
