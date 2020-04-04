@@ -1,0 +1,52 @@
+name: Target
+aliases: 
+  - SuperTarget
+  - TargetExpress
+ticker: TGT
+wiki: Target Corporation 
+image: target.png
+officialWebsite: https://corporate.target.com/
+location: 
+  city: Minneapolis
+  state: MN
+  country: USA
+  international: false 
+  wiki: Minneapolis
+employeesBefore: 
+  type: approximately
+  upperBound: 360000
+  year: 2019 
+  yearQuarter: Q4
+summary: Target has been very communicative regarding the pandemic. The company has made significant positive changes to limit the spread of the virus and their response has been faster than most other retail businesses.
+citations:
+  - summary: Target has encouraged its customers to order online, done more rigorous cleaning, limited purchases for customers, and added more support to its staff members.
+    positivity: 1 
+    type: publication
+    sources:
+      - name: Target Corporation
+        link: https://corporate.target.com/article/2020/03/target-coronavirus-update
+        date: 2020-03-10T07:41:27Z
+      - name: KNSI Radio
+        link: https://knsiradio.com/news/local-news/target-close-early-and-add-special-shopping-hours
+        date: 2020-03-17T14:06:00-07:00
+  - summary: Added customer metering and monitoring, gave masks and gloves for retail workers along with paid leave.
+    positivity: 1
+    type: publication 
+    sources:
+      - name: Target Corporation
+        link: https://corporate.target.com/article/2020/04/coronavirus-safety-measures
+        date: 2020-04-02T14:55:55Z
+  - summary: Target raised wages, created a new paid leave program, and bonus payouts.
+    positivity: 2
+    type: publication
+    sources:
+      - name: "Target Corporation"
+        link: https://corporate.target.com/press/releases/2020/03/target-deepens-support-of-team-members-and-guests
+        date: 2020-03-20T08:49:55Z
+  - summary: Target cuts store hours and dedicates weekly time for the elderly and vulnerable shoppers
+    positivity: 1
+    type: publication
+    sources:
+      - name: USA Today
+        link: https://www.usatoday.com/story/money/2020/03/17/target-store-hours-changing-coronavirus/5072460002/
+        date: 2020-03-17T20:51:51Z
