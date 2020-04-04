@@ -7,9 +7,9 @@ import { AnyAction, Store } from "redux";
 import { AppState } from "../../../state/AppState";
 import configureStore from "../../../state/configureStore";
 
-import InternationalTypeFilter from "./InternationalTypeFilter";
+import InternationalTypeFilterControl from "./InternationalTypeFilterControl";
 
-describe("<InternationalTypeFilter />", () => {
+describe("<InternationalTypeFilterControl />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
@@ -25,7 +25,7 @@ describe("<InternationalTypeFilter />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<InternationalTypeFilter onUpdateFilterValue={(): void => { /* Do nothing. */ }} />
+						<InternationalTypeFilterControl onUpdateFilterValue={(): void => { /* Do nothing. */ }} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

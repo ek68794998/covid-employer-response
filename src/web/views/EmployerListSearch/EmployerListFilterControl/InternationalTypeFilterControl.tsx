@@ -9,9 +9,9 @@ import EmployerListSearchFiltersPopup, { SelectorProps } from "../../EmployerLis
 
 import { EmployerListSearchFilterProps } from "../EmployerListSearchFilterProps";
 
-import "./EmployerListSearchFilters.scss";
+import "./EmployerListFilterControl.scss";
 
-const InternationalTypeFilter: React.FC<EmployerListSearchFilterProps> =
+const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
 	(props: EmployerListSearchFilterProps): React.ReactElement => {
 		const strings: LocalizedStrings = useSelector(getStrings);
 
@@ -91,4 +91,4 @@ const InternationalTypeFilter: React.FC<EmployerListSearchFilterProps> =
 		);
 	};
 
-export default InternationalTypeFilter;
+export default InternationalTypeFilterControl;

@@ -6,9 +6,10 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
-import "./EmployerListSearch.scss";
+import InternationalTypeFilterControl from "./EmployerListFilterControl/InternationalTypeFilterControl";
 import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
-import InternationalTypeFilter from "./EmployerListSearchFilters/InternationalTypeFilter";
+
+import "./EmployerListSearch.scss";
 
 interface Props extends RouteProps {
 	onChange: (value: EmployerListSearchFilter) => void;
@@ -35,7 +36,7 @@ const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement =
 		isFiltersetVisible
 			? (
 				<div className="EmployerListSearch__FilterContainer">
-					{<InternationalTypeFilter onUpdateFilterValue={updateSearchFilters} />}
+					{<InternationalTypeFilterControl onUpdateFilterValue={updateSearchFilters} />}
 				</div>
 			)
 			: null;
