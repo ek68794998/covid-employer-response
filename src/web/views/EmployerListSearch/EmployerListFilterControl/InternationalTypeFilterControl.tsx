@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 import { LocalizedStrings } from "../../../../common/LocalizedStrings";
 
 import { getStrings } from "../../../state/ducks/localization/selectors";
 
-import EmployerListSearchFiltersPopup, { SelectorProps } from "../../EmployerListSearchFiltersPopup/EmployerListSearchFiltersPopup";
-
+import { EmployerListSearchFilter } from "../EmployerListSearchFilter";
 import { EmployerListSearchFilterProps } from "../EmployerListSearchFilterProps";
+
+import EmployerListFilterControl, { ChildSelectorProps } from "./EmployerListFilterControl";
 
 import "./EmployerListFilterControl.scss";
 
@@ -15,77 +16,52 @@ const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
 	(props: EmployerListSearchFilterProps): React.ReactElement => {
 		const strings: LocalizedStrings = useSelector(getStrings);
 
-		const { initialFilter, onUpdateFilterValue } = props;
+		const { filter, onUpdateFilter } = props;
 
-		const [ showNational, setShowNational ] = useState(initialFilter.national);
-		const [ showInternational, setShowInternational ] = useState(initialFilter.international);
-		const [ isPopupOpen, setIsPopupOpen ] = useState(false);
-		const [ displayText, setDisplayText ] = useState(strings.filters.locationDefault);
+		const getDisplayText = (): string => {
+			if (filter.national && !filter.international) {
+				return strings.filters.locationNational;
+			}
 
-		const clear = (e: React.MouseEvent<HTMLElement>): void => {
-			setShowNational(true);
-			setShowInternational(true);
+			if (filter.international && !filter.national) {
+				return strings.filters.locationInternational;
+			}
 
-			e.stopPropagation();
+			return strings.filters.locationDefault;
 		};
 
-		useEffect(
-			(): void => {
-				let newDisplayText: string;
+		const onClear = (): void => {
+			filter.national = true;
+			filter.international = true;
 
-				if (showNational && !showInternational) {
-					newDisplayText = strings.filters.locationNational;
-				} else if (showInternational && !showNational) {
-					newDisplayText = strings.filters.locationInternational;
-				} else {
-					newDisplayText = strings.filters.locationDefault;
-				}
+			onUpdateFilter();
+		};
 
-				onUpdateFilterValue({ international: showInternational, national: showNational });
-				setDisplayText(newDisplayText);
-			},
-			[ showNational, showInternational ]);
-
-		const children: SelectorProps[] = [
+		const selectorPropsList: ChildSelectorProps[] = [
 			{
-				initialValue: showNational,
+				initialValue: filter.national,
 				label: strings.filters.locationNational,
-				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowNational(e.target.checked),
+				setValue: (value: boolean): void => onUpdateFilterValue({ national: value }),
 			},
 			{
-				initialValue: showInternational,
+				initialValue: filter.international,
 				label: strings.filters.locationInternational,
-				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowInternational(e.target.checked),
+				setValue: (value: boolean): void => onUpdateFilterValue({ international: value }),
 			},
 		];
 
-		const popup: JSX.Element | null =
-			isPopupOpen
-				? (
-					<EmployerListSearchFiltersPopup
-						childProps={children}
-						multiselect={true}
-						onClose={(): void => setIsPopupOpen(false)}
-					/>
-				)
-				: null;
-
-		const isActive: boolean = !(showNational && showInternational);
-
-		const buttonClasses: string[] = [ "EmployerListFilterControl__Button" ];
-
-		if (isActive) {
-			buttonClasses.push("EmployerListFilterControl__Button--Active");
-		}
+		const onUpdateFilterValue = (updates: Partial<EmployerListSearchFilter>): void => {
+			Object.assign(filter, updates);
+			onUpdateFilter();
+		};
 
 		return (
-			<div className="EmployerListFilterControl__Container">
-				<button className={buttonClasses.join(" ")} onClick={(): void => setIsPopupOpen(!isPopupOpen)}>
-					{isActive && <i className="material-icons" onClick={clear}>clear</i>}
-					<div>{displayText}</div>
-				</button>
-				{popup}
-			</div>
+			<EmployerListFilterControl
+				getDisplayText={getDisplayText}
+				isActive={!(filter.national && filter.international)}
+				onClear={onClear}
+				selectorPropsList={selectorPropsList}
+			/>
 		);
 	};
 

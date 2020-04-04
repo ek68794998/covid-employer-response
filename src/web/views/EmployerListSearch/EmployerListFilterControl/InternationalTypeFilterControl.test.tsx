@@ -28,8 +28,8 @@ describe("<InternationalTypeFilterControl />", () => {
 				<Provider store={store}>
 					<BrowserRouter>
 						<InternationalTypeFilterControl
-							initialFilter={new EmployerListSearchFilter()}
-							onUpdateFilterValue={(): void => { /* Do nothing. */ }}
+							filter={new EmployerListSearchFilter()}
+							onUpdateFilter={(): void => { /* Do nothing. */ }}
 						/>
 					</BrowserRouter>
 				</Provider>,
