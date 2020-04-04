@@ -1,8 +1,12 @@
 @import "../Colors.scss";
 @import "../ReactModal.scss";
 
+$card-min-width: 374px;
 $close-button-size: 48px;
 $close-button-size-small: 32px;
+
+$body-2column-width: ($card-min-width * 2 + 40px);
+$body-3column-width: ($card-min-width * 3 + 120px);
 
 div.EmployerList__Container--Loading, div.EmployerList__Container--NoResults {
 	font: 400 20px 'Baloo Chettan 2';
@@ -42,7 +46,7 @@ button.EmployerList__CloseModal {
 	}
 }
 
-@media (max-width: $body-narrow-width) {
+@media (max-width: $body-2column-width) {
 	div.EmployerList__Container {
 		grid-template-columns: repeat(1, 1fr);
 	}
@@ -60,7 +64,7 @@ button.EmployerList__CloseModal {
 	}
 }
 
-@media (max-width: $body-reduced-width) and (min-width: $body-narrow-width) {
+@media (max-width: $body-3column-width) and (min-width: $body-2column-width) {
 	div.EmployerList__Container {
 		grid-template-columns: repeat(2, 1fr);
 	}

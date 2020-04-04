@@ -24,7 +24,11 @@ $padding-sides: 16px;
 		box-shadow: 0px 3px 6px $card-shadow-color;
 		transform: translateY(-1px);
 
-		.EmployerListDetails__AggregateRatings {
+		.EmployerDetailsHeader__AggregateRatings {
+			opacity: 1.0;
+		}
+
+		a.EmployerListDetails__ActionLink {
 			opacity: 1.0;
 		}
 	}
@@ -54,38 +58,22 @@ $padding-sides: 16px;
 	justify-content: flex-end;
 	margin: 3px 0 0;
 
-	a {
+	a.EmployerListDetails__ActionLink {
+		line-height: 0;
+		margin-right: 8px;
+		opacity: 0;
+		transition: 0.2s opacity;
+	}
+
+	a.EmployerListDetails__ReadMore {
 		align-items: center;
 		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+		margin-right: 0;
 
 		i {
 			margin-left: 4px;
-		}
-	}
-}
-
-.EmployerListDetails__AggregateRatings {
-	display: flex;
-	flex: 1;
-	opacity: 0.5;
-	transition: 0.2s opacity;
-
-	i {
-		font-size: 24px;
-		margin-right: 2px;
-	}
-
-	span {
-		cursor: default;
-		display: flex;
-		margin-right: 8px;
-
-		&.EmployerListDetails__GoodRatings {
-			color: $indicator-positive;
-		}
-
-		&.EmployerListDetails__PoorRatings {
-			color: $indicator-negative;
 		}
 	}
 }

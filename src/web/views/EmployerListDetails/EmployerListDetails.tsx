@@ -2,10 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
-import { Citation } from "../../../common/Citation";
+import { ProjectUrl } from "../../../common/constants/UrlConstants";
 import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
@@ -19,22 +20,66 @@ interface Props extends RouteProps {
 	onClick: () => void;
 }
 
+const getEmployerEditComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+	if (!employer.officialWebsite) {
+		return null;
+	}
+
+	const editUrl: string = `${ProjectUrl}/blob/master/public/employers/${employer.id}.yml`;
+
+	return (
+		<a
+			className="EmployerListDetails__ActionLink"
+			href={editUrl}
+			target="_blank"
+			title={strings.detailDescriptions.edit}
+		>
+			{materialIcon("edit")}
+		</a>
+	);
+};
+
+const getEmployerWebsiteComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+	if (!employer.officialWebsite) {
+		return null;
+	}
+
+	return (
+		<a
+			className="EmployerListDetails__ActionLink"
+			href={employer.officialWebsite}
+			target="_blank"
+			title={strings.detailDescriptions.officialWebsite}
+		>
+			{materialIcon("home")}
+		</a>
+	);
+};
+
+const getEmployerWikipediaComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+	const employerWikipediaUrl: string | null = WikipediaHelpers.getWikipediaUrl(employer.wiki);
+
+	if (!employerWikipediaUrl) {
+		return null;
+	}
+
+	return (
+		<a
+			className="EmployerListDetails__ActionLink"
+			href={employerWikipediaUrl}
+			target="_blank"
+			title={strings.detailDescriptions.wikipedia}
+		>
+			{materialIcon("language")}
+		</a>
+	);
+};
+
 const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
 const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const { employer, onClick } = props;
-
-	let positives: number = 0;
-	let negatives: number = 0;
-
-	for (const citation of employer.citations) {
-		if (citation.positivity > 0) {
-			positives++;
-		} else if (citation.positivity < 0) {
-			negatives++;
-		}
-	}
 
 	const rating: EmployerRating = EmployerRecord.getRating(employer);
 
@@ -46,17 +91,10 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				<div className="EmployerListDetails__OverflowScreen" />
 			</div>
 			<div className="EmployerListDetails__Actions">
-				<span className="EmployerListDetails__AggregateRatings" title={strings.detailDescriptions.ratingCounts}>
-					<span className="EmployerListDetails__GoodRatings">
-						<i className="material-icons">add</i>
-						{positives}
-					</span>
-					<span className="EmployerListDetails__PoorRatings">
-						<i className="material-icons">remove</i>
-						{negatives}
-					</span>
-				</span>
-				<a href="#" onClick={onClick}>
+				{getEmployerWikipediaComponent(employer, strings)}
+				{getEmployerWebsiteComponent(employer, strings)}
+				{getEmployerEditComponent(employer, strings)}
+				<a className="EmployerListDetails__ReadMore" href="#" onClick={onClick}>
 					{strings.readMore}
 					{materialIcon("fullscreen")}
 				</a>

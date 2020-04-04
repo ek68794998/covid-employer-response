@@ -18,19 +18,11 @@ $padding-interior: 12px;
 
 	h2 {
 		font-weight: 400;
+		flex: 1;
 		margin: 0 4px;
 
 		a {
 			color: inherit;
-		}
-	}
-
-	.EmployerDetailsHeader__Links {
-		align-content: center;
-		flex: 1;
-
-		i {
-			margin: 4px 0 0 6px;
 		}
 	}
 
@@ -62,8 +54,9 @@ $padding-interior: 12px;
 .EmployerDetailsHeader__Subtitle {
 	color: #757575;
 	cursor: default;
+	display: flex;
 	font-size: 12px;
-	margin: $padding-interior 0;
+	margin: ($padding-interior / 2) 0 $padding-interior;
 
 	> a, > span {
 		margin-right: ($padding-interior * 2);
@@ -82,6 +75,36 @@ $padding-interior: 12px;
 		font-size: 18px;
 		margin-right: 4px;
 		vertical-align: bottom;
+	}
+
+	.EmployerDetailsHeader__AggregateRatings {
+		align-items: center;
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+		margin: 0;
+		opacity: 0.5;
+		transition: 0.2s opacity;
+	
+		i {
+			font-size: 24px;
+			margin-right: 2px;
+		}
+	
+		span {
+			align-items: center;
+			cursor: default;
+			display: flex;
+			margin-right: 8px;
+	
+			&.EmployerDetailsHeader__GoodRatings {
+				color: $indicator-positive;
+			}
+	
+			&.EmployerDetailsHeader__PoorRatings {
+				color: $indicator-negative;
+			}
+		}
 	}
 }
 

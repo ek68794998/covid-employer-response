@@ -2,12 +2,12 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
-import { ProjectUrl } from "../../../common/constants/UrlConstants";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
@@ -20,20 +20,6 @@ interface Props extends RouteProps {
 
 	useShortText?: boolean;
 }
-
-const getEmployerEditComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
-	if (!employer.officialWebsite) {
-		return null;
-	}
-
-	const editUrl: string = `${ProjectUrl}/blob/master/public/employers/${employer.id}.yml`;
-
-	return (
-		<a href={editUrl} target="_blank" title={strings.detailDescriptions.edit}>
-			{materialIcon("edit")}
-		</a>
-	);
-};
 
 const getEmployerEmployeeCountComponent =
 	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
@@ -54,32 +40,6 @@ const getEmployerEmployeeCountComponent =
 		);
 	};
 
-const getEmployerWebsiteComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
-	if (!employer.officialWebsite) {
-		return null;
-	}
-
-	return (
-		<a href={employer.officialWebsite} target="_blank" title={strings.detailDescriptions.officialWebsite}>
-			{materialIcon("home")}
-		</a>
-	);
-};
-
-const getEmployerWikipediaComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
-	const employerWikipediaUrl: string | null = getWikipediaUrl(employer.wiki);
-
-	if (!employerWikipediaUrl) {
-		return null;
-	}
-
-	return (
-		<a href={employerWikipediaUrl} target="_blank" title={strings.detailDescriptions.wikipedia}>
-			{materialIcon("language")}
-		</a>
-	);
-};
-
 const getLocationWikipediaComponent =
 	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
 		if (!employer.location) {
@@ -87,7 +47,7 @@ const getLocationWikipediaComponent =
 		}
 
 		const locationString: string = EmployerLocation.toString(employer.location, useShortText);
-		const locationWikipediaUrl: string | null = getWikipediaUrl(employer.location.wiki);
+		const locationWikipediaUrl: string | null = WikipediaHelpers.getWikipediaUrl(employer.location.wiki);
 
 		if (!locationWikipediaUrl) {
 			return <span>{locationString}</span>;
@@ -100,17 +60,6 @@ const getLocationWikipediaComponent =
 			</a>
 		);
 	};
-
-const getWikipediaUrl = (pageName?: string): string | null => {
-	if (!pageName) {
-		return null;
-	}
-
-	const wikipediaUrlBase: string = "https://en.wikipedia.org/wiki/__PAGE__";
-	const pageNameSubpath: string = pageName.replace(" ", "_");
-
-	return wikipediaUrlBase.replace("__PAGE__", pageNameSubpath);
-};
 
 const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
@@ -146,6 +95,17 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 		displayName = `${displayName} (${employer.aliases.join(", ")})`;
 	}
 
+	let positives: number = 0;
+	let negatives: number = 0;
+
+	for (const citation of employer.citations) {
+		if (citation.positivity > 0) {
+			positives++;
+		} else if (citation.positivity < 0) {
+			negatives++;
+		}
+	}
+
 	return (
 		<>
 			<div className={`EmployerDetailsHeader__Title ${useShortText ? "" : "EmployerDetailsHeader__Title--noShort"}`}>
@@ -155,12 +115,6 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 						{displayName}
 					</a>
 				</h2>
-				<span className="EmployerDetailsHeader__LinkBreak" />
-				<span className="EmployerDetailsHeader__Links">
-					{getEmployerWikipediaComponent(employer, strings)}
-					{getEmployerWebsiteComponent(employer, strings)}
-					{getEmployerEditComponent(employer, strings)}
-				</span>
 				<span
 					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${rating}`}
 					title={strings.detailDescriptions.rating}
@@ -172,6 +126,16 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 			<div className="EmployerDetailsHeader__Subtitle">
 				{getLocationWikipediaComponent(employer, strings, useShortText || false)}
 				{getEmployerEmployeeCountComponent(employer, strings, useShortText || false)}
+				<span className="EmployerDetailsHeader__AggregateRatings" title={strings.detailDescriptions.ratingCounts}>
+					<span className="EmployerDetailsHeader__GoodRatings">
+						<i className="material-icons">add</i>
+						{positives}
+					</span>
+					<span className="EmployerDetailsHeader__PoorRatings">
+						<i className="material-icons">remove</i>
+						{negatives}
+					</span>
+				</span>
 			</div>
 		</>
 	);
