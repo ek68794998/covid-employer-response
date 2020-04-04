@@ -1,0 +1,42 @@
+name: FedEx Corporation
+aliases:
+  - Federal Express
+shortName: FedEx
+ticker: FDX
+wiki: FedEx
+image: fedex.svg
+officialWebsite: https://www.fedex.com/en-us/about.html
+location:
+  city: Memphis
+  state: TN
+  country: USA
+  international: true
+  wiki: Memphis, Tennessee
+employeesBefore:
+  type: approximately
+  upperBound: 425000
+  year: 2018
+summary: FedEx, as an essential service, has continued to operate and, though they have revoked some service guarantees, has remained committed to delivering packages. They do not intend to require federal aid or perform layoffs.
+citations:
+  - summary: FedEx's CEO has declared that it expects to neither require federal aid money nor perform layoffs. In the event things get incredibly dire for the company, FedEx expects any aid money to come in the form of loan guarantees.
+    positivity: 1
+    type: publication
+    sources:
+      - name: Transport Topics News
+        link: https://www.ttnews.com/articles/fedexs-fred-smith-its-unlikely-company-will-need-federal-help
+        date: 2020-03-22T16:00:00-04:00
+  - summary: Due to overwhelming demand for package deliveries during the COVID-19 crisis, FedEx has suspended its money-back guarantee (which guarantees a refund for packages delivered more than 1 minute after its scheduled time) until further notice.
+    positivity: 0
+    type: publication
+    sources:
+      - name: Supply Chain Dive
+        link: https://www.supplychaindive.com/news/coronavirus-ups-fedex-suspend-service-guarantees/575280/
+        date: 2020-04-01T08:22:09Z
+      - name: FedEx - Service Impact [PDF]
+        link: https://www.fedex.com/content/dam/fedex/us-united-states/Service-Alerts/images/2020/Q4/2019_nCoV_Service_Impacts_Apr_3.pdf # Current version is from April 3, but no indication of when the first publication was.
+  - summary: FedEx has provided employees with general guidance on safe sanitation practices as well as information for customers on what to expect and how to stay safe when handling deliveries.
+    positivity: 1
+    type: publication
+    sources:
+      - name: FedEx Service Updates
+        link: https://www.fedex.com/en-us/coronavirus.html # Unknown date.
