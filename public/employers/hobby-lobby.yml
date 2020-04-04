@@ -59,3 +59,10 @@ citations:
       - name: New York Times
         link: https://www.nytimes.com/2020/04/02/us/hobby-lobby-colorado-virus.html
         date: 2020-04-02T00:52:02-04:00
+  - summary: Hobby Lobby closed all stores and furloughed its employees with no pay, but will continue their benefits
+    positivity: -1
+    type: publication
+    sources:
+      - name: Newsweek
+        link: https://www.newsweek.com/hobby-lobby-close-all-stores-furlough-employees-no-pay-after-claiming-essential-business-1496054
+        date: 2020-04-03T19:20:54-04:00
