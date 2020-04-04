@@ -1,26 +1,26 @@
 name: Target
-aliases: 
+aliases:
   - SuperTarget
   - TargetExpress
 ticker: TGT
-wiki: Target Corporation 
+wiki: Target Corporation
 image: target.png
 officialWebsite: https://corporate.target.com/
-location: 
+location:
   city: Minneapolis
   state: MN
   country: USA
-  international: false 
+  international: false
   wiki: Minneapolis
-employeesBefore: 
+employeesBefore:
   type: approximately
   upperBound: 360000
-  year: 2019 
+  year: 2019
   yearQuarter: Q4
 summary: Target has been very communicative regarding the pandemic. The company has made significant positive changes to limit the spread of the virus and their response has been faster than most other retail businesses.
 citations:
   - summary: Target has encouraged its customers to order online, done more rigorous cleaning, limited purchases for customers, and added more support to its staff members.
-    positivity: 1 
+    positivity: 1
     type: publication
     sources:
       - name: Target Corporation
@@ -31,7 +31,7 @@ citations:
         date: 2020-03-17T14:06:00-07:00
   - summary: Added customer metering and monitoring, gave masks and gloves for retail workers along with paid leave.
     positivity: 1
-    type: publication 
+    type: publication
     sources:
       - name: Target Corporation
         link: https://corporate.target.com/article/2020/04/coronavirus-safety-measures
