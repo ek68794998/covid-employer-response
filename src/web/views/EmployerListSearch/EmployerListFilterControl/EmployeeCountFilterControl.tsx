@@ -11,20 +11,22 @@ import { EmployerListSearchFilterProps } from "../EmployerListSearchFilterProps"
 
 import "./EmployerListFilterControl.scss";
 
-const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
+const EmployeeCountFilterControl: React.FC<EmployerListSearchFilterProps> =
 	(props: EmployerListSearchFilterProps): React.ReactElement => {
 		const strings: LocalizedStrings = useSelector(getStrings);
 
 		const { initialFilter, onUpdateFilterValue } = props;
 
-		const [ showNational, setShowNational ] = useState(initialFilter.national);
-		const [ showInternational, setShowInternational ] = useState(initialFilter.international);
+		const [ showSmall, setShowSmall ] = useState(initialFilter.small);
+		const [ showMedium, setShowMedium ] = useState(initialFilter.medium);
+		const [ showLarge, setShowLarge ] = useState(initialFilter.large);
 		const [ isPopupOpen, setIsPopupOpen ] = useState(false);
-		const [ displayText, setDisplayText ] = useState(strings.filters.locationDefault);
+		const [ displayText, setDisplayText ] = useState(strings.filters.employeesDefault);
 
 		const clear = (e: React.MouseEvent<HTMLElement>): void => {
-			setShowNational(true);
-			setShowInternational(true);
+			setShowSmall(true);
+			setShowMedium(true);
+			setShowLarge(true);
 
 			e.stopPropagation();
 		};
@@ -33,29 +35,46 @@ const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
 			(): void => {
 				let newDisplayText: string;
 
-				if (showNational && !showInternational) {
-					newDisplayText = strings.filters.locationNational;
-				} else if (showInternational && !showNational) {
-					newDisplayText = strings.filters.locationInternational;
+				if (showSmall && showMedium && showLarge) {
+					newDisplayText = strings.filters.employeesDefault;
 				} else {
-					newDisplayText = strings.filters.locationDefault;
+					const displayValues: string[] = [];
+
+					if (showSmall) {
+						displayValues.push(strings.filters.employeesSmall);
+					}
+
+					if (showMedium) {
+						displayValues.push(strings.filters.employeesMedium);
+					}
+
+					if (showLarge) {
+						displayValues.push(strings.filters.employeesLarge);
+					}
+
+					newDisplayText = displayValues.join(", ");
 				}
 
-				onUpdateFilterValue({ international: showInternational, national: showNational });
+				onUpdateFilterValue({ small: showSmall, medium: showMedium, large: showLarge });
 				setDisplayText(newDisplayText);
 			},
-			[ showNational, showInternational ]);
+			[ showSmall, showMedium, showLarge ]);
 
 		const children: SelectorProps[] = [
 			{
-				initialValue: showNational,
-				label: strings.filters.locationNational,
-				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowNational(e.target.checked),
+				initialValue: showSmall,
+				label: strings.filters.employeesSmall,
+				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowSmall(e.target.checked),
 			},
 			{
-				initialValue: showInternational,
-				label: strings.filters.locationInternational,
-				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowInternational(e.target.checked),
+				initialValue: showMedium,
+				label: strings.filters.employeesMedium,
+				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowMedium(e.target.checked),
+			},
+			{
+				initialValue: showLarge,
+				label: strings.filters.employeesLarge,
+				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowLarge(e.target.checked),
 			},
 		];
 
@@ -70,7 +89,7 @@ const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
 				)
 				: null;
 
-		const isActive: boolean = !(showNational && showInternational);
+		const isActive: boolean = !(showSmall && showMedium && showLarge);
 
 		const buttonClasses: string[] = [ "EmployerListFilterControl__Button" ];
 
@@ -89,4 +108,4 @@ const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
 		);
 	};
 
-export default InternationalTypeFilterControl;
+export default EmployeeCountFilterControl;

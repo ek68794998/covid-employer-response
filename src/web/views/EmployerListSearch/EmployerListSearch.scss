@@ -55,4 +55,8 @@ div.EmployerListSearch__FilterContainer {
 	height: 100%;
 	padding: $input-buffer;
 	width: 100%;
+
+	> div {
+		margin-right: 8px;
+	}
 }

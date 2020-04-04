@@ -10,6 +10,8 @@ import EmployerListSearchFiltersSelector from "../EmployerListSearchFiltersSelec
 import "./EmployerListSearchFiltersPopup.scss";
 
 export interface SelectorProps {
+	initialValue: boolean;
+
 	label: string;
 
 	onChange: React.ChangeEventHandler<HTMLInputElement>;
@@ -31,6 +33,7 @@ const EmployerListSearchFiltersPopup: React.FC<Props> = (props: Props): React.Re
 	const children: JSX.Element[] = childProps.map((p: SelectorProps, i: number) => (
 		<EmployerListSearchFiltersSelector
 			key={i}
+			initialValue={p.initialValue}
 			label={p.label}
 			multiselect={multiselect}
 			onChange={p.onChange}

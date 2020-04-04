@@ -3,6 +3,7 @@
 exports[`<EmployerListSearchFiltersSelector /> renders without exploding 1`] = `
 <span>
   <input
+    defaultChecked={true}
     id="EmployerListSearchFiltersSelector-3739635f"
     onChange={[Function]}
     type="radio"

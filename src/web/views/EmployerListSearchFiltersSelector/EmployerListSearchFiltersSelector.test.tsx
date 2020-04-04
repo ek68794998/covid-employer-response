@@ -26,6 +26,7 @@ describe("<EmployerListSearchFiltersSelector />", () => {
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerListSearchFiltersSelector
+							initialValue={true}
 							label={"foo"}
 							multiselect={false}
 							onChange={(): void => { /* Do nothing. */}}

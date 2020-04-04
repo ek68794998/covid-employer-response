@@ -22,7 +22,11 @@
     "wikipedia": "The employer's page on the English Wikipedia."
   },
   "filters": {
-    "locationDefault": "Location",
+    "employeesDefault": "Size",
+    "employeesSmall": "Small",
+    "employeesMedium": "Medium",
+    "employeesLarge": "Large",
+    "locationDefault": "Operations",
     "locationNational": "National",
     "locationInternational": "International"
   },

@@ -9,16 +9,17 @@ import configureStore from "../../../state/configureStore";
 
 import { EmployerListSearchFilter } from "../EmployerListSearchFilter";
 
-import InternationalTypeFilterControl from "./InternationalTypeFilterControl";
+import EmployeeCountFilterControl from "./EmployeeCountFilterControl";
 
-describe("<InternationalTypeFilterControl />", () => {
+describe("<EmployeeCountFilterControl />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				filters: {
-					locationDefault: "locationDefault string",
-					locationInternational: "locationInternational string",
-					locationNational: "locationNational string",
+					employeesDefault: "employeesDefault string",
+					employeesLarge: "employeesLarge string",
+					employeesMedium: "employeesMedium string",
+					employeesSmall: "employeesSmall string",
 				},
 			},
 		});
@@ -27,7 +28,7 @@ describe("<InternationalTypeFilterControl />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<InternationalTypeFilterControl
+						<EmployeeCountFilterControl
 							initialFilter={new EmployerListSearchFilter()}
 							onUpdateFilterValue={(): void => { /* Do nothing. */ }}
 						/>

@@ -6,6 +6,7 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import EmployeeCountFilterControl from "./EmployerListFilterControl/EmployeeCountFilterControl";
 import InternationalTypeFilterControl from "./EmployerListFilterControl/InternationalTypeFilterControl";
 import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
@@ -36,7 +37,8 @@ const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement =
 		isFiltersetVisible
 			? (
 				<div className="EmployerListSearch__FilterContainer">
-					{<InternationalTypeFilterControl onUpdateFilterValue={updateSearchFilters} />}
+					<InternationalTypeFilterControl initialFilter={searchFilters} onUpdateFilterValue={updateSearchFilters} />
+					<EmployeeCountFilterControl initialFilter={searchFilters} onUpdateFilterValue={updateSearchFilters} />
 				</div>
 			)
 			: null;
