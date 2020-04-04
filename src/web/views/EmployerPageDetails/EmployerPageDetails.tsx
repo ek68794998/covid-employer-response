@@ -5,6 +5,7 @@ import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
+import EmployerActionLinks from "../EmployerActionLinks/EmployerActionLinks";
 import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
 import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";
 
@@ -56,8 +57,9 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={employer} onClickEmployerName={(): void => { /* Nothing */ }} />
+			<EmployerDetailsHeader employer={employer} />
 			<div className="EmployerPageDetails__Body">
+				<EmployerActionLinks employer={employer} />
 				<div className="EmployerPageDetails__Summary">
 					{employer.summary}
 				</div>

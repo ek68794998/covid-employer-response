@@ -7,19 +7,12 @@ Array [
   >
     <h2>
       <a
-        href="#"
         onClick={[Function]}
         title=""
       >
         
       </a>
     </h2>
-    <span
-      className="EmployerDetailsHeader__LinkBreak"
-    />
-    <span
-      className="EmployerDetailsHeader__Links"
-    />
     <span
       className="EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--fair"
       title="rating string"
@@ -34,6 +27,31 @@ Array [
   </div>,
   <div
     className="EmployerDetailsHeader__Subtitle"
-  />,
+  >
+    <span
+      className="EmployerDetailsHeader__AggregateRatings"
+    >
+      <span
+        className="EmployerDetailsHeader__GoodRatings"
+      >
+        <i
+          className="material-icons"
+        >
+          add
+        </i>
+        0
+      </span>
+      <span
+        className="EmployerDetailsHeader__PoorRatings"
+      >
+        <i
+          className="material-icons"
+        >
+          remove
+        </i>
+        0
+      </span>
+    </span>
+  </div>,
 ]
 `;

@@ -4,12 +4,21 @@ $padding-interior: 18px;
 
 div.EmployerPageDetails__Container {
 	font-size: 16px;
+
+	a.EmployerActionLinks__Link {
+		opacity: 1.0 !important;
+	}
+
+	.EmployerDetailsHeader__Subtitle {
+		margin-bottom: 6px;
+	}
 }
 
 div.EmployerPageDetails__Body > div {
 	margin-top: $padding-interior;
-}
 
-div.EmployerPageDetails__Summary {
-	line-height: 180%;
+	&.EmployerPageDetails__Summary {
+		line-height: 180%;
+		margin-top: 6px;
+	}
 }

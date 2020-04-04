@@ -1,0 +1,12 @@
+a.EmployerActionLinks__Link {
+	line-height: 0;
+	margin-right: 8px;
+	opacity: 0;
+	transition: 0.2s opacity;
+}
+
+@media (any-hover: none) {
+	a.EmployerActionLinks__Link {
+		opacity: 1.0 !important;
+	}
+}
