@@ -5,6 +5,16 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
   <div
     className="HeaderFooter__Container"
   >
+    <button
+      className="HeaderFooter__OpenHamburgerMenu"
+      onClick={[Function]}
+    >
+      <i
+        className="material-icons"
+      >
+        menu
+      </i>
+    </button>
     <div
       id="brand"
     >
@@ -52,6 +62,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
     <a
       className="HeaderMenu__Link"
       href="https://github.com/ekumlin/covid-employer-response/issues/new/choose"
+      onClick={[Function]}
       target="_blank"
     />
   </div>

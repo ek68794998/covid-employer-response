@@ -7,9 +7,9 @@ import { AnyAction, Store } from "redux";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import SearchInput from "./SearchInput";
+import EmployerListSearch from "./EmployerListSearch";
 
-describe("<SearchInput />", () => {
+describe("<EmployerListSearch />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
@@ -21,7 +21,7 @@ describe("<SearchInput />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<SearchInput onChange={(): void => { /* Do nothing. */ }} />
+						<EmployerListSearch onChange={(): void => { /* Do nothing. */ }} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

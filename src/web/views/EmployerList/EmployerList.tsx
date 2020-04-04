@@ -9,9 +9,8 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";
+import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 import EmployerPageDetails from "../EmployerPageDetails/EmployerPageDetails";
-
-import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
 import "./EmployerList.scss";
 

@@ -3,7 +3,7 @@
 
 $body-color: $outline-color;
 $border-radius: 12px;
-$box-shadow-color: rgba(0, 0, 0, 0.2);
+$card-shadow-color: rgba(0, 0, 0, 0.2);
 $icon-size: 32px;
 $padding-interior: 12px;
 $padding-sides: 16px;
@@ -11,7 +11,7 @@ $padding-sides: 16px;
 .EmployerListDetails__Container {
 	border: 1px solid $body-color;
 	border-radius: $border-radius;
-	box-shadow: 0 0 0 $box-shadow-color;
+	box-shadow: 0 0 0 $card-shadow-color;
 	display: flex;
 	flex-direction: column;
 	font-size: 16px;
@@ -21,12 +21,17 @@ $padding-sides: 16px;
 	width: 100%;
 
 	&:hover {
-		box-shadow: 0px 3px 6px $box-shadow-color;
+		box-shadow: 0px 3px 6px $card-shadow-color;
 		transform: translateY(-1px);
+
+		.EmployerListDetails__AggregateRatings {
+			opacity: 1.0;
+		}
 	}
 }
 
 .EmployerListDetails__Summary {
+	cursor: pointer;
 	flex: 1;
 	font-size: 14px;
 	line-height: 180%;
@@ -55,6 +60,32 @@ $padding-sides: 16px;
 
 		i {
 			margin-left: 4px;
+		}
+	}
+}
+
+.EmployerListDetails__AggregateRatings {
+	display: flex;
+	flex: 1;
+	opacity: 0.5;
+	transition: 0.2s opacity;
+
+	i {
+		font-size: 24px;
+		margin-right: 2px;
+	}
+
+	span {
+		cursor: default;
+		display: flex;
+		margin-right: 8px;
+
+		&.EmployerListDetails__GoodRatings {
+			color: $indicator-positive;
+		}
+
+		&.EmployerListDetails__PoorRatings {
+			color: $indicator-negative;
 		}
 	}
 }

@@ -1,58 +1,73 @@
+import fs from "fs";
+
 import { EmployerRecordLoader } from "../api/storage/EmployerRecordLoader";
 import { EmployerRecord } from "../common/EmployerRecord";
 
+const directory: string = "./public";
+const subDirectory: string = "employers";
+
+const dateToNumber = (date: string | Date | null): number => {
+	return new Date(date || "").getTime();
+};
+
+const recordIds: string[] =
+	fs.readdirSync(`${directory}/${subDirectory}`)
+		.map((file: string) => file.split(".")[0]);
+
 describe("employer records", () => {
-	test("can all be loaded and parsed", async () => {
-		const loader: EmployerRecordLoader =
-			new EmployerRecordLoader("./public", "employers");
+	const loader: EmployerRecordLoader =
+		new EmployerRecordLoader(directory, subDirectory);
 
-		const records: EmployerRecord[] = await loader.loadAllAsync();
+	test("exist", () => {
+		expect(recordIds.length).toBeGreaterThan(0);
+	});
 
-		expect(records.length).toBeGreaterThan(0);
+	test.each(
+		recordIds.map((recordId: string) => [ recordId ])
+	)("can load and parse %p (%#)", async (recordId: string) => {
+		const record: EmployerRecord = await loader.loadAsync(recordId);
 
-		records.forEach((record: EmployerRecord) => {
-			expect(record.id).not.toBeNull();
-			expect(record.name).not.toBeNull();
-			expect(record.name.length).toBeGreaterThan(0);
-			expect(record.summary).not.toBeNull();
-			expect(record.summary.length).toBeGreaterThanOrEqual(100);
-			expect(record.summary.length).toBeLessThanOrEqual(350);
+		expect(record.id).not.toBeNull();
+		expect(record.name).not.toBeNull();
+		expect(record.name.length).toBeGreaterThan(0);
+		expect(record.summary).not.toBeNull();
+		expect(record.summary.length).toBeGreaterThanOrEqual(100);
+		expect(record.summary.length).toBeLessThanOrEqual(350);
 
-			if (record.location) {
-				expect(record.location.city).toBeTruthy();
-				expect(record.location.country).toBeTruthy();
+		if (record.location) {
+			expect(record.location.city).toBeTruthy();
+			expect(record.location.country).toBeTruthy();
+		}
+
+		expect(record.citations.length).toBeGreaterThan(0);
+
+		for (const citation of record.citations) {
+			expect(citation.positivity).toBeGreaterThanOrEqual(-2);
+			expect(citation.positivity).toBeLessThanOrEqual(2);
+			expect(citation.summary.length).toBeGreaterThan(10);
+
+			if (citation.type !== "hearsay") {
+				expect(citation.sources?.length).toBeGreaterThan(0);
 			}
 
-			expect(record.citations.length).toBeGreaterThan(0);
+			if (!citation.sources) {
+				continue;
+			}
 
-			for (const citation of record.citations) {
-				expect(citation.positivity).toBeGreaterThanOrEqual(-2);
-				expect(citation.positivity).toBeLessThanOrEqual(2);
-				expect(citation.summary.length).toBeGreaterThanOrEqual(10);
+			for (const source of citation.sources) {
+				expect(source.name.length).toBeTruthy();
+				expect(new URL(source.link).hostname).toBeTruthy();
 
-				if (!citation.sources) {
+				if (!source.date) {
 					continue;
 				}
 
-				for (const source of citation.sources) {
-					if (!source.date) {
-						continue;
-					}
-
-					expect(new Date(source.date) > new Date("2019-11-01T00:00:00Z")).toBe(true);
-				}
+				expect(dateToNumber(source.date)).toBeGreaterThan(new Date("2019-11-01T00:00:00Z").getTime());
 			}
-		});
+		}
 	});
 
-	test("sample has correct data", async () => {
-		const dateToNumber = (date: string | Date | null): number => {
-			return new Date(date || "").getTime();
-		};
-
-		const loader: EmployerRecordLoader =
-			new EmployerRecordLoader("./public", "employers");
-
+	test("have correct sample data", async () => {
 		const record: EmployerRecord = await loader.loadAsync("sample");
 
 		expect(record.id).toBe("sample");

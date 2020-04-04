@@ -1,0 +1,30 @@
+@import "./Colors.scss";
+@import "./Dimensions.scss";
+
+$burger-button-padding: 24px;
+$burger-highlight-width: 4px;
+
+.bm-menu {
+	background: $header;
+
+	.bm-item-list {
+		display: flex;
+		flex-direction: column;
+		font: 400 24px 'Baloo Chettan 2';
+
+		a {
+			color: $background;
+			padding: ($burger-button-padding / 2) $burger-button-padding;
+			opacity: 0.7;
+
+			&:hover {
+				opacity: 1.0;
+			}
+
+			&.active {
+				border-left: $burger-highlight-width solid $link-normal;
+				padding-left: ($burger-button-padding - $burger-highlight-width);
+			}
+		}
+	}
+}
