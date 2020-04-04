@@ -50,7 +50,7 @@ citations:
         link: https://www.buzzfeednews.com/article/albertsamaha/coronavirus-starbucks-stores-open-retail-employees-scared
         date: 2020-03-26T14:53:00-04:00
   - summary: After requests from employees who felt they had to choose between work or health, Starbucks stated that its employees would receive pay for their scheduled hours, regardless of whether they showed up to work, through April 19.
-    positivity: 1
+    positivity: 2
     type: publication
     sources:
       - name: Eater
