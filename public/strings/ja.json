@@ -1,0 +1,38 @@
+{
+  "about": "FAQs",
+  "citationTypeDescriptions": {
+    "publication": "Published articles such as a company blog, PR statement, government report, or leaked document.",
+    "statement": "Published statements from employees (former, anonymous, or otherwise).",
+    "hearsay": "Word-of-mouth, rumors, or unconfirmed information."
+  },
+  "citationTypes": {
+    "publication": "発表",
+    "statement": "申立",
+    "hearsay": "噂話"
+  },
+  "detailDescriptions": {
+    "edit": "編集できる会社のデータファイル",
+    "employees": "The approximate number of employees the company had prior to the Coronavirus pandemic.",
+    "location": "本社の基本情報",
+    "officialWebsite": "ウェブサイト",
+    "rating": "The general rating of the employer.",
+    "ratingCounts": "Aggregate counts of the good and bad actions an employer has taken.",
+    "wikipedia": "ウィキペディア"
+  },
+  "filters": {
+    "locationDefault": "所在場所",
+    "locationNational": "National",
+    "locationInternational": "多国籍企業"
+  },
+  "home": "Employers",
+  "loading": "読込中…",
+  "noResults": "一致する会社は見つかりませんでした。",
+  "ratingLabels": {
+    "poor": "不可",
+    "fair": "可",
+    "good": "良"
+  },
+  "readMore": "もっと見る",
+  "search": "検索",
+  "submit": "投稿"
+}
