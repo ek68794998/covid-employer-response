@@ -90,6 +90,7 @@ export class EmployerListSearchFilter {
 		const fieldsToSearch: Array<string | undefined> = [
 			e.name.toLowerCase(),
 			e.location?.city.toLowerCase(),
+			e.ticker?.toLowerCase(),
 		];
 
 		if (e.aliases) {

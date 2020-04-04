@@ -16,7 +16,7 @@ import "./EmployerDetailsHeader.scss";
 interface Props extends RouteProps {
 	employer: EmployerRecord;
 
-	onClickEmployerName: () => void;
+	onClickEmployerName?: () => void;
 
 	useShortText?: boolean;
 }
@@ -106,15 +106,16 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 		}
 	}
 
+	const employerNameComponent: JSX.Element =
+		onClickEmployerName
+			? <a onClick={onClickEmployerName} title={employer.name !== displayName ? employer.name : ""}>{displayName}</a>
+			: <>{displayName}</>;
+
 	return (
 		<>
 			<div className={`EmployerDetailsHeader__Title ${useShortText ? "" : "EmployerDetailsHeader__Title--noShort"}`}>
 				{employer.image && <img className="EmployerDetailsHeader__Icon" src={`/images/employers/${employer.image}`} />}
-				<h2>
-					<a href="#" onClick={onClickEmployerName} title={employer.name !== displayName ? employer.name : ""}>
-						{displayName}
-					</a>
-				</h2>
+				<h2>{employerNameComponent}</h2>
 				<span
 					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${rating}`}
 					title={strings.detailDescriptions.rating}

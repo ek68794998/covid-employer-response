@@ -36,6 +36,8 @@ describe("EmployerListSearchFilter", () => {
 		[ { text: "Foo" }, { name: "FOO" }, true ],
 		[ { text: "aFOO" }, { name: "FOO" }, false ],
 		[ { text: "FOOa" }, { name: "FOO" }, false ],
+		[ { text: "fo" }, { ticker: "FOO" }, true ],
+		[ { text: "fooo" }, { ticker: "FOO" }, false ],
 		[ { text: "fO" }, { aliases: [ "bar", "foo" ] }, true ],
 		[ { text: "Foooo" }, { aliases: [ "bar", "foo" ] }, false ],
 		[ { text: "BA" }, { aliases: [ "bar", "foo" ] }, true ],
