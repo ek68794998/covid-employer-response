@@ -1,3 +1,4 @@
+@import "../BurgerMenu.scss";
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
@@ -17,7 +18,7 @@ header, footer {
 }
 
 header {
-	background: #212121;
+	background: $header;
 	color: $background;
 
 	div#brand {
@@ -62,6 +63,20 @@ header {
 			padding-bottom: 2px;
 		}
 	}
+
+	.HeaderFooter__OpenHamburgerMenu {
+		background: none;
+		border: none;
+		color: inherit;
+		display: none;
+		outline: none;
+		margin: 0 16px 0 0;
+		padding: 0;
+
+		i {
+			font-size: 36px;
+		}
+	}
 }
 
 footer {
@@ -91,6 +106,14 @@ footer {
 
 		div#brand .HeaderMenu__BrandLarge {
 			display: none;
+		}
+
+		.HeaderFooter__OpenHamburgerMenu {
+			display: block;
+		}
+
+		.HeaderMenu__Link {
+			display: none !important;
 		}
 	}
 

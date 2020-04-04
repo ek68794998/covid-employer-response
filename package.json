@@ -5,6 +5,7 @@
   "scripts": {
     "build": "razzle build",
     "debug": "razzle start --inspect --inspect-port=9230",
+    "postinstall": "npm rebuild node-sass",
     "start": "razzle start",
     "start:prod": "node build/server.js",
     "test": "razzle test --env=jsdom",
@@ -16,6 +17,7 @@
     "express": "^4.16.3",
     "prop-types": "^15.7.2",
     "react": "^16.3.2",
+    "react-burger-menu": "^2.6.13",
     "react-dom": "^16.3.2",
     "react-helmet": "^6.0.0-beta.2",
     "react-helmet-async": "^1.0.4",
@@ -35,6 +37,7 @@
     "@types/jest": "^25.1.4",
     "@types/node": "^12.12.31",
     "@types/react": "^16.3.13",
+    "@types/react-burger-menu": "^2.6.1",
     "@types/react-dom": "^16.0.5",
     "@types/react-helmet": "^5.0.15",
     "@types/react-modal": "^3.10.5",

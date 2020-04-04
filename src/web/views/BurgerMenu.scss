@@ -1,0 +1,22 @@
+@import "./Colors.scss";
+@import "./Dimensions.scss";
+
+.bm-menu {
+	background: $header;
+
+	.bm-item-list {
+		display: flex;
+		flex-direction: column;
+		font: 400 24px 'Baloo Chettan 2';
+
+		a {
+			color: $background;
+			padding: 12px 24px;
+			opacity: 0.7;
+
+			&:hover {
+				opacity: 1.0;
+			}
+		}
+	}
+}
