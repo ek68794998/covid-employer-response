@@ -89,7 +89,7 @@ $padding-sides: 16px;
 	}
 }
 
-@media (max-width: $body-narrow-width) {
+@media (max-width: $body-reduced-width) {
 	.EmployerDetailsHeader__Title {
 		flex-wrap: wrap;
 	}

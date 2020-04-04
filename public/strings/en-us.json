@@ -24,7 +24,6 @@
   "home": "Employers",
   "loading": "Loading...",
   "noResults": "No results.",
-  "officialWebsite": "Official website",
   "ratingLabels": {
     "poor": "Poor",
     "fair": "Fair",
@@ -32,6 +31,5 @@
   },
   "readMore": "Read more",
   "search": "Search",
-  "submit": "Submit",
-  "wikipedia": "Wikipedia page"
+  "submit": "Submit"
 }
