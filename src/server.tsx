@@ -51,7 +51,11 @@ const server: express.Application = express()
 		const preloadedState: Partial<AppState> = {};
 
 		const localeCode: string = request.languageCode.toLowerCase();
-		const localeData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
+
+		const defaultLocaleData: LocalizedStrings = await localeLoader.loadAsync(DEFAULT_LANGUAGE);
+		const currentLocaleData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
+
+		const localeData: LocalizedStrings = { ...defaultLocaleData, ...currentLocaleData };
 
 		const store: Store<AppState, AnyAction> = configureStore(preloadedState);
 		store.dispatch(getLocalizedStringsSuccess(localeData));
@@ -62,13 +66,9 @@ const server: express.Application = express()
 		const completeUrl: string =
 			`${baseUrl}${req.originalUrl}`;
 
-		console.log(localizationMiddleware.languages);
-
 		const alternateLocaleMetaTags: string[] =
 			Object.keys(localizationMiddleware.languages)
 				.map((key: string) => `<meta property="og:locale:alternate" content="${key}" />`);
-
-		console.log(alternateLocaleMetaTags);
 
 		const helmetContext: {} = {};
 
