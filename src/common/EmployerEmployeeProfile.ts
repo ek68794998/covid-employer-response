@@ -31,7 +31,7 @@ export class EmployerEmployeeProfile {
 					throw new Error("Invalid value for approximate string conversion.");
 				}
 
-				employeeCountString = `~${upperBound.toString()}`;
+				employeeCountString = `~${upperBound.toString(useShortText)}`;
 				break;
 
 			case "range":
@@ -42,12 +42,18 @@ export class EmployerEmployeeProfile {
 
 					employeeCountString =
 						(lowerBound.magnitude && lowerBound.magnitude === upperBound.magnitude)
-							? `${lowerBound.value} ${String.fromCharCode(0x2013)} ${upperBound.toString()}`
-							: `${lowerBound.toString()} ${String.fromCharCode(0x2013)} ${upperBound.toString()}`;
+							? `${lowerBound.value} ${String.fromCharCode(0x2013)} ${upperBound.toString(useShortText)}`
+							: `${lowerBound.toString(useShortText)} ${String.fromCharCode(0x2013)} ${upperBound.toString(useShortText)}`;
 				} else if (lowerBound) {
-					employeeCountString = useShortText ? `${String.fromCharCode(0x2265)} ${lowerBound.toString()}` : `More than ${lowerBound.toString()}`;
+					employeeCountString =
+						useShortText
+							? `${String.fromCharCode(0x2265)} ${lowerBound.toString(useShortText)}`
+							: `More than ${lowerBound.toString(useShortText)}`;
 				} else if (upperBound) {
-					employeeCountString = useShortText ? `${String.fromCharCode(0x2264)} ${upperBound.toString()}` : `Less than ${upperBound.toString()}`;
+					employeeCountString =
+						useShortText
+							? `${String.fromCharCode(0x2264)} ${upperBound.toString(useShortText)}`
+							: `Less than ${upperBound.toString(useShortText)}`;
 				} else {
 					throw new Error("Invalid lower and upper bounds specified for range string.");
 				}
@@ -60,7 +66,7 @@ export class EmployerEmployeeProfile {
 					throw new Error("Invalid value for default string conversion.");
 				}
 
-				employeeCountString = upperBound.toString();
+				employeeCountString = upperBound.toString(useShortText);
 				break;
 		}
 

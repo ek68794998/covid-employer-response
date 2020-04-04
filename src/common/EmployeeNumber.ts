@@ -18,16 +18,16 @@ export class EmployeeNumber {
 				: value;
 	}
 
-	public get magnitudeLabel(): string | null {
+	public getMagnitudeLabel(useShortText: boolean = false): string | null {
 		switch (this.magnitude) {
-			case 6: return "million";
-			case 9: return "billion";
+			case 6: return useShortText ? "m" : "million";
+			case 9: return useShortText ? "b" : "billion";
 			default: return null;
 		}
 	}
 
-	public toString(): string {
-		return this.magnitude ? `${this.value} ${this.magnitudeLabel}` : this.value.toLocaleString();
+	public toString(useShortText: boolean = false): string {
+		return this.magnitude ? `${this.value} ${this.getMagnitudeLabel(useShortText)}` : this.value.toLocaleString();
 	}
 
 	private static getEmployeeMagnitude(value: number): EmployeeMagnitude {
