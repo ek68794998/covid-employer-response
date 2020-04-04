@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { RouteProps } from "react-router-dom";
 
-import "./EmployerListSearchFiltersSelector.scss";
-
 interface Props extends RouteProps {
 	label: string;
 

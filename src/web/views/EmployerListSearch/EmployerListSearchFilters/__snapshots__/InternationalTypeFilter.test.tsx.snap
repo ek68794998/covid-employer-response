@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InternationalTypeFilter /> renders without exploding 1`] = `
+<div
+  className="EmployerListSearchFilters__Container"
+>
+  <button
+    className="EmployerListSearchFilters__Button"
+    onClick={[Function]}
+  >
+    locationDefault string
+  </button>
+</div>
+`;

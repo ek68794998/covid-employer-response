@@ -4,14 +4,12 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { AppState } from "../../../state/AppState";
+import configureStore from "../../../state/configureStore";
 
-import { AppState } from "../../state/AppState";
-import configureStore from "../../state/configureStore";
+import InternationalTypeFilter from "./InternationalTypeFilter";
 
-import EmployerListSearchFiltersPopup from "./EmployerListSearchFiltersPopup";
-
-describe("<EmployerListSearchFiltersPopup />", () => {
+describe("<InternationalTypeFilter />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
@@ -27,7 +25,7 @@ describe("<EmployerListSearchFiltersPopup />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListSearchFiltersPopup childProps={[]} multiselect={false} onClose={(): void => { /* Do nothing. */ }} />
+						<InternationalTypeFilter onUpdateFilterValue={(): void => { /* Do nothing. */ }} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

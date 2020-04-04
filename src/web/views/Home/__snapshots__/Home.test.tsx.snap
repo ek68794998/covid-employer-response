@@ -10,15 +10,29 @@ exports[`<Home /> renders without exploding 1`] = `
     <div
       className="EmployerListSearch__Container"
     >
-      <i
-        className="material-icons"
+      <div
+        className="EmployerListSearch__InputContainer"
       >
-        search
-      </i>
-      <input
-        onInput={[Function]}
-        type="search"
-      />
+        <i
+          className="material-icons"
+        >
+          search
+        </i>
+        <input
+          onInput={[Function]}
+          type="search"
+        />
+        <button
+          className="EmployerListSearch__ExpandFilters"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons"
+          >
+            expand_more
+          </i>
+        </button>
+      </div>
     </div>
   </div>
   <div
