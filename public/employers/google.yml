@@ -1,9 +1,10 @@
 name: Google
 aliases:
   - Alphabet
+ticker: GOOG
 wiki: Google
 image: google.svg
-officialWebsite: https://google.com
+officialWebsite: https://about.google/
 location:
   city: Menlo Park
   state: CA

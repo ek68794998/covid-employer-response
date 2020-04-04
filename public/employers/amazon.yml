@@ -1,7 +1,8 @@
 name: Amazon
+ticker: AMZN
 wiki: Amazon (company)
 image: amazon.svg
-officialWebsite: https://amazon.com
+officialWebsite: https://www.aboutamazon.com/our-company
 location:
   city: Seattle
   state: WA

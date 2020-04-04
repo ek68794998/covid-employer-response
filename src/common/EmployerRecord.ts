@@ -24,6 +24,8 @@ export class EmployerRecord {
 
 	public summary: string = "";
 
+	public ticker?: string;
+
 	public wiki?: string;
 
 	public static getRating(e: EmployerRecord): EmployerRating {

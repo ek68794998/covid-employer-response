@@ -1,7 +1,8 @@
 name: GameStop
+ticker: GME
 wiki: GameStop
 image: gamestop.png
-officialWebsite: https://gamestop.com
+officialWebsite: http://news.gamestop.com/about-gamestop
 location:
   city: Grapevine
   state: TX

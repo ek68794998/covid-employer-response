@@ -1,7 +1,8 @@
 name: Walmart
+ticker: WMT
 wiki: Walmart
 image: walmart.svg
-officialWebsite: http://Walmart.com
+officialWebsite: https://corporate.walmart.com/our-story
 location:
   city: Bentonville
   state: AR

@@ -72,9 +72,12 @@ describe("employer records", () => {
 
 		expect(record.id).toBe("sample");
 		expect(record.name).toBe("Contoso");
+		expect(record.aliases?.[0]).toBe("MyContoso");
+		expect(record.aliases?.[1]).toBe("TheContoso");
 		expect(record.shortName).toBe("Co.");
+		expect(record.ticker).toBe("CTS");
 		expect(record.wiki).toBe("Example");
-		expect(record.officialWebsite).toBe("http://example.com");
+		expect(record.officialWebsite).toBe("http://example.com/about");
 		expect(record.employeesBefore?.lowerBound).toBe(200);
 		expect(record.employeesBefore?.type).toBe("range");
 		expect(record.employeesBefore?.upperBound).toBe(500);

@@ -1,8 +1,9 @@
 name: Domino's Pizza
 shortName: Domino's
+ticker: DPZ
 wiki: Domino's Pizza
 image: dominos.svg
-officialWebsite: https://www.dominos.com/
+officialWebsite: https://biz.dominos.com/web/public/about
 location:
   city: Ann Arbor
   state: MI

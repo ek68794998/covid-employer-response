@@ -1,7 +1,8 @@
 name: McDonald's
+ticker: MCD
 wiki: McDonald's
 image: mcdonalds.svg
-officialWebsite: https://mcdonalds.com
+officialWebsite: https://www.mcdonalds.com/us/en-us/about-us.html
 location:
   city: Chicago
   state: IL
