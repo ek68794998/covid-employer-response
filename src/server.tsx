@@ -62,9 +62,13 @@ const server: express.Application = express()
 		const completeUrl: string =
 			`${baseUrl}${req.originalUrl}`;
 
+		console.log(localizationMiddleware.languages);
+
 		const alternateLocaleMetaTags: string[] =
 			Object.keys(localizationMiddleware.languages)
 				.map((key: string) => `<meta property="og:locale:alternate" content="${key}" />`);
+
+		console.log(alternateLocaleMetaTags);
 
 		const helmetContext: {} = {};
 
@@ -96,7 +100,7 @@ const server: express.Application = express()
 					<meta property="og:type" content="website" />
 					<meta property="og:description" content="A collaborative, open-source project designed to track the responses of employers to the coronavirus (COVID-19) pandemic of 2019-2020." />
 					<meta property="og:locale" content="${localeCode}" />
-					${alternateLocaleMetaTags}
+					${alternateLocaleMetaTags.join("")}
 					<meta property="og:site_name" content="${localeData.appTitle}" />
 					<meta property="og:determiner" content="the" />
 					${
