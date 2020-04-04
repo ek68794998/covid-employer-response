@@ -10,13 +10,15 @@ export class EmployerLocation {
 	public wiki?: string;
 
 	public static toString(location: EmployerLocation, useShortText: boolean = false): string {
-		const cityAsString: string =
-			useShortText
-				? location.city
-				: location.state
-					? `${location.city}, ${location.state}, ${location.country}`
-					: `${location.city}, ${location.country}`;
+		if (useShortText) {
+			return `${location.city}, ${location.country}`;
+		}
 
-		return location.international ? `${cityAsString} (Int'l)` : cityAsString;
+		const locationAsString: string =
+			location.state
+				? `${location.city}, ${location.state}, ${location.country}`
+				: `${location.city}, ${location.country}`;
+
+		return location.international ? `${locationAsString} (Multinational)` : locationAsString;
 	}
 }
