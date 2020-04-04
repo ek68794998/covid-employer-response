@@ -1,0 +1,67 @@
+name: Tesla Motors, Inc.
+aliases:
+  - Tesla, Inc.
+shortName: Tesla
+ticker: TSLA
+wiki: Tesla, Inc.
+image: tesla.svg
+officialWebsite: https://www.tesla.com/about
+location:
+  city: Palo Alto
+  state: CA
+  country: USA
+  international: true
+  wiki: Palo Alto, California
+employeesBefore:
+  type: exactly
+  upperBound: 48016
+  year: 2019
+summary: Tesla has made great promises to assist with COVID-19 in the form of ventilators, but thus far has manufactured none and only distributed equipment incapable of combating COVID-19. Additionally, they have gone against government orders to shut down their Fremont vehicle production factory and performed massive layoffs.
+citations:
+  - summary: Tesla was ordered to shut down its Fremont factory on March 18, but continued operating through March 23. However, some employers were forced to continue working after this date, and Tesla later argued (incorrectly) that it was "national critical infrastructure" and continued to operate.
+    positivity: -2
+    type: publication
+    sources:
+      - name: Tesla Investors
+        link: https://ir.tesla.com/news-releases/news-release-details/tesla-operational-update
+        date: 2020-03-19T12:00:00-07:00 # Estimate based on publication date of 03/19/2020.
+      - name: CNET Road Show
+        link: https://www.cnet.com/roadshow/news/tesla-fremont-factory-shut-musk-coronavirus-covid19-pandemic/
+        date: 2020-03-24T10:54:00-07:00
+      - name: "The Verge - Workers continue after factory shutdown"
+        link: https://www.theverge.com/2020/3/26/21195551/tesla-fremont-factory-workers-coronavirus-covid-19-shutdown-shelter-place
+        date: 2020-03-26T17:03:00-04:00
+      - name: "The Verge - Factory a 'public health risk'"
+        link: https://www.theverge.com/2020/3/31/21201651/tesla-fremont-factory-covid-19-coronavirus-shutdown-shelter-in-place
+        date: 2020-03-31T17:00:00-04:00
+  - summary: Tesla had two employees test positive for COVID-19 and disclosed this only in an internal email. It did not indicate at which locations the employees worked, and brushed off the infections as having "a low likelihood of transmission."
+    positivity: -1
+    type: publication
+    sources:
+      - name: TechCrunch
+        link: https://techcrunch.com/2020/03/26/tesla-email-reveals-two-employees-have-tested-positive-for-covid-19/
+        date: 2020-03-26T10:52:00-07:00
+  - summary: Tesla has announced a cut of 75% to its workforce in its Gigafactory in Storey County, Nevada, with no mention of severance pay or furloughs.
+    positivity: -1
+    type: publication
+    sources:
+      - name: CNBC
+        link: https://www.cnbc.com/2020/03/27/tesla-to-reportedly-cut-on-site-staff-at-nevada-factory-by-75percent.html
+        date: 2020-03-27T13:26:00-04:00
+  - summary: Tesla purchased over 1,200 ventilators to distribute at no cost to hospitals, on the sole condition that they be used for the immediate pandemic (rather than stored). However, the ventilators were of an incorrect type to handle COVID-19 patients.
+    positivity: 0
+    type: publication
+    sources:
+      - name: Business Insider
+        link: https://www.businessinsider.com/tesla-donating-free-ventilators-coronavirus-hospitals-worldwide-2020-4
+        date: 2020-04-01T14:24:34Z
+      - name: Forbes
+        link: https://www.forbes.com/sites/billroberson/2020/04/04/health-officials-say-ventilators-donated-by-tesla-are-wrong-type-and-not-powerful-enough/#26d87acb6264
+        date: 2020-04-04T15:00:00-04:00
+  - summary: Elon Musk has announced a repurposing of Tesla's solar-panel factory in New York to produce ventilators to combat COVID-19. However, this plan has yet to come to fruition as of April 4.
+    positivity: 0
+    type: publication
+    sources:
+      - name: CNET Road Show
+        link: https://www.cnet.com/roadshow/news/elon-musk-says-teslas-new-york-factory-will-make-ventilators-as-soon-as-humanly-possible-medtronic/
+        date: 2020-03-30T10:55:00-07:00
