@@ -10,6 +10,14 @@ import configureStore from "../../state/configureStore";
 import EmployerListSearchFiltersSelector from "./EmployerListSearchFiltersSelector";
 
 describe("<EmployerListSearchFiltersSelector />", () => {
+	beforeEach(() => {
+		jest.spyOn(global.Math, "random").mockReturnValue(0.123456789);
+	});
+
+	afterEach(() => {
+		(global.Math.random as any).mockRestore();
+	});
+
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 

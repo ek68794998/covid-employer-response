@@ -15,7 +15,7 @@ main#home {
 	}
 
 	div.Home__Filters {
-		box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 8px $box-shadow-color;
 		background: $background;
 		padding: $division-padding;
 		position: sticky;
@@ -42,7 +42,7 @@ button.Home__BackToTop {
 	border: 0;
 	border-radius: ($top-button-size / 2);
 	bottom: ($page-padding / 2);
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 6px $box-shadow-color;
 	cursor: pointer;
 	position: fixed;
 	height: $top-button-size;

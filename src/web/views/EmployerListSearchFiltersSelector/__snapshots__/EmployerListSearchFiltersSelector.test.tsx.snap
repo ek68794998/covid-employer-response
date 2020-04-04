@@ -3,12 +3,12 @@
 exports[`<EmployerListSearchFiltersSelector /> renders without exploding 1`] = `
 <span>
   <input
-    id="EmployerListSearchFiltersSelector-30646c23"
+    id="EmployerListSearchFiltersSelector-3739635f"
     onChange={[Function]}
     type="radio"
   />
   <label
-    htmlFor="EmployerListSearchFiltersSelector-30646c23"
+    htmlFor="EmployerListSearchFiltersSelector-3739635f"
   >
     foo
   </label>

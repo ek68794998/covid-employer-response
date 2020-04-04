@@ -25,7 +25,7 @@ button.EmployerList__CloseModal {
 	background: $background;
 	border: 0;
 	border-radius: ($close-button-size / 2);
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 2px 6px $box-shadow-color;
 	cursor: pointer;
 	position: fixed;
 	height: $close-button-size;

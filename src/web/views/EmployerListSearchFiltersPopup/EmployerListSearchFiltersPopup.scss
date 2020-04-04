@@ -3,7 +3,7 @@
 .EmployerListSearchFiltersPopup__Container {
 	background: $background;
 	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 5px $box-shadow-color;
 	display: flex;
 	flex-direction: column;
 	margin-top: 4px;

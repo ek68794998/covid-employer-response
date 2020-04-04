@@ -3,7 +3,7 @@ import { slide as HamburgerMenu, State as HamburgerMenuState } from "react-burge
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import { getIsProd } from "../../state/ducks/environment/selectors";
+import { getIsProd, getIsTest } from "../../state/ducks/environment/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import { ProjectIssueSubmissionUrl } from "../../../common/constants/UrlConstants";
@@ -14,6 +14,7 @@ import "./HeaderFooter.scss";
 const HeaderMenu: React.FC = (): React.ReactElement => {
 	const [ isHamburgerMenuOpen, setIsHamburgerMenuOpen ] = useState(false);
 
+	const isTest: boolean = useSelector(getIsTest);
 	const isProd: boolean = useSelector(getIsProd);
 	const strings: LocalizedStrings = useSelector(getStrings);
 
@@ -43,11 +44,18 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		</>
 	);
 
+	const hamburgerMenu: JSX.Element | null =
+		isTest
+			? null
+			: (
+				<HamburgerMenu customBurgerIcon={false} isOpen={isHamburgerMenuOpen} onStateChange={onHamburgerMenuStateChanged}>
+					{navLinks}
+				</HamburgerMenu>
+			);
+
 	return (
 		<>
-			<HamburgerMenu customBurgerIcon={false} isOpen={isHamburgerMenuOpen} onStateChange={onHamburgerMenuStateChanged}>
-				{navLinks}
-			</HamburgerMenu>
+			{hamburgerMenu}
 			<header>
 				<div className="HeaderFooter__Container">
 					<button className="HeaderFooter__OpenHamburgerMenu" onClick={openHamburgerMenu}>
