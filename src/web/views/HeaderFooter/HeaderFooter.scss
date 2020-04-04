@@ -57,6 +57,7 @@ header {
 		height: 100%;
 		margin-left: 16px;
 		padding: 4px 8px 6px;
+		white-space: nowrap;
 
 		&.active {
 			border-bottom: 4px solid $link-normal;
