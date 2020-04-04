@@ -2,10 +2,10 @@
 
 exports[`<InternationalTypeFilterControl /> renders without exploding 1`] = `
 <div
-  className="EmployerListSearchFilters__Container"
+  className="EmployerListFilterControl__Container"
 >
   <button
-    className="EmployerListSearchFilters__Button"
+    className="EmployerListFilterControl__Button"
     onClick={[Function]}
   >
     <div>

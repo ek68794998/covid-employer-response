@@ -31,21 +31,17 @@ const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
 
 		useEffect(
 			(): void => {
-				let internationalType: boolean | undefined;
 				let newDisplayText: string;
 
 				if (showNational && !showInternational) {
 					newDisplayText = strings.filters.locationNational;
-					internationalType = false;
 				} else if (showInternational && !showNational) {
 					newDisplayText = strings.filters.locationInternational;
-					internationalType = true;
 				} else {
 					newDisplayText = strings.filters.locationDefault;
-					internationalType = undefined;
 				}
 
-				onUpdateFilterValue({ internationalType });
+				onUpdateFilterValue({ international: showInternational, national: showNational });
 				setDisplayText(newDisplayText);
 			},
 			[ showNational, showInternational ]);
@@ -74,14 +70,14 @@ const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
 
 		const isActive: boolean = showNational !== showInternational;
 
-		const buttonClasses: string[] = [ "EmployerListSearchFilters__Button" ];
+		const buttonClasses: string[] = [ "EmployerListFilterControl__Button" ];
 
 		if (isActive) {
-			buttonClasses.push("EmployerListSearchFilters__Button--Active");
+			buttonClasses.push("EmployerListFilterControl__Button--Active");
 		}
 
 		return (
-			<div className="EmployerListSearchFilters__Container">
+			<div className="EmployerListFilterControl__Container">
 				<button className={buttonClasses.join(" ")} onClick={(): void => setIsPopupOpen(!isPopupOpen)}>
 					{isActive && <i className="material-icons" onClick={clear}>clear</i>}
 					<div>{displayText}</div>

@@ -3,11 +3,11 @@
 
 $filter-button-height: 32px;
 
-.EmployerListSearchFilters__Container {
+.EmployerListFilterControl__Container {
 	position: relative;
 }
 
-.EmployerListSearchFilters__Button {
+.EmployerListFilterControl__Button {
 	background: $background;
 	border: 1px solid $outline-color;
 	border-radius: ($filter-button-height / 2);
@@ -19,7 +19,7 @@ $filter-button-height: 32px;
 	white-space: nowrap;
 	width: 120px;
 
-	&.EmployerListSearchFilters__Button--Active {
+	&.EmployerListFilterControl__Button--Active {
 		background: $link-background;
 		border-color: transparent;
 		padding-left: 4px;
@@ -28,7 +28,7 @@ $filter-button-height: 32px;
 			border-radius: 50%;
 			float: left;
 			font-size: 18px;
-			margin: 1px 0;
+			margin: 2px 1px;
 			padding: 2px;
 
 			&:hover {
