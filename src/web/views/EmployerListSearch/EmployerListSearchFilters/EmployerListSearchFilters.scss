@@ -1,0 +1,28 @@
+@import "../../Colors.scss";
+@import "../../Dimensions.scss";
+
+$filter-button-height: 32px;
+
+.EmployerListSearchFilters__Container {
+	position: relative;
+}
+
+.EmployerListSearchFilters__Button {
+	background: $background;
+	border: 1px solid $outline-color;
+	border-radius: ($filter-button-height / 2);
+	color: $link-hover;
+	cursor: pointer;
+	height: $filter-button-height;
+	overflow: hidden;
+	outline: none;
+	padding: 0 ($filter-button-height / 3);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 120px;
+
+	&.EmployerListSearchFilters__Button--Active {
+		background: $link-background;
+		border-color: transparent;
+	}
+}

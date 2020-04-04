@@ -21,6 +21,11 @@
     "ratingCounts": "Aggregate counts of the good and bad actions an employer has taken.",
     "wikipedia": "The employer's page on the English Wikipedia."
   },
+  "filters": {
+    "locationDefault": "Location",
+    "locationNational": "National",
+    "locationInternational": "International"
+  },
   "home": "Employers",
   "loading": "Loading...",
   "noResults": "No results.",

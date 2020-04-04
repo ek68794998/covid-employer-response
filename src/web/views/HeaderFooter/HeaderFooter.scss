@@ -20,6 +20,8 @@ header, footer {
 header {
 	background: $header;
 	color: $background;
+	position: relative;
+	z-index: 12;
 
 	div#brand {
 		align-self: center;
