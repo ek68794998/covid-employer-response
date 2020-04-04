@@ -31,7 +31,12 @@ export class EmployerEmployeeProfile {
 					throw new Error("Invalid value for approximate string conversion.");
 				}
 
-				employeeCountString = `~${upperBound.toString(useShortText)}`;
+				employeeCountString = upperBound.toString(useShortText);
+
+				if (!upperBound.getMagnitudeLabel()) {
+					employeeCountString = `~${employeeCountString}`;
+				}
+
 				break;
 
 			case "range":
@@ -42,7 +47,7 @@ export class EmployerEmployeeProfile {
 
 					employeeCountString =
 						(lowerBound.magnitude && lowerBound.magnitude === upperBound.magnitude)
-							? `${lowerBound.value} ${String.fromCharCode(0x2013)} ${upperBound.toString(useShortText)}`
+							? `${lowerBound.getAdjustedValue()} ${String.fromCharCode(0x2013)} ${upperBound.toString(useShortText)}`
 							: `${lowerBound.toString(useShortText)} ${String.fromCharCode(0x2013)} ${upperBound.toString(useShortText)}`;
 				} else if (lowerBound) {
 					employeeCountString =
@@ -67,6 +72,7 @@ export class EmployerEmployeeProfile {
 				}
 
 				employeeCountString = upperBound.toString(useShortText);
+
 				break;
 		}
 
