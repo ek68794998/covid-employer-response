@@ -1,7 +1,8 @@
 name: Microsoft
+ticker: MSFT
 wiki: Microsoft
 image: microsoft.svg
-officialWebsite: https://microsoft.com
+officialWebsite: https://www.microsoft.com/en-us/about
 location:
   city: Redmond
   state: WA

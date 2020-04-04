@@ -1,7 +1,8 @@
 name: Starbucks
+ticker: SBUX
 wiki: Starbucks
 image: starbucks.svg
-officialWebsite: https://www.starbucks.com
+officialWebsite: https://www.starbucks.com/about-us/company-information
 location:
   city: Seattle
   state: AR
