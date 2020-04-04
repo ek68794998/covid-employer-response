@@ -8,16 +8,17 @@ div.EmployerPageDetails__Container {
 	a.EmployerActionLinks__Link {
 		opacity: 1.0 !important;
 	}
+
+	.EmployerDetailsHeader__Subtitle {
+		margin-bottom: 6px;
+	}
 }
 
 div.EmployerPageDetails__Body > div {
 	margin-top: $padding-interior;
 
 	&.EmployerPageDetails__Summary {
+		line-height: 180%;
 		margin-top: 6px;
 	}
-}
-
-div.EmployerPageDetails__Summary {
-	line-height: 180%;
 }
