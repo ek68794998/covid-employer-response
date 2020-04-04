@@ -46,7 +46,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				<div className="EmployerListDetails__OverflowScreen" />
 			</div>
 			<div className="EmployerListDetails__Actions">
-				<span className="EmployerListDetails__AggregateRatings">
+				<span className="EmployerListDetails__AggregateRatings" title={strings.detailDescriptions.ratingCounts}>
 					<span className="EmployerListDetails__GoodRatings">
 						<i className="material-icons">add</i>
 						{positives}

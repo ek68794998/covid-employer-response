@@ -18,6 +18,7 @@
     "location": "The city in which the employer is originally based.",
     "officialWebsite": "The employer's official website link.",
     "rating": "The general rating of the employer.",
+    "ratingCounts": "Aggregate counts of the good and bad actions an employer has taken.",
     "wikipedia": "The employer's page on the English Wikipedia."
   },
   "home": "Employers",
