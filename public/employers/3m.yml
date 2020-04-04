@@ -1,0 +1,35 @@
+name: 3M Company
+shortName: 3M
+ticker: MMM
+wiki: 3M
+image: 3m.svg
+officialWebsite: https://www.3m.com/3M/en_US/company-us/about-3m/
+location:
+  city: Maplewood
+  state: MN
+  country: USA
+  international: true
+  wiki: Maplewood, Minnesota
+employeesBefore:
+  type: exactly
+  upperBound: 93516
+  year: 2018
+summary: TODO
+citations:
+  - summary: 3M has shipped 10 million N95 masks from Singapore to countries in Asia to help combat COVID-19. However, the US government ordered 3M to ship those masks to the US instead and they refused, violating the Defense Production Act.
+    positivity: 0
+    type: publication
+    sources:
+      - name: Financial Times (via Mothership)
+        link: https://mothership.sg/2020/04/trump-3m-10-million-masks/
+        date: 2000-04-03T21:36:00-07:00
+      - name: Vox
+        link: https://www.vox.com/2020/4/3/21206779/coronavirus-update-trump-p-act-comfort-face-coverings
+        date: 2020-04-03T17:50:00Z
+  - summary: TODO
+    positivity: 0
+    type: publication
+    sources:
+      - name: TODO
+        link: TODO
+        date: 2000-00-00T00:00:00Z
