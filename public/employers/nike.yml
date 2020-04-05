@@ -14,7 +14,7 @@ employeesBefore:
   type: exactly
   upperBound: 73100
   year: 2018
-summary: TODO
+summary: Nike has implemented work-from-home policies for corporate employees, as well as closed down outlet stores internationally, while continuing to pay workers at those locations.
 citations:
   - summary: Nike has closed all stores in North America, Western Europe, Australia, and New Zealand starting on March 16. They expected to reopen these stores on March 27, but have extended this indefinitely due to the ongoing crisis. Workers are being paid in full during the closures.
     positivity: 2
