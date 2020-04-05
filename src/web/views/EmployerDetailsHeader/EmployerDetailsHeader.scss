@@ -28,6 +28,9 @@ $padding-interior: 12px;
 	h2 {
 		font-weight: 400;
 		margin: 0 4px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 
 		a {
 			color: inherit;
@@ -50,6 +53,7 @@ $padding-interior: 12px;
 		font-size: 18px;
 		font-weight: 600;
 		height: 32px;
+		margin-left: $padding-interior;
 		padding: 3px 12px 13px 12px;
 
 		&.EmployerDetailsHeader__Rating--good {

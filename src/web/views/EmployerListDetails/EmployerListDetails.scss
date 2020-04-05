@@ -32,6 +32,14 @@ $padding-sides: 16px;
 			opacity: 1.0;
 		}
 	}
+
+	.EmployerDetailsHeader__Title h2 {
+		flex: 1;
+	}
+
+	.EmployerDetailsHeader__TitleGap {
+		display: none;
+	}
 }
 
 .EmployerListDetails__Summary {

@@ -1,51 +1,47 @@
-# This is a sample YAML file representing a fake employer.
-# It can be used as a template to create others.
-# This file will not be shown in the UI if named 'sample.yml'.
-
-name: Contoso # The official name of the company.
-aliases: # An optional list of aliases for the company, if they have changed names or have a parent company.
+name: Contoso
+aliases:
   - MyContoso
   - TheContoso
-shortName: Co. # An optional shortened version of the company's name.
-ticker: CTS # The stock ticker symbol for the company, if they are publicly traded.
-wiki: Example # The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
-image: sample.svg # An optional name of a logo, in SVG format, in the 'public/images/employers' directory.
-officialWebsite: http://example.com/about # An official company webpage describing the company and its corporate mission, culture, and so on.
-location: # Where the company is originally based.
+shortName: Co.
+ticker: CTS
+wiki: Example
+image: sample.svg
+officialWebsite: http://example.com/about
+location:
   city: Seattle
   state: WA
   country: us
-  international: false # If the company has grown internationally, this should be set to true.
-  wiki: Seattle # The subpath for the location's English Wikipedia page, if any.
-employeesBefore: # The number of company employees prior to 2020.
-  lowerBound: 200 # The lower bound of the employee count. Used only if specifying a range.
-  type: range # 'range', 'approximately', or 'exactly'.
-  upperBound: 500 # The upper bound of the employee count, or the true number if not specifying a range.
-  year: 2019 # The year in which the measure was reported.
-  yearQuarter: Q1 # The optional quarter (Q1, Q2, ...) of the calendar year in which the measure was reported.
-summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home. # A summary about the company. Should be 100-350 characters.
+  international: false
+  wiki: Seattle
+employeesBefore:
+  lowerBound: 200
+  type: range
+  upperBound: 500
+  year: 2019
+  yearQuarter: Q1
+summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.
 citations:
   - summary: Business does not meet "essential" qualifications but requested to be classified as essential.
-    positivity: 0 # A value from -2 to +2 that indicates how positive the news is. -2 would be severely negative; 0 would be neutral; +2 would be incredibly positive.
-    type: statement # Indicates that the **original** fact source is a published statement from an employee, whether they are a current, former, or anonymous source.
+    positivity: 0
+    type: statement
     sources:
       - name: K5 News
         link: http://example.com/king5/1.html
-        date: 2020-03-25T08:42:19Z
+        date: 2000-01-01T01:00:00Z
   - summary: Employees who requested paid time off were rejected.
     positivity: -1
-    type: publication # Indicates that the **original** fact source is an open publication such as a PR statement, company blog, leaked document, or government report.
+    type: publication
     sources:
       - name: New York Times
         link: http://example.com/nyt/1.html
-        date: 2020-03-20T11:29:19Z
+        date: 2000-01-01T02:00:00Z
       - name: CNN
         link: http://example.com/cnn/2.html
-        date: 2020-03-20T21:42:11Z
+        date: 2000-01-01T03:00:00Z
   - summary: Sick employee was reported in workspace and was not sent home.
     positivity: -1
-    type: hearsay # Indicates that the **original** fact source is word of mouth, a rumor, or an unconfirmed (or impossible-to-confirm) statement.
+    type: hearsay
     sources:
       - name: "Twitter: John Doe"
         link: http://twitter.com/not-a-real-twitter-acct/13814781
-        date: 2020-03-16T20:14:14Z
+        date: 2000-01-01T04:00:00Z
