@@ -44,6 +44,12 @@ $padding-interior: 12px;
 			background: $indicator-negative;
 		}
 	}
+
+	.EmployerDetailsHeader__Ticker {
+		color: transparentize($color: #1b5e20, $amount: 0.2);
+		font-size: 75%;
+		margin-left: 8px;
+	}
 }
 
 .EmployerDetailsHeader__RatingIcon {

@@ -31,7 +31,7 @@ describe("EmployerLocation", () => {
 	])(
 		"toString properly generates based on EmployerLocation fields (%#)",
 		(l: EmployerLocation, short: boolean, expected: string) => {
-			expect(EmployerLocation.toString(l, short)).toBe(expected);
+			expect(EmployerLocation.toString(l, {}, short)).toBe(expected);
 		},
 	);
 });
