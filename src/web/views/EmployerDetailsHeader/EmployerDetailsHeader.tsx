@@ -91,8 +91,13 @@ const getLocationWikipediaComponent =
 		}
 
 		return (
-			<a href={locationWikipediaUrl} target="_blank" title={strings.detailDescriptions.location}>
-				{materialIcon("place")}
+			<a
+				className="EmployerDetailsHeader__Location"
+				href={locationWikipediaUrl}
+				target="_blank"
+				title={strings.detailDescriptions.location}
+			>
+				<img src={`/images/flags/${employer.location.country}.svg`} />
 				{locationString}
 			</a>
 		);
@@ -177,8 +182,8 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 				</span>
 			</div>
 			<div className="EmployerDetailsHeader__Subtitle">
-				{getAliasesComponent(employer, strings, useShortText || false)}
 				{getLocationWikipediaComponent(employer, strings, useShortText || false)}
+				{getAliasesComponent(employer, strings, useShortText || false)}
 				{getEmployeeCountComponent(employer, strings, useShortText || false)}
 				<span className="EmployerDetailsHeader__AggregateRatings" title={strings.detailDescriptions.ratingCounts}>
 					<span className="EmployerDetailsHeader__GoodRatings">
