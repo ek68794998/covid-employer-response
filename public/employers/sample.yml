@@ -27,21 +27,21 @@ citations:
     sources:
       - name: K5 News
         link: http://example.com/king5/1.html
-        date: 2000-00-00T01:00:00Z
+        date: 2000-01-01T01:00:00Z
   - summary: Employees who requested paid time off were rejected.
     positivity: -1
     type: publication
     sources:
       - name: New York Times
         link: http://example.com/nyt/1.html
-        date: 2000-00-00T02:00:00Z
+        date: 2000-01-01T02:00:00Z
       - name: CNN
         link: http://example.com/cnn/2.html
-        date: 2000-00-00T03:00:00Z
+        date: 2000-01-01T03:00:00Z
   - summary: Sick employee was reported in workspace and was not sent home.
     positivity: -1
     type: hearsay
     sources:
       - name: "Twitter: John Doe"
         link: http://twitter.com/not-a-real-twitter-acct/13814781
-        date: 2000-00-00T04:00:00Z
+        date: 2000-01-01T04:00:00Z
