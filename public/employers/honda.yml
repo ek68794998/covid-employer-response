@@ -13,12 +13,22 @@ employeesBefore:
   type: exactly
   upperBound: 215638
   year: 2018
-summary: TODO
+summary: Honda has responded to the crisis by halting production in North America and deep-cleaning its facilities, without detrement to its workers' salaries or benefits.
 citations:
-  - summary: Honda suspended operations at all production plants in North America for six business days starting March 23. During this time, it continued to pay full salary for all 27,600 affected employees.
+  - summary: Honda suspended operations at all production plants in North America for six business days starting March 23. During this time, it continued to pay full salary for all 27,600 affected employees. It would also take advantage of the closures to do a deep cleaning of the closed facilities.
     positivity: 1
     type: publication
     sources:
       - name: Honda Media Newsroom
         link: https://hondanews.com/en-US/releases/release-a16368f082a336a1dd1dc972d0002606-statement-by-honda-regarding-production-adjustments-to-north-american-auto-plants
         date: 2020-03-18T12:29:00Z
+      - name: The Lima News
+        link: https://web.archive.org/web/20200327154311/https://www.limaohio.com/news/403133/covid-19-causes-closures-layoffs-at-lima-area-factories
+        date: 2020-03-19T07:05:54Z
+  - summary: Honda extended its initial production shutdown from 6 business days to 11, with employees returning to work on April 7. It has continued to pay employees during this time.
+    positivity: 1
+    type: publication
+    sources:
+      - name: WVTM 13 News
+        link: https://web.archive.org/web/20200327154431/https://www.wvtm13.com/article/honda-extends-production-suspension-nationwide-in-response-to-coronavirus-outbreak/31942862
+        date: 2020-03-26T21:25:00Z
