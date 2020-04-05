@@ -22,7 +22,7 @@ citations:
     type: publication
     sources:
       - name: CNBC
-        link: https://www.cnbc.com/2020/03/15/these-retailers-are-closing-stores-to-slow-coronavirus-outbreak.html
+        link: https://web.archive.org/web/20200404052428/https://www.cnbc.com/2020/03/15/these-retailers-are-closing-stores-to-slow-coronavirus-outbreak.html
         date: 2020-03-15T15:20:22Z
       - name: TheStreet
         link: https://www.thestreet.com/investing/under-armour-layoffs-store-closings-restructuring

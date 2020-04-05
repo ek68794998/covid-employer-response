@@ -21,7 +21,7 @@ citations:
     type: publication
     sources:
       - name: CNBC
-        link: https://www.cnbc.com/2020/03/15/these-retailers-are-closing-stores-to-slow-coronavirus-outbreak.html
+        link: https://web.archive.org/web/20200404052428/https://www.cnbc.com/2020/03/15/these-retailers-are-closing-stores-to-slow-coronavirus-outbreak.html
         date: 2020-03-15T15:20:22Z
       - name: Yahoo! Finance
         link: https://finance.yahoo.com/news/lululemon-extends-store-closure-rising-141802535.html
@@ -31,5 +31,5 @@ citations:
     type: publication
     sources:
       - name: CNBC
-        link: https://www.cnbc.com/2020/03/15/nike-is-closing-all-of-its-stores-in-the-us-because-of-coronavirus.html
+        link: https://web.archive.org/web/20200402202324/https://www.cnbc.com/2020/03/15/nike-is-closing-all-of-its-stores-in-the-us-because-of-coronavirus.html
         date: 2020-03-15T11:06:30Z
