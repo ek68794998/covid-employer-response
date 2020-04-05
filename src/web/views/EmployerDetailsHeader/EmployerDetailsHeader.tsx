@@ -11,6 +11,8 @@ import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import EmployerActionLinks from "../EmployerActionLinks/EmployerActionLinks";
+
 import "./EmployerDetailsHeader.scss";
 
 interface Props extends RouteProps {
@@ -173,6 +175,8 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 					{employerNameComponent}
 					{!useShortText && getTickerComponent(employer, strings)}
 				</h2>
+				{!useShortText && <EmployerActionLinks employer={employer} />}
+				<span className="EmployerDetailsHeader__TitleGap" />
 				<span
 					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${rating}`}
 					title={strings.detailDescriptions.rating}

@@ -27,12 +27,19 @@ $padding-interior: 12px;
 
 	h2 {
 		font-weight: 400;
-		flex: 1;
 		margin: 0 4px;
 
 		a {
 			color: inherit;
 		}
+
+		+ .EmployerActionLinks__Link {
+			margin-left: 12px;
+		}
+	}
+
+	.EmployerDetailsHeader__TitleGap {
+		flex: 1;
 	}
 
 	.EmployerDetailsHeader__Rating {
@@ -55,9 +62,13 @@ $padding-interior: 12px;
 	}
 
 	.EmployerDetailsHeader__Ticker {
-		color: transparentize($color: #1b5e20, $amount: 0.2);
-		font-size: 75%;
+		color: #1b5e20;
 		margin-left: 8px;
+		opacity: 0.8;
+
+		&:hover {
+			opacity: 1.0;
+		}
 	}
 }
 
