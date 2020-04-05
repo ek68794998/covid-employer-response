@@ -37,4 +37,4 @@ The service will be available at [localhost:4419](http://localhost:4419/).
 Please fork this repository and submit your changes through a pull request.
 
 ## License
-See `LICENSE.md` for licensing information.
+See `LICENSE` file for licensing information.

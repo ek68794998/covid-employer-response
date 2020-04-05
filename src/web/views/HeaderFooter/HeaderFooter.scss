@@ -5,13 +5,12 @@
 header, footer {
 	flex: 0;
 	font: 400 24px 'Baloo Chettan 2';
-	height: $header-height;
 	padding: 0 $page-padding;
 	width: 100%;
 
 	.HeaderFooter__Container {
 		display: flex;
-		height: 100%;
+		height: $footer-height;
 		margin: 0 auto;
 		max-width: 1440px;
 	}

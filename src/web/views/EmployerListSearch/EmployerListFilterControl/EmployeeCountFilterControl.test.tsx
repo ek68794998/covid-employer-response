@@ -29,8 +29,8 @@ describe("<EmployeeCountFilterControl />", () => {
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployeeCountFilterControl
-							initialFilter={new EmployerListSearchFilter()}
-							onUpdateFilterValue={(): void => { /* Do nothing. */ }}
+							filter={new EmployerListSearchFilter()}
+							onUpdateFilter={(): void => { /* Do nothing. */ }}
 						/>
 					</BrowserRouter>
 				</Provider>,

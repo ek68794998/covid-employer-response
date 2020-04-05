@@ -6,7 +6,7 @@ officialWebsite: https://www.mcdonalds.com/us/en-us/about-us.html
 location:
   city: Chicago
   state: IL
-  country: USA
+  country: us
   international: true
   wiki: Chicago
 employeesBefore:

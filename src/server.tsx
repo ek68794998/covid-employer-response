@@ -68,7 +68,7 @@ const server: express.Application = express()
 			`${baseUrl}${req.originalUrl}`;
 
 		const alternateLocaleMetaTags: string[] =
-			Object.keys(localizationMiddleware.languages)
+			localizationMiddleware.languages
 				.map((key: string) => `<meta property="og:locale:alternate" content="${key}" />`);
 
 		const helmetContext: {} = {};

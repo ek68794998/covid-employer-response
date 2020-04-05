@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 import { LocalizedStrings } from "../../../../common/LocalizedStrings";
 
 import { getStrings } from "../../../state/ducks/localization/selectors";
 
-import EmployerListSearchFiltersPopup, { SelectorProps } from "../../EmployerListSearchFiltersPopup/EmployerListSearchFiltersPopup";
-
+import { EmployerListSearchFilter } from "../EmployerListSearchFilter";
 import { EmployerListSearchFilterProps } from "../EmployerListSearchFilterProps";
+
+import EmployerListFilterControl, { ChildSelectorProps } from "./EmployerListFilterControl";
 
 import "./EmployerListFilterControl.scss";
 
@@ -15,96 +16,70 @@ const EmployeeCountFilterControl: React.FC<EmployerListSearchFilterProps> =
 	(props: EmployerListSearchFilterProps): React.ReactElement => {
 		const strings: LocalizedStrings = useSelector(getStrings);
 
-		const { initialFilter, onUpdateFilterValue } = props;
+		const { filter, onUpdateFilter } = props;
 
-		const [ showSmall, setShowSmall ] = useState(initialFilter.small);
-		const [ showMedium, setShowMedium ] = useState(initialFilter.medium);
-		const [ showLarge, setShowLarge ] = useState(initialFilter.large);
-		const [ isPopupOpen, setIsPopupOpen ] = useState(false);
-		const [ displayText, setDisplayText ] = useState(strings.filters.employeesDefault);
+		const getDisplayText = (): string => {
+			let newDisplayText: string = "";
 
-		const clear = (e: React.MouseEvent<HTMLElement>): void => {
-			setShowSmall(true);
-			setShowMedium(true);
-			setShowLarge(true);
+			if (!(filter.small && filter.medium && filter.large)) {
+				const displayValues: string[] = [];
 
-			e.stopPropagation();
-		};
-
-		useEffect(
-			(): void => {
-				let newDisplayText: string;
-
-				if (showSmall && showMedium && showLarge) {
-					newDisplayText = strings.filters.employeesDefault;
-				} else {
-					const displayValues: string[] = [];
-
-					if (showSmall) {
-						displayValues.push(strings.filters.employeesSmall);
-					}
-
-					if (showMedium) {
-						displayValues.push(strings.filters.employeesMedium);
-					}
-
-					if (showLarge) {
-						displayValues.push(strings.filters.employeesLarge);
-					}
-
-					newDisplayText = displayValues.join(", ");
+				if (filter.small) {
+					displayValues.push(strings.filters.employeesSmall);
 				}
 
-				onUpdateFilterValue({ small: showSmall, medium: showMedium, large: showLarge });
-				setDisplayText(newDisplayText);
-			},
-			[ showSmall, showMedium, showLarge ]);
+				if (filter.medium) {
+					displayValues.push(strings.filters.employeesMedium);
+				}
 
-		const children: SelectorProps[] = [
+				if (filter.large) {
+					displayValues.push(strings.filters.employeesLarge);
+				}
+
+				newDisplayText = displayValues.join(", ");
+			}
+
+			return newDisplayText || strings.filters.employeesDefault;
+		};
+
+		const onClear = (): void => {
+			filter.small = true;
+			filter.medium = true;
+			filter.large = true;
+
+			onUpdateFilter();
+		};
+
+		const selectorPropsList: ChildSelectorProps[] = [
 			{
-				initialValue: showSmall,
+				initialValue: filter.small,
 				label: strings.filters.employeesSmall,
-				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowSmall(e.target.checked),
+				setValue: (value: boolean): void => onUpdateFilterValue({ small: value }),
 			},
 			{
-				initialValue: showMedium,
+				initialValue: filter.medium,
 				label: strings.filters.employeesMedium,
-				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowMedium(e.target.checked),
+				setValue: (value: boolean): void => onUpdateFilterValue({ medium: value }),
 			},
 			{
-				initialValue: showLarge,
+				initialValue: filter.large,
 				label: strings.filters.employeesLarge,
-				onChange: (e: React.ChangeEvent<HTMLInputElement>): void => setShowLarge(e.target.checked),
+				setValue: (value: boolean): void => onUpdateFilterValue({ large: value }),
 			},
 		];
 
-		const popup: JSX.Element | null =
-			isPopupOpen
-				? (
-					<EmployerListSearchFiltersPopup
-						childProps={children}
-						multiselect={true}
-						onClose={(): void => setIsPopupOpen(false)}
-					/>
-				)
-				: null;
-
-		const isActive: boolean = !(showSmall && showMedium && showLarge);
-
-		const buttonClasses: string[] = [ "EmployerListFilterControl__Button" ];
-
-		if (isActive) {
-			buttonClasses.push("EmployerListFilterControl__Button--Active");
-		}
+		const onUpdateFilterValue = (updates: Partial<EmployerListSearchFilter>): void => {
+			Object.assign(filter, updates);
+			onUpdateFilter();
+		};
 
 		return (
-			<div className="EmployerListFilterControl__Container">
-				<button className={buttonClasses.join(" ")} onClick={(): void => setIsPopupOpen(!isPopupOpen)}>
-					{isActive && <i className="material-icons" onClick={clear}>clear</i>}
-					<div>{displayText}</div>
-				</button>
-				{popup}
-			</div>
+			<EmployerListFilterControl
+				getDisplayText={getDisplayText}
+				isActive={!(filter.small && filter.medium && filter.large)}
+				onClear={onClear}
+				selectorPropsList={selectorPropsList}
+			/>
 		);
 	};
 

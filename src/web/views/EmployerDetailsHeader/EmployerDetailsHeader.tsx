@@ -6,7 +6,7 @@ import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile
 import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
 import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -21,7 +21,39 @@ interface Props extends RouteProps {
 	useShortText?: boolean;
 }
 
-const getEmployerEmployeeCountComponent =
+const getAliasesComponent =
+	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
+		if (!employer.aliases || employer.aliases.length === 0 || useShortText) {
+			return null;
+		}
+
+		let text: JSX.Element;
+
+		const separator: string = ", ";
+		const cutoff: number = 3;
+
+		if (employer.aliases.length > cutoff) {
+			const moreText: string = format(strings.more, { number: employer.aliases.length - cutoff });
+
+			text = (
+				<>
+					{employer.aliases.slice(0, cutoff).join(separator)}&hellip;
+					<span title={employer.aliases.slice(cutoff).join(separator)}> ({moreText})</span>
+				</>
+			);
+		} else {
+			text = <>{employer.aliases.join(separator)}</>;
+		}
+
+		return (
+			<span title={strings.detailDescriptions.aka}>
+				{materialIcon("alternate_email")}
+				{text}
+			</span>
+		);
+	};
+
+const getEmployeeCountComponent =
 	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
 		const employeeCountString: string | null =
 			employer.employeesBefore
@@ -46,7 +78,12 @@ const getLocationWikipediaComponent =
 			return null;
 		}
 
-		const locationString: string = EmployerLocation.toString(employer.location, useShortText);
+		const locationString: string =
+			EmployerLocation.toString(
+				employer.location,
+				useShortText ? strings.countryAbbreviations : strings.countryNames,
+				useShortText);
+
 		const locationWikipediaUrl: string | null = WikipediaHelpers.getWikipediaUrl(employer.location.wiki);
 
 		if (!locationWikipediaUrl) {
@@ -57,6 +94,26 @@ const getLocationWikipediaComponent =
 			<a href={locationWikipediaUrl} target="_blank" title={strings.detailDescriptions.location}>
 				{materialIcon("place")}
 				{locationString}
+			</a>
+		);
+	};
+
+const getTickerComponent =
+	(employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+		if (!employer.ticker) {
+			return null;
+		}
+
+		const tickerUrl: string = `https://finance.yahoo.com/quote/${employer.ticker}`;
+
+		return (
+			<a
+				className="EmployerDetailsHeader__Ticker"
+				href={tickerUrl}
+				target="_blank"
+				title={strings.detailDescriptions.ticker}
+			>
+				(${employer.ticker})
 			</a>
 		);
 	};
@@ -85,15 +142,12 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 			indicatorIcon = "trending_flat";
 	}
 
-	let displayName: string = employer.name;
+	const displayName: string = useShortText && employer.shortName || employer.name;
 
-	if (useShortText) {
-		if (employer.shortName) {
-			displayName = employer.shortName;
-		}
-	} else if (employer.aliases && employer.aliases.length > 0) {
-		displayName = `${displayName} (${employer.aliases.join(", ")})`;
-	}
+	const employerNameComponent: JSX.Element =
+		onClickEmployerName
+			? <a onClick={onClickEmployerName} title={employer.name !== displayName ? employer.name : ""}>{displayName}</a>
+			: <>{displayName}</>;
 
 	let positives: number = 0;
 	let negatives: number = 0;
@@ -106,16 +160,14 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 		}
 	}
 
-	const employerNameComponent: JSX.Element =
-		onClickEmployerName
-			? <a onClick={onClickEmployerName} title={employer.name !== displayName ? employer.name : ""}>{displayName}</a>
-			: <>{displayName}</>;
-
 	return (
 		<>
 			<div className={`EmployerDetailsHeader__Title ${useShortText ? "" : "EmployerDetailsHeader__Title--noShort"}`}>
 				{employer.image && <img className="EmployerDetailsHeader__Icon" src={`/images/employers/${employer.image}`} />}
-				<h2>{employerNameComponent}</h2>
+				<h2>
+					{employerNameComponent}
+					{!useShortText && getTickerComponent(employer, strings)}
+				</h2>
 				<span
 					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${rating}`}
 					title={strings.detailDescriptions.rating}
@@ -125,8 +177,9 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 				</span>
 			</div>
 			<div className="EmployerDetailsHeader__Subtitle">
+				{getAliasesComponent(employer, strings, useShortText || false)}
 				{getLocationWikipediaComponent(employer, strings, useShortText || false)}
-				{getEmployerEmployeeCountComponent(employer, strings, useShortText || false)}
+				{getEmployeeCountComponent(employer, strings, useShortText || false)}
 				<span className="EmployerDetailsHeader__AggregateRatings" title={strings.detailDescriptions.ratingCounts}>
 					<span className="EmployerDetailsHeader__GoodRatings">
 						<i className="material-icons">add</i>

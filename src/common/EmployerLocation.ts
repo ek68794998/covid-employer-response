@@ -9,14 +9,23 @@ export class EmployerLocation {
 
 	public wiki?: string;
 
-	public static toString(location: EmployerLocation, useShortText: boolean = false): string {
-		const cityAsString: string =
-			useShortText
-				? location.city
-				: location.state
-					? `${location.city}, ${location.state}, ${location.country}`
-					: `${location.city}, ${location.country}`;
+	public static toString(
+		location: EmployerLocation,
+		countryCodeMap?: { [key: string]: string },
+		useShortText: boolean = false): string {
 
-		return location.international ? `${cityAsString} (Int'l)` : cityAsString;
+		const country: string =
+			(countryCodeMap && location.country in countryCodeMap) ? countryCodeMap[location.country] : location.country;
+
+		if (useShortText) {
+			return `${location.city}, ${country}`;
+		}
+
+		const locationAsString: string =
+			location.state
+				? `${location.city}, ${location.state}, ${country}`
+				: `${location.city}, ${country}`;
+
+		return location.international ? `${locationAsString} (Multinational)` : locationAsString;
 	}
 }
