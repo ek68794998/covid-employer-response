@@ -8,15 +8,16 @@ $padding-interior: 12px;
 .EmployerDetailsHeader__Icon {
 	border-radius: ($icon-size / 2) ($icon-size / 2);
 	height: $icon-size;
-	margin-right: $padding-interior;
+	margin-right: ($padding-interior / 2);
 	width: $icon-size;
 }
 
 .EmployerDetailsHeader__Location img {
 	background: #a1a1a1;
 	border-radius: 4px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	height: ($flag-size * 3 / 4);
-	margin-right: 6px;
+	margin: 0 $padding-interior 0 ($padding-interior / 2);
 	width: $flag-size;
 }
 
