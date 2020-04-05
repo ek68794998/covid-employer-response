@@ -12,6 +12,7 @@ const dateToNumber = (date: string | Date | null): number => {
 
 const recordIds: string[] =
 	fs.readdirSync(`${directory}/${subDirectory}`)
+		.filter((file: string) => file.indexOf(".yml") > 0)
 		.map((file: string) => file.split(".")[0]);
 
 describe("employer records", () => {
@@ -26,6 +27,11 @@ describe("employer records", () => {
 		recordIds.map((recordId: string) => [ recordId ])
 	)("can load and parse %p (%#)", async (recordId: string) => {
 		const record: EmployerRecord = await loader.loadAsync(recordId);
+
+		if (record.id === "sample") {
+			// The sample file has some invalid dates, etc., so don't include it here.
+			return;
+		}
 
 		expect(record.id).not.toBeNull();
 		expect(record.name).not.toBeNull();
@@ -101,7 +107,7 @@ describe("employer records", () => {
 
 		expect(record.citations[0].sources?.[0].name).toBe("K5 News");
 		expect(record.citations[0].sources?.[0].link).toBe("http://example.com/king5/1.html");
-		expect(dateToNumber(record.citations[0].sources?.[0].date || "")).toBe(dateToNumber("2020-03-25T08:42:19Z"));
+		expect(dateToNumber(record.citations[0].sources?.[0].date || "")).toBe(dateToNumber("2000-01-01T01:00:00Z"));
 
 		expect(record.citations[1].summary).toBe("Employees who requested paid time off were rejected.");
 		expect(record.citations[1].positivity).toBe(-1);
@@ -111,11 +117,11 @@ describe("employer records", () => {
 
 		expect(record.citations[1].sources?.[0].name).toBe("New York Times");
 		expect(record.citations[1].sources?.[0].link).toBe("http://example.com/nyt/1.html");
-		expect(dateToNumber(record.citations[1].sources?.[0].date || "")).toBe(dateToNumber("2020-03-20T11:29:19Z"));
+		expect(dateToNumber(record.citations[1].sources?.[0].date || "")).toBe(dateToNumber("2000-01-01T02:00:00Z"));
 
 		expect(record.citations[1].sources?.[1].name).toBe("CNN");
 		expect(record.citations[1].sources?.[1].link).toBe("http://example.com/cnn/2.html");
-		expect(dateToNumber(record.citations[1].sources?.[1].date || "")).toBe(dateToNumber("2020-03-20T21:42:11Z"));
+		expect(dateToNumber(record.citations[1].sources?.[1].date || "")).toBe(dateToNumber("2000-01-01T03:00:00Z"));
 
 		expect(record.citations[2].summary).toBe("Sick employee was reported in workspace and was not sent home.");
 		expect(record.citations[2].positivity).toBe(-1);
@@ -125,6 +131,6 @@ describe("employer records", () => {
 
 		expect(record.citations[2].sources?.[0].name).toBe("Twitter: John Doe");
 		expect(record.citations[2].sources?.[0].link).toBe("http://twitter.com/not-a-real-twitter-acct/13814781");
-		expect(dateToNumber(record.citations[2].sources?.[0].date || "")).toBe(dateToNumber("2020-03-16T20:14:14Z"));
+		expect(dateToNumber(record.citations[2].sources?.[0].date || "")).toBe(dateToNumber("2000-01-01T04:00:00Z"));
 	});
 });
