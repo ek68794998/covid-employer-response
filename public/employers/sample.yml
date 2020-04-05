@@ -14,7 +14,7 @@ officialWebsite: http://example.com/about # An official company webpage describi
 location: # Where the company is originally based.
   city: Seattle
   state: WA
-  country: us
+  country: us # The two-letter country code of the company's location.
   international: false # If the company has grown internationally, this should be set to true.
   wiki: Seattle # The subpath for the location's English Wikipedia page, if any.
 employeesBefore: # The number of company employees prior to 2020.
