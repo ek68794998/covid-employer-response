@@ -1,0 +1,50 @@
+name: United States Postal Service
+shortName: USPS
+aliases:
+  - US Mail
+wiki: United States Postal Service
+image: usps.svg
+officialWebsite: https://about.usps.com/
+location:
+  city: Washington, D.C.
+  country: us
+  international: false
+  wiki: Washington, D.C.
+employeesBefore:
+  type: exactly
+  upperBound: 644124
+  year: 2017
+summary: Postmaster General and CEO of USPS, Megan Brennan, has issued statements to workers to follow CDC guidelines and stay home if sick. However, additional paid leave and provisions of hand sanitizer and other PPE were not available to workers until April, and employees have been working significant overtime without hazard pay for several weeks.
+citations:
+  - summary: USPS workers have been given mandatory overtime, resulting in shifts of over 12 hours per day, and have not received hazard pay. Over 437,000 people have signed a petition requesting hazard pay for workers, with no response from USPS as of April 4.
+    positivity: -1
+    type: publication
+    sources:
+      - name: CBS News
+        link: https://www.cbsnews.com/news/usps-drivers-bringing-mail-to-areas-hardest-hit-by-coronavirus-demand-hazard-pay/
+        date: 2020-04-04T16:48:00-04:00
+      - name: Change.org Petition
+        link: https://www.change.org/p/hazard-pay-for-all-usps-employees
+  - summary: The Postmaster General of USPS suggested in March that employees who "are sick" should "stay home and get well," but made no mention of additional paid time off or benefits for such employees. As of March 9, at least one USPS employee had been diagnosed with COVID-19. By April 3, this number had increased to nearly 300.
+    positivity: 0
+    type: publication
+    sources:
+      - name: USPS Link News
+        link: https://link.usps.com/2020/03/09/coronavirus-update-2/
+        date: 2020-03-09T15:42:51-04:00
+      - name: CBS News
+        link: https://www.cbsnews.com/news/usps-drivers-bringing-mail-to-areas-hardest-hit-by-coronavirus-demand-hazard-pay/
+        date: 2020-04-04T16:48:00-04:00
+  - summary: According to employees who filed a hazard-pay petition, USPS has thus far not provided workers with hand sanitizer or masks, while simultaneously telling employees to follow CDC guidelines which would mandate such things.
+    positivity: -1
+    type: statement
+    sources:
+      - name: Change.org Petition
+        link: https://www.change.org/p/hazard-pay-for-all-usps-employees
+  - summary: On April 2, nearly a month after the first shelter-in-place orders went out, USPS finally issued a statement indicating that workers would begin receiving hand sanitizer, masks, and 80 hours of paid time off for non-career eployees dealing with COVID-19.
+    positivity: 1
+    type: publication
+    sources:
+      - name: USPS Newsroom Statements
+        link: https://about.usps.com/newsroom/statements/usps-statement-on-coronavirus.htm
+        date: 2020-04-02T12:00:00-07:00 # Estimate based on post date of 04/02/2020.

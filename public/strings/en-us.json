@@ -13,7 +13,9 @@
     "hearsay": "Hearsay"
   },
   "countryAbbreviations": {
+    "ca": "CA.",
     "gb": "U.K.",
+    "jp": "Japan",
     "us": "U.S."
   },
   "countryNames": {
