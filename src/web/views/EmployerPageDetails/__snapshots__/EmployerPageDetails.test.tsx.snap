@@ -11,6 +11,9 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
       
     </h2>
     <span
+      className="EmployerDetailsHeader__TitleGap"
+    />
+    <span
       className="EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--fair"
       title="rating string"
     >
