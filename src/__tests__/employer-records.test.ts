@@ -87,7 +87,7 @@ describe("employer records", () => {
 
 		expect(record.location?.city).toBe("Seattle");
 		expect(record.location?.state).toBe("WA");
-		expect(record.location?.country).toBe("USA");
+		expect(record.location?.country).toBe("us");
 		expect(record.location?.international).toBe(false);
 		expect(record.location?.wiki).toBe("Seattle");
 

@@ -29,7 +29,7 @@ const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement =
 		},
 		[ searchFilters ]);
 
-	const updateSearchFilters = (updates: Partial<EmployerListSearchFilter>): void => {
+	const updateSearchFilters = (updates?: Partial<EmployerListSearchFilter>): void => {
 		setSearchFilters({ ...searchFilters, ...updates });
 	};
 
@@ -37,8 +37,8 @@ const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement =
 		isFiltersetVisible
 			? (
 				<div className="EmployerListSearch__FilterContainer">
-					<InternationalTypeFilterControl initialFilter={searchFilters} onUpdateFilterValue={updateSearchFilters} />
-					<EmployeeCountFilterControl initialFilter={searchFilters} onUpdateFilterValue={updateSearchFilters} />
+					<InternationalTypeFilterControl filter={searchFilters} onUpdateFilter={updateSearchFilters} />
+					<EmployeeCountFilterControl filter={searchFilters} onUpdateFilter={updateSearchFilters} />
 				</div>
 			)
 			: null;
