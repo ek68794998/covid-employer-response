@@ -10,6 +10,18 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
     <h2>
       
     </h2>
+    <a
+      className="EmployerActionLinks__Link"
+      href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/.yml"
+      target="_blank"
+      title="edit string"
+    >
+      <i
+        className="material-icons"
+      >
+        edit
+      </i>
+    </a>
     <span
       className="EmployerDetailsHeader__TitleGap"
     />

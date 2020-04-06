@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EmployerActionLinks /> renders without exploding 1`] = `null`;
+exports[`<EmployerActionLinks /> renders without exploding 1`] = `
+<a
+  className="EmployerActionLinks__Link"
+  href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/.yml"
+  target="_blank"
+  title="edit string"
+>
+  <i
+    className="material-icons"
+  >
+    edit
+  </i>
+</a>
+`;

@@ -71,6 +71,18 @@ exports[`<EmployerListDetails /> renders without exploding 1`] = `
     className="EmployerListDetails__Actions"
   >
     <a
+      className="EmployerActionLinks__Link"
+      href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/.yml"
+      target="_blank"
+      title="edit string"
+    >
+      <i
+        className="material-icons"
+      >
+        edit
+      </i>
+    </a>
+    <a
       className="EmployerListDetails__ReadMore"
       onClick={[Function]}
     >
