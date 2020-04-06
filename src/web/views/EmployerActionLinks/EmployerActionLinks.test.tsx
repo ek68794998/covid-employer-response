@@ -16,12 +16,9 @@ describe("<EmployerActionLinks />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				detailDescriptions: {
-					edit: "edit string",
-					employees: "employees string",
-					location: "location string",
-					officialWebsite: "officialWebsite string",
-					rating: "rating string",
-					wikipedia: "wikipedia string",
+					edit: "èδïƭ",
+					officialWebsite: "ôƒƒïçïáℓWèβƨïƭè",
+					wikipedia: "ωïƙïƥèδïá",
 				},
 			},
 		});

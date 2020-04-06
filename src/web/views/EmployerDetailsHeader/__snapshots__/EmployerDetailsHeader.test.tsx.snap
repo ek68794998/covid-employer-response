@@ -13,26 +13,15 @@ Array [
         
       </a>
     </h2>
-    <a
-      className="EmployerActionLinks__Link"
-      href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/.yml"
-      target="_blank"
-      title="edit string"
-    >
-      <i
-        className="material-icons"
-      >
-        edit
-      </i>
-    </a>
+    [component: EmployerActionLinks employer=([object Object]) /]
     <span
       className="EmployerDetailsHeader__TitleGap"
     />
     <span
       className="EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--fair"
-      title="rating string"
+      title="řáƭïñϱ"
     >
-      fair string
+      ƒáïř
       <i
         className="material-icons EmployerDetailsHeader__RatingIcon"
       >
@@ -45,6 +34,7 @@ Array [
   >
     <span
       className="EmployerDetailsHeader__AggregateRatings"
+      title="řáƭïñϱÇôúñƭƨ"
     >
       <span
         className="EmployerDetailsHeader__GoodRatings"

@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { mockComponent } from "../../../__tests__/TestUtils";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
 import { AppState } from "../../state/AppState";
@@ -13,12 +14,20 @@ import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSear
 
 import EmployerList from "./EmployerList";
 
+jest.mock(
+	"../EmployerListDetails/EmployerListDetails",
+	() => mockComponent("EmployerListDetails"));
+
+jest.mock(
+	"../EmployerPageDetails/EmployerPageDetails",
+	() => mockComponent("EmployerPageDetails"));
+
 describe("<EmployerList />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				loading: "Loading",
-				noResults: "NoResults",
+				loading: "ℓôáδïñϱ",
+				noResults: "ñôRèƨúℓƭƨ",
 			},
 		});
 

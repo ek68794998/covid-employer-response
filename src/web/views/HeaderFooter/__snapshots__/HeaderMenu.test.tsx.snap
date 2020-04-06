@@ -25,7 +25,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
         onClick={[Function]}
         style={Object {}}
       >
-        AT
+        áƥƥ
         <span
           style={
             Object {
@@ -39,7 +39,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
       <div
         className="HeaderMenu__BrandLarge"
       >
-        App Title
+        áƥƥTïƭℓè
       </div>
     </div>
     <a
@@ -49,7 +49,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
       onClick={[Function]}
       style={Object {}}
     >
-      Home
+      λô₥è
     </a>
     <a
       aria-current={null}
@@ -57,7 +57,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
       href="/about"
       onClick={[Function]}
     >
-      About
+      áβôúƭ
     </a>
     <a
       className="HeaderMenu__Link"

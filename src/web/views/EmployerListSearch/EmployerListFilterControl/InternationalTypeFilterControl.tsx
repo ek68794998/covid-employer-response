@@ -60,6 +60,7 @@ const InternationalTypeFilterControl: React.FC<EmployerListSearchFilterProps> =
 				getDisplayText={getDisplayText}
 				isActive={!(filter.national && filter.international)}
 				onClear={onClear}
+				popupTitle={strings.filters.locationDefault}
 				selectorPropsList={selectorPropsList}
 			/>
 		);

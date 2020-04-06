@@ -20,12 +20,14 @@ interface Props extends RouteProps {
 
 	onClear: () => void;
 
+	popupTitle: string;
+
 	selectorPropsList: ChildSelectorProps[];
 }
 
 const EmployerListFilterControl: React.FC<Props> =
 	(props: Props): React.ReactElement => {
-		const { getDisplayText, isActive, onClear, selectorPropsList } = props;
+		const { getDisplayText, isActive, onClear, popupTitle, selectorPropsList } = props;
 
 		const [ isPopupOpen, setIsPopupOpen ] = useState(false);
 		const [ displayText, setDisplayText ] = useState(getDisplayText());
@@ -52,6 +54,7 @@ const EmployerListFilterControl: React.FC<Props> =
 						childProps={children}
 						multiselect={true}
 						onClose={(): void => setIsPopupOpen(false)}
+						title={popupTitle}
 					/>
 				)
 				: null;

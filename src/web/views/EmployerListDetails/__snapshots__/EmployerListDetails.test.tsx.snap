@@ -4,60 +4,7 @@ exports[`<EmployerListDetails /> renders without exploding 1`] = `
 <div
   className="EmployerListDetails__Container EmployerListDetails__Rating--fair"
 >
-  <div
-    className="EmployerDetailsHeader__Title "
-  >
-    <h2>
-      <a
-        onClick={[Function]}
-        title=""
-      >
-        
-      </a>
-    </h2>
-    <span
-      className="EmployerDetailsHeader__TitleGap"
-    />
-    <span
-      className="EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--fair"
-      title="rating string"
-    >
-      fair string
-      <i
-        className="material-icons EmployerDetailsHeader__RatingIcon"
-      >
-        trending_flat
-      </i>
-    </span>
-  </div>
-  <div
-    className="EmployerDetailsHeader__Subtitle"
-  >
-    <span
-      className="EmployerDetailsHeader__AggregateRatings"
-    >
-      <span
-        className="EmployerDetailsHeader__GoodRatings"
-      >
-        <i
-          className="material-icons"
-        >
-          add
-        </i>
-        0
-      </span>
-      <span
-        className="EmployerDetailsHeader__PoorRatings"
-      >
-        <i
-          className="material-icons"
-        >
-          remove
-        </i>
-        0
-      </span>
-    </span>
-  </div>
+  [component: EmployerDetailsHeader employer=([object Object]) onClickEmployerName=([Function]) useShortText=(true) /]
   <div
     className="EmployerListDetails__Summary"
     onClick={[Function]}
@@ -70,22 +17,12 @@ exports[`<EmployerListDetails /> renders without exploding 1`] = `
   <div
     className="EmployerListDetails__Actions"
   >
-    <a
-      className="EmployerActionLinks__Link"
-      href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/.yml"
-      target="_blank"
-      title="edit string"
-    >
-      <i
-        className="material-icons"
-      >
-        edit
-      </i>
-    </a>
+    [component: EmployerActionLinks employer=([object Object]) /]
     <a
       className="EmployerListDetails__ReadMore"
       onClick={[Function]}
     >
+      řèáδMôřè
       <i
         className="material-icons"
       >

@@ -13,9 +13,9 @@ describe("<App />", () => {
 		const div: HTMLDivElement = document.createElement("div");
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				about: "About",
-				appTitle: "Test App",
-				home: "Home",
+				about: "áβôúƭ",
+				appTitle: "áƥƥTïƭℓè",
+				home: "λô₥è",
 			},
 		});
 

@@ -26,7 +26,6 @@
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.1.2",
     "react-spinners": "^0.6.1",
-    "react-test-renderer": "^16.13.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "serialize-javascript": "^1.7.0",
@@ -53,6 +52,7 @@
     "razzle": "^3.0.0",
     "razzle-plugin-scss": "^3.0.0",
     "razzle-plugin-typescript": "^3.0.0",
+    "react-test-renderer": "^16.13.1",
     "ts-jest": "^25.0.0",
     "tslint": "^5.19.0",
     "tslint-react": "^4.0.0",
@@ -65,7 +65,7 @@
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
     },
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.(ts|js)?(x)",
+      "<rootDir>/src/**/__tests__/**/*(spec|test).(ts|js)?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).(ts|js)?(x)"
     ],
     "moduleFileExtensions": [

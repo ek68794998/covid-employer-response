@@ -4,67 +4,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
 <div
   className="EmployerPageDetails__Container"
 >
-  <div
-    className="EmployerDetailsHeader__Title EmployerDetailsHeader__Title--noShort"
-  >
-    <h2>
-      
-    </h2>
-    <a
-      className="EmployerActionLinks__Link"
-      href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/.yml"
-      target="_blank"
-      title="edit string"
-    >
-      <i
-        className="material-icons"
-      >
-        edit
-      </i>
-    </a>
-    <span
-      className="EmployerDetailsHeader__TitleGap"
-    />
-    <span
-      className="EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--fair"
-      title="rating string"
-    >
-      fair string
-      <i
-        className="material-icons EmployerDetailsHeader__RatingIcon"
-      >
-        trending_flat
-      </i>
-    </span>
-  </div>
-  <div
-    className="EmployerDetailsHeader__Subtitle"
-  >
-    <span
-      className="EmployerDetailsHeader__AggregateRatings"
-    >
-      <span
-        className="EmployerDetailsHeader__GoodRatings"
-      >
-        <i
-          className="material-icons"
-        >
-          add
-        </i>
-        0
-      </span>
-      <span
-        className="EmployerDetailsHeader__PoorRatings"
-      >
-        <i
-          className="material-icons"
-        >
-          remove
-        </i>
-        0
-      </span>
-    </span>
-  </div>
+  [component: EmployerDetailsHeader employer=([object Object]) /]
   <div
     className="EmployerPageDetails__Body"
   >

@@ -4,19 +4,12 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent } from "../../../__tests__/TestUtils";
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { AppState } from "../../../state/AppState";
+import configureStore from "../../../state/configureStore";
 
-import { AppState } from "../../state/AppState";
-import configureStore from "../../state/configureStore";
+import EmployerListFilterControl from "./EmployerListFilterControl";
 
-import EmployerPageDetails from "./EmployerPageDetails";
-
-jest.mock(
-	"../EmployerDetailsHeader/EmployerDetailsHeader",
-	() => mockComponent("EmployerDetailsHeader"));
-
-describe("<EmployerPageDetails />", () => {
+describe("<EmployerListFilterControl />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
@@ -24,7 +17,13 @@ describe("<EmployerPageDetails />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerPageDetails employer={new EmployerRecord()} />
+						<EmployerListFilterControl
+							getDisplayText={(): string => "δïƨƥℓá¥Tèжƭ"}
+							isActive={true}
+							onClear={(): void => { /* Do nothing. */ }}
+							popupTitle="ƭïƭℓèTèжƭ"
+							selectorPropsList={[]}
+						/>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

@@ -13,7 +13,7 @@ describe("<FooterMenu />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				appTitle: "App Title",
+				appTitle: "áƥƥTïƭℓè",
 			},
 		});
 

@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { mockComponent } from "../../../__tests__/TestUtils";
 import { Citation } from "../../../common/Citation";
 
 import { AppState } from "../../state/AppState";
@@ -11,19 +12,23 @@ import configureStore from "../../state/configureStore";
 
 import EmployerCitationList from "./EmployerCitationList";
 
+jest.mock(
+	"../EmployerCitation/EmployerCitation",
+	() => mockComponent("EmployerCitation"));
+
 describe("<EmployerCitationList />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				citationTypeDescriptions: {
-					hearsay: "hearsay desc value",
-					publication: "publication desc value",
-					statement: "statement desc value",
+					hearsay: "λèářƨá¥Ðèƨçřïƥƭïôñ",
+					publication: "ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ",
+					statement: "ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ",
 				},
 				citationTypes: {
-					hearsay: "hearsay value",
-					publication: "publication value",
-					statement: "statement value",
+					hearsay: "λèářƨá¥",
+					publication: "ƥúβℓïçáƭïôñ",
+					statement: "ƨƭáƭè₥èñƭ",
 				},
 			},
 		});

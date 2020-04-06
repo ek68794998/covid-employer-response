@@ -4,28 +4,15 @@ exports[`<EmployerCitationList /> renders without exploding 1`] = `
 <div>
   <h3
     className="EmployerCitationList__Header"
-    title="publication desc value"
+    title="ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ"
   >
-    publication value
+    ƥúβℓïçáƭïôñ
   </h3>
   <ul
     className="EmployerCitationList__Citations"
   >
     <li>
-      <div
-        className="EmployerCitation__Container"
-      >
-        <i
-          className="material-icons EmployerCitation__Indicator EmployerCitation__Indicator--Neutral"
-        >
-          error_outline
-        </i>
-        <span
-          className="EmployerCitation__Summary"
-        >
-          
-        </span>
-      </div>
+      [component: EmployerCitation citation=([object Object]) citationSourceBase=(undefined) /]
     </li>
   </ul>
 </div>

@@ -78,6 +78,7 @@ const EmployeeCountFilterControl: React.FC<EmployerListSearchFilterProps> =
 				getDisplayText={getDisplayText}
 				isActive={!(filter.small && filter.medium && filter.large)}
 				onClear={onClear}
+				popupTitle={strings.filters.employeesDefault}
 				selectorPropsList={selectorPropsList}
 			/>
 		);

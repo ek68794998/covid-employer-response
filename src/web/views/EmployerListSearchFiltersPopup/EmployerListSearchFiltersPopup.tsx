@@ -23,12 +23,12 @@ interface Props extends RouteProps {
 	multiselect: boolean;
 
 	onClose: () => void;
+
+	title: string;
 }
 
 const EmployerListSearchFiltersPopup: React.FC<Props> = (props: Props): React.ReactElement => {
-	const strings: LocalizedStrings = useSelector(getStrings);
-
-	const { childProps, multiselect, onClose } = props;
+	const { childProps, multiselect, onClose, title } = props;
 
 	const children: JSX.Element[] = childProps.map((p: SelectorProps, i: number) => (
 		<EmployerListSearchFiltersSelector
@@ -43,7 +43,7 @@ const EmployerListSearchFiltersPopup: React.FC<Props> = (props: Props): React.Re
 	return (
 		<>
 			<div className="EmployerListSearchFiltersPopup__Container">
-				<h3>{strings.filters.locationDefault}</h3>
+				<h3>{title}</h3>
 				{children}
 			</div>
 			<div className="EmployerListSearchFiltersPopup__Overlay" onClick={onClose} />
