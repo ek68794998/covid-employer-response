@@ -16,6 +16,10 @@ jest.mock(
 	"../EmployerDetailsHeader/EmployerDetailsHeader",
 	() => mockComponent("EmployerDetailsHeader"));
 
+jest.mock(
+	"../EmployerActionLinks/EmployerActionLinks",
+	() => mockComponent("EmployerActionLinks"));
+
 describe("<EmployerListDetails />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
