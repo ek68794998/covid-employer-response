@@ -13,18 +13,19 @@ describe("<About />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				about: "About",
-				appTitle: "Test App",
+				about: "áβôúƭ",
+				appTitle: "áƥƥTïƭℓè",
 				citationTypeDescriptions: {
-					hearsay: "hearsay description",
-					publication: "publication description",
-					statement: "statement description",
+					hearsay: "λèářƨá¥Ðèƨçřïƥƭïôñ",
+					publication: "ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ",
+					statement: "ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ",
 				},
 				citationTypes: {
-					hearsay: "hearsay",
-					publication: "publication",
-					statement: "statement",
+					hearsay: "λèářƨá¥",
+					publication: "ƥúβℓïçáƭïôñ",
+					statement: "ƨƭáƭè₥èñƭ",
 				},
+				submit: "ƨúβ₥ïƭ",
 			},
 		});
 

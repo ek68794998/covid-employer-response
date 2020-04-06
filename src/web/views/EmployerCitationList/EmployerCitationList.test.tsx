@@ -21,14 +21,14 @@ describe("<EmployerCitationList />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				citationTypeDescriptions: {
-					hearsay: "hearsay desc value",
-					publication: "publication desc value",
-					statement: "statement desc value",
+					hearsay: "λèářƨá¥Ðèƨçřïƥƭïôñ",
+					publication: "ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ",
+					statement: "ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ",
 				},
 				citationTypes: {
-					hearsay: "hearsay value",
-					publication: "publication value",
-					statement: "statement value",
+					hearsay: "λèářƨá¥",
+					publication: "ƥúβℓïçáƭïôñ",
+					statement: "ƨƭáƭè₥èñƭ",
 				},
 			},
 		});

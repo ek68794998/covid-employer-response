@@ -4,9 +4,9 @@ exports[`<EmployerCitationList /> renders without exploding 1`] = `
 <div>
   <h3
     className="EmployerCitationList__Header"
-    title="publication desc value"
+    title="ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ"
   >
-    publication value
+    ƥúβℓïçáƭïôñ
   </h3>
   <ul
     className="EmployerCitationList__Citations"

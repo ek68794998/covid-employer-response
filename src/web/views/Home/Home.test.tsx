@@ -23,9 +23,8 @@ describe("<Home />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				about: "About",
-				appTitle: "Test App",
-				home: "Home",
+				appTitle: "áƥƥTïƭℓè",
+				home: "λô₥è",
 			},
 		});
 

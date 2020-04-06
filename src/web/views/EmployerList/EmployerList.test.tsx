@@ -26,8 +26,8 @@ describe("<EmployerList />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				loading: "Loading",
-				noResults: "NoResults",
+				loading: "ℓôáδïñϱ",
+				noResults: "ñôRèƨúℓƭƨ",
 			},
 		});
 

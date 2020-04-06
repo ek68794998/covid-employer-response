@@ -16,7 +16,7 @@ exports[`<About /> renders without exploding 1`] = `
     <p>
       <strong />
        (
-      Test App
+      áƥƥTïƭℓè
       ) is a collaborative, open-source project designed to track the responses of employers to the 
       <a
         href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"
@@ -67,7 +67,7 @@ exports[`<About /> renders without exploding 1`] = `
         employer claim
       </strong>
        is one or more declarations about an employer which include a summary and citations to back it up. This appears as a single bullet-point in the employer's listing beneath a header such as "
-      publication
+      ƥúβℓïçáƭïôñ
       ".
     </p>
     <p>
@@ -92,34 +92,35 @@ exports[`<About /> renders without exploding 1`] = `
     </h2>
     <p>
       To submit a claim change of any kind, please click the "
+      ƨúβ₥ïƭ
       " link in the navigation menu. From there, you can either submit a request for someone to update our data files, or submit a GitHub pull request to update the files yourself.
     </p>
     <h2
       id="citation-types"
     >
       What is the difference between "
-      publication
+      ƥúβℓïçáƭïôñ
       ", "
-      statement
+      ƨƭáƭè₥èñƭ
       ", and "
-      hearsay
+      λèářƨá¥
       "?
     </h2>
     <ul>
       <li>
-        publication
+        ƥúβℓïçáƭïôñ
         : 
-        publication description
+        ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ
       </li>
       <li>
-        statement
+        ƨƭáƭè₥èñƭ
         : 
-        statement description
+        ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ
       </li>
       <li>
-        hearsay
+        λèářƨá¥
         : 
-        hearsay description
+        λèářƨá¥Ðèƨçřïƥƭïôñ
       </li>
     </ul>
     <h2

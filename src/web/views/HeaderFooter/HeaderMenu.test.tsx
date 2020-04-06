@@ -13,10 +13,10 @@ describe("<HeaderMenu />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				about: "About",
-				appTitle: "App Title",
-				appTitleShort: "AT",
-				home: "Home",
+				about: "áβôúƭ",
+				appTitle: "áƥƥTïƭℓè",
+				appTitleShort: "áƥƥ",
+				home: "λô₥è",
 			},
 		});
 

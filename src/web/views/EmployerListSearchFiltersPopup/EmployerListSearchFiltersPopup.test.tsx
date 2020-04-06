@@ -17,21 +17,18 @@ jest.mock(
 
 describe("<EmployerListSearchFiltersPopup />", () => {
 	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				filters: {
-					locationDefault: "locationDefault string",
-					locationInternational: "locationInternational string",
-					locationNational: "locationNational string",
-				},
-			},
-		});
+		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListSearchFiltersPopup childProps={[]} multiselect={false} onClose={(): void => { /* Do nothing. */ }} />
+						<EmployerListSearchFiltersPopup
+							childProps={[]}
+							multiselect={false}
+							onClose={(): void => { /* Do nothing. */ }}
+							title={"Title"}
+						/>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

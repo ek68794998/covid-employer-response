@@ -16,9 +16,9 @@ describe("<InternationalTypeFilterControl />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				filters: {
-					locationDefault: "locationDefault string",
-					locationInternational: "locationInternational string",
-					locationNational: "locationNational string",
+					locationDefault: "ℓôçáƭïôñÐèƒáúℓƭ",
+					locationInternational: "ℓôçáƭïôñÌñƭèřñáƭïôñáℓ",
+					locationNational: "ℓôçáƭïôñNáƭïôñáℓ",
 				},
 			},
 		});

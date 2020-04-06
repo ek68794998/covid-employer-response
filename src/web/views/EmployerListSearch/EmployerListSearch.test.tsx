@@ -13,7 +13,7 @@ describe("<EmployerListSearch />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				search: "Search",
+				search: "ƨèářçλ",
 			},
 		});
 

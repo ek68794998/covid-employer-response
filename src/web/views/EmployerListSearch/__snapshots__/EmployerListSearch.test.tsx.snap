@@ -14,7 +14,7 @@ exports[`<EmployerListSearch /> renders without exploding 1`] = `
     </i>
     <input
       onInput={[Function]}
-      placeholder="Search"
+      placeholder="ƨèářçλ"
       type="search"
     />
     <button

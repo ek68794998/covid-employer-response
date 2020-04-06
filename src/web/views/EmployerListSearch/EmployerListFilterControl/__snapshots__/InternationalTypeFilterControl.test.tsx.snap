@@ -9,7 +9,7 @@ exports[`<InternationalTypeFilterControl /> renders without exploding 1`] = `
     onClick={[Function]}
   >
     <div>
-      locationDefault string
+      ℓôçáƭïôñÐèƒáúℓƭ
     </div>
   </button>
 </div>

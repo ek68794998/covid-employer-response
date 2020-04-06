@@ -16,10 +16,10 @@ describe("<EmployeeCountFilterControl />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				filters: {
-					employeesDefault: "employeesDefault string",
-					employeesLarge: "employeesLarge string",
-					employeesMedium: "employeesMedium string",
-					employeesSmall: "employeesSmall string",
+					employeesDefault: "è₥ƥℓô¥èèƨÐèƒáúℓƭ",
+					employeesLarge: "è₥ƥℓô¥èèƨ£ářϱè",
+					employeesMedium: "è₥ƥℓô¥èèƨMèδïú₥",
+					employeesSmall: "è₥ƥℓô¥èèƨ§₥áℓℓ",
 				},
 			},
 		});
