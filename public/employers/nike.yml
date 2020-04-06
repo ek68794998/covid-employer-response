@@ -1,0 +1,35 @@
+name: Nike, Inc.
+shortName: Nike
+ticker: NKE
+wiki: Nike, Inc.
+image: nike.svg
+officialWebsite: https://about.nike.com/
+location:
+  city: Beaverton
+  state: OR
+  country: us
+  international: true
+  wiki: Beaverton, Oregon
+employeesBefore:
+  type: exactly
+  upperBound: 73100
+  year: 2018
+summary: Nike has implemented work-from-home policies for corporate employees, as well as closed down outlet stores internationally, while continuing to pay workers at those locations.
+citations:
+  - summary: Nike has closed all stores in North America, Western Europe, Australia, and New Zealand starting on March 16. They expected to reopen these stores on March 27, but have extended this indefinitely due to the ongoing crisis. Workers are being paid in full during the closures.
+    positivity: 2
+    type: publication
+    sources:
+      - name: CNBC
+        link: https://web.archive.org/web/20200404052428/https://www.cnbc.com/2020/03/15/these-retailers-are-closing-stores-to-slow-coronavirus-outbreak.html
+        date: 2020-03-15T15:20:22Z
+      - name: Yahoo! Finance
+        link: https://finance.yahoo.com/news/lululemon-extends-store-closure-rising-141802535.html
+        date: 2020-04-03T14:18:02Z
+  - summary: Nike has implemented work from home and staggered work schedules for employees who are able to do so.
+    positivity: 1
+    type: publication
+    sources:
+      - name: CNBC
+        link: https://web.archive.org/web/20200402202324/https://www.cnbc.com/2020/03/15/nike-is-closing-all-of-its-stores-in-the-us-because-of-coronavirus.html
+        date: 2020-03-15T11:06:30Z

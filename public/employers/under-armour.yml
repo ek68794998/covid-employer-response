@@ -1,0 +1,36 @@
+name: Under Armour, Inc.
+shortName: Under Armour
+ticker: UAA
+wiki: Under Armour
+image: under-armour.svg
+officialWebsite: https://about.underarmour.com/
+location:
+  city: Baltimore
+  state: MD
+  country: us
+  international: true
+  wiki: Baltimore
+employeesBefore:
+  type: range
+  upperBound: 16000
+  year: 2020
+  yearQuarter: Q1
+summary: Under Armour has closed down all outlet stores in North America and continued to pay employees during the closures. However, they still laid off a number of employees during this time.
+citations:
+  - summary: All Under Armour locations in North America were shut down starting on March 16. They were slated to reopen March 28, but this was indefinitely extended due to the ongoing nature of the outbreak. Employees have continued to receive pay during the closures.
+    positivity: 2
+    type: publication
+    sources:
+      - name: CNBC
+        link: https://web.archive.org/web/20200404052428/https://www.cnbc.com/2020/03/15/these-retailers-are-closing-stores-to-slow-coronavirus-outbreak.html
+        date: 2020-03-15T15:20:22Z
+      - name: TheStreet
+        link: https://www.thestreet.com/investing/under-armour-layoffs-store-closings-restructuring
+        date: 2020-04-03T09:56:53-04:00
+  - summary: Under Armour has laid off over at least 600 employees in its US distribution centers and outlets.
+    positivity: -1
+    type: publication
+    sources:
+      - name: TheStreet
+        link: https://www.thestreet.com/investing/under-armour-layoffs-store-closings-restructuring
+        date: 2020-04-03T09:56:53-04:00

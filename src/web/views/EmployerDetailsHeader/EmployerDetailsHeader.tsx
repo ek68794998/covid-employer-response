@@ -40,7 +40,12 @@ const getAliasesComponent =
 			text = (
 				<>
 					{employer.aliases.slice(0, cutoff).join(separator)}&hellip;
-					<span title={employer.aliases.slice(cutoff).join(separator)}> ({moreText})</span>
+					<span
+						className="EmployerDetailsHeader__AliasesMore"
+						title={employer.aliases.slice(cutoff).join(separator)}
+					>
+						({moreText})
+					</span>
 				</>
 			);
 		} else {
