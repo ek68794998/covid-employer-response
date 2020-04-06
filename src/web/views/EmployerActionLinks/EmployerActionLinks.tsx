@@ -16,10 +16,6 @@ interface Props extends RouteProps {
 }
 
 const getEmployerEditComponent = (employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
-	if (!employer.officialWebsite) {
-		return null;
-	}
-
 	const editUrl: string = `${ProjectUrl}/blob/master/public/employers/${employer.id}.yml`;
 
 	return (
