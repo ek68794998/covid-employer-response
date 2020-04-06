@@ -4,12 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { mockComponent } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
 import EmployerListSearchFiltersPopup from "./EmployerListSearchFiltersPopup";
+
+jest.mock(
+	"../EmployerListSearchFiltersSelector/EmployerListSearchFiltersSelector",
+	() => mockComponent("EmployerListSearchFiltersSelector"));
 
 describe("<EmployerListSearchFiltersPopup />", () => {
 	test("renders without exploding", () => {

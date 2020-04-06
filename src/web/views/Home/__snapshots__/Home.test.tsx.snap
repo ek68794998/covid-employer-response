@@ -7,40 +7,12 @@ exports[`<Home /> renders without exploding 1`] = `
   <div
     className="Home__Filters"
   >
-    <div
-      className="EmployerListSearch__Container"
-    >
-      <div
-        className="EmployerListSearch__InputContainer"
-      >
-        <i
-          className="material-icons"
-        >
-          search
-        </i>
-        <input
-          onInput={[Function]}
-          type="search"
-        />
-        <button
-          className="EmployerListSearch__ExpandFilters"
-          onClick={[Function]}
-        >
-          <i
-            className="material-icons"
-          >
-            expand_more
-          </i>
-        </button>
-      </div>
-    </div>
+    [component: EmployerListSearch onChange=(function () { [native code] }) /]
   </div>
   <div
     className="Home__Content"
   >
-    <div
-      className="EmployerList__Container--Loading"
-    />
+    [component: EmployerList employers=(undefined) searchFilter=([object Object]) /]
   </div>
 </main>
 `;

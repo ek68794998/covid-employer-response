@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { mockComponent } from "../../../__tests__/TestUtils";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
 import { AppState } from "../../state/AppState";
@@ -11,22 +12,26 @@ import configureStore from "../../state/configureStore";
 
 import EmployerDetailsHeader from "./EmployerDetailsHeader";
 
+jest.mock(
+	"../EmployerActionLinks/EmployerActionLinks",
+	() => mockComponent("EmployerActionLinks"));
+
 describe("<EmployerDetailsHeader />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				detailDescriptions: {
-					edit: "edit string",
-					employees: "employees string",
-					location: "location string",
-					officialWebsite: "officialWebsite string",
-					rating: "rating string",
-					wikipedia: "wikipedia string",
+					aka: "áƙá",
+					employees: "è₥ƥℓô¥èèƨ",
+					location: "ℓôçáƭïôñ",
+					rating: "řáƭïñϱ",
+					ratingCounts: "řáƭïñϱÇôúñƭƨ",
+					ticker: "ƭïçƙèř",
 				},
 				ratingLabels: {
-					fair: "fair string",
-					good: "good string",
-					poor: "poor string",
+					fair: "ƒáïř",
+					good: "ϱôôδ",
+					poor: "ƥôôř",
 				},
 			},
 		});
