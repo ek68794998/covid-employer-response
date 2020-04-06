@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerListFilterControl /> renders without exploding 1`] = `
+<div
+  className="EmployerListFilterControl__Container"
+>
+  <button
+    className="EmployerListFilterControl__Button EmployerListFilterControl__Button--Active"
+    onClick={[Function]}
+  >
+    <i
+      className="material-icons"
+      onClick={[Function]}
+    >
+      clear
+    </i>
+    <div>
+      δïƨƥℓá¥Tèжƭ
+    </div>
+  </button>
+</div>
+`;

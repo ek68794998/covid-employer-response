@@ -4,12 +4,18 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { mockComponent } from "../../../../__tests__/TestUtils";
+
 import { AppState } from "../../../state/AppState";
 import configureStore from "../../../state/configureStore";
 
 import { EmployerListSearchFilter } from "../EmployerListSearchFilter";
 
 import InternationalTypeFilterControl from "./InternationalTypeFilterControl";
+
+jest.mock(
+	"../EmployerListFilterControl/EmployerListFilterControl",
+	() => mockComponent("EmployerListFilterControl"));
 
 describe("<InternationalTypeFilterControl />", () => {
 	test("renders without exploding", () => {

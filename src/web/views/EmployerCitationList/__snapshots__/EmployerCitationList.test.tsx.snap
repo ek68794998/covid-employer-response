@@ -12,7 +12,7 @@ exports[`<EmployerCitationList /> renders without exploding 1`] = `
     className="EmployerCitationList__Citations"
   >
     <li>
-      [component: EmployerCitation citation=([object Object]) citationSourceBase=(0) /]
+      [component: EmployerCitation citation=([object Object]) citationSourceBase=(undefined) /]
     </li>
   </ul>
 </div>

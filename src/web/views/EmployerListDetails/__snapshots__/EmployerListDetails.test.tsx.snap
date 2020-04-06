@@ -4,7 +4,7 @@ exports[`<EmployerListDetails /> renders without exploding 1`] = `
 <div
   className="EmployerListDetails__Container EmployerListDetails__Rating--fair"
 >
-  [component: EmployerDetailsHeader employer=([object Object]) onClickEmployerName=(() → { }) useShortText=(true) /]
+  [component: EmployerDetailsHeader employer=([object Object]) onClickEmployerName=([Function]) useShortText=(true) /]
   <div
     className="EmployerListDetails__Summary"
     onClick={[Function]}

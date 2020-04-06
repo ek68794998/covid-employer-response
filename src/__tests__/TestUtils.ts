@@ -14,7 +14,15 @@ export const mockComponent = (componentName: string): ComponentGenerator => {
 		const propsList: string[] = [];
 
 		for (const propKey of propKeys) {
-			propsList.push(`${propKey}=(${props[propKey]?.toString().replace(/=>/g, "→")})`);
+			const value: any = props[propKey];
+			const valueString: string =
+				value
+					? typeof value === "function"
+						? "[Function]"
+						: value.toString().replace(/</g, "⋖").replace(/>/g, "⋗")
+					: "undefined";
+
+			propsList.push(`${propKey}=(${valueString})`);
 		}
 
 		return `${openingTag} ${propsList.join(" ")} ${closingTag}`;
