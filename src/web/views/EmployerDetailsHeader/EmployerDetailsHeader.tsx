@@ -105,7 +105,10 @@ const getLocationWikipediaComponent =
 				target="_blank"
 				title={strings.detailDescriptions.location}
 			>
-				<img src={`/images/flags/${employer.location.country}.svg`} />
+				<img
+					src={`/images/flags/${employer.location.country}.svg`}
+					title={strings.countryNames[employer.location.country]}
+				/>
 				{locationString}
 			</a>
 		);
