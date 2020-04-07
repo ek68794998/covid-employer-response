@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent } from "../../../__tests__/TestUtils";
+import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
 import { AppState } from "../../state/AppState";
@@ -24,7 +24,7 @@ describe("<EmployerListDetails />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				readMore: "řèáδMôřè",
+				readMore: ploc("readMore"),
 			},
 		});
 

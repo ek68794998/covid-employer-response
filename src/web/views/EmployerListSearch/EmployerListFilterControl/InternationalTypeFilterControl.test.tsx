@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent } from "../../../../__tests__/TestUtils";
+import { mockComponent, ploc } from "../../../../__tests__/TestUtils";
 
 import { AppState } from "../../../state/AppState";
 import configureStore from "../../../state/configureStore";
@@ -22,9 +22,9 @@ describe("<InternationalTypeFilterControl />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				filters: {
-					locationDefault: "ℓôçáƭïôñÐèƒáúℓƭ",
-					locationInternational: "ℓôçáƭïôñÌñƭèřñáƭïôñáℓ",
-					locationNational: "ℓôçáƭïôñNáƭïôñáℓ",
+					locationDefault: ploc("locationDefault"),
+					locationInternational: ploc("locationInternational"),
+					locationNational: ploc("locationNational"),
 				},
 			},
 		});

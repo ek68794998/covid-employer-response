@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent } from "../../../__tests__/TestUtils";
+import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 import { Citation } from "../../../common/Citation";
 
 import { AppState } from "../../state/AppState";
@@ -21,14 +21,14 @@ describe("<EmployerCitationList />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				citationTypeDescriptions: {
-					hearsay: "λèářƨá¥Ðèƨçřïƥƭïôñ",
-					publication: "ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ",
-					statement: "ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ",
+					hearsay: ploc("hearsayDescription"),
+					publication: ploc("publicationDescription"),
+					statement: ploc("statementDescription"),
 				},
 				citationTypes: {
-					hearsay: "λèářƨá¥",
-					publication: "ƥúβℓïçáƭïôñ",
-					statement: "ƨƭáƭè₥èñƭ",
+					hearsay: ploc("hearsay"),
+					publication: ploc("publication"),
+					statement: ploc("statement"),
 				},
 			},
 		});

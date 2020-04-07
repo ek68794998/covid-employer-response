@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent } from "../../../__tests__/TestUtils";
+import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
 import { AppState } from "../../state/AppState";
@@ -21,17 +21,17 @@ describe("<EmployerDetailsHeader />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				detailDescriptions: {
-					aka: "áƙá",
-					employees: "è₥ƥℓô¥èèƨ",
-					location: "ℓôçáƭïôñ",
-					rating: "řáƭïñϱ",
-					ratingCounts: "řáƭïñϱÇôúñƭƨ",
-					ticker: "ƭïçƙèř",
+					aka: ploc("aka"),
+					employees: ploc("employees"),
+					location: ploc("location"),
+					rating: ploc("rating"),
+					ratingCounts: ploc("ratingCounts"),
+					ticker: ploc("ticker"),
 				},
 				ratingLabels: {
-					fair: "ƒáïř",
-					good: "ϱôôδ",
-					poor: "ƥôôř",
+					fair: ploc("fair"),
+					good: ploc("good"),
+					poor: ploc("poor"),
 				},
 			},
 		});
