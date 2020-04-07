@@ -4,6 +4,7 @@ exports[`<EmployerActionLinks /> renders without exploding 1`] = `
 <a
   className="EmployerActionLinks__Link"
   href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/.yml"
+  rel="noopener noreferrer"
   target="_blank"
   title="èδïƭ"
 >
