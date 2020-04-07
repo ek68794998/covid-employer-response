@@ -24,7 +24,7 @@ const EmployerDetail: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	if (link) {
 		return (
-			<a className="EmployerDetail__Container" href={link} target="_blank">
+			<a className="EmployerDetail__Container" href={link} rel="noopener noreferrer" target="_blank">
 				{iconElement}
 				<span className="EmployerDetail__Label">{text}</span>
 			</a>

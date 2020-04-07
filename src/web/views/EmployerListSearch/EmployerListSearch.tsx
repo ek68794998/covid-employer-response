@@ -43,12 +43,15 @@ const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement =
 			)
 			: null;
 
+	const onInput =
+		(e: React.FormEvent<HTMLInputElement>): void => updateSearchFilters({ text: e.currentTarget.value });
+
 	return (
 		<div className="EmployerListSearch__Container">
 			<div className="EmployerListSearch__InputContainer">
 				<i className="material-icons">search</i>
 				<input
-					onInput={(e: React.FormEvent<HTMLInputElement>): void => updateSearchFilters({ text: e.currentTarget.value })}
+					onInput={onInput}
 					placeholder={strings.search}
 					type="search"
 				/>

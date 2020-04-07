@@ -87,7 +87,7 @@ export class EmployerListSearchFilter {
 			return true;
 		}
 
-		const fieldsToSearch: Array<string | undefined> = [
+		const fieldsToSearch: (string | undefined)[] = [
 			e.name.toLowerCase(),
 			e.location?.city.toLowerCase(),
 			e.shortName?.toLowerCase(),

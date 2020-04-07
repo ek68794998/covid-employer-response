@@ -5,16 +5,13 @@ export class GetEmployersApiResponse {
 
 	public response: Response;
 
-	constructor(employers: EmployerRecord[], response: Response) {
+	public constructor(employers: EmployerRecord[], response: Response) {
 		this.employers = employers;
 		this.response = response;
 	}
 }
 
-export const getEmployersApi = (): Promise<GetEmployersApiResponse> => {
-	return (
-		fetch("/api/employers", { method: "GET" })
-			.then((response: Response) => Promise.all([ response, response.json() ]))
-			.then((value: [ Response, EmployerRecord[] ]) => new GetEmployersApiResponse(value[1], value[0]))
-	);
-};
+export const getEmployersApi = (): Promise<GetEmployersApiResponse> =>
+	fetch("/api/employers", { method: "GET" })
+		.then((response: Response) => Promise.all([ response, response.json() ]))
+		.then((value: [ Response, EmployerRecord[] ]) => new GetEmployersApiResponse(value[1], value[0]));

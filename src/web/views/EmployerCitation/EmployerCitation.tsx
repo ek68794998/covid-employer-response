@@ -6,6 +6,9 @@ import { CitationSource } from "../../../common/CitationSource";
 
 import "./EmployerCitation.scss";
 
+type IndicatorIconType = "add_circle" | "add_circle_outline" | "error_outline" | "remove_circle_outline" | "remove_circle";
+type Neutrality = "Neutral" | "Positive" | "Negative";
+
 interface Props extends RouteProps {
 	citation: Citation;
 
@@ -25,17 +28,11 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 				title = `${title} (${date.toLocaleDateString()} ${date.toLocaleTimeString()})`;
 			}
 
-			return <a key={i} href={s.link} target="_blank" title={title}>[{i + citationSourceBase}]</a>;
+			return <a key={i} href={s.link} rel="noopener noreferrer" target="_blank" title={title}>[{i + citationSourceBase}]</a>;
 		};
 
-	let indicatorClass: "Neutral" | "Positive" | "Negative" = "Neutral";
-	let indicatorIcon:
-		"add_circle"
-		| "add_circle_outline"
-		| "error_outline"
-		| "remove_circle_outline"
-		| "remove_circle"
-		= "error_outline";
+	let indicatorClass: Neutrality = "Neutral";
+	let indicatorIcon: IndicatorIconType = "error_outline";
 
 	if (citation.positivity > 0) {
 		indicatorClass = "Positive";

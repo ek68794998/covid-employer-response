@@ -30,9 +30,7 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 
 					return id || "";
 				})
-				.filter((id: string): boolean => {
-					return id.length > 0;
-				})
+				.filter((id: string): boolean => id.length > 0)
 		);
 	}
 

@@ -1,6 +1,6 @@
-import { EmployersState } from "./EmployersState";
-
 import { LocalizedStrings } from "../../common/LocalizedStrings";
+
+import { EmployersState } from "./EmployersState";
 
 export interface AppState {
 	employers: EmployersState;

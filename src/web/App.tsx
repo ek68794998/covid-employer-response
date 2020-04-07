@@ -8,7 +8,7 @@ import Home from "./views/Home/Home";
 
 import "./App.scss";
 
-export default (): JSX.Element => (
+const App: React.FC = (): React.ReactElement => (
 	<>
 		<HeaderMenu />
 		<Switch>
@@ -18,3 +18,5 @@ export default (): JSX.Element => (
 		<FooterMenu />
 	</>
 );
+
+export default App;

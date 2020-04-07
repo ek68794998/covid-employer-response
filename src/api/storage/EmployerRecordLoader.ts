@@ -25,14 +25,14 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 		return (
 			fileNames
 				.map((fileName: string): string => {
-					const regexResult: RegExpExecArray | null = EmployerRecordLoader.employerFileNameRegex.exec(fileName);
+					const regexResult: RegExpExecArray | null =
+						EmployerRecordLoader.employerFileNameRegex.exec(fileName);
+
 					const recordId: string | null = regexResult && regexResult[1].toString();
 
 					return recordId || "";
 				})
-				.filter((recordId: string): boolean => {
-					return recordId.length > 0 && recordId !== "sample";
-				})
+				.filter((recordId: string): boolean => recordId.length > 0 && recordId !== "sample")
 		);
 	}
 
