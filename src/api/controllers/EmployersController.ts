@@ -3,6 +3,7 @@ import express from "express";
 import { EmployerRecord } from "../../common/EmployerRecord";
 import { HttpRequestHeaders } from "../../common/http/HttpRequestHeaders";
 import { HttpResponseHeaders } from "../../common/http/HttpResponseHeaders";
+import { MimeTypes } from "../../common/MimeTypes";
 
 import { EmployerRecordLoader } from "../storage/EmployerRecordLoader";
 
@@ -45,7 +46,7 @@ class EmployersController extends RoutedControllerBase {
 
 		res.setHeader("Results-Returned", returnedEmployers.length);
 		res.setHeader("Results-Total", this.employers.length);
-		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, "application/json");
+		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, MimeTypes.APPLICATION_JSON);
 		res.send(returnedEmployers);
 	}
 
