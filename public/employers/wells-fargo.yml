@@ -1,0 +1,52 @@
+name: Wells Fargo & Company
+shortName: Wells Fargo
+ticker: WFC
+wiki: Wells Fargo
+image: wells-fargo.svg
+officialWebsite: https://www.wellsfargo.com/about/
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: true # Wells Fargo Bank, N.A. is national but the holding company WF&C is multinational.
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 258700
+  year: 2018
+summary: Though Wells Fargo is reportedly increasing cleaning procedures and trying to allow call-center employees to work from home, there have been reports of employees not being told that coworkers have tested positive, and general disregard for safety from management.
+citations:
+  - summary: After two workers at a Wells Fargo call center in North Carolina tested positive, workers there were reportedly told to "continue to work, wipe [their] desks down."
+    positivity: -1
+    type: statement
+    sources:
+      - name: WSOCTV
+        link: https://www.wsoctv.com/news/local/2-workers-charlotte-wells-fargo-call-center-test-positive-covid-19/6TWOI5HWHVEUVHMR6TMT3ZZB6I/
+        date: 2020-04-02T21:45:51Z
+  - summary: Wells Fargo has stated that they are attempting to institute social distancing and testing a pilot program to allow call-center employee to work-from-home.
+    positivity: 1
+    type: publication
+    sources:
+      - name: "Charlotte Observer: Call center updates"
+        link: https://www.charlotteobserver.com/news/coronavirus/article241645906.html
+        date: 2020-04-01T10:20:00-04:00
+      - name: "Charlotte Observer: Raleigh report"
+        link: https://www.charlotteobserver.com/news/coronavirus/article241685621.html
+        date: 2020-04-01T18:17:00-04:00
+  - summary: Two workers stationed at a call center in Raleigh have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - name: "Charlotte Observer: Raleigh report"
+        link: https://www.charlotteobserver.com/news/coronavirus/article241685621.html
+        date: 2020-04-01T18:17:00-04:00
+  - summary: "Related to the report of two workers testing positive: An employee stationed at that call center reported that the diagnoses had been weeks prior, but staff there had not been informed, and instead found out through a newspaper headline. Other employees and their relatives report similar stories."
+    positivity: -2
+    type: hearsay
+    sources:
+      - name: "Twitter: Marley K"
+        link: https://web.archive.org/web/20200402111543/https://twitter.com/MarleyK20/status/1245361778994839552
+        date: 2020-04-01T14:46:00Z
+      - name: Reddit r/trashy
+        link: https://web.archive.org/web/20200406215049/https://www.reddit.com/r/trashy/comments/fw2z0m/screw_wells_fargo/
+        date: 2020-04-06T10:30:51-07:00
