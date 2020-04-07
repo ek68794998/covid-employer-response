@@ -3,11 +3,8 @@ import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { getEmployers as getEmployersRequest } from "../../state/ducks/employers/actions";
-import { getEmployers } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerList from "../EmployerList/EmployerList";
@@ -21,7 +18,6 @@ const Home: React.FC = (): React.ReactElement => {
 	const [ isTopButtonVisible, setIsTopButtonVisible ] = useState(false);
 
 	const strings: LocalizedStrings = useSelector(getStrings);
-	const employers: EmployerRecord[] = useSelector(getEmployers);
 
 	const dispatch: React.Dispatch<any> = useDispatch();
 
@@ -41,12 +37,6 @@ const Home: React.FC = (): React.ReactElement => {
 			[]);
 	}
 
-	useEffect(
-		() => {
-			dispatch(getEmployersRequest);
-		},
-		[]);
-
 	const backToTopComponent: JSX.Element =
 		<button className="Home__BackToTop" onClick={(): void => { window.scrollTo(window.scrollX, 0); }}>
 			<i className="material-icons">arrow_upward</i>
@@ -61,7 +51,7 @@ const Home: React.FC = (): React.ReactElement => {
 				<EmployerListSearch onChange={setSearchFilters} />
 			</div>
 			<div className="Home__Content">
-				<EmployerList employers={employers} searchFilter={searchFilters} />
+				<EmployerList searchFilter={searchFilters} />
 			</div>
 			{isTopButtonVisible && backToTopComponent}
 		</main>

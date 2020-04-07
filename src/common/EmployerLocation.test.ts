@@ -12,26 +12,18 @@ describe("EmployerLocation", () => {
 	});
 
 	test.each([
-		[ { city: "Foo", country: "Bar", international: false }, false, "Foo, Bar" ],
-		[ { city: "Foo Bar", country: "Baz", international: false }, false, "Foo Bar, Baz" ],
-		[ { city: "Foo", country: "Bar", international: true }, false, "Foo, Bar (Multinational)" ],
-		[ { city: "Foo Bar", country: "Baz", international: true }, false, "Foo Bar, Baz (Multinational)" ],
-		[ { city: "Foo", country: "Bar", international: false, state: "Den" }, false, "Foo, Den, Bar" ],
-		[ { city: "Foo Bar", country: "Baz", international: false, state: "Den" }, false, "Foo Bar, Den, Baz" ],
-		[ { city: "Foo", country: "Bar", international: true, state: "Den" }, false, "Foo, Den, Bar (Multinational)" ],
-		[ { city: "Foo Ba", country: "Baz", international: true, state: "Den" }, false, "Foo Ba, Den, Baz (Multinational)" ],
-		[ { city: "Foo", country: "Bar", international: false }, false, "Foo, Bar" ],
-		[ { city: "Foo Bar", country: "Baz", international: false }, true, "Foo Bar, Baz" ],
-		[ { city: "Foo", country: "Bar", international: true }, true, "Foo, Bar" ],
-		[ { city: "Foo Bar", country: "Baz", international: true }, true, "Foo Bar, Baz" ],
-		[ { city: "Foo", country: "Bar", international: false, state: "Den" }, true, "Foo, Bar" ],
-		[ { city: "Foo Bar", country: "Baz", international: false, state: "Den" }, true, "Foo Bar, Baz" ],
-		[ { city: "Foo", country: "Bar", international: true, state: "Den" }, true, "Foo, Bar" ],
-		[ { city: "Foo Bar", country: "Baz", international: true, state: "Den" }, true, "Foo Bar, Baz" ],
+		[ { city: "Foo", country: "Bar", international: false }, "Foo, Bar" ],
+		[ { city: "Foo Bar", country: "Baz", international: false }, "Foo Bar, Baz" ],
+		[ { city: "Foo", country: "Bar", international: true }, "Foo, Bar (Multinational)" ],
+		[ { city: "Foo Bar", country: "Baz", international: true }, "Foo Bar, Baz (Multinational)" ],
+		[ { city: "Foo", country: "Bar", international: false, state: "Den" }, "Foo, Den, Bar" ],
+		[ { city: "Foo Bar", country: "Baz", international: false, state: "Den" }, "Foo Bar, Den, Baz" ],
+		[ { city: "Foo", country: "Bar", international: true, state: "Den" }, "Foo, Den, Bar (Multinational)" ],
+		[ { city: "Foo Ba", country: "Baz", international: true, state: "Den" }, "Foo Ba, Den, Baz (Multinational)" ],
 	])(
 		"toString properly generates based on EmployerLocation fields (%#)",
-		(l: EmployerLocation, short: boolean, expected: string) => {
-			expect(EmployerLocation.toString(l, {}, short)).toBe(expected);
+		(l: EmployerLocation, expected: string) => {
+			expect(EmployerLocation.toString(l, {})).toBe(expected);
 		},
 	);
 });

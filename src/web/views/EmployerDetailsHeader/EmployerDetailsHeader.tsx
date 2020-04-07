@@ -87,10 +87,9 @@ const getLocationWikipediaComponent =
 		}
 
 		const locationString: string =
-			EmployerLocation.toString(
-				employer.location,
-				useShortText ? strings.countryAbbreviations : strings.countryNames,
-				useShortText);
+			useShortText
+				? employer.location.city
+				: EmployerLocation.toString(employer.location, strings.countryNames);
 
 		const locationWikipediaUrl: string | null = WikipediaHelpers.getWikipediaUrl(employer.location.wiki);
 
@@ -106,7 +105,10 @@ const getLocationWikipediaComponent =
 				target="_blank"
 				title={strings.detailDescriptions.location}
 			>
-				<img src={`/images/flags/${employer.location.country}.svg`} />
+				<img
+					src={`/images/flags/${employer.location.country}.svg`}
+					title={strings.countryNames[employer.location.country]}
+				/>
 				{locationString}
 			</a>
 		);

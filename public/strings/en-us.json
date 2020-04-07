@@ -12,12 +12,6 @@
     "statement": "Statements",
     "hearsay": "Hearsay"
   },
-  "countryAbbreviations": {
-    "ca": "CA.",
-    "gb": "U.K.",
-    "jp": "Japan",
-    "us": "U.S."
-  },
   "countryNames": {
     "af": "Afghanistan",
     "al": "Albania",

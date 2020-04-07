@@ -12,6 +12,6 @@ export class GetEmployersApiResponse {
 }
 
 export const getEmployersApi = (): Promise<GetEmployersApiResponse> =>
-	fetch("/api/employers", { method: "GET" })
+	fetch("/api/employers?$select=*", { method: "GET" })
 		.then((response: Response) => Promise.all([ response, response.json() ]))
 		.then((value: [ Response, EmployerRecord[] ]) => new GetEmployersApiResponse(value[1], value[0]));
