@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
+<div
+  className="EmployerPageDetails__Container"
+>
+  [component: EmployerDetailsHeader employer=([object Object]) /]
+  <div
+    className="EmployerPageDetails__Body"
+  >
+    <div
+      className="EmployerPageDetails__Summary"
+    >
+      Contoso is a good company.
+    </div>
+    [component: EmployerCitationList citations=([object Object]) citationSourceBase=(1) citationType=(publication) /]
+    [component: EmployerCitationList citations=([object Object]) citationSourceBase=(2) citationType=(statement) /]
+    [component: EmployerCitationList citations=([object Object]) citationSourceBase=(3) citationType=(hearsay) /]
+  </div>
+</div>
+`;
+
 exports[`<EmployerPageDetails /> renders without exploding 1`] = `
 <div
   className="EmployerPageDetails__Container"
