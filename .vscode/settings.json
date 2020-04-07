@@ -10,7 +10,7 @@
     "editor.detectIndentation": false,
     "editor.insertSpaces": false,
     "eslint.nodePath": "./node_modules",
-    "eslint.options": { "configFile": "./.eslintrc.js" },
+    "eslint.options": { "configFile": "./.eslintrc.yml" },
     "eslint.packageManager": "yarn",
     "files.exclude": {
         "**/.git": true,
