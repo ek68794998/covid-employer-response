@@ -36,7 +36,6 @@ describe("<EmployerList />", () => {
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerList
-							employers={[ new EmployerRecord() ]}
 							searchFilter={new EmployerListSearchFilter()}
 						/>
 					</BrowserRouter>

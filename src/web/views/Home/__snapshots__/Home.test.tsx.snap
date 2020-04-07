@@ -12,7 +12,7 @@ exports[`<Home /> renders without exploding 1`] = `
   <div
     className="Home__Content"
   >
-    [component: EmployerList employers=(undefined) searchFilter=([object Object]) /]
+    [component: EmployerList searchFilter=([object Object]) /]
   </div>
 </main>
 `;
