@@ -1,3 +1,6 @@
+/* eslint-disable max-len */
+/* The max-len detection in ESLint is not as good as TSLint so it doesn't work well with this file. */
+
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useSelector } from "react-redux";
@@ -16,6 +19,9 @@ const About: React.FC = (): React.ReactElement => {
 	const coronavirusWikipediaUrl: string = "https://en.wikipedia.org/wiki/Coronavirus_disease_2019";
 	const coronavirusPandemicWikipediaUrl: string = "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic";
 
+	const makeExternalLink = (url: string, text: string): JSX.Element =>
+		<a href={url} rel="noopener noreferrer" target="_blank">{text}</a>;
+
 	return (
 		<main id="about">
 			<Helmet>
@@ -25,18 +31,18 @@ const About: React.FC = (): React.ReactElement => {
 				<h2 id="what-is">What is {strings.appTitleShort}?</h2>
 				<p>
 					<strong>{strings.appTitleShort}</strong> ({strings.appTitle}) is a collaborative, open-source project designed to
-					track the responses of employers to the <a href={coronavirusWikipediaUrl} target="_blank">coronavirus</a>
-					&nbsp;(COVID-19) <a href={coronavirusPandemicWikipediaUrl} target="_blank">pandemic of 2019&ndash;2020</a>. It is
+					track the responses of employers to the {makeExternalLink(coronavirusWikipediaUrl, "coronavirus")}
+					&nbsp;(COVID-19) {makeExternalLink(coronavirusPandemicWikipediaUrl, `pandemic of 2019${String.fromCharCode(8211)}2020`)}. It is
 					built using information sourced from a number of places and categorizes it based on how reliable the original
 					information source is considered to be. For more information, please visit&nbsp;
-					<a href={ProjectUrl} target="_blank">the project's page on GitHub</a>.
+					{makeExternalLink(ProjectUrl, "the project's page on GitHub")}.
 				</p>
 
 				<h2 id="contributing">Can I help?</h2>
 				<p>
 					Yes! {strings.appTitleShort} is open-source and open-data and we'd love to have your help! You can help by
 					submitting new employer claims and changes, or by submitting code changes to the site through&nbsp;
-					<a href={ProjectUrl} target="_blank">GitHub</a>.
+					{makeExternalLink(ProjectUrl, "GitHub")}.
 				</p>
 
 				<h2 id="reports-and-claims">What are employer claims and reports?</h2>

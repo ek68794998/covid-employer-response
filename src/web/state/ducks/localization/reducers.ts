@@ -1,6 +1,6 @@
-import { GetAllType } from "./types";
-
 import { LocalizedStrings } from "../../../../common/LocalizedStrings";
+
+import { GetAllType } from "./types";
 
 export const getLocalizedStrings = (state: LocalizedStrings = {}, action: LocalizedStrings): LocalizedStrings => {
 	switch (action.type) {

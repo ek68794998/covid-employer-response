@@ -6,9 +6,7 @@ import { EmployerRecord } from "../common/EmployerRecord";
 const directory: string = "./public";
 const subDirectory: string = "employers";
 
-const dateToNumber = (date: string | Date | null): number => {
-	return new Date(date || "").getTime();
-};
+const dateToNumber = (date: string | Date | null): number => new Date(date || "").getTime();
 
 const recordIds: string[] =
 	fs.readdirSync(`${directory}/${subDirectory}`)
@@ -24,7 +22,7 @@ describe("employer records", () => {
 	});
 
 	test.each(
-		recordIds.map((recordId: string) => [ recordId ])
+		recordIds.map((recordId: string) => [ recordId ]),
 	)("can load and parse %p (%#)", async (recordId: string) => {
 		const record: EmployerRecord = await loader.loadAsync(recordId);
 

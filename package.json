@@ -5,6 +5,7 @@
   "scripts": {
     "build": "razzle build",
     "debug": "razzle start --inspect --inspect-port=9230",
+    "lint:ts": "eslint --ext=jsx,ts,tsx src",
     "postinstall": "npm rebuild node-sass",
     "start": "razzle start",
     "start:prod": "node build/server.js",
@@ -47,7 +48,14 @@
     "@types/serialize-javascript": "^1.5.0",
     "@types/webpack-env": "^1.13.6",
     "@types/yaml": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
     "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prefer-arrow": "^1.1.7",
+    "eslint-plugin-react": "^7.19.0",
     "jest": "^25.2.3",
     "razzle": "^3.0.0",
     "razzle-plugin-scss": "^3.0.0",
@@ -55,7 +63,6 @@
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^25.0.0",
     "tslint": "^5.19.0",
-    "tslint-react": "^4.0.0",
     "typescript": "^3.2.2"
   },
   "jest": {

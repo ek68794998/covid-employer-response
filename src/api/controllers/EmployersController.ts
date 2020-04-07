@@ -9,8 +9,7 @@ import { RoutedControllerBase } from "./RoutedControllerBase";
 class EmployersController extends RoutedControllerBase {
 	public static readonly SUBPATH: string = "employers";
 
-	private readonly recordLoader: EmployerRecordLoader =
-		new EmployerRecordLoader(process.env.RAZZLE_PUBLIC_DIR || "/", "employers");
+	private readonly recordLoader: EmployerRecordLoader = new EmployerRecordLoader(process.env.RAZZLE_PUBLIC_DIR || "/", "employers");
 
 	private employers: EmployerRecord[] = [];
 

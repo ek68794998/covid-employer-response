@@ -32,7 +32,10 @@ describe("<EmployerListDetails />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListDetails employer={new EmployerRecord()} onClick={(): void => { /* Do nothing. */ }} />
+						<EmployerListDetails
+							employer={new EmployerRecord()}
+							onClick={(): void => { /* Do nothing. */ }}
+						/>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
