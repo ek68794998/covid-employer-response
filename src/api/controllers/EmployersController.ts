@@ -1,6 +1,8 @@
 import express from "express";
 
 import { EmployerRecord } from "../../common/EmployerRecord";
+import { HttpRequestHeaders } from "../../common/http/HttpRequestHeaders";
+import { HttpResponseHeaders } from "../../common/http/HttpResponseHeaders";
 
 import { EmployerRecordLoader } from "../storage/EmployerRecordLoader";
 
@@ -18,7 +20,7 @@ class EmployersController extends RoutedControllerBase {
 	private employers: EmployerRecord[] = [];
 
 	public async getEmployersList(req: express.Request, res: express.Response): Promise<void> {
-		if (!req.header("if-none-match") || this.employers.length === 0) {
+		if (!req.header(HttpRequestHeaders.IF_NONE_MATCH) || this.employers.length === 0) {
 			this.employers = await this.recordLoader.loadAllAsync();
 		}
 
@@ -37,13 +39,13 @@ class EmployersController extends RoutedControllerBase {
 		const employers: EmployerRecord[] =
 			isDetailed
 				? this.employers
-				: this.employers.filter((e: EmployerRecord) => EmployerRecord.shallowClone(e, false));
+				: this.employers.map((e: EmployerRecord) => EmployerRecord.shallowClone(e, false));
 
 		const returnedEmployers: EmployerRecord[] = employers.slice(skipNumber, skipNumber + topNumber);
 
-		res.setHeader("results-returned", returnedEmployers.length);
-		res.setHeader("results-total", this.employers.length);
-		res.setHeader("content-type", "application/json");
+		res.setHeader("Results-Returned", returnedEmployers.length);
+		res.setHeader("Results-Total", this.employers.length);
+		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, "application/json");
 		res.send(returnedEmployers);
 	}
 
