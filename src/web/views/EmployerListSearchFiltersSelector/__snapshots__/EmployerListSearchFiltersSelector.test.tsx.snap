@@ -1,17 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EmployerListSearchFiltersSelector /> renders without exploding 1`] = `
-<span>
-  <input
-    defaultChecked={true}
-    id="EmployerListSearchFiltersSelector-3739635f"
-    onChange={[Function]}
-    type="radio"
-  />
-  <label
-    htmlFor="EmployerListSearchFiltersSelector-3739635f"
-  >
-    foo
-  </label>
-</span>
+exports[`<EmployerListSearchFiltersSelector /> renders as checkboxes 1`] = `
+Array [
+  <span>
+    <input
+      defaultChecked={true}
+      id="EmployerListSearchFiltersSelector-3739635f"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      htmlFor="EmployerListSearchFiltersSelector-3739635f"
+    >
+      Foo Check 1
+    </label>
+  </span>,
+  <span>
+    <input
+      defaultChecked={false}
+      id="EmployerListSearchFiltersSelector-3739635f"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      htmlFor="EmployerListSearchFiltersSelector-3739635f"
+    >
+      Foo Check 2
+    </label>
+  </span>,
+  <span>
+    <input
+      defaultChecked={true}
+      id="EmployerListSearchFiltersSelector-3739635f"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      htmlFor="EmployerListSearchFiltersSelector-3739635f"
+    >
+      Foo Check 3
+    </label>
+  </span>,
+]
+`;
+
+exports[`<EmployerListSearchFiltersSelector /> renders as radio buttons 1`] = `
+Array [
+  <span>
+    <input
+      defaultChecked={false}
+      id="EmployerListSearchFiltersSelector-3739635f"
+      onChange={[Function]}
+      type="radio"
+    />
+    <label
+      htmlFor="EmployerListSearchFiltersSelector-3739635f"
+    >
+      Foo Radio 1
+    </label>
+  </span>,
+  <span>
+    <input
+      defaultChecked={true}
+      id="EmployerListSearchFiltersSelector-3739635f"
+      onChange={[Function]}
+      type="radio"
+    />
+    <label
+      htmlFor="EmployerListSearchFiltersSelector-3739635f"
+    >
+      Foo Radio 2
+    </label>
+  </span>,
+  <span>
+    <input
+      defaultChecked={true}
+      id="EmployerListSearchFiltersSelector-3739635f"
+      onChange={[Function]}
+      type="radio"
+    />
+    <label
+      htmlFor="EmployerListSearchFiltersSelector-3739635f"
+    >
+      Foo Radio 3
+    </label>
+  </span>,
+]
 `;

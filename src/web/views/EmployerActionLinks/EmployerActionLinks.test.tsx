@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { ploc } from "../../../__tests__/TestUtils";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
 import { AppState } from "../../state/AppState";
@@ -16,9 +17,9 @@ describe("<EmployerActionLinks />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				detailDescriptions: {
-					edit: "èδïƭ",
-					officialWebsite: "ôƒƒïçïáℓWèβƨïƭè",
-					wikipedia: "ωïƙïƥèδïá",
+					edit: ploc("editDescription"),
+					officialWebsite: ploc("officialWebsiteDescription"),
+					wikipedia: ploc("wikipediaDescription"),
 				},
 			},
 		});

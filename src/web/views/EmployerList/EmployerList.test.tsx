@@ -4,11 +4,15 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent } from "../../../__tests__/TestUtils";
+import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { EmployerLocation } from "../../../common/EmployerLocation";
+import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
+import * as Actions from "../../state/ducks/employers/actions";
 
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 
@@ -23,13 +27,15 @@ jest.mock(
 	() => mockComponent("EmployerPageDetails"));
 
 describe("<EmployerList />", () => {
+	const strings: LocalizedStrings = {
+		loading: ploc("loading"),
+		noResults: ploc("noResults"),
+	};
+
+	const createConfigStore = (): Store<AppState, AnyAction> => configureStore({ strings });
+
 	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				loading: "ℓôáδïñϱ",
-				noResults: "ñôRèƨúℓƭƨ",
-			},
-		});
+		const store: Store<AppState, AnyAction> = createConfigStore();
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
@@ -41,6 +47,94 @@ describe("<EmployerList />", () => {
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
+
+		expect(renderedValue).toMatchSnapshot();
+	});
+
+	test("renders empty list of employers", () => {
+		const store: Store<AppState, AnyAction> = configureStore({
+			employers: {
+				items: [
+					{
+						...new EmployerRecord(),
+						employeesBefore: new EmployerEmployeeProfile(),
+						id: "e1",
+						location: new EmployerLocation(),
+						name: "Alpha",
+					},
+				],
+			},
+			strings,
+		});
+
+		const filter: EmployerListSearchFilter = new EmployerListSearchFilter();
+
+		filter.text = "NORESULTSPLEASE";
+
+		jest.spyOn(Actions, "getEmployers").mockReturnValue(Promise.resolve());
+
+		const renderedValue: ReactTestRendererJSON | null =
+			renderer.create(
+				<Provider store={store}>
+					<BrowserRouter>
+						<EmployerList
+							searchFilter={filter}
+						/>
+					</BrowserRouter>
+				</Provider>,
+			).toJSON();
+
+		expect(renderedValue).toMatchSnapshot();
+	});
+
+	test("renders list of employers", () => {
+		const store: Store<AppState, AnyAction> = configureStore({
+			employers: {
+				items: [
+					{
+						...new EmployerRecord(),
+						employeesBefore: new EmployerEmployeeProfile(),
+						id: "e1",
+						location: new EmployerLocation(),
+						name: "Alpha",
+					},
+					{
+						...new EmployerRecord(),
+						employeesBefore: new EmployerEmployeeProfile(),
+						id: "e2",
+						location: new EmployerLocation(),
+						name: "Beta",
+					},
+					{
+						...new EmployerRecord(),
+						employeesBefore: new EmployerEmployeeProfile(),
+						id: "e3",
+						location: new EmployerLocation(),
+						name: "Delta",
+					},
+				],
+			},
+			strings,
+		});
+
+		const filter: EmployerListSearchFilter = new EmployerListSearchFilter();
+
+		filter.text = "TA";
+
+		jest.spyOn(Actions, "getEmployers").mockReturnValue(Promise.resolve());
+
+		const renderedValue: ReactTestRendererJSON | null =
+			renderer.create(
+				<Provider store={store}>
+					<BrowserRouter>
+						<EmployerList
+							searchFilter={filter}
+						/>
+					</BrowserRouter>
+				</Provider>,
+			).toJSON();
+
+		expect(Actions.getEmployers).toHaveBeenCalled();
 
 		expect(renderedValue).toMatchSnapshot();
 	});
