@@ -20,6 +20,7 @@ exports[`<About /> renders without exploding 1`] = `
       ) is a collaborative, open-source project designed to track the responses of employers to the 
       <a
         href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"
+        rel="noopener noreferrer"
         target="_blank"
       >
         coronavirus
@@ -27,6 +28,7 @@ exports[`<About /> renders without exploding 1`] = `
        (COVID-19) 
       <a
         href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic"
+        rel="noopener noreferrer"
         target="_blank"
       >
         pandemic of 2019–2020
@@ -34,6 +36,7 @@ exports[`<About /> renders without exploding 1`] = `
       . It is built using information sourced from a number of places and categorizes it based on how reliable the original information source is considered to be. For more information, please visit 
       <a
         href="https://github.com/ekumlin/covid-employer-response"
+        rel="noopener noreferrer"
         target="_blank"
       >
         the project's page on GitHub
@@ -50,6 +53,7 @@ exports[`<About /> renders without exploding 1`] = `
        is open-source and open-data and we'd love to have your help! You can help by submitting new employer claims and changes, or by submitting code changes to the site through 
       <a
         href="https://github.com/ekumlin/covid-employer-response"
+        rel="noopener noreferrer"
         target="_blank"
       >
         GitHub

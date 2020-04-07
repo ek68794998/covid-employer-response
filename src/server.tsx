@@ -25,7 +25,7 @@ import configureStore from "./web/state/configureStore";
 import { getIsProd } from "./web/state/ducks/environment/selectors";
 import { getLocalizedStringsSuccess } from "./web/state/ducks/localization/actions";
 
-export const DEFAULT_LANGUAGE: string = "en-us";
+export const defaultLanguage: string = "en-us";
 
 let assets: any;
 
@@ -39,7 +39,7 @@ const localeLoader: LocaleLoader =
 	new LocaleLoader(process.env.RAZZLE_PUBLIC_DIR || "", "strings");
 
 const localizationMiddleware: LocalizationMiddleware =
-	new LocalizationMiddleware(DEFAULT_LANGUAGE, localeLoader);
+	new LocalizationMiddleware(defaultLanguage, localeLoader);
 
 const server: express.Application = express()
 	.disable("x-powered-by")
@@ -53,7 +53,7 @@ const server: express.Application = express()
 
 		const localeCode: string = request.languageCode.toLowerCase();
 
-		const defaultLocaleData: LocalizedStrings = await localeLoader.loadAsync(DEFAULT_LANGUAGE);
+		const defaultLocaleData: LocalizedStrings = await localeLoader.loadAsync(defaultLanguage);
 		const currentLocaleData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
 
 		const localeData: LocalizedStrings = deepmerge(defaultLocaleData, currentLocaleData);
@@ -87,6 +87,22 @@ const server: express.Application = express()
 
 		const appState: AppState = store.getState();
 
+		const stylesheetTag: string =
+			assets.client.css
+				? `<link rel="stylesheet" href="${assets.client.css}" />`
+				: "";
+
+		const scriptTag: string =
+			getIsProd(appState)
+				? `<script src="${assets.client.js}" defer></script>`
+				: `<script src="${assets.client.js}" defer crossorigin></script>`;
+
+		const metaDescription: string =
+			"A collaborative, open-source project designed to track the responses of employers to the coronavirus (COVID-19) pandemic of 2019-2020.";
+
+		const googleFontsUrl: string =
+			"https://fonts.googleapis.com/css2?family=Material+Icons&family=Merriweather:wght@300&family=Baloo+Chettan+2:wght@400;500&display=swap";
+
 		res.send(
 			`<!doctype html>
 				<html lang="${localeCode}">
@@ -99,28 +115,20 @@ const server: express.Application = express()
 					<meta property="og:url" content="${completeUrl}" />
 					<meta property="og:image" content="${baseUrl}/favicon-32x32.png" />
 					<meta property="og:type" content="website" />
-					<meta property="og:description" content="A collaborative, open-source project designed to track the responses of employers to the coronavirus (COVID-19) pandemic of 2019-2020." />
+					<meta property="og:description" content="${metaDescription}." />
 					<meta property="og:locale" content="${localeCode}" />
 					${alternateLocaleMetaTags.join("")}
 					<meta property="og:site_name" content="${localeData.appTitle}" />
 					<meta property="og:determiner" content="the" />
-					${
-						assets.client.css
-							? `<link rel="stylesheet" href="${assets.client.css}" />`
-							: ""
-					}
-					<link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Merriweather:wght@300&family=Baloo+Chettan+2:wght@400;500&display=swap" rel="stylesheet" />
+					${stylesheetTag}
+					<link href="${googleFontsUrl}" rel="stylesheet" />
 				</head>
 				<body>
 					<div id="root">${markup}</div>
 					<script>
 						window.__PRELOADED_STATE__ = ${serialize(appState)}
 					</script>
-					${
-						getIsProd(appState)
-							? `<script src="${assets.client.js}" defer></script>`
-							: `<script src="${assets.client.js}" defer crossorigin></script>`
-					}
+					${scriptTag}
 				</body>
 			</html>`,
 		);

@@ -1,9 +1,9 @@
 type ComponentGenerator = (props: {}) => string;
 
-export const mockComponent = (componentName: string): ComponentGenerator => {
-	return (props: {}): string => {
+export const mockComponent = (componentName: string): ComponentGenerator =>
+	(props: {}): string => {
 		const openingTag: string = `[component: ${componentName}`;
-		const closingTag: string = `/]`;
+		const closingTag: string = "/]";
 
 		const propKeys: string[] = Object.keys(props);
 
@@ -27,4 +27,3 @@ export const mockComponent = (componentName: string): ComponentGenerator => {
 
 		return `${openingTag} ${propsList.join(" ")} ${closingTag}`;
 	};
-};

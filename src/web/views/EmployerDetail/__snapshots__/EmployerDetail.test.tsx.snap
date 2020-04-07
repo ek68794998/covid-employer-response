@@ -4,6 +4,7 @@ exports[`<EmployerDetail /> renders without exploding 1`] = `
 <a
   className="EmployerDetail__Container"
   href="http://example.com"
+  rel="noopener noreferrer"
   target="_blank"
 >
   <i

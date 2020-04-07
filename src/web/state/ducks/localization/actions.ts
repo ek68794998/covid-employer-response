@@ -1,10 +1,8 @@
-import { GetAllType, GetStringsActionTypes } from "./types";
-
 import { LocalizedStrings } from "../../../../common/LocalizedStrings";
 
-export const getLocalizedStringsSuccess = (payload: LocalizedStrings): GetStringsActionTypes => {
-	return {
-		payload,
-		type: GetAllType,
-	};
-};
+import { GetAllType, GetStringsActionTypes } from "./types";
+
+export const getLocalizedStringsSuccess = (payload: LocalizedStrings): GetStringsActionTypes => ({
+	payload,
+	type: GetAllType,
+});

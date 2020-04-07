@@ -1,6 +1,6 @@
-import { GetAllType } from "./types";
-
 import { EmployersState } from "../../EmployersState";
+
+import { GetAllType } from "./types";
 
 export const getEmployers = (state: EmployersState | null = null, action: any): EmployersState | null => {
 	switch (action.type) {

@@ -38,7 +38,13 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/about">
 				{strings.about}
 			</NavLink>
-			<a className="HeaderMenu__Link" href={`${ProjectIssueSubmissionUrl}`} onClick={closeHamburgerMenu} target="_blank">
+			<a
+				className="HeaderMenu__Link"
+				href={`${ProjectIssueSubmissionUrl}`}
+				onClick={closeHamburgerMenu}
+				rel="noopener noreferrer"
+				target="_blank"
+			>
 				{strings.submit}
 			</a>
 		</>
@@ -48,7 +54,11 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		isTest
 			? null
 			: (
-				<HamburgerMenu customBurgerIcon={false} isOpen={isHamburgerMenuOpen} onStateChange={onHamburgerMenuStateChanged}>
+				<HamburgerMenu
+					customBurgerIcon={false}
+					isOpen={isHamburgerMenuOpen}
+					onStateChange={onHamburgerMenuStateChanged}
+				>
 					{navLinks}
 				</HamburgerMenu>
 			);

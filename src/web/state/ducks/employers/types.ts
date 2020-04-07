@@ -9,7 +9,6 @@ interface GetEmployersAction extends Action<typeof GetAllType> {
 	payload: EmployerRecord[];
 }
 
-interface GetEmployersErrorAction extends Action<typeof GetAllErrorType> {
-}
+type GetEmployersErrorAction = Action<typeof GetAllErrorType>;
 
 export type GetEmployersActionTypes = GetEmployersAction | GetEmployersErrorAction;

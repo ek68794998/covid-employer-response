@@ -10,17 +10,19 @@ export class EmployerLocation {
 	public wiki?: string;
 
 	public static toString(
-		location: EmployerLocation,
+		employerLocation: EmployerLocation,
 		countryCodeMap?: { [key: string]: string }): string {
 
 		const country: string =
-			(countryCodeMap && location.country in countryCodeMap) ? countryCodeMap[location.country] : location.country;
+			(countryCodeMap && employerLocation.country in countryCodeMap)
+				? countryCodeMap[employerLocation.country]
+				: employerLocation.country;
 
 		const locationAsString: string =
-			location.state
-				? `${location.city}, ${location.state}, ${country}`
-				: `${location.city}, ${country}`;
+			employerLocation.state
+				? `${employerLocation.city}, ${employerLocation.state}, ${country}`
+				: `${employerLocation.city}, ${country}`;
 
-		return location.international ? `${locationAsString} (Multinational)` : locationAsString;
+		return employerLocation.international ? `${locationAsString} (Multinational)` : locationAsString;
 	}
 }

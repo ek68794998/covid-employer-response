@@ -32,7 +32,8 @@ export class LocalizationMiddleware {
 		}
 
 		const request: HttpRequest = req as HttpRequest;
-		const isValidLanguage = (code: string): boolean => this.supportedLanguages.indexOf(code && code.toLowerCase()) >= 0;
+		const isValidLanguage = (code: string): boolean =>
+			this.supportedLanguages.indexOf(code && code.toLowerCase()) >= 0;
 
 		let userLanguage: string = this.defaultLanguage;
 

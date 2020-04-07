@@ -1,23 +1,26 @@
 {
-	"[json]": {
-		"editor.insertSpaces": true,
-		"editor.tabSize": 2
-	},
-	"[yml]": {
-		"editor.insertSpaces": true,
-		"editor.tabSize": 2
-	},
-	"editor.insertSpaces": false,
-	"editor.detectIndentation": false,
-	"files.exclude": {
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"**/__snapshots__/**": true,
-		"build/**": true,
-		"coverage/**": true,
-		"node_modules/**": true
-	}
+    "[json]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+    "[yml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "eslint.nodePath": "./node_modules",
+    "eslint.options": { "configFile": "./.eslintrc.yml" },
+    "eslint.packageManager": "yarn",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__snapshots__/**": true,
+        "build/**": true,
+        "coverage/**": true,
+        "node_modules/**": true
+    }
 }

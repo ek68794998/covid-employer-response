@@ -23,23 +23,23 @@ class EmployersController extends RoutedControllerBase {
 		}
 
 		// TODO Allow individual field selection as well.
-		const isDetailed: boolean = req.params["$select"] === "*";
+		const isDetailed: boolean = req.params.$select === "*";
 
 		const max: number =
 			isDetailed ? EmployersController.MAX_GETEMPLOYERS_DETAILED : EmployersController.MAX_GETEMPLOYERS_STANDARD;
 
-		const skipParam: string = req.params["$skip"] || "0";
-		const topParam: string = req.params["$top"] || `${max}`;
+		const skipParam: string = req.params.$skip || "0";
+		const topParam: string = req.params.$top || `${max}`;
 
-		const skip: number = parseInt(skipParam);
-		const top: number = parseInt(topParam);
+		const skipNumber: number = parseInt(skipParam, 10);
+		const topNumber: number = parseInt(topParam, 10);
 
 		const employers: EmployerRecord[] =
 			isDetailed
 				? this.employers
 				: this.employers.filter((e: EmployerRecord) => e.shallowClone(false));
 
-		const returnedEmployers: EmployerRecord[] = employers.slice(skip, skip + top);
+		const returnedEmployers: EmployerRecord[] = employers.slice(skipNumber, skipNumber + topNumber);
 
 		res.setHeader("results-returned", returnedEmployers.length);
 		res.setHeader("results-total", this.employers.length);

@@ -20,7 +20,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install packages
       run: yarn install
+    - name: Run linting
+      run: |
+        yarn lint:ts
+        echo "Lint process exited with status code $?."
     - name: Run unit tests
       run: |
         yarn test:ci
-        echo "Process exited with status code $?."
+        echo "Test process exited with status code $?."

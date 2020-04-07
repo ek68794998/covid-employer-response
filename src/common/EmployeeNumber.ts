@@ -11,6 +11,22 @@ export class EmployeeNumber {
 		this.magnitude = EmployeeNumber.getEmployeeMagnitude(value);
 	}
 
+	private static getEmployeeMagnitude(value: number): EmployeeMagnitude {
+		if (value >= 1000000000) {
+			return 9;
+		}
+
+		if (value >= 1000000) {
+			return 6;
+		}
+
+		if (value >= 1000 && value % 1000 === 0) {
+			return 3;
+		}
+
+		return null;
+	}
+
 	public getAdjustedValue(): number {
 		return this.magnitude
 			? Math.round(this.exactValue / Math.pow(10, this.magnitude - 1)) / 10
@@ -40,21 +56,5 @@ export class EmployeeNumber {
 		}
 
 		return `${value} ${label}`;
-	}
-
-	private static getEmployeeMagnitude(value: number): EmployeeMagnitude {
-		if (value >= 1000000000) {
-			return 9;
-		}
-
-		if (value >= 1000000) {
-			return 6;
-		}
-
-		if (value >= 1000 && value % 1000 === 0) {
-			return 3;
-		}
-
-		return null;
 	}
 }

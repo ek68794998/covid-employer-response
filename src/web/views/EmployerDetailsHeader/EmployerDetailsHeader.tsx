@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
+import { DesignHelpers } from "../../../common/DesignHelpers";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRating } from "../../../common/EmployerRating";
@@ -54,7 +55,7 @@ const getAliasesComponent =
 
 		return (
 			<span title={strings.detailDescriptions.aka}>
-				{materialIcon("alternate_email")}
+				{DesignHelpers.materialIcon("alternate_email")}
 				{text}
 			</span>
 		);
@@ -73,7 +74,7 @@ const getEmployeeCountComponent =
 
 		return (
 			<span title={strings.detailDescriptions.employees}>
-				{materialIcon("people")}
+				{DesignHelpers.materialIcon("people")}
 				{employeeCountString}
 			</span>
 		);
@@ -100,6 +101,7 @@ const getLocationWikipediaComponent =
 			<a
 				className="EmployerDetailsHeader__Location"
 				href={locationWikipediaUrl}
+				rel="noopener noreferrer"
 				target="_blank"
 				title={strings.detailDescriptions.location}
 			>
@@ -121,6 +123,7 @@ const getTickerComponent =
 			<a
 				className="EmployerDetailsHeader__Ticker"
 				href={tickerUrl}
+				rel="noopener noreferrer"
 				target="_blank"
 				title={strings.detailDescriptions.ticker}
 			>
@@ -128,8 +131,6 @@ const getTickerComponent =
 			</a>
 		);
 	};
-
-const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
 const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);

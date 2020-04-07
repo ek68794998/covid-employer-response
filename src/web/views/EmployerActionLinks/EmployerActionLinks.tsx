@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { ProjectUrl } from "../../../common/constants/UrlConstants";
+import { DesignHelpers } from "../../../common/DesignHelpers";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
@@ -22,10 +23,11 @@ const getEmployerEditComponent = (employer: EmployerRecord, strings: LocalizedSt
 		<a
 			className="EmployerActionLinks__Link"
 			href={editUrl}
+			rel="noopener noreferrer"
 			target="_blank"
 			title={strings.detailDescriptions.edit}
 		>
-			{materialIcon("edit")}
+			{DesignHelpers.materialIcon("edit")}
 		</a>
 	);
 };
@@ -39,10 +41,11 @@ const getEmployerWebsiteComponent = (employer: EmployerRecord, strings: Localize
 		<a
 			className="EmployerActionLinks__Link"
 			href={employer.officialWebsite}
+			rel="noopener noreferrer"
 			target="_blank"
 			title={strings.detailDescriptions.officialWebsite}
 		>
-			{materialIcon("home")}
+			{DesignHelpers.materialIcon("home")}
 		</a>
 	);
 };
@@ -58,15 +61,14 @@ const getEmployerWikipediaComponent = (employer: EmployerRecord, strings: Locali
 		<a
 			className="EmployerActionLinks__Link"
 			href={employerWikipediaUrl}
+			rel="noopener noreferrer"
 			target="_blank"
 			title={strings.detailDescriptions.wikipedia}
 		>
-			{materialIcon("language")}
+			{DesignHelpers.materialIcon("language")}
 		</a>
 	);
 };
-
-const materialIcon = (name: string): JSX.Element => <i className="material-icons">{name}</i>;
 
 const EmployerActionLinks: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);

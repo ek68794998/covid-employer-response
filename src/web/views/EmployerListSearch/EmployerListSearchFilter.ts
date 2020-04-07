@@ -1,9 +1,9 @@
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
 export class EmployerListSearchFilter {
-	public static readonly smallBoundary: number = 1000;
+	public static readonly SMALL_BOUNDARY: number = 1000;
 
-	public static readonly largeBoundary: number = 100000;
+	public static readonly LARGE_BOUNDARY: number = 100000;
 
 	public international: boolean = true;
 
@@ -38,16 +38,16 @@ export class EmployerListSearchFilter {
 			v >= lower && v <= upper;
 
 		const getNumberIsMatch = (v: number): boolean => {
-			if (!f.small && v <= this.smallBoundary) {
+			if (!f.small && v <= this.SMALL_BOUNDARY) {
 				return false;
 			}
 
-			if (!f.large && v >= this.largeBoundary) {
+			if (!f.large && v >= this.LARGE_BOUNDARY) {
 				return false;
 			}
 
 			if (!f.medium
-				&& getNumberIsBetween(v, this.smallBoundary, this.largeBoundary)) {
+				&& getNumberIsBetween(v, this.SMALL_BOUNDARY, this.LARGE_BOUNDARY)) {
 
 				return false;
 			}
@@ -69,13 +69,13 @@ export class EmployerListSearchFilter {
 			return getNumberIsMatch(lowerBound);
 		}
 
-		const rangeIncludesSmall: boolean = lowerBound < this.smallBoundary;
+		const rangeIncludesSmall: boolean = lowerBound < this.SMALL_BOUNDARY;
 
 		const rangeIncludesMedium: boolean =
-			getNumberIsBetween(lowerBound, this.smallBoundary, this.largeBoundary)
-			|| getNumberIsBetween(upperBound, this.smallBoundary, this.largeBoundary);
+			getNumberIsBetween(lowerBound, this.SMALL_BOUNDARY, this.LARGE_BOUNDARY)
+			|| getNumberIsBetween(upperBound, this.SMALL_BOUNDARY, this.LARGE_BOUNDARY);
 
-		const rangeIncludesLarge: boolean = upperBound > this.largeBoundary;
+		const rangeIncludesLarge: boolean = upperBound > this.LARGE_BOUNDARY;
 
 		return (f.small && rangeIncludesSmall)
 			|| (f.medium && rangeIncludesMedium)
@@ -87,7 +87,7 @@ export class EmployerListSearchFilter {
 			return true;
 		}
 
-		const fieldsToSearch: Array<string | undefined> = [
+		const fieldsToSearch: (string | undefined)[] = [
 			e.name.toLowerCase(),
 			e.location?.city.toLowerCase(),
 			e.shortName?.toLowerCase(),
