@@ -1,5 +1,16 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  plugins: ['scss', 'typescript'],
+	plugins: [
+		"scss",
+		{
+			name: "typescript",
+			options: {
+				useEslint: true,
+				forkTsChecker: {
+					tslint: false,
+				},
+			},
+		},
+	],
 };
