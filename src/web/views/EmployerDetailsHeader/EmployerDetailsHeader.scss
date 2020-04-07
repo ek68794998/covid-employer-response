@@ -17,7 +17,7 @@ $padding-interior: 12px;
 	border-radius: 4px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	height: ($flag-size * 3 / 4);
-	margin: 0 $padding-interior 0 ($padding-interior / 2);
+	margin: 0 ($padding-interior + 4px) 0 ($padding-interior / 2);
 	width: $flag-size;
 }
 
