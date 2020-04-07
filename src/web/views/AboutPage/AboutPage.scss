@@ -4,7 +4,7 @@ main#about {
 	margin: 0 auto;
 	width: 100%;
 
-	div.About__Content {
+	div.AboutPage__Content {
 		line-height: 180%;
 		margin: 0 auto;
 		max-width: 1440px;
@@ -25,7 +25,7 @@ main#about {
 }
 
 @media (max-width: $body-narrow-width) {
-	main#about div.About__Content {
+	main#about div.AboutPage__Content {
 		padding: $page-padding-narrow;
 	}
 }

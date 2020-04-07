@@ -9,25 +9,14 @@ import { ploc } from "../../../__tests__/TestUtils";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import About from "./About";
+import HomePage from "./HomePage";
 
-describe("<About />", () => {
+describe("<HomePage />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				about: ploc("about"),
 				appTitle: ploc("appTitle"),
-				citationTypeDescriptions: {
-					hearsay: ploc("hearsayDescription"),
-					publication: ploc("publicationDescription"),
-					statement: ploc("statementDescription"),
-				},
-				citationTypes: {
-					hearsay: ploc("hearsay"),
-					publication: ploc("publication"),
-					statement: ploc("statement"),
-				},
-				submit: ploc("submit"),
+				home: ploc("home"),
 			},
 		});
 
@@ -35,7 +24,7 @@ describe("<About />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<About />
+						<HomePage />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

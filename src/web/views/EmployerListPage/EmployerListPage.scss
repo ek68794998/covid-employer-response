@@ -5,7 +5,7 @@ $division-padding: 16px;
 $top-button-size: 48px;
 $top-button-size-small: 32px;
 
-main#home {
+main#employer-list {
 	margin: 0 auto;
 	width: 100%;
 
@@ -14,7 +14,7 @@ main#home {
 		padding: 0 $page-padding;
 	}
 
-	div.Home__Filters {
+	div.EmployerListPage__Filters {
 		box-shadow: 0 0 8px $box-shadow-color;
 		background: $background;
 		padding: $division-padding;
@@ -30,14 +30,14 @@ main#home {
 		}
 	}
 	
-	div.Home__Content {
+	div.EmployerListPage__Content {
 		max-width: $body-max-width;
 		padding-bottom: $division-padding;
 		padding-top: $division-padding;
 	}
 }
 
-button.Home__BackToTop {
+button.EmployerListPage__BackToTop {
 	background: $background;
 	border: 0;
 	border-radius: ($top-button-size / 2);
@@ -64,12 +64,12 @@ button.Home__BackToTop {
 			padding: 0 $page-padding-narrow;
 		}
 
-		div.Home__Filters > div {
+		div.EmployerListPage__Filters > div {
 			max-width: $body-max-width;
 		}
 	}
 
-	button.Home__BackToTop {
+	button.EmployerListPage__BackToTop {
 		bottom: ($page-padding-narrow / 2);
 		height: $top-button-size-small;
 		right: ($page-padding-narrow / 2);

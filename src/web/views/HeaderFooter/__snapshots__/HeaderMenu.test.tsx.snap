@@ -24,6 +24,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
         href="/"
         onClick={[Function]}
         style={Object {}}
+        title="λô₥è"
       >
         áƥƥ
         <span
@@ -43,14 +44,11 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
       </div>
     </div>
     <a
-      aria-current="page"
-      className="HeaderMenu__Link active"
-      href="/"
+      aria-current={null}
+      className="HeaderMenu__Link"
+      href="/employers"
       onClick={[Function]}
-      style={Object {}}
-    >
-      λô₥è
-    </a>
+    />
     <a
       aria-current={null}
       className="HeaderMenu__Link"

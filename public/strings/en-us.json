@@ -270,6 +270,7 @@
     "ticker": "The ticker symbol of the employee's publicly traded stock.",
     "wikipedia": "The employer's page on the English Wikipedia."
   },
+  "employerList": "Employers",
   "filters": {
     "employeesDefault": "Size",
     "employeesSmall": "Small",
@@ -279,7 +280,7 @@
     "locationNational": "National",
     "locationInternational": "International"
   },
-  "home": "Employers",
+  "home": "Home",
   "loading": "Loading...",
   "more": "{number} more",
   "noResults": "No results.",

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> renders without exploding 1`] = `
+<main
+  id="home"
+>
+  ((TODO))
+</main>
+`;

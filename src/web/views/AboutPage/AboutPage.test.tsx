@@ -4,27 +4,30 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { ploc } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import Home from "./Home";
+import AboutPage from "./AboutPage";
 
-jest.mock(
-	"../EmployerListSearch/EmployerListSearch",
-	() => mockComponent("EmployerListSearch"));
-
-jest.mock(
-	"../EmployerList/EmployerList",
-	() => mockComponent("EmployerList"));
-
-describe("<Home />", () => {
+describe("<AboutPage />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
+				about: ploc("about"),
 				appTitle: ploc("appTitle"),
-				home: ploc("home"),
+				citationTypeDescriptions: {
+					hearsay: ploc("hearsayDescription"),
+					publication: ploc("publicationDescription"),
+					statement: ploc("statementDescription"),
+				},
+				citationTypes: {
+					hearsay: ploc("hearsay"),
+					publication: ploc("publication"),
+					statement: ploc("statement"),
+				},
+				submit: ploc("submit"),
 			},
 		});
 
@@ -32,7 +35,7 @@ describe("<Home />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<Home />
+						<AboutPage />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
