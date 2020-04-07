@@ -13,7 +13,7 @@ const readdirAsync = util.promisify(fs.readdir);
 const readFileAsync = util.promisify(fs.readFile);
 
 export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
-	private static readonly localeFileNameRegex: RegExp = /^(.*)\.json$/;
+	private static readonly LOCALE_FILE_REGEX: RegExp = /^(.*)\.json$/;
 
 	public async getAllIdsAsync(): Promise<string[]> {
 		if (!fs.existsSync(this.directoryPath)) {
@@ -25,7 +25,7 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 		return (
 			fileNames
 				.map((fileName: string): string => {
-					const regexResult: RegExpExecArray | null = LocaleLoader.localeFileNameRegex.exec(fileName);
+					const regexResult: RegExpExecArray | null = LocaleLoader.LOCALE_FILE_REGEX.exec(fileName);
 					const id: string | null = regexResult && regexResult[1].toString();
 
 					return id || "";

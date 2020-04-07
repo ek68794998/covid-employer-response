@@ -19,6 +19,11 @@ module.exports = {
         "prefer-arrow",
         "react"
     ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "rules": {
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/array-type": "error",
@@ -63,6 +68,17 @@ module.exports = {
             }
         ],
         "@typescript-eslint/member-ordering": "error",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            { "selector": "default", "format": [ "strictCamelCase" ] },
+            { "selector": "variable", "format": [ "strictCamelCase", "StrictPascalCase" ] },
+            { "selector": "class", "format": [ "StrictPascalCase" ] },
+            { "selector": "enum", "format": [ "StrictPascalCase" ] },
+            { "selector": "interface", "format": [ "StrictPascalCase" ] },
+            { "selector": "typeAlias", "format": [ "StrictPascalCase" ] },
+            { "selector": "typeParameter", "format": [ "PascalCase" ] },
+            { "selector": "property", "modifiers": [ "static", "readonly" ], "format": [ "UPPER_CASE" ] },
+        ],
         "@typescript-eslint/no-empty-function": "error",
         "@typescript-eslint/no-empty-interface": "error",
         "@typescript-eslint/no-explicit-any": "off",
@@ -90,13 +106,6 @@ module.exports = {
                 "rules": {
                     "import-spacing": true,
                     "jsdoc-format": true,
-                    "naming-convention": [
-                        true,
-                        {
-                            "type": "variable",
-                            "format": "camelCase"
-                        }
-                    ],
                     "no-reference-import": true,
                     "object-literal-sort-keys": true,
                     "one-line": [

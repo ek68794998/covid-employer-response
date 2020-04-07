@@ -25,7 +25,7 @@ import configureStore from "./web/state/configureStore";
 import { getIsProd } from "./web/state/ducks/environment/selectors";
 import { getLocalizedStringsSuccess } from "./web/state/ducks/localization/actions";
 
-export const DEFAULT_LANGUAGE: string = "en-us";
+export const defaultLanguage: string = "en-us";
 
 let assets: any;
 
@@ -39,7 +39,7 @@ const localeLoader: LocaleLoader =
 	new LocaleLoader(process.env.RAZZLE_PUBLIC_DIR || "", "strings");
 
 const localizationMiddleware: LocalizationMiddleware =
-	new LocalizationMiddleware(DEFAULT_LANGUAGE, localeLoader);
+	new LocalizationMiddleware(defaultLanguage, localeLoader);
 
 const server: express.Application = express()
 	.disable("x-powered-by")
@@ -53,7 +53,7 @@ const server: express.Application = express()
 
 		const localeCode: string = request.languageCode.toLowerCase();
 
-		const defaultLocaleData: LocalizedStrings = await localeLoader.loadAsync(DEFAULT_LANGUAGE);
+		const defaultLocaleData: LocalizedStrings = await localeLoader.loadAsync(defaultLanguage);
 		const currentLocaleData: LocalizedStrings = await localeLoader.loadAsync(localeCode);
 
 		const localeData: LocalizedStrings = deepmerge(defaultLocaleData, currentLocaleData);

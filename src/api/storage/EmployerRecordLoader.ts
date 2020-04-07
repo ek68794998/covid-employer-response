@@ -13,7 +13,7 @@ const readdirAsync = util.promisify(fs.readdir);
 const readFileAsync = util.promisify(fs.readFile);
 
 export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
-	private static readonly employerFileNameRegex: RegExp = /^(.*)\.yml$/;
+	private static readonly EMPLOYER_FILE_REGEX: RegExp = /^(.*)\.yml$/;
 
 	public async getAllIdsAsync(): Promise<string[]> {
 		if (!fs.existsSync(this.directoryPath)) {
@@ -26,7 +26,7 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 			fileNames
 				.map((fileName: string): string => {
 					const regexResult: RegExpExecArray | null =
-						EmployerRecordLoader.employerFileNameRegex.exec(fileName);
+						EmployerRecordLoader.EMPLOYER_FILE_REGEX.exec(fileName);
 
 					const recordId: string | null = regexResult && regexResult[1].toString();
 
