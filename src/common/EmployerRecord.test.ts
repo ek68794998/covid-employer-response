@@ -47,8 +47,8 @@ describe("EmployerRecord", () => {
 			type: "publication",
 		}];
 
-		const minimalClone = record.shallowClone(false);
-		const normalClone = record.shallowClone(true);
+		const minimalClone: EmployerRecord = EmployerRecord.shallowClone(record, false);
+		const normalClone: EmployerRecord = EmployerRecord.shallowClone(record, true);
 
 		expect(minimalClone.aliases).toBe(record.aliases);
 		expect(minimalClone.employeesBefore).toBe(record.employeesBefore);
@@ -61,7 +61,7 @@ describe("EmployerRecord", () => {
 		expect(minimalClone.summary).toBe(record.summary);
 		expect(minimalClone.ticker).toBe(record.ticker);
 		expect(minimalClone.wiki).toBe(record.wiki);
-		
+
 		expect(normalClone.aliases).toBe(record.aliases);
 		expect(normalClone.employeesBefore).toBe(record.employeesBefore);
 		expect(normalClone.id).toBe(record.id);

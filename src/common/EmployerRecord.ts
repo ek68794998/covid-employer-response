@@ -48,23 +48,23 @@ export class EmployerRecord {
 		return citationScore > 0 ? "good" : "poor";
 	}
 
-	public shallowClone(includeDetails: boolean): EmployerRecord {
+	public static shallowClone(original: EmployerRecord, includeDetails: boolean): EmployerRecord {
 		const record: EmployerRecord = new EmployerRecord();
 
-		record.aliases = this.aliases;
-		record.employeesBefore = this.employeesBefore;
-		record.id = this.id;
-		record.image = this.image;
-		record.location = this.location;
-		record.name = this.name;
-		record.officialWebsite = this.officialWebsite;
-		record.shortName = this.shortName;
-		record.summary = this.summary;
-		record.ticker = this.ticker;
-		record.wiki = this.wiki;
+		record.aliases = original.aliases;
+		record.employeesBefore = original.employeesBefore;
+		record.id = original.id;
+		record.image = original.image;
+		record.location = original.location;
+		record.name = original.name;
+		record.officialWebsite = original.officialWebsite;
+		record.shortName = original.shortName;
+		record.summary = original.summary;
+		record.ticker = original.ticker;
+		record.wiki = original.wiki;
 
 		if (includeDetails) {
-			record.citations = this.citations;
+			record.citations = original.citations;
 		}
 
 		return record;

@@ -37,7 +37,7 @@ class EmployersController extends RoutedControllerBase {
 		const employers: EmployerRecord[] =
 			isDetailed
 				? this.employers
-				: this.employers.filter((e: EmployerRecord) => e.shallowClone(false));
+				: this.employers.filter((e: EmployerRecord) => EmployerRecord.shallowClone(e, false));
 
 		const returnedEmployers: EmployerRecord[] = employers.slice(skipNumber, skipNumber + topNumber);
 
