@@ -47,4 +47,26 @@ export class EmployerRecord {
 
 		return citationScore > 0 ? "good" : "poor";
 	}
+
+	public shallowClone(includeDetails: boolean): EmployerRecord {
+		const record: EmployerRecord = new EmployerRecord();
+
+		record.aliases = this.aliases;
+		record.employeesBefore = this.employeesBefore;
+		record.id = this.id;
+		record.image = this.image;
+		record.location = this.location;
+		record.name = this.name;
+		record.officialWebsite = this.officialWebsite;
+		record.shortName = this.shortName;
+		record.summary = this.summary;
+		record.ticker = this.ticker;
+		record.wiki = this.wiki;
+
+		if (includeDetails) {
+			record.citations = this.citations;
+		}
+
+		return record;
+	}
 }
