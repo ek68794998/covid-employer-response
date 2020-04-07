@@ -86,10 +86,9 @@ const getLocationWikipediaComponent =
 		}
 
 		const locationString: string =
-			EmployerLocation.toString(
-				employer.location,
-				useShortText ? strings.countryAbbreviations : strings.countryNames,
-				useShortText);
+			useShortText
+				? employer.location.city
+				: EmployerLocation.toString(employer.location, strings.countryNames);
 
 		const locationWikipediaUrl: string | null = WikipediaHelpers.getWikipediaUrl(employer.location.wiki);
 

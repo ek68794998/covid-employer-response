@@ -11,15 +11,10 @@ export class EmployerLocation {
 
 	public static toString(
 		location: EmployerLocation,
-		countryCodeMap?: { [key: string]: string },
-		useShortText: boolean = false): string {
+		countryCodeMap?: { [key: string]: string }): string {
 
 		const country: string =
 			(countryCodeMap && location.country in countryCodeMap) ? countryCodeMap[location.country] : location.country;
-
-		if (useShortText) {
-			return `${location.city}, ${country}`;
-		}
 
 		const locationAsString: string =
 			location.state
