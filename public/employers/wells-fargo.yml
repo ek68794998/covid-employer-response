@@ -50,3 +50,10 @@ citations:
       - name: Reddit r/trashy
         link: https://web.archive.org/web/20200406215049/https://www.reddit.com/r/trashy/comments/fw2z0m/screw_wells_fargo/
         date: 2020-04-06T10:30:51-07:00
+  - summary: Wells Fargo set up a paycheck protection program to assist customers during the pandemic, capped at $10 billion USD. The program has been popular enough to hit its cap and no longer be accepting new applications of April 5.
+    positivity: 0
+    type: publication
+    sources:
+      - name: Business Wire
+        link: https://www.businesswire.com/news/home/20200405005041/en/Wells-Fargo-Receives-Strong-Interest-Paycheck-Protection
+        date: 2020-04-06T01:12:00Z
