@@ -1,33 +1,64 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import renderer, { ReactTestInstance, ReactTestRenderer } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { ploc } from "../../../__tests__/TestUtils";
+import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
 import EmployerListSearch from "./EmployerListSearch";
 
+jest.mock(
+	"./EmployerListFilterControl/InternationalTypeFilterControl",
+	() => mockComponent("InternationalTypeFilterControl"));
+
+jest.mock(
+	"./EmployerListFilterControl/EmployeeCountFilterControl",
+	() => mockComponent("EmployeeCountFilterControl"));
+
 describe("<EmployerListSearch />", () => {
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
+	const createConfigStore = (): Store<AppState, AnyAction> =>
+		configureStore({
 			strings: {
 				search: ploc("search"),
 			},
 		});
 
-		const renderedValue: ReactTestRendererJSON | null =
+	test("renders without exploding", () => {
+		const store: Store<AppState, AnyAction> = createConfigStore();
+
+		const testRenderer: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerListSearch onChange={(): void => { /* Do nothing. */ }} />
 					</BrowserRouter>
 				</Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(testRenderer.toJSON()).toMatchSnapshot();
+	});
+
+	test("opens 'filters' dropdown", () => {
+		const store: Store<AppState, AnyAction> = createConfigStore();
+
+		const testRenderer: ReactTestRenderer =
+			renderer.create(
+				<Provider store={store}>
+					<BrowserRouter>
+						<EmployerListSearch onChange={(): void => { /* Do nothing. */ }} />
+					</BrowserRouter>
+				</Provider>,
+			);
+
+		const selectors: ReactTestInstance[] =
+			testRenderer.root.findAll((node: ReactTestInstance) => node.type === "button");
+
+		selectors[0].props.onClick();
+
+		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 });
