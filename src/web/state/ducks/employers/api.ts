@@ -1,17 +1,36 @@
 import { EmployerRecord } from "../../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadata";
 
-export class GetEmployersApiResponse {
-	public employers: EmployerRecord[];
+export interface GetEmployersByIdApiResponse {
+	employers: EmployerRecord[];
 
-	public response: Response;
-
-	public constructor(employers: EmployerRecord[], response: Response) {
-		this.employers = employers;
-		this.response = response;
-	}
+	response: Response;
 }
 
-export const getEmployersApi = (): Promise<GetEmployersApiResponse> =>
-	fetch("/api/employers?$select=*", { method: "GET" })
-		.then((response: Response) => Promise.all([ response, response.json() ]))
-		.then((value: [ Response, EmployerRecord[] ]) => new GetEmployersApiResponse(value[1], value[0]));
+export interface GetEmployersListApiResponse {
+	employers: EmployerRecordMetadata[];
+
+	response: Response;
+}
+
+export const getEmployersByIdApi = async (ids: string[]): Promise<GetEmployersByIdApiResponse> => {
+	const response: Response = await fetch(`/api/employers${ids.join(",")}`, { method: "GET" });
+
+	const employers: EmployerRecord[] = await response.json();
+
+	return {
+		employers,
+		response,
+	};
+};
+
+export const getEmployersListApi = async (): Promise<GetEmployersListApiResponse> => {
+	const response: Response = await fetch("/api/employers", { method: "GET" });
+
+	const employers: EmployerRecordMetadata[] = await response.json();
+
+	return {
+		employers,
+		response,
+	};
+};

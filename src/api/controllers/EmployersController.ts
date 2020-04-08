@@ -1,6 +1,7 @@
 import express from "express";
 
 import { EmployerRecord } from "../../common/EmployerRecord";
+import { EmployerRecordBase } from "../../common/EmployerRecordBase";
 import { HttpRequestHeaders } from "../../common/http/HttpRequestHeaders";
 import { HttpResponseHeaders } from "../../common/http/HttpResponseHeaders";
 import { MimeTypes } from "../../common/MimeTypes";
@@ -18,40 +19,56 @@ class EmployersController extends RoutedControllerBase {
 
 	private readonly recordLoader: EmployerRecordLoader = new EmployerRecordLoader(process.env.RAZZLE_PUBLIC_DIR || "/", "employers");
 
-	private employers: EmployerRecord[] = [];
+	private employers: { [id: string]: EmployerRecord } = {};
 
-	public async getEmployersList(req: express.Request, res: express.Response): Promise<void> {
-		if (!req.header(HttpRequestHeaders.IF_NONE_MATCH) || this.employers.length === 0) {
-			this.employers = await this.recordLoader.loadAllAsync();
+	private hasEmployers: boolean = false;
+
+	public async getEmployers(req: express.Request, res: express.Response): Promise<void> {
+		if (!req.header(HttpRequestHeaders.IF_NONE_MATCH) || !this.hasEmployers) {
+			const employerRecords: EmployerRecord[] = await this.recordLoader.loadAllAsync();
+
+			for (const employerRecord of employerRecords) {
+				this.employers[employerRecord.id] = employerRecord;
+			}
+
+			this.hasEmployers = true;
 		}
 
-		// TODO Allow individual field selection as well.
-		const isDetailed: boolean = req.query.$select === "*";
+		const returnedEmployers: EmployerRecordBase[] = [];
 
-		const max: number =
-			isDetailed ? EmployersController.MAX_GETEMPLOYERS_DETAILED : EmployersController.MAX_GETEMPLOYERS_STANDARD;
+		if (req.query.ids) {
+			const ids: string[] = req.query.ids.split(",");
 
-		const skipParam: string = req.query.$skip || "0";
-		const topParam: string = req.query.$top || `${max}`;
+			for (const id of ids) {
+				if (!(id in this.employers)) {
+					continue;
+				}
 
-		const skipNumber: number = parseInt(skipParam, 10);
-		const topNumber: number = parseInt(topParam, 10);
+				returnedEmployers.push(this.employers[id]);
 
-		const employers: EmployerRecord[] =
-			isDetailed
-				? this.employers
-				: this.employers.map((e: EmployerRecord) => EmployerRecord.shallowClone(e, false));
+				if (returnedEmployers.length === EmployersController.MAX_GETEMPLOYERS_DETAILED) {
+					break;
+				}
+			}
+		} else {
+			for (const employerRecord of Object.values(this.employers)) {
+				returnedEmployers.push(EmployerRecord.toMetadata(employerRecord));
 
-		const returnedEmployers: EmployerRecord[] = employers.slice(skipNumber, skipNumber + topNumber);
+				if (returnedEmployers.length === EmployersController.MAX_GETEMPLOYERS_STANDARD) {
+					break;
+				}
+			}
+
+			res.setHeader("Results-Total", Object.keys(this.employers).length);
+		}
 
 		res.setHeader("Results-Returned", returnedEmployers.length);
-		res.setHeader("Results-Total", this.employers.length);
 		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, MimeTypes.APPLICATION_JSON);
 		res.send(returnedEmployers);
 	}
 
 	protected initializeRoutes(): void {
-		this.router.get(`/${EmployersController.SUBPATH}`, this.getEmployersList.bind(this));
+		this.router.get(`/${EmployersController.SUBPATH}`, this.getEmployers.bind(this));
 	}
 }
 

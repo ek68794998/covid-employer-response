@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { getEmployers as getEmployersRequest } from "../../state/ducks/employers/actions";
-import { getEmployers } from "../../state/ducks/employers/selectors";
+import { getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";
@@ -22,19 +22,11 @@ interface Props extends RouteProps {
 
 const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
-	const employers: EmployerRecord[] = useSelector(getEmployers);
+	const employers: EmployerRecordMetadata[] | undefined = useSelector(getEmployersList);
 
 	const [ openRow, setOpenRow ] = useState("");
 
 	const { searchFilter } = props;
-
-	const dispatch: React.Dispatch<any> = useDispatch();
-
-	useEffect(
-		() => {
-			dispatch(getEmployersRequest);
-		},
-		[]);
 
 	if (!employers) {
 		return (
@@ -72,7 +64,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 		</div>
 	);
 
-	const employer: EmployerRecord | undefined = employers.find((e: EmployerRecord) => e.id === openRow);
+	const employer: EmployerRecord | undefined = employers.find((e: EmployerRecordMetadata) => e.id === openRow);
 	const isOpen: boolean = !!(employer && openRow.length);
 
 	return (
