@@ -271,6 +271,7 @@
     "wikipedia": "The employer's page on the English Wikipedia."
   },
   "employerList": "Employers",
+  "filter": "Filters",
   "filters": {
     "employeesDefault": "Size",
     "employeesSmall": "Small",
