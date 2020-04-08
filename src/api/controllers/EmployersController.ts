@@ -23,7 +23,7 @@ class EmployersController extends RoutedControllerBase {
 	private hasEmployers: boolean = false;
 
 	public async getEmployer(req: express.Request, res: express.Response): Promise<void> {
-		const id: string | null = req.param("id", null);
+		const id: string | null = req.params.employerId || null;
 
 		if (!id) {
 			res.status(HttpStatusCodes.BAD_REQUEST).send();
@@ -91,6 +91,7 @@ class EmployersController extends RoutedControllerBase {
 
 	protected initializeRoutes(): void {
 		this.router.get(`/${EmployersController.SUBPATH}`, this.getEmployers.bind(this));
+		this.router.get(`/${EmployersController.SUBPATH}/:employerId`, this.getEmployer.bind(this));
 		this.router.get(`/${EmployersController.SUBPATH}/categories`, this.getEmployerCategories.bind(this));
 		this.router.get(`/${EmployersController.SUBPATH}/category/:categoryId`, this.getEmployers.bind(this));
 	}

@@ -13,8 +13,8 @@ export interface GetEmployersListApiResponse {
 	response: Response;
 }
 
-export const getEmployerByIdApi = async (ids: string[]): Promise<GetEmployerByIdApiResponse> => {
-	const response: Response = await fetch(`/api/employers${ids.join(",")}`, { method: "GET" });
+export const getEmployerByIdApi = async (id: string): Promise<GetEmployerByIdApiResponse> => {
+	const response: Response = await fetch(`/api/employers/${id}`, { method: "GET" });
 
 	const employer: EmployerRecord = await response.json();
 

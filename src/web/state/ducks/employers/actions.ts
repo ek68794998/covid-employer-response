@@ -29,9 +29,9 @@ export const getEmployerByIdSuccess = (payload: EmployerRecord): GetEmployerById
 });
 
 export const getEmployerById =
-	(ids: string[]): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
+	(id: string): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
 		(dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> =>
-			getEmployerByIdApi(ids).then((result: GetEmployerByIdApiResponse) => {
+			getEmployerByIdApi(id).then((result: GetEmployerByIdApiResponse) => {
 				if (result.response.status === 200) {
 					dispatch(getEmployerByIdSuccess(result.employer));
 				} else {
