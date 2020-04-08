@@ -20,18 +20,12 @@ export class EmployerListSearchFilter {
 
 	public text: string = "";
 
-	public static isCompleteMatch(f: EmployerListSearchFilter, e: EmployerRecord): boolean {
-		if (e instanceof EmployerRecord) {
-			if (!e.employeesBefore || !this.isMatchForEmployeeCount(f, e.employeesBefore)) {
-				return false;
-			}
+	public static isMatch(f: EmployerListSearchFilter, e: EmployerRecordBase): boolean {
+		if (!e.location || !this.isMatchForLocation(f, e.location)) {
+			return false;
 		}
 
-		return this.isLooseMatch(f, e);
-	}
-
-	public static isLooseMatch(f: EmployerListSearchFilter, e: EmployerRecordBase): boolean {
-		if (!e.location || !this.isMatchForLocation(f, e.location)) {
+		if (!e.employeesBefore || !this.isMatchForEmployeeCount(f, e.employeesBefore)) {
 			return false;
 		}
 

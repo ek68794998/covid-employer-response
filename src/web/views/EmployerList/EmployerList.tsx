@@ -38,7 +38,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	const filteredEmployers: EmployerRecordMetadata[] =
 		employersList
-			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isLooseMatch(searchFilter, e));
+			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(searchFilter, e));
 
 	if (!filteredEmployers.length) {
 		return (
