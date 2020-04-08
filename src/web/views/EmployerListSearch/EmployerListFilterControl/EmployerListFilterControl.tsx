@@ -34,6 +34,7 @@ const EmployerListFilterControl: React.FC<Props> =
 
 		const clear = (e: React.MouseEvent<HTMLElement>): void => {
 			onClear();
+			setDisplayText(getDisplayText());
 			e.stopPropagation();
 		};
 
