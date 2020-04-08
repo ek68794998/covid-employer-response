@@ -3,24 +3,24 @@ import { Action } from "redux";
 import { EmployerRecord } from "../../../../common/EmployerRecord";
 import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadata";
 
-export const GetEmployersByIdType: string = "getEmployersByIdSuccess";
-export const GetEmployersByIdErrorType: string = "getEmployersByIdError";
+export const GetEmployerByIdType: string = "getEmployerByIdSuccess";
+export const GetEmployerByIdErrorType: string = "getEmployerByIdError";
 
 export const GetEmployersListType: string = "getEmployersSuccess";
 export const GetEmployersListErrorType: string = "getEmployersError";
 
-interface GetEmployersByIdAction extends Action<typeof GetEmployersListType> {
-	payload: EmployerRecord[];
+interface GetEmployerByIdAction extends Action<typeof GetEmployersListType> {
+	payload: EmployerRecord;
 }
 
-type GetEmployersByIdErrorAction = Action<typeof GetEmployersListErrorType>;
+type GetEmployerByIdErrorAction = Action<typeof GetEmployersListErrorType>;
 
-export type GetEmployersByIdActionTypes = GetEmployersByIdAction | GetEmployersByIdErrorAction;
+export type GetEmployerByIdActionTypes = GetEmployerByIdAction | GetEmployerByIdErrorAction;
 
-interface GetEmployersListAction extends Action<typeof GetEmployersByIdType> {
+interface GetEmployersListAction extends Action<typeof GetEmployerByIdType> {
 	payload: EmployerRecordMetadata[];
 }
 
-type GetEmployersListErrorAction = Action<typeof GetEmployersByIdErrorType>;
+type GetEmployersListErrorAction = Action<typeof GetEmployerByIdErrorType>;
 
 export type GetEmployersListActionTypes = GetEmployersListAction | GetEmployersListErrorAction;

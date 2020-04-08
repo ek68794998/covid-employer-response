@@ -1,6 +1,4 @@
 import { Citation } from "./Citation";
-import { EmployerEmployeeProfile } from "./EmployerEmployeeProfile";
-import { EmployerLocation } from "./EmployerLocation";
 import { EmployerRating } from "./EmployerRating";
 import { EmployerRecordBase } from "./EmployerRecordBase";
 import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
@@ -8,13 +6,9 @@ import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
 export class EmployerRecord extends EmployerRecordBase {
 	public citations: Citation[] = [];
 
-	public employeesBefore?: EmployerEmployeeProfile;
-
-	public officialWebsite?: string;
-
-	public summary: string = "";
-
-	public wiki?: string;
+	public get rating(): EmployerRating {
+		return EmployerRecord.getRating(this);
+	}
 
 	public static getRating(e: EmployerRecord): EmployerRating {
 		if (!e.citations.length) {
@@ -37,8 +31,19 @@ export class EmployerRecord extends EmployerRecordBase {
 	}
 
 	public static toMetadata(original: EmployerRecord): EmployerRecordMetadata {
+		let positives: number = 0;
+		let negatives: number = 0;
+
+		for (const citation of original.citations) {
+			if (citation.positivity > 0) {
+				positives++;
+			} else if (citation.positivity < 0) {
+				negatives++;
+			}
+		}
+
 		const metadata: EmployerRecordMetadata =
-			new EmployerRecordMetadata(this.getRating(original));
+			new EmployerRecordMetadata(negatives, positives, this.getRating(original));
 
 		EmployerRecordBase.copyTo(original, metadata);
 

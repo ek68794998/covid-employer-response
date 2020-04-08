@@ -5,7 +5,7 @@ import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { mockComponent, ploc } from "../../../__tests__/TestUtils";
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -44,7 +44,7 @@ describe("<EmployerDetailsHeader />", () => {
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerDetailsHeader
-							employer={new EmployerRecord()}
+							employer={new EmployerRecordMetadata(0, 0, "fair")}
 							onClickEmployerName={(): void => { /* Do nothing. */ }}
 						/>
 					</BrowserRouter>
@@ -57,23 +57,8 @@ describe("<EmployerDetailsHeader />", () => {
 	test("renders using a complete employer record", () => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
-		const e: EmployerRecord = {
+		const e: EmployerRecordMetadata = {
 			aliases: [ "MyContoso" ],
-			citations: [{
-				positivity: 2,
-				summary: "A very good summary about Contoso.",
-				type: "hearsay",
-			}, {
-				positivity: 0,
-				sources: [ { name: "CBS", link: "http://cbs", date: "2015-01-01T01:01:01Z" } ],
-				summary: "A very good summary about Contoso.",
-				type: "publication",
-			}, {
-				positivity: -1,
-				sources: [ { name: "NBC", link: "http://nbc", date: "2016-01-01T01:01:01Z" } ],
-				summary: "A very good summary about Contoso.",
-				type: "statement",
-			}],
 			employeesBefore: { type: "exactly", upperBound: 12345, year: 2015 },
 			id: "contoso",
 			image: "consoto.svg",

@@ -52,17 +52,18 @@ describe("<EmployerList />", () => {
 	});
 
 	test("renders empty list of employers", () => {
+		const record: EmployerRecord = new EmployerRecord();
+
+		record.employeesBefore = new EmployerEmployeeProfile();
+		record.id = "e1";
+		record.location = new EmployerLocation();
+		record.name = "Alpha";
+
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
-				items: [
-					{
-						...new EmployerRecord(),
-						employeesBefore: new EmployerEmployeeProfile(),
-						id: "e1",
-						location: new EmployerLocation(),
-						name: "Alpha",
-					},
-				],
+				itemsComplete: {
+					[record.id]: record,
+				},
 			},
 			strings,
 		});

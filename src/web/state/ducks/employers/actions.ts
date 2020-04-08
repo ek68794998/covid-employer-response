@@ -5,37 +5,37 @@ import { EmployerRecord } from "../../../../common/EmployerRecord";
 import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadata";
 
 import {
-	getEmployersByIdApi,
+	getEmployerByIdApi,
+	GetEmployerByIdApiResponse,
 	getEmployersListApi,
-	GetEmployersByIdApiResponse,
 	GetEmployersListApiResponse,
 } from "./api";
 import {
-	GetEmployersByIdErrorType,
-	GetEmployersByIdType,
-	GetEmployersByIdActionTypes,
+	GetEmployerByIdErrorType,
+	GetEmployerByIdType,
+	GetEmployerByIdActionTypes,
 	GetEmployersListErrorType,
 	GetEmployersListType,
 	GetEmployersListActionTypes,
 } from "./types";
 
-export const getEmployersByIdError = (): GetEmployersByIdActionTypes => ({
-	type: GetEmployersByIdErrorType,
+export const getEmployerByIdError = (): GetEmployerByIdActionTypes => ({
+	type: GetEmployerByIdErrorType,
 });
 
-export const getEmployersByIdSuccess = (payload: EmployerRecord[]): GetEmployersByIdActionTypes => ({
+export const getEmployerByIdSuccess = (payload: EmployerRecord): GetEmployerByIdActionTypes => ({
 	payload,
-	type: GetEmployersByIdType,
+	type: GetEmployerByIdType,
 });
 
-export const getEmployersById =
-	(ids: string[]): ThunkAction<Promise<void>, GetEmployersByIdActionTypes, undefined, Action> =>
-		(dispatch: React.Dispatch<GetEmployersByIdActionTypes>): Promise<void> =>
-			getEmployersByIdApi(ids).then((result: GetEmployersByIdApiResponse) => {
+export const getEmployerById =
+	(ids: string[]): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
+		(dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> =>
+			getEmployerByIdApi(ids).then((result: GetEmployerByIdApiResponse) => {
 				if (result.response.status === 200) {
-					dispatch(getEmployersByIdSuccess(result.employers));
+					dispatch(getEmployerByIdSuccess(result.employer));
 				} else {
-					dispatch(getEmployersByIdError());
+					dispatch(getEmployerByIdError());
 				}
 			});
 

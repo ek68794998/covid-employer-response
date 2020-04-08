@@ -13,6 +13,8 @@ export abstract class DataFileLoader<T> {
 		this.directoryPath = `${publicDirectory}/${subdirectoryName}`;
 	}
 
+	public abstract existsAsync(id: string): Promise<boolean>;
+
 	public abstract getAllIdsAsync(): Promise<string[]>;
 
 	public abstract loadAsync(id: string): Promise<T>;

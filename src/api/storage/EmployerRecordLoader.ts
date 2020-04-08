@@ -6,14 +6,20 @@ import { EmployerRecord } from "../../common/EmployerRecord";
 
 import { DataFileLoader } from "./DataFileLoader";
 
-// tslint:disable-next-line: typedef // Type definition from 'promisify' is very complex.
+// Type definition from 'promisify' is very complex, so ignore those.
+// eslint-disable-next-line @typescript-eslint/tslint/config
+const existsAsync = util.promisify(fs.exists);
+// eslint-disable-next-line @typescript-eslint/tslint/config
 const readdirAsync = util.promisify(fs.readdir);
-
-// tslint:disable-next-line: typedef // Type definition from 'promisify' is very complex.
+// eslint-disable-next-line @typescript-eslint/tslint/config
 const readFileAsync = util.promisify(fs.readFile);
 
 export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 	private static readonly EMPLOYER_FILE_REGEX: RegExp = /^(.*)\.yml$/;
+
+	public existsAsync(id: string): Promise<boolean> {
+		return existsAsync(this.getFileName(id));
+	}
 
 	public async getAllIdsAsync(): Promise<string[]> {
 		if (!fs.existsSync(this.directoryPath)) {
@@ -37,16 +43,11 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 	}
 
 	public async loadAsync(id: string): Promise<EmployerRecord> {
-		if (!fs.existsSync(this.directoryPath)) {
-			throw new Error("Employer record data folder not found.");
-		}
-
-		const fileName: string = `${this.directoryPath}/${id}.yml`;
-
-		if (!fs.existsSync(fileName)) {
+		if (!(await this.existsAsync(id))) {
 			throw new Error(`Data file with ID '${id}' not found.`);
 		}
 
+		const fileName: string = this.getFileName(id);
 		const fileContents: string = await readFileAsync(fileName, "UTF8");
 		const loadedEmployer: EmployerRecord = yaml.parse(fileContents);
 
@@ -68,5 +69,13 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 			loadedEmployers.sort(
 				(a: EmployerRecord, b: EmployerRecord) => a.name.localeCompare(b.name))
 		);
+	}
+
+	private getFileName(id: string): string {
+		if (!fs.existsSync(this.directoryPath)) {
+			throw new Error("Employer record data folder not found.");
+		}
+
+		return `${this.directoryPath}/${id}.yml`;
 	}
 }

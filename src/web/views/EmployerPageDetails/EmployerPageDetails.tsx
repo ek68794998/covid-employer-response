@@ -1,9 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
 import { EmployerRecord } from "../../../common/EmployerRecord";
+
+import { AppState } from "../../state/AppState";
+import { getEmployer } from "../../state/ducks/employers/selectors";
 
 import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
 import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";
@@ -11,7 +15,7 @@ import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeade
 import "./EmployerPageDetails.scss";
 
 interface Props extends RouteProps {
-	employer: EmployerRecord;
+	employerId: string;
 }
 
 const citationSort = (a: Citation, b: Citation): number => {
@@ -23,7 +27,9 @@ const citationSort = (a: Citation, b: Citation): number => {
 };
 
 const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement | null => {
-	const { employer } = props;
+	const { employerId } = props;
+
+	const employer: EmployerRecord | undefined = useSelector((state: AppState) => getEmployer(state, employerId));
 
 	if (!employer) {
 		return null;
@@ -56,7 +62,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={employer} />
+			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(employer)} />
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
 					{employer.summary}

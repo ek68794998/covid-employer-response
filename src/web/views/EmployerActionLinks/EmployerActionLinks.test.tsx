@@ -5,7 +5,7 @@ import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { ploc } from "../../../__tests__/TestUtils";
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -28,7 +28,7 @@ describe("<EmployerActionLinks />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerActionLinks employer={new EmployerRecord()} />
+						<EmployerActionLinks employer={new EmployerRecordMetadata(0, 0, "fair")} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

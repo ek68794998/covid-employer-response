@@ -1,4 +1,7 @@
+import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
+import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
 
 export class EmployerListSearchFilter {
 	public static readonly SMALL_BOUNDARY: number = 1000;
@@ -17,23 +20,25 @@ export class EmployerListSearchFilter {
 
 	public text: string = "";
 
-	public static isMatch(f: EmployerListSearchFilter, e: EmployerRecord): boolean {
-		if (!this.isMatchForLocation(f, e)) {
-			return false;
+	public static isCompleteMatch(f: EmployerListSearchFilter, e: EmployerRecord): boolean {
+		if (e instanceof EmployerRecord) {
+			if (!e.employeesBefore || !this.isMatchForEmployeeCount(f, e.employeesBefore)) {
+				return false;
+			}
 		}
 
-		if (!this.isMatchForEmployeeCount(f, e)) {
+		return this.isLooseMatch(f, e);
+	}
+
+	public static isLooseMatch(f: EmployerListSearchFilter, e: EmployerRecordBase): boolean {
+		if (!e.location || !this.isMatchForLocation(f, e.location)) {
 			return false;
 		}
 
 		return this.isMatchForFullText(f, e);
 	}
 
-	private static isMatchForEmployeeCount(f: EmployerListSearchFilter, e: EmployerRecord): boolean {
-		if (!e.employeesBefore) {
-			return false;
-		}
-
+	private static isMatchForEmployeeCount(f: EmployerListSearchFilter, e: EmployerEmployeeProfile): boolean {
 		const getNumberIsBetween = (v: number, lower: number, upper: number): boolean =>
 			v >= lower && v <= upper;
 
@@ -55,11 +60,11 @@ export class EmployerListSearchFilter {
 			return true;
 		};
 
-		const lowerBound: number = e.employeesBefore.lowerBound || 0;
-		const upperBound: number = Math.max(e.employeesBefore.upperBound, lowerBound);
+		const lowerBound: number = e.lowerBound || 0;
+		const upperBound: number = Math.max(e.upperBound, lowerBound);
 
-		if (e.employeesBefore.type === "approximately"
-			|| e.employeesBefore.type === "exactly"
+		if (e.type === "approximately"
+			|| e.type === "exactly"
 			|| lowerBound <= 0) {
 
 			return getNumberIsMatch(upperBound);
@@ -82,7 +87,7 @@ export class EmployerListSearchFilter {
 			|| (f.large && rangeIncludesLarge);
 	}
 
-	private static isMatchForFullText(f: EmployerListSearchFilter, e: EmployerRecord): boolean {
+	private static isMatchForFullText(f: EmployerListSearchFilter, e: EmployerRecordBase): boolean {
 		if (!f.text) {
 			return true;
 		}
@@ -101,12 +106,8 @@ export class EmployerListSearchFilter {
 		return fieldsToSearch.some((field?: string) => field && field.indexOf(f.text.toLowerCase()) >= 0);
 	}
 
-	private static isMatchForLocation(f: EmployerListSearchFilter, e: EmployerRecord): boolean {
-		if (!e.location) {
-			return false;
-		}
-
-		if ((!f.international && e.location.international) || (!f.national && !e.location.international)) {
+	private static isMatchForLocation(f: EmployerListSearchFilter, e: EmployerLocation): boolean {
+		if ((!f.international && e.international) || (!f.national && !e.international)) {
 			return false;
 		}
 

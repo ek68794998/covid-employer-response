@@ -4,7 +4,7 @@ import { RouteProps } from "react-router-dom";
 
 import { DesignHelpers } from "../../../common/DesignHelpers";
 import { EmployerRating } from "../../../common/EmployerRating";
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -15,7 +15,7 @@ import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeade
 import "./EmployerListDetails.scss";
 
 interface Props extends RouteProps {
-	employer: EmployerRecord;
+	employer: EmployerRecordMetadata;
 
 	onClick: () => void;
 }
@@ -24,10 +24,8 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const { employer, onClick } = props;
 
-	const rating: EmployerRating = EmployerRecord.getRating(employer);
-
 	return (
-		<div className={`EmployerListDetails__Container EmployerListDetails__Rating--${rating}`}>
+		<div className={`EmployerListDetails__Container EmployerListDetails__Rating--${employer.rating}`}>
 			<EmployerDetailsHeader employer={employer} onClickEmployerName={onClick} useShortText={true} />
 			<div className="EmployerListDetails__Summary" onClick={onClick}>
 				{employer.summary}

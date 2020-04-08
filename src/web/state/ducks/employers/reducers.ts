@@ -4,25 +4,19 @@ import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadat
 
 import { EmployersState } from "../../EmployersState";
 
-import { GetEmployersByIdType, GetEmployersListType } from "./types";
-
-const toObject = <T extends EmployerRecordBase>(array: T[]): { [id: string]: T } =>
-	array.reduce((p: {}, c: T) => {
-		p[c.id] = c;
-		return p;
-	}, {});
+import { GetEmployerByIdType, GetEmployersListType } from "./types";
 
 export const getEmployers = (state: EmployersState | null = null, action: any): EmployersState | null => {
 	if (!state && !action.payload) {
 		return null;
 	}
 
-	if (action.type === GetEmployersByIdType) {
-		const payload: EmployerRecord[] = action.payload;
+	if (action.type === GetEmployerByIdType) {
+		const payload: EmployerRecord = action.payload;
 
 		return {
 			...state,
-			itemsComplete: { ...state?.itemsComplete, ...toObject(payload) },
+			itemsComplete: { ...state?.itemsComplete, ...{ [payload.id]: payload } },
 		};
 	}
 
@@ -31,7 +25,22 @@ export const getEmployers = (state: EmployersState | null = null, action: any): 
 
 		return {
 			...state,
-			itemsMetadata: { ...state?.itemsMetadata, ...toObject(payload) },
+			itemsMetadata: {
+				...state?.itemsMetadata,
+				...(
+					payload.reduce((p: {}, c: EmployerRecordMetadata) => {
+						const complete: EmployerRecordMetadata =
+							new EmployerRecordMetadata(
+								c.negativeCount,
+								c.positiveCount,
+								c.ratingValue);
+
+						p[c.id] = Object.assign(complete, c);
+
+						return p;
+					}, {})
+				),
+			},
 		};
 	}
 
