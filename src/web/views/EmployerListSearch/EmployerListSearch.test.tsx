@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import renderer, { ReactTestInstance, ReactTestRenderer } from "react-test-renderer";
+import renderer, { ReactTestInstance, ReactTestRenderer, act } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { mockComponent, ploc } from "../../../__tests__/TestUtils";
@@ -57,7 +57,9 @@ describe("<EmployerListSearch />", () => {
 		const selectors: ReactTestInstance[] =
 			testRenderer.root.findAll((node: ReactTestInstance) => node.type === "button");
 
-		selectors[0].props.onClick();
+		act((): void => {
+			selectors[0].props.onClick();
+		});
 
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
