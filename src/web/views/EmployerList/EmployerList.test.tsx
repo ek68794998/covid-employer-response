@@ -7,12 +7,11 @@ import { AnyAction, Store } from "redux";
 import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
-import * as Actions from "../../state/ducks/employers/actions";
 
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 
@@ -52,7 +51,7 @@ describe("<EmployerList />", () => {
 	});
 
 	test("renders empty list of employers", () => {
-		const record: EmployerRecord = new EmployerRecord();
+		const record: EmployerRecordMetadata = new EmployerRecordMetadata(0, 0, "fair");
 
 		record.employeesBefore = new EmployerEmployeeProfile();
 		record.id = "e1";
@@ -61,7 +60,7 @@ describe("<EmployerList />", () => {
 
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
-				itemsComplete: {
+				itemsMetadata: {
 					[record.id]: record,
 				},
 			},
@@ -71,8 +70,6 @@ describe("<EmployerList />", () => {
 		const filter: EmployerListSearchFilter = new EmployerListSearchFilter();
 
 		filter.text = "NORESULTSPLEASE";
-
-		jest.spyOn(Actions, "getEmployers").mockReturnValue(Promise.resolve());
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
@@ -91,29 +88,26 @@ describe("<EmployerList />", () => {
 	test("renders list of employers", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
-				items: [
-					{
-						...new EmployerRecord(),
+				itemsMetadata: {
+					e1: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), {
 						employeesBefore: new EmployerEmployeeProfile(),
 						id: "e1",
 						location: new EmployerLocation(),
 						name: "Alpha",
-					},
-					{
-						...new EmployerRecord(),
+					}),
+					e2: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), {
 						employeesBefore: new EmployerEmployeeProfile(),
 						id: "e2",
 						location: new EmployerLocation(),
 						name: "Beta",
-					},
-					{
-						...new EmployerRecord(),
+					}),
+					e3: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), {
 						employeesBefore: new EmployerEmployeeProfile(),
 						id: "e3",
 						location: new EmployerLocation(),
 						name: "Delta",
-					},
-				],
+					}),
+				},
 			},
 			strings,
 		});
@@ -121,8 +115,6 @@ describe("<EmployerList />", () => {
 		const filter: EmployerListSearchFilter = new EmployerListSearchFilter();
 
 		filter.text = "TA";
-
-		jest.spyOn(Actions, "getEmployers").mockReturnValue(Promise.resolve());
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
@@ -134,8 +126,6 @@ describe("<EmployerList />", () => {
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
-
-		expect(Actions.getEmployers).toHaveBeenCalled();
 
 		expect(renderedValue).toMatchSnapshot();
 	});

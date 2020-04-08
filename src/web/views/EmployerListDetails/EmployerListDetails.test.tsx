@@ -5,7 +5,7 @@ import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { mockComponent, ploc } from "../../../__tests__/TestUtils";
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -33,7 +33,7 @@ describe("<EmployerListDetails />", () => {
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerListDetails
-							employer={new EmployerRecord()}
+							employer={new EmployerRecordMetadata(0, 0, "fair")}
 							onClick={(): void => { /* Do nothing. */ }}
 						/>
 					</BrowserRouter>

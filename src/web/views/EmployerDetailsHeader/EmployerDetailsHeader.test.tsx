@@ -57,7 +57,10 @@ describe("<EmployerDetailsHeader />", () => {
 	test("renders using a complete employer record", () => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
-		const e: EmployerRecordMetadata = {
+		const e: EmployerRecordMetadata =
+			new EmployerRecordMetadata(1, 1, "fair");
+
+		Object.assign(e, {
 			aliases: [ "MyContoso" ],
 			employeesBefore: { type: "exactly", upperBound: 12345, year: 2015 },
 			id: "contoso",
@@ -69,7 +72,7 @@ describe("<EmployerDetailsHeader />", () => {
 			summary: "Contoso is a good company.",
 			ticker: "CTS",
 			wiki: "Contoso, Inc.",
-		};
+		});
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
