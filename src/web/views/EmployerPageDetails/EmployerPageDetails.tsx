@@ -1,14 +1,9 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
 import { EmployerRecord } from "../../../common/EmployerRecord";
-
-import { AppState } from "../../state/AppState";
-import { getEmployerById } from "../../state/ducks/employers/actions";
-import { getEmployer } from "../../state/ducks/employers/selectors";
 
 import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
 import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";
@@ -16,7 +11,7 @@ import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeade
 import "./EmployerPageDetails.scss";
 
 interface Props extends RouteProps {
-	employerId: string;
+	employer: EmployerRecord;
 }
 
 const citationSort = (a: Citation, b: Citation): number => {
@@ -28,17 +23,7 @@ const citationSort = (a: Citation, b: Citation): number => {
 };
 
 const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement | null => {
-	const { employerId } = props;
-
-	const employer: EmployerRecord | undefined = useSelector((state: AppState) => getEmployer(state, employerId));
-
-	const dispatch: React.Dispatch<any> = useDispatch();
-
-	useEffect(
-		() => {
-			dispatch(getEmployerById(employerId));
-		},
-		[]);
+	const { employer } = props;
 
 	if (!employer) {
 		return null;

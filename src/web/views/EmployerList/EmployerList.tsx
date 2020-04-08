@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import { useDispatch, useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
@@ -6,8 +6,9 @@ import { RouteProps } from "react-router-dom";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
-
-import { getEmployersList } from "../../state/ducks/employers/selectors";
+import { AppState } from "../../state/AppState";
+import { getEmployerById } from "../../state/ducks/employers/actions";
+import { getEmployer, getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";
@@ -21,10 +22,14 @@ interface Props extends RouteProps {
 }
 
 const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
+	const dispatch: React.Dispatch<any> = useDispatch();
+
 	const strings: LocalizedStrings = useSelector(getStrings);
+	const [ openEmployerId, setOpenEmployerId ] = useState("");
 	const employersList: EmployerRecordMetadata[] | undefined = useSelector(getEmployersList);
 
-	const [ openRow, setOpenRow ] = useState("");
+	const openEmployer: EmployerRecord | undefined =
+		useSelector((state: AppState) => getEmployer(state, openEmployerId));
 
 	const { searchFilter } = props;
 
@@ -38,7 +43,8 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	const filteredEmployers: EmployerRecordMetadata[] =
 		employersList
-			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(searchFilter, e));
+			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(searchFilter, e))
+			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => a.name.localeCompare(b.name));
 
 	if (!filteredEmployers.length) {
 		return (
@@ -49,11 +55,12 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 	}
 
 	const openModal = (id: string): void => {
-		setOpenRow(id);
+		dispatch(getEmployerById(id));
+		setOpenEmployerId(id);
 	};
 
 	const closeModal = (): void => {
-		setOpenRow("");
+		setOpenEmployerId("");
 	};
 
 	const getEmployerComponent = (e: EmployerRecordMetadata, i: number): JSX.Element | null => (
@@ -65,16 +72,14 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 		</div>
 	);
 
-	const isOpen: boolean = !!(openRow.length);
-
 	return (
 		<div className="EmployerList__Container">
 			{filteredEmployers.map(getEmployerComponent)}
-			<Modal isOpen={isOpen} onRequestClose={closeModal}>
+			<Modal isOpen={!!openEmployer} onRequestClose={closeModal}>
 				<button className="EmployerList__CloseModal" onClick={closeModal}>
 					<i className="material-icons">close</i>
 				</button>
-				<EmployerPageDetails employerId={openRow} />
+				{openEmployer && <EmployerPageDetails employer={openEmployer} />}
 			</Modal>
 		</div>
 	);
