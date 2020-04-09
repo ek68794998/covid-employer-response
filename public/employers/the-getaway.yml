@@ -1,0 +1,30 @@
+name: The Getaway
+image: the-getaway.png
+officialWebsite: http://www.thegetawaytampabay.com/our-story/
+location:
+  city: St. Petersburg
+  state: FL
+  country: us
+  international: false
+  wiki: St. Petersburg, Florida
+summary: An internal video exposed publicly has shown company leadership shirking responsibility for paying its employees and suggesting that they should have already applied for unemployment or started working in essential roles at other companies. The company posted on its Facebook page regarding the video, but it has since been removed.
+citations:
+  - summary: The owner of The Getaway sent a video internally to employees, notably while relaxing in beach clothing, calling them "dramatic" and suggesting not only that "didn't have to pay" their employees once the shutdown began, but that \"by now,\" workers should be registered for unemployment or working in retail locations such as CVS.
+    positivity: -2
+    type: publication
+    sources:
+      - name: Facebook [video]
+        link: https://www.facebook.com/58608795408/posts/10158585208435409/?d=n
+        date: 2020-04-07T10:58:00-07:00
+      - name: Reddit r/EntitledBitch
+        link: https://www.reddit.com/r/EntitledBitch/comments/fwpthg/entitled_restaurant_owner_posts_video_calling/
+        date: 2020-04-07T11:31:02-07:00
+  - summary: After the initial video went viral, The Getaway posted a notice on their Facebook page, calling it "grossly misunderstood" and stating that they had paid their employees and would bring them back "once [they] can." However, this post (and the entire Facebook page) is now hidden for unknown reasons.
+    positivity: 0
+    type: hearsay
+    sources:
+      - name: "Facebook [original; now hidden]"
+        link: https://m.facebook.com/story.php?story_fbid=3382867965076604&id=532060086824087
+      - name: Reddit r/EntitledBitch
+        link: https://www.reddit.com/r/EntitledBitch/comments/fwpthg/entitled_restaurant_owner_posts_video_calling/fmunruo/
+        date: 2020-04-08T18:17:52-07:00
