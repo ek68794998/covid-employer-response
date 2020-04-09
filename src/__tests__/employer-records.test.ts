@@ -83,9 +83,9 @@ describe("employer records", () => {
 		expect(record.wiki).toBe("Example");
 		expect(record.officialWebsite).toBe("http://example.com/about");
 
-		expect(record.industries.length).toBe(2);
-		expect(record.industries[0]).toBe("software");
-		expect(record.industries[1]).toBe("videoGames");
+		expect(record.industries?.length).toBe(2);
+		expect(record.industries?.[0]).toBe("software");
+		expect(record.industries?.[1]).toBe("videoGames");
 
 		expect(record.employeesBefore?.lowerBound).toBe(200);
 		expect(record.employeesBefore?.type).toBe("range");

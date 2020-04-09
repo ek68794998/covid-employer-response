@@ -40,7 +40,7 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 		);
 	}
 
-	public async loadAsync(id: string): Promise<LocalizedStrings> {
+	public async getAsync(id: string): Promise<LocalizedStrings> {
 		if (!(await this.existsAsync(id))) {
 			throw new Error(`Data file with ID '${id}' not found.`);
 		}
@@ -54,13 +54,13 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 		return loadedLocale;
 	}
 
-	public async loadAllAsync(): Promise<LocalizedStrings[]> {
+	public async getAllAsync(): Promise<LocalizedStrings[]> {
 		const loadedLocales: LocalizedStrings[] = [];
 
 		const LocalizedStringsIds: string[] = await this.getAllIdsAsync();
 
 		for (const id of LocalizedStringsIds) {
-			loadedLocales.push(await this.loadAsync(id));
+			loadedLocales.push(await this.getAsync(id));
 		}
 
 		return loadedLocales;
