@@ -25,7 +25,7 @@ const App: React.FC = (): React.ReactElement => {
 		<>
 			<HeaderMenu />
 			<Switch>
-				<Route exact={true} path="/" component={HomePage} />
+				<Route exact={true} path="/" component={/* TODO Switch to HomePage */ EmployerListPage} />
 				<Route exact={true} path="/employers" component={EmployerListPage} />
 				<Route exact={true} path="/employers/:id" component={EmployerPage} />
 				<Route path="/about" component={AboutPage} />
