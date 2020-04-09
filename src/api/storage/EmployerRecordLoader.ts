@@ -4,7 +4,8 @@ import yaml from "yaml";
 
 import { EmployerRecord } from "../../common/EmployerRecord";
 
-import { DataFileLoader } from "./DataFileLoader";
+import { CachedDataFileLoader } from "./CachedDataFileLoader";
+import { DataFileLoaderOptions } from "./DataFileLoaderOptions";
 
 // Type definition from 'promisify' is very complex, so ignore those.
 // eslint-disable-next-line @typescript-eslint/tslint/config
@@ -14,21 +15,29 @@ const readdirAsync = util.promisify(fs.readdir);
 // eslint-disable-next-line @typescript-eslint/tslint/config
 const readFileAsync = util.promisify(fs.readFile);
 
-export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
+export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 	private static readonly EMPLOYER_FILE_REGEX: RegExp = /^(.*)\.yml$/;
 
-	public existsAsync(id: string): Promise<boolean> {
+	public existsAsync(id: string, options: DataFileLoaderOptions): Promise<boolean> {
+		if (!options.bypassCache && (id in this.cachedItems || this.cachedIds.indexOf(id) >= 0)) {
+			return Promise.resolve(true);
+		}
+
 		return existsAsync(this.getFileName(id));
 	}
 
-	public async getAllIdsAsync(): Promise<string[]> {
+	public async getAllIdsAsync(options: DataFileLoaderOptions): Promise<string[]> {
+		if (!options.bypassCache && this.cachedIds.length > 0) {
+			return this.cachedIds;
+		}
+
 		if (!fs.existsSync(this.directoryPath)) {
 			throw new Error("Employer record data folder not found.");
 		}
 
 		const fileNames: string[] = await readdirAsync(this.directoryPath, "UTF8") as string[];
 
-		return (
+		const ids: string[] =
 			fileNames
 				.map((fileName: string): string => {
 					const regexResult: RegExpExecArray | null =
@@ -38,12 +47,19 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 
 					return recordId || "";
 				})
-				.filter((recordId: string): boolean => recordId.length > 0 && recordId !== "sample")
-		);
+				.filter((recordId: string): boolean => recordId.length > 0 && recordId !== "sample");
+
+		this.cachedIds = ids;
+
+		return ids;
 	}
 
-	public async loadAsync(id: string): Promise<EmployerRecord> {
-		if (!(await this.existsAsync(id))) {
+	public async getAsync(id: string, options: DataFileLoaderOptions): Promise<EmployerRecord> {
+		if (!options.bypassCache && id in this.cachedItems) {
+			return this.cachedItems[id];
+		}
+
+		if (!(await this.existsAsync(id, options))) {
 			throw new Error(`Data file with ID '${id}' not found.`);
 		}
 
@@ -53,22 +69,26 @@ export class EmployerRecordLoader extends DataFileLoader<EmployerRecord> {
 
 		loadedEmployer.id = id;
 
+		this.cachedItems[id] = loadedEmployer;
+
 		return loadedEmployer;
 	}
 
-	public async loadAllAsync(): Promise<EmployerRecord[]> {
+	public async getAllAsync(options: DataFileLoaderOptions): Promise<EmployerRecord[]> {
+		const employerRecordIds: string[] =
+			options.bypassCache || this.cachedIds.length === 0
+				? await this.getAllIdsAsync(options)
+				: this.cachedIds;
+
 		const loadedEmployers: EmployerRecord[] = [];
 
-		const employerRecordIds: string[] = await this.getAllIdsAsync();
-
 		for (const recordId of employerRecordIds) {
-			loadedEmployers.push(await this.loadAsync(recordId));
+			loadedEmployers.push(await this.getAsync(recordId, options));
 		}
 
-		return (
-			loadedEmployers.sort(
-				(a: EmployerRecord, b: EmployerRecord) => a.name.localeCompare(b.name))
-		);
+		this.cachedIds = loadedEmployers.map((e: EmployerRecord) => e.id);
+
+		return loadedEmployers;
 	}
 
 	private getFileName(id: string): string {
