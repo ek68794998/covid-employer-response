@@ -63,7 +63,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 		setOpenEmployerId("");
 	};
 
-	const getEmployerComponent = (e: EmployerRecordMetadata, i: number): JSX.Element | null => (
+	const getEmployerComponent = (e: EmployerRecordMetadata, i: number): JSX.Element => (
 		<div className="EmployerList__Item" key={`${i}-${e.id}`}>
 			<EmployerListDetails
 				employer={e}

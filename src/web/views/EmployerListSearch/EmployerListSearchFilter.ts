@@ -1,6 +1,5 @@
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
-import { EmployerRecord } from "../../../common/EmployerRecord";
 import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
 
 export class EmployerListSearchFilter {
@@ -21,18 +20,26 @@ export class EmployerListSearchFilter {
 	public text: string = "";
 
 	public static isMatch(f: EmployerListSearchFilter, e: EmployerRecordBase): boolean {
-		if (!e.location || !this.isMatchForLocation(f, e.location)) {
+		if (!this.isMatchForLocation(f, e.location)) {
 			return false;
 		}
 
-		if (!e.employeesBefore || !this.isMatchForEmployeeCount(f, e.employeesBefore)) {
+		if (!this.isMatchForEmployeeCount(f, e.employeesBefore)) {
 			return false;
 		}
 
 		return this.isMatchForFullText(f, e);
 	}
 
-	private static isMatchForEmployeeCount(f: EmployerListSearchFilter, e: EmployerEmployeeProfile): boolean {
+	private static isMatchForEmployeeCount(f: EmployerListSearchFilter, e?: EmployerEmployeeProfile): boolean {
+		if (f.small && f.medium && f.large) {
+			return true;
+		}
+
+		if (!e) {
+			return false;
+		}
+
 		const getNumberIsBetween = (v: number, lower: number, upper: number): boolean =>
 			v >= lower && v <= upper;
 
@@ -100,7 +107,15 @@ export class EmployerListSearchFilter {
 		return fieldsToSearch.some((field?: string) => field && field.indexOf(f.text.toLowerCase()) >= 0);
 	}
 
-	private static isMatchForLocation(f: EmployerListSearchFilter, e: EmployerLocation): boolean {
+	private static isMatchForLocation(f: EmployerListSearchFilter, e?: EmployerLocation): boolean {
+		if (f.international && f.national) {
+			return true;
+		}
+
+		if (!e) {
+			return false;
+		}
+
 		if ((!f.international && e.international) || (!f.national && !e.international)) {
 			return false;
 		}
