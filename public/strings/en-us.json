@@ -264,7 +264,7 @@
     "edit": "The employer's data file where edits can be made.",
     "employees": "The approximate number of employees the company had prior to the Coronavirus pandemic.",
     "linkToEmployer": "The link directly to this employer's profile.",
-    "location": "The city in which the employer is originally based.",
+    "location": "The city in which the employer's headquarters are located.",
     "officialWebsite": "The employer's official website link.",
     "rating": "The general rating of the employer.",
     "ratingCounts": "Aggregate counts of the good and bad actions an employer has taken.",
