@@ -1,0 +1,36 @@
+name: Twitter
+shortName: Twitter
+ticker: TWTR
+wiki: Twitter
+image: twitter.svg
+officialWebsite: https://about.twitter.com/
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: false
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 4800
+  year: 2020
+  yearQuarter: Q1
+summary: Twitter's employees have been able to fully work remotely while receiving full pay, and Twitter's CEO has donated over a quarter of his net worth to global COVID-19 relief.
+citations:
+  - summary: Twitter "strongly encouraged" all U.S. employees to work from home starting March 2, while making that order mandatory for some international employees due to varying countries' national decrees. On March 11, it made the work-from-home order mandatory for all employees.
+    positivity: 1
+    type: statement
+    sources:
+      - name: Vox
+        link: https://web.archive.org/web/20200329045034/https://www.vox.com/recode/2020/3/2/21162240/twitter-coronavirus-headquarters-employees-work-from-home
+        date: 2020-03-03T00:20:00Z
+      - name: The Verge
+        link: https://web.archive.org/web/20200406113448/https://www.theverge.com/2020/3/12/21176211/twitter-employees-work-from-home-covid-19-coronavirus
+        date: 2020-04-07T21:21:43Z
+  - summary: Twitter CEO Jack Dorsey has donated over $1 billion USD (about 28% of his net worth) to global COVID-19 relief.
+    positivity: 1
+    type: statement
+    sources:
+      - name: The Verge
+        link: https://web.archive.org/web/20200408111446/https://www.theverge.com/2020/4/7/21212766/jack-dorsey-coronavirus-covid-19-donate-relief-fund-square-twitter
+        date: 2020-04-07T21:21:43Z
