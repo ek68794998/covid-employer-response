@@ -13,22 +13,49 @@ import configureStore from "../../state/configureStore";
 import EmployerActionLinks from "./EmployerActionLinks";
 
 describe("<EmployerActionLinks />", () => {
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
+	const createConfigStore = (): Store<AppState, AnyAction> =>
+		configureStore({
 			strings: {
 				detailDescriptions: {
 					edit: ploc("editDescription"),
+					linkToEmployer: ploc("linkToEmployer"),
 					officialWebsite: ploc("officialWebsiteDescription"),
 					wikipedia: ploc("wikipediaDescription"),
 				},
 			},
 		});
 
+	test("renders without exploding", () => {
+		const store: Store<AppState, AnyAction> = createConfigStore();
+
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerActionLinks employer={new EmployerRecordMetadata(0, 0, "fair")} />
+					</BrowserRouter>
+				</Provider>,
+			).toJSON();
+
+		expect(renderedValue).toMatchSnapshot();
+	});
+
+	test("properly shows all action links", () => {
+		const store: Store<AppState, AnyAction> = createConfigStore();
+
+		const record: EmployerRecordMetadata =
+			Object.assign(new EmployerRecordMetadata(0, 0, "fair"), {
+				id: "e1",
+				name: "Alpha",
+				officialWebsite: "http://example.com",
+				wiki: "Example",
+			});
+
+		const renderedValue: ReactTestRendererJSON | null =
+			renderer.create(
+				<Provider store={store}>
+					<BrowserRouter>
+						<EmployerActionLinks employer={record} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

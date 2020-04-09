@@ -14,6 +14,14 @@ import "./EmployerActionLinks.scss";
 
 interface Props extends RouteProps {
 	employer: EmployerRecordMetadata;
+
+	hideEdit?: boolean;
+
+	hideProfileLink?: boolean;
+
+	hideWebsite?: boolean;
+
+	hideWikipedia?: boolean;
 }
 
 const getEmployerEditComponent =
@@ -29,6 +37,25 @@ const getEmployerEditComponent =
 				title={strings.detailDescriptions.edit}
 			>
 				{DesignHelpers.materialIcon("edit")}
+			</a>
+		);
+	};
+
+const getEmployerProfileLinkComponent =
+	(employer: EmployerRecordMetadata, strings: LocalizedStrings): JSX.Element | null => {
+		if (!employer.id) {
+			return null;
+		}
+
+		const link: string = `/employers/${employer.id}`;
+
+		return (
+			<a
+				className="EmployerActionLinks__Link"
+				href={link}
+				title={strings.detailDescriptions.linkToEmployer}
+			>
+				{DesignHelpers.materialIcon("link")}
 			</a>
 		);
 	};
@@ -75,13 +102,14 @@ const getEmployerWikipediaComponent =
 
 const EmployerActionLinks: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
-	const { employer } = props;
+	const { employer, hideEdit, hideProfileLink, hideWebsite, hideWikipedia } = props;
 
 	return (
 		<>
-			{getEmployerWikipediaComponent(employer, strings)}
-			{getEmployerWebsiteComponent(employer, strings)}
-			{getEmployerEditComponent(employer, strings)}
+			{!hideWikipedia && getEmployerWikipediaComponent(employer, strings)}
+			{!hideWebsite && getEmployerWebsiteComponent(employer, strings)}
+			{!hideEdit && getEmployerEditComponent(employer, strings)}
+			{!hideProfileLink && getEmployerProfileLinkComponent(employer, strings)}
 		</>
 	);
 };

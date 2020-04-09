@@ -263,6 +263,7 @@
     "aka": "Alternative names for the employer, including aliases, parent companies, and child companies.",
     "edit": "The employer's data file where edits can be made.",
     "employees": "The approximate number of employees the company had prior to the Coronavirus pandemic.",
+    "linkToEmployer": "The link directly to this employer's profile.",
     "location": "The city in which the employer is originally based.",
     "officialWebsite": "The employer's official website link.",
     "rating": "The general rating of the employer.",

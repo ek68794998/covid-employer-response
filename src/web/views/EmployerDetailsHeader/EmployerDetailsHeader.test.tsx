@@ -23,6 +23,7 @@ describe("<EmployerDetailsHeader />", () => {
 				detailDescriptions: {
 					aka: ploc("aka"),
 					employees: ploc("employees"),
+					linkToEmployer: ploc("linkToEmployer"),
 					location: ploc("location"),
 					rating: ploc("rating"),
 					ratingCounts: ploc("ratingCounts"),
