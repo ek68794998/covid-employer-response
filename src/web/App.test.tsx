@@ -17,6 +17,7 @@ describe("<App />", () => {
 			strings: {
 				about: ploc("about"),
 				appTitle: ploc("appTitle"),
+				employerList: ploc("employerList"),
 				home: ploc("home"),
 			},
 		});
