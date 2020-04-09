@@ -1,5 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<EmployerActionLinks /> properly shows all action links 1`] = `
+Array [
+  <a
+    className="EmployerActionLinks__Link"
+    href="https://en.wikipedia.org/wiki/Example"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="ωïƙïƥèδïáÐèƨçřïƥƭïôñ"
+  >
+    <i
+      className="material-icons"
+    >
+      language
+    </i>
+  </a>,
+  <a
+    className="EmployerActionLinks__Link"
+    href="http://example.com"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="ôƒƒïçïáℓWèβƨïƭèÐèƨçřïƥƭïôñ"
+  >
+    <i
+      className="material-icons"
+    >
+      home
+    </i>
+  </a>,
+  <a
+    className="EmployerActionLinks__Link"
+    href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/e1.yml"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="èδïƭÐèƨçřïƥƭïôñ"
+  >
+    <i
+      className="material-icons"
+    >
+      edit
+    </i>
+  </a>,
+  <a
+    className="EmployerActionLinks__Link"
+    href="/employers/e1"
+    title="ℓïñƙTôÉ₥ƥℓô¥èř"
+  >
+    <i
+      className="material-icons"
+    >
+      link
+    </i>
+  </a>,
+]
+`;
+
 exports[`<EmployerActionLinks /> renders without exploding 1`] = `
 <a
   className="EmployerActionLinks__Link"

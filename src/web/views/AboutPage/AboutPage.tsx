@@ -11,9 +11,9 @@ import { getStrings } from "../../state/ducks/localization/selectors";
 import { ProjectUrl } from "../../../common/constants/UrlConstants";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import "./About.scss";
+import "./AboutPage.scss";
 
-const About: React.FC = (): React.ReactElement => {
+const AboutPage: React.FC = (): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
 
 	const coronavirusWikipediaUrl: string = "https://en.wikipedia.org/wiki/Coronavirus_disease_2019";
@@ -27,7 +27,7 @@ const About: React.FC = (): React.ReactElement => {
 			<Helmet>
 				<title>{strings.about} | {strings.appTitle}</title>
 			</Helmet>
-			<div className="About__Content">
+			<div className="AboutPage__Content">
 				<h2 id="what-is">What is {strings.appTitleShort}?</h2>
 				<p>
 					<strong>{strings.appTitleShort}</strong> ({strings.appTitle}) is a collaborative, open-source project designed to
@@ -91,4 +91,4 @@ const About: React.FC = (): React.ReactElement => {
 	);
 };
 
-export default withRouter(About);
+export default withRouter(AboutPage);

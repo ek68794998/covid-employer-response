@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<About /> renders without exploding 1`] = `
+exports[`<AboutPage /> renders without exploding 1`] = `
 <main
   id="about"
 >
   <div
-    className="About__Content"
+    className="AboutPage__Content"
   >
     <h2
       id="what-is"

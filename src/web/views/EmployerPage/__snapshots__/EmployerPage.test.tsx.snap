@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerPage /> displays an employer record 1`] = `
+<main
+  id="employer-page"
+>
+  <div
+    className="EmployerPage__Content"
+  >
+    [component: EmployerPageDetails employer=([object Object]) /]
+  </div>
+</main>
+`;
+
+exports[`<EmployerPage /> renders without exploding 1`] = `
+<main
+  id="employer-page"
+>
+  <div
+    className="EmployerPage__Content"
+  >
+    Not found.
+  </div>
+</main>
+`;

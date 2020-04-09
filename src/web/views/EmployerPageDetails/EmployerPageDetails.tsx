@@ -56,7 +56,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={employer} />
+			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(employer)} />
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
 					{employer.summary}

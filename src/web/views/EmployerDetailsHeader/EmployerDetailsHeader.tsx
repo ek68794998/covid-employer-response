@@ -7,6 +7,7 @@ import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile
 import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
 import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
 
@@ -17,7 +18,7 @@ import EmployerActionLinks from "../EmployerActionLinks/EmployerActionLinks";
 import "./EmployerDetailsHeader.scss";
 
 interface Props extends RouteProps {
-	employer: EmployerRecord;
+	employer: EmployerRecordMetadata;
 
 	onClickEmployerName?: () => void;
 
@@ -25,7 +26,7 @@ interface Props extends RouteProps {
 }
 
 const getAliasesComponent =
-	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
+	(employer: EmployerRecordMetadata, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
 		if (!employer.aliases || employer.aliases.length === 0 || useShortText) {
 			return null;
 		}
@@ -62,7 +63,7 @@ const getAliasesComponent =
 	};
 
 const getEmployeeCountComponent =
-	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
+	(employer: EmployerRecordMetadata, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
 		const employeeCountString: string | null =
 			employer.employeesBefore
 				? EmployerEmployeeProfile.toString(employer.employeesBefore, !useShortText, useShortText)
@@ -81,7 +82,7 @@ const getEmployeeCountComponent =
 	};
 
 const getLocationWikipediaComponent =
-	(employer: EmployerRecord, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
+	(employer: EmployerRecordMetadata, strings: LocalizedStrings, useShortText: boolean): JSX.Element | null => {
 		if (!employer.location) {
 			return null;
 		}
@@ -115,7 +116,7 @@ const getLocationWikipediaComponent =
 	};
 
 const getTickerComponent =
-	(employer: EmployerRecord, strings: LocalizedStrings): JSX.Element | null => {
+	(employer: EmployerRecordMetadata, strings: LocalizedStrings): JSX.Element | null => {
 		if (!employer.ticker) {
 			return null;
 		}
@@ -141,9 +142,7 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 
 	let indicatorIcon: "trending_up" | "trending_flat" | "trending_down";
 
-	const rating: EmployerRating = EmployerRecord.getRating(employer);
-
-	switch (rating) {
+	switch (employer.rating) {
 		case "good":
 			indicatorIcon = "trending_up";
 			break;
@@ -164,17 +163,6 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 			? <a onClick={onClickEmployerName} title={employer.name !== displayName ? employer.name : ""}>{displayName}</a>
 			: <>{displayName}</>;
 
-	let positives: number = 0;
-	let negatives: number = 0;
-
-	for (const citation of employer.citations) {
-		if (citation.positivity > 0) {
-			positives++;
-		} else if (citation.positivity < 0) {
-			negatives++;
-		}
-	}
-
 	return (
 		<>
 			<div className={`EmployerDetailsHeader__Title ${useShortText ? "" : "EmployerDetailsHeader__Title--noShort"}`}>
@@ -183,13 +171,13 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 					{employerNameComponent}
 					{!useShortText && getTickerComponent(employer, strings)}
 				</h2>
-				{!useShortText && <EmployerActionLinks employer={employer} />}
+				{!useShortText && <EmployerActionLinks employer={employer} hideProfileLink={true} />}
 				<span className="EmployerDetailsHeader__TitleGap" />
 				<span
-					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${rating}`}
+					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${employer.rating}`}
 					title={strings.detailDescriptions.rating}
 				>
-					{strings.ratingLabels[rating]}
+					{strings.ratingLabels[employer.rating]}
 					<i className="material-icons EmployerDetailsHeader__RatingIcon">{indicatorIcon}</i>
 				</span>
 			</div>
@@ -200,11 +188,11 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 				<span className="EmployerDetailsHeader__AggregateRatings" title={strings.detailDescriptions.ratingCounts}>
 					<span className="EmployerDetailsHeader__GoodRatings">
 						<i className="material-icons">add</i>
-						{positives}
+						{employer.positiveCount}
 					</span>
 					<span className="EmployerDetailsHeader__PoorRatings">
 						<i className="material-icons">remove</i>
-						{negatives}
+						{employer.negativeCount}
 					</span>
 				</span>
 			</div>

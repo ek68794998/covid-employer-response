@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
+import { DesignHelpers } from "../../../common/DesignHelpers";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -33,36 +34,34 @@ const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement =
 		setSearchFilters({ ...searchFilters, ...updates });
 	};
 
-	const filterContainer: JSX.Element | null =
-		isFiltersetVisible
-			? (
-				<div className="EmployerListSearch__FilterContainer">
-					<InternationalTypeFilterControl filter={searchFilters} onUpdateFilter={updateSearchFilters} />
-					<EmployeeCountFilterControl filter={searchFilters} onUpdateFilter={updateSearchFilters} />
-				</div>
-			)
-			: null;
-
 	const onInput =
 		(e: React.FormEvent<HTMLInputElement>): void => updateSearchFilters({ text: e.currentTarget.value });
 
 	return (
 		<div className="EmployerListSearch__Container">
 			<div className="EmployerListSearch__InputContainer">
-				<i className="material-icons">search</i>
-				<input
-					onInput={onInput}
-					placeholder={strings.search}
-					type="search"
-				/>
+				<div className="EmployerListSearch__Input">
+					{DesignHelpers.materialIcon("search")}
+					<input
+						onInput={onInput}
+						placeholder={strings.search}
+						type="search"
+					/>
+				</div>
 				<button
-					className="EmployerListSearch__ExpandFilters"
+					className={`EmployerListSearch__ExpandFilters EmployerListSearch__ExpandFilters--${isFiltersetVisible ? "Open" : "Closed"}`}
 					onClick={(): void => setIsFiltersetVisible(!isFiltersetVisible)}
 				>
-					<i className="material-icons">{isFiltersetVisible ? "expand_less" : "expand_more"}</i>
+					{DesignHelpers.materialIcon("filter_list")}
+					{strings.filter}
 				</button>
 			</div>
-			{filterContainer}
+			{isFiltersetVisible && (
+				<div className="EmployerListSearch__FilterContainer">
+					<InternationalTypeFilterControl filter={searchFilters} onUpdateFilter={updateSearchFilters} />
+					<EmployeeCountFilterControl filter={searchFilters} onUpdateFilter={updateSearchFilters} />
+				</div>
+			)}
 		</div>
 	);
 };

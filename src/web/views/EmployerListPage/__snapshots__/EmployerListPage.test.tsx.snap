@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Home /> renders without exploding 1`] = `
+exports[`<EmployerListPage /> renders without exploding 1`] = `
 <main
-  id="home"
+  id="employer-list"
 >
   <div
-    className="Home__Filters"
+    className="EmployerListPage__Filters"
   >
     [component: EmployerListSearch onChange=([Function]) /]
   </div>
   <div
-    className="Home__Content"
+    className="EmployerListPage__Content"
   >
     [component: EmployerList searchFilter=([object Object]) /]
   </div>

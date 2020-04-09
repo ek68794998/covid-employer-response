@@ -11,15 +11,13 @@ import EmployerList from "../EmployerList/EmployerList";
 import EmployerListSearch from "../EmployerListSearch/EmployerListSearch";
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 
-import "./Home.scss";
+import "./EmployerListPage.scss";
 
-const Home: React.FC = (): React.ReactElement => {
+const EmployerListPage: React.FC = (): React.ReactElement => {
 	const [ searchFilters, setSearchFilters ] = useState(new EmployerListSearchFilter());
 	const [ isTopButtonVisible, setIsTopButtonVisible ] = useState(false);
 
 	const strings: LocalizedStrings = useSelector(getStrings);
-
-	const dispatch: React.Dispatch<any> = useDispatch();
 
 	if (typeof window !== "undefined") {
 		const trackScrolling = (): void => {
@@ -37,25 +35,24 @@ const Home: React.FC = (): React.ReactElement => {
 			[]);
 	}
 
-	const backToTopComponent: JSX.Element =
-		<button className="Home__BackToTop" onClick={(): void => { window.scrollTo(window.scrollX, 0); }}>
-			<i className="material-icons">arrow_upward</i>
-		</button>;
-
 	return (
-		<main id="home">
+		<main id="employer-list">
 			<Helmet>
-				<title>{strings.home} | {strings.appTitle}</title>
+				<title>{strings.employerList} | {strings.appTitle}</title>
 			</Helmet>
-			<div className="Home__Filters">
+			<div className="EmployerListPage__Filters">
 				<EmployerListSearch onChange={setSearchFilters} />
 			</div>
-			<div className="Home__Content">
+			<div className="EmployerListPage__Content">
 				<EmployerList searchFilter={searchFilters} />
 			</div>
-			{isTopButtonVisible && backToTopComponent}
+			{isTopButtonVisible && (
+				<button className="EmployerListPage__BackToTop" onClick={(): void => { window.scrollTo(window.scrollX, 0); }}>
+					<i className="material-icons">arrow_upward</i>
+				</button>
+			)}
 		</main>
 	);
 };
 
-export default withRouter(Home);
+export default withRouter(EmployerListPage);

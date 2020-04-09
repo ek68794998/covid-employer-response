@@ -18,11 +18,9 @@ div.EmployerListSearch__Container {
 }
 
 div.EmployerListSearch__InputContainer {
-	align-items: center;
 	display: flex;
 	flex: 1;
 	height: 100%;
-	padding: $input-buffer;
 	width: 100%;
 
 	> i {
@@ -37,13 +35,33 @@ div.EmployerListSearch__InputContainer {
 		width: 100%;
 	}
 
+	.EmployerListSearch__Input {
+		align-items: center;
+		border-right: 1px solid $outline-color;
+		display: flex;
+		flex: 1;
+		padding: $input-buffer;
+		white-space: nowrap;
+	}
+
 	.EmployerListSearch__ExpandFilters {
+		align-items: center;
 		background: none;
 		border: none;
 		cursor: pointer;
+		display: flex;
 		line-height: 0;
 		margin: 0;
 		outline: none;
+		padding-right: 16px;
+
+		&.EmployerListSearch__ExpandFilters--Open {
+			color: $link-normal;
+		}
+
+		i {
+			margin: 0 8px 0 4px;
+		}
 	}
 }
 

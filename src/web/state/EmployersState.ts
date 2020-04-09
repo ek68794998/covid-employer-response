@@ -1,5 +1,8 @@
 import { EmployerRecord } from "../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../common/EmployerRecordMetadata";
 
 export interface EmployersState {
-	items: EmployerRecord[];
+	itemsComplete?: { [id: string]: EmployerRecord };
+
+	itemsMetadata?: { [id: string]: EmployerRecordMetadata };
 }

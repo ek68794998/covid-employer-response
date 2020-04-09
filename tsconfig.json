@@ -23,14 +23,14 @@
     "target": "es2016"
   },
   "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
     "acceptance-tests",
-    "webpack",
+    "build",
+    "coverage",
     "jest",
+    "node_modules",
     "razzle.config.js",
-    "coverage"
+    "scripts",
+    "webpack"
   ],
   "types": ["typePatches", "node", "webpack-env"]
 }

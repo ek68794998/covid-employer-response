@@ -12,13 +12,13 @@ describe("EmployerListSearchFilter", () => {
 		base.employeesBefore = new EmployerEmployeeProfile();
 		base.location = new EmployerLocation();
 
-		return { ...base, ...overrides };
+		return Object.assign(base, overrides);
 	};
 
 	const createFilterDataRow = (overrides: Partial<EmployerListSearchFilter>): EmployerListSearchFilter => {
 		const base: EmployerListSearchFilter = new EmployerListSearchFilter();
 
-		return { ...base, ...overrides };
+		return Object.assign(base, overrides);
 	};
 
 	test.each([

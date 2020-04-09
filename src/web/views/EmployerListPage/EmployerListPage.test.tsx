@@ -5,26 +5,26 @@ import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { mockComponent, ploc } from "../../../__tests__/TestUtils";
-import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import EmployerListDetails from "./EmployerListDetails";
+import EmployerListPage from "./EmployerListPage";
 
 jest.mock(
-	"../EmployerDetailsHeader/EmployerDetailsHeader",
-	() => mockComponent("EmployerDetailsHeader"));
+	"../EmployerListSearch/EmployerListSearch",
+	() => mockComponent("EmployerListSearch"));
 
 jest.mock(
-	"../EmployerActionLinks/EmployerActionLinks",
-	() => mockComponent("EmployerActionLinks"));
+	"../EmployerList/EmployerList",
+	() => mockComponent("EmployerList"));
 
-describe("<EmployerListDetails />", () => {
+describe("<EmployerListPage />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
-				readMore: ploc("readMore"),
+				appTitle: ploc("appTitle"),
+				employerList: ploc("employerList"),
 			},
 		});
 
@@ -32,10 +32,7 @@ describe("<EmployerListDetails />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListDetails
-							employer={new EmployerRecordMetadata(0, 0, "fair")}
-							onClick={(): void => { /* Do nothing. */ }}
-						/>
+						<EmployerListPage />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

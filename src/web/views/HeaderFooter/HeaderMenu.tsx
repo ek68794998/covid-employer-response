@@ -32,8 +32,8 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 
 	const navLinks: JSX.Element = (
 		<>
-			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/">
-				{strings.home}
+			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers">
+				{strings.employerList}
 			</NavLink>
 			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/about">
 				{strings.about}
@@ -72,7 +72,7 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 						<i className="material-icons">menu</i>
 					</button>
 					<div id="brand">
-						<NavLink to="/">
+						<NavLink title={strings.home} to="/">
 							{strings.appTitleShort}
 							{!isProd && <span style={{ color: "red" }}>&nbsp; [DEV]</span>}
 						</NavLink>

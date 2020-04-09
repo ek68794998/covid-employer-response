@@ -1,23 +1,59 @@
+import { Action } from "redux";
+import { ThunkAction } from "redux-thunk";
+
 import { EmployerRecord } from "../../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadata";
 
-import { getEmployersApi, GetEmployersApiResponse } from "./api";
-import { GetAllErrorType, GetAllType, GetEmployersActionTypes } from "./types";
+import {
+	getEmployerByIdApi,
+	GetEmployerByIdApiResponse,
+	getEmployersListApi,
+	GetEmployersListApiResponse,
+} from "./api";
+import {
+	GetEmployerByIdErrorType,
+	GetEmployerByIdType,
+	GetEmployerByIdActionTypes,
+	GetEmployersListErrorType,
+	GetEmployersListType,
+	GetEmployersListActionTypes,
+} from "./types";
 
-export const getEmployersError = (): GetEmployersActionTypes => ({
-	type: GetAllErrorType,
+export const getEmployerByIdError = (): GetEmployerByIdActionTypes => ({
+	type: GetEmployerByIdErrorType,
 });
 
-export const getEmployersSuccess = (payload: EmployerRecord[]): GetEmployersActionTypes => ({
+export const getEmployerByIdSuccess = (payload: EmployerRecord): GetEmployerByIdActionTypes => ({
 	payload,
-	type: GetAllType,
+	type: GetEmployerByIdType,
 });
 
-export const getEmployers = (dispatch: React.Dispatch<GetEmployersActionTypes>): Promise<void> => (
-	getEmployersApi().then((result: GetEmployersApiResponse) => {
-		if (result.response.status === 200) {
-			dispatch(getEmployersSuccess(result.employers));
-		} else {
-			dispatch(getEmployersError());
-		}
-	})
-);
+export const getEmployerById =
+	(id: string): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
+		(dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> =>
+			getEmployerByIdApi(id).then((result: GetEmployerByIdApiResponse) => {
+				if (result.response.status === 200) {
+					dispatch(getEmployerByIdSuccess(result.employer));
+				} else {
+					dispatch(getEmployerByIdError());
+				}
+			});
+
+export const getEmployersListError = (): GetEmployersListActionTypes => ({
+	type: GetEmployersListErrorType,
+});
+
+export const getEmployersListSuccess = (payload: EmployerRecordMetadata[]): GetEmployersListActionTypes => ({
+	payload,
+	type: GetEmployersListType,
+});
+
+export const getEmployersList =
+	(dispatch: React.Dispatch<GetEmployersListActionTypes>): Promise<void> =>
+		getEmployersListApi().then((result: GetEmployersListApiResponse) => {
+			if (result.response.status === 200) {
+				dispatch(getEmployersListSuccess(result.employers));
+			} else {
+				dispatch(getEmployersListError());
+			}
+		});

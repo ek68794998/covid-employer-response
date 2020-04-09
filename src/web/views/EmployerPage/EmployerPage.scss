@@ -1,0 +1,17 @@
+@import "../Colors.scss";
+@import "../Dimensions.scss";
+
+main#employer-page {
+	margin: 0 auto;
+	width: 100%;
+
+	> div {
+		margin: 0 auto;
+		padding: 0 $page-padding;
+	}
+	
+	div.EmployerPage__Content {
+		max-width: $body-max-width;
+		padding: 16px 0;
+	}
+}

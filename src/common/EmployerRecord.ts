@@ -1,32 +1,14 @@
 import { Citation } from "./Citation";
-import { EmployerEmployeeProfile } from "./EmployerEmployeeProfile";
-import { EmployerLocation } from "./EmployerLocation";
 import { EmployerRating } from "./EmployerRating";
+import { EmployerRecordBase } from "./EmployerRecordBase";
+import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
 
-export class EmployerRecord {
-	public aliases?: string[];
-
+export class EmployerRecord extends EmployerRecordBase {
 	public citations: Citation[] = [];
 
-	public employeesBefore?: EmployerEmployeeProfile;
-
-	public id: string = "";
-
-	public image?: string;
-
-	public location?: EmployerLocation;
-
-	public name: string = "";
-
-	public officialWebsite?: string;
-
-	public shortName?: string;
-
-	public summary: string = "";
-
-	public ticker?: string;
-
-	public wiki?: string;
+	public get rating(): EmployerRating {
+		return EmployerRecord.getRating(this);
+	}
 
 	public static getRating(e: EmployerRecord): EmployerRating {
 		if (!e.citations.length) {
@@ -48,25 +30,23 @@ export class EmployerRecord {
 		return citationScore > 0 ? "good" : "poor";
 	}
 
-	public static shallowClone(original: EmployerRecord, includeDetails: boolean): EmployerRecord {
-		const record: EmployerRecord = new EmployerRecord();
+	public static toMetadata(original: EmployerRecord): EmployerRecordMetadata {
+		let positives: number = 0;
+		let negatives: number = 0;
 
-		record.aliases = original.aliases;
-		record.employeesBefore = original.employeesBefore;
-		record.id = original.id;
-		record.image = original.image;
-		record.location = original.location;
-		record.name = original.name;
-		record.officialWebsite = original.officialWebsite;
-		record.shortName = original.shortName;
-		record.summary = original.summary;
-		record.ticker = original.ticker;
-		record.wiki = original.wiki;
-
-		if (includeDetails) {
-			record.citations = original.citations;
+		for (const citation of original.citations) {
+			if (citation.positivity > 0) {
+				positives++;
+			} else if (citation.positivity < 0) {
+				negatives++;
+			}
 		}
 
-		return record;
+		const metadata: EmployerRecordMetadata =
+			new EmployerRecordMetadata(negatives, positives, this.getRating(original));
+
+		EmployerRecordBase.copyTo(original, metadata);
+
+		return metadata;
 	}
 }
