@@ -6,6 +6,8 @@ ticker: TGT
 wiki: Target Corporation
 image: target.svg
 officialWebsite: https://corporate.target.com/
+industries:
+  - retail
 location:
   city: Minneapolis
   state: MN

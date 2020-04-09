@@ -3,6 +3,8 @@ ticker: GME
 wiki: GameStop
 image: gamestop.png
 officialWebsite: http://news.gamestop.com/about-gamestop
+industries:
+  - retail
 location:
   city: Grapevine
   state: TX

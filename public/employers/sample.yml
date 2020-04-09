@@ -7,6 +7,9 @@ ticker: CTS
 wiki: Example
 image: sample.svg
 officialWebsite: http://example.com/about
+industries:
+  - software
+  - videoGames
 location:
   city: Seattle
   state: WA

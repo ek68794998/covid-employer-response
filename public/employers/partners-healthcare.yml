@@ -2,6 +2,8 @@ name: Partners HealthCare
 wiki: Partners HealthCare
 image: partners-healthcare.svg
 officialWebsite: https://www.partners.org/About/
+industries:
+  - healthCare
 location:
   city: Boston
   state: MA

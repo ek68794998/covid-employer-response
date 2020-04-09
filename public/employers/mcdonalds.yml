@@ -3,6 +3,8 @@ ticker: MCD
 wiki: McDonald's
 image: mcdonalds.svg
 officialWebsite: https://www.mcdonalds.com/us/en-us/about-us.html
+industries:
+  - restaurant
 location:
   city: Chicago
   state: IL

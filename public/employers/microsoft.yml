@@ -3,6 +3,11 @@ ticker: MSFT
 wiki: Microsoft
 image: microsoft.svg
 officialWebsite: https://www.microsoft.com/en-us/about
+industries:
+  - electronics
+  - internet
+  - software
+  - videoGames
 location:
   city: Redmond
   state: WA

@@ -5,6 +5,8 @@ aliases:
 wiki: United States Postal Service
 image: usps.svg
 officialWebsite: https://about.usps.com/
+industries:
+  - courier
 location:
   city: Washington, D.C.
   country: us

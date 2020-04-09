@@ -4,6 +4,10 @@ ticker: MMM
 wiki: 3M
 image: 3m.svg
 officialWebsite: https://www.3m.com/3M/en_US/company-us/about-3m/
+industries:
+  - healthCare
+  - industrial
+  - manufacturing
 location:
   city: Maplewood
   state: MN

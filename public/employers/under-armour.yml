@@ -4,6 +4,8 @@ ticker: UAA
 wiki: Under Armour
 image: under-armour.svg
 officialWebsite: https://about.underarmour.com/
+industries:
+  - apparel
 location:
   city: Baltimore
   state: MD

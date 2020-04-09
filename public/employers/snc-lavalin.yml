@@ -4,6 +4,10 @@ ticker: SNC.TO
 wiki: SNC-Lavalin
 image: snc-lavalin.svg
 officialWebsite: https://www.snclavalin.com/en/about
+industries:
+  - construction
+  - engineering
+  - procurement
 location:
   city: Montréal
   state: Quebec

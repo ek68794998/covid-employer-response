@@ -4,6 +4,8 @@ shortName: Costco
 wiki: Costco
 image: costco.svg
 officialWebsite: https://www.costco.com/about.html
+industries:
+  - retail
 location:
   city: Issaquah
   state: WA

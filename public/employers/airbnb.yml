@@ -3,6 +3,8 @@ shortName: Airbnb
 wiki: Airbnb
 image: airbnb.svg
 officialWebsite: https://news.airbnb.com/about-us/
+industries:
+  - lodging
 location:
   city: San Francisco
   state: CA

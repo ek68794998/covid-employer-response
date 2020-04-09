@@ -5,6 +5,11 @@ ticker: GOOG
 wiki: Google
 image: google.svg
 officialWebsite: https://about.google/
+industries:
+  - advertising
+  - electronics
+  - internet
+  - software
 location:
   city: Menlo Park
   state: CA

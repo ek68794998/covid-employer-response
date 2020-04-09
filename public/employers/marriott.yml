@@ -4,6 +4,9 @@ ticker: MAR
 wiki: Marriott International
 image: marriott.svg
 officialWebsite: https://www.marriott.com/marriott/aboutmarriott.mi
+industries:
+  - hospitality
+  - lodging
 location:
   city: Bethesda
   state: MD

@@ -1,6 +1,8 @@
 name: The Getaway
 image: the-getaway.png
 officialWebsite: http://www.thegetawaytampabay.com/our-story/
+industries:
+  - restaurant
 location:
   city: St. Petersburg
   state: FL
@@ -9,7 +11,7 @@ location:
   wiki: St. Petersburg, Florida
 summary: An internal video exposed publicly has shown company leadership shirking responsibility for paying its employees and suggesting that they should have already applied for unemployment or started working in essential roles at other companies. The company posted on its Facebook page regarding the video, but it has since been removed.
 citations:
-  - summary: The owner of The Getaway sent a video internally to employees, notably while relaxing in beach clothing, calling them "dramatic" and suggesting not only that "didn't have to pay" their employees once the shutdown began, but that \"by now,\" workers should be registered for unemployment or working in retail locations such as CVS.
+  - summary: The owner of The Getaway sent a video internally to employees, notably while relaxing in beach clothing, calling them "dramatic" and suggesting not only that "didn't have to pay" their employees once the shutdown began, but that "by now," workers should be registered for unemployment or working in retail locations such as CVS.
     positivity: -2
     type: publication
     sources:
