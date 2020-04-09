@@ -19,7 +19,7 @@ summary: Twitter's employees have been able to fully work remotely while receivi
 citations:
   - summary: Twitter "strongly encouraged" all U.S. employees to work from home starting March 2, while making that order mandatory for some international employees due to varying countries' national decrees. On March 11, it made the work-from-home order mandatory for all employees.
     positivity: 1
-    type: statement
+    type: publication
     sources:
       - name: Vox
         link: https://web.archive.org/web/20200329045034/https://www.vox.com/recode/2020/3/2/21162240/twitter-coronavirus-headquarters-employees-work-from-home
@@ -29,7 +29,7 @@ citations:
         date: 2020-04-07T21:21:43Z
   - summary: Twitter CEO Jack Dorsey has donated over $1 billion USD (about 28% of his net worth) to global COVID-19 relief.
     positivity: 1
-    type: statement
+    type: publication
     sources:
       - name: The Verge
         link: https://web.archive.org/web/20200408111446/https://www.theverge.com/2020/4/7/21212766/jack-dorsey-coronavirus-covid-19-donate-relief-fund-square-twitter
