@@ -1,46 +1,4 @@
-@import "../Colors.scss";
-@import "../Dimensions.scss";
-
-$division-padding: 16px;
-$top-button-size: 48px;
-$top-button-size-small: 32px;
-
 main#home {
 	margin: 0 auto;
 	width: 100%;
-}
-
-button.HomePage__BackToTop {
-	background: $background;
-	border: 0;
-	border-radius: ($top-button-size / 2);
-	bottom: ($page-padding / 2);
-	box-shadow: 0 2px 6px $box-shadow-color;
-	cursor: pointer;
-	position: fixed;
-	height: $top-button-size;
-	outline: none;
-	pointer-events: initial;
-	right: ($page-padding / 2);
-	width: $top-button-size;
-	z-index: 20;
-
-	i {
-		font-size: 36px;
-		margin-top: 2px;
-	}
-}
-
-@media (max-width: $body-narrow-width) {
-	button.HomePage__BackToTop {
-		bottom: ($page-padding-narrow / 2);
-		height: $top-button-size-small;
-		right: ($page-padding-narrow / 2);
-		width: $top-button-size-small;
-
-		i {
-			font-size: 24px;
-			margin-left: -2px;
-		}
-	}
 }

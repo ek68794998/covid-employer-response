@@ -2,8 +2,6 @@
 @import "../Dimensions.scss";
 
 $division-padding: 16px;
-$top-button-size: 48px;
-$top-button-size-small: 32px;
 
 main#employer-list {
 	margin: 0 auto;
@@ -37,27 +35,6 @@ main#employer-list {
 	}
 }
 
-button.EmployerListPage__BackToTop {
-	background: $background;
-	border: 0;
-	border-radius: ($top-button-size / 2);
-	bottom: ($page-padding / 2);
-	box-shadow: 0 2px 6px $box-shadow-color;
-	cursor: pointer;
-	position: fixed;
-	height: $top-button-size;
-	outline: none;
-	pointer-events: initial;
-	right: ($page-padding / 2);
-	width: $top-button-size;
-	z-index: 20;
-
-	i {
-		font-size: 36px;
-		margin-top: 2px;
-	}
-}
-
 @media (max-width: $body-narrow-width) {
 	main#home {
 		> div {
@@ -66,18 +43,6 @@ button.EmployerListPage__BackToTop {
 
 		div.EmployerListPage__Filters > div {
 			max-width: $body-max-width;
-		}
-	}
-
-	button.EmployerListPage__BackToTop {
-		bottom: ($page-padding-narrow / 2);
-		height: $top-button-size-small;
-		right: ($page-padding-narrow / 2);
-		width: $top-button-size-small;
-
-		i {
-			font-size: 24px;
-			margin-left: -2px;
 		}
 	}
 }
