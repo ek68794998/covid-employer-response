@@ -48,6 +48,20 @@ citations:
       - name: CNBC
         link: https://www.cnbc.com/2020/03/27/tesla-to-reportedly-cut-on-site-staff-at-nevada-factory-by-75percent.html
         date: 2020-03-27T13:26:00-04:00
+  - summary: Tesla employees designated as "non-critical" have been furloughed without pay, but will remain employees and keep their benefits. They are expected to be asked to return on May 4, the day after the stay-at-home measure is expected to be lifted on US factories.
+    positivity: 0
+    type: publication
+    sources:
+      - name: Bloomberg
+        link: https://web.archive.org/web/20200409135552/https://www.bloomberg.com/news/articles/2020-04-08/tesla-to-cut-employees-pay-as-much-as-30-to-curb-costs-k8qrmfkl
+        date: 2020-04-08T03:20:55Z
+  - summary: Tesla has cut salaries of executives by up to 30%, while also cutting salaries of director-level positions (by about 20%) and "others" (by about 10%). The pay cuts are expected to last until the end of Q2 2020.
+    positivity: 0
+    type: publication
+    sources:
+      - name: Bloomberg
+        link: https://web.archive.org/web/20200409135552/https://www.bloomberg.com/news/articles/2020-04-08/tesla-to-cut-employees-pay-as-much-as-30-to-curb-costs-k8qrmfkl
+        date: 2020-04-08T03:20:55Z
   - summary: Tesla purchased over 1,200 ventilators to distribute at no cost to hospitals, on the sole condition that they be used for the immediate pandemic (rather than stored). However, the ventilators were of an incorrect type to handle COVID-19 patients.
     positivity: 0
     type: publication
