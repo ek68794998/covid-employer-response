@@ -1,4 +1,79 @@
+@import "../Colors.scss";
+@import "../Dimensions.scss";
+
+$card-area-padding: 16px;
+
 main#home {
 	margin: 0 auto;
 	width: 100%;
+
+	> section {
+		padding: 0 $page-padding;
+
+		&.HomePage__Primer {
+			background: $header;
+			color: $background;
+
+			> div {
+				margin: 0 auto;
+				max-width: $body-max-width;
+				padding: 0 $page-padding $page-padding;
+				text-align: center;
+	
+				.HomePage__PreTitle {
+					font-size: 30px;
+					margin-bottom: -6px;
+					opacity: 0.7;
+				}
+	
+				h1 {
+					font-size: 80px;
+					text-transform: uppercase;
+					margin: 0 0 24px;
+					padding: 0;
+				}
+	
+				h2 {
+					font-size: 20px;
+					font-weight: 400;
+					margin: 0;
+					opacity: 0.0;
+					padding: 0;
+	
+					&.HomePage__Subtitle--Loaded {
+						opacity: 1.0;
+						transition: 2s opacity;
+					}
+	
+					a {
+						margin: 0 6px;
+					}
+				}
+			}
+		}
+
+		&.HomePage__Sample {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: $body-max-width;
+			padding: $card-area-padding !important;
+
+			> div {
+				width: ($body-min-width - $card-area-padding * 2);
+			}
+		}
+	}
+}
+
+@media (max-width: $body-narrow-width) {
+	main#home {
+		> section {
+			padding: 0 $page-padding-narrow !important;
+
+			> div {
+				padding: 0 $page-padding-narrow $page-padding !important;
+			}
+		}
+	}
 }
