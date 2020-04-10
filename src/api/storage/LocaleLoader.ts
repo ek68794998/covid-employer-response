@@ -15,7 +15,7 @@ const readdirAsync = util.promisify(fs.readdir);
 const readFileAsync = util.promisify(fs.readFile);
 
 export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
-	private static readonly LOCALE_FILE_REGEX: RegExp = /^(.*)\.json$/;
+	private static readonly LOCALE_FILE_REGEX: RegExp = /^(.*)\.yml$/;
 
 	public existsAsync(id: string): Promise<boolean> {
 		return existsAsync(this.getFileName(id));
@@ -71,6 +71,6 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 			throw new Error("Employer record data folder not found.");
 		}
 
-		return `${this.directoryPath}/${id}.json`;
+		return `${this.directoryPath}/${id}.yml`;
 	}
 }
