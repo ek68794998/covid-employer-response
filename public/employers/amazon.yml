@@ -104,3 +104,10 @@ citations:
       - name: The Guardian
         link: https://www.theguardian.com/business/2020/mar/27/jeff-bezos-sold-34bn-of-amazon-stock-just-before-covid-19-collapse
         date: 2020-03-27T11:34:51-04:00
+  - summary: Workers at Amazon's warehouses were given partial paychecks for sick leave or no pay at all and needed unemployment benefits to make up the difference.
+    positivity: -1
+    type: statement
+    sources:
+      - name: CNBC
+        link: https://www.cnbc.com/2020/04/08/amazon-warehouse-workers-say-they-struggle-to-get-paid-despite-sick-leave-policy.html
+        date: 2020-04-08T17:48:00-04:00
