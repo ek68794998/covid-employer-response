@@ -11,8 +11,6 @@ exports[`<EmployerCitation /> renders without exploding 1`] = `
   </i>
   <span
     className="EmployerCitation__Summary"
-  >
-    
-  </span>
+  />
 </div>
 `;
