@@ -27,6 +27,10 @@ $indicator-glow-size: 3px;
 
 .EmployerCitation__Summary {
 	margin-left: 4px;
+
+	p {
+		display: inline;
+	}
 }
 
 .EmployerCitation__References {

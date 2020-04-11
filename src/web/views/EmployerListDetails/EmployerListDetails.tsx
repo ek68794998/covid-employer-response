@@ -1,9 +1,9 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { DesignHelpers } from "../../../common/DesignHelpers";
-import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -28,7 +28,7 @@ const EmployerListDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		<div className={`EmployerListDetails__Container EmployerListDetails__Rating--${employer.rating}`}>
 			<EmployerDetailsHeader employer={employer} onClickEmployerName={onClick} useShortText={true} />
 			<div className="EmployerListDetails__Summary" onClick={onClick}>
-				{employer.summary}
+				<ReactMarkdown source={employer.summary} />
 				<div className="EmployerListDetails__OverflowScreen" />
 			</div>
 			<div className="EmployerListDetails__Actions">

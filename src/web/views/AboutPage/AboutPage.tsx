@@ -28,7 +28,6 @@ const AboutPage: React.FC = (): React.ReactElement => {
 			<div className="AboutPage__Content">
 				<h2 id="what-is">{format(strings.aboutSectionHeaders.whatIs, { app: strings.appTitleShort })}</h2>
 				<ReactMarkdown
-					escapeHtml={false}
 					linkTarget="_blank"
 					source={(
 						format(
@@ -45,7 +44,6 @@ const AboutPage: React.FC = (): React.ReactElement => {
 
 				<h2 id="contributing">{strings.aboutSectionHeaders.contributing}</h2>
 				<ReactMarkdown
-					escapeHtml={false}
 					linkTarget="_blank"
 					source={(
 						format(
@@ -59,7 +57,6 @@ const AboutPage: React.FC = (): React.ReactElement => {
 
 				<h2 id="reports-and-claims">{strings.aboutSectionHeaders.reportsAndClaims}</h2>
 				<ReactMarkdown
-					escapeHtml={false}
 					linkTarget="_blank"
 					source={(
 						format(
@@ -72,14 +69,12 @@ const AboutPage: React.FC = (): React.ReactElement => {
 
 				<h2 id="claim-processing">{strings.aboutSectionHeaders.claimProcessing}</h2>
 				<ReactMarkdown
-					escapeHtml={false}
 					linkTarget="_blank"
 					source={strings.aboutSectionParagraphs.claimProcessing}
 				/>
 
 				<h2 id="submit-claims">{strings.aboutSectionHeaders.submitClaims}</h2>
 				<ReactMarkdown
-					escapeHtml={false}
 					linkTarget="_blank"
 					source={(
 						format(
@@ -100,7 +95,6 @@ const AboutPage: React.FC = (): React.ReactElement => {
 						})}
 				</h2>
 				<ReactMarkdown
-					escapeHtml={false}
 					linkTarget="_blank"
 					source={(
 						format(
@@ -118,7 +112,6 @@ const AboutPage: React.FC = (): React.ReactElement => {
 
 				<h2 id="employer-ratings">{strings.aboutSectionHeaders.employerRatings}</h2>
 				<ReactMarkdown
-					escapeHtml={false}
 					linkTarget="_blank"
 					source={strings.aboutSectionParagraphs.employerRatings}
 				/>

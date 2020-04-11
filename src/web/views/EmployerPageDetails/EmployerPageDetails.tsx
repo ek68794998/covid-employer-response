@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
@@ -59,7 +60,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(employer)} />
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
-					{employer.summary}
+					<ReactMarkdown source={employer.summary} />
 				</div>
 				{components.publication}
 				{components.statement}

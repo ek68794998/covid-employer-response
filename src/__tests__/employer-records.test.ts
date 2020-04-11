@@ -59,7 +59,7 @@ describe("employer records", () => {
 			}
 
 			for (const source of citation.sources) {
-				expect(source.name.length).toBeTruthy();
+				expect(source.source.length).toBeTruthy();
 				expect(new URL(source.link).hostname).toBeTruthy();
 
 				if (!source.date) {
@@ -108,7 +108,7 @@ describe("employer records", () => {
 		expect(record.citations[0].sources).not.toBeNull();
 		expect(record.citations[0].sources?.length).toBe(1);
 
-		expect(record.citations[0].sources?.[0].name).toBe("K5 News");
+		expect(record.citations[0].sources?.[0].source).toBe("K5 News");
 		expect(record.citations[0].sources?.[0].link).toBe("http://example.com/king5/1.html");
 		expect(dateToNumber(record.citations[0].sources?.[0].date || "")).toBe(dateToNumber("2000-01-01T01:00:00Z"));
 
@@ -118,11 +118,11 @@ describe("employer records", () => {
 		expect(record.citations[1].sources).not.toBeNull();
 		expect((record.citations[1].sources || []).length).toBe(2);
 
-		expect(record.citations[1].sources?.[0].name).toBe("New York Times");
+		expect(record.citations[1].sources?.[0].source).toBe("New York Times");
 		expect(record.citations[1].sources?.[0].link).toBe("http://example.com/nyt/1.html");
 		expect(dateToNumber(record.citations[1].sources?.[0].date || "")).toBe(dateToNumber("2000-01-01T02:00:00Z"));
 
-		expect(record.citations[1].sources?.[1].name).toBe("CNN");
+		expect(record.citations[1].sources?.[1].source).toBe("CNN");
 		expect(record.citations[1].sources?.[1].link).toBe("http://example.com/cnn/2.html");
 		expect(dateToNumber(record.citations[1].sources?.[1].date || "")).toBe(dateToNumber("2000-01-01T03:00:00Z"));
 
@@ -132,7 +132,8 @@ describe("employer records", () => {
 		expect(record.citations[2].sources).not.toBeNull();
 		expect((record.citations[2].sources || []).length).toBe(1);
 
-		expect(record.citations[2].sources?.[0].name).toBe("Twitter: John Doe");
+		expect(record.citations[2].sources?.[0].source).toBe("Twitter");
+		expect(record.citations[2].sources?.[0].title).toBe("John Doe");
 		expect(record.citations[2].sources?.[0].link).toBe("http://twitter.com/not-a-real-twitter-acct/13814781");
 		expect(dateToNumber(record.citations[2].sources?.[0].date || "")).toBe(dateToNumber("2000-01-01T04:00:00Z"));
 	});
