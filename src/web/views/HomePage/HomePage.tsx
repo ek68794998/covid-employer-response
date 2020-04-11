@@ -71,7 +71,17 @@ const HomePage: React.FC = (): React.ReactElement => {
 				</div>
 			</section>
 			<section className="HomePage__Sample">
-				<div>
+				<div className="HomePage__SampleInfo">
+					<h3>What can I learn?</h3>
+					<p>
+						Each card shows you briefly <strong>who</strong> the employer is, a <strong>rating</strong> of
+						their general response, and a <strong>summary</strong> about the actions they've taken. You
+						can also open up a more detailed view to find <strong>cited news articles</strong>, or click
+						various <strong>links</strong> to go on Wikipedia, or see the employer's official website.
+					</p>
+				</div>
+				<div className="HomePage__SampleSpacer" />
+				<div className="HomePage__SampleCard">
 					{randomEmployer && (
 						<EmployerListDetails
 							employer={EmployerRecord.toMetadata(randomEmployer)}

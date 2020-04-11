@@ -4,6 +4,71 @@ exports[`<HomePage /> renders without exploding 1`] = `
 <main
   id="home"
 >
-  ((TODO))
+  <section
+    className="HomePage__Primer"
+  >
+    <div>
+      <div
+        className="HomePage__PreTitle"
+      >
+        Welcome to
+      </div>
+      <h1>
+        áƥƥ
+      </h1>
+      <h2
+        className="HomePage__Subtitle--Loading"
+      >
+        A free, open-data collection on
+        <a
+          href="/employers"
+          onClick={[Function]}
+        >
+          <strong>
+            0
+          </strong>
+           employers
+        </a>
+        (and growing) and how they've reacted to the COVID-19 crisis.
+      </h2>
+    </div>
+  </section>
+  <section
+    className="HomePage__Sample"
+  >
+    <div
+      className="HomePage__SampleInfo"
+    >
+      <h3>
+        What do we track?
+      </h3>
+      <p>
+        Employer cards show briefly 
+        <strong>
+          who
+        </strong>
+         the employer is; a 
+        <strong>
+          rating
+        </strong>
+         of their general response; a 
+        <strong>
+          summary
+        </strong>
+         about the actions they've taken; and
+         
+        <strong>
+          links
+        </strong>
+         to read cited news articles, go on Wikipedia, or see the employer's official website.
+      </p>
+    </div>
+    <div
+      className="HomePage__SampleSpacer"
+    />
+    <div
+      className="HomePage__SampleCard"
+    />
+  </section>
 </main>
 `;

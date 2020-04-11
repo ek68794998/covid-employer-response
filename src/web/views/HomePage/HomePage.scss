@@ -1,7 +1,9 @@
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
+$body-vert-width: 920px;
 $card-area-padding: 16px;
+$cell-width: ($body-min-width - $card-area-padding * 2);
 
 main#home {
 	margin: 0 auto;
@@ -54,13 +56,59 @@ main#home {
 
 		&.HomePage__Sample {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			margin: 0 auto;
-			max-width: $body-max-width;
-			padding: $card-area-padding !important;
+			max-width: ($cell-width * 2 + $card-area-padding * 2 + $page-padding);
+			padding: $page-padding $card-area-padding !important;
+			width: 100%;
 
-			> div {
-				width: ($body-min-width - $card-area-padding * 2);
+			> div.HomePage__SampleInfo {
+				align-self: center;
+				max-width: $cell-width;
+				width: 50%;
+
+				h3 {
+					font-size: 32px;
+					margin: 16px 0;
+				}
+
+				p {
+					font-size: 16px;
+					line-height: 200%;
+					padding: 0;
+				}
+			}
+
+			> div.HomePage__SampleSpacer {
+				width: $page-padding;
+			}
+
+			> div.HomePage__SampleCard {
+				max-width: $cell-width;
+				width: 50%;
+
+				> div {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $body-vert-width) {
+	main#home {
+		> section {
+			&.HomePage__Sample {
+				> div.HomePage__SampleInfo, > div.HomePage__SampleCard {
+					flex: 1;
+				}
+
+				> div.HomePage__SampleSpacer {
+					flex-basis: 100%;
+					height: $page-padding-narrow;
+					width: 0;
+				}
 			}
 		}
 	}
@@ -71,7 +119,7 @@ main#home {
 		> section {
 			padding: 0 $page-padding-narrow !important;
 
-			> div {
+			&.HomePage__Primer > div {
 				padding: 0 $page-padding-narrow $page-padding !important;
 			}
 		}
