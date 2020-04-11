@@ -1,0 +1,38 @@
+name: Caterpillar Inc.
+aliases:
+  - CAT
+shortName: Caterpillar
+ticker: CAT
+wiki: Caterpillar Inc.
+image: caterpillar.svg
+officialWebsite: https://www.caterpillar.com/en/company.html
+industries:
+  - engineering
+  - financialServices
+  - manufacturing
+location:
+  city: Deerfield
+  state: IL
+  country: us
+  international: false
+  wiki: Deerfield, Illinois
+employeesBefore:
+  type: approximately
+  upperBound: 101500
+  year: 2018
+summary: Caterpillar is avoiding layoffs and furloughs, but is having to withhold pay increases and bonuses for eligible employees in all roles.
+citations:
+  - summary: To prevent layoffs, furloughs, and pay cuts, Caterpillar has announced that it will withhold salary increases for executives, managers, and salaried employees.
+    positivity: 0
+    type: publication
+    sources:
+      - source: NASDAQ
+        link: https://www.nasdaq.com/articles/caterpillar-withholds-salary-increases-to-deal-with-pandemic-fallout-2020-03-31
+        date: 2020-03-31T18:13:55-04:00
+  - summary: Due to the "extremely challenging" situation Caterpillar is facing having to shut down operations due to the COVID-19 pandemic, they will not be paying out bonuses "next year" (likely referring to FY2021).
+    positivity: 0
+    type: publication
+    sources:
+      - source: NASDAQ
+        link: https://www.nasdaq.com/articles/caterpillar-withholds-salary-increases-to-deal-with-pandemic-fallout-2020-03-31
+        date: 2020-03-31T18:13:55-04:00

@@ -48,6 +48,7 @@ export type EmployerIndustry =
 	| "sports"
 	| "storage"
 	| "technology"
+	| "telecommunications"
 	| "textile"
 	| "transport"
 	| "videoGames"

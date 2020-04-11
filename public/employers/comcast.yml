@@ -1,0 +1,39 @@
+name: Comcast Corporation
+aliases:
+  - Xfinity
+shortName: Comcast
+ticker: CMCSA
+wiki: Comcast
+image: comcast.svg
+officialWebsite: https://corporate.comcast.com/company
+industries:
+  - entertainment
+  - media
+  - telecommunications
+location:
+  city: Philadelphia
+  state: PA
+  country: us
+  international: false
+  wiki: Philadelphia
+employeesBefore:
+  type: approximately
+  upperBound: 190000
+  year: 2019
+  yearQuarter: Q4
+summary: Comcast's executives have both set aside significant money to pay those whose work is affected by COVID-19 as well as donated out of their own pockets for COVID-19 relief.
+citations:
+  - summary: Comcast's CEO has announced that $500 million USD will be set aside for employees affected by the COVID-19 pandemic, "where operations have been paused or impacted."
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200404074939/https://www.cnbc.com/2020/04/01/comcast-ceo-500-million-for-employee-jobs-impacted-by-coronavirus.html
+        date: 2020-04-01T13:24:51Z
+  - summary: Various executives, including CEO Brian Roberts, have pledged 100% of their annual salaries to COVID-19 relief.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200404074939/https://www.cnbc.com/2020/04/01/comcast-ceo-500-million-for-employee-jobs-impacted-by-coronavirus.html
+        date: 2020-04-01T13:24:51Z
