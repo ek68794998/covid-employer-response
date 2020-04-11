@@ -19,7 +19,7 @@ employeesBefore:
   year: 2018
 summary: Though Wells Fargo is reportedly increasing cleaning procedures and trying to allow call-center employees to work from home, there have been reports of employees not being told that coworkers have tested positive, and general disregard for safety from management.
 citations:
-  - summary: After two workers at a Wells Fargo call center in North Carolina tested positive, workers there were reportedly told to "continue to work, wipe [their] desks down."
+  - summary: After two workers at a Wells Fargo call center in North Carolina tested positive, workers there were reportedly told to "continue to work, wipe \[their\] desks down."
     positivity: -1
     type: statement
     sources:
