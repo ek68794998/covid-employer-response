@@ -21,51 +21,51 @@ citations:
     positivity: 1
     type: publication
     sources:
-      - name: Yahoo! Finance
+      - source: Yahoo! Finance
         link: https://finance.yahoo.com/news/walmart-makes-a-huge-change-to-its-stores-because-of-the-coronavirus-pandemic-single-direction-aisles-161441040.html
         date: 2020-03-31T16:14:41Z
   - summary: Walmart and Sam's Club taking cautious measures for employees, including having employees check their temperature when reporting to work.
     positivity: 1
     type: publication
     sources:
-      - name: WBNG.com
+      - source: WBNG.com
         link: https://wbng.com/2020/04/01/walmart-sams-club-taking-cautious-measures-for-employees/
         date: 2020-04-01T08:19:00-07:00
   - summary: Customers are forced to be corraled and line up in groups, potentially increasing spread.
     positivity: -1
     type: hearsay
     sources:
-      - name: "Reddit r/walmart"
+      - source: Reddit r/walmart
         link: https://www.reddit.com/r/walmart/comments/fszn8j/this_is_why_this_pandemic_is_going_ro_continue/
         date: 2020-04-01T06:19:59-07:00
   - summary: Walmart has increased wages for its warehouse workers but not its retail workers.
     positivity: 0
     type: publication
     sources:
-      - name: Reuters
+      - source: Reuters
         link: https://www.reuters.com/article/us-health-coronavirus-walmart/walmart-ups-minimum-wage-in-e-commerce-warehouses-by-2-as-orders-surge-on-virus-worries-idUSKBN21A0BO
         date: 2020-03-22T21:04:00-07:00
   - summary: Walmart has given out bonuses and hired temporary staffers amidst the pandemic, and provided two weeks of paid time off if an employee tests positive for COVID-19.
     positivity: 1
     type: publication
     sources:
-      - name: Walmart corporate news
+      - source: Walmart corporate news
         link: https://corporate.walmart.com/newsroom/2020/03/10/new-covid-19-policy-to-support-the-health-of-our-associates
         date: 2020-03-10T12:00:00-07:00 # Estimate based on article date of 03/10/2020.
-      - name: Wall Street Journal
+      - source: Wall Street Journal
         link: https://www.wsj.com/articles/walmart-to-pay-550-million-in-staff-bonuses-hire-150-000-temporary-workers-11584664622
         date: 2020-03-20T13:39:00-04:00
   - summary: Walmart employees have feared for their job and their health.
     positivity: -1
     type: statement
     sources:
-      - name: Business Insider
+      - source: Business Insider
         link: https://www.businessinsider.com/walmart-target-workers-describe-working-conditions-during-coronavirus-2020-3
         date: 2020-03-05T14:37:53Z
   - summary: Walmart has waived its "attendance occurrence policy" through the end of April, allowing workers who are unable or uncomfortable working to stay home without their job being in jeopardy. However, they would not be paid for these absences unless they used standard paid-time-off options.
     positivity: 1
     type: publication
     sources:
-      - name: Walmart corporate news
+      - source: Walmart corporate news
         link: https://corporate.walmart.com/newsroom/2020/03/10/new-covid-19-policy-to-support-the-health-of-our-associates
         date: 2020-03-10T12:00:00-07:00 # Estimate based on article date of 03/10/2020.

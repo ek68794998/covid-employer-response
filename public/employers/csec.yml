@@ -22,16 +22,16 @@ citations:
     positivity: -1
     type: publication
     sources:
-      - name: Calgary Herald
+      - source: Calgary Herald
         link: https://web.archive.org/web/20200404020727/https://calgaryherald.com/sports/hockey/nhl/calgary-flames/flames-employees-wont-be-paid-beyond-march-12-for-cancelled-shifts/
         date: 2020-03-15T01:45:08Z
-      - name: Sporting News
+      - source: Sporting News
         link: https://web.archive.org/web/20200315135823/https://www.sportingnews.com/us/nhl/news/flames-will-not-pay-part-time-arena-workers-for-events-canceled-due-to-coronavirus-report-says/1890c7l53z97wz4ej8hmzkpv4
         date: 2020-03-16T00:19:00Z
   - summary: After several weeks of the NHL being on pause, CSEC decided to furlough approximately 50% of its workforce for at least 60 days. CSEC has applied for, and been granted, an increase in employment insurance payments for the furloughed workers. Remaining employees will see salary reductions of at least 10%.
     positivity: -1
     type: publication
     sources:
-      - name: "NHL News: Calgary Flames"
+      - source: Calgary Flames News [via NHL]
         link: https://web.archive.org/web/20200401010009/https://www.nhl.com/flames/news/csec-to-implement-temporary-reduction-in-staffing/c-316445116
         date: 2020-03-30T21:56:22Z

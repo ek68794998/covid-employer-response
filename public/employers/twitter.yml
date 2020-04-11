@@ -23,16 +23,16 @@ citations:
     positivity: 1
     type: publication
     sources:
-      - name: Vox
+      - source: Vox
         link: https://web.archive.org/web/20200329045034/https://www.vox.com/recode/2020/3/2/21162240/twitter-coronavirus-headquarters-employees-work-from-home
         date: 2020-03-03T00:20:00Z
-      - name: The Verge
+      - source: The Verge
         link: https://web.archive.org/web/20200406113448/https://www.theverge.com/2020/3/12/21176211/twitter-employees-work-from-home-covid-19-coronavirus
         date: 2020-04-07T21:21:43Z
   - summary: Twitter CEO Jack Dorsey has donated over $1 billion USD (about 28% of his net worth) to global COVID-19 relief.
     positivity: 1
     type: publication
     sources:
-      - name: The Verge
+      - source: The Verge
         link: https://web.archive.org/web/20200408111446/https://www.theverge.com/2020/4/7/21212766/jack-dorsey-coronavirus-covid-19-donate-relief-fund-square-twitter
         date: 2020-04-07T21:21:43Z

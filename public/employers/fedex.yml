@@ -24,21 +24,23 @@ citations:
     positivity: 1
     type: publication
     sources:
-      - name: Transport Topics News
+      - source: Transport Topics News
         link: https://www.ttnews.com/articles/fedexs-fred-smith-its-unlikely-company-will-need-federal-help
         date: 2020-03-22T16:00:00-04:00
   - summary: Due to overwhelming demand for package deliveries during the COVID-19 crisis, FedEx has suspended its money-back guarantee (which guarantees a refund for packages delivered more than 1 minute after its scheduled time) until further notice.
     positivity: 0
     type: publication
     sources:
-      - name: Supply Chain Dive
+      - source: Supply Chain Dive
         link: https://www.supplychaindive.com/news/coronavirus-ups-fedex-suspend-service-guarantees/575280/
         date: 2020-04-01T08:22:09Z
-      - name: FedEx - Service Impact [PDF]
+      - source: FedEx
+        title: Service Impact [PDF]
         link: https://www.fedex.com/content/dam/fedex/us-united-states/Service-Alerts/images/2020/Q4/2019_nCoV_Service_Impacts_Apr_3.pdf # Current version is from April 3, but no indication of when the first publication was.
   - summary: FedEx has provided employees with general guidance on safe sanitation practices as well as information for customers on what to expect and how to stay safe when handling deliveries.
     positivity: 1
     type: publication
     sources:
-      - name: FedEx Service Updates
+      - source: FedEx
+        title: Service Updates
         link: https://www.fedex.com/en-us/coronavirus.html # Unknown date.

@@ -20,30 +20,30 @@ citations:
     positivity: -1
     type: publication
     sources:
-      - name: Mother Jones
+      - source: Mother Jones
         link: https://www.motherjones.com/politics/2020/04/health-care-ceo-who-makes-millions-says-no-to-hazard-pay-for-coronavirus-workers/
         date: 2020-04-04T08:38:13-04:00
   - summary: Employees whose non-urgent work (such as elective surgeries) has been cancelled or deferred have been given up to eight weeks of benefits and paid leave, and furloughs are not planned as of March 31.
     positivity: 1
     type: publication
     sources:
-      - name: Boston Globe
+      - source: Boston Globe
         link: https://www.bostonglobe.com/2020/03/31/business/boston-medical-center-furloughs-10-percent-its-workforce/
         date: 2020-03-31T16:45:59Z
-      - name: Mother Jones
+      - source: Mother Jones
         link: https://www.motherjones.com/politics/2020/04/health-care-ceo-who-makes-millions-says-no-to-hazard-pay-for-coronavirus-workers/
         date: 2020-04-04T08:38:13-04:00
   - summary: An employee who has been forced to drastically increase work hours has not received an increase in pay from his base salary of $90,000 USD.
     positivity: -1
     type: statement
     sources:
-      - name: Mother Jones
+      - source: Mother Jones
         link: https://www.motherjones.com/politics/2020/04/health-care-ceo-who-makes-millions-says-no-to-hazard-pay-for-coronavirus-workers/
         date: 2020-04-04T08:38:13-04:00
   - summary: Employees have been provided with masks which they are required to wear at all times when on duty.
     positivity: 1
     type: publication
     sources:
-      - name: Boston Globe
+      - source: Boston Globe
         link: https://www.bostonglobe.com/2020/03/22/metro/all-mgh-employees-now-required-wear-masks-while-duty/
         date: 2020-03-22T12:38:06Z

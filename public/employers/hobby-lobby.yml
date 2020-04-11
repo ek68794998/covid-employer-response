@@ -20,51 +20,51 @@ citations:
     positivity: -1
     type: publication
     sources:
-      - name: CBS News
+      - source: CBS News
         link: https://www.cbsnews.com/news/hobby-lobby-open-essential-business-stay-at-home-orders/
         date: 2020-04-01T13:14:00-04:00
   - summary: Employees who are sick will be able to use their PTO and will be paid 75% of their total wage.
     positivity: 1
     type: publication
     sources:
-      - name: Religion News Service
+      - source: Religion News Service
         link: https://religionnews.com/2020/03/31/hobby-lobby-clarifies-sick-leave-policy-amid-coronavirus/
         date: 2020-03-31T12:00:00-07:00 # Estimate based on article date of 03/31/2020.
   - summary: Hobby Lobby has quietly reopened stores starting March 31, defying shutdowns and requiring police intervention.
     positivity: -2
     type: publication
     sources:
-      - name: "Business Insider"
+      - source: Business Insider
         link: https://www.businessinsider.com/hobby-lobby-reopened-stores-in-states-with-coronavirus-lockdowns-2020-3
         date: 2020-03-31T17:47:00Z
   - summary: Most Hobby Lobby stores have remained open amid pandemic.
     positivity: -1
     type: publication
     sources:
-      - name: "The Oklahoman"
+      - source: The Oklahoman
         link: https://oklahoman.com/article/5658630/coronavirus-in-oklahoma-most-hobby-lobby-remain-open-amid-pandemic
         date: 2020-03-26T13:04:14-05:00
   - summary: As of March 30, Hobby Lobby has closed stores and slashed salaries, as well as terminated a number of employees.
     positivity: -1
     type: publication
     sources:
-      - name: popculture.
+      - source: popculture.
         link: https://popculture.com/trending/2020/03/30/hobby-lobby-closes-stores-slashes-salaries-following-god-control-remarks-social-media-thoughts/
         date: 2020-03-30T21:47:00-04:00
   - summary: Hobby Lobby has continued to defy orders to close down as they are not considered an essential business, and has therefore received official cease-and-desists in both Colorado and Ohio.
     positivity: -2
     type: publication
     sources:
-      - name: RawStory
+      - source: RawStory
         link: https://www.rawstory.com/2020/04/officials-in-two-states-issue-cease-and-desist-letters-after-hobby-lobby-defies-coronavirus-lockdowns/
         date: 2020-04-02T15:30:00-07:00 # Estimate based on '19 hours ago' when discovered.
-      - name: New York Times
+      - source: New York Times
         link: https://www.nytimes.com/2020/04/02/us/hobby-lobby-colorado-virus.html
         date: 2020-04-02T00:52:02-04:00
   - summary: Hobby Lobby closed all stores and furloughed its employees with no pay, but will continue their benefits.
     positivity: -1
     type: publication
     sources:
-      - name: Newsweek
+      - source: Newsweek
         link: https://www.newsweek.com/hobby-lobby-close-all-stores-furlough-employees-no-pay-after-claiming-essential-business-1496054
         date: 2020-04-03T19:20:54-04:00

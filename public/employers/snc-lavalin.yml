@@ -25,23 +25,23 @@ citations:
     positivity: -2
     type: publication
     sources:
-      - name: The Globe and Mail
+      - source: The Globe and Mail
         link: https://web.archive.org/web/20200406232037/https://www.theglobeandmail.com/business/article-snc-lavalin-asking-workers-to-take-pay-cut-for-next-three-months/
         date: 2020-03-30T22:25:59Z
   - summary: Executives at SNC have taken a pay cut of 20%. Sources disagree about whether this affects most or all executives.
     positivity: 1
     type: publication
     sources:
-      - name: The Globe and Mail
+      - source: The Globe and Mail
         link: https://web.archive.org/web/20200406232037/https://www.theglobeandmail.com/business/article-snc-lavalin-asking-workers-to-take-pay-cut-for-next-three-months/
         date: 2020-03-30T22:25:59Z
-      - name: Global News
+      - source: Global News
         link: https://web.archive.org/web/20200329052313/https://globalnews.ca/news/6740895/snc-lavalin-coronavirus-pandemic/
         date: 2020-03-27T11:09:36-04:00
   - summary: The news already mentioned here about SNC cutting workers' pay by at least 10% comes despite the fact that the company was able to pay their former CEO over $7 million CAD in 2019 (a nearly 30% increase over 2018) despite retiring in June.
     positivity: -1
     type: publication
     sources:
-      - name: Global News
+      - source: Global News
         link: https://globalnews.ca/news/6792530/snc-lavalin-ceo-salary-2019-june/
         date: 2020-04-07T23:39:20-04:00

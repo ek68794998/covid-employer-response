@@ -24,13 +24,13 @@ citations:
     positivity: 1
     type: publication
     sources:
-      - name: Marriott International News Center
+      - source: Marriott International News Center
         link: https://web.archive.org/web/20200331030218/https://news.marriott.com/news/2020/03/18/marriott-international-provides-business-update-amidst-the-rapidly-evolving-coronavirus-situation
         date: 2020-03-18T20:51:47Z
   - summary: Marriott has not only allowed customers complete control over reservation changes and cancellations prior to April 30, but has ensured that their cleaning practices meet the standards required for addressing COVID-19.
     positivity: 1
     type: publication
     sources:
-      - name: Marriott International News Center
+      - source: Marriott International News Center
         link: https://web.archive.org/web/20200318012928/https://news.marriott.com/news/2020/03/17/travel-information-covid-19-update
         date: 2020-03-17T15:30:51Z
