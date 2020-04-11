@@ -1,4 +1,4 @@
-name: React CI (Yarn)
+name: Continuous integration
 
 on:
   push:
@@ -24,6 +24,10 @@ jobs:
       run: |
         yarn lint:ts
         echo "Lint process exited with status code $?."
+    - name: Build
+      run: |
+        CI=true yarn build
+        echo "Build process exited with status code $?."
     - name: Run unit tests
       run: |
         yarn test:ci
