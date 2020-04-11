@@ -15,6 +15,15 @@ module.exports = {
 	],
 	modify(config, { target, dev }, webpack) {
 		if (!dev) {
+			const { StatsWriterPlugin } = require("webpack-stats-plugin");
+
+			config.plugins = [
+				...config.plugins,
+				new StatsWriterPlugin({
+					fields: null,
+				}),
+			];
+
 			config.performance = {
 				maxAssetSize: 400000,
 				maxEntrypointSize: 400000,
