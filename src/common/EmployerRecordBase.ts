@@ -1,4 +1,5 @@
 import { EmployerEmployeeProfile } from "./EmployerEmployeeProfile";
+import { EmployerIndustry } from "./EmployerIndustry";
 import { EmployerLocation } from "./EmployerLocation";
 import { EmployerRating } from "./EmployerRating";
 
@@ -10,6 +11,8 @@ export abstract class EmployerRecordBase {
 	public id: string = "";
 
 	public image?: string;
+
+	public industries?: EmployerIndustry[];
 
 	public location?: EmployerLocation;
 

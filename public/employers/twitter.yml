@@ -4,6 +4,8 @@ ticker: TWTR
 wiki: Twitter
 image: twitter.svg
 officialWebsite: https://about.twitter.com/
+industries:
+  - internet
 location:
   city: San Francisco
   state: CA

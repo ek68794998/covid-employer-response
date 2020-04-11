@@ -14,14 +14,6 @@ import "./EmployerActionLinks.scss";
 
 interface Props extends RouteProps {
 	employer: EmployerRecordMetadata;
-
-	hideEdit?: boolean;
-
-	hideProfileLink?: boolean;
-
-	hideWebsite?: boolean;
-
-	hideWikipedia?: boolean;
 }
 
 const getEmployerEditComponent =
@@ -102,14 +94,14 @@ const getEmployerWikipediaComponent =
 
 const EmployerActionLinks: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
-	const { employer, hideEdit, hideProfileLink, hideWebsite, hideWikipedia } = props;
+	const { employer } = props;
 
 	return (
 		<>
-			{!hideWikipedia && getEmployerWikipediaComponent(employer, strings)}
-			{!hideWebsite && getEmployerWebsiteComponent(employer, strings)}
-			{!hideEdit && getEmployerEditComponent(employer, strings)}
-			{!hideProfileLink && getEmployerProfileLinkComponent(employer, strings)}
+			{getEmployerWikipediaComponent(employer, strings)}
+			{getEmployerWebsiteComponent(employer, strings)}
+			{getEmployerEditComponent(employer, strings)}
+			{getEmployerProfileLinkComponent(employer, strings)}
 		</>
 	);
 };

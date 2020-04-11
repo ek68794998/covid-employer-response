@@ -44,6 +44,26 @@ describe("EmployerListSearchFilter", () => {
 		[ { text: "barr" }, { aliases: [ "bar", "foo" ] }, false ],
 		[
 			{ small: false, medium: false, large: false },
+			{ employeesBefore: null },
+			false,
+		],
+		[
+			{ small: true, medium: false, large: false },
+			{ employeesBefore: null },
+			true,
+		],
+		[
+			{ small: false, medium: true, large: false },
+			{ employeesBefore: null },
+			false,
+		],
+		[
+			{ small: false, medium: false, large: true },
+			{ employeesBefore: null },
+			false,
+		],
+		[
+			{ small: false, medium: false, large: false },
 			{ employeesBefore: { type: "range", upperBound: 10 } },
 			false,
 		],

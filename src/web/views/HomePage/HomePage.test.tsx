@@ -16,6 +16,7 @@ describe("<HomePage />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				appTitle: ploc("appTitle"),
+				appTitleShort: ploc("app"),
 				home: ploc("home"),
 			},
 		});

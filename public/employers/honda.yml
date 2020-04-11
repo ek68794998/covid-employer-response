@@ -4,6 +4,8 @@ ticker: HMC
 wiki: Honda
 image: honda.svg
 officialWebsite: https://www.honda.com/about
+industries:
+  - automotive
 location:
   city: Minato City
   country: jp

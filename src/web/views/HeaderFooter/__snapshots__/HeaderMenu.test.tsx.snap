@@ -16,6 +16,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
       </i>
     </button>
     <div
+      className="HeaderMenu__HiddenBrand"
       id="brand"
     >
       <a

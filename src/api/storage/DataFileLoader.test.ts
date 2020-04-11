@@ -5,15 +5,15 @@ class MockDataFileLoader extends DataFileLoader<string> {
 		throw new Error("Method not implemented.");
 	}
 
+	public getAllAsync(): Promise<string[]> {
+		throw new Error("Method not implemented.");
+	}
+
 	public getAllIdsAsync(): Promise<string[]> {
 		throw new Error("Method not implemented.");
 	}
 
-	public loadAsync(id: string): Promise<string> {
-		throw new Error("Method not implemented.");
-	}
-
-	public loadAllAsync(): Promise<string[]> {
+	public getAsync(id: string): Promise<string> {
 		throw new Error("Method not implemented.");
 	}
 }

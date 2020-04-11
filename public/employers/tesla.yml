@@ -6,6 +6,9 @@ ticker: TSLA
 wiki: Tesla, Inc.
 image: tesla.svg
 officialWebsite: https://www.tesla.com/about
+industries:
+  - automotive
+  - energy
 location:
   city: Palo Alto
   state: CA

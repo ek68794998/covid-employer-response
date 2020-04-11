@@ -1,46 +1,154 @@
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
-$division-padding: 16px;
-$top-button-size: 48px;
-$top-button-size-small: 32px;
+$body-vert-width: 920px;
+$card-area-padding: 16px;
+$cell-width: ($body-min-width - $card-area-padding * 2);
 
 main#home {
+	display: flex;
+	flex-direction: column;
 	margin: 0 auto;
 	width: 100%;
+
+	> section {
+		padding: 0 $page-padding;
+
+		&.HomePage__Primer {
+			background: $header;
+			color: $background;
+
+			> div {
+				margin: 0 auto;
+				max-width: $body-max-width;
+				padding: 0 $page-padding $page-padding;
+				text-align: center;
+	
+				.HomePage__PreTitle {
+					font-size: 30px;
+					margin-bottom: -6px;
+					opacity: 0.7;
+				}
+	
+				h1 {
+					font-size: 80px;
+					text-transform: uppercase;
+					margin: 0 0 24px;
+					padding: 0;
+				}
+	
+				h2 {
+					font-size: 20px;
+					font-weight: 400;
+					margin: 0;
+					opacity: 0.0;
+					padding: 0;
+	
+					&.HomePage__Subtitle--Loaded {
+						opacity: 1.0;
+						transition: 2s opacity;
+					}
+	
+					a {
+						margin: 0 6px;
+					}
+				}
+			}
+		}
+
+		&.HomePage__Sample {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: ($cell-width * 2 + $card-area-padding * 2 + $page-padding);
+			padding: $page-padding $card-area-padding !important;
+			width: 100%;
+
+			> div.HomePage__SampleInfo {
+				align-self: center;
+				max-width: $cell-width;
+				width: 50%;
+
+				h3 {
+					font-size: 32px;
+					margin: 16px 0;
+				}
+
+				p {
+					font-size: 16px;
+					line-height: 200%;
+					padding: 0;
+				}
+			}
+
+			> div.HomePage__SampleSpacer {
+				width: $page-padding;
+			}
+
+			> div.HomePage__SampleCard {
+				max-width: $cell-width;
+				width: 50%;
+
+				> div {
+					height: 100%;
+				}
+			}
+		}
+
+		&.HomePage__Links {
+			background: $header;
+			flex: 1;
+			text-align: center;
+
+			a {
+				background: $header;
+				border: 1px solid $outline-color;
+				border-radius: 32px;;
+				color: $outline-color;
+				cursor: pointer;
+				display: inline-block;
+				font-family: inherit;
+				font-size: 24px;
+				height: 64px;
+				margin: 30px auto;
+				padding: 16px 48px;
+
+				&:hover {
+					background: $outline-color;
+					color: $header;
+				}
+			}
+		}
+	}
 }
 
-button.HomePage__BackToTop {
-	background: $background;
-	border: 0;
-	border-radius: ($top-button-size / 2);
-	bottom: ($page-padding / 2);
-	box-shadow: 0 2px 6px $box-shadow-color;
-	cursor: pointer;
-	position: fixed;
-	height: $top-button-size;
-	outline: none;
-	pointer-events: initial;
-	right: ($page-padding / 2);
-	width: $top-button-size;
-	z-index: 20;
+@media (max-width: $body-vert-width) {
+	main#home {
+		> section {
+			&.HomePage__Sample {
+				> div.HomePage__SampleInfo, > div.HomePage__SampleCard {
+					flex: 1;
+				}
 
-	i {
-		font-size: 36px;
-		margin-top: 2px;
+				> div.HomePage__SampleSpacer {
+					flex-basis: 100%;
+					height: $page-padding-narrow;
+					width: 0;
+				}
+			}
+		}
 	}
 }
 
 @media (max-width: $body-narrow-width) {
-	button.HomePage__BackToTop {
-		bottom: ($page-padding-narrow / 2);
-		height: $top-button-size-small;
-		right: ($page-padding-narrow / 2);
-		width: $top-button-size-small;
+	main#home {
+		> section {
+			padding: 0 $page-padding-narrow !important;
 
-		i {
-			font-size: 24px;
-			margin-left: -2px;
+			&.HomePage__Primer > div {
+				padding: 0 $page-padding-narrow $page-padding !important;
+			}
 		}
 	}
 }

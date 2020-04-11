@@ -22,11 +22,15 @@ header {
 	position: relative;
 	z-index: 12;
 
-	div#brand {
+	#brand {
 		align-self: center;
 		flex: 1;
 		font-weight: 600;
 		margin-top: -4px;
+
+		&.HeaderMenu__HiddenBrand {
+			visibility: hidden;
+		}
 
 		.HeaderMenu__BrandLarge {
 			display: block;

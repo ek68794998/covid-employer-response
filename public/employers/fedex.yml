@@ -6,6 +6,8 @@ ticker: FDX
 wiki: FedEx
 image: fedex.svg
 officialWebsite: https://www.fedex.com/en-us/about.html
+industries:
+  - courier
 location:
   city: Memphis
   state: TN

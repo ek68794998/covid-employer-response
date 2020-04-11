@@ -4,6 +4,8 @@ ticker: NKE
 wiki: Nike, Inc.
 image: nike.svg
 officialWebsite: https://about.nike.com/
+industries:
+  - apparel
 location:
   city: Beaverton
   state: OR

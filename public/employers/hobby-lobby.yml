@@ -2,6 +2,8 @@ name: Hobby Lobby
 wiki: Hobby Lobby
 image: hobby-lobby.svg
 officialWebsite: https://www.hobbylobby.com/about-us/our-story
+industries:
+  - retail
 location:
   city: Oklahoma City
   state: OK

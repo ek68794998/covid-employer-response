@@ -3,6 +3,8 @@ ticker: SBUX
 wiki: Starbucks
 image: starbucks.svg
 officialWebsite: https://www.starbucks.com/about-us/company-information
+industries:
+  - coffeeShop
 location:
   city: Seattle
   state: AR

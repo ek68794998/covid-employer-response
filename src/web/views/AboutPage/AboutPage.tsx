@@ -9,7 +9,7 @@ import { withRouter } from "react-router-dom";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import { ProjectUrl } from "../../../common/constants/UrlConstants";
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import "./AboutPage.scss";
 
@@ -28,7 +28,7 @@ const AboutPage: React.FC = (): React.ReactElement => {
 				<title>{strings.about} | {strings.appTitle}</title>
 			</Helmet>
 			<div className="AboutPage__Content">
-				<h2 id="what-is">What is {strings.appTitleShort}?</h2>
+				<h2 id="what-is">{format(strings.aboutSectionHeaders.whatIs, { app: strings.appTitleShort })}</h2>
 				<p>
 					<strong>{strings.appTitleShort}</strong> ({strings.appTitle}) is a collaborative, open-source project designed to
 					track the responses of employers to the {makeExternalLink(coronavirusWikipediaUrl, "coronavirus")}
@@ -38,14 +38,14 @@ const AboutPage: React.FC = (): React.ReactElement => {
 					{makeExternalLink(ProjectUrl, "the project's page on GitHub")}.
 				</p>
 
-				<h2 id="contributing">Can I help?</h2>
+				<h2 id="contributing">{strings.aboutSectionHeaders.contributing}</h2>
 				<p>
 					Yes! {strings.appTitleShort} is open-source and open-data and we'd love to have your help! You can help by
 					submitting new employer claims and changes, or by submitting code changes to the site through&nbsp;
 					{makeExternalLink(ProjectUrl, "GitHub")}.
 				</p>
 
-				<h2 id="reports-and-claims">What are employer claims and reports?</h2>
+				<h2 id="reports-and-claims">{strings.aboutSectionHeaders.reportsAndClaims}</h2>
 				<p>
 					An <strong>employer claim</strong> is one or more declarations about an employer which include a summary and
 					citations to back it up. This appears as a single bullet-point in the employer's listing beneath a header
@@ -56,7 +56,7 @@ const AboutPage: React.FC = (): React.ReactElement => {
 					of how well that employer has handled the COVID-19 pandemic crisis.
 				</p>
 
-				<h2 id="claim-processing">How do claims get processed?</h2>
+				<h2 id="claim-processing">{strings.aboutSectionHeaders.claimProcessing}</h2>
 				<p>
 					Once a claim is submitted, it must be reviewed by a contributor to the project before it will be approved and
 					appear on the site. This review process will require the contributor to go through each of the sources and validate
@@ -64,7 +64,7 @@ const AboutPage: React.FC = (): React.ReactElement => {
 					information, the claim is completed and will appear the next time the site is updated.
 				</p>
 
-				<h2 id="submit-claims">How do I add, change, or dispute claims?</h2>
+				<h2 id="submit-claims">{strings.aboutSectionHeaders.submitClaims}</h2>
 				<p>
 					To submit a claim change of any kind, please click the "{strings.submit}" link in the navigation menu. From there,
 					you can either submit a request for someone to update our data files, or submit a GitHub pull request to update
@@ -72,8 +72,13 @@ const AboutPage: React.FC = (): React.ReactElement => {
 				</p>
 
 				<h2 id="citation-types">
-					What is the difference between "{strings.citationTypes.publication}", "{strings.citationTypes.statement}",
-					and "{strings.citationTypes.hearsay}"?
+					{format(
+						strings.aboutSectionHeaders.citationTypes,
+						{
+							hearsay: strings.citationTypes.hearsay,
+							publication: strings.citationTypes.publication,
+							statement: strings.citationTypes.statement,
+						})}
 				</h2>
 				<ul>
 					<li>{strings.citationTypes.publication}: {strings.citationTypeDescriptions.publication}</li>
@@ -81,7 +86,7 @@ const AboutPage: React.FC = (): React.ReactElement => {
 					<li>{strings.citationTypes.hearsay}: {strings.citationTypeDescriptions.hearsay}</li>
 				</ul>
 
-				<h2 id="employer-ratings">What determines the rating of an employer?</h2>
+				<h2 id="employer-ratings">{strings.aboutSectionHeaders.employerRatings}</h2>
 				<p>
 					Ratings are algorithmically determined based on the positivity and negativity of the claims that it has. Claims
 					that are more safety-critical have a higher weight than those which are not, and thus are not factored as heavily.

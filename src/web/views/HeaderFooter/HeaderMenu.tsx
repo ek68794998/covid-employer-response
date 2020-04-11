@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { slide as HamburgerMenu, State as HamburgerMenuState } from "react-burger-menu";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import { getIsProd, getIsTest } from "../../state/ducks/environment/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -13,6 +13,10 @@ import "./HeaderFooter.scss";
 
 const HeaderMenu: React.FC = (): React.ReactElement => {
 	const [ isHamburgerMenuOpen, setIsHamburgerMenuOpen ] = useState(false);
+
+	const { pathname } = useLocation();
+
+	const showBrand: boolean = pathname !== "/";
 
 	const isTest: boolean = useSelector(getIsTest);
 	const isProd: boolean = useSelector(getIsProd);
@@ -50,10 +54,9 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		</>
 	);
 
-	const hamburgerMenu: JSX.Element | null =
-		isTest
-			? null
-			: (
+	return (
+		<>
+			{!isTest && (
 				<HamburgerMenu
 					customBurgerIcon={false}
 					isOpen={isHamburgerMenuOpen}
@@ -61,17 +64,13 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 				>
 					{navLinks}
 				</HamburgerMenu>
-			);
-
-	return (
-		<>
-			{hamburgerMenu}
+			)}
 			<header>
 				<div className="HeaderFooter__Container">
 					<button className="HeaderFooter__OpenHamburgerMenu" onClick={openHamburgerMenu}>
 						<i className="material-icons">menu</i>
 					</button>
-					<div id="brand">
+					<div id="brand" className={`${showBrand ? "" : "HeaderMenu__HiddenBrand"}`}>
 						<NavLink title={strings.home} to="/">
 							{strings.appTitleShort}
 							{!isProd && <span style={{ color: "red" }}>&nbsp; [DEV]</span>}

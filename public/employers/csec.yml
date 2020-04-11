@@ -4,6 +4,8 @@ aliases:
 shortName: CSEC
 wiki: Calgary Sports and Entertainment
 image: csec.svg
+industries:
+  - sports
 location:
   city: Calgary
   state: AB

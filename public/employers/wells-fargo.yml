@@ -4,6 +4,9 @@ ticker: WFC
 wiki: Wells Fargo
 image: wells-fargo.svg
 officialWebsite: https://www.wellsfargo.com/about/
+industries:
+  - financialServices
+  - insurance
 location:
   city: San Francisco
   state: CA

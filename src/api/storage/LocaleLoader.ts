@@ -15,7 +15,7 @@ const readdirAsync = util.promisify(fs.readdir);
 const readFileAsync = util.promisify(fs.readFile);
 
 export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
-	private static readonly LOCALE_FILE_REGEX: RegExp = /^(.*)\.json$/;
+	private static readonly LOCALE_FILE_REGEX: RegExp = /^(.*)\.yml$/;
 
 	public existsAsync(id: string): Promise<boolean> {
 		return existsAsync(this.getFileName(id));
@@ -40,7 +40,7 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 		);
 	}
 
-	public async loadAsync(id: string): Promise<LocalizedStrings> {
+	public async getAsync(id: string): Promise<LocalizedStrings> {
 		if (!(await this.existsAsync(id))) {
 			throw new Error(`Data file with ID '${id}' not found.`);
 		}
@@ -54,13 +54,13 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 		return loadedLocale;
 	}
 
-	public async loadAllAsync(): Promise<LocalizedStrings[]> {
+	public async getAllAsync(): Promise<LocalizedStrings[]> {
 		const loadedLocales: LocalizedStrings[] = [];
 
 		const LocalizedStringsIds: string[] = await this.getAllIdsAsync();
 
 		for (const id of LocalizedStringsIds) {
-			loadedLocales.push(await this.loadAsync(id));
+			loadedLocales.push(await this.getAsync(id));
 		}
 
 		return loadedLocales;
@@ -71,6 +71,6 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 			throw new Error("Employer record data folder not found.");
 		}
 
-		return `${this.directoryPath}/${id}.json`;
+		return `${this.directoryPath}/${id}.yml`;
 	}
 }

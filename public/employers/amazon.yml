@@ -3,6 +3,9 @@ ticker: AMZN
 wiki: Amazon (company)
 image: amazon.svg
 officialWebsite: https://www.aboutamazon.com/our-company
+industries:
+  - eCommerce
+  - groceryStore
 location:
   city: Seattle
   state: WA

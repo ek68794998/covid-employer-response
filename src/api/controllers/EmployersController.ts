@@ -7,6 +7,7 @@ import { HttpResponseHeaders } from "../../common/http/HttpResponseHeaders";
 import { HttpStatusCodes } from "../../common/http/HttpStatusCodes";
 import { MimeTypes } from "../../common/MimeTypes";
 
+import { DataFileLoaderOptions } from "../storage/DataFileLoaderOptions";
 import { EmployerRecordLoader } from "../storage/EmployerRecordLoader";
 
 import { RoutedControllerBase } from "./RoutedControllerBase";
@@ -16,11 +17,13 @@ class EmployersController extends RoutedControllerBase {
 
 	private static readonly MAX_GETEMPLOYERS_STANDARD: number = 500;
 
-	private readonly recordLoader: EmployerRecordLoader = new EmployerRecordLoader(process.env.RAZZLE_PUBLIC_DIR || "/", "employers");
+	private readonly recordLoader: EmployerRecordLoader;
 
-	private employers: { [id: string]: EmployerRecord } = {};
+	public constructor(recordLoader: EmployerRecordLoader) {
+		super();
 
-	private hasEmployers: boolean = false;
+		this.recordLoader = recordLoader;
+	}
 
 	public async getEmployer(req: express.Request, res: express.Response): Promise<void> {
 		const id: string | null = req.params.employerId || null;
@@ -31,13 +34,14 @@ class EmployersController extends RoutedControllerBase {
 			return;
 		}
 
-		let employerRecord: EmployerRecord | null = null;
+		const loaderOptions: DataFileLoaderOptions = {
+			bypassCache: !req.header(HttpRequestHeaders.IF_NONE_MATCH),
+		};
 
-		if (req.header(HttpRequestHeaders.IF_NONE_MATCH) && id in this.employers) {
-			employerRecord = this.employers[id];
-		} else if (await this.recordLoader.existsAsync(id)) {
-			employerRecord = await this.recordLoader.loadAsync(id);
-		}
+		const employerRecord: EmployerRecord | null =
+			await this.recordLoader.existsAsync(id, loaderOptions)
+				? await this.recordLoader.getAsync(id, loaderOptions)
+				: null;
 
 		if (!employerRecord) {
 			res.status(HttpStatusCodes.NOT_FOUND).send();
@@ -45,37 +49,19 @@ class EmployersController extends RoutedControllerBase {
 			return;
 		}
 
-		this.employers[id] = employerRecord;
-
 		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, MimeTypes.APPLICATION_JSON);
 		res.send(employerRecord);
 	}
 
-	public async getEmployerCategories(req: express.Request, res: express.Response): Promise<void> {
-		if (!req.header(HttpRequestHeaders.IF_NONE_MATCH) || !this.hasEmployers) {
-			await this.reloadEmployersAsync();
-		}
-
-		const categories: string[] = [ "technology", "healthcare", "grocery" ];
-
-		/*
-		for (const employer of Object.values(this.employers)) {
-			// TODO // categories.push(employer.category);
-		}
-		*/
-
-		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, MimeTypes.APPLICATION_JSON);
-		res.send(categories);
-	}
-
 	public async getEmployers(req: express.Request, res: express.Response): Promise<void> {
-		if (!req.header(HttpRequestHeaders.IF_NONE_MATCH) || !this.hasEmployers) {
-			await this.reloadEmployersAsync();
-		}
+		const loaderOptions: DataFileLoaderOptions = {
+			bypassCache: !req.header(HttpRequestHeaders.IF_NONE_MATCH),
+		};
 
+		const employers: EmployerRecord[] = await this.recordLoader.getAllAsync(loaderOptions);
 		const returnedEmployers: EmployerRecordBase[] = [];
 
-		for (const employerRecord of Object.values(this.employers)) {
+		for (const employerRecord of Object.values(employers)) {
 			returnedEmployers.push(EmployerRecord.toMetadata(employerRecord));
 
 			if (returnedEmployers.length === EmployersController.MAX_GETEMPLOYERS_STANDARD) {
@@ -83,7 +69,7 @@ class EmployersController extends RoutedControllerBase {
 			}
 		}
 
-		res.setHeader("Results-Total", Object.keys(this.employers).length);
+		res.setHeader("Results-Total", Object.keys(employers).length);
 		res.setHeader("Results-Returned", returnedEmployers.length);
 		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, MimeTypes.APPLICATION_JSON);
 		res.send(returnedEmployers);
@@ -92,18 +78,7 @@ class EmployersController extends RoutedControllerBase {
 	protected initializeRoutes(): void {
 		this.router.get(`/${EmployersController.SUBPATH}`, this.getEmployers.bind(this));
 		this.router.get(`/${EmployersController.SUBPATH}/:employerId`, this.getEmployer.bind(this));
-		this.router.get(`/${EmployersController.SUBPATH}/categories`, this.getEmployerCategories.bind(this));
-		this.router.get(`/${EmployersController.SUBPATH}/category/:categoryId`, this.getEmployers.bind(this));
-	}
-
-	private async reloadEmployersAsync(): Promise<void> {
-		const employerRecords: EmployerRecord[] = await this.recordLoader.loadAllAsync();
-
-		for (const employerRecord of employerRecords) {
-			this.employers[employerRecord.id] = employerRecord;
-		}
-
-		this.hasEmployers = true;
+		this.router.get(`/${EmployersController.SUBPATH}/industry/:industryId`, this.getEmployers.bind(this));
 	}
 }
 

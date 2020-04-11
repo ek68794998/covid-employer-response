@@ -15,6 +15,7 @@ We recommend you make a copy of `sample.yml` and adjust it to fit your needs. Th
 - `wiki`: The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.
 - `image`: An optional name of a logo, in SVG format, in the 'public/images/employers' directory.
 - `officialWebsite`: An official company webpage describing the company and its corporate mission, culture, and so on.
+- `industries`: A list of industries of which the company is considered to be a part. Please see the `EmployerIndustry.ts` file for possible values here. (If you think one is missing, please request to add it.)
 - `location`: Where the company is originally based.
 	- The country code should correspond to a country name in `./public/strings/en-us.json`'s list.
 	- Multinational companies should indicate `international: true`.

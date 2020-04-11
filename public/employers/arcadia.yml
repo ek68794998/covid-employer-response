@@ -12,6 +12,8 @@ shortName: Arcadia
 wiki: Arcadia Group
 image: arcadia.svg
 officialWebsite: https://www.arcadiagroup.co.uk/about-arcadia/history
+industries:
+  - retail
 location:
   city: London
   country: gb

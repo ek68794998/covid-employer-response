@@ -10,11 +10,12 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     <h2
       id="what-is"
     >
-      What is 
-      ?
+      ωλáƭÌƨHèáδèř: áƥƥ
     </h2>
     <p>
-      <strong />
+      <strong>
+        áƥƥ
+      </strong>
        (
       áƥƥTïƭℓè
       ) is a collaborative, open-source project designed to track the responses of employers to the 
@@ -46,10 +47,11 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     <h2
       id="contributing"
     >
-      Can I help?
+      çôñƭřïβúƭïñϱHèáδèř
     </h2>
     <p>
       Yes! 
+      áƥƥ
        is open-source and open-data and we'd love to have your help! You can help by submitting new employer claims and changes, or by submitting code changes to the site through 
       <a
         href="https://github.com/ekumlin/covid-employer-response"
@@ -63,7 +65,7 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     <h2
       id="reports-and-claims"
     >
-      What are employer claims and reports?
+      řèƥôřƭƨÂñδÇℓáï₥ƨHèáδèř
     </h2>
     <p>
       An 
@@ -84,7 +86,7 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     <h2
       id="claim-processing"
     >
-      How do claims get processed?
+      çℓáï₥ÞřôçèƨƨïñϱHèáδèř
     </h2>
     <p>
       Once a claim is submitted, it must be reviewed by a contributor to the project before it will be approved and appear on the site. This review process will require the contributor to go through each of the sources and validate that the claim made is substantiated by the source. Once the submitter and contributor(s) agree on the submitted information, the claim is completed and will appear the next time the site is updated.
@@ -92,7 +94,7 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     <h2
       id="submit-claims"
     >
-      How do I add, change, or dispute claims?
+      ƨúβ₥ïƭÇℓáï₥ƨHèáδèř
     </h2>
     <p>
       To submit a claim change of any kind, please click the "
@@ -102,13 +104,7 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     <h2
       id="citation-types"
     >
-      What is the difference between "
-      ƥúβℓïçáƭïôñ
-      ", "
-      ƨƭáƭè₥èñƭ
-      ", and "
-      λèářƨá¥
-      "?
+      çïƭáƭïôñT¥ƥèƨHèáδèř: ƥúβℓïçáƭïôñ / ƨƭáƭè₥èñƭ / λèářƨá¥
     </h2>
     <ul>
       <li>
@@ -130,7 +126,7 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     <h2
       id="employer-ratings"
     >
-      What determines the rating of an employer?
+      è₥ƥℓô¥èřRáƭïñϱƨHèáδèř
     </h2>
     <p>
       Ratings are algorithmically determined based on the positivity and negativity of the claims that it has. Claims that are more safety-critical have a higher weight than those which are not, and thus are not factored as heavily.

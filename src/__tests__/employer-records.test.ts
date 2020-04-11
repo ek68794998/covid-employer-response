@@ -24,7 +24,7 @@ describe("employer records", () => {
 	test.each(
 		recordIds.map((recordId: string) => [ recordId ]),
 	)("can load and parse %p (%#)", async (recordId: string) => {
-		const record: EmployerRecord = await loader.loadAsync(recordId);
+		const record: EmployerRecord = await loader.getAsync(recordId, {});
 
 		if (record.id === "sample") {
 			// The sample file has some invalid dates, etc., so don't include it here.
@@ -72,7 +72,7 @@ describe("employer records", () => {
 	});
 
 	test("have correct sample data", async () => {
-		const record: EmployerRecord = await loader.loadAsync("sample");
+		const record: EmployerRecord = await loader.getAsync("sample", {});
 
 		expect(record.id).toBe("sample");
 		expect(record.name).toBe("Contoso");
@@ -82,6 +82,11 @@ describe("employer records", () => {
 		expect(record.ticker).toBe("CTS");
 		expect(record.wiki).toBe("Example");
 		expect(record.officialWebsite).toBe("http://example.com/about");
+
+		expect(record.industries?.length).toBe(2);
+		expect(record.industries?.[0]).toBe("software");
+		expect(record.industries?.[1]).toBe("videoGames");
+
 		expect(record.employeesBefore?.lowerBound).toBe(200);
 		expect(record.employeesBefore?.type).toBe("range");
 		expect(record.employeesBefore?.upperBound).toBe(500);
