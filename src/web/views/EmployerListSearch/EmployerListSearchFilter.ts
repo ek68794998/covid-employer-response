@@ -37,7 +37,7 @@ export class EmployerListSearchFilter {
 		}
 
 		if (!e) {
-			return false;
+			return f.small;
 		}
 
 		const getNumberIsBetween = (v: number, lower: number, upper: number): boolean =>
