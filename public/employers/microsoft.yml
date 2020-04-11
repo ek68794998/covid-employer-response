@@ -53,3 +53,10 @@ citations:
   - summary: Buildings affected by employees who tested positive for COVID-19 have reportedly been sanitized.
     positivity: 1
     type: hearsay
+  - summary: Microsoft has provided 12 weeks of parental leave to employees who are dealing with extended school closures caused by COVID-19.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNN
+      - link: https://www.cnn.com/2020/04/09/tech/microsoft-12-weeks-parental-leave/index.html
+      - date: 2020-04-09T23:47:41Z
