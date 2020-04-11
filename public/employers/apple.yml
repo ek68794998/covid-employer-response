@@ -1,0 +1,67 @@
+name: Apple Inc.
+shortName: Apple
+ticker: AAPL
+wiki: Apple Inc.
+image: apple.svg
+officialWebsite: https://www.apple.com/business/
+industries:
+  - electronics
+  - software
+location:
+  city: Cupertino
+  state: CA
+  country: us
+  international: true
+  wiki: Cupertino, California
+employeesBefore:
+  type: approximately
+  upperBound: 137000
+  year: 2019
+summary: Apple has shut down its retail locations and requested employees work remotely, while still offering full pay to both salaried and hourly workers. Though employee statements about potential layoffs and remote connectivity issues have arisen, these have not manifested into long-term issues.
+citations:
+  - summary: Apple requested employees to work from home "if \[their\] job allows" for the week of March 9 through 13. This work-from-home order was later extended indefinitely.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Business Insider
+        link: https://web.archive.org/web/20200404210857/https://www.businessinsider.com/coronavirus-apple-tim-cook-tells-office-workers-work-from-home-2020-3
+        date: 2020-03-08T20:52:00Z
+      - source: Apple Newsroom
+        link: https://web.archive.org/web/20200314064555/https://www.apple.com/newsroom/2020/03/apples-covid-19-response/
+        date: 2020-03-13T12:00:00-07:00 # Estimate based on post date of 03/13/2020.
+  - summary: An Apple spokesperson and official statement have announced that "hourly workers will continue to receive pay" during the COVID-19 pandemic, even if they are not working. Janitors, drivers, and others are included in this set of workers, but a comprehensive list of all roles covered was not included.
+    positivity: 2
+    type: publication
+    sources:
+      - source: Apple Newsroom
+        link: https://web.archive.org/web/20200314064555/https://www.apple.com/newsroom/2020/03/apples-covid-19-response/
+        date: 2020-03-13T12:00:00-07:00 # Estimate based on post date of 03/13/2020.
+      - source: 9to5 Mac
+        link: https://web.archive.org/web/20200404192040/https://9to5mac.com/2020/03/31/apple-contractors-pay/
+        date: 2020-03-31T08:36:23-07:00
+      - source: The Wall Street Journal
+        link: https://web.archive.org/web/20200404060318/https://www.wsj.com/articles/apple-commits-to-paying-contractors-after-some-were-told-theyd-lose-work-11585667276
+        date: 2020-03-31T15:07:00Z
+  - summary: All Apple retail stores were shuttered from early March through March 27. These closures were later extended indefinitely.
+    positivity: 0
+    type: publication
+    sources:
+      - source: 9to5 Mac
+        link: https://web.archive.org/web/20200404183909/https://9to5mac.com/2020/03/14/apple-store-coronavirus-closures/
+        date: 2020-03-14T00:31:08-07:00
+      - source: Apple FAQs
+        link: https://web.archive.org/web/20200406040750/https://www.apple.com/shop/browse/store/temporary_closures
+  - summary: Apple employees working remotely have reportedly run into numerous security and connectivity issues. This has resulted in employees unable to complete their work, and feeling compelled to go into their office to do so. Employees working in the office are subject to daily health screenings.
+    positivity: 0
+    type: statement
+    sources:
+      - source: Apple Insider
+        link: https://web.archive.org/web/20200327193903/https://appleinsider.com/articles/20/03/14/apple-employees-working-from-home-stumbling-over-confusing-security-guidelines
+        date: 2020-03-14T13:05:00-07:00
+  - summary: Early reports&mdash;which did not come to fruition&mdash;from [SEIU-USWW](https://www.seiu-usww.org/) and from janitors within Apple state that Apple had originally planned to cut pay and benefits for 75% of unionized janitors due to the crisis.
+    positivity: 0
+    type: statement
+    sources:
+      - source: 9to5 Mac
+        link: https://web.archive.org/web/20200404192040/https://9to5mac.com/2020/03/31/apple-contractors-pay/
+        date: 2020-03-31T08:36:23-07:00
