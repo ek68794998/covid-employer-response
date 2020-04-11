@@ -1,8 +1,6 @@
-/* eslint-disable max-len */
-/* The max-len detection in ESLint is not as good as TSLint so it doesn't work well with this file. */
-
 import React from "react";
 import { Helmet } from "react-helmet";
+import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
 
@@ -29,47 +27,68 @@ const AboutPage: React.FC = (): React.ReactElement => {
 			</Helmet>
 			<div className="AboutPage__Content">
 				<h2 id="what-is">{format(strings.aboutSectionHeaders.whatIs, { app: strings.appTitleShort })}</h2>
-				<p>
-					<strong>{strings.appTitleShort}</strong> ({strings.appTitle}) is a collaborative, open-source project designed to
-					track the responses of employers to the {makeExternalLink(coronavirusWikipediaUrl, "coronavirus")}
-					&nbsp;(COVID-19) {makeExternalLink(coronavirusPandemicWikipediaUrl, `pandemic of 2019${String.fromCharCode(8211)}2020`)}. It is
-					built using information sourced from a number of places and categorizes it based on how reliable the original
-					information source is considered to be. For more information, please visit&nbsp;
-					{makeExternalLink(ProjectUrl, "the project's page on GitHub")}.
-				</p>
+				<ReactMarkdown
+					escapeHtml={false}
+					linkTarget="_blank"
+					source={(
+						format(
+							strings.aboutSectionParagraphs.whatIs,
+							{
+								app: strings.appTitleShort,
+								appFullName: strings.appTitle,
+								covidWikiUrl: coronavirusWikipediaUrl,
+								githubUrl: ProjectUrl,
+								pandemicWikiUrl: coronavirusPandemicWikipediaUrl,
+							})
+					)}
+				/>
 
 				<h2 id="contributing">{strings.aboutSectionHeaders.contributing}</h2>
-				<p>
-					Yes! {strings.appTitleShort} is open-source and open-data and we'd love to have your help! You can help by
-					submitting new employer claims and changes, or by submitting code changes to the site through&nbsp;
-					{makeExternalLink(ProjectUrl, "GitHub")}.
-				</p>
+				<ReactMarkdown
+					escapeHtml={false}
+					linkTarget="_blank"
+					source={(
+						format(
+							strings.aboutSectionParagraphs.contributing,
+							{
+								app: strings.appTitleShort,
+								githubUrl: ProjectUrl,
+							})
+					)}
+				/>
 
 				<h2 id="reports-and-claims">{strings.aboutSectionHeaders.reportsAndClaims}</h2>
-				<p>
-					An <strong>employer claim</strong> is one or more declarations about an employer which include a summary and
-					citations to back it up. This appears as a single bullet-point in the employer's listing beneath a header
-					such as "{strings.citationTypes.publication}".
-				</p>
-				<p>
-					An <strong>employer report</strong> is a collection of claims about an employer as well as an overall rating
-					of how well that employer has handled the COVID-19 pandemic crisis.
-				</p>
+				<ReactMarkdown
+					escapeHtml={false}
+					linkTarget="_blank"
+					source={(
+						format(
+							strings.aboutSectionParagraphs.reportsAndClaims,
+							{
+								publication: strings.citationTypes.publication,
+							})
+					)}
+				/>
 
 				<h2 id="claim-processing">{strings.aboutSectionHeaders.claimProcessing}</h2>
-				<p>
-					Once a claim is submitted, it must be reviewed by a contributor to the project before it will be approved and
-					appear on the site. This review process will require the contributor to go through each of the sources and validate
-					that the claim made is substantiated by the source. Once the submitter and contributor(s) agree on the submitted
-					information, the claim is completed and will appear the next time the site is updated.
-				</p>
+				<ReactMarkdown
+					escapeHtml={false}
+					linkTarget="_blank"
+					source={strings.aboutSectionParagraphs.claimProcessing}
+				/>
 
 				<h2 id="submit-claims">{strings.aboutSectionHeaders.submitClaims}</h2>
-				<p>
-					To submit a claim change of any kind, please click the "{strings.submit}" link in the navigation menu. From there,
-					you can either submit a request for someone to update our data files, or submit a GitHub pull request to update
-					the files yourself.
-				</p>
+				<ReactMarkdown
+					escapeHtml={false}
+					linkTarget="_blank"
+					source={(
+						format(
+							strings.aboutSectionParagraphs.submitClaims,
+							{
+								submit: strings.submit,
+							})
+					)}
+				/>
 
 				<h2 id="citation-types">
 					{format(
@@ -80,17 +99,29 @@ const AboutPage: React.FC = (): React.ReactElement => {
 							statement: strings.citationTypes.statement,
 						})}
 				</h2>
-				<ul>
-					<li>{strings.citationTypes.publication}: {strings.citationTypeDescriptions.publication}</li>
-					<li>{strings.citationTypes.statement}: {strings.citationTypeDescriptions.statement}</li>
-					<li>{strings.citationTypes.hearsay}: {strings.citationTypeDescriptions.hearsay}</li>
-				</ul>
+				<ReactMarkdown
+					escapeHtml={false}
+					linkTarget="_blank"
+					source={(
+						format(
+							strings.aboutSectionParagraphs.citationTypes,
+							{
+								hearsay: strings.citationTypes.hearsay,
+								hearsayDescription: strings.citationTypeDescriptions.hearsay,
+								publication: strings.citationTypes.publication,
+								publicationDescription: strings.citationTypeDescriptions.publication,
+								statement: strings.citationTypes.statement,
+								statementDescription: strings.citationTypeDescriptions.statement,
+							})
+					)}
+				/>
 
 				<h2 id="employer-ratings">{strings.aboutSectionHeaders.employerRatings}</h2>
-				<p>
-					Ratings are algorithmically determined based on the positivity and negativity of the claims that it has. Claims
-					that are more safety-critical have a higher weight than those which are not, and thus are not factored as heavily.
-				</p>
+				<ReactMarkdown
+					escapeHtml={false}
+					linkTarget="_blank"
+					source={strings.aboutSectionParagraphs.employerRatings}
+				/>
 			</div>
 		</main>
 	);
