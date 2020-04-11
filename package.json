@@ -6,7 +6,6 @@
     "build": "razzle build",
     "debug": "razzle start --inspect --inspect-port=9230",
     "lint:ts": "eslint --ext=jsx,ts,tsx src",
-    "postinstall": "npm rebuild node-sass",
     "start": "razzle start",
     "start:prod": "node build/server.js",
     "test": "razzle test --env=jsdom",
