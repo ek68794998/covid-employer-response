@@ -41,7 +41,7 @@ citations:
         link: https://www.zdnet.com/article/two-seattle-area-microsoft-employees-diagnosed-with-covid-19-coronavirus/
         date: 2020-03-06T14:04:00Z
   - summary: Vendors working for Microsoft, including cafeteria staff and shuttle drivers, were announced to be receiving full pay through the coronavirus pandemic.
-    positivity: 1
+    positivity: 2
     type: publication
     sources:
       - source: Microsoft Company Blog
