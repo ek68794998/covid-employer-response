@@ -6,6 +6,8 @@ $card-area-padding: 16px;
 $cell-width: ($body-min-width - $card-area-padding * 2);
 
 main#home {
+	display: flex;
+	flex-direction: column;
 	margin: 0 auto;
 	width: 100%;
 
@@ -90,6 +92,31 @@ main#home {
 
 				> div {
 					height: 100%;
+				}
+			}
+		}
+
+		&.HomePage__Links {
+			background: $header;
+			flex: 1;
+			text-align: center;
+
+			a {
+				background: $header;
+				border: 1px solid $outline-color;
+				border-radius: 32px;;
+				color: $outline-color;
+				cursor: pointer;
+				display: inline-block;
+				font-family: inherit;
+				font-size: 24px;
+				height: 64px;
+				margin: 30px auto;
+				padding: 16px 48px;
+
+				&:hover {
+					background: $outline-color;
+					color: $header;
 				}
 			}
 		}
