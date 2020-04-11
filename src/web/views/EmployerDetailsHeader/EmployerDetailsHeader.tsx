@@ -171,7 +171,7 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 					{employerNameComponent}
 					{!useShortText && getTickerComponent(employer, strings)}
 				</h2>
-				{!useShortText && <EmployerActionLinks employer={employer} hideProfileLink={true} />}
+				{!useShortText && <EmployerActionLinks employer={employer} />}
 				<span className="EmployerDetailsHeader__TitleGap" />
 				<span
 					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${employer.rating}`}

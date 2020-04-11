@@ -28,7 +28,7 @@ Array [
         )
       </a>
     </h2>
-    [component: EmployerActionLinks employer=([object Object]) hideProfileLink=(true) /]
+    [component: EmployerActionLinks employer=([object Object]) /]
     <span
       className="EmployerDetailsHeader__TitleGap"
     />
@@ -112,7 +112,7 @@ Array [
         
       </a>
     </h2>
-    [component: EmployerActionLinks employer=([object Object]) hideProfileLink=(true) /]
+    [component: EmployerActionLinks employer=([object Object]) /]
     <span
       className="EmployerDetailsHeader__TitleGap"
     />
