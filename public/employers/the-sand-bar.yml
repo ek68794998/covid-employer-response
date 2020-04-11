@@ -15,16 +15,19 @@ citations:
     positivity: 1
     type: publication
     sources:
-      - name: "CNN: The Sand Bar story"
+      - source: CNN
+        title: The Sand Bar story
         link: https://web.archive.org/web/20200409233838/https://www.cnn.com/2020/04/08/us/sand-bar-dollar-bills-donation-trnd/index.html
         date: 2020-04-09T01:16:44Z
   - summary: Under government mandate that Georgia businesses shutter between April 3 and April 13, The Sand Bar has closed its open seating area and is limited to takeout and delivery.
     positivity: 0
     type: publication
     sources:
-      - name: "CNN: State mandate index"
+      - source: CNN
+        title: State mandate index
         link: https://web.archive.org/web/20200404180648/https://www.cnn.com/2020/03/23/us/coronavirus-which-states-stay-at-home-order-trnd/index.html
         date: 2020-03-23T16:49:14Z
-      - name: "CNN: The Sand Bar story"
+      - source: CNN
+        title: The Sand Bar story
         link: https://web.archive.org/web/20200409233838/https://www.cnn.com/2020/04/08/us/sand-bar-dollar-bills-donation-trnd/index.html
         date: 2020-04-09T01:16:44Z

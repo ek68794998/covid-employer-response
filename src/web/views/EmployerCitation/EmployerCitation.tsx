@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
@@ -22,7 +23,7 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 		(s: CitationSource, i: number): JSX.Element => {
 			const date: Date | null = s.date ? new Date(s.date) : null;
 
-			let title: string = s.name;
+			let title: string = s.title ? `${s.source}: ${s.title}` : s.source;
 
 			if (date) {
 				title = `${title} (${date.toLocaleDateString()} ${date.toLocaleTimeString()})`;
@@ -49,7 +50,7 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 		<div className="EmployerCitation__Container">
 			<i className={iconClass}>{indicatorIcon}</i>
 			<span className="EmployerCitation__Summary">
-				{citation.summary}
+				<ReactMarkdown source={citation.summary} />
 				{citation.sources && <span className="EmployerCitation__References">{citation.sources.map(getLinkComponent)}</span>}
 			</span>
 		</div>

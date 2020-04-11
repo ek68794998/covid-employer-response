@@ -1,6 +1,10 @@
-@import "../BurgerMenu.scss";
 @import "../Colors.scss";
 @import "../Dimensions.scss";
+
+$burger-button-padding: 24px;
+$burger-highlight-width: 4px;
+$burger-menu-width: 300px;
+$burger-zindex: 50;
 
 header, footer {
 	flex: 0;
@@ -102,6 +106,63 @@ footer {
 
 		#project-source {
 			text-align: right;
+		}
+	}
+}
+
+.HeaderFooter__BurgerMenuShade {
+	background: #000;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	transition: 0.5s opacity;
+	z-index: $burger-zindex;
+
+	&.HeaderFooter__BurgerMenuShade--Open {
+		left: 0;
+		opacity: 0.5;
+	}
+
+	&.HeaderFooter__BurgerMenuShade--Closed {
+		pointer-events: none;
+	}
+}
+
+.HeaderFooter__BurgerMenu {
+	background: $header;
+	bottom: 0;
+	left: (-1 * $burger-menu-width);
+	position: absolute;
+	top: 0;
+	transition: 0.5s left ease-in-out;
+	width: $burger-menu-width;
+	z-index: ($burger-zindex + 1);
+
+	&.HeaderFooter__BurgerMenu--Open {
+		left: 0;
+	}
+
+	.HeaderFooter__BurgerMenuItems {
+		display: flex;
+		flex-direction: column;
+		font: 400 24px 'Baloo Chettan 2';
+
+		a {
+			color: $background;
+			padding: ($burger-button-padding / 2) $burger-button-padding;
+			opacity: 0.7;
+
+			&:hover {
+				opacity: 1.0;
+			}
+
+			&.active {
+				border-left: $burger-highlight-width solid $link-normal;
+				padding-left: ($burger-button-padding - $burger-highlight-width);
+			}
 		}
 	}
 }

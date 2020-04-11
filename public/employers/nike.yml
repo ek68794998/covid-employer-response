@@ -22,16 +22,16 @@ citations:
     positivity: 2
     type: publication
     sources:
-      - name: CNBC
+      - source: CNBC
         link: https://web.archive.org/web/20200404052428/https://www.cnbc.com/2020/03/15/these-retailers-are-closing-stores-to-slow-coronavirus-outbreak.html
         date: 2020-03-15T15:20:22Z
-      - name: Yahoo! Finance
+      - source: Yahoo! Finance
         link: https://finance.yahoo.com/news/lululemon-extends-store-closure-rising-141802535.html
         date: 2020-04-03T14:18:02Z
   - summary: Nike has implemented work from home and staggered work schedules for employees who are able to do so.
     positivity: 1
     type: publication
     sources:
-      - name: CNBC
+      - source: CNBC
         link: https://web.archive.org/web/20200402202324/https://www.cnbc.com/2020/03/15/nike-is-closing-all-of-its-stores-in-the-us-because-of-coronavirus.html
         date: 2020-03-15T11:06:30Z

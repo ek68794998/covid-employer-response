@@ -21,38 +21,40 @@ citations:
     positivity: 1
     type: publication
     sources:
-      - name: TechCrunch
+      - source: TechCrunch
         link: https://techcrunch.com/2020/03/30/airbnb-commits-250-million-to-helping-hosts-cover-cancellations-due-to-covid-19/
         date: 2020-03-30T22:00:28Z
   - summary: After years of lobbying the government to change rental laws for its own corporate benefit, Airbnb requested a bailout for its hosts from the Canadian government, to which one Canadian MP simply replied, "No."
     positivity: 0
     type: publication
     sources:
-      - name: ThinkPol
+      - source: ThinkPol
         link: https://thinkpol.ca/2020/04/03/no-government-dismisses-airbnb-request-bail-hosts-canada-one-word/
         date: 2020-04-03T10:00:03-07:00
   - summary: Customers of Airbnb hosts are receiving full refunds both for the cost of the booking and the Airbnb fees.
     positivity: 1
     type: hearsay
     sources:
-      - name: Reddit r/AirBnB
+      - source: Reddit r/AirBnB
         link: https://www.reddit.com/r/AirBnB/comments/f3lhui/psa_corona_virus_and_airbnb/
         date: 2020-02-13T18:38:06-08:00
   - summary: Airbnb has launched an initiative to provide free housing for 100,000 global front-line responders dealing with COVID-19.
     positivity: 1
     type: publication
     sources:
-      - name: Better Homes & Gardens
+      - source: Better Homes & Gardens
         link: https://www.bhg.com/news/airbnb-homes-for-hospital-workers/
         date: 2020-03-27T20:48:46Z
   - summary: Airbnb quietly changed a COVID-19-related policy which allowed refunds for customers who had a check-in date prior to March 14 and a check-out date after March 14; after the silent change, customers with check-in dates prior to March 14 were no longer covered.
     positivity: 0
     type: publication
     sources:
-      - name: Airbnb Help Center (via Web Archive)
+      - source: Airbnb Help Center
+        title: Extenuating circumstances policy (Mar 14)
         link: https://web.archive.org/web/20200314200236/https:/www.airbnb.com/help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19 # Unknown date. Prior to March 14.
-      - name: Airbnb Help Center
-        link: https://www.airbnb.com/help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19 # Unknown date. Prior to March 28.
-      - name: Reddit r/CustomerService
+      - source: Airbnb Help Center
+        title: Extenuating circumstances policy (Mar 30)
+        link: https://web.archive.org/web/20200330084858/https://www.airbnb.com/help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19 # Unknown date. Prior to March 28.
+      - source: Reddit r/CustomerService
         link: https://www.reddit.com/r/AirBnB/comments/f3lhui/psa_corona_virus_and_airbnb/
         date: 2020-03-28T21:34:49-07:00

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { slide as HamburgerMenu, State as HamburgerMenuState } from "react-burger-menu";
 import { useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -30,10 +29,6 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		setIsHamburgerMenuOpen(true);
 	};
 
-	const onHamburgerMenuStateChanged = (state: HamburgerMenuState): void => {
-		setIsHamburgerMenuOpen(state.isOpen);
-	};
-
 	const navLinks: JSX.Element = (
 		<>
 			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers">
@@ -54,16 +49,22 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		</>
 	);
 
+	const classState: string = isHamburgerMenuOpen ? "Open" : "Closed";
+
 	return (
 		<>
 			{!isTest && (
-				<HamburgerMenu
-					customBurgerIcon={false}
-					isOpen={isHamburgerMenuOpen}
-					onStateChange={onHamburgerMenuStateChanged}
-				>
-					{navLinks}
-				</HamburgerMenu>
+				<>
+					<div className={`HeaderFooter__BurgerMenu HeaderFooter__BurgerMenu--${classState}`}>
+						<div className="HeaderFooter__BurgerMenuItems">
+							{navLinks}
+						</div>
+					</div>
+					<div
+						className={`HeaderFooter__BurgerMenuShade HeaderFooter__BurgerMenuShade--${classState}`}
+						onClick={closeHamburgerMenu}
+					/>
+				</>
 			)}
 			<header>
 				<div className="HeaderFooter__Container">

@@ -23,16 +23,16 @@ citations:
     positivity: 2
     type: publication
     sources:
-      - name: CNBC
+      - source: CNBC
         link: https://web.archive.org/web/20200404052428/https://www.cnbc.com/2020/03/15/these-retailers-are-closing-stores-to-slow-coronavirus-outbreak.html
         date: 2020-03-15T15:20:22Z
-      - name: TheStreet
+      - source: TheStreet
         link: https://www.thestreet.com/investing/under-armour-layoffs-store-closings-restructuring
         date: 2020-04-03T09:56:53-04:00
   - summary: Under Armour has laid off over at least 600 employees in its US distribution centers and outlets.
     positivity: -1
     type: publication
     sources:
-      - name: TheStreet
+      - source: TheStreet
         link: https://www.thestreet.com/investing/under-armour-layoffs-store-closings-restructuring
         date: 2020-04-03T09:56:53-04:00

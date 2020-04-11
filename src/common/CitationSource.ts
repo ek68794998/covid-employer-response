@@ -3,5 +3,7 @@ export class CitationSource {
 
 	public link: string = "";
 
-	public name: string = "";
+	public source: string = "";
+
+	public title: string = "";
 }

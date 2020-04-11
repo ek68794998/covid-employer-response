@@ -25,9 +25,13 @@ We recommend you make a copy of `sample.yml` and adjust it to fit your needs. Th
 	- `upperBound`: The upper bound of the employee count, or the true number if not specifying a range.
 	- `year`: The year in which the measure was reported.
 	- `yearQuarter`: The optional quarter (Q1, Q2, ...) of the calendar year in which the measure was reported.
-- `summary`: A general summary about the company. Should be 100-350 characters and avoid too many specific details.
+- `summary`: A general summary about the company. Should be 100-350 characters and avoid too many specific details. [Markdown](https://www.markdownguide.org/basic-syntax/) is supported here.
 - `citations`: A list of claims about the employer. Each one should indicate a number of things:
-	- `summary`: A textual summary of the claim. Should mention all specifics of the claim, and include dates when necessary. Generally, should be written in the past-passive tense, such as "Contoso has started ...", or "Contoso employees have been ...". Events that happened but are not ongoing can be written entirely in past tense, such as "Contoso issued a statement saying ...".
+	- `summary`: A textual summary of the claim. Should mention all specifics of the claim, and include dates when necessary. Generally, should be written in the past-passive tense, such as "Contoso has started ...", or "Contoso employees have been ...". Events that happened but are not ongoing can be written entirely in past tense, such as "Contoso issued a statement saying ...". [Markdown](https://www.markdownguide.org/basic-syntax/) is supported here.
 	- `positivity`: A value from -2 to +2 that indicates how positive the news is. -2 would be severely negative; 0 would be neutral; +2 would be incredibly positive.
 	- `type`: Indicates that the **original** fact source is a published statement from an employee, whether they are a current, former, or anonymous source.
-	- `sources`: A list of sources for the claim. Each one should have a name and link (preferably to [the Wayback Machine](https://web.archive.org)). Dates should be in a format like `2020-01-02T12:34:56Z`, where `Z` indicates UTC but can be replaced with a time zone (like `-04:00` for EDT).
+	- `sources`: A list of sources for the claim.
+		- `source`: The website name or description.
+		- `title`: A special descriptor if there is more than one reference to the same site.
+		- `link`: A link directly to the source (preferably to [the Wayback Machine](https://web.archive.org)).
+		- `date`: The date of the article, if available. Should be in a format like `2020-01-02T12:34:56Z`, where `Z` indicates UTC but can be replaced with a time zone (like `-04:00` for EDT).

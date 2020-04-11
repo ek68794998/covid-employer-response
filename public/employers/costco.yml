@@ -23,20 +23,20 @@ citations:
     positivity: -2
     type: statement
     sources:
-      - name: Buzzfeed News
+      - source: Buzzfeed News
         link: https://www.buzzfeednews.com/article/briannasacks/costco-employees-testing-positive-covid-19
         date: 2020-03-25T20:14:19-04:00
   - summary: Corporate employee had died from COVID, but staff still needs approval to work from home.
     positivity: -2
     type: statement
     sources:
-      - name: Buzzfeed News
+      - source: Buzzfeed News
         link: https://www.buzzfeednews.com/article/briannasacks/costco-coronavirus-covid-death-office-open
         date: 2020-04-18T12:00:00-04:00
   - summary: Costco has implemented policies to limit number of guests entering, cuts weekly hours, and revised its return policies.
     positivity: 1
     type: publication
     sources:
-      - name: USA Today
+      - source: USA Today
         link: https://www.usatoday.com/story/money/2020/04/01/coronavirus-social-distancing-costco-limit-how-many-people-can-shop/5104661002/
         date: 2020-04-01T13:51:00-04:00

@@ -4,12 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { ploc } from "../../../__tests__/TestUtils";
+import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
 import AboutPage from "./AboutPage";
+
+jest.mock(
+	"react-markdown",
+	() => mockComponent("ReactMarkdown"));
 
 describe("<AboutPage />", () => {
 	test("renders without exploding", () => {
@@ -24,6 +28,15 @@ describe("<AboutPage />", () => {
 					reportsAndClaims: ploc("reportsAndClaimsHeader"),
 					submitClaims: ploc("submitClaimsHeader"),
 					whatIs: `${ploc("whatIsHeader")}: {app}`,
+				},
+				aboutSectionParagraphs: {
+					citationTypes: `${ploc("citationTypesParagraph")}: {publication} / {statement} / {hearsay}; {publicationDescription} / {statementDescription} / {hearsayDescription}`,
+					claimProcessing: ploc("claimProcessingParagraph"),
+					contributing: `${ploc("contributingParagraph")}: {app} / {githubUrl}`,
+					employerRatings: ploc("employerRatingsParagraph"),
+					reportsAndClaims: `${ploc("reportsAndClaimsParagraph")}: {publication}`,
+					submitClaims: `${ploc("submitClaimsParagraph")}: {submit}`,
+					whatIs: `${ploc("whatIsParagraph")}: {app} / {appFullName} / {covidWikiUrl} / {githubUrl} / {pandemicWikiUrl}`,
 				},
 				appTitle: ploc("appTitle"),
 				appTitleShort: ploc("app"),

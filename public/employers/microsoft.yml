@@ -24,30 +24,30 @@ citations:
     positivity: 1
     type: publication
     sources:
-      - name: New York Times
+      - source: New York Times
         link: https://www.nytimes.com/2020/03/15/technology/microsoft-coronavirus-response.html
         date: 2020-03-15T13:48:58-04:00
-      - name: Microsoft News
+      - source: Microsoft News
         link: https://news.microsoft.com/2020/03/04/kurt-delbenes-march-4-guidance-to-king-county-employees/
         date: 2020-03-04T16:44:14Z
   - summary: Two Microsoft employees tested positive for COVID-19, and have received full support from the company.
     positivity: 1
     type: publication
     sources:
-      - name: Business Insider
+      - source: Business Insider
         link: https://www.businessinsider.com/microsoft-employees-coronavirus-cases-linkedin-2020-3
         date: 2020-03-06T17:27:31Z
-      - name: ZDNet
+      - source: ZDNet
         link: https://www.zdnet.com/article/two-seattle-area-microsoft-employees-diagnosed-with-covid-19-coronavirus/
         date: 2020-03-06T14:04:00Z
   - summary: Vendors working for Microsoft, including cafeteria staff and shuttle drivers, were announced to be receiving full pay through the coronavirus pandemic.
     positivity: 1
     type: publication
     sources:
-      - name: Microsoft Company Blog
+      - source: Microsoft Company Blog
         link: https://blogs.microsoft.com/on-the-issues/2020/03/05/covid-19-microsoft-hourly-workers/
         date: 2020-03-05T12:00:00-07:00 # Estimate based on article date of 03/05/2020.
-  - summary: The work-from-home policy for Microsoft employees is in effect until at least April 7.
+  - summary: The work-from-home policy for Microsoft employees is in effect until at least May 4.
     positivity: 1
     type: hearsay
   - summary: Buildings affected by employees who tested positive for COVID-19 have reportedly been sanitized.

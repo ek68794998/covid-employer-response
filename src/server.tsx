@@ -12,7 +12,6 @@ import { FilledContext, HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
 import { StaticRouter } from "react-router-dom";
 import { AnyAction, Store } from "redux";
-import serialize from "serialize-javascript";
 
 import { LocalizationMiddleware } from "./api/middleware/LocalizationMiddleware";
 import { HttpRequest } from "./api/models/HttpRequest";
@@ -126,7 +125,7 @@ const server: express.Application = express()
 				<body>
 					<div id="root">${markup}</div>
 					<script>
-						window.__PRELOADED_STATE__ = ${serialize(appState)}
+						window.__PRELOADED_STATE__ = ${JSON.stringify(appState)}
 					</script>
 					${scriptTag}
 				</body>

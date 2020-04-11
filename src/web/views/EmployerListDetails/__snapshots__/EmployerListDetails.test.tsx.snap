@@ -9,7 +9,6 @@ exports[`<EmployerListDetails /> renders without exploding 1`] = `
     className="EmployerListDetails__Summary"
     onClick={[Function]}
   >
-    
     <div
       className="EmployerListDetails__OverflowScreen"
     />
