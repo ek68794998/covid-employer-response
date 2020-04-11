@@ -13,4 +13,14 @@ module.exports = {
 			},
 		},
 	],
+	modify(config, { target, dev }, webpack) {
+		if (!dev) {
+			config.performance = {
+				maxAssetSize: 400000,
+				maxEntrypointSize: 400000,
+			};
+		}
+
+		return config;
+	},
 };
