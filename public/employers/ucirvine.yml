@@ -2,7 +2,7 @@ name: UC Irvine
 aliases:
   - UCI
 wiki: University of California, Irvine
-image: ucirvine.svg
+image: ucirvine.svg#1d76ae
 officialWebsite: https://uci.edu/
 industries:
   - education

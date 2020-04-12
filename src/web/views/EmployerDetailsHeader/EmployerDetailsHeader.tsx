@@ -5,8 +5,7 @@ import { RouteProps } from "react-router-dom";
 import { DesignHelpers } from "../../../common/DesignHelpers";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
-import { EmployerRating } from "../../../common/EmployerRating";
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
 import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
@@ -163,10 +162,19 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 			? <a onClick={onClickEmployerName} title={employer.name !== displayName ? employer.name : ""}>{displayName}</a>
 			: <>{displayName}</>;
 
+	const logoImageRegex: RegExpExecArray | null =
+		employer.image ? EmployerRecordBase.IMAGE_REGEX.exec(employer.image) : null;
+
 	return (
 		<>
 			<div className={`EmployerDetailsHeader__Title ${useShortText ? "" : "EmployerDetailsHeader__Title--noShort"}`}>
-				{employer.image && <img className="EmployerDetailsHeader__Icon" src={`/images/employers/${employer.image}`} />}
+				{logoImageRegex && (
+					<img
+						className="EmployerDetailsHeader__Icon"
+						src={`/images/employers/${logoImageRegex[1]}`}
+						style={{ background: logoImageRegex[2] || "#fff" }}
+					/>
+				)}
 				<h2>
 					{employerNameComponent}
 					{!useShortText && getTickerComponent(employer, strings)}

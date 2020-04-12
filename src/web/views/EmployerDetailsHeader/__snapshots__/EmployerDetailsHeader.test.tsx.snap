@@ -8,6 +8,11 @@ Array [
     <img
       className="EmployerDetailsHeader__Icon"
       src="/images/employers/consoto.svg"
+      style={
+        Object {
+          "background": "#fff",
+        }
+      }
     />
     <h2>
       <a

@@ -1,7 +1,7 @@
 name: Starbucks
 ticker: SBUX
 wiki: Starbucks
-image: starbucks.svg
+image: starbucks.svg#00643c
 officialWebsite: https://www.starbucks.com/about-us/company-information
 industries:
   - coffeeShop
