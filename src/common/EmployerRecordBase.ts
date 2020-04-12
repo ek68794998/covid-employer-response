@@ -4,6 +4,8 @@ import { EmployerLocation } from "./EmployerLocation";
 import { EmployerRating } from "./EmployerRating";
 
 export abstract class EmployerRecordBase {
+	public static readonly IMAGE_REGEX: RegExp = /^([a-z0-9-]+\.(?:png|svg|jpe?g))(#[a-f0-9]{6})?$/;
+
 	public aliases?: string[];
 
 	public employeesBefore?: EmployerEmployeeProfile;
