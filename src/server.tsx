@@ -114,7 +114,7 @@ const server: express.Application = express()
 					<meta property="og:url" content="${completeUrl}" />
 					<meta property="og:image" content="${baseUrl}/favicon-32x32.png" />
 					<meta property="og:type" content="website" />
-					<meta property="og:description" content="${metaDescription}." />
+					<meta property="og:description" content="${metaDescription}" />
 					<meta property="og:locale" content="${localeCode}" />
 					${alternateLocaleMetaTags.join("")}
 					<meta property="og:site_name" content="${localeData.appTitle}" />

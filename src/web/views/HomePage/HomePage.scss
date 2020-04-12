@@ -47,6 +47,7 @@ main#home {
 					&.HomePage__Subtitle--Loaded {
 						opacity: 1.0;
 						transition: 2s opacity;
+						transition-delay: 0.5s;
 					}
 	
 					a {
