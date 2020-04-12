@@ -18,6 +18,7 @@ describe("<HomePage />", () => {
 				appTitle: ploc("appTitle"),
 				appTitleShort: ploc("app"),
 				home: ploc("home"),
+				homeListLink: ploc("homeListLink"),
 			},
 		});
 
