@@ -4,8 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { ploc } from "../../../__tests__/TestUtils";
-
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
