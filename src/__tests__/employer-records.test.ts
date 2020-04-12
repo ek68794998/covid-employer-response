@@ -50,10 +50,14 @@ describe("employer records", () => {
 		}
 
 		if (record.image) {
+			if (!record.image.startsWith(`${record.id}.`)) {
+				return fail(`Image '${record.image}' should match profile ID for ${id}.`);
+			}
+
 			const parsedImage: RegExpExecArray | null = EmployerRecordBase.IMAGE_REGEX.exec(record.image);
 
 			if (!parsedImage) {
-				return fail(`Image '${record.image}' for ${id} is not a valid filename.`);
+				return fail(`Image '${record.image}' for ${id} is not a valid image string.`);
 			}
 
 			if (!fs.existsSync(`./public/images/employers/${parsedImage[1]}`)) {
