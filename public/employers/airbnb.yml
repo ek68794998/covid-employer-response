@@ -1,7 +1,7 @@
 name: Airbnb, Inc.
 shortName: Airbnb
 wiki: Airbnb
-image: airbnb.svg
+image: airbnb.svg#fd5c63
 officialWebsite: https://news.airbnb.com/about-us/
 industries:
   - lodging

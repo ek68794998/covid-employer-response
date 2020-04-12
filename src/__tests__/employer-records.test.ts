@@ -5,6 +5,7 @@ import { Citation } from "../common/Citation";
 import { CitationSource } from "../common/CitationSource";
 import { EmployerIndustryValues, EmployerIndustry } from "../common/EmployerIndustry";
 import { EmployerRecord } from "../common/EmployerRecord";
+import { EmployerRecordBase } from "../common/EmployerRecordBase";
 
 const directory: string = "./public";
 const subDirectory: string = "employers";
@@ -17,6 +18,12 @@ const recordIds: string[] =
 		.map((file: string) => file.split(".")[0]);
 
 describe("employer records", () => {
+	const isValidParagraph = (sentence: string): boolean =>
+		/^[A-Z].*\.$/.exec(sentence)
+			&& !/\. [a-z]/g.exec(sentence)
+			&& sentence.indexOf("  ") < 0
+			|| false;
+
 	const loader: EmployerRecordLoader =
 		new EmployerRecordLoader(directory, subDirectory);
 
@@ -27,25 +34,31 @@ describe("employer records", () => {
 	test.each(
 		recordIds.map((recordId: string) => [ recordId ]),
 	)("can load and parse %p (%#)", async (id: string) => {
-		const record: EmployerRecord = await loader.getAsync(id, {});
-
-		if (record.id === "sample") {
+		if (id === "sample") {
 			// The sample file has some invalid dates, etc., so don't include it here.
 			return;
 		}
 
-		const isValidParagraph = (sentence: string): boolean =>
-			/^[A-Z].*\.$/.exec(sentence)
-				&& !/\. [a-z]/g.exec(sentence)
-				&& sentence.indexOf("  ") < 0
-				|| false;
+		const record: EmployerRecord = await loader.getAsync(id, {});
 
-		if (!record.id) {
-			fail(`ID for ${id} must not be empty.`);
+		if (!record.id || !/^[a-z0-9-]+$/.exec(record.id)) {
+			return fail(`ID '${record.id}' for ${id} is invalid.`);
 		}
 
 		if (!record.name) {
-			fail(`Name for ${id} must not be empty.`);
+			return fail(`Name for ${id} must not be empty.`);
+		}
+
+		if (record.image) {
+			const parsedImage: RegExpExecArray | null = EmployerRecordBase.IMAGE_REGEX.exec(record.image);
+
+			if (!parsedImage) {
+				return fail(`Image '${record.image}' for ${id} is not a valid filename.`);
+			}
+
+			if (!fs.existsSync(`./public/images/employers/${parsedImage[1]}`)) {
+				return fail(`Image '${parsedImage[1]}' for ${id} does not exist in the image folder.`);
+			}
 		}
 
 		if (record.industries && record.industries.length) {
@@ -53,7 +66,7 @@ describe("employer records", () => {
 				const industry: EmployerIndustry = record.industries[i - 1];
 
 				if (EmployerIndustryValues.indexOf(industry) < 0) {
-					fail(`Industry #${i} for ${id} '${industry}' is not in the list of valid values.`);
+					return fail(`Industry #${i} for ${id} '${industry}' is not in the list of valid values.`);
 				}
 			}
 		}
@@ -61,46 +74,46 @@ describe("employer records", () => {
 		const summaryLength: number = record.summary ? record.summary.length : 0;
 
 		if (summaryLength < 100 || summaryLength > 350) {
-			fail(`Employer summary length ${summaryLength} for ${id} is invalid.`);
+			return fail(`Employer summary length ${summaryLength} for ${id} is invalid.`);
 		}
 
 		if (!isValidParagraph(record.summary)) {
-			fail(`Employer summary for ${id} contains invalid punctuation or capitalization.`);
+			return fail(`Employer summary for ${id} contains invalid punctuation or capitalization.`);
 		}
 
 		if (record.location) {
 			if (!record.location.city
 				|| record.location.city[0] !== record.location.city[0].toUpperCase()) {
 
-				fail(`City name '${record.location.city}' for ${id} is not valid.`);
+				return fail(`City name '${record.location.city}' for ${id} is not valid.`);
 			}
 
 			if (!record.location.country
 				|| !/^[a-z]{2}$/.exec(record.location.country)) {
 
-				fail(`Country code '${record.location.country}' for ${id} is not valid.`);
+				return fail(`Country code '${record.location.country}' for ${id} is not valid.`);
 			}
 		}
 
 		if (!record.citations || record.citations.length === 0) {
-			fail(`Citations list for ${id} must not be empty.`);
+			return fail(`Citations list for ${id} must not be empty.`);
 		}
 
 		for (let i: number = 1; i <= record.citations.length; i++) {
 			const citation: Citation = record.citations[i - 1];
 
 			if (citation.positivity < -2 || citation.positivity > 2) {
-				fail(`Citation #${i} positivity rating ${citation.positivity} for ${id} is invalid.`);
+				return fail(`Citation #${i} positivity rating ${citation.positivity} for ${id} is invalid.`);
 			}
 
 			const citationSummaryLength: number = record.summary ? record.summary.length : 0;
 
 			if (citationSummaryLength < 10) {
-				fail(`Citation #${i} summary for ${id} has invalid length ${citationSummaryLength}.`);
+				return fail(`Citation #${i} summary for ${id} has invalid length ${citationSummaryLength}.`);
 			}
 
 			if (!isValidParagraph(record.summary)) {
-				fail(`Citation #${i} summary for ${id} contains invalid punctuation or capitalization.`);
+				return fail(`Citation #${i} summary for ${id} contains invalid punctuation or capitalization.`);
 			}
 
 			if (!citation.sources || citation.sources.length === 0) {
@@ -108,20 +121,20 @@ describe("employer records", () => {
 					continue;
 				}
 
-				fail(`Citation #${i} for ${id} is not hearsay and must have sources.`);
+				return fail(`Citation #${i} for ${id} is not hearsay and must have sources.`);
 			}
 
 			for (let j: number = 1; j <= citation.sources.length; j++) {
 				const source: CitationSource = citation.sources[j - 1];
 
 				if (!source.source) {
-					fail(`Citation #${i} for ${id} source #${j} is invalid.`);
+					return fail(`Citation #${i} for ${id} source #${j} is invalid.`);
 				}
 
 				try {
 					new URL(source.link);
 				} catch (e) {
-					fail(`Citation #${i} for ${id} source #${j} URL '${source.link}' is invalid: '${e}'`);
+					return fail(`Citation #${i} for ${id} source #${j} URL '${source.link}' is invalid: '${e}'`);
 				}
 
 				if (!source.date) {
@@ -131,14 +144,16 @@ describe("employer records", () => {
 				const date: Date = new Date(source.date);
 
 				if (isNaN(date.getTime())) {
-					fail(`Citation #${i} for ${id} source #${j} date '${source.date}' is improperly formatted.`);
+					return fail(`Citation #${i} for ${id} source #${j} date '${source.date}' is improperly formatted.`);
 				}
 
 				if (date < new Date("2019-11-01T00:00:00Z")) {
-					fail(`Citation #${i} for ${id} source #${j} date '${source.date}' is invalid.`);
+					return fail(`Citation #${i} for ${id} source #${j} date '${source.date}' is invalid.`);
 				}
 			}
 		}
+
+		return;
 	});
 
 	test("have correct sample data", async () => {
