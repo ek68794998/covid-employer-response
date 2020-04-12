@@ -168,7 +168,7 @@ rules:
   max-len:
   - error
   - code: 120
-    ignorePattern: '[`"''];?$'
+    ignorePattern: '[`"'']\)*;?$'
     ignoreStrings: true
   new-parens: error
   no-bitwise: error

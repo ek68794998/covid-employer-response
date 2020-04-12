@@ -1,6 +1,9 @@
 import fs from "fs";
 
 import { EmployerRecordLoader } from "../api/storage/EmployerRecordLoader";
+import { Citation } from "../common/Citation";
+import { CitationSource } from "../common/CitationSource";
+import { EmployerIndustryValues, EmployerIndustry } from "../common/EmployerIndustry";
 import { EmployerRecord } from "../common/EmployerRecord";
 
 const directory: string = "./public";
@@ -23,50 +26,117 @@ describe("employer records", () => {
 
 	test.each(
 		recordIds.map((recordId: string) => [ recordId ]),
-	)("can load and parse %p (%#)", async (recordId: string) => {
-		const record: EmployerRecord = await loader.getAsync(recordId, {});
+	)("can load and parse %p (%#)", async (id: string) => {
+		const record: EmployerRecord = await loader.getAsync(id, {});
 
 		if (record.id === "sample") {
 			// The sample file has some invalid dates, etc., so don't include it here.
 			return;
 		}
 
-		expect(record.id).not.toBeNull();
-		expect(record.name).not.toBeNull();
-		expect(record.name.length).toBeGreaterThan(0);
-		expect(record.summary).not.toBeNull();
-		expect(record.summary.length).toBeGreaterThanOrEqual(100);
-		expect(record.summary.length).toBeLessThanOrEqual(350);
+		const isValidParagraph = (sentence: string): boolean =>
+			/^[A-Z].*\.$/.exec(sentence)
+				&& !/\. [a-z]/g.exec(sentence)
+				&& sentence.indexOf("  ") < 0
+				|| false;
 
-		if (record.location) {
-			expect(record.location.city).toBeTruthy();
-			expect(record.location.country).toBeTruthy();
+		if (!record.id) {
+			fail(`ID for ${id} must not be empty.`);
 		}
 
-		expect(record.citations.length).toBeGreaterThan(0);
+		if (!record.name) {
+			fail(`Name for ${id} must not be empty.`);
+		}
 
-		for (const citation of record.citations) {
-			expect(citation.positivity).toBeGreaterThanOrEqual(-2);
-			expect(citation.positivity).toBeLessThanOrEqual(2);
-			expect(citation.summary.length).toBeGreaterThan(10);
+		if (record.industries && record.industries.length) {
+			for (let i: number = 1; i <= record.industries.length; i++) {
+				const industry: EmployerIndustry = record.industries[i - 1];
 
-			if (citation.type !== "hearsay") {
-				expect(citation.sources?.length).toBeGreaterThan(0);
+				if (EmployerIndustryValues.indexOf(industry) < 0) {
+					fail(`Industry #${i} for ${id} '${industry}' is not in the list of valid values.`);
+				}
+			}
+		}
+
+		const summaryLength: number = record.summary ? record.summary.length : 0;
+
+		if (summaryLength < 100 || summaryLength > 350) {
+			fail(`Employer summary length ${summaryLength} for ${id} is invalid.`);
+		}
+
+		if (!isValidParagraph(record.summary)) {
+			fail(`Employer summary for ${id} contains invalid punctuation or capitalization.`);
+		}
+
+		if (record.location) {
+			if (!record.location.city
+				|| record.location.city[0] !== record.location.city[0].toUpperCase()) {
+
+				fail(`City name '${record.location.city}' for ${id} is not valid.`);
 			}
 
-			if (!citation.sources) {
-				continue;
+			if (!record.location.country
+				|| !/^[a-z]{2}$/.exec(record.location.country)) {
+
+				fail(`Country code '${record.location.country}' for ${id} is not valid.`);
+			}
+		}
+
+		if (!record.citations || record.citations.length === 0) {
+			fail(`Citations list for ${id} must not be empty.`);
+		}
+
+		for (let i: number = 1; i <= record.citations.length; i++) {
+			const citation: Citation = record.citations[i - 1];
+
+			if (citation.positivity < -2 || citation.positivity > 2) {
+				fail(`Citation #${i} positivity rating ${citation.positivity} for ${id} is invalid.`);
 			}
 
-			for (const source of citation.sources) {
-				expect(source.source.length).toBeTruthy();
-				expect(new URL(source.link).hostname).toBeTruthy();
+			const citationSummaryLength: number = record.summary ? record.summary.length : 0;
+
+			if (citationSummaryLength < 10) {
+				fail(`Citation #${i} summary for ${id} has invalid length ${citationSummaryLength}.`);
+			}
+
+			if (!isValidParagraph(record.summary)) {
+				fail(`Citation #${i} summary for ${id} contains invalid punctuation or capitalization.`);
+			}
+
+			if (!citation.sources || citation.sources.length === 0) {
+				if (citation.type === "hearsay") {
+					continue;
+				}
+
+				fail(`Citation #${i} for ${id} is not hearsay and must have sources.`);
+			}
+
+			for (let j: number = 1; j <= citation.sources.length; j++) {
+				const source: CitationSource = citation.sources[j - 1];
+
+				if (!source.source) {
+					fail(`Citation #${i} for ${id} source #${j} is invalid.`);
+				}
+
+				try {
+					new URL(source.link);
+				} catch (e) {
+					fail(`Citation #${i} for ${id} source #${j} URL '${source.link}' is invalid: '${e}'`);
+				}
 
 				if (!source.date) {
 					continue;
 				}
 
-				expect(dateToNumber(source.date)).toBeGreaterThan(new Date("2019-11-01T00:00:00Z").getTime());
+				const date: Date = new Date(source.date);
+
+				if (isNaN(date.getTime())) {
+					fail(`Citation #${i} for ${id} source #${j} date '${source.date}' is improperly formatted.`);
+				}
+
+				if (date < new Date("2019-11-01T00:00:00Z")) {
+					fail(`Citation #${i} for ${id} source #${j} date '${source.date}' is invalid.`);
+				}
 			}
 		}
 	});
