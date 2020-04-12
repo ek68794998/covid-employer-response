@@ -1,0 +1,41 @@
+name: Chipotle Mexican Grill, Inc.
+shortName: Chipotle
+ticker: CMG
+wiki: Chipotle Mexican Grill
+image: chipotle.svg#a81612
+officialWebsite: https://www.chipotle.com/food-with-integrity
+industries:
+  - restaurant
+location:
+  city: Newport Beach
+  state: CA
+  country: us
+  international: true
+  wiki: Newport Beach, California
+employeesBefore:
+  lowerBound: 83000
+  type: range
+  year: 2019
+summary: While Chipotle offers an above-average sick-leave policy for their industry, employees have claimed that they have faced reproach for using their sick leave, as well as not been notified of coworkers testing positive for COVID-19.
+citations:
+  - summary: Chipotle offers three days of paid sick leave with no accrual, which is a policy considered above average in the fast-food service industry.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Vox
+        link: https://web.archive.org/web/20200409114931/https://www.vox.com/the-goods/2020/3/13/21178879/coronavirus-covid-19-restaurant-workers-sick-leave-chipotle-mcdonalds
+        date: 2020-03-16T17:17:12Z
+  - summary: Employees claim that Chipotle is following through with neither their sick-leave policy nor sick-leave laws in New York City.
+    positivity: -2
+    type: statement
+    sources:
+      - source: Gothamist
+        link: https://web.archive.org/web/20200307135030/https://gothamist.com/news/chipotle-workers-demand-company-comply-sick-leave-laws-amid-covid-19-outbreak
+        date: 2020-03-06T05:00:00-05:00
+  - summary: An employee at Chipotle in New York has claimed that a coworker tested positive for COVID-19, but corporate office deemed that staff at that location not been notified, and no further action was taken by the company on the matter.
+    positivity: -2
+    type: hearsay
+    sources:
+      - source: Reddit r/LegalAdvice
+        link: https://web.archive.org/web/20200412182858/https://www.reddit.com/r/legaladvice/comments/fzlkx1/coworker_tested_positive_for_covid19_employer/
+        date: 2020-04-11T16:34:00-07:00
