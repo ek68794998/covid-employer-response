@@ -9,6 +9,7 @@ $padding-interior: 12px;
 $padding-sides: 16px;
 
 .EmployerListDetails__Container {
+	background: $background;
 	border: 1px solid $body-color;
 	border-radius: $border-radius;
 	box-shadow: 0 0 0 $card-shadow-color;
@@ -49,6 +50,10 @@ $padding-sides: 16px;
 	line-height: 180%;
 	overflow-y: hidden;
 	position: relative;
+
+	p {
+		margin: 0;
+	}
 
 	.EmployerListDetails__OverflowScreen {
 		position: absolute;

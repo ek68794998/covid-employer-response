@@ -303,6 +303,7 @@ filters:
   locationNational: National
   locationInternational: International
 home: Home
+homeListLink: Take me to the list!
 industries:
   advertising: Advertising
   agriculture: Agriculture

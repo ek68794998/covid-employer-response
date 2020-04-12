@@ -91,7 +91,7 @@ const HomePage: React.FC = (): React.ReactElement => {
 				</div>
 			</section>
 			<section className="HomePage__Links">
-				<Link to="/employers">Take me to the list!</Link>
+				<Link to="/employers">{strings.homeListLink}</Link>
 			</section>
 			<BackToTopButton />
 		</main>
