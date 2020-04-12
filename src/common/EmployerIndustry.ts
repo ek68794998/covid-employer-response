@@ -1,56 +1,59 @@
-export type EmployerIndustry =
-	"advertising"
-	| "agriculture"
-	| "airline"
-	| "apparel"
-	| "automotive"
-	| "aviation"
-	| "cannabis"
-	| "clothing"
-	| "coffeeShop"
-	| "construction"
-	| "cosmetics"
-	| "courier"
-	| "eCommerce"
-	| "education"
-	| "electronics"
-	| "energy"
-	| "engineering"
-	| "entertainment"
-	| "financialServices"
-	| "fishing"
-	| "foodDelivery"
-	| "furniture"
-	| "groceryStore"
-	| "healthCare"
-	| "hemp"
-	| "hospitality"
-	| "industrial"
-	| "insurance"
-	| "internet"
-	| "landDevelopment"
-	| "lodging"
-	| "manufacturing"
-	| "media"
-	| "mining"
-	| "packaging"
-	| "plastics"
-	| "procurement"
-	| "publicUtilities‎"
-	| "publishing"
-	| "rail"
-	| "realEstate"
-	| "restaurant"
-	| "retail"
-	| "sanitation"
-	| "signage"
-	| "software"
-	| "sports"
-	| "storage"
-	| "technology"
-	| "telecommunications"
-	| "textile"
-	| "transport"
-	| "videoGames"
-	| "waste"
-	| "water";
+export const EmployerIndustryValues: string[] = [
+	"advertising",
+	"agriculture",
+	"airline",
+	"apparel",
+	"automotive",
+	"aviation",
+	"cannabis",
+	"clothing",
+	"coffeeShop",
+	"construction",
+	"cosmetics",
+	"courier",
+	"eCommerce",
+	"education",
+	"electronics",
+	"energy",
+	"engineering",
+	"entertainment",
+	"financialServices",
+	"fishing",
+	"foodDelivery",
+	"furniture",
+	"groceryStore",
+	"healthCare",
+	"hemp",
+	"hospitality",
+	"industrial",
+	"insurance",
+	"internet",
+	"landDevelopment",
+	"lodging",
+	"manufacturing",
+	"media",
+	"mining",
+	"packaging",
+	"plastics",
+	"procurement",
+	"publicUtilities‎",
+	"publishing",
+	"rail",
+	"realEstate",
+	"restaurant",
+	"retail",
+	"sanitation",
+	"signage",
+	"software",
+	"sports",
+	"storage",
+	"technology",
+	"telecommunications",
+	"textile",
+	"transport",
+	"videoGames",
+	"waste",
+	"water",
+];
+
+export type EmployerIndustry = typeof EmployerIndustryValues[number];

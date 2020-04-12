@@ -301,7 +301,7 @@ filters:
   employeesLarge: Large
   locationDefault: Operations
   locationNational: National
-  locationInternational: International
+  locationInternational: Multinational
 home: Home
 homeListLink: Take me to the list!
 industries:
@@ -354,6 +354,7 @@ industries:
   sports: Sports
   storage: Storage
   technology: Technology
+  telecommunications: Telecommunications
   textile: Textile
   transport: Transport
   videoGames: Video games

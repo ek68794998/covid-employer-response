@@ -1,6 +1,9 @@
 import fs from "fs";
 
 import { EmployerRecordLoader } from "../api/storage/EmployerRecordLoader";
+import { Citation } from "../common/Citation";
+import { CitationSource } from "../common/CitationSource";
+import { EmployerIndustryValues, EmployerIndustry } from "../common/EmployerIndustry";
 import { EmployerRecord } from "../common/EmployerRecord";
 
 const directory: string = "./public";
@@ -14,6 +17,121 @@ const recordIds: string[] =
 		.map((file: string) => file.split(".")[0]);
 
 describe("employer records", () => {
+	expect.extend({
+		toBeValidEmployerRecord: (received: EmployerRecord, recordId: string): jest.CustomMatcherResult => {
+			const isValidParagraph = (sentence: string): boolean =>
+				/^[A-Z].*\.$/.exec(sentence)
+					&& !/\. [a-z]/g.exec(sentence)
+					&& sentence.indexOf("  ") < 0
+					|| false;
+
+			if (!received.id) {
+				fail(`ID for ${recordId} must not be empty.`);
+			}
+
+			if (!received.name) {
+				fail(`Name for ${recordId} must not be empty.`);
+			}
+
+			if (received.industries && received.industries.length) {
+				for (let i: number = 1; i <= received.industries.length; i++) {
+					const industry: EmployerIndustry = received.industries[i - 1];
+
+					if (EmployerIndustryValues.indexOf(industry) < 0) {
+						fail(`Industry #${i} for ${recordId} '${industry}' is not in the list of valid values.`);
+					}
+				}
+			}
+
+			const summaryLength: number = received.summary ? received.summary.length : 0;
+
+			if (summaryLength < 100 || summaryLength > 350) {
+				fail(`Employer summary length ${summaryLength} for ${recordId} is invalid.`);
+			}
+
+			if (!isValidParagraph(received.summary)) {
+				fail(`Employer summary for ${recordId} contains invalid punctuation or capitalization.`);
+			}
+
+			if (received.location) {
+				if (!received.location.city
+					|| received.location.city[0] !== received.location.city[0].toUpperCase()) {
+
+					fail(`City name '${received.location.city}' for ${recordId} is not valid.`);
+				}
+
+				if (!received.location.country
+					|| !/^[a-z]{2}$/.exec(received.location.country)) {
+
+					fail(`Country code '${received.location.country}' for ${recordId} is not valid.`);
+				}
+			}
+
+			if (!received.citations || received.citations.length === 0) {
+				fail(`Citations list for ${recordId} must not be empty.`);
+			}
+
+			for (let i: number = 1; i <= received.citations.length; i++) {
+				const citation: Citation = received.citations[i - 1];
+
+				if (citation.positivity < -2 || citation.positivity > 2) {
+					fail(`Citation #${i} positivity rating ${citation.positivity} for ${recordId} is invalid.`);
+				}
+
+				const citationSummaryLength: number = received.summary ? received.summary.length : 0;
+
+				if (citationSummaryLength < 10) {
+					fail(`Citation #${i} summary for ${recordId} has invalid length ${citationSummaryLength}.`);
+				}
+
+				if (!isValidParagraph(received.summary)) {
+					fail(`Citation #${i} summary for ${recordId} contains invalid punctuation or capitalization.`);
+				}
+
+				if (!citation.sources || citation.sources.length === 0) {
+					if (citation.type === "hearsay") {
+						continue;
+					}
+
+					fail(`Citation #${i} for ${recordId} is not hearsay and must have sources.`);
+				}
+
+				for (let j: number = 1; j <= citation.sources.length; j++) {
+					const source: CitationSource = citation.sources[j - 1];
+
+					if (!source.source) {
+						fail(`Citation #${i} for ${recordId} source #${j} is invalid.`);
+					}
+
+					try {
+						new URL(source.link);
+					} catch (e) {
+						fail(`Citation #${i} for ${recordId} source #${j} URL '${source.link}' is invalid: '${e}'`);
+					}
+
+					if (!source.date) {
+						continue;
+					}
+
+					const date: Date = new Date(source.date);
+
+					if (isNaN(date.getTime())) {
+						fail(`Citation #${i} for ${recordId} source #${j} date '${source.date}' is improperly formatted.`);
+					}
+
+					if (date < new Date("2019-11-01T00:00:00Z")) {
+						fail(`Citation #${i} for ${recordId} source #${j} date '${source.date}' is invalid.`);
+					}
+				}
+			}
+
+			return {
+				message: (): string => "",
+				pass: true,
+			};
+		},
+	});
+
 	const loader: EmployerRecordLoader =
 		new EmployerRecordLoader(directory, subDirectory);
 
@@ -31,44 +149,7 @@ describe("employer records", () => {
 			return;
 		}
 
-		expect(record.id).not.toBeNull();
-		expect(record.name).not.toBeNull();
-		expect(record.name.length).toBeGreaterThan(0);
-		expect(record.summary).not.toBeNull();
-		expect(record.summary.length).toBeGreaterThanOrEqual(100);
-		expect(record.summary.length).toBeLessThanOrEqual(350);
-
-		if (record.location) {
-			expect(record.location.city).toBeTruthy();
-			expect(record.location.country).toBeTruthy();
-		}
-
-		expect(record.citations.length).toBeGreaterThan(0);
-
-		for (const citation of record.citations) {
-			expect(citation.positivity).toBeGreaterThanOrEqual(-2);
-			expect(citation.positivity).toBeLessThanOrEqual(2);
-			expect(citation.summary.length).toBeGreaterThan(10);
-
-			if (citation.type !== "hearsay") {
-				expect(citation.sources?.length).toBeGreaterThan(0);
-			}
-
-			if (!citation.sources) {
-				continue;
-			}
-
-			for (const source of citation.sources) {
-				expect(source.source.length).toBeTruthy();
-				expect(new URL(source.link).hostname).toBeTruthy();
-
-				if (!source.date) {
-					continue;
-				}
-
-				expect(dateToNumber(source.date)).toBeGreaterThan(new Date("2019-11-01T00:00:00Z").getTime());
-			}
-		}
+		(expect(record) as any).toBeValidEmployerRecord(recordId);
 	});
 
 	test("have correct sample data", async () => {
