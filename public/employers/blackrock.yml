@@ -1,0 +1,44 @@
+name: BlackRock, Inc.
+shortName: BlackRock
+ticker: BLK
+wiki: BlackRock
+image: blackrock.svg
+officialWebsite: https://www.blackrock.com/corporate
+industries:
+  - financialServices
+location:
+  city: New York City
+  state: NY
+  country: us
+  international: true
+  wiki: New York City
+employeesBefore:
+  type: approximately
+  upperBound: 14900
+  year: 2018
+summary: BlackRock supports employees working from home, and intends to pay all employees throughout the pandemic, without resorting to layoffs.
+citations:
+  - summary: BlackRock has publicly stated that it does not intend to lay off employees in response to the COVID-19 pandemic.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://web.archive.org/web/20200412191205/https://www.reuters.com/article/us-health-coronavirus-blackrock/blackrock-will-not-layoff-employees-due-to-covid-19-pandemic-ceo-idUSKCN21Q3EM
+        date: 2020-04-08T23:17:54Z
+      - source: Pensions & Investments Online
+        link: https://www.pionline.com/money-management/blackrock-will-not-lay-employees-year-response-coronavirus
+        date: 2020-04-09T16:46:43Z
+  - summary: More than 90% of BlackRock employees are successfully working from home, including the company's CEO.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Pensions & Investments Online
+        link: https://www.pionline.com/money-management/blackrock-will-not-lay-employees-year-response-coronavirus
+        date: 2020-04-09T16:46:43Z
+  - summary: BlackRock intends to pay full-time and support staff, such as cafeteria and maintenance workers, throughout the crisis even if they are unable to work.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Pensions & Investments Online
+        link: https://www.pionline.com/money-management/blackrock-will-not-lay-employees-year-response-coronavirus
+        date: 2020-04-09T16:46:43Z
