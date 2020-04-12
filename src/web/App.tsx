@@ -9,6 +9,7 @@ import EmployerPage from "./views/EmployerPage/EmployerPage";
 import FooterMenu from "./views/HeaderFooter/FooterMenu";
 import HeaderMenu from "./views/HeaderFooter/HeaderMenu";
 import HomePage from "./views/HomePage/HomePage";
+import Overload from "./views/Overload/Overload";
 
 import "./App.scss";
 
@@ -23,6 +24,7 @@ const App: React.FC = (): React.ReactElement => {
 
 	return (
 		<>
+			<Overload />
 			<HeaderMenu />
 			<Switch>
 				<Route exact={true} path="/" component={HomePage} />
