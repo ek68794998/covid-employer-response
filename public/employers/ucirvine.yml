@@ -1,0 +1,49 @@
+name: UC Irvine
+aliases:
+  - UCI
+wiki: University of California, Irvine
+image: ucirvine.svg
+officialWebsite: https://uci.edu/
+industries:
+  - Education
+location:
+  city: Irvine
+  state: CA
+  country: us
+  international: false
+  wiki: Irvine, California
+employeesBefore:
+  type: exactly
+  upperBound: 24714
+  year: 2019
+  yearQuarter: Q4
+summary: UCI has cancelled graduation ceremonies amidst the outbreak early on, switched all classes to online, and have made enormous effort to fight COVID-19
+citations:
+  - summary: UCI have cancelled graduation ceremonies
+    positivity: 1
+    type: publication
+    sources:
+      - source: CBS 2
+        link: https://losangeles.cbslocal.com/2020/03/14/uc-irvine-cancels-graduation-due-to-coronavirus/
+        date: 2020-03-14T21:02:00-07:00
+  - summary: UCI departments have assembled face shields for medical staffs in Orange
+    positivity: 2
+    type: publication
+    sources:
+      - source: Los Angeles Times
+        link: https://www.latimes.com/socal/daily-pilot/news/story/2020-04-07/departments-across-uc-irvine-design-build-face-shields-for-medical-staff-in-orange
+        date: 2000-04-07T15:53:00-07:00
+  - summary: UCI has switched to online classes
+    positivity: 2
+    type: statement
+    sources:
+      - source: The Mercury News
+        link: https://www.mercurynews.com/2020/03/18/give-us-a-tuition-break-say-california-students-forced-into-online-university-classes/
+        date: 2020-03-18T05:54:19-07:00
+  - summary: Students may not get full refund for their tuition
+    positivity: -1
+    type: statement
+    sources:
+      - source: The Mercury News
+        link: https://www.mercurynews.com/2020/03/18/give-us-a-tuition-break-say-california-students-forced-into-online-university-classes/
+        date: 2020-03-18T05:54:19-07:00
