@@ -1,13 +1,10 @@
-export type CitationType =
-	"hearsay"
-	| "statement"
-	| "publication";
+export const CitationTypeValues: string[] = [
+	"hearsay",
+	"statement",
+	"publication",
+];
 
-export const getCitationTypeValue = (type?: CitationType): number => {
-	switch (type) {
-		case "hearsay": return 0;
-		case "statement": return 10;
-		case "publication": return 20;
-		default: return -1;
-	}
-};
+export type CitationType = typeof CitationTypeValues[number];
+
+export const getCitationTypeValue = (type?: CitationType): number =>
+	type ? CitationTypeValues.indexOf(type) : -1;

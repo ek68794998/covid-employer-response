@@ -1,9 +1,12 @@
 import { EmployeeNumber } from "./EmployeeNumber";
 
-export type EmployerEmployeeProfileType =
-	"range"
-	| "approximately"
-	| "exactly";
+export const EmployerEmployeeProfileTypeValues: string[] = [
+	"range",
+	"approximately",
+	"exactly",
+];
+
+export type EmployerEmployeeProfileType = typeof EmployerEmployeeProfileTypeValues[number];
 
 export class EmployerEmployeeProfile {
 	public lowerBound?: number;
