@@ -1,0 +1,66 @@
+name: The Gap, Inc.
+shortName: Gap
+ticker: GPS
+wiki: Gap Inc.
+image: gap.svg
+officialWebsite: https://www.gapinc.com/content/gapinc/html/aboutus.html
+industries:
+  - apparel
+  - retail
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: true
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 129000
+  year: 2020
+  yearQuarter: Q1
+summary: Though Gap has taken significant steps in cutting its corporate workforce and furloughing employees, it has also slashed executive salaries and instituted a program to help employees find alternative work during the COVID-19 crisis.
+citations:
+  - summary: Gap is looking to reduce headcount across its corporate employees worldwide.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Gap, Inc. News
+        link: https://web.archive.org/web/20200402225118/https://www.gapinc.com/content/gapinc/html/media/pressrelease/2020/med_pr_03302020_Covid19Update.html
+        date: 2020-03-30T12:00:00-07:00 # Estimate based on post date of 03/30/2020.
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200403132646/https://www.marketwatch.com/story/gap-and-ascena-retail-announce-retail-employee-furloughs-2020-03-30
+        date: 2020-03-30T20:42:53Z
+      - source: CNBC
+        link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: After Gap closed its stores&mdash;initially until April 1, later indefinitely&mdash;nearly 80,000 Gap employees, representing over 60% of the entire workforce, have been furloughed indefinitely with benefits but no pay.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Gap, Inc. News
+        link: https://web.archive.org/web/20200402225118/https://www.gapinc.com/content/gapinc/html/media/pressrelease/2020/med_pr_03302020_Covid19Update.html
+        date: 2020-03-30T12:00:00-07:00 # Estimate based on post date of 03/30/2020.
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200403132646/https://www.marketwatch.com/story/gap-and-ascena-retail-announce-retail-employee-furloughs-2020-03-30
+        date: 2020-03-30T20:42:53Z
+      - source: Yahoo! Finance
+        link: https://web.archive.org/web/20200413033122/https://finance.yahoo.com/news/gap-inc-business-result-coronavirus-201500139.html
+        date: 2020-03-30T20:15:00Z
+      - source: CNBC
+        link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: Gap has set up a program for employees to find work at other retailers during ongoing furloughs.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Gap, Inc. News
+        link: https://web.archive.org/web/20200402225118/https://www.gapinc.com/content/gapinc/html/media/pressrelease/2020/med_pr_03302020_Covid19Update.html
+        date: 2020-03-30T12:00:00-07:00 # Estimate based on post date of 03/30/2020.
+      - source: The Business Journals
+        link: https://www.bizjournals.com/bizwomen/news/latest-news/2020/03/gap-inc-ascena-brandsjoin-mass-retail-layoffs.html?page=all
+        date: 2020-03-31T08:59:00-04:00
+  - summary: Gap executives have taken a temporary pay cut of an undisclosed amount during the COVID-19 crisis.
+    positivity: 1
+    type: publication
+    sources:
+      - source: The Business Journals
+        link: https://www.bizjournals.com/bizwomen/news/latest-news/2020/03/gap-inc-ascena-brandsjoin-mass-retail-layoffs.html?page=all
+        date: 2020-03-31T08:59:00-04:00
