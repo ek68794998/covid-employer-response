@@ -11,7 +11,7 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import "./HeaderFooter.scss";
 
 const HeaderMenu: React.FC = (): React.ReactElement => {
-	const [ isHamburgerMenuOpen, setIsHamburgerMenuOpen ] = useState(false);
+	const [ isHamburgerMenuOpen, setIsHamburgerMenuOpen ] = useState<boolean | undefined>(undefined);
 
 	const { pathname } = useLocation();
 
@@ -49,7 +49,10 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 		</>
 	);
 
-	const classState: string = isHamburgerMenuOpen ? "Open" : "Closed";
+	const classState: string =
+		typeof isHamburgerMenuOpen === "undefined"
+			? "Preload"
+			: (isHamburgerMenuOpen ? "Open" : "Closed");
 
 	return (
 		<>
