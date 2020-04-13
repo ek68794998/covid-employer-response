@@ -2,11 +2,14 @@ import { EmployerEmployeeProfile } from "./EmployerEmployeeProfile";
 import { EmployerIndustry } from "./EmployerIndustry";
 import { EmployerLocation } from "./EmployerLocation";
 import { EmployerRating } from "./EmployerRating";
+import { EmployerStatus } from "./EmployerStatus";
 
 export abstract class EmployerRecordBase {
 	public static readonly IMAGE_REGEX: RegExp = /^([a-z0-9-]+\.(?:png|svg|jpe?g))(#[a-f0-9]{6})?$/;
 
 	public aliases?: string[];
+
+	public employeesAfter?: EmployerEmployeeProfile;
 
 	public employeesBefore?: EmployerEmployeeProfile;
 
@@ -24,6 +27,8 @@ export abstract class EmployerRecordBase {
 
 	public shortName?: string;
 
+	public status: EmployerStatus = "active";
+
 	public summary: string = "";
 
 	public ticker?: string;
@@ -34,6 +39,7 @@ export abstract class EmployerRecordBase {
 
 	public static copyTo(original: EmployerRecordBase, target: EmployerRecordBase): void {
 		target.aliases = original.aliases;
+		target.employeesAfter = original.employeesAfter;
 		target.employeesBefore = original.employeesBefore;
 		target.id = original.id;
 		target.image = original.image;
@@ -41,6 +47,7 @@ export abstract class EmployerRecordBase {
 		target.name = original.name;
 		target.officialWebsite = original.officialWebsite;
 		target.shortName = original.shortName;
+		target.status = original.status;
 		target.summary = original.summary;
 		target.ticker = original.ticker;
 		target.wiki = original.wiki;

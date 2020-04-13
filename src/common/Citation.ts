@@ -8,5 +8,5 @@ export class Citation {
 
 	public summary: string = "";
 
-	public type?: CitationType;
+	public type: CitationType = "hearsay";
 }

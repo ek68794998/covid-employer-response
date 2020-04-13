@@ -7,6 +7,6 @@ describe("Citation", () => {
 		expect(c.positivity).toBe(0);
 		expect(c.sources).toBeUndefined();
 		expect(c.summary).toBe("");
-		expect(c.type).toBeUndefined();
+		expect(c.type).toBe("hearsay");
 	});
 });
