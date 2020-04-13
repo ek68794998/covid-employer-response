@@ -1,0 +1,58 @@
+name: AMC Theatres
+aliases:
+  - American Multi-Cinema
+shortName: AMC
+ticker: AMC
+wiki: AMC Theatres
+image: amc.svg#cf203e
+officialWebsite: https://www.amctheatres.com/corporate
+industries:
+  - entertainment
+location:
+  city: Leawood
+  state: KS
+  country: us
+  international: true
+  wiki: Leawood, Kansas
+employeesBefore:
+  type: exactly
+  upperBound: 40162
+  year: 2018
+  yearQuarter: Q4
+summary: As a company, AMC has a generally fixed-cost operating procedure but, due to the pandemic, has little-to-no income. As a result, employees have been furloughed, laid off, and bankruptcy is likely in the cards for the chain.
+citations:
+  - summary: AMC shuttered all movie theaters starting on March 17 due to the ongoing pandemic, with intentions to reopen in 6&ndash;12 weeks.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Verge
+        link: https://web.archive.org/web/20200318153526/https://www.theverge.com/2020/3/17/21183309/amc-theaters-close-coronavirus-regal-box-office-movies-delayed-vod
+        date: 2020-03-17T14:39:58Z
+  - summary: AMC's CEO has stated in an interview that as a result of the COVID-19 pandemic closures, around 26,000 employees have been laid off, representing 96% of AMC's labor force.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Fox Business [video]
+        link: https://video.foxbusiness.com/v/6143531609001/#sp=show-clips
+        date: 2020-03-20T15:29:46-04:00
+  - summary: AMC has begun talks to file for [Chapter-11 bankruptcy](https://www.uscourts.gov/services-forms/bankruptcy/bankruptcy-basics/chapter-11-bankruptcy-basics), which would indicate a significant reorganization of the company.
+    positivity: 0
+    type: publication
+    sources:
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200413053432/https://www.marketwatch.com/story/amc-theaters-in-talks-to-hire-bankruptcy-law-firm-weil-gotshal-amid-coronavirus-shutdown-2020-04-11
+        date: 2020-04-11T20:10:00Z
+  - summary: AMC has furloughed its entire corporate staff. Workers will keep all benefits and employment status during their furlough.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Hollywood Reporter
+        link: https://web.archive.org/web/20200401211602/https://www.hollywoodreporter.com/news/amc-theatres-furloughs-all-corporate-staff-including-ceo-1286597
+        date: 2020-03-25T13:10:00-07:00
+  - summary: AMC's furloughs have included its own CEO, and stated that it had no plans to lay off corporate employees as of March 25.
+    positivity: 1
+    type: publication
+    sources:
+      - source: The Hollywood Reporter
+        link: https://web.archive.org/web/20200401211602/https://www.hollywoodreporter.com/news/amc-theatres-furloughs-all-corporate-staff-including-ceo-1286597
+        date: 2020-03-25T13:10:00-07:00
