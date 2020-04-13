@@ -1,0 +1,43 @@
+name: Fiat Chrysler Automobiles N.V.
+aliases:
+  - FCA
+shortName: Fiat Chrysler
+ticker: FCAU
+wiki: Fiat Chrysler Automobiles
+image: fiat-chrysler.svg
+officialWebsite: https://www.fcagroup.com/en-US/group/regions/Pages/northamerica.aspx
+industries:
+  - automotive
+location:
+  city: Amsterdam
+  state: NH
+  country: nl
+  international: true
+  wiki: Amsterdam
+employeesBefore:
+  type: exactly
+  upperBound: 198545
+  year: 2018
+summary: Though white-collar employees have been forced to take pay cuts for several months, these are expected to be repaid in 2021. Executives, meanwhile, have all taken significant pay cuts or forgone their 2020 compensation.
+citations:
+  - summary: Salaried, "white-collar" workers will receive pay cuts of 20% which are expected for about three months. These cuts are expected to be repaid to employees by March 15, 2021.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200406180124/https://www.cnbc.com/2020/03/30/fca-temporarily-cuts-pay-by-20percent-for-salaried-workers-amid-coronavirus.html
+        date: 2020-03-30T23:27:33Z
+  - summary: The CEO of Fiat Chrysler and the members of its executive council will take pay cuts for at least five months, of 50% and 30% respectively.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200406180124/https://www.cnbc.com/2020/03/30/fca-temporarily-cuts-pay-by-20percent-for-salaried-workers-amid-coronavirus.html
+        date: 2020-03-30T23:27:33Z
+  - summary: The chairman and the board members of Fiat Chrysler will forgo the remainder of their 2020 compensation.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200406180124/https://www.cnbc.com/2020/03/30/fca-temporarily-cuts-pay-by-20percent-for-salaried-workers-amid-coronavirus.html
+        date: 2020-03-30T23:27:33Z
