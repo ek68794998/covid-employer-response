@@ -1,0 +1,27 @@
+name: Nissan Motor Co., Ltd.
+shortName: Nissan
+ticker: NSANY
+wiki: Nissan
+image: nissan.svg
+officialWebsite: https://global.nissannews.com/en/about-nissan
+industries:
+  - automotive
+location:
+  city: Yokohama
+  state: Kanagawa # Prefecture
+  country: jp
+  international: true
+  wiki: Nishi-ku, Yokohama
+employeesBefore:
+  type: exactly
+  upperBound: 138893
+  year: 2019
+summary: In July of 2019 and January of 2020, Nissan announced layoffs and restructuring plans unrelated to the coronavirus. However, despite these changes and cost reductions, Nissan has furloughed thousands of employees without pay as a result of the COVID-19 pandemic.
+citations:
+  - summary: Nissan has furloughed around 10,000 workers (most in the US states of TN and MS) without pay while its factories are shuttered. Workers will be brought back on board when the factories are up again, and benefits are expected to remain in the meantime. Employees will be eligible for government unemployment support.
+    positivity: -1
+    type: publication
+    sources:
+      - source: AutoBlog
+        link: https://web.archive.org/web/20200410083954/https://www.autoblog.com/2020/04/07/nissan-honda-layoff-workers-leave/
+        date: 2020-04-07T09:40:00-04:00
