@@ -3,9 +3,12 @@ import fs from "fs";
 import { EmployerRecordLoader } from "../api/storage/EmployerRecordLoader";
 import { Citation } from "../common/Citation";
 import { CitationSource } from "../common/CitationSource";
+import { CitationTypeValues } from "../common/CitationType";
+import { EmployerEmployeeProfile, EmployerEmployeeProfileTypeValues } from "../common/EmployerEmployeeProfile";
 import { EmployerIndustryValues, EmployerIndustry } from "../common/EmployerIndustry";
 import { EmployerRecord } from "../common/EmployerRecord";
 import { EmployerRecordBase } from "../common/EmployerRecordBase";
+import { EmployerStatusValues } from "../common/EmployerStatus";
 
 const directory: string = "./public";
 const subDirectory: string = "employers";
@@ -18,6 +21,10 @@ const recordIds: string[] =
 		.map((file: string) => file.split(".")[0]);
 
 describe("employer records", () => {
+	const isValidEmployeeCount = (p: EmployerEmployeeProfile): boolean =>
+		EmployerEmployeeProfileTypeValues.indexOf(p.type) >= 0
+		&& !!p.toString();
+
 	const isValidParagraph = (sentence: string): boolean =>
 		/^[A-Z].*\.$/.exec(sentence)
 			&& !/\. [a-z]/g.exec(sentence)
@@ -65,6 +72,18 @@ describe("employer records", () => {
 			}
 		}
 
+		if (record.officialWebsite) {
+			try {
+				new URL(record.officialWebsite);
+			} catch (e) {
+				return fail(`Official website '${record.officialWebsite}' for ${id} is invalid: '${e}'`);
+			}
+		}
+
+		if (EmployerStatusValues.indexOf(record.status) < 0) {
+			return fail(`Employer status '${record.status}' for ${id} is invalid.`);
+		}
+
 		if (record.industries && record.industries.length) {
 			for (let i: number = 1; i <= record.industries.length; i++) {
 				const industry: EmployerIndustry = record.industries[i - 1];
@@ -73,16 +92,6 @@ describe("employer records", () => {
 					return fail(`Industry #${i} for ${id} '${industry}' is not in the list of valid values.`);
 				}
 			}
-		}
-
-		const summaryLength: number = record.summary ? record.summary.length : 0;
-
-		if (summaryLength < 100 || summaryLength > 350) {
-			return fail(`Employer summary length ${summaryLength} for ${id} is invalid.`);
-		}
-
-		if (!isValidParagraph(record.summary)) {
-			return fail(`Employer summary for ${id} contains invalid punctuation or capitalization.`);
 		}
 
 		if (record.location) {
@@ -97,6 +106,24 @@ describe("employer records", () => {
 
 				return fail(`Country code '${record.location.country}' for ${id} is not valid.`);
 			}
+		}
+
+		if (record.employeesAfter && !isValidEmployeeCount(record.employeesAfter)) {
+			return fail(`"After" employee count for ${id} is invalid.`);
+		}
+
+		if (record.employeesBefore && !isValidEmployeeCount(record.employeesBefore)) {
+			return fail(`"Before" employee count for ${id} is invalid.`);
+		}
+
+		const summaryLength: number = record.summary ? record.summary.length : 0;
+
+		if (summaryLength < 100 || summaryLength > 350) {
+			return fail(`Employer summary length ${summaryLength} for ${id} is invalid.`);
+		}
+
+		if (!isValidParagraph(record.summary)) {
+			return fail(`Employer summary for ${id} contains invalid punctuation or capitalization.`);
 		}
 
 		if (!record.citations || record.citations.length === 0) {
@@ -118,6 +145,10 @@ describe("employer records", () => {
 
 			if (!isValidParagraph(record.summary)) {
 				return fail(`Citation #${i} summary for ${id} contains invalid punctuation or capitalization.`);
+			}
+
+			if (CitationTypeValues.indexOf(citation.type) < 0) {
+				return fail(`Citation #${i} for ${id} has invalid type'${citation.type}'.`);
 			}
 
 			if (!citation.sources || citation.sources.length === 0) {

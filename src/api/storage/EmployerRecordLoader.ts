@@ -65,9 +65,10 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 
 		const fileName: string = this.getFileName(id);
 		const fileContents: string = await readFileAsync(fileName, "UTF8");
-		const loadedEmployer: EmployerRecord = yaml.parse(fileContents);
 
-		loadedEmployer.id = id;
+		let loadedEmployer: EmployerRecord = new EmployerRecord();
+
+		loadedEmployer = { ...loadedEmployer, id, ...yaml.parse(fileContents) };
 
 		this.cachedItems[id] = loadedEmployer;
 
