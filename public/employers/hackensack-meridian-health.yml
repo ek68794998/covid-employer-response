@@ -1,0 +1,45 @@
+name: Hackensack Meridian Health
+aliases:
+  - HMH
+  - Jersey Shore University Medical Center (JSUMC)
+wiki: Hackensack Meridian Health
+image: hackensack-meridian-health.svg
+officialWebsite: https://www.hackensackmeridianhealth.org/about/
+industries:
+  - healthCare
+location:
+  city: Edison
+  state: NJ
+  country: us
+  international: false
+  wiki: Edison, New Jersey
+employeesBefore:
+  lowerBound: 28000
+  source: nj.com
+  sourceLink: https://www.nj.com/healthfit/2016/06/latest_hospital_mega-merger_is_done.html
+  type: range
+  upperBound: 0
+  year: 2016
+  yearQuarter: Q2
+summary: Though Hackensack Meridian Health has generally been shown to comply with health regulations during COVID-19, subsidiary JSUMC has been accused by union employees of firing or silencing whistleblowers and improperly rationing critical PPE.
+citations:
+  - summary: Following regulations from Hackensack Meridian Health, JSUMC has tightened regulations, including restricting visitors at the complex and asking staff to self-monitor their temperatures before reporting to work.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Patch
+        link: https://web.archive.org/web/20200414023054/https://patch.com/new-jersey/wall/coronavirus-jersey-shore-medical-center-tightens-visitor-rules
+        date: 2020-03-12T14:02:07-04:00
+  - summary: Adam Witt, president of the local nurses' union, attended a hearing in order to defend a fellow nurse who had raised concerns about coronavirus exposure at JSUMC. Shortly thereafter, Witt was fired, and had mugshots of his face posted around campus saying that he was barred from the premises. Witt also stated that essential PPE was too tightly rationed by JSUMC leadership, causing unnecessary risk for staff.
+    positivity: -2
+    type: statement # Several publications, including Witt's union, have backed the fact that he was fired, but the reason for this must be considered a statement from Witt.
+    sources:
+      - source: New York Times
+        link: https://web.archive.org/web/20200413173444/https://www.nytimes.com/2020/04/09/business/coronavirus-health-workers-speak-out.html
+        date: 2020-04-13T12:41:13-04:00
+      - source: app.
+        link: https://www.app.com/story/news/health/2020/04/07/coronavirus-nj-jersey-shore-hospital-nurse-fired-dispute-protective-equipment/2963609001/
+        date: 2020-04-07T22:04:01Z
+      - source: Reddit r/IAmA
+        link: https://web.archive.org/web/20200414022437/https://www.reddit.com/r/IAmA/comments/g02lca/iama_ed_nurse_and_local_union_president_who_was/
+        date: 2020-04-12T12:03:35-07:00

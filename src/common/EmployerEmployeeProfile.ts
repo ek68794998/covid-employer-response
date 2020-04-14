@@ -11,6 +11,10 @@ export type EmployerEmployeeProfileType = typeof EmployerEmployeeProfileTypeValu
 export class EmployerEmployeeProfile {
 	public lowerBound?: number;
 
+	public source?: string;
+
+	public sourceLink?: string;
+
 	public type: EmployerEmployeeProfileType = "exactly";
 
 	public upperBound: number = 0;
