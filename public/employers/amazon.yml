@@ -122,3 +122,13 @@ citations:
       - source: CNBC
         link: https://www.cnbc.com/2020/04/08/amazon-warehouse-workers-say-they-struggle-to-get-paid-despite-sick-leave-policy.html
         date: 2020-04-08T17:48:00-04:00
+  - summary: Amid the 74th death from COVID-19 among Amazon workers, two employees have been fired after they spoke out against the working conditions in Amazon's warehouses. Amazon has denied that this was due to the criticism, but states that it was for "repeatedly violating internal policies," though the company did not specify further details.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://web.archive.org/web/20200414184532/https://www.reuters.com/article/us-health-coronavirus-amazon-com-warehou/amazon-fires-two-employees-critical-of-warehouse-working-conditions-idUSKCN21W0UI
+        date: 2020-04-14T16:16:50Z
+      - source: TechCrunch
+        link: https://techcrunch.com/2020/04/14/amazon-fires-two-more-employees-who-were-openly-critical-of-working-conditions-during-pandemic/
+        date: 2020-04-14T14:40:58Z
