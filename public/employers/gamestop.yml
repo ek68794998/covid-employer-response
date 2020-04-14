@@ -39,6 +39,9 @@ citations:
       - source: GameStop corporate news
         link: https://web.archive.org/web/20200328222439/https://www.gamestop.com/preventive-measures.html
         date: 2020-03-22T21:00:00-05:00
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00
   - summary: GameStop permanently closed hundreds of physical retail locations amid the COVID-19 pandemic, though it is claimed to be unrelated to the ongoing crisis.
     positivity: 0
     type: publication
