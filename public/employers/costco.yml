@@ -49,13 +49,20 @@ citations:
         title: Employees not properly protected on "front lines"
         link: https://www.buzzfeednews.com/article/briannasacks/costco-employees-coronavirus-fears
         date: 2020-03-20T23:21:00-04:00
-  - summary: Costco has begun providing additional sick leave to some employees age 65 or higher, but has not expanded its policies for workers below 65.
+  - summary: According to five anonymous employees in east-coast US states, Costco has begun providing additional sick leave to some employees age 65 or higher, but has not expanded its policies for workers below 65.
     positivity: 0
-    type: publication
+    type: statement
     sources:
       - source: Business Insider
         link: https://www.businessinsider.com/costco-gives-two-weeks-paid-leave-employees-above-65-pandemic-2020-3
         date: 2020-04-01T18:10:11Z
+  - summary: Between March 5 and April 2, Costco raised US employees' pay by $2/hour.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Business Insider
+        link: https://web.archive.org/web/20200401230304/https://www.businessinsider.com/costco-pays-workers-2-dollars-an-hour-more-coronavirus-2020-3
+        date: 2020-03-23T20:33:14Z
   - summary: Costco has implemented policies to limit number of guests entering, cuts weekly hours, and revised its return policies.
     positivity: 1
     type: publication
