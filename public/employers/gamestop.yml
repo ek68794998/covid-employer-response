@@ -19,19 +19,26 @@ employeesBefore:
 summary: GameStop initially attempted to be classified as an "essential service" to avoid closing physical locations. They publicly reversed this decision, but continued to operate illegally in some locations such as Massachusetts.
 citations:
   - summary: A day after announcing that they intended to keep all physical stores open and after significant backlash, GameStop announced that they would switch to online orders and curbside pickup only.
-    positivity: 1
+    positivity: 0
     type: publication
     sources:
       - source: USA Today
         link: https://www.usatoday.com/story/tech/2020/03/22/gamestop-after-backlash-closes-retail-doors-due-covid-19-concerns/2894745001/
         date: 2020-03-22T13:08:00-04:00
-  - summary: "In mid-March, GameStop cancelled all large company events, including launch events for Doom Eternal and Animal Crossing: New Horizons, and instituted \"heightened cleaning practices\"."
+  - summary: "In mid-March, GameStop cancelled all large company events, including launch events for *Doom Eternal* and *Animal Crossing: New Horizons*, and instituted \"heightened cleaning practices\"."
     positivity: 1
     type: publication
     sources:
       - source: Polygon
         link: https://www.polygon.com/2020/3/17/21184063/gamestop-stores-coronavirus-covid-19-employees
         date: 2020-03-17T22:20:38Z
+  - summary: GameStop employees who "feel sick or in any way they may have been exposed to a confirmed case" will be paid for up to two weeks of leave at their normal pay rate.
+    positivity: 1
+    type: publication
+    sources:
+      - source: GameStop corporate news
+        link: https://web.archive.org/web/20200328222439/https://www.gamestop.com/preventive-measures.html
+        date: 2020-03-22T21:00:00-05:00
   - summary: GameStop permanently closed hundreds of physical retail locations amid the COVID-19 pandemic, though it is claimed to be unrelated to the ongoing crisis.
     positivity: 0
     type: publication
