@@ -1,0 +1,35 @@
+name: Trader Joe's
+wiki: Trader Joe's
+image: trader-joes.svg
+officialWebsite: https://www.traderjoes.com/our-story
+industries:
+  - groceryStore
+location:
+  city: Monrovia
+  state: CA
+  country: us
+  international: false
+  wiki: Monrovia, California
+employeesBefore:
+  type: exactly
+  upperBound: 10001
+  year: 2019
+summary: Though Trader Joe's boasts a solid two weeks of paid sick leave, it has been accused of not taking appropriate action at store locations where employees have tested positive for COVID-19.
+citations:
+  - summary: Since March 2, Trader Joe's has extended a full two weeks of paid sick leave to anyone showing symptoms of COVID-19, regardless of whether they are able to get tested.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Trader Joe's Announcements
+        link: https://web.archive.org/web/20200318212340/https://www.traderjoes.com/announcement/coronavirus-update-how-trader-joes-is-caring-for-crew-members-and-customers
+        date: 2020-03-11T12:00:00-07:00 # Estimate based on article date of 03/21/2020.
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00
+  - summary: Multiple Trader Joe's locations which have had confirmed cases of COVID-19 have remained open with workers expected to show up as usual.
+    positivity: -1
+    type: statement
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200404005346/https://www.buzzfeednews.com/article/juliareinstein/coronavirus-trader-joes
+        date: 2020-03-31T16:04:00-04:00
