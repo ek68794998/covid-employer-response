@@ -18,7 +18,7 @@ employeesBefore:
 summary: McDonald's has generally shown goodwill during the COVID-19 pandemic, closing public areas but continuing drive-thru, and providing free lunches and free delivery.
 citations:
   - summary: McDonald's has been considered an essential service but has closed seating areas and play places; it has begun operating in a no-contact manner, allowing drive-thru and curbside pickup.
-    positivity: 1
+    positivity: 0
     type: publication
     sources:
       - source: USA Today via Microsoft News
@@ -38,7 +38,14 @@ citations:
       - source: ABC News Australia
         link: https://mobile.abc.net.au/news/2020-03-30/mcdonalds-gregory-hills-coronavirus-case/12102590?pfmredir=sm
         date: 2020-03-30T03:55:30.000Z
-  - summary: McDonald's has temporarily closed 50 of its locations for safety reasons.
+  - summary: McDonald's has temporarily closed 50 of its US locations for safety reasons. There has been no word on the effect it has had on employees at those locations.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Nation's Restaurant News
+        link: https://www.nrn.com/quick-service/coronavirus-pandemic-prompts-mcdonalds-temporarily-close-50-restaurants
+        date: 2020-03-20T20:51:56Z
+  - summary: McDonald's has been working with franchisees on loan restructuring and rent deferrals as financial assistance.
     positivity: 1
     type: publication
     sources:
