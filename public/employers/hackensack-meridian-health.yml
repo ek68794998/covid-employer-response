@@ -1,27 +1,29 @@
-name: Jersey Shore University Medical Center
-shortName: JSUMC
-wiki: Jersey Shore University Medical Center
-image: jsumc.svg
-officialWebsite: https://www.jerseyshoreuniversitymedicalcenter.com/about/
+name: Hackensack Meridian Health
+aliases:
+  - HMH
+  - Jersey Shore University Medical Center (JSUMC)
+wiki: Hackensack Meridian Health
+image: hackensack-meridian-health.svg
+officialWebsite: https://www.hackensackmeridianhealth.org/about/
 industries:
-  - education
   - healthCare
 location:
-  city: Neptune Township
+  city: Edison
   state: NJ
   country: us
   international: false
-  wiki: Neptune Township, New Jersey
+  wiki: Edison, New Jersey
 employeesBefore:
-  source: American Hospital Directory
-  sourceLink: https://www.ahd.com/free_profile/310073/Jersey_Shore_University_Medical_Center/Neptune/New_Jersey/
-  type: exactly
-  upperBound: 127
+  lowerBound: 28000
+  source: nj.com
+  sourceLink: https://www.nj.com/healthfit/2016/06/latest_hospital_mega-merger_is_done.html
+  type: range
+  upperBound: 0
   year: 2016
-  yearQuarter: Q3
-summary: Though JSUMC has generally been shown to comply with health regulations during COVID-19, they have been accused by union employees of firing or silencing whistleblowers and improperly rationing critical PPE.
+  yearQuarter: Q2
+summary: Though Hackensack Meridian Health has generally been shown to comply with health regulations during COVID-19, subsidiary JSUMC has been accused by union employees of firing or silencing whistleblowers and improperly rationing critical PPE.
 citations:
-  - summary: Following regulations from their health network, JSUMC has tightened regulations, including restricting visitors at the complex and asking staff to self-monitor their temperatures before reporting to work.
+  - summary: Following regulations from Hackensack Meridian Health, JSUMC has tightened regulations, including restricting visitors at the complex and asking staff to self-monitor their temperatures before reporting to work.
     positivity: 0
     type: publication
     sources:
