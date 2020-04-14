@@ -1,0 +1,45 @@
+name: Subway
+wiki: Subway (restaurant)
+image: subway.svg
+officialWebsite: https://www.subway.com/en-US/AboutUs
+industries:
+  - restaurant
+location:
+  city: Milford
+  state: CT
+  country: us
+  international: true
+  wiki: Milford, Connecticut
+employeesBefore:
+  type: approximately
+  upperBound: 410000
+  year: 2014
+summary: Subway's corporate guidance has increased health and safety practices and given financial relief to franchisees. However, still-employed store workers who remain in the "line of fire", so to speak, report actually making less money than they would be getting from government unemployment.
+citations:
+  - summary: Subway corporate has helped franchisees by instating a 50% relief in royalty payments as well as rent deferrals of an undisclosed period.
+    positivity: 1
+    type: publication
+    sources:
+      - source: QSR Magazine
+        link: https://web.archive.org/web/20200401233320/https://www.qsrmagazine.com/franchising/subway-slash-franchise-royalty-payments-50-percent
+        date: 2020-03-19T13:10:21Z # Date from @qsrmagazine tweet announcing the article.
+  - summary: Subway has increased cleaning and food safety protocols per CDC guidance.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Subway official release
+        link: https://web.archive.org/web/20200325042109/https://www.subway.com/en-US/AboutUs/SocialResponsibility/covid19
+  - summary: Per government-mandated COVID-19-related closures, Subway has shuttered all dining areas, opting for a model that includes delivery and takeout.
+    positivity: 0
+    type: publication
+    sources:
+      - source: QSR Magazine
+        link: https://web.archive.org/web/20200330102936/https://www.qsrmagazine.com/fast-food/subway-close-dining-areas-due-covid-19
+        date: 2020-03-23T16:51:13Z # Date from @qsrmagazine tweet announcing the article.
+  - summary: Some Subway employees have reduced headcount, allowing those affected to receive $600 USD per week on top of benefits. However, employees who have remained&mdash;and cannot quit, for fear of losing unemployment aid&mdash;are understaffed, overworked, and making less than that $600 USD, while also fearing that their health is at risk due to the continuous customer traffic.
+    positivity: -1
+    type: hearsay
+    sources:
+      - source: Reddit r/CoronavirusUS
+        link: https://web.archive.org/web/20200414015107/https://www.reddit.com/r/CoronavirusUS/comments/g0k2ok/i_am_glad_that_laid_off_workers_are_getting_the/
+        date: 2020-04-13T7:33:59-07:00
