@@ -1,0 +1,31 @@
+name: Best Buy Co., Inc.
+shortName: Best Buy
+ticker: BLK
+wiki: Best Buy
+image: best-buy.svg
+officialWebsite: https://corporate.bestbuy.com/about-best-buy/
+industries:
+  - retail
+location:
+  city: Richfield
+  state: MN
+  country: us
+  international: true
+  wiki: Richfield, Minnesota
+employeesBefore:
+  type: approximately
+  upperBound: 125000
+  year: 2019
+  yearQuarter: Q1
+summary: Best Buy has expanded its sick leave generously, allowing employees who feel sick or who have been in the presence of someone dealing with COVID-19 to receive leave with full sick pay.
+citations:
+  - summary: Best Buy has instituted a policy stating that any employee "feeling sick is told to stay home, and they will be paid for that time." Additionally, any employee who is exposed to a confirmed COVID-19 patient or who "may need to stay home to care for their children" will also receive paid leave.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Best Buy Blog
+        link: https://web.archive.org/web/20200414033958/https://corporate.bestbuy.com/a-note-from-best-buy-about-covid-19/
+        date: 2020-03-22T09:30:00-05:00
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00
