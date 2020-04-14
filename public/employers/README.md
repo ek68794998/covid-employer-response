@@ -32,7 +32,7 @@ We recommend you make a copy of `sample.yml` and adjust it to fit your needs. Th
 	- `positivity`: A value from 2 to -2 that indicates how positive the news is.
 		- 2: Highly positive. For example, going above and beyond mandated protocols to ensure employees are paid, executives paying out of pocket to ensure jobs or livelihoods, or redirecting capital or resources away from revenue efforts toward curbing COVID-19's spread and effect.
 		- 1: Positive. For example, not cutting employee salaries, following government mandates, or stepping up cleaning protocols.
-		- 0: Neutral. For example, cutting both executive and worker salaries, or taking actions against COVID-19 but which are not related to employee happiness or job security. Announcements which have also not yet come to fruition should also be marked as neutral.
+		- 0: Neutral. For example, cutting both executive and worker salaries, or taking actions against COVID-19 but which are not related to employee happiness or job security. Announcements which have not yet come to fruition should also be marked as neutral, as should policies that are expected or simply implement compliance (such as "increased hand washing").
 		- -1: Negative. For example, cutting employee salaries or furloughing without benefits.
 		- -2: Highly negative. For example, actively showing neglect for employee safety, or paying out executive bonuses while also laying off employees.
 	- `type`: Indicates that the **original** fact source is a published statement from an employee, whether they are a current, former, or anonymous source.
