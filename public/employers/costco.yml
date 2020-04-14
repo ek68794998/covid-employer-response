@@ -24,15 +24,38 @@ citations:
     type: statement
     sources:
       - source: Buzzfeed News
+        title: Employees testing positive, but poor response from management
         link: https://www.buzzfeednews.com/article/briannasacks/costco-employees-testing-positive-covid-19
         date: 2020-03-25T20:14:19-04:00
-  - summary: Corporate employee had died from COVID, but staff still needs approval to work from home.
+      - source: Buzzfeed News
+        title: Employees not properly protected on "front lines"
+        link: https://www.buzzfeednews.com/article/briannasacks/costco-employees-coronavirus-fears
+        date: 2020-03-20T23:21:00-04:00
+  - summary: Despite a corporate employee dying from COVID-19, other corporate staff still need approval to work from home.
     positivity: -2
     type: statement
     sources:
       - source: Buzzfeed News
         link: https://www.buzzfeednews.com/article/briannasacks/costco-coronavirus-covid-death-office-open
         date: 2020-04-18T12:00:00-04:00
+  - summary: Costco has not expanded its sick-leave policies in response to COVID-19, as of March 26. Employees who do not show up for work are not currently being penalized or fired; however, they are not receiving pay.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Business Insider
+        link: https://www.businessinsider.com/costco-workers-stressed-coronavirus-stores-offices-2020-3
+        date: 2020-03-26T17:32:00Z
+      - source: Buzzfeed News
+        title: Employees not properly protected on "front lines"
+        link: https://www.buzzfeednews.com/article/briannasacks/costco-employees-coronavirus-fears
+        date: 2020-03-20T23:21:00-04:00
+  - summary: Costco has begun providing additional sick leave to some employees age 65 or higher, but has not expanded its policies for workers below 65.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Business Insider
+        link: https://www.businessinsider.com/costco-gives-two-weeks-paid-leave-employees-above-65-pandemic-2020-3
+        date: 2020-04-01T18:10:11Z
   - summary: Costco has implemented policies to limit number of guests entering, cuts weekly hours, and revised its return policies.
     positivity: 1
     type: publication
