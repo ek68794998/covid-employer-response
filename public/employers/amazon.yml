@@ -51,8 +51,8 @@ citations:
     positivity: -1
     type: publication
     sources:
-      - source: YouTube
-        title: Coronavirus IV with John Oliver, 14:31
+      - source: Last Week Tonight with John Oliver [via YouTube]
+        title: Coronavirus IV, 14:31
         link: https://youtu.be/6s4Bx7mzNkM?t=871
         date: 2020-04-12T12:00:00-07:00 # Estimate based on upload date of 04/12/2020.
   - summary: Amazon opened 100,000 new roles and increased pay though the end of April for employees working in roles related to fulfillment, transport, delivery, and other similar roles.
