@@ -37,7 +37,7 @@ citations:
         link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
         date: 2020-03-06T12:00:00-07:00 # Estimate based on entry date of 03/06/2020.
   - summary: Amazon provided two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19. Whole Foods Market employees have received the same benefit.
-    positivity: 1
+    positivity: 0
     type: publication
     sources:
       - source: Amazon Blog
