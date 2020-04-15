@@ -1,0 +1,34 @@
+name: The Michaels Companies, Inc.
+shortName: Michaels
+ticker: MIK
+wiki: The Michaels Companies
+image: michaels.svg
+officialWebsite: https://www.michaels.com/about-us-%7C-michaels-corporate/About-Us.html
+industries:
+  - retail
+location:
+  city: Irving
+  state: TX
+  country: us
+  international: true
+  wiki: Irving, Texas
+employeesBefore:
+  type: approximately
+  upperBound: 44000
+  year: 2019
+summary: XXX
+citations:
+  - summary: XXX
+    positivity: -1
+    type: publication
+    sources:
+      - source: HuffPost
+        link: https://web.archive.org/web/20200413054146/https://www.huffpost.com/entry/joann-fabrics-michaels-gamestop-refused-to-close-illinois_n_5e7ba754c5b6cb08a926acea
+        date: 2020-03-25T16:09:00-04:00
+  - summary: Michaels has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

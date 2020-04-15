@@ -1,0 +1,26 @@
+name: The Fresh Market, Inc.
+shortName: The Fresh Market
+wiki: The Fresh Market
+image: fresh-market.svg
+officialWebsite: https://freshmarketstores.com/about-us
+industries:
+  - groceryStore
+location:
+  city: Greensboro
+  state: NC
+  country: us
+  international: false
+  wiki: Greensboro, North Carolina
+employeesBefore:
+  type: approximately
+  upperBound: 13000
+  year: 2016
+summary: XXX
+citations:
+  - summary: The Fresh Market has provided two weeks of paid time off for employees have tested positive for COVID-19 or otherwise procure a note from their doctor.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

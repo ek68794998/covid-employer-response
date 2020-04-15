@@ -1,0 +1,26 @@
+name: Staples Inc.
+shortName: Staples
+wiki: Staples Inc.
+image: staples.svg
+officialWebsite: https://www.staples.com/sbd/cre/marketing/about_us/our-story.html
+industries:
+  - retail
+location:
+  city: Framingham
+  state: MA
+  country: us
+  international: true
+  wiki: Framingham, Massachusetts
+employeesBefore:
+  type: exactly
+  upperBound: 61503
+  year: 2016
+summary: XXX
+citations:
+  - summary: Staples has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

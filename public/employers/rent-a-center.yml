@@ -1,0 +1,32 @@
+name: Rent-A-Center, Inc.
+aliases:
+  - RAC
+shortName: Rent-A-Center
+ticker: RCII
+wiki: Rent-A-Center
+image: rent-a-center.svg#ef373e
+officialWebsite: https://www.rentacenter.com/about-rent-a-center
+industries:
+  - furniture
+location:
+  city: Plano
+  state: TX
+  country: us
+  international: false
+  wiki: Plano, Texas
+employeesBefore:
+  source: Rent-A-Center Annual Report
+  sourceLink: https://investor.rentacenter.com/static-files/3e16c827-89da-4a6b-8fb1-afb70c3cbb54
+  type: approximately
+  upperBound: 14000
+  year: 2019
+  yearQuarter: Q1
+summary: XXX
+citations:
+  - summary: Rent-A-Center has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

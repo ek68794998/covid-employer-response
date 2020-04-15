@@ -1,0 +1,32 @@
+name: Office Depot, Inc.
+aliases:
+  - CompuCom
+  - Grand & Toy
+  - OfficeMax
+shortName: Office Depot
+ticker: ODP
+wiki: Office Depot
+image: office-depot.svg
+officialWebsite: https://www.officedepot.com/a/static/companyinfo/default/
+industries:
+  - retail
+location:
+  city: Boca Raton
+  state: FL
+  country: us
+  international: true
+  wiki: Boca Raton, Florida
+employeesBefore:
+  type: approximately
+  upperBound: 38000
+  year: 2018
+  yearQuarter: Q3
+summary: XXX
+citations:
+  - summary: Office Depot has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

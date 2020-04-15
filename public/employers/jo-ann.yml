@@ -1,0 +1,40 @@
+name: Jo-Ann Stores, Inc.
+aliases:
+  - JOANN Fabrics and Crafts
+  - Jo-Ann Etc.
+shortName: Jo-Ann Stores
+ticker: XXX
+wiki: XXX
+image: jo-ann.svg
+officialWebsite: https://www.joann.com/about-us.html
+industries:
+  - retail
+location:
+  city: XXX
+  state: XXX
+  country: us
+  international: false
+  wiki: XXX
+employeesBefore:
+  type: approximately
+  upperBound: 23000
+  year: 2018
+summary: XXX
+citations:
+  - summary: Joann Fabrics initially claimed that they had to remain open due to providing mask kits to local hospitals, and had employees show up for work, violating Illinois' stay-at-home orders. They were since served a cease-and-desist and their request to be marked as "essential" was rejected by the Attorney General of Michigan. Joann Fabrics has complied with the orders and shut down its stores during the pandemic.
+    positivity: -1
+    type: publication
+    sources:
+      - source: 95.3 MNC
+        link: https://www.953mnc.com/2020/04/01/attorney-general-denies-request-that-joann-fabrics-remain-open-during-pandemic/
+        date: 2020-04-01T06:28:34Z
+      - source: HuffPost
+        link: https://web.archive.org/web/20200413054146/https://www.huffpost.com/entry/joann-fabrics-michaels-gamestop-refused-to-close-illinois_n_5e7ba754c5b6cb08a926acea
+        date: 2020-03-25T16:09:00-04:00
+  - summary: Joann has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

@@ -1,0 +1,34 @@
+name: The Kroger Company
+aliases:
+  - Fred Meyer
+  - QFC
+shortName: Kroger
+ticker: KR
+wiki: Kroger
+image: kroger.svg
+officialWebsite: https://www.thekrogerco.com/about-kroger/
+industries:
+  - groceryStore
+location:
+  city: Cincinnati
+  state: OH
+  country: us
+  international: false
+  wiki: Cincinnati
+employeesBefore:
+  type: approximately
+  upperBound: 453000
+  year: 2019
+  yearQuarter: Q4
+summary: XXX
+citations:
+  - summary: Various QFC stores have started instituting one-way aisles as of about the start of April, to facilitate social distancing.
+    positivity: 0
+    type: hearsay
+  - summary: Kroger has provided two weeks of paid time off for employees have tested positive for COVID-19 or otherwise procure a note from their doctor.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

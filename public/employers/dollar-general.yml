@@ -1,0 +1,38 @@
+name: Dollar General Corporation
+shortName: Dollar General
+ticker: DG
+wiki: Dollar General
+image: dollar-general.svg
+officialWebsite: https://aboutus.dollargeneral.com/
+industries:
+  - retail
+location:
+  city: Goodlettsville
+  state: Tennessee
+  country: us
+  international: false
+  wiki: Goodlettsville, Tennessee
+employeesBefore:
+  lowerBound: 143000
+  source: Dollar General News Center
+  sourceLink: https://web.archive.org/web/20200412174359/https://newscenter.dollargeneral.com/covid-19/dollar-general-to-hire-up-to-50000-new-employees-to-support-operations.htm
+  type: range
+  upperBound: 0
+  year: 2020
+  yearQuarter: Q1
+summary: XXX
+citations:
+  - summary: Dollar General has begun hiring up to 50,000 new employees.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Dollar General News Center
+        link: https://web.archive.org/web/20200412174359/https://newscenter.dollargeneral.com/covid-19/dollar-general-to-hire-up-to-50000-new-employees-to-support-operations.htm
+        date: 2020-03-23T12:00:00-07:00 # Estimate based on entry date of 03/23/2020.
+  - summary: Dollar General has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

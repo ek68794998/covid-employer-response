@@ -1,0 +1,29 @@
+name: Darden Restaurants, Inc.
+aliases:
+  - Olive Garden
+shortName: Darden Restaurants
+ticker: DRI
+wiki: Darden Restaurants
+image: darden-restaurants.svg
+officialWebsite: https://www.darden.com/our-company/about-us
+industries:
+  - restaurant
+location:
+  city: Orlando
+  state: FL
+  country: us
+  international: true
+  wiki: Orlando, Florida
+employeesBefore:
+  type: approximately
+  upperBound: 185000
+  year: 2018
+summary: XXX
+citations:
+  - summary: Olive Garden, a subsidiary of Darden, has provided paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

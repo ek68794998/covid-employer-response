@@ -1,0 +1,30 @@
+name: Albertsons Companies, Inc.
+aliases:
+  - Albertson's
+  - Safeway
+shortName: Albertsons
+# ticker: ACI # Albertsons has filed for IPO but is not yet listed.
+wiki: Albertsons
+image: albertsons.svg
+officialWebsite: https://www.albertsons.com/about-us.html
+industries:
+  - groceryStore
+location:
+  city: Boise
+  state: ID
+  country: us
+  international: false
+  wiki: Boise, Idaho
+employeesBefore:
+  type: approximately
+  upperBound: 275000
+  year: 2019
+summary: XXX
+citations:
+  - summary: Safeway, a subsidiary of Albertsons, has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

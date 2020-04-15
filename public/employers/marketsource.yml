@@ -1,0 +1,26 @@
+name: MarketSource
+image: marketsource.svg
+officialWebsite: http://marketsource.jobs/about-us/
+industries:
+  - retail
+location:
+  city: Alpharetta
+  state: GA
+  country: us
+  international: false
+  wiki: Alpharetta, Georgia
+employeesBefore:
+  source: Owler
+  sourceLink: https://www.owler.com/company/marketsource
+  type: approximately
+  upperBound: 9000
+  year: 2019
+summary: XXX
+citations:
+  - summary: MarketSource has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

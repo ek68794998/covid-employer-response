@@ -1,0 +1,31 @@
+name: CVS Health Corporation
+aliases:
+  - CVS Caremark
+  - CVS Pharmacy
+shortName: CVS
+ticker: CVS
+wiki: CVS Health
+image: cvs.svg
+officialWebsite: https://cvshealth.com/about
+industries:
+  - healthCare
+  - retail
+location:
+  city: Woonsocket
+  state: RI
+  country: us
+  international: false
+  wiki: Woonsocket, Rhode Island
+employeesBefore:
+  type: approximately
+  upperBound: 300000
+  year: 2019
+summary: XXX
+citations:
+  - summary: CVS has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

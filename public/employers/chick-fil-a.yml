@@ -1,0 +1,21 @@
+name: Chick-fil-A
+wiki: Chick-fil-A
+image: chick-fil-a.svg
+officialWebsite: https://www.chick-fil-a.com/about/great-food/our-chicken-story
+industries:
+  - restaurant
+location:
+  city: College Park
+  state: GA
+  country: us
+  international: false
+  wiki: College Park, Georgia
+summary: XXX
+citations:
+  - summary: Chick-Fil-A has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

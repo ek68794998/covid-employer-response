@@ -1,0 +1,27 @@
+name: Walgreen Company
+shortName: Walgreens
+wiki: Walgreens
+image: walgreens.svg
+officialWebsite: https://news.walgreens.com/fact-sheets/about-walgreens/
+industries:
+  - retail
+location:
+  city: Chicago
+  state: IL
+  country: us
+  international: false
+  wiki: Chicago
+employeesBefore:
+  lowerBound: 230000
+  type: range
+  upperBound: 0
+  year: 2019
+summary: XXX
+citations:
+  - summary: Walgreens has provided two weeks of paid time off for employees have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00
