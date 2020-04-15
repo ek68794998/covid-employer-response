@@ -20,7 +20,7 @@ employeesBefore:
   year: 2019
 summary: Though Amazon touts a work-from-home policy for engineers and pay raises for service workers, there are additional reports of mandatory overtime and complaints of management not immediately reporting COVID-19 cases.
 citations:
-  - summary: Amazon began canceling large events and tours, and began routinely and thoroughly sanitizing "all facilities globally."
+  - summary: Amazon has begun canceling large events and tours, and has stated that they are routinely and thoroughly sanitizing "all facilities globally."
     positivity: 1
     type: publication
     sources:
@@ -36,7 +36,7 @@ citations:
         title: COVID-19 Blog
         link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
         date: 2020-03-06T12:00:00-07:00 # Estimate based on entry date of 03/06/2020.
-  - summary: Amazon provided two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19. Whole Foods Market employees have received the same benefit.
+  - summary: Amazon has provided two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19. Whole Foods Market employees have received the same benefit.
     positivity: 1
     type: publication
     sources:
@@ -47,6 +47,14 @@ citations:
       - source: Whole Foods Market Newsroom
         link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
         date: 2020-03-13T12:00:00-07:00 # Estimate based on entry date of 03/13/2020.
+  - summary: Due to the scarcity of testing in places like New York, Amazon was asked to expand their sick leave policy to include employees who had not been able to get a positive diagnosis for COVID-19. It was only after pressure from 14 states' Attorneys General that they actually instated it.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Last Week Tonight with John Oliver [via YouTube]
+        title: Coronavirus IV, 14:31
+        link: https://youtu.be/6s4Bx7mzNkM?t=871
+        date: 2020-04-12T12:00:00-07:00 # Estimate based on upload date of 04/12/2020.
   - summary: Amazon opened 100,000 new roles and increased pay though the end of April for employees working in roles related to fulfillment, transport, delivery, and other similar roles.
     positivity: 2
     type: publication
@@ -122,3 +130,10 @@ citations:
       - source: CNBC
         link: https://www.cnbc.com/2020/04/08/amazon-warehouse-workers-say-they-struggle-to-get-paid-despite-sick-leave-policy.html
         date: 2020-04-08T17:48:00-04:00
+  - summary: Amazon fired a worker at a New York warehouse for reportedly "violating social distancing guidelines" two hours after he organized a work stoppage to protest lack of PPE and hazard pay. Though this is something of a he-said-she-said in terms of *why* he was fired, a leaked memo suggests that Amazon wants to make a martyr of Smalls, stating, "He’s not smart, or articulate, and ... if possible make him the face of the entire union/organizing movement."
+    positivity: -2
+    type: statement
+    sources:
+      - source: The Guardian
+        link: https://web.archive.org/web/20200413154214/https://www.theguardian.com/technology/2020/apr/02/amazon-chris-smalls-smart-articulate-leaked-memo
+        date: 2020-04-02T19:47:00-04:00

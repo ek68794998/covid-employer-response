@@ -71,3 +71,10 @@ citations:
       - source: Nation's Restaurant News
         link: https://www.nrn.com/quick-service/starbucks-extends-coronavirus-caf-closures-catastrophe-pay-and-benefits-until-may-3
         date: 2020-04-02T15:46:00Z
+  - summary: Starbucks has offered up to 30 days of paid leave to anyone who feels sick or is not comfortable coming in to work during the coronavirus pandemic.
+    positivity: 2
+    type: publication
+    sources:
+      - source: Business Insider
+        link: https://web.archive.org/web/20200403165451/https://www.businessinsider.com/coronavirus-starbucks-pay-workers-whether-or-not-they-work-2020-3
+        date: 2020-03-21T02:08:40Z

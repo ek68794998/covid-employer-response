@@ -5,7 +5,7 @@ export class WikipediaHelpers {
 		}
 
 		const wikipediaUrlBase: string = "https://en.wikipedia.org/wiki/__PAGE__";
-		const pageNameSubpath: string = pageName.replace(" ", "_");
+		const pageNameSubpath: string = pageName.replace(/ +/g, "_");
 
 		return wikipediaUrlBase.replace("__PAGE__", pageNameSubpath);
 	}
