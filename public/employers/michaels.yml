@@ -16,19 +16,33 @@ employeesBefore:
   type: approximately
   upperBound: 44000
   year: 2019
-summary: XXX
+summary: Michaels has provided standard sick leave to those who test positive for COVID-19 and work-from-home options for corporate employees, but has fought tooth-and-nail to keep stores open despite being marked as non-essential by several states' guidelines.
 citations:
-  - summary: Michaels remained open in several states, claiming that it was essential due to providing supplies to small businesses and teachers, and helping people who "are looking to take their minds off a stressful reality." Michaels was served a cease-and-desist in Illinois after remaining open despite being non-essential during the stay-at-home order. Michaels has since complied with the order and closed their doors.
+  - summary: Michaels has claimed that it was essential due to providing supplies to small businesses and teachers, and helping people who "are looking to take their minds off a stressful reality." Michaels was served a cease-and-desist in Illinois after remaining open despite being non-essential during the stay-at-home order. Michaels has since complied with the order and closed their doors in most states.
     positivity: -1
     type: publication
     sources:
       - source: HuffPost
         link: https://web.archive.org/web/20200413054146/https://www.huffpost.com/entry/joann-fabrics-michaels-gamestop-refused-to-close-illinois_n_5e7ba754c5b6cb08a926acea
         date: 2020-03-25T16:09:00-04:00
-  - summary: Michaels has provided two weeks of paid time off for employees have tested positive for COVID-19.
+  - summary: Michaels has provided two weeks of paid time off for employees who have tested positive for COVID-19.
     positivity: 0
     type: publication
     sources:
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00
+  - summary: Michaels corporate employees have been given the option to work from home.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Michaels Companies Investor Relations
+        link: https://web.archive.org/web/20200331122620/https://investors.michaels.com/michaels-response-to-covid-19
+        date: 2020-04-10T15:19:00-04:00
+  - summary: Despite the cease-and-desist in some states, Michaels continues to operate hundreds of stores in others, despite a scarcity of hand sanitizer and cleaning supplies.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Business Insider
+        link: https://web.archive.org/web/20200326164854/https://www.businessinsider.com/michaels-employees-must-continue-working-coronavirus-2020-3
+        date: 2020-03-25T16:13:44Z

@@ -23,7 +23,7 @@ citations:
       - source: CBS News
         link: https://www.cbsnews.com/news/hobby-lobby-open-essential-business-stay-at-home-orders/
         date: 2020-04-01T13:14:00-04:00
-  - summary: Employees who are sick will be able to use their PTO and will be paid 75% of their total wage.
+  - summary: Employees who work at stores which are closed will be paid 75% of their total wage for a temporary, undisclosed period, then allowed to use PTO for any further compensation.
     positivity: 1
     type: publication
     sources:
@@ -62,9 +62,23 @@ citations:
         link: https://www.nytimes.com/2020/04/02/us/hobby-lobby-colorado-virus.html
         date: 2020-04-02T00:52:02-04:00
   - summary: Hobby Lobby closed all stores and furloughed its employees with no pay, but will continue their benefits.
-    positivity: -1
+    positivity: 0
     type: publication
     sources:
       - source: Newsweek
         link: https://www.newsweek.com/hobby-lobby-close-all-stores-furlough-employees-no-pay-after-claiming-essential-business-1496054
         date: 2020-04-03T19:20:54-04:00
+  - summary: Hobby Lobby does not offer any sick leave to employees who test positive for COVID-19. According to a leaked memo, their options are PTO, vacation pay, or an unpaid leave of absence.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Business Insider
+        link: https://web.archive.org/web/20200410154622/https://www.businessinsider.com/in-memo-hobby-lobby-refuses-paid-sick-leave-during-coronavirus-2020-3
+        date: 2020-03-23T17:27:31Z
+      - source: Above the Law
+        link: https://abovethelaw.com/2020/03/hobby-lobby-orders-stores-to-stay-open-citing-hr-memo-from-jesus-christ/
+        date: 2020-03-23T17:17:04-04:00
+      - source: Twitter
+        title: Kendall Brown
+        link: https://twitter.com/kendallybrown/status/1241564118861185024
+        date: 2020-03-21T19:42:00-07:00

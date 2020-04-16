@@ -15,12 +15,20 @@ employeesBefore:
   type: exactly
   upperBound: 61503
   year: 2016
-summary: XXX
+summary: Staples is enforcing good safety practices for both customers and employees, and providing paid time off for positive diagnoses of COVID-19. Employees who feel sick are recommended to stay home.
 citations:
-  - summary: Staples has provided two weeks of paid time off for employees have tested positive for COVID-19.
+  - summary: Staples is providing optional curbside delivery, enforcing 6-foot social distancing, asking employees to wash their hands every 30 minutes, and limiting customer capacity in stores.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Staples CEO Update
+        link: https://www.staples.com/sbd/cre/products/200315/in22991/index.html # Unknown date.
+  - summary: Staples has provided two weeks of paid time off for employees who have tested positive for COVID-19. It has also encouraged employees to "stay home if they feel sick," though they have not publicized any statements about whether such employees would receive paid time off.
     positivity: 0
     type: publication
     sources:
+      - source: Staples CEO Update
+        link: https://www.staples.com/sbd/cre/products/200315/in22991/index.html # Unknown date.
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00

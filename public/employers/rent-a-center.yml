@@ -21,12 +21,14 @@ employeesBefore:
   upperBound: 14000
   year: 2019
   yearQuarter: Q1
-summary: XXX
+summary: Rent-A-Center has stated that employees who are sick or uncomfortable reporting to work should stay home. However, it is not known whether employees who have not received a positive diagnosis are receiving sick pay.
 citations:
-  - summary: Rent-A-Center has provided two weeks of paid time off for employees have tested positive for COVID-19.
+  - summary: Rent-A-Center has provided two weeks of paid time off for employees who have tested positive for COVID-19. It also recommends that employees who are "uncomfortable going to work" should stay home, though it does not note whether or not such employees would receive pay.
     positivity: 0
     type: publication
     sources:
+      - source: Rent-A-Center corporate news
+        link: https://web.archive.org/web/20200331153225/https://www.rentacenter.com/the-latest-on-rentacenters-response-to-the-coronavirus # Unknown date. Prior to March 27.
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00

@@ -21,9 +21,16 @@ employeesBefore:
   upperBound: 38000
   year: 2018
   yearQuarter: Q3
-summary: XXX
+summary: Office Depot generally remains open despite being sold out of most high-demand items (notably toilet paper), though most states are considering it essential. Office Depot is providing two weeks of sick leave to its employees, but only if diagnosed with COVID-19.
 citations:
-  - summary: Office Depot has provided two weeks of paid time off for employees have tested positive for COVID-19.
+  - summary: Outside of Pennsylvania, Office Depot stores remain open and are generally accepted as being essential.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200413081117/https://www.buzzfeednews.com/article/skbaer/coronavirus-office-depot-essential-employees
+        date: 2020-04-02T19:03:00-04:00
+  - summary: Office Depot has provided two weeks of paid time off for employees who have tested positive for COVID-19.
     positivity: 0
     type: publication
     sources:

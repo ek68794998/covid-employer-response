@@ -15,12 +15,19 @@ employeesBefore:
   type: approximately
   upperBound: 9000
   year: 2019
-summary: XXX
+summary: Though MarketSource provides paid time off for employees with a COVID-19 diagnosis, those taking leave without a diagnosis have been told that their jobs are at risk for doing so.
 citations:
-  - summary: MarketSource has provided two weeks of paid time off for employees have tested positive for COVID-19.
+  - summary: MarketSource has provided two weeks of paid time off for employees who have tested positive for COVID-19.
     positivity: 0
     type: publication
     sources:
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00
+  - summary: MarketSource employees who took sick leave without a COVID-19 diagnosis have received no pay, and were even told that they may be fired if they took too much time off. Even MarketSource employees being contracted by Target are not receiving the same leave policies as Target employees.
+    positivity: -1
+    type: statement
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200413084634/https://www.buzzfeednews.com/article/katiejmbaker/target-coronavirus-outsourcing-marketsource-allegis
+        date: 2020-04-09T12:21:00-04:00
