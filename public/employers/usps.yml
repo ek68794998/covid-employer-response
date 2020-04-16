@@ -3,7 +3,7 @@ shortName: USPS
 aliases:
   - US Mail
 wiki: United States Postal Service
-image: usps.svg
+image: usps.svg#333366
 officialWebsite: https://about.usps.com/
 industries:
   - courier
