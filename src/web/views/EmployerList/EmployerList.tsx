@@ -44,7 +44,12 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 	const filteredEmployers: EmployerRecordMetadata[] =
 		employersList
 			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(searchFilter, e))
-			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => a.name.localeCompare(b.name));
+			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => {
+				const aName: string | undefined = /^(The |A )?(.*)$/i.exec(a.name)?.[2];
+				const bName: string | undefined = /^(The |A )?(.*)$/i.exec(b.name)?.[2];
+
+				return (aName || "").localeCompare(bName || "");
+			});
 
 	if (!filteredEmployers.length) {
 		return (
