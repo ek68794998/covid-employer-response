@@ -44,7 +44,7 @@ citations:
     sources:
       - source: LinkedIn
         link: https://www.linkedin.com/pulse/update-3ms-response-covid-19-mike-roman/
-        date: 2020-03-22T12:00:00-07:00 # Estimate based on post date of 03/22/2020.
+        date: 2020-03-22T12:00:00Z # Estimate based on post date of 03/22/2020.
   - summary: Some employees at 3M have claimed that internal messaging about COVID-19 has been vague and the company is not supporting employees working remotely. 3M has replied, stating that they have taken several steps (including reducing travel, staying home, and two extra weeks of paid time off) to ensure safety.
     positivity: 0
     type: hearsay

@@ -50,7 +50,7 @@ citations:
     sources:
       - source: YouTube Creator Blog
         link: https://youtube-creators.googleblog.com/2020/03/protecting-our-extended-workforce-and.html
-        date: 2020-03-16T12:00:00-07:00 # Estimate based on article date of 03/16/2020.
+        date: 2020-03-16T12:00:00Z # Estimate based on article date of 03/16/2020.
   - summary: Numerous contractors for Google (which number almost as highly as full-time employees) were not permitted to work from home and, as a result, formed peaceful protests against the company. One contractor company, HCL, and Google have since been able to allow a number of these employees to work from home.
     positivity: -1
     type: publication

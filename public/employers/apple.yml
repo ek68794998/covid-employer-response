@@ -28,14 +28,14 @@ citations:
         date: 2020-03-08T20:52:00Z
       - source: Apple Newsroom
         link: https://web.archive.org/web/20200314064555/https://www.apple.com/newsroom/2020/03/apples-covid-19-response/
-        date: 2020-03-13T12:00:00-07:00 # Estimate based on post date of 03/13/2020.
+        date: 2020-03-13T12:00:00Z # Estimate based on post date of 03/13/2020.
   - summary: An Apple spokesperson and official statement have announced that "hourly workers will continue to receive pay" during the COVID-19 pandemic, even if they are not working. Janitors, drivers, and others are included in this set of workers, but a comprehensive list of all roles covered was not included.
     positivity: 2
     type: publication
     sources:
       - source: Apple Newsroom
         link: https://web.archive.org/web/20200314064555/https://www.apple.com/newsroom/2020/03/apples-covid-19-response/
-        date: 2020-03-13T12:00:00-07:00 # Estimate based on post date of 03/13/2020.
+        date: 2020-03-13T12:00:00Z # Estimate based on post date of 03/13/2020.
       - source: 9to5 Mac
         link: https://web.archive.org/web/20200404192040/https://9to5mac.com/2020/03/31/apple-contractors-pay/
         date: 2020-03-31T08:36:23-07:00

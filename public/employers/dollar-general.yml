@@ -2,7 +2,7 @@ name: Dollar General Corporation
 shortName: Dollar General
 ticker: DG
 wiki: Dollar General
-image: dollar-general.svg
+image: dollar-general.png
 officialWebsite: https://aboutus.dollargeneral.com/
 industries:
   - retail
@@ -28,7 +28,7 @@ citations:
     sources:
       - source: Dollar General News Center
         link: https://web.archive.org/web/20200412174359/https://newscenter.dollargeneral.com/covid-19/dollar-general-to-hire-up-to-50000-new-employees-to-support-operations.htm
-        date: 2020-03-23T12:00:00-07:00 # Estimate based on entry date of 03/23/2020.
+        date: 2020-03-23T12:00:00Z # Estimate based on entry date of 03/23/2020.
   - summary: Dollar General has provided two weeks of paid time off for employees have tested positive for COVID-19.
     positivity: 0
     type: publication

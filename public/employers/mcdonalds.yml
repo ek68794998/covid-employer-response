@@ -30,7 +30,7 @@ citations:
     sources:
       - source: McDonald's company news
         link: https://news.mcdonalds.com/news-releases/news-release-details/our-focus-supporting-franchisees-crew-and-communities-time
-        date: 2020-03-20T12:00:00-07:00 # Estimate based on article date of 03/20/2020.
+        date: 2020-03-20T12:00:00Z # Estimate based on article date of 03/20/2020.
   - summary: McDonald's elected to not inform 80% of staff members at one of their Sydney locations that a coworker had tested positive for COVID-19.
     positivity: -1
     type: publication
@@ -58,4 +58,4 @@ citations:
     sources:
       - source: McDonald's company news
         link: https://news.mcdonalds.com/news-release/news-release-details/McDelivery-UberEats-DoorDash%20
-        date: 2020-03-25T12:00:00-07:00 # Estimate based on article date of 03/25/2020.
+        date: 2020-03-25T12:00:00Z # Estimate based on article date of 03/25/2020.

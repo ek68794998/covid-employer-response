@@ -55,7 +55,7 @@ citations:
     sources:
       - source: ABC-7 Chicago
         link: https://abc7chicago.com/business/gamestop-says-its-an-essential-business-amid-state-covid-19-shutdowns/6035735/
-        date: 2020-03-21T12:00:00-07:00 # Estimate based on article date of 03/21/2020.
+        date: 2020-03-21T12:00:00Z # Estimate based on article date of 03/21/2020.
   - summary: GameStop continues to operate in Massachusetts with curbside service, violating a government order to shut down all nonessential businesses. They have implemented a requirement that employees wrap their hands in plastic bags when handling customer payment cards.
     positivity: -2
     type: publication
@@ -65,4 +65,4 @@ citations:
         date: 2020-03-27T16:52:00-04:00
       - source: Mass.gov
         link: https://www.mass.gov/info-details/covid-19-essential-services-faqs
-        date: 2020-03-23T12:00:00-07:00 # Estimate based on emergency order date of 03/23/2020.
+        date: 2020-03-23T12:00:00Z # Estimate based on emergency order date of 03/23/2020.

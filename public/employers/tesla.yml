@@ -27,7 +27,7 @@ citations:
     sources:
       - source: Tesla Investors
         link: https://ir.tesla.com/news-releases/news-release-details/tesla-operational-update
-        date: 2020-03-19T12:00:00-07:00 # Estimate based on publication date of 03/19/2020.
+        date: 2020-03-19T12:00:00Z # Estimate based on publication date of 03/19/2020.
       - source: CNET Road Show
         link: https://www.cnet.com/roadshow/news/tesla-fremont-factory-shut-musk-coronavirus-covid19-pandemic/
         date: 2020-03-24T10:54:00-07:00

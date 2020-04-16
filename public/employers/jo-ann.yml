@@ -2,19 +2,18 @@ name: Jo-Ann Stores, Inc.
 aliases:
   - JOANN Fabrics and Crafts
   - Jo-Ann Etc.
-shortName: Jo-Ann Stores
-ticker: XXX
-wiki: XXX
-image: jo-ann.svg
+shortName: Joann
+wiki: Jo-Ann Stores
+image: jo-ann.jpg
 officialWebsite: https://www.joann.com/about-us.html
 industries:
   - retail
 location:
-  city: XXX
-  state: XXX
+  city: Hudson
+  state: OH
   country: us
   international: false
-  wiki: XXX
+  wiki: Hudson, Ohio
 employeesBefore:
   type: approximately
   upperBound: 23000

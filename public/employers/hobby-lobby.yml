@@ -29,7 +29,7 @@ citations:
     sources:
       - source: Religion News Service
         link: https://religionnews.com/2020/03/31/hobby-lobby-clarifies-sick-leave-policy-amid-coronavirus/
-        date: 2020-03-31T12:00:00-07:00 # Estimate based on article date of 03/31/2020.
+        date: 2020-03-31T12:00:00Z # Estimate based on article date of 03/31/2020.
   - summary: Hobby Lobby has quietly reopened stores starting March 31, defying shutdowns and requiring police intervention.
     positivity: -2
     type: publication
