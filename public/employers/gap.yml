@@ -28,7 +28,7 @@ citations:
     sources:
       - source: Gap, Inc. News
         link: https://web.archive.org/web/20200402225118/https://www.gapinc.com/content/gapinc/html/media/pressrelease/2020/med_pr_03302020_Covid19Update.html
-        date: 2020-03-30T12:00:00-07:00 # Estimate based on post date of 03/30/2020.
+        date: 2020-03-30T12:00:00Z # Estimate based on post date of 03/30/2020.
       - source: MarketWatch
         link: https://web.archive.org/web/20200403132646/https://www.marketwatch.com/story/gap-and-ascena-retail-announce-retail-employee-furloughs-2020-03-30
         date: 2020-03-30T20:42:53Z
@@ -40,7 +40,7 @@ citations:
     sources:
       - source: Gap, Inc. News
         link: https://web.archive.org/web/20200402225118/https://www.gapinc.com/content/gapinc/html/media/pressrelease/2020/med_pr_03302020_Covid19Update.html
-        date: 2020-03-30T12:00:00-07:00 # Estimate based on post date of 03/30/2020.
+        date: 2020-03-30T12:00:00Z # Estimate based on post date of 03/30/2020.
       - source: MarketWatch
         link: https://web.archive.org/web/20200403132646/https://www.marketwatch.com/story/gap-and-ascena-retail-announce-retail-employee-furloughs-2020-03-30
         date: 2020-03-30T20:42:53Z
@@ -55,7 +55,7 @@ citations:
     sources:
       - source: Gap, Inc. News
         link: https://web.archive.org/web/20200402225118/https://www.gapinc.com/content/gapinc/html/media/pressrelease/2020/med_pr_03302020_Covid19Update.html
-        date: 2020-03-30T12:00:00-07:00 # Estimate based on post date of 03/30/2020.
+        date: 2020-03-30T12:00:00Z # Estimate based on post date of 03/30/2020.
       - source: The Business Journals
         link: https://www.bizjournals.com/bizwomen/news/latest-news/2020/03/gap-inc-ascena-brandsjoin-mass-retail-layoffs.html?page=all
         date: 2020-03-31T08:59:00-04:00

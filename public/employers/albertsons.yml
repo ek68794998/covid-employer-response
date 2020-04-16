@@ -1,0 +1,56 @@
+name: Albertsons Companies, Inc.
+aliases:
+  - Acme
+  - Albertson's
+  - Amigos
+  - Andronico's Community Markets
+  - Carrs
+  - Haggen
+  - Jewel Osco
+  - Lucky
+  - Market Street
+  - Pavilions
+  - Plated
+  - Randalls
+  - Safeway
+  - Shaws
+  - Star Market
+  - Tom Thumb
+  - United Express
+  - United Supermarkets
+  - Vons
+shortName: Albertsons
+# ticker: ACI # Albertsons has filed for IPO but is not yet listed.
+wiki: Albertsons
+image: albertsons.svg
+officialWebsite: https://www.albertsons.com/about-us.html
+industries:
+  - groceryStore
+location:
+  city: Boise
+  state: ID
+  country: us
+  international: false
+  wiki: Boise, Idaho
+employeesBefore:
+  type: approximately
+  upperBound: 275000
+  year: 2019
+summary: Albertsons and its subsidiaries have been providing temporary raises to hourly employees; however, employees do not appear to be able to get paid sick leave without a positive diagnosis of COVID-19.
+citations:
+  - summary: Albertsons and child company Safeway will be providing hourly raises of $2 as "appreciation pay" to employees during the COVID-19 crisis.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Supermarket News
+        link: https://web.archive.org/web/20200331170816/https://www.supermarketnews.com/retail-financial/albertsons-plans-plexiglass-barriers-appreciation-pay-covid-19-response
+        date: 2020-03-21T04:48:00Z
+  - summary: Safeway, a subsidiary of Albertsons, has provided two weeks of paid time off for employees who have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Albertsons Companies Associate Updates
+        link: https://www.albertsonscompanies.com/helping-you-through-covid-19/associate-updates.html # Unknown date.
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

@@ -1,0 +1,33 @@
+name: The Fresh Market, Inc.
+shortName: The Fresh Market
+wiki: The Fresh Market
+image: fresh-market.svg
+officialWebsite: https://freshmarketstores.com/about-us
+industries:
+  - groceryStore
+location:
+  city: Greensboro
+  state: NC
+  country: us
+  international: false
+  wiki: Greensboro, North Carolina
+employeesBefore:
+  type: approximately
+  upperBound: 13000
+  year: 2016
+summary: The Fresh Market has taken serious steps in protecting the health and safety of employees and customers, and is slightly more lenient than other employers by allowing doctor's notes to serve as reason for paid leave instead of requiring a positive COVID-19 diagnosis.
+citations:
+  - summary: The Fresh Market has implemented a policy in which both employees and customers are required to have a face mask on at all times.
+    positivity: 1
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414083322/https://www.thefreshmarket.com/tfm-covid-19
+        date: 2020-04-12T12:00:00Z # Estimate based on update date of 04/12/2020.
+  - summary: The Fresh Market has provided two weeks of paid time off for employees who have tested positive for COVID-19 or otherwise procure a note from their doctor.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

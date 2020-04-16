@@ -46,7 +46,7 @@ citations:
     sources:
       - source: Microsoft Company Blog
         link: https://blogs.microsoft.com/on-the-issues/2020/03/05/covid-19-microsoft-hourly-workers/
-        date: 2020-03-05T12:00:00-07:00 # Estimate based on article date of 03/05/2020.
+        date: 2020-03-05T12:00:00Z # Estimate based on article date of 03/05/2020.
   - summary: The work-from-home policy for Microsoft employees is in effect until at least May 4.
     positivity: 1
     type: hearsay

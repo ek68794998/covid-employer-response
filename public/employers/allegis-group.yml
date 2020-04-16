@@ -1,0 +1,43 @@
+name: Allegis Group
+aliases:
+  - Aerotek
+  - Allegis Global Solutions
+  - Allegis Partners
+  - Aston Carter
+  - EASi
+  - Getting Hired
+  - Major, Lindsey & Africa
+  - MarketSource
+  - TEKsystems
+  - The Stamford Group
+wiki: Allegis Group
+image: allegis-group.png
+officialWebsite: https://www.allegisgroup.com/en/about
+industries:
+  - retail
+location:
+  city: Hanover
+  state: MD
+  country: us
+  international: true
+  wiki: Hanover, Maryland
+employeesBefore:
+  type: approximately
+  upperBound: 19000
+  year: 2018
+summary: Allegis Group has little published material about its COVID-19 response. Its subsidiary MarketSource provides paid time off for employees with a COVID-19 diagnosis; however, those taking leave without a diagnosis have been told that their jobs are at risk for doing so.
+citations:
+  - summary: Allegis Group subsidiary MarketSource has provided two weeks of paid time off for employees who have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00
+  - summary: Employees working for the MarketSource subsidiary of Allegis Group who took sick leave without a COVID-19 diagnosis have received no pay, and were even told that they may be fired if they took too much time off. Even MarketSource employees being contracted by Target are not receiving the same leave policies as Target employees.
+    positivity: -1
+    type: statement
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200413084634/https://www.buzzfeednews.com/article/katiejmbaker/target-coronavirus-outsourcing-marketsource-allegis
+        date: 2020-04-09T12:21:00-04:00

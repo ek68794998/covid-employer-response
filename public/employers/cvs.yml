@@ -1,0 +1,41 @@
+name: CVS Health Corporation
+aliases:
+  - CVS Caremark
+  - CVS Pharmacy
+shortName: CVS
+ticker: CVS
+wiki: CVS Health
+image: cvs.svg
+officialWebsite: https://cvshealth.com/about
+industries:
+  - healthCare
+  - retail
+location:
+  city: Woonsocket
+  state: RI
+  country: us
+  international: false
+  wiki: Woonsocket, Rhode Island
+employeesBefore:
+  type: approximately
+  upperBound: 300000
+  year: 2019
+summary: CVS is encouraging employees to remain at home if they are sick, but has not provided paid sick leave for employees who choose to do this, unless they get a positive COVID-19 diagnosis&mdash;despite a month-long petition asking for hazard pay and better sick leave policies.
+citations:
+  - summary: Employees have petitioned CVS to provide hazard pay or improved sick leave policies for employees during the COVID-19 pandemic, but to no response from the company. The petition has thus far received over 40,100 signatures.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Change.org
+        link: https://web.archive.org/web/20200415235520/https://www.change.org/p/cvs-update-employees-paid-sick-leave-for-illness-and-or-to-care-for-sick-family-members
+        date: 2020-03-14T12:00:00Z # Estimate based on post date of 03/14/2020.
+  - summary: CVS has provided two weeks of paid time off for employees if they or a family member test positive for COVID-19. They have requested that employees who feel ill stay home, but their policies appear to only provide *paid* leave if a positive COVID-19 diagnosis is given.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CVS Health Newsroom
+        link: https://web.archive.org/web/20200414083401/https://cvshealth.com/newsroom/press-releases/covid-19-update-workplace-policies-and-practices
+        date: 2020-03-18T12:00:00Z
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

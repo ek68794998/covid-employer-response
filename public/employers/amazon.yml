@@ -27,7 +27,7 @@ citations:
       - source: Amazon Blog
         title: COVID-19 Blog
         link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
-        date: 2020-02-28T12:00:00-07:00 # Estimate based on entry date of 02/28/2020.
+        date: 2020-02-28T12:00:00Z # Estimate based on entry date of 02/28/2020.
   - summary: Amazon requested that "all employees who can work from home to do so through April 10."
     positivity: 1
     type: publication
@@ -35,9 +35,9 @@ citations:
       - source: Amazon Blog
         title: COVID-19 Blog
         link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
-        date: 2020-03-06T12:00:00-07:00 # Estimate based on entry date of 03/06/2020.
+        date: 2020-03-06T12:00:00Z # Estimate based on entry date of 03/06/2020.
   - summary: Amazon has provided two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19. Whole Foods Market employees have received the same benefit.
-    positivity: 1
+    positivity: 0
     type: publication
     sources:
       - source: Amazon Blog
@@ -46,7 +46,7 @@ citations:
         date: 2020-03-11T20:00:12.347Z
       - source: Whole Foods Market Newsroom
         link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
-        date: 2020-03-13T12:00:00-07:00 # Estimate based on entry date of 03/13/2020.
+        date: 2020-03-13T12:00:00Z # Estimate based on entry date of 03/13/2020.
   - summary: Due to the scarcity of testing in places like New York, Amazon was asked to expand their sick leave policy to include employees who had not been able to get a positive diagnosis for COVID-19. It was only after pressure from 14 states' Attorneys General that they actually instated it.
     positivity: -1
     type: publication
@@ -95,7 +95,7 @@ citations:
     sources:
       - source: Occupational Health & Safety
         link: https://ohsonline.com/articles/2020/03/23/amazon-workers-being-worked-overtime-for-covid19.aspx
-        date: 2020-03-23T12:00:00-07:00 # Estimate based on article date of 03/23/2020.
+        date: 2020-03-23T12:00:00Z # Estimate based on article date of 03/23/2020.
   - summary: Warehouse workers at Amazon who tested positive for COVID-19 were first reported through Facebook rumors, and only several days later, and after employees confronted management, did Amazon actually confirm that their coworkers may have been exposed to the virus.
     positivity: -2
     type: statement

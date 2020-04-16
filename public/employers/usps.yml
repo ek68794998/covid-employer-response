@@ -3,7 +3,7 @@ shortName: USPS
 aliases:
   - US Mail
 wiki: United States Postal Service
-image: usps.svg
+image: usps.svg#333366
 officialWebsite: https://about.usps.com/
 industries:
   - courier
@@ -49,4 +49,4 @@ citations:
     sources:
       - source: USPS Newsroom Statements
         link: https://about.usps.com/newsroom/statements/usps-statement-on-coronavirus.htm
-        date: 2020-04-02T12:00:00-07:00 # Estimate based on post date of 04/02/2020.
+        date: 2020-04-02T12:00:00Z # Estimate based on post date of 04/02/2020.
