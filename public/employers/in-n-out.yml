@@ -1,0 +1,32 @@
+name: In-N-Out Burger
+shortName: In-N-Out
+wiki: In-N-Out Burger
+image: in-n-out.svg
+officialWebsite: https://www.in-n-out.com/ # They don't really have an 'about' page, just company history.
+industries:
+  - restaurant
+location:
+  city: Irvine
+  state: CA
+  country: us
+  international: false
+  wiki: Irvine, California
+summary: In-N-Out is generally meeting or exceeding expectations, by performing proper cleaning and food-safety procedures, and by ensuring that all employees have a full two weeks of paid sick leave.
+citations:
+  - summary: In-N-Out has met CDC requirements for health and food safety in their locations.
+    positivity: 0
+    type: publication
+    sources:
+      - source: In-N-Out corporate news
+        link: https://web.archive.org/web/20200414034235/https://www.in-n-out.com/covid-19-statement
+        date: 2020-04-10T12:00:00-07:00 # Estimate based on entry date of 2020-04-10.
+  - summary: In-N-Out has replenished all employees' sick leave to a full 80 hours (two weeks).
+    positivity: 1
+    type: publication
+    sources:
+      - source: In-N-Out corporate news
+        link: https://web.archive.org/web/20200414034235/https://www.in-n-out.com/covid-19-statement
+        date: 2020-04-10T12:00:00-07:00 # Estimate based on entry date of 2020-04-10.
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00
