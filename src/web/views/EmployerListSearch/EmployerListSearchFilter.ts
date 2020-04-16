@@ -101,7 +101,7 @@ export class EmployerListSearchFilter {
 		];
 
 		if (e.aliases) {
-			e.aliases.forEach((a: string) => fieldsToSearch.push(a));
+			e.aliases.forEach((a: string) => fieldsToSearch.push(a?.toLowerCase()));
 		}
 
 		return fieldsToSearch.some((field?: string) => field && field.indexOf(f.text.toLowerCase()) >= 0);
