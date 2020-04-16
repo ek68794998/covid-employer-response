@@ -27,7 +27,8 @@ citations:
     type: publication
     sources:
       - source: Change.org
-        link: https://web.archive.org/web/20200415235520/https://www.change.org/p/cvs-update-employees-paid-sick-leave-for-illness-and-or-to-care-for-sick-family-members # No associated date.
+        link: https://web.archive.org/web/20200415235520/https://www.change.org/p/cvs-update-employees-paid-sick-leave-for-illness-and-or-to-care-for-sick-family-members
+        date: 2020-03-14T12:00:00Z # Estimate based on post date of 03/14/2020.
   - summary: CVS has provided two weeks of paid time off for employees if they or a family member test positive for COVID-19. They have requested that employees who feel ill stay home, but their policies appear to only provide *paid* leave if a positive COVID-19 diagnosis is given.
     positivity: 0
     type: publication
