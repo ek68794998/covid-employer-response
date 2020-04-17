@@ -18,7 +18,7 @@ div.EmployerList__Container {
 	display: grid;
 	grid-auto-rows: max-content;
 	grid-gap: 16px;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 div.EmployerList__Item {
