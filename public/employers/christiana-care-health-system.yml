@@ -20,7 +20,7 @@ employeesBefore:
 summary: Though ChristianaCare claims that it follows CDC guidelines and provides PPE to its caregivers as such, it has been publicly stated that they are no longer allowing the use of N95 respirators among employees working with COVID-19 patients, despite CDC guidelines to do so.
 citations:
   - summary: ChristianaCare has said that its workers are given PPE based closely on the CDC's provided guidelines and Delaware's public health office.
-    positivity: 0
+    positivity: 1
     type: publication
     sources:
       - source: ChristianaCare
