@@ -1,0 +1,33 @@
+name: Restaurant Brands International Inc.
+aliases:
+  - Burger King
+  - Popeyes
+  - RBI
+  - Tim Hortons
+shortName: Restaurant Brands International
+ticker: QSR
+wiki: Restaurant Brands International
+image: restaurant-brands-international.svg
+officialWebsite: https://www.rbi.com/Brands
+industries:
+  - restaurant
+location:
+  city: Toronto
+  state: "ON"
+  country: ca
+  international: true
+  wiki: Toronto
+employeesBefore:
+  lowerBound: 6300 # Only covers FTEs, and maybe just corporate locations.
+  type: range
+  upperBound: 0
+  year: 2019
+summary: Restaurant Brands International corporate-owned locations have been given permission to allow employees to take paid sick leave under their managers' authority. Franchises have been left to make their own policies.
+citations:
+  - summary: Restaurant Brands International has provided managers at corporate-owned stores, under their various labels (Burger King, Popeyes, and Tim Hortons), the authority to grant two weeks' paid sick leave to employees even if there has been no COVID-19 diagnosis made.
+    positivity: 1
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

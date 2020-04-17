@@ -24,7 +24,7 @@ employeesBefore:
 summary: Though Hackensack Meridian Health has generally been shown to comply with health regulations during COVID-19, subsidiary JSUMC has been accused by union employees of firing or silencing whistleblowers and improperly rationing critical PPE.
 citations:
   - summary: Following regulations from Hackensack Meridian Health, JSUMC has tightened regulations, including restricting visitors at the complex and asking staff to self-monitor their temperatures before reporting to work.
-    positivity: 0
+    positivity: 1
     type: publication
     sources:
       - source: Patch
