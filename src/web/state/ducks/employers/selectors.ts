@@ -15,6 +15,12 @@ export const getEmployerIds =
 		&& state.employers.itemsMetadata
 		&& Object.keys(state.employers.itemsMetadata);
 
+export const getEmployerMetadata =
+	(state: AppState, id: string): EmployerRecordMetadata | undefined  =>
+		state.employers
+		&& state.employers.itemsMetadata
+		&& state.employers.itemsMetadata[id];
+
 export const getEmployersList =
 	(state: AppState): EmployerRecordMetadata[] | undefined =>
 		state.employers

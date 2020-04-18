@@ -52,8 +52,8 @@ const server: express.Application = express()
 
 		const localeCode: string = request.languageCode.toLowerCase();
 
-		const defaultLocaleData: LocalizedStrings = await localeLoader.getAsync(defaultLanguage);
-		const currentLocaleData: LocalizedStrings = await localeLoader.getAsync(localeCode);
+		const defaultLocaleData: LocalizedStrings = await localeLoader.getAsync(defaultLanguage, {});
+		const currentLocaleData: LocalizedStrings = await localeLoader.getAsync(localeCode, {});
 
 		const localeData: LocalizedStrings = deepmerge(defaultLocaleData, currentLocaleData);
 

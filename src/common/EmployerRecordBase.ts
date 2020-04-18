@@ -25,6 +25,8 @@ export abstract class EmployerRecordBase {
 
 	public officialWebsite?: string;
 
+	public parentId?: string;
+
 	public shortName?: string;
 
 	public status: EmployerStatus = "active";
@@ -46,6 +48,7 @@ export abstract class EmployerRecordBase {
 		target.location = original.location;
 		target.name = original.name;
 		target.officialWebsite = original.officialWebsite;
+		target.parentId = original.parentId;
 		target.shortName = original.shortName;
 		target.status = original.status;
 		target.summary = original.summary;

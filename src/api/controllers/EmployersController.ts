@@ -1,5 +1,6 @@
 import express from "express";
 
+import { Production } from "../../common/constants/EnvironmentConstants";
 import { EmployerRecord } from "../../common/EmployerRecord";
 import { EmployerRecordBase } from "../../common/EmployerRecordBase";
 import { HttpRequestHeaders } from "../../common/http/HttpRequestHeaders";
@@ -7,7 +8,7 @@ import { HttpResponseHeaders } from "../../common/http/HttpResponseHeaders";
 import { HttpStatusCodes } from "../../common/http/HttpStatusCodes";
 import { MimeTypes } from "../../common/MimeTypes";
 
-import { DataFileLoaderOptions } from "../storage/DataFileLoaderOptions";
+import { DataLoadOptions } from "../storage/DataLoadOptions";
 import { EmployerRecordLoader } from "../storage/EmployerRecordLoader";
 
 import { RoutedControllerBase } from "./RoutedControllerBase";
@@ -16,6 +17,8 @@ class EmployersController extends RoutedControllerBase {
 	public static readonly SUBPATH: string = "employers";
 
 	private static readonly MAX_GETEMPLOYERS_STANDARD: number = 500;
+
+	private static readonly IS_PROD: boolean = process.env.NODE_ENV === Production;
 
 	private readonly recordLoader: EmployerRecordLoader;
 
@@ -26,43 +29,62 @@ class EmployersController extends RoutedControllerBase {
 	}
 
 	public async getEmployer(req: express.Request, res: express.Response): Promise<void> {
-		const id: string | null = req.params.employerId || null;
+		const idParam: string | null = req.params.employerId || null;
 
-		if (!id) {
+		if (!idParam) {
 			res.status(HttpStatusCodes.BAD_REQUEST).send();
 
 			return;
 		}
 
-		const loaderOptions: DataFileLoaderOptions = {
-			bypassCache: !req.header(HttpRequestHeaders.IF_NONE_MATCH),
+		const loaderOptions: DataLoadOptions = {
+			bypassCache: !EmployersController.IS_PROD && !req.header(HttpRequestHeaders.IF_NONE_MATCH),
 		};
 
-		const employerRecord: EmployerRecord | null =
-			await this.recordLoader.existsAsync(id, loaderOptions)
-				? await this.recordLoader.getAsync(id, loaderOptions)
-				: null;
+		const ids: string[] = idParam.split(",");
+		const returnedEmployers: EmployerRecordBase[] = [];
 
-		if (!employerRecord) {
+		for (const id of ids) {
+			if (!(await this.recordLoader.existsAsync(id, loaderOptions))) {
+				continue;
+			}
+
+			returnedEmployers.push(await this.recordLoader.getAsync(id, loaderOptions));
+		}
+
+		if (returnedEmployers.length === 0) {
 			res.status(HttpStatusCodes.NOT_FOUND).send();
 
 			return;
 		}
 
 		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, MimeTypes.APPLICATION_JSON);
-		res.send(employerRecord);
+
+		if (returnedEmployers.length === 1) {
+			res.send(returnedEmployers[0]);
+
+			return;
+		}
+
+		res.send(returnedEmployers);
 	}
 
 	public async getEmployers(req: express.Request, res: express.Response): Promise<void> {
-		const loaderOptions: DataFileLoaderOptions = {
-			bypassCache: !req.header(HttpRequestHeaders.IF_NONE_MATCH),
+		const loaderOptions: DataLoadOptions = {
+			bypassCache: !EmployersController.IS_PROD && !req.header(HttpRequestHeaders.IF_NONE_MATCH),
 		};
 
 		const employers: EmployerRecord[] = await this.recordLoader.getAllAsync(loaderOptions);
+		const employersMap: { [key: string]: EmployerRecord } = {};
+
+		employers.forEach((e: EmployerRecord) => {
+			employersMap[e.id] = e;
+		});
+
 		const returnedEmployers: EmployerRecordBase[] = [];
 
 		for (const employerRecord of Object.values(employers)) {
-			returnedEmployers.push(EmployerRecord.toMetadata(employerRecord));
+			returnedEmployers.push(EmployerRecord.toMetadata(employerRecord, employersMap));
 
 			if (returnedEmployers.length === EmployersController.MAX_GETEMPLOYERS_STANDARD) {
 				break;

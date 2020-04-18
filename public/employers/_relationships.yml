@@ -1,0 +1,11 @@
+# If an employer is a parent company of another employer which exists on the list, that should be mapped out here.
+# The IDs used here correspond to the YML filenames of each.
+
+ahold-delhaize:
+  - giant-landover
+albertsons:
+  - safeway
+allegis-group:
+  - marketsource
+darden-restaurants:
+  - olive-garden

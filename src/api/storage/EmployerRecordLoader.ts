@@ -18,6 +18,12 @@ const readFileAsync = util.promisify(fs.readFile);
 export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 	private static readonly EMPLOYER_FILE_REGEX: RegExp = /^(.*)\.yml$/;
 
+	private static readonly RELATIONSHIP_MAP_FILE: string = "_relationships.yml";
+
+	private childToParentMap: { [key: string]: string } = {};
+
+	private parentToChildrenMap: { [key: string]: string[] } = {};
+
 	public existsAsync(id: string, options: DataLoadOptions): Promise<boolean> {
 		if (!options.bypassCache && (id in this.cachedItems || this.cachedIds.indexOf(id) >= 0)) {
 			return Promise.resolve(true);
@@ -63,12 +69,20 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 			throw new Error(`Data file with ID '${id}' not found.`);
 		}
 
+		await this.loadRelationshipMapsAsync();
+
 		const fileName: string = this.getFileName(id);
 		const fileContents: string = await readFileAsync(fileName, "UTF8");
 
 		let loadedEmployer: EmployerRecord = new EmployerRecord();
 
-		loadedEmployer = { ...loadedEmployer, id, ...yaml.parse(fileContents) };
+		loadedEmployer = {
+			...loadedEmployer,
+			id,
+			...yaml.parse(fileContents),
+			childIds: this.parentToChildrenMap[id] || [],
+			parentId: this.childToParentMap[id],
+		};
 
 		this.cachedItems[id] = loadedEmployer;
 
@@ -98,5 +112,24 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 		}
 
 		return `${this.directoryPath}/${id}.yml`;
+	}
+
+	private async loadRelationshipMapsAsync(): Promise<void> {
+		if (!fs.existsSync(this.directoryPath)) {
+			throw new Error("Employer record data folder not found.");
+		}
+
+		const fileName: string = `${this.directoryPath}/${EmployerRecordLoader.RELATIONSHIP_MAP_FILE}`;
+		const fileContents: string = await readFileAsync(fileName, "UTF8");
+
+		const relationships: { [key: string]: string[] } = yaml.parse(fileContents);
+
+		Object.keys(relationships).forEach((parentId: string) => {
+			this.parentToChildrenMap[parentId] = relationships[parentId];
+
+			relationships[parentId].forEach((childId: string) => {
+				this.childToParentMap[childId] = parentId;
+			});
+		});
 	}
 }

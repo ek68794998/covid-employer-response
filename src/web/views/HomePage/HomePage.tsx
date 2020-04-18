@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, withRouter, useHistory } from "react-router-dom";
 
-import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { AppState } from "../../state/AppState";
 import { getEmployerById } from "../../state/ducks/employers/actions";
-import { getEmployer, getEmployerIds } from "../../state/ducks/employers/selectors";
+import { getEmployerIds, getEmployerMetadata } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import BackToTopButton from "../BackToTopButton/BackToTopButton";
@@ -25,16 +25,15 @@ const HomePage: React.FC = (): React.ReactElement => {
 
 	const [ randomEmployerId, setRandomEmployerId ] = useState<string | undefined>(undefined);
 
-	const randomEmployer: EmployerRecord | undefined =
-		useSelector((state: AppState) => getEmployer(state, randomEmployerId || ""));
+	const randomEmployer: EmployerRecordMetadata | undefined =
+		useSelector((state: AppState) => getEmployerMetadata(state, randomEmployerId || ""));
 
 	const employerIds: string[] | undefined = useSelector(getEmployerIds);
 	const employerCount: number = employerIds ? employerIds.length : 0;
 
 	useEffect(
 		() => {
-			console.log("Employer IDs changed.", employerIds);
-
+			// "allegis-group"
 			setRandomEmployerId(
 				employerIds && employerIds[Math.floor(Math.random() * employerIds.length)]);
 		},
@@ -42,8 +41,6 @@ const HomePage: React.FC = (): React.ReactElement => {
 
 	useEffect(
 		() => {
-			console.log("Random changed.", randomEmployerId);
-
 			if (randomEmployerId) {
 				dispatch(getEmployerById(randomEmployerId));
 			}
@@ -84,7 +81,7 @@ const HomePage: React.FC = (): React.ReactElement => {
 				<div className="HomePage__SampleCard">
 					{randomEmployer && (
 						<EmployerListDetails
-							employer={EmployerRecord.toMetadata(randomEmployer)}
+							employer={randomEmployer}
 							onClick={(): void => push(`/employers/${randomEmployer.id}`)}
 						/>
 					)}
