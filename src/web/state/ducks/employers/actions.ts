@@ -34,7 +34,7 @@ export const getEmployerById =
 	(id: string): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
 		(dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> =>
 			getEmployerByIdApi(id).then((result: GetEmployerByIdApiResponse) => {
-				if (result.response.status === 200) {
+				if (result.employer) {
 					dispatch(getEmployerByIdSuccess(result.employer));
 				} else {
 					dispatch(getEmployerByIdError());
@@ -45,7 +45,7 @@ export const getEmployersById =
 	(ids: string[]): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
 		async (dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> => {
 			getEmployersByIdApi(ids).then((result: GetEmployersByIdApiResponse) => {
-				if (result.response.status === 200) {
+				if (result.employers) {
 					result.employers.forEach(
 						(employer: EmployerRecord) => dispatch(getEmployerByIdSuccess(employer)));
 				} else {

@@ -57,9 +57,13 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		citations.forEach((citation: Citation) => globalCitationSourceBase += citation.sources?.length || 0);
 	}
 
+	console.log([ primaryEmployer, ...linkedEmployers ]);
+
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(primaryEmployer)} />
+			{[ primaryEmployer, ...linkedEmployers ].map((e: EmployerRecord) => (
+				<EmployerDetailsHeader key={e.id} employer={EmployerRecord.toMetadata(e)} />
+			))}
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
 					<ReactMarkdown source={primaryEmployer.summary} />

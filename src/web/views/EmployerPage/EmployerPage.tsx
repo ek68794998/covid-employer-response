@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 
@@ -6,8 +6,8 @@ import { EmployerRecord } from "../../../common/EmployerRecord";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
-import { getEmployerById, getEmployersById } from "../../state/ducks/employers/actions";
-import { getEmployer, getEmployerMetadata } from "../../state/ducks/employers/selectors";
+import { getEmployerById as fetchEmployerById, getEmployersById as fetchEmployersById } from "../../state/ducks/employers/actions";
+import { getEmployer, getEmployerMetadata, getEmployersById } from "../../state/ducks/employers/selectors";
 
 import EmployerPageDetails from "../EmployerPageDetails/EmployerPageDetails";
 
@@ -22,6 +22,8 @@ type Props = RouteComponentProps<Params>;
 const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	const dispatch: React.Dispatch<any> = useDispatch();
 
+	const [ linkedEmployerIds, setLinkedEmployerIds ] = useState<string[] | undefined>(undefined);
+
 	const employerId: string = props.match.params.id;
 
 	const employerMetadata: EmployerRecordMetadata | undefined =
@@ -30,25 +32,52 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	const primaryEmployer: EmployerRecord | undefined =
 		useSelector((state: AppState) => getEmployer(state, employerId));
 
-	// TODO This is broken. Move it to individual sub-components so they can each use their own selectors.
-	const linkedEmployers: EmployerRecord[] = []; // useSelector((state: AppState) => getEmployer(state, employerId));
+	const linkedEmployers: EmployerRecord[] | undefined =
+		useSelector((state: AppState) => linkedEmployerIds && getEmployersById(state, linkedEmployerIds));
 
 	useEffect(
 		() => {
-			const ids: string[] = [ employerId ];
+			dispatch(fetchEmployerById(employerId));
+		},
+		[ employerId ]);
+
+	useEffect(
+		() => {
+			if (!employerMetadata || !primaryEmployer) {
+				setLinkedEmployerIds([]);
+
+				return;
+			}
+
+			const ids: string[] =
+				employerMetadata.parentId
+					? [ employerMetadata.parentId ]
+					: primaryEmployer.childIds;
 
 			dispatch(
 				ids.length > 1
-					? getEmployersById(ids)
-					: getEmployerById(ids[0]));
-		},
-		[ employerMetadata ]);
+					? fetchEmployersById(ids)
+					: fetchEmployerById(ids[0]));
 
-	if (!primaryEmployer) {
+			setLinkedEmployerIds(ids);
+		},
+		[ employerMetadata, primaryEmployer ]);
+
+	if (!employerMetadata) {
 		return (
 			<main id="employer-page">
 				<div className="EmployerPage__Content">
 					Not found.
+				</div>
+			</main>
+		);
+	}
+
+	if (!primaryEmployer || !linkedEmployers) {
+		return (
+			<main id="employer-page">
+				<div className="EmployerPage__Content">
+					Loading...
 				</div>
 			</main>
 		);

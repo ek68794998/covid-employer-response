@@ -2,19 +2,19 @@ import { EmployerRecord } from "../../../../common/EmployerRecord";
 import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadata";
 
 export interface GetEmployerByIdApiResponse {
-	employer: EmployerRecord;
+	employer?: EmployerRecord;
 
 	response: Response;
 }
 
 export interface GetEmployersByIdApiResponse {
-	employers: EmployerRecord[];
+	employers?: EmployerRecord[];
 
 	response: Response;
 }
 
 export interface GetEmployersListApiResponse {
-	employers: EmployerRecordMetadata[];
+	employers?: EmployerRecordMetadata[];
 
 	response: Response;
 }
@@ -22,23 +22,29 @@ export interface GetEmployersListApiResponse {
 export const getEmployerByIdApi = async (id: string): Promise<GetEmployerByIdApiResponse> => {
 	const response: Response = await fetch(`/api/employers/${id}`, { method: "GET" });
 
-	const employer: EmployerRecord = await response.json();
-
-	return {
-		employer,
+	const apiResponse: GetEmployerByIdApiResponse = {
 		response,
 	};
+
+	if (response.status === 200) {
+		apiResponse.employer = await response.json();
+	}
+
+	return apiResponse;
 };
 
 export const getEmployersByIdApi = async (ids: string[]): Promise<GetEmployersByIdApiResponse> => {
 	const response: Response = await fetch(`/api/employers/${ids.join(",")}`, { method: "GET" });
 
-	const employers: EmployerRecord[] = await response.json();
-
-	return {
-		employers,
+	const apiResponse: GetEmployersByIdApiResponse = {
 		response,
 	};
+
+	if (response.status === 200) {
+		apiResponse.employers = await response.json();
+	}
+
+	return apiResponse;
 };
 
 export const getEmployersListApi = async (): Promise<GetEmployersListApiResponse> => {

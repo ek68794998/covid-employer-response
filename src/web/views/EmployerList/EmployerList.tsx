@@ -66,7 +66,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 				<div className="EmployerList__Item" key={`${i}-${e.id}`}>
 					<EmployerListDetails
 						employer={e}
-						onClick={(): void => push(`/employers/${e.parentId || e.id}`)}
+						onClick={(): void => push(`/employers/${e.id}`)}
 					/>
 				</div>
 			))}
