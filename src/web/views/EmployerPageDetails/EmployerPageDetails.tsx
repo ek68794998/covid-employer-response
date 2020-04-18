@@ -11,6 +11,14 @@ import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeade
 
 import "./EmployerPageDetails.scss";
 
+interface CitationListData {
+	citationsFirstIndex: number;
+
+	citationsLastIndex: number;
+
+	employer: EmployerRecord;
+}
+
 interface Props extends RouteProps {
 	linkedEmployers: EmployerRecord[];
 
@@ -25,20 +33,14 @@ const citationSort = (a: Citation, b: Citation): number => {
 	return (b.sources ? b.sources.length : 0) - (a.sources ? a.sources.length : 0);
 };
 
-const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement | null => {
-	const { linkedEmployers, primaryEmployer } = props;
-
-	if (!primaryEmployer) {
-		return null;
-	}
-
-	let globalCitationSourceBase: number = 1;
-
+const getCitationList = (data: CitationListData): JSX.Element => {
 	const components: Partial<{ [key in CitationType]: JSX.Element | null }> = {};
+
+	data.citationsLastIndex = data.citationsFirstIndex;
 
 	for (const type of [ "publication", "statement", "hearsay" ]) {
 		const citations: Citation[] =
-			primaryEmployer.citations
+			data.employer.citations
 				.filter((citation: Citation) => citation.type === type)
 				.sort(citationSort);
 
@@ -49,29 +51,59 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		components[type] = (
 			<EmployerCitationList
 				citations={citations}
-				citationSourceBase={globalCitationSourceBase}
+				citationSourceBase={data.citationsLastIndex}
 				citationType={type as CitationType}
 			/>
 		);
 
-		citations.forEach((citation: Citation) => globalCitationSourceBase += citation.sources?.length || 0);
+		const citationCount: number =
+			citations.reduce(
+				(prev: number, curr: Citation) => prev + (curr.sources?.length || 0),
+				data.citationsFirstIndex);
+
+		data.citationsLastIndex += citationCount;
 	}
 
-	console.log([ primaryEmployer, ...linkedEmployers ]);
+	return (
+		<>
+			{components.publication}
+			{components.statement}
+			{components.hearsay}
+		</>
+	);
+};
+
+const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement | null => {
+	const { linkedEmployers, primaryEmployer } = props;
+
+	if (!primaryEmployer) {
+		return null;
+	}
 
 	return (
 		<div className="EmployerPageDetails__Container">
-			{[ primaryEmployer, ...linkedEmployers ].map((e: EmployerRecord) => (
-				<EmployerDetailsHeader key={e.id} employer={EmployerRecord.toMetadata(e)} />
-			))}
+			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(primaryEmployer)} />
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
 					<ReactMarkdown source={primaryEmployer.summary} />
 				</div>
-				{components.publication}
-				{components.statement}
-				{components.hearsay}
 			</div>
+			{getCitationList({
+				citationsFirstIndex: 1,
+				citationsLastIndex: 1,
+				employer: primaryEmployer,
+			})}
+			<br />
+			{linkedEmployers.map((e: EmployerRecord) => (
+				<>
+					<EmployerDetailsHeader key={e.id} employer={EmployerRecord.toMetadata(e)} />
+					{getCitationList({
+						citationsFirstIndex: 1,
+						citationsLastIndex: 1,
+						employer: primaryEmployer,
+					})}
+				</>
+			))}
 		</div>
 	);
 };
