@@ -50,10 +50,13 @@ export const getEmployersByIdApi = async (ids: string[]): Promise<GetEmployersBy
 export const getEmployersListApi = async (): Promise<GetEmployersListApiResponse> => {
 	const response: Response = await fetch("/api/employers", { method: "GET" });
 
-	const employers: EmployerRecordMetadata[] = await response.json();
-
-	return {
-		employers,
+	const apiResponse: GetEmployersListApiResponse = {
 		response,
 	};
+
+	if (response.status === 200) {
+		apiResponse.employers = await response.json();
+	}
+
+	return apiResponse;
 };

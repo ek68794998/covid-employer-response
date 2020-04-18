@@ -66,7 +66,7 @@ export const getEmployersListSuccess = (payload: EmployerRecordMetadata[]): GetE
 export const getEmployersList =
 	(dispatch: React.Dispatch<GetEmployersListActionTypes>): Promise<void> =>
 		getEmployersListApi().then((result: GetEmployersListApiResponse) => {
-			if (result.response.status === 200) {
+			if (result.employers) {
 				dispatch(getEmployersListSuccess(result.employers));
 			} else {
 				dispatch(getEmployersListError());
