@@ -1,0 +1,37 @@
+name: Christiana Care Health System
+shortName: ChristianaCare
+wiki: Christiana Care Health System
+image: christiana-care-health-system.svg
+officialWebsite: https://christianacare.org/about/
+industries:
+  - healthCare
+location:
+  city: Wilmington
+  state: DE
+  country: us
+  international: false
+  wiki: Wilmington, Delaware
+employeesBefore:
+  source: ChristianaCare "Who We Are"
+  sourceLink: https://christianacare.org/about/whoweare/
+  type: exactly
+  upperBound: 11856
+  year: 2018
+summary: Though ChristianaCare claims that it follows CDC guidelines and provides PPE to its caregivers as such, it has been publicly stated that they are no longer allowing the use of N95 respirators among employees working with COVID-19 patients, despite CDC guidelines to do so.
+citations:
+  - summary: ChristianaCare has said that its workers are given PPE based closely on the CDC's provided guidelines and Delaware's public health office.
+    positivity: 1
+    type: publication
+    sources:
+      - source: ChristianaCare
+        link: https://web.archive.org/web/20200417000018/https://news.christianacare.org/2020/04/protecting-our-caregivers/
+        date: 2020-04-15T19:49:23-04:00
+  - summary: Statements by employees at ChristianaCare subsidiaries say that caregivers working with COVID-19 patients have been forbidden to wear N95 respirators, saying, "It was written on our huddle board in the morning that airborne precautions are no longer needed." This is backed by an official statement from the chief infection prevention officer, saying the data "really doesn't support that using an N95 is necessary." This decision was apparently made based on data from the WHO and the CDC, despite the CDC issuing a statement telling all individuals to wear facial protection.
+    positivity: -2
+    type: publication
+    sources:
+      - source: WDEL News
+        link: https://web.archive.org/web/20200416225517/https://www.wdel.com/news/wilmington-hospital-nurse-walks-off-job-after-being-forbidden-from-wearing-n95-mask-to-treat/article_26e5121a-7e6c-11ea-b441-a34a3ebd8f96.html
+        date: 2020-04-15T05:15:00-04:00
+      - source: CDC
+        link: https://web.archive.org/web/20200416145611/https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover.html # Unknown date; changes frequently.

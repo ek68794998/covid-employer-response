@@ -1,0 +1,33 @@
+name: Dunkin' Brands Group, Inc.
+aliases:
+  - Dunkin' Donuts
+  - Baskin Robbins
+shortName: Dunkin' Brands
+ticker: DNKN
+wiki: Dunkin' Brands
+image: dunkin-brands.png
+officialWebsite: https://freshmarketstores.com/about-us
+industries:
+  - coffeeShop
+  - restaurant
+location:
+  city: Canton
+  state: MA
+  country: us
+  international: true
+  wiki: Canton, Massachusetts
+employeesBefore:
+  type: approximately
+  upperBound: 1163 # Only covers FTEs, and maybe just corporate locations.
+  year: 2016
+summary: Dunkin' has no corporate sick-leave policy, but does not prevent franchises from making their own leave policies.
+citations:
+  - summary: Dunkin' has stated that it has no corporate sick leave policy despite COVID-19, though franchisees are able to make their own business decisions regarding paid leave for their employees.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Eater
+        link: https://web.archive.org/web/20200403081720/https://www.eater.com/2020/3/16/21181862/are-mcdonalds-starbucks-and-other-chains-offering-paid-sick-leave-for-coronavirus # Unknown date. Constantly updated.
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

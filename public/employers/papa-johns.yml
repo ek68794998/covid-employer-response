@@ -1,0 +1,35 @@
+name: Papa John's Pizza, Inc.
+shortName: Papa John's
+ticker: PZZA
+wiki: Papa John's Pizza
+image: papa-johns.svg#077954
+officialWebsite: https://www.papajohns.com/company/
+industries:
+  - restaurant
+location:
+  city: Jeffersontown
+  state: KY
+  country: us
+  international: true
+  wiki: Jeffersontown, Kentucky
+employeesBefore:
+  type: approximately
+  upperBound: 16500
+  year: 2019
+  yearQuarter: Q4
+summary: Though Papa John's franchises are permitted to make their own policies, the company's corporate procedures allow for above-average sick-leave policies. Papa John's has also been shown to comply with CDC guidelines when it comes to handling employees diagnosed with COVID-19.
+citations:
+  - summary: After a Papa John's employee was diagnosed with COVID-19, the company thoroughly cleaned the location according to CDC guidelines. There has been no word on if the location was closed or how employees have been compensated.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CBS2 Idaho News
+        link: https://web.archive.org/web/20200406122239/https://idahonews.com/news/coronavirus/meridian-papa-johns-employee-tests-positive-for-covid-19
+        date: 2020-04-05T19:51:07Z
+  - summary: Papa John's has provided managers at corporate-owned stores the authority to grant two weeks' paid sick leave to employees even if there has been no COVID-19 diagnosis made.
+    positivity: 1
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00
