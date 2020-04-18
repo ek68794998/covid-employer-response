@@ -4,8 +4,8 @@ import { EmployerRecord } from "../../common/EmployerRecord";
 import { HttpRequestHeaders } from "../../common/http/HttpRequestHeaders";
 import { HttpResponseHeaders } from "../../common/http/HttpResponseHeaders";
 import { MimeTypes } from "../../common/MimeTypes";
-import { DataFileLoaderOptions } from "../storage/DataFileLoaderOptions";
 
+import { DataLoadOptions } from "../storage/DataLoadOptions";
 import { EmployerRecordLoader } from "../storage/EmployerRecordLoader";
 
 import { RoutedControllerBase } from "./RoutedControllerBase";
@@ -22,7 +22,7 @@ class EmployersController extends RoutedControllerBase {
 	}
 
 	public async getIndustries(req: express.Request, res: express.Response): Promise<void> {
-		const loaderOptions: DataFileLoaderOptions = {
+		const loaderOptions: DataLoadOptions = {
 			bypassCache: !req.header(HttpRequestHeaders.IF_NONE_MATCH),
 		};
 

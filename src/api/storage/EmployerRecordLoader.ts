@@ -5,7 +5,7 @@ import yaml from "yaml";
 import { EmployerRecord } from "../../common/EmployerRecord";
 
 import { CachedDataFileLoader } from "./CachedDataFileLoader";
-import { DataFileLoaderOptions } from "./DataFileLoaderOptions";
+import { DataLoadOptions } from "./DataLoadOptions";
 
 // Type definition from 'promisify' is very complex, so ignore those.
 // eslint-disable-next-line @typescript-eslint/tslint/config
@@ -18,7 +18,7 @@ const readFileAsync = util.promisify(fs.readFile);
 export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 	private static readonly EMPLOYER_FILE_REGEX: RegExp = /^(.*)\.yml$/;
 
-	public existsAsync(id: string, options: DataFileLoaderOptions): Promise<boolean> {
+	public existsAsync(id: string, options: DataLoadOptions): Promise<boolean> {
 		if (!options.bypassCache && (id in this.cachedItems || this.cachedIds.indexOf(id) >= 0)) {
 			return Promise.resolve(true);
 		}
@@ -26,7 +26,7 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 		return existsAsync(this.getFileName(id));
 	}
 
-	public async getAllIdsAsync(options: DataFileLoaderOptions): Promise<string[]> {
+	public async getAllIdsAsync(options: DataLoadOptions): Promise<string[]> {
 		if (!options.bypassCache && this.cachedIds.length > 0) {
 			return this.cachedIds;
 		}
@@ -54,7 +54,7 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 		return ids;
 	}
 
-	public async getAsync(id: string, options: DataFileLoaderOptions): Promise<EmployerRecord> {
+	public async getAsync(id: string, options: DataLoadOptions): Promise<EmployerRecord> {
 		if (!options.bypassCache && id in this.cachedItems) {
 			return this.cachedItems[id];
 		}
@@ -75,7 +75,7 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 		return loadedEmployer;
 	}
 
-	public async getAllAsync(options: DataFileLoaderOptions): Promise<EmployerRecord[]> {
+	public async getAllAsync(options: DataLoadOptions): Promise<EmployerRecord[]> {
 		const employerRecordIds: string[] =
 			options.bypassCache || this.cachedIds.length === 0
 				? await this.getAllIdsAsync(options)

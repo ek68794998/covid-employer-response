@@ -1,4 +1,4 @@
-import { DataFileLoaderOptions } from "./DataFileLoaderOptions";
+import { DataLoadOptions } from "./DataLoadOptions";
 
 export abstract class DataFileLoader<T> {
 	protected directoryPath: string;
@@ -15,11 +15,11 @@ export abstract class DataFileLoader<T> {
 		this.directoryPath = `${publicDirectory}/${subdirectoryName}`;
 	}
 
-	public abstract existsAsync(id: string, options: DataFileLoaderOptions): Promise<boolean>;
+	public abstract existsAsync(id: string, options: DataLoadOptions): Promise<boolean>;
 
-	public abstract getAllAsync(options: DataFileLoaderOptions): Promise<T[]>;
+	public abstract getAllAsync(options: DataLoadOptions): Promise<T[]>;
 
-	public abstract getAllIdsAsync(options: DataFileLoaderOptions): Promise<string[]>;
+	public abstract getAllIdsAsync(options: DataLoadOptions): Promise<string[]>;
 
-	public abstract getAsync(id: string, options: DataFileLoaderOptions): Promise<T>;
+	public abstract getAsync(id: string, options: DataLoadOptions): Promise<T>;
 }
