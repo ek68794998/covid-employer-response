@@ -3,14 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
-import { getEmployer } from "../../state/ducks/employers/selectors";
+import { getEmployerById, getEmployersById } from "../../state/ducks/employers/actions";
+import { getEmployer, getEmployerMetadata } from "../../state/ducks/employers/selectors";
 
 import EmployerPageDetails from "../EmployerPageDetails/EmployerPageDetails";
 
 import "./EmployerPage.scss";
-import { getEmployerById } from "../../state/ducks/employers/actions";
 
 interface Params {
 	id: string;
@@ -23,16 +24,27 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	const employerId: string = props.match.params.id;
 
-	const employer: EmployerRecord | undefined =
+	const employerMetadata: EmployerRecordMetadata | undefined =
+		useSelector((state: AppState) => getEmployerMetadata(state, employerId));
+
+	const primaryEmployer: EmployerRecord | undefined =
 		useSelector((state: AppState) => getEmployer(state, employerId));
+
+	// TODO This is broken. Move it to individual sub-components so they can each use their own selectors.
+	const linkedEmployers: EmployerRecord[] = []; // useSelector((state: AppState) => getEmployer(state, employerId));
 
 	useEffect(
 		() => {
-			dispatch(getEmployerById(employerId));
-		},
-		[ employerId ]);
+			const ids: string[] = [ employerId ];
 
-	if (!employer) {
+			dispatch(
+				ids.length > 1
+					? getEmployersById(ids)
+					: getEmployerById(ids[0]));
+		},
+		[ employerMetadata ]);
+
+	if (!primaryEmployer) {
 		return (
 			<main id="employer-page">
 				<div className="EmployerPage__Content">
@@ -45,7 +57,10 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	return (
 		<main id="employer-page">
 			<div className="EmployerPage__Content">
-				<EmployerPageDetails employer={employer} />
+				<EmployerPageDetails
+					linkedEmployers={linkedEmployers}
+					primaryEmployer={primaryEmployer}
+				/>
 			</div>
 		</main>
 	);

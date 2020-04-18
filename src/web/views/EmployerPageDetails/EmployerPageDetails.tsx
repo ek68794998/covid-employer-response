@@ -12,7 +12,9 @@ import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeade
 import "./EmployerPageDetails.scss";
 
 interface Props extends RouteProps {
-	employer: EmployerRecord;
+	linkedEmployers: EmployerRecord[];
+
+	primaryEmployer: EmployerRecord;
 }
 
 const citationSort = (a: Citation, b: Citation): number => {
@@ -24,9 +26,9 @@ const citationSort = (a: Citation, b: Citation): number => {
 };
 
 const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement | null => {
-	const { employer } = props;
+	const { linkedEmployers, primaryEmployer } = props;
 
-	if (!employer) {
+	if (!primaryEmployer) {
 		return null;
 	}
 
@@ -36,7 +38,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 
 	for (const type of [ "publication", "statement", "hearsay" ]) {
 		const citations: Citation[] =
-			employer.citations
+			primaryEmployer.citations
 				.filter((citation: Citation) => citation.type === type)
 				.sort(citationSort);
 
@@ -57,10 +59,10 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(employer)} />
+			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(primaryEmployer)} />
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
-					<ReactMarkdown source={employer.summary} />
+					<ReactMarkdown source={primaryEmployer.summary} />
 				</div>
 				{components.publication}
 				{components.statement}

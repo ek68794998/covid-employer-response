@@ -30,7 +30,7 @@ describe("<EmployerPageDetails />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerPageDetails employer={new EmployerRecord()} />
+						<EmployerPageDetails linkedEmployers={[]} primaryEmployer={new EmployerRecord()} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
@@ -70,7 +70,7 @@ describe("<EmployerPageDetails />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerPageDetails employer={e} />
+						<EmployerPageDetails linkedEmployers={[]} primaryEmployer={e} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
