@@ -8,7 +8,7 @@ $icon-size: 32px;
 $padding-interior: 12px;
 $padding-sides: 16px;
 
-.EmployerListDetails__Container {
+.EmployerListItemDetailed__Container {
 	background: $background;
 	border: 1px solid $body-color;
 	border-radius: $border-radius;
@@ -43,7 +43,7 @@ $padding-sides: 16px;
 	}
 }
 
-.EmployerListDetails__Summary {
+.EmployerListItemDetailed__Summary {
 	cursor: pointer;
 	flex: 1;
 	font-size: 14px;
@@ -55,7 +55,7 @@ $padding-sides: 16px;
 		margin: 0;
 	}
 
-	.EmployerListDetails__OverflowScreen {
+	.EmployerListItemDetailed__OverflowScreen {
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -65,13 +65,13 @@ $padding-sides: 16px;
 	}
 }
 
-.EmployerListDetails__Actions {
+.EmployerListItemDetailed__Actions {
 	display: flex;
 	font-family: 'Baloo Chettan 2';
 	justify-content: flex-end;
 	margin: 3px 0 0;
 
-	a.EmployerListDetails__ReadMore {
+	a.EmployerListItemDetailed__ReadMore {
 		align-items: center;
 		display: flex;
 		flex: 1;

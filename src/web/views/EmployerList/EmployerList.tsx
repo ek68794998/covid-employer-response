@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RouteProps, useHistory } from "react-router-dom";
+import React from "react";
+import { useSelector } from "react-redux";
+import { RouteProps } from "react-router-dom";
 
-import { EmployerRecord } from "../../../common/EmployerRecord";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
-import { AppState } from "../../state/AppState";
-import { getEmployer, getEmployersList } from "../../state/ducks/employers/selectors";
+import { getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
-import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";
+import EmployerListItemDetailed from "../EmployerListItemDetailed/EmployerListItemDetailed";
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 
 import "./EmployerList.scss";
@@ -19,16 +17,8 @@ interface Props extends RouteProps {
 }
 
 const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
-	const dispatch: React.Dispatch<any> = useDispatch();
-
-	const { push } = useHistory();
-
 	const strings: LocalizedStrings = useSelector(getStrings);
-	const [ openEmployerId, setOpenEmployerId ] = useState("");
 	const employersList: EmployerRecordMetadata[] | undefined = useSelector(getEmployersList);
-
-	const openEmployer: EmployerRecord | undefined =
-		useSelector((state: AppState) => getEmployer(state, openEmployerId));
 
 	const { searchFilter } = props;
 
@@ -64,10 +54,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 		<div className="EmployerList__Container">
 			{filteredEmployers.map((e: EmployerRecordMetadata, i: number): JSX.Element => (
 				<div className="EmployerList__Item" key={`${i}-${e.id}`}>
-					<EmployerListDetails
-						employer={e}
-						onClick={(): void => push(`/employers/${e.id}`)}
-					/>
+					<EmployerListItemDetailed employerId={e.id} />
 				</div>
 			))}
 		</div>

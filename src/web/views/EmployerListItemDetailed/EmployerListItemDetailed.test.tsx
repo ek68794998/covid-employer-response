@@ -10,7 +10,7 @@ import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import EmployerListDetails from "./EmployerListDetails";
+import EmployerListItemDetailed from "./EmployerListItemDetailed";
 
 jest.mock(
 	"../EmployerDetailsHeader/EmployerDetailsHeader",
@@ -20,9 +20,14 @@ jest.mock(
 	"../EmployerActionLinks/EmployerActionLinks",
 	() => mockComponent("EmployerActionLinks"));
 
-describe("<EmployerListDetails />", () => {
+describe("<EmployerListItemDetailed />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
+			employers: {
+				itemsMetadata: {
+					foo: new EmployerRecordMetadata(0, 0, "fair"),
+				},
+			},
 			strings: {
 				readMore: ploc("readMore"),
 			},
@@ -32,8 +37,8 @@ describe("<EmployerListDetails />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListDetails
-							employer={new EmployerRecordMetadata(0, 0, "fair")}
+						<EmployerListItemDetailed
+							employerId={"foo"}
 							onClick={(): void => { /* Do nothing. */ }}
 						/>
 					</BrowserRouter>

@@ -18,8 +18,8 @@ import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSear
 import EmployerList from "./EmployerList";
 
 jest.mock(
-	"../EmployerListDetails/EmployerListDetails",
-	() => mockComponent("EmployerListDetails"));
+	"../EmployerListItemDetailed/EmployerListItemDetailed",
+	() => mockComponent("EmployerListItemDetailed"));
 
 jest.mock(
 	"../EmployerPageDetails/EmployerPageDetails",

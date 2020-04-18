@@ -10,6 +10,7 @@ import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
 import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";
 
 import "./EmployerPageDetails.scss";
+import EmployerListItemDetailed from "../EmployerListItemDetailed/EmployerListItemDetailed";
 
 interface CitationListData {
 	citationsFirstIndex: number;
@@ -20,9 +21,7 @@ interface CitationListData {
 }
 
 interface Props extends RouteProps {
-	linkedEmployers: EmployerRecord[];
-
-	primaryEmployer: EmployerRecord;
+	employer: EmployerRecord;
 }
 
 const citationSort = (a: Citation, b: Citation): number => {
@@ -74,36 +73,39 @@ const getCitationList = (data: CitationListData): JSX.Element => {
 };
 
 const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement | null => {
-	const { linkedEmployers, primaryEmployer } = props;
+	const { employer } = props;
 
-	if (!primaryEmployer) {
+	if (!employer) {
 		return null;
 	}
 
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(primaryEmployer)} />
+			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(employer)} />
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
-					<ReactMarkdown source={primaryEmployer.summary} />
+					<ReactMarkdown source={employer.summary} />
 				</div>
 			</div>
 			{getCitationList({
 				citationsFirstIndex: 1,
 				citationsLastIndex: 1,
-				employer: primaryEmployer,
+				employer,
 			})}
-			<br />
-			{linkedEmployers.map((e: EmployerRecord) => (
+			{employer.parentId && (
 				<>
-					<EmployerDetailsHeader key={e.id} employer={EmployerRecord.toMetadata(e)} />
-					{getCitationList({
-						citationsFirstIndex: 1,
-						citationsLastIndex: 1,
-						employer: primaryEmployer,
-					})}
+					<h2>Parent</h2>
+					<EmployerListItemDetailed employerId={employer.parentId} />
 				</>
-			))}
+			)}
+			{employer.childIds.length > 0 && (
+				<>
+					<h2>Subsidiaries</h2>
+					{employer.childIds.map((id: string) => (
+						<EmployerListItemDetailed key={id} employerId={id} />
+					))}
+				</>
+			)}
 		</div>
 	);
 };
