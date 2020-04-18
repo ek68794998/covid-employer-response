@@ -6,7 +6,7 @@ describe("EmployerRecordLoader", () => {
 			new EmployerRecordLoader("./not-real", "employers");
 
 		expect(loader.getAllIdsAsync({})).rejects.toBeInstanceOf(Error);
-		expect(loader.getAsync("sample", {})).rejects.toBeInstanceOf(Error);
+		expect(loader.getAsync("_sample", {})).rejects.toBeInstanceOf(Error);
 		expect(loader.getAllAsync({})).rejects.toBeInstanceOf(Error);
 	});
 

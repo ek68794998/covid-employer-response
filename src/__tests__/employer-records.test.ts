@@ -41,7 +41,7 @@ describe("employer records", () => {
 	test.each(
 		recordIds.map((recordId: string) => [ recordId ]),
 	)("can load and parse %p (%#)", async (id: string) => {
-		if (id === "sample") {
+		if (id === "_sample") {
 			// The sample file has some invalid dates, etc., so don't include it here.
 			return;
 		}
@@ -192,9 +192,9 @@ describe("employer records", () => {
 	});
 
 	test("have correct sample data", async () => {
-		const record: EmployerRecord = await loader.getAsync("sample", {});
+		const record: EmployerRecord = await loader.getAsync("_sample", {});
 
-		expect(record.id).toBe("sample");
+		expect(record.id).toBe("_sample");
 		expect(record.name).toBe("Contoso");
 		expect(record.aliases?.[0]).toBe("MyContoso");
 		expect(record.aliases?.[1]).toBe("TheContoso");

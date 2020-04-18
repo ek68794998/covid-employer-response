@@ -4,7 +4,7 @@ Each `yml` ([YAML](https://yaml.org/)) file in this directory each represents an
 
 ### Creating a data file
 
-We recommend you make a copy of `sample.yml` and adjust it to fit your needs. The name of the file should be the employer's name in all lowercase with spaces replaced by `-`.
+We recommend you make a copy of `_sample.yml` and adjust it to fit your needs. The name of the file should be the employer's name in all lowercase with spaces replaced by `-`.
 
 ### Fields
 

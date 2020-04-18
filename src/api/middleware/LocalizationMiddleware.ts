@@ -30,7 +30,7 @@ export class LocalizationMiddleware {
 
 	public async invokeAsync(req: express.Request, res: express.Response, next: express.NextFunction): Promise<void> {
 		if (!req.header(HttpRequestHeaders.IF_NONE_MATCH) || this.supportedLanguages.length === 0) {
-			this.supportedLanguages = await this.localeLoader.getAllIdsAsync();
+			this.supportedLanguages = await this.localeLoader.getAllIdsAsync({});
 		}
 
 		const request: HttpRequest = req as HttpRequest;

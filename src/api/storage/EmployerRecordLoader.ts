@@ -47,7 +47,7 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 
 					return recordId || "";
 				})
-				.filter((recordId: string): boolean => recordId.length > 0 && recordId !== "sample");
+				.filter((recordId: string): boolean => recordId.length > 0 && !recordId.startsWith("_"));
 
 		this.cachedIds = ids;
 
