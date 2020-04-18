@@ -59,3 +59,13 @@ citations:
       - source: McDonald's company news
         link: https://news.mcdonalds.com/news-release/news-release-details/McDelivery-UberEats-DoorDash%20
         date: 2020-03-25T12:00:00Z # Estimate based on article date of 03/25/2020.
+  - summary: McDonald's corporate-owned stores require a quarantine ordered by either a doctor or the government to claim paid sick leave during the COVID-19 crisis.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Eater
+        link: https://web.archive.org/web/20200317144435/https://www.eater.com/2020/3/11/21173868/mcdonalds-darden-restaurants-will-provide-paid-time-off-during-coronavirus-pandemic-update
+        date: 2020-03-11T21:34:06Z
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00
