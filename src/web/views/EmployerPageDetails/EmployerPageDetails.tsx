@@ -1,16 +1,21 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationType } from "../../../common/CitationType";
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
+
+import { AppState } from "../../state/AppState";
+import { getEmployerMetadata } from "../../state/ducks/employers/selectors";
 
 import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
 import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";
+import EmployerListItemDetailed from "../EmployerListItemDetailed/EmployerListItemDetailed";
 
 import "./EmployerPageDetails.scss";
-import EmployerListItemDetailed from "../EmployerListItemDetailed/EmployerListItemDetailed";
 
 interface CitationListData {
 	citationsFirstIndex: number;
@@ -75,13 +80,16 @@ const getCitationList = (data: CitationListData): JSX.Element => {
 const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement | null => {
 	const { employer } = props;
 
-	if (!employer) {
+	const employerMetadata: EmployerRecordMetadata | undefined =
+		useSelector((state: AppState) => getEmployerMetadata(state, employer?.id));
+
+	if (!employer || !employerMetadata) {
 		return null;
 	}
 
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={EmployerRecord.toMetadata(employer)} />
+			<EmployerDetailsHeader employer={employerMetadata} />
 			<div className="EmployerPageDetails__Body">
 				<div className="EmployerPageDetails__Summary">
 					<ReactMarkdown source={employer.summary} />
