@@ -5,6 +5,7 @@ import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationSource } from "../../../common/CitationSource";
+import { DesignHelpers } from "../../../common/DesignHelpers";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -26,16 +27,18 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 		(s: CitationSource, i: number): JSX.Element => {
 			const date: Date | null = s.date ? new Date(s.date) : null;
 
-			let title: string = s.title ? `${s.source}: ${s.title}` : s.source;
+			let title: string = s.title ? `${s.source}: "${s.title}"` : s.source;
 
 			if (date) {
 				title = `${title} (${date.toLocaleDateString()} ${date.toLocaleTimeString()})`;
 			}
 
 			return (
-				<a key={i} href={s.link} rel="noopener noreferrer" target="_blank" title={title}>
-					&nbsp;({s.source})
-				</a>
+				<span className="EmployerCitation__ReferenceContainer">
+					<a key={i} href={s.link} rel="noopener noreferrer" target="_blank" title={title}>
+						{s.source}
+					</a>
+				</span>
 			);
 		};
 
@@ -50,6 +53,11 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 		indicatorIcon = citation.positivity < -1 ? "remove_circle" : "remove_circle_outline";
 	}
 
+	const icon: string =
+		citation.type === "publication"
+			? "description"
+			: (citation.type === "statement" ? "how_to_reg" : "hearing");
+
 	const iconClass: string =
 		`material-icons EmployerCitation__Indicator EmployerCitation__Indicator--${indicatorClass}`;
 
@@ -58,9 +66,15 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 			<i className={iconClass}>{indicatorIcon}</i>
 			<span className="EmployerCitation__Summary">
 				<ReactMarkdown source={citation.summary} />
-				{citation.sources && (
+				{citation.sources && citation.sources.length && (
 					<span className="EmployerCitation__References">
-						[{strings.citationTypes[citation.type]} via{citation.sources.map(getLinkComponent)}]
+						<span title={strings.citationTypes[citation.type]}>{DesignHelpers.materialIcon(icon)}</span>
+						{citation.sources.map(getLinkComponent)}
+					</span>
+				)}
+				{(!citation.sources || !citation.sources.length) && (
+					<span className="EmployerCitation__References">
+						<span title={strings.citationTypes[citation.type]}>{DesignHelpers.materialIcon(icon)}</span>
 					</span>
 				)}
 			</span>
