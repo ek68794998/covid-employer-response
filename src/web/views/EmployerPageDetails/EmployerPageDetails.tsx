@@ -4,26 +4,20 @@ import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
-import { CitationType } from "../../../common/CitationType";
+import { DesignHelpers } from "../../../common/DesignHelpers";
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
+import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { AppState } from "../../state/AppState";
 import { getEmployerMetadata } from "../../state/ducks/employers/selectors";
+import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
-import EmployerDetailsHeader from "../EmployerDetailsHeader/EmployerDetailsHeader";
 import EmployerListItemDetailed from "../EmployerListItemDetailed/EmployerListItemDetailed";
 
 import "./EmployerPageDetails.scss";
-
-interface CitationListData {
-	citationsFirstIndex: number;
-
-	citationsLastIndex: number;
-
-	employer: EmployerRecord;
-}
 
 interface Props extends RouteProps {
 	employer: EmployerRecord;
@@ -37,47 +31,9 @@ const citationSort = (a: Citation, b: Citation): number => {
 	return (b.sources ? b.sources.length : 0) - (a.sources ? a.sources.length : 0);
 };
 
-const getCitationList = (data: CitationListData): JSX.Element => {
-	const components: Partial<{ [key in CitationType]: JSX.Element | null }> = {};
-
-	data.citationsLastIndex = data.citationsFirstIndex;
-
-	for (const type of [ "publication", "statement", "hearsay" ]) {
-		const citations: Citation[] =
-			data.employer.citations
-				.filter((citation: Citation) => citation.type === type)
-				.sort(citationSort);
-
-		if (citations.length === 0) {
-			continue;
-		}
-
-		components[type] = (
-			<EmployerCitationList
-				citations={citations}
-				citationSourceBase={data.citationsLastIndex}
-				citationType={type as CitationType}
-			/>
-		);
-
-		const citationCount: number =
-			citations.reduce(
-				(prev: number, curr: Citation) => prev + (curr.sources?.length || 0),
-				data.citationsFirstIndex);
-
-		data.citationsLastIndex += citationCount;
-	}
-
-	return (
-		<>
-			{components.publication}
-			{components.statement}
-			{components.hearsay}
-		</>
-	);
-};
-
 const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement | null => {
+	const strings: LocalizedStrings = useSelector(getStrings);
+
 	const { employer } = props;
 
 	const employerMetadata: EmployerRecordMetadata | undefined =
@@ -87,19 +43,38 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		return null;
 	}
 
+	const logoImageRegex: RegExpExecArray | null =
+		employer.image ? EmployerRecordBase.IMAGE_REGEX.exec(employer.image) : null;
+
 	return (
 		<div className="EmployerPageDetails__Container">
-			<EmployerDetailsHeader employer={employerMetadata} />
-			<div className="EmployerPageDetails__Body">
-				<div className="EmployerPageDetails__Summary">
-					<ReactMarkdown source={employer.summary} />
+			<div className="EmployerPageDetails__Header">
+				{logoImageRegex && (
+					<img
+						className="EmployerPageDetails__Icon"
+						src={`/images/employers/${logoImageRegex[1]}`}
+						style={{ background: logoImageRegex[2] || "#fff" }}
+					/>
+				)}
+				<h1 className="EmployerPageDetails__Title">
+					{employer.shortName || employer.name}
+				</h1>
+				<div className={`EmployerPageDetails__Rating EmployerPageDetails__Rating--${employerMetadata.rating}`}>
+					{strings.ratingLabels[employerMetadata.rating]}
+					{DesignHelpers.materialIcon(EmployerRecordMetadata.getTrendIcon(employerMetadata))}
 				</div>
 			</div>
-			{getCitationList({
-				citationsFirstIndex: 1,
-				citationsLastIndex: 1,
-				employer,
-			})}
+			<div className="EmployerPageDetails__Summary">
+				<ReactMarkdown source={employer.summary} />
+			</div>
+			{employer.shortName && (
+				<span className="EmployerPageDetails__Subtitle">
+					Officially known as <em>{employer.name}</em>.
+				</span>
+			)}
+
+			<EmployerCitationList citations={employer.citations.sort(citationSort)} />
+
 			{employer.parentId && (
 				<>
 					<h2>Parent</h2>

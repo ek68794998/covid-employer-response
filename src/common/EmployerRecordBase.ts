@@ -1,7 +1,6 @@
 import { EmployerEmployeeProfile } from "./EmployerEmployeeProfile";
 import { EmployerIndustry } from "./EmployerIndustry";
 import { EmployerLocation } from "./EmployerLocation";
-import { EmployerRating } from "./EmployerRating";
 import { EmployerStatus } from "./EmployerStatus";
 
 export abstract class EmployerRecordBase {
@@ -36,8 +35,6 @@ export abstract class EmployerRecordBase {
 	public ticker?: string;
 
 	public wiki?: string;
-
-	public abstract get rating(): EmployerRating;
 
 	public static copyTo(original: EmployerRecordBase, target: EmployerRecordBase): void {
 		target.aliases = original.aliases;

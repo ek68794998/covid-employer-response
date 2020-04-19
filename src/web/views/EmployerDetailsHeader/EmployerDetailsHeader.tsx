@@ -139,22 +139,6 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const { employer, onClickEmployerName, useShortText } = props;
 
-	let indicatorIcon: "trending_up" | "trending_flat" | "trending_down";
-
-	switch (employer.rating) {
-		case "good":
-			indicatorIcon = "trending_up";
-			break;
-
-		case "poor":
-			indicatorIcon = "trending_down";
-			break;
-
-		case "fair":
-		default:
-			indicatorIcon = "trending_flat";
-	}
-
 	const displayName: string = useShortText && employer.shortName || employer.name;
 
 	const employerNameComponent: JSX.Element =
@@ -186,7 +170,8 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 					title={strings.detailDescriptions.rating}
 				>
 					{strings.ratingLabels[employer.rating]}
-					<i className="material-icons EmployerDetailsHeader__RatingIcon">{indicatorIcon}</i>
+					{DesignHelpers.materialIcon(
+						EmployerRecordMetadata.getTrendIcon(employer), "EmployerDetailsHeader__RatingIcon")}
 				</span>
 			</div>
 			<div className="EmployerDetailsHeader__Subtitle">

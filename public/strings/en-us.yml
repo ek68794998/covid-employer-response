@@ -30,8 +30,8 @@ citationTypeDescriptions:
   statement: Published statements from employees (former, anonymous, or otherwise).
   hearsay: Word-of-mouth, rumors, or unconfirmed information.
 citationTypes:
-  publication: Publications
-  statement: Statements
+  publication: Publication
+  statement: Statement
   hearsay: Hearsay
 countryNames:
   af: Afghanistan

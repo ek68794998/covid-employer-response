@@ -1,9 +1,13 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { CitationSource } from "../../../common/CitationSource";
+import { LocalizedStrings } from "../../../common/LocalizedStrings";
+
+import { getStrings } from "../../state/ducks/localization/selectors";
 
 import "./EmployerCitation.scss";
 
@@ -12,12 +16,11 @@ type Neutrality = "Neutral" | "Positive" | "Negative";
 
 interface Props extends RouteProps {
 	citation: Citation;
-
-	citationSourceBase: number;
 }
 
 const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => {
-	const { citation, citationSourceBase } = props;
+	const strings: LocalizedStrings = useSelector(getStrings);
+	const { citation } = props;
 
 	const getLinkComponent =
 		(s: CitationSource, i: number): JSX.Element => {
@@ -29,7 +32,11 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 				title = `${title} (${date.toLocaleDateString()} ${date.toLocaleTimeString()})`;
 			}
 
-			return <a key={i} href={s.link} rel="noopener noreferrer" target="_blank" title={title}>[{i + citationSourceBase}]</a>;
+			return (
+				<a key={i} href={s.link} rel="noopener noreferrer" target="_blank" title={title}>
+					&nbsp;({s.source})
+				</a>
+			);
 		};
 
 	let indicatorClass: Neutrality = "Neutral";
@@ -51,7 +58,11 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 			<i className={iconClass}>{indicatorIcon}</i>
 			<span className="EmployerCitation__Summary">
 				<ReactMarkdown source={citation.summary} />
-				{citation.sources && <span className="EmployerCitation__References">{citation.sources.map(getLinkComponent)}</span>}
+				{citation.sources && (
+					<span className="EmployerCitation__References">
+						[{strings.citationTypes[citation.type]} via{citation.sources.map(getLinkComponent)}]
+					</span>
+				)}
 			</span>
 		</div>
 	);

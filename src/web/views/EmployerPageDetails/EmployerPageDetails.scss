@@ -1,24 +1,106 @@
+@import "../Colors.scss";
 @import "../Dimensions.scss";
 
-$padding-interior: 18px;
+$padding-interior: 12px;
 
-div.EmployerPageDetails__Container {
-	font-size: 16px;
+.EmployerPageDetails__Header {
+	align-items: center;
+	display: flex;
+	gap: 15px;
+}
 
-	a.EmployerActionLinks__Link {
-		opacity: 1.0 !important;
+.EmployerPageDetails__Title {
+	flex: 1;
+	font: 100 64px 'Baloo Chettan 2';
+	margin: 0;
+	overflow: hidden;
+	padding: 0 12px;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	a {
+		align-items: center;
+		color: inherit !important;
+		display: flex;
 	}
 
-	.EmployerDetailsHeader__Subtitle {
-		margin-bottom: 6px;
+	i {
+		position: absolute;
+		visibility: hidden;
+	}
+
+	&:hover i {
+		visibility: visible;
 	}
 }
 
-div.EmployerPageDetails__Body > div {
-	margin-top: $padding-interior;
+.EmployerPageDetails__Rating {
+	align-items: center;
+	background: $indicator-neutral;
+	color: #fff;
+	cursor: default;
+	display: flex;
 
-	&.EmployerPageDetails__Summary {
-		line-height: 180%;
-		margin-top: 6px;
+	&.EmployerPageDetails__Rating--good {
+		background: $indicator-positive;
 	}
+
+	&.EmployerPageDetails__Rating--poor {
+		background: $indicator-negative;
+	}
+}
+
+.EmployerPageDetails__Summary {
+	font-size: 18px;
+	line-height: 170%;
+	padding: 0 15% $padding-interior;
+	text-align: center;
+}
+
+@mixin scaled-page($scale-base, $icon-multiplier, $pill-multiplier) {
+	.EmployerPageDetails__Icon {
+		border-radius: ($scale-base * $icon-multiplier);
+		height: ($scale-base * $icon-multiplier) * 2;
+		width: ($scale-base * $icon-multiplier) * 2;
+	}
+
+	.EmployerPageDetails__Title {
+		i {
+			font-size: ($scale-base / 1.5);
+			left: -($scale-base * 1.75);
+			padding: ($scale-base * 5 / 7);
+		}
+	}
+
+	.EmployerPageDetails__Rating {
+		border-radius: ($scale-base * $pill-multiplier);
+		font: 600 ($scale-base * $pill-multiplier * 0.5) 'Baloo Chettan 2';
+		height: ($scale-base * $pill-multiplier);
+		padding: 0 ($scale-base * $pill-multiplier / 2);
+	
+		i {
+			font-size: ($scale-base * $pill-multiplier * 0.75);
+			line-height: 0;
+			margin-left: 12px;
+		}
+	}
+}
+
+@include scaled-page(48px, 0.6, 1.0);
+
+@media (max-width: $body-narrow-width) {
+	.EmployerPageDetails__Header {
+		flex-direction: column;
+	}
+
+	.EmployerPageDetails__Title {
+		font-size: 56px;
+		line-height: 100%;
+		margin: $padding-interior 0;
+		text-align: center;
+		white-space: normal;
+	}
+
+	@include scaled-page(32px, 1.2, 1.5);
 }

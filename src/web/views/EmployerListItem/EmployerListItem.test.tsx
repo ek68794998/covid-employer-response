@@ -5,31 +5,31 @@ import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { mockComponent, ploc } from "../../../__tests__/TestUtils";
-import { Citation } from "../../../common/Citation";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import EmployerCitationList from "./EmployerCitationList";
+import EmployerListItem from "./EmployerListItem";
 
 jest.mock(
-	"../EmployerCitation/EmployerCitation",
-	() => mockComponent("EmployerCitation"));
+	"../EmployerDetailsHeader/EmployerDetailsHeader",
+	() => mockComponent("EmployerDetailsHeader"));
 
-describe("<EmployerCitationList />", () => {
+jest.mock(
+	"../EmployerActionLinks/EmployerActionLinks",
+	() => mockComponent("EmployerActionLinks"));
+
+describe("<EmployerListItem />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
+			employers: {
+				itemsMetadata: {
+					foo: new EmployerRecordMetadata(0, 0, "fair"),
+				},
+			},
 			strings: {
-				citationTypeDescriptions: {
-					hearsay: ploc("hearsayDescription"),
-					publication: ploc("publicationDescription"),
-					statement: ploc("statementDescription"),
-				},
-				citationTypes: {
-					hearsay: ploc("hearsay"),
-					publication: ploc("publication"),
-					statement: ploc("statement"),
-				},
+				readMore: ploc("readMore"),
 			},
 		});
 
@@ -37,10 +37,9 @@ describe("<EmployerCitationList />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerCitationList
-							citations={[ new Citation() ]}
-							citationSourceBase={0}
-							title={"Pros"}
+						<EmployerListItem
+							employerId={"foo"}
+							onClick={(): void => { /* Do nothing. */ }}
 						/>
 					</BrowserRouter>
 				</Provider>,

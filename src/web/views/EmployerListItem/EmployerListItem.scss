@@ -1,0 +1,85 @@
+@import "../Colors.scss";
+@import "../Dimensions.scss";
+
+$body-color: $outline-color;
+$border-radius: 12px;
+$card-shadow-color: rgba(0, 0, 0, 0.2);
+$icon-size: 32px;
+$padding-interior: 12px;
+$padding-sides: 16px;
+
+.EmployerListItem__Container {
+	background: $background;
+	border: 1px solid $body-color;
+	border-radius: $border-radius;
+	box-shadow: 0 0 0 $card-shadow-color;
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	height: 250px;
+	padding: $padding-interior $padding-sides;
+	transition: 0.1s all;
+	width: 100%;
+
+	&:hover {
+		box-shadow: 0px 3px 6px $card-shadow-color;
+		transform: translateY(-1px);
+
+		.EmployerDetailsHeader__AggregateRatings {
+			opacity: 1.0;
+		}
+
+		a.EmployerActionLinks__Link {
+			opacity: 1.0;
+		}
+	}
+
+	.EmployerDetailsHeader__Title h2 {
+		flex: 1;
+	}
+
+	.EmployerDetailsHeader__TitleGap {
+		display: none;
+	}
+}
+
+.EmployerListItem__Summary {
+	cursor: pointer;
+	flex: 1;
+	font-size: 14px;
+	line-height: 180%;
+	overflow-y: hidden;
+	position: relative;
+
+	p {
+		margin: 0;
+	}
+
+	.EmployerListItem__OverflowScreen {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 30px;
+		background: linear-gradient(to top, $background, rgba(255, 255, 255, 0));
+	}
+}
+
+.EmployerListItem__Actions {
+	display: flex;
+	font-family: 'Baloo Chettan 2';
+	justify-content: flex-end;
+	margin: 3px 0 0;
+
+	a.EmployerListItem__ReadMore {
+		align-items: center;
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+		margin-right: 0;
+
+		i {
+			margin-left: 4px;
+		}
+	}
+}
