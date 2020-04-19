@@ -36,6 +36,10 @@ $scale-base: 16px;
 	.EmployerListItem__RatingText {
 		align-items: center;
 		display: flex;
+
+		.EmployerListItem__RatingIcon {
+			margin-left: 8px;
+		}
 	}
 
 	&.EmployerListItem__Rating--fair .EmployerListItem__RatingText {

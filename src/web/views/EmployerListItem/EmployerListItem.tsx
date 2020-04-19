@@ -52,7 +52,7 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 				<span className="EmployerListItem__RatingText">
 					{strings.ratingLabels[employer.rating]}
 					{DesignHelpers.materialIcon(
-						EmployerRecordMetadata.getTrendIcon(employer), "EmployerDetailsHeader__RatingIcon")}
+						EmployerRecordMetadata.getTrendIcon(employer), "EmployerListItem__RatingIcon")}
 				</span>
 			</div>
 		);

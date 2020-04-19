@@ -169,8 +169,8 @@ $padding-interior: 12px;
 
 	.EmployerPageDetails__Title {
 		font-size: 56px;
-		line-height: 100%;
-		margin: $padding-interior 0;
+		line-height: 110%;
+		margin: ($padding-interior / 2) 0 $padding-interior;
 		text-align: center;
 		white-space: normal;
 	}
