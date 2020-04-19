@@ -15,11 +15,16 @@ describe("<EmployerLogo />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
+		const employer: EmployerRecord = {
+			...new EmployerRecord(),
+			image: "test.svg#123",
+		};
+
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerLogo employer={new EmployerRecord()} />
+						<EmployerLogo employer={employer} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

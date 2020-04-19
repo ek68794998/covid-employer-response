@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent } from "../../../__tests__/TestUtils";
+import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
 import { AppState } from "../../state/AppState";
@@ -20,11 +20,44 @@ jest.mock(
 	"../EmployerCitationList/EmployerCitationList",
 	() => mockComponent("EmployerCitationList"));
 
+jest.mock(
+	"../EmployerListItem/EmployerListItem",
+	() => mockComponent("EmployerListItem"));
+
 describe("<EmployerPageDetails />", () => {
-	const createConfigStore = (): Store<AppState, AnyAction> => configureStore({});
+	const createConfigStore = (preloaded: Partial<AppState> = {}): Store<AppState, AnyAction> => configureStore({
+		strings: {
+			detailDescriptions: {
+				aka: ploc("aka"),
+				employees: ploc("employees"),
+				linkToEmployer: ploc("linkToEmployer"),
+				location: ploc("location"),
+				rating: ploc("rating"),
+				ratingCounts: ploc("ratingCounts"),
+				ticker: ploc("ticker"),
+			},
+			ratingLabels: {
+				fair: ploc("fair"),
+				good: ploc("good"),
+				poor: ploc("poor"),
+			},
+		},
+		...preloaded,
+	});
 
 	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+		const e: EmployerRecord = new EmployerRecord();
+
+		const store: Store<AppState, AnyAction> = createConfigStore({
+			employers: {
+				itemsComplete: {
+					[e.id]: e,
+				},
+				itemsMetadata: {
+					[e.id]: EmployerRecord.toMetadata(e),
+				},
+			},
+		});
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
@@ -39,8 +72,6 @@ describe("<EmployerPageDetails />", () => {
 	});
 
 	test("renders using an employer record", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
-
 		const e: EmployerRecord =
 			Object.assign(new EmployerRecord(), {
 				citations: [{
@@ -65,6 +96,17 @@ describe("<EmployerPageDetails />", () => {
 				name: "Contoso",
 				summary: "Contoso is a good company.",
 			});
+
+		const store: Store<AppState, AnyAction> = createConfigStore({
+			employers: {
+				itemsComplete: {
+					[e.id]: e,
+				},
+				itemsMetadata: {
+					[e.id]: EmployerRecord.toMetadata(e),
+				},
+			},
+		});
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

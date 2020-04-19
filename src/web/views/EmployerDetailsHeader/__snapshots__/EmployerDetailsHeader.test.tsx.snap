@@ -6,7 +6,7 @@ Array [
     className="EmployerDetailsHeader__Title EmployerDetailsHeader__Title--noShort"
   >
     <img
-      className="EmployerDetailsHeader__Icon"
+      className="EmployerLogo__Image"
       src="/images/employers/consoto.svg"
       style={
         Object {

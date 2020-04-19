@@ -39,7 +39,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
         </span>
       </a>
       <div
-        className="HeaderMenu__BrandLarge"
+        className="HeaderMenu__Subtitle"
       >
         áƥƥTïƭℓè
       </div>

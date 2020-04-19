@@ -1,19 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<EmployerCitationList /> renders without exploding 1`] = `
-<div>
-  <h3
-    className="EmployerCitationList__Header"
-    title="ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ"
-  >
-    ƥúβℓïçáƭïôñ
-  </h3>
-  <ul
-    className="EmployerCitationList__Citations"
-  >
-    <li>
-      [component: EmployerCitation citation=([object Object]) citationSourceBase=(undefined) /]
-    </li>
-  </ul>
-</div>
+<ul
+  className="EmployerCitationList__Citations"
+>
+  <li>
+    [component: EmployerCitation citation=([object Object]) /]
+  </li>
+</ul>
 `;

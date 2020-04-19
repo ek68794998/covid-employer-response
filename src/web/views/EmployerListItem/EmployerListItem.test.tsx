@@ -29,6 +29,11 @@ describe("<EmployerListItem />", () => {
 				},
 			},
 			strings: {
+				ratingLabels: {
+					fair: ploc("fair"),
+					good: ploc("good"),
+					poor: ploc("poor"),
+				},
 				readMore: ploc("readMore"),
 			},
 		});

@@ -4,20 +4,118 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
 <div
   className="EmployerPageDetails__Container"
 >
-  [component: EmployerDetailsHeader employer=([object Object]) /]
   <div
-    className="EmployerPageDetails__Body"
+    className="EmployerPageDetails__Header"
+  >
+    <img
+      className="EmployerLogo__Image"
+      src="/images/employers/consoto.svg"
+      style={
+        Object {
+          "background": "#fff",
+        }
+      }
+    />
+    <h1
+      className="EmployerPageDetails__Title"
+    >
+      Contoso
+    </h1>
+    <div
+      className="EmployerPageDetails__Rating EmployerPageDetails__Rating--fair"
+    >
+      ƒáïř
+      <i
+        className="material-icons"
+      >
+        trending_flat
+      </i>
+    </div>
+  </div>
+  <div
+    className="EmployerPageDetails__Summary"
+  >
+    <p>
+      Contoso is a good company.
+    </p>
+  </div>
+  [component: EmployerCitationList citations=([object Object],[object Object],[object Object]) /]
+  <div
+    className="EmployerPageDetails__MetaFooter"
   >
     <div
-      className="EmployerPageDetails__Summary"
+      className="EmployerPageDetails__Profile"
     >
-      <p>
-        Contoso is a good company.
-      </p>
+      <h2 />
+      <table
+        className="EmployerPageDetails__ProfileDetails"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="EmployerPageDetails__ProfileLabel"
+            >
+              <i
+                className="material-icons"
+              >
+                work
+              </i>
+            </td>
+            <td
+              className="EmployerPageDetails__ProfileValue"
+            >
+              Contoso
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="EmployerPageDetails__ProfileLabel"
+              title="ℓôçáƭïôñ"
+            >
+              <img
+                className="EmployerPageDetails__ProfileFlag"
+                src="/images/flags/us.svg"
+              />
+            </td>
+            <td
+              className="EmployerPageDetails__ProfileValue"
+            >
+              <a
+                href=""
+              >
+                City, us (Multinational)
+                 
+                <i
+                  className="material-icons"
+                >
+                  launch
+                </i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="EmployerPageDetails__ProfileLabel"
+              title="è₥ƥℓô¥èèƨ"
+            >
+              <i
+                className="material-icons"
+              >
+                people
+              </i>
+            </td>
+            <td
+              className="EmployerPageDetails__ProfileValue"
+            >
+              12,345 (2015)
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    [component: EmployerCitationList citations=([object Object]) citationSourceBase=(1) citationType=(publication) /]
-    [component: EmployerCitationList citations=([object Object]) citationSourceBase=(2) citationType=(statement) /]
-    [component: EmployerCitationList citations=([object Object]) citationSourceBase=(3) citationType=(hearsay) /]
+    <div
+      className="EmployerPageDetails__LinkedCompanies"
+    />
   </div>
 </div>
 `;
@@ -26,12 +124,61 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
 <div
   className="EmployerPageDetails__Container"
 >
-  [component: EmployerDetailsHeader employer=([object Object]) /]
   <div
-    className="EmployerPageDetails__Body"
+    className="EmployerPageDetails__Header"
+  >
+    <h1
+      className="EmployerPageDetails__Title"
+    >
+      
+    </h1>
+    <div
+      className="EmployerPageDetails__Rating EmployerPageDetails__Rating--fair"
+    >
+      ƒáïř
+      <i
+        className="material-icons"
+      >
+        trending_flat
+      </i>
+    </div>
+  </div>
+  <div
+    className="EmployerPageDetails__Summary"
+  />
+  [component: EmployerCitationList citations=() /]
+  <div
+    className="EmployerPageDetails__MetaFooter"
   >
     <div
-      className="EmployerPageDetails__Summary"
+      className="EmployerPageDetails__Profile"
+    >
+      <h2 />
+      <table
+        className="EmployerPageDetails__ProfileDetails"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="EmployerPageDetails__ProfileLabel"
+            >
+              <i
+                className="material-icons"
+              >
+                work
+              </i>
+            </td>
+            <td
+              className="EmployerPageDetails__ProfileValue"
+            >
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="EmployerPageDetails__LinkedCompanies"
     />
   </div>
 </div>

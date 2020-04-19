@@ -21,7 +21,7 @@ describe("<AboutPage />", () => {
 			strings: {
 				about: ploc("about"),
 				aboutSectionHeaders: {
-					citationTypes: `${ploc("citationTypesHeader")}: {publication} / {statement} / {hearsay}`,
+					citationTypes: ploc("citationTypesHeader"),
 					claimProcessing: ploc("claimProcessingHeader"),
 					contributing: ploc("contributingHeader"),
 					employerRatings: ploc("employerRatingsHeader"),
@@ -34,7 +34,7 @@ describe("<AboutPage />", () => {
 					claimProcessing: ploc("claimProcessingParagraph"),
 					contributing: `${ploc("contributingParagraph")}: {app} / {githubUrl}`,
 					employerRatings: ploc("employerRatingsParagraph"),
-					reportsAndClaims: `${ploc("reportsAndClaimsParagraph")}: {publication}`,
+					reportsAndClaims: ploc("reportsAndClaimsParagraph"),
 					submitClaims: `${ploc("submitClaimsParagraph")}: {submit}`,
 					whatIs: `${ploc("whatIsParagraph")}: {app} / {appFullName} / {covidWikiUrl} / {githubUrl} / {pandemicWikiUrl}`,
 				},

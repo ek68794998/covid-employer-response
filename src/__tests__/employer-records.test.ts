@@ -41,8 +41,8 @@ describe("employer records", () => {
 	test.each(
 		recordIds.map((recordId: string) => [ recordId ]),
 	)("can load and parse %p (%#)", async (id: string) => {
-		if (id === "_sample") {
-			// The sample file has some invalid dates, etc., so don't include it here.
+		if (id.startsWith("_")) {
+			// Sample and metadata files cannot be parsed as records.
 			return;
 		}
 
@@ -126,8 +126,8 @@ describe("employer records", () => {
 			return fail(`Employer summary for ${id} contains invalid punctuation or capitalization.`);
 		}
 
-		if (!record.citations || record.citations.length === 0) {
-			return fail(`Citations list for ${id} must not be empty.`);
+		if (record.childIds.length === 0 && (!record.citations || record.citations.length === 0)) {
+			return fail(`Citations list for (non-parent) ${id} must not be empty.`);
 		}
 
 		for (let i: number = 1; i <= record.citations.length; i++) {

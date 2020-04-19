@@ -2,6 +2,12 @@ import React from "react";
 
 export class DesignHelpers {
 	public static materialIcon(iconName: string, className?: string): JSX.Element {
-		return <i className={`material-icons ${className || ""}`}>{iconName}</i>;
+		const classes: string[] = [ "material-icons" ];
+
+		if (className) {
+			classes.push(className);
+		}
+
+		return <i className={classes.join(" ")}>{iconName}</i>;
 	}
 }
