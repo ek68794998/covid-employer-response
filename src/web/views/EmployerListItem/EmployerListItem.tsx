@@ -35,8 +35,15 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 	const employer: EmployerRecordMetadata | undefined =
 		useSelector((state: AppState) => getEmployerMetadata(state, employerId));
 
+	const containerClass: string =
+		`EmployerListItem__Container EmployerListItem__Container--${showDetails ? "Detailed" : "Simple"}`;
+
 	if (!employer) {
-		return null; // TODO
+		return (
+			<div className={`${containerClass} EmployerListItem__Container--NotFound`}>
+				{strings.notFound}
+			</div>
+		);
 	}
 
 	const onClickEvent: () => void = onClick || ((): void => push(`/employers/${employer.id}`));
@@ -44,7 +51,7 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 	if (!showDetails) {
 		return (
 			<div
-				className={`EmployerListItem__Container EmployerListItem__Container--Simple EmployerListItem__Rating--${employer.rating}`}
+				className={`${containerClass} EmployerListItem__Rating--${employer.rating}`}
 				onClick={onClickEvent}
 			>
 				<EmployerLogo employer={employer} />
@@ -59,7 +66,7 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 	}
 
 	return (
-		<div className="EmployerListItem__Container EmployerListItem__Container--Detailed">
+		<div className={containerClass}>
 			<EmployerDetailsHeader employer={employer} onClickEmployerName={onClickEvent} useShortText={true} />
 			<div className="EmployerListItem__Summary" onClick={onClickEvent}>
 				<ReactMarkdown source={employer.summary} />

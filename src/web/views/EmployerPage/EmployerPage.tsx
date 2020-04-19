@@ -3,11 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { AppState } from "../../state/AppState";
 import { getEmployerById as fetchEmployerById } from "../../state/ducks/employers/actions";
-import { getEmployer } from "../../state/ducks/employers/selectors";
+import { getEmployer, getEmployerMetadata, getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerPageDetails from "../EmployerPageDetails/EmployerPageDetails";
@@ -26,6 +27,12 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	const employerId: string = props.match.params.id;
 
+	const hasLoadedEmployers: boolean =
+		useSelector((state: AppState) => !!getEmployersList(state)?.length);
+
+	const employerExists: boolean =
+		useSelector((state: AppState) => !!getEmployerMetadata(state, employerId));
+
 	const employer: EmployerRecord | undefined =
 		useSelector((state: AppState) => getEmployer(state, employerId));
 
@@ -35,12 +42,20 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 		},
 		[ employerId ]);
 
-	if (!employer) {
-		// TODO This doubles as a 404, and shouldn't.
-
+	if (hasLoadedEmployers && !employerExists) {
 		return (
 			<main id="employer-page">
-				<div className="EmployerPage__Content">
+				<div className="EmployerPage__Content EmployerPage__Content--NotFound">
+					{strings.notFound}
+				</div>
+			</main>
+		);
+	}
+
+	if (!hasLoadedEmployers || !employer) {
+		return (
+			<main id="employer-page">
+				<div className="EmployerPage__Content EmployerPage__Content--Loading">
 					{strings.loading}
 				</div>
 			</main>
@@ -50,9 +65,7 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	return (
 		<main id="employer-page">
 			<div className="EmployerPage__Content">
-				<EmployerPageDetails
-					employer={employer}
-				/>
+				<EmployerPageDetails employer={employer} />
 			</div>
 		</main>
 	);
