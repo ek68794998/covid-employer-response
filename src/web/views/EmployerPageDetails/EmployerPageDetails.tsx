@@ -70,7 +70,13 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				e.id,
 				EmployerRecordBase.calculateRelationshipStrength(employerMetadata, e),
 			])
-			.filter((value: [string, number]) => employer.childIds.indexOf(value[0]) < 0 && value[1] > 0)
+			.filter((value: [string, number]) => {
+				if (employer.parentId === value[0] || employer.childIds.indexOf(value[0]) >= 0) {
+					return false;
+				}
+
+				return value[1] > 0;
+			})
 			.sort((a: [string, number], b: [string, number]) => {
 				if (a[1] === b[1]) {
 					return Math.random() - 0.5;
