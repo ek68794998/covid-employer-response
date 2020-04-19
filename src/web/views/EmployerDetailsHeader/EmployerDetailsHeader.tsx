@@ -13,6 +13,7 @@ import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerActionLinks from "../EmployerActionLinks/EmployerActionLinks";
+import EmployerLogo from "../EmployerLogo/EmployerLogo";
 
 import "./EmployerDetailsHeader.scss";
 
@@ -152,13 +153,7 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 	return (
 		<>
 			<div className={`EmployerDetailsHeader__Title ${useShortText ? "" : "EmployerDetailsHeader__Title--noShort"}`}>
-				{logoImageRegex && (
-					<img
-						className="EmployerDetailsHeader__Icon"
-						src={`/images/employers/${logoImageRegex[1]}`}
-						style={{ background: logoImageRegex[2] || "#fff" }}
-					/>
-				)}
+				<EmployerLogo employer={employer} />
 				<h2>
 					{employerNameComponent}
 					{!useShortText && getTickerComponent(employer, strings)}

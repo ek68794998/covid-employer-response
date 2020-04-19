@@ -15,7 +15,8 @@ import { getEmployerMetadata } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerCitationList from "../EmployerCitationList/EmployerCitationList";
-import EmployerListItemDetailed from "../EmployerListItemDetailed/EmployerListItemDetailed";
+import EmployerListItem from "../EmployerListItem/EmployerListItem";
+import EmployerLogo from "../EmployerLogo/EmployerLogo";
 
 import "./EmployerPageDetails.scss";
 
@@ -43,19 +44,10 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		return null;
 	}
 
-	const logoImageRegex: RegExpExecArray | null =
-		employer.image ? EmployerRecordBase.IMAGE_REGEX.exec(employer.image) : null;
-
 	return (
 		<div className="EmployerPageDetails__Container">
 			<div className="EmployerPageDetails__Header">
-				{logoImageRegex && (
-					<img
-						className="EmployerPageDetails__Icon"
-						src={`/images/employers/${logoImageRegex[1]}`}
-						style={{ background: logoImageRegex[2] || "#fff" }}
-					/>
-				)}
+				<EmployerLogo employer={employer} />
 				<h1 className="EmployerPageDetails__Title">
 					{employer.shortName || employer.name}
 				</h1>
@@ -78,14 +70,14 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			{employer.parentId && (
 				<>
 					<h2>Parent</h2>
-					<EmployerListItemDetailed employerId={employer.parentId} />
+					<EmployerListItem employerId={employer.parentId} />
 				</>
 			)}
 			{employer.childIds.length > 0 && (
 				<>
 					<h2>Subsidiaries</h2>
 					{employer.childIds.map((id: string) => (
-						<EmployerListItemDetailed key={id} employerId={id} />
+						<EmployerListItem key={id} employerId={id} />
 					))}
 				</>
 			)}

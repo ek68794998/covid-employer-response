@@ -5,13 +5,6 @@ $flag-size: 20px;
 $icon-size: 32px;
 $padding-interior: 12px;
 
-.EmployerDetailsHeader__Icon {
-	border-radius: ($icon-size / 2) ($icon-size / 2);
-	height: $icon-size;
-	margin-right: ($padding-interior / 2);
-	width: $icon-size;
-}
-
 .EmployerDetailsHeader__Location img {
 	background: #a1a1a1;
 	border-radius: 4px;
@@ -40,6 +33,13 @@ $padding-interior: 12px;
 		+ .EmployerActionLinks__Link {
 			margin-left: 12px;
 		}
+	}
+
+	.EmployerLogo__Image {
+		border-radius: ($icon-size / 2) ($icon-size / 2);
+		height: $icon-size;
+		margin-right: ($padding-interior / 2);
+		width: $icon-size;
 	}
 
 	.EmployerDetailsHeader__TitleGap {

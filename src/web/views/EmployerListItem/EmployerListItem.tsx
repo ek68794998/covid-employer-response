@@ -41,13 +41,6 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 	return (
 		<div className={`EmployerListItem__Container EmployerListItem__Rating--${employer.rating}`}>
 			<EmployerDetailsHeader employer={employer} onClickEmployerName={onClickEvent} useShortText={true} />
-			<div className="EmployerListItem__Actions">
-				<EmployerActionLinks employer={employer} />
-				<a className="EmployerListItem__ReadMore" onClick={onClickEvent}>
-					{strings.readMore}
-					{DesignHelpers.materialIcon("fullscreen")}
-				</a>
-			</div>
 		</div>
 	);
 };
