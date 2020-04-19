@@ -64,7 +64,7 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 	return (
 		<div className="EmployerCitation__Container">
 			<i className={iconClass}>{indicatorIcon}</i>
-			<span className="EmployerCitation__Summary">
+			<div className="EmployerCitation__Summary">
 				<ReactMarkdown source={citation.summary} />
 				{citation.sources && citation.sources.length && (
 					<span className="EmployerCitation__References">
@@ -77,7 +77,7 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 						<span title={strings.citationTypes[citation.type]}>{DesignHelpers.materialIcon(icon)}</span>
 					</span>
 				)}
-			</span>
+			</div>
 		</div>
 	);
 };
