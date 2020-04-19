@@ -44,17 +44,22 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 	if (!showDetails) {
 		return (
 			<div
-				className={`EmployerListItem__Container EmployerListItem__Rating--${employer.rating}`}
+				className={`EmployerListItem__Container EmployerListItem__Container--Simple EmployerListItem__Rating--${employer.rating}`}
 				onClick={onClickEvent}
 			>
 				<EmployerLogo employer={employer} />
-				{employer.name}
+				<span className="EmployerListItem__Name">{employer.name}</span>
+				<span className="EmployerListItem__RatingText">
+					{strings.ratingLabels[employer.rating]}
+					{DesignHelpers.materialIcon(
+						EmployerRecordMetadata.getTrendIcon(employer), "EmployerDetailsHeader__RatingIcon")}
+				</span>
 			</div>
 		);
 	}
 
 	return (
-		<div className="EmployerListItem__Container">
+		<div className="EmployerListItem__Container EmployerListItem__Container--Detailed">
 			<EmployerDetailsHeader employer={employer} onClickEmployerName={onClickEvent} useShortText={true} />
 			<div className="EmployerListItem__Summary" onClick={onClickEvent}>
 				<ReactMarkdown source={employer.summary} />

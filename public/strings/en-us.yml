@@ -363,6 +363,7 @@ industries:
 loading: Loading...
 more: "{number} more"
 noResults: No results.
+notFound: Not found.
 ratingLabels:
   poor: Poor
   fair: Fair
