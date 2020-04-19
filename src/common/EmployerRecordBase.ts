@@ -76,9 +76,12 @@ export abstract class EmployerRecordBase {
 			score += 100;
 		}
 
-		if (a.location && b.location) {
-			score += a.location.international === b.location.international ? 1 : 0;
-			score += a.location.country === b.location.country ? (a.location.city === b.location.city ? 5 : 3) : 0;
+		if (a.location && b.location && a.location.country === b.location.country) {
+			score +=
+				a.location.state === b.location.state
+					? ((a.location.international === b.location.international ? 1 : 0)
+						+ (a.location.city === b.location.city ? 5 : 3))
+					: 0;
 		}
 
 		return score;
