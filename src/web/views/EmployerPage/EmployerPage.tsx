@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
-import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { AppState } from "../../state/AppState";

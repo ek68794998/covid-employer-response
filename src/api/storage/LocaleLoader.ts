@@ -19,10 +19,18 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 	private static readonly LOCALE_FILE_REGEX: RegExp = /^(.*)\.yml$/;
 
 	public existsAsync(id: string, options: DataLoadOptions): Promise<boolean> {
+		if (options.bypassCache) {
+			console.error("Caching is not supported for locale file loading.");
+		}
+
 		return existsAsync(this.getFileName(id));
 	}
 
 	public async getAllIdsAsync(options: DataLoadOptions): Promise<string[]> {
+		if (options.bypassCache) {
+			console.error("Caching is not supported for locale file loading.");
+		}
+
 		if (!fs.existsSync(this.directoryPath)) {
 			throw new Error("Locale record data folder not found.");
 		}
@@ -42,6 +50,10 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 	}
 
 	public async getAsync(id: string, options: DataLoadOptions): Promise<LocalizedStrings> {
+		if (options.bypassCache) {
+			console.error("Caching is not supported for locale file loading.");
+		}
+
 		if (!(await this.existsAsync(id, options))) {
 			throw new Error(`Data file with ID '${id}' not found.`);
 		}
@@ -56,6 +68,10 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 	}
 
 	public async getAllAsync(options: DataLoadOptions): Promise<LocalizedStrings[]> {
+		if (options.bypassCache) {
+			console.error("Caching is not supported for locale file loading.");
+		}
+
 		const loadedLocales: LocalizedStrings[] = [];
 
 		const LocalizedStringsIds: string[] = await this.getAllIdsAsync(options);

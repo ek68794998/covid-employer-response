@@ -1,7 +1,7 @@
 import { DataFileLoader } from "./DataFileLoader";
 
 class MockDataFileLoader extends DataFileLoader<string> {
-	public existsAsync(id: string): Promise<boolean> {
+	public existsAsync(): Promise<boolean> {
 		throw new Error("Method not implemented.");
 	}
 
@@ -13,7 +13,7 @@ class MockDataFileLoader extends DataFileLoader<string> {
 		throw new Error("Method not implemented.");
 	}
 
-	public getAsync(id: string): Promise<string> {
+	public getAsync(): Promise<string> {
 		throw new Error("Method not implemented.");
 	}
 }

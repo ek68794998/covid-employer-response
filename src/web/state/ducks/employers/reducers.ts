@@ -1,5 +1,4 @@
 import { EmployerRecord } from "../../../../common/EmployerRecord";
-import { EmployerRecordBase } from "../../../../common/EmployerRecordBase";
 import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadata";
 
 import { EmployersState } from "../../EmployersState";
