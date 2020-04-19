@@ -2,12 +2,16 @@
 # The IDs used here correspond to the YML filenames of each.
 
 ahold-delhaize:
-  - giant-landover
+- giant-landover
 albertsons:
-  - safeway
+- safeway
 allegis-group:
-  - marketsource
+- marketsource
 amazon:
-  - whole-foods
+- whole-foods
 darden-restaurants:
-  - olive-garden
+- olive-garden
+yum-brands:
+- kfc
+- pizza-hut
+- taco-bell
