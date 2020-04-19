@@ -84,6 +84,11 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 			parentId: this.childToParentMap[id],
 		};
 
+		if (loadedEmployer.industries) {
+			loadedEmployer.industries =
+				loadedEmployer.industries.sort((a: string, b: string) => a.localeCompare(b));
+		}
+
 		this.cachedItems[id] = loadedEmployer;
 
 		return loadedEmployer;
