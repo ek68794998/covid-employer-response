@@ -66,14 +66,19 @@ export abstract class EmployerRecordBase {
 			}
 
 			if (matchingIndustries === a.industries.length && matchingIndustries === b.industries.length) {
-				score += matchingIndustries * 2;
+				score += matchingIndustries * 10;
 			} else {
 				score += matchingIndustries;
 			}
 		}
 
-		if (a.location?.country && b.location?.country && a.location.country === b.location.country) {
-			score += 1;
+		if (a.parentId && a.parentId === b.parentId) {
+			score += 100;
+		}
+
+		if (a.location && b.location) {
+			score += a.location.international === b.location.international ? 1 : 0;
+			score += a.location.country === b.location.country ? (a.location.city === b.location.city ? 5 : 3) : 0;
 		}
 
 		return score;
