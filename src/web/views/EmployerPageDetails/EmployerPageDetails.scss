@@ -60,7 +60,6 @@ $padding-interior: 12px;
 
 @mixin scaled-page($scale-base, $icon-multiplier, $pill-multiplier) {
 	.EmployerPageDetails__Header .EmployerLogo__Image {
-		border-radius: ($scale-base * $icon-multiplier);
 		height: ($scale-base * $icon-multiplier) * 2;
 		width: ($scale-base * $icon-multiplier) * 2;
 	}
