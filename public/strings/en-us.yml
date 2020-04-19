@@ -286,7 +286,9 @@ detailDescriptions:
   employees: The approximate number of employees the company had prior to the Coronavirus
     pandemic.
   linkToEmployer: The link directly to this employer's profile.
-  location: The city in which the employer's headquarters are located.
+  location: Where the employer's headquarters are located.
+  industry: The industries in which the employer is active.
+  name: The incorporated name of the employer.
   officialWebsite: The employer's official website link.
   rating: The general rating of the employer.
   ratingCounts: Aggregate counts of the good and bad actions an employer has taken.
@@ -360,10 +362,15 @@ industries:
   videoGames: Video games
   waste: Waste
   water: Water
+linkTypes:
+  children: Subsidiaries
+  parent: Parent company
+  related: Related
 loading: Loading...
 more: "{number} more"
 noResults: No results.
 notFound: Not found.
+profile: Employer profile
 ratingLabels:
   poor: Poor
   fair: Fair

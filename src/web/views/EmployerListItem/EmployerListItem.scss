@@ -27,6 +27,10 @@ $scale-base: 16px;
 
 	.EmployerListItem__Name {
 		flex: 1;
+		overflow: hidden;
+		padding-right: 6px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	.EmployerListItem__RatingText {

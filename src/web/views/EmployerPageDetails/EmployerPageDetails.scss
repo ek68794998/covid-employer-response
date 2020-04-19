@@ -6,7 +6,10 @@ $padding-interior: 12px;
 .EmployerPageDetails__Header {
 	align-items: center;
 	display: flex;
-	gap: 15px;
+
+	.EmployerLogo__Image {
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	}
 }
 
 .EmployerPageDetails__Title {
@@ -14,10 +17,14 @@ $padding-interior: 12px;
 	font: 100 64px 'Baloo Chettan 2';
 	margin: 0;
 	overflow: hidden;
-	padding: 0 12px;
+	padding: 0 16px;
 	position: relative;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+
+	&:hover i {
+		visibility: visible;
+	}
 
 	a {
 		align-items: center;
@@ -28,10 +35,6 @@ $padding-interior: 12px;
 	i {
 		position: absolute;
 		visibility: hidden;
-	}
-
-	&:hover i {
-		visibility: visible;
 	}
 }
 
@@ -56,6 +59,71 @@ $padding-interior: 12px;
 	line-height: 170%;
 	padding: 0 15% $padding-interior;
 	text-align: center;
+}
+
+.EmployerPageDetails__MetaFooter {
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-gap: 16px;
+	grid-template-columns: 60% 40%;
+}
+
+.EmployerPageDetails__ProfileDetails {
+	color: #555;
+	line-height: 180%;
+	table-layout: fixed;
+	width: 100%;
+
+	td {
+		vertical-align: top;
+
+		&.EmployerPageDetails__ProfileLabel {
+			padding-right: 8px;
+			text-align: center;
+			width: 36px;
+		}
+	
+		&.EmployerPageDetails__ProfileValue {
+			padding: 2px 2px 8px;
+
+			i {
+				font-size: 10px;
+				line-height: 0;
+			}
+
+			h3 {
+				font-size: 110%;
+				margin: 4px 0 0;
+			}
+
+			.EmployerPageDetails__ProfileSublist {
+				font-size: 80%;
+				line-height: 160%;
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	img.EmployerPageDetails__ProfileFlag {
+		border-radius: 4px;
+		margin: 4px 0;
+		width: 20px;
+	}
+}
+
+.EmployerPageDetails__LinkedCompanies {
+	.EmployerListItem__Container {
+		margin-bottom: 8px;
+
+		& + h2 {
+			margin-top: 24px;
+		}
+	}
 }
 
 @mixin scaled-page($scale-base, $icon-multiplier, $pill-multiplier) {
@@ -87,6 +155,12 @@ $padding-interior: 12px;
 }
 
 @include scaled-page(48px, 0.6, 1.0);
+
+@media (max-width: $body-reduced-width) {
+	.EmployerPageDetails__MetaFooter {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
 
 @media (max-width: $body-narrow-width) {
 	.EmployerPageDetails__Header {

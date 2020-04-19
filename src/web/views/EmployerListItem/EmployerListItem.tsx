@@ -48,7 +48,7 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 				onClick={onClickEvent}
 			>
 				<EmployerLogo employer={employer} />
-				<span className="EmployerListItem__Name">{employer.name}</span>
+				<span className="EmployerListItem__Name">{employer.shortName || employer.name}</span>
 				<span className="EmployerListItem__RatingText">
 					{strings.ratingLabels[employer.rating]}
 					{DesignHelpers.materialIcon(

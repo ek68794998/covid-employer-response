@@ -5,9 +5,12 @@ import { RouteProps } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { DesignHelpers } from "../../../common/DesignHelpers";
+import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
+import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
 
 import { AppState } from "../../state/AppState";
 import { getEmployerMetadata } from "../../state/ducks/employers/selectors";
@@ -43,6 +46,20 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		return null;
 	}
 
+	const getProfileRow = (labelText: string, label: JSX.Element, value: JSX.Element): JSX.Element => (
+		<tr>
+			<td
+				className="EmployerPageDetails__ProfileLabel"
+				title={labelText}
+			>
+				{label}
+			</td>
+			<td className="EmployerPageDetails__ProfileValue">{value}</td>
+		</tr>
+	);
+
+	const relatedEmployerIds: string[] = [ "restaurant-brands-international", "mcdonalds" ];
+
 	return (
 		<div className="EmployerPageDetails__Container">
 			<div className="EmployerPageDetails__Header">
@@ -58,28 +75,95 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			<div className="EmployerPageDetails__Summary">
 				<ReactMarkdown source={employer.summary} />
 			</div>
-			{employer.shortName && (
-				<span className="EmployerPageDetails__Subtitle">
-					Officially known as <em>{employer.name}</em>.
-				</span>
-			)}
 
 			<EmployerCitationList citations={employer.citations.sort(citationSort)} />
 
-			{employer.parentId && (
-				<>
-					<h2>Parent</h2>
-					<EmployerListItem employerId={employer.parentId} showDetails={false} />
-				</>
-			)}
-			{employer.childIds.length > 0 && (
-				<>
-					<h2>Subsidiaries</h2>
-					{employer.childIds.map((id: string) => (
-						<EmployerListItem key={id} employerId={id} showDetails={false} />
-					))}
-				</>
-			)}
+			<div className="EmployerPageDetails__MetaFooter">
+				<div className="EmployerPageDetails__Profile">
+					<h2>{strings.profile}</h2>
+					<table className="EmployerPageDetails__ProfileDetails">
+						{getProfileRow(
+							strings.detailDescriptions.name,
+							<>{DesignHelpers.materialIcon("work")}</>,
+							<>
+								{employer.name}
+								{employer.aliases && employer.aliases.length > 0 && (
+									<div className="EmployerPageDetails__ProfileSublist">
+										<h3>AKA</h3>
+										<ul>
+											{employer.aliases.map((a: string, i: number) => <li key={i}>{a}</li>)}
+										</ul>
+									</div>
+								)}
+							</>,
+						)}
+						{employer.industries && employer.industries.length > 0 && getProfileRow(
+							strings.detailDescriptions.industry,
+							<>{DesignHelpers.materialIcon("category")}</>,
+							<ul>
+								{employer.industries.map(
+									(a: string, i: number) => <li key={i}>{strings.industries[a]}</li>)}
+							</ul>,
+						)}
+						{employer.location && getProfileRow(
+							strings.detailDescriptions.location,
+							<img
+								className="EmployerPageDetails__ProfileFlag"
+								src={`/images/flags/${employer.location.country}.svg`}
+							/>,
+							<a href={WikipediaHelpers.getWikipediaUrl(employer.location.wiki) || ""}>
+								{EmployerLocation.toString(employer.location, strings.countryNames)}
+								&nbsp;{DesignHelpers.materialIcon("launch")}
+							</a>,
+						)}
+						{employer.employeesBefore && getProfileRow(
+							strings.detailDescriptions.employees,
+							<>{DesignHelpers.materialIcon("people")}</>,
+							<>{EmployerEmployeeProfile.toString(employer.employeesBefore, true, false)}</>,
+						)}
+						{employer.wiki && getProfileRow(
+							strings.detailDescriptions.wikipedia,
+							<>{DesignHelpers.materialIcon("language")}</>,
+							<a href={WikipediaHelpers.getWikipediaUrl(employer.wiki) || ""}>
+								Wikipedia
+								&nbsp;{DesignHelpers.materialIcon("launch")}
+							</a>,
+						)}
+						{employer.officialWebsite && getProfileRow(
+							strings.detailDescriptions.officialWebsite,
+							<>{DesignHelpers.materialIcon("home")}</>,
+							<a href={employer.officialWebsite}>
+								Homepage
+								&nbsp;{DesignHelpers.materialIcon("launch")}
+							</a>,
+						)}
+					</table>
+				</div>
+				<div className="EmployerPageDetails__LinkedCompanies">
+					{employer.parentId && (
+						<>
+							<h2>{strings.linkTypes.parent}</h2>
+							<EmployerListItem employerId={employer.parentId} showDetails={false} />
+						</>
+					)}
+					{employer.childIds.length > 0 && (
+						<>
+							<h2>{strings.linkTypes.children}</h2>
+							{employer.childIds.map((id: string) => (
+								<EmployerListItem key={id} employerId={id} showDetails={false} />
+							))}
+						</>
+					)}
+					{relatedEmployerIds.length > 0 && (
+						<>
+							<h2>{strings.linkTypes.related}</h2>
+							{relatedEmployerIds.map((id: string) => (
+								<EmployerListItem key={id} employerId={id} showDetails={false} />
+							))}
+						</>
+					)}
+				</div>
+			</div>
 		</div>
 	);
 };
