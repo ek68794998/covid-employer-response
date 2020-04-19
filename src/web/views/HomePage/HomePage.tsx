@@ -9,7 +9,7 @@ import { getEmployerIds } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import BackToTopButton from "../BackToTopButton/BackToTopButton";
-import EmployerListItemDetailed from "../EmployerListItemDetailed/EmployerListItemDetailed";
+import EmployerListItem from "../EmployerListItem/EmployerListItem";
 
 import "./HomePage.scss";
 
@@ -61,7 +61,7 @@ const HomePage: React.FC = (): React.ReactElement => {
 				<div className="HomePage__SampleSpacer" />
 				<div className="HomePage__SampleCard">
 					{randomEmployerId && (
-						<EmployerListItemDetailed employerId={randomEmployerId} />
+						<EmployerListItem employerId={randomEmployerId} showDetails={true} />
 					)}
 				</div>
 			</section>

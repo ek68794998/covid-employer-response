@@ -6,7 +6,6 @@ import { RouteProps } from "react-router-dom";
 import { Citation } from "../../../common/Citation";
 import { DesignHelpers } from "../../../common/DesignHelpers";
 import { EmployerRecord } from "../../../common/EmployerRecord";
-import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -70,14 +69,14 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			{employer.parentId && (
 				<>
 					<h2>Parent</h2>
-					<EmployerListItem employerId={employer.parentId} />
+					<EmployerListItem employerId={employer.parentId} showDetails={false} />
 				</>
 			)}
 			{employer.childIds.length > 0 && (
 				<>
 					<h2>Subsidiaries</h2>
 					{employer.childIds.map((id: string) => (
-						<EmployerListItem key={id} employerId={id} />
+						<EmployerListItem key={id} employerId={id} showDetails={false} />
 					))}
 				</>
 			)}
