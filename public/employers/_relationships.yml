@@ -7,5 +7,7 @@ albertsons:
   - safeway
 allegis-group:
   - marketsource
+amazon:
+  - whole-foods
 darden-restaurants:
   - olive-garden

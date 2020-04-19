@@ -1,0 +1,32 @@
+name: Whole Foods Market, Inc.
+shortName: Whole Foods
+aliases:
+  - Whole Foods Market
+wiki: Whole Foods Market
+image: whole-foods.svg#006f46
+officialWebsite: https://www.wholefoodsmarket.com/company-info
+industries:
+  - groceryStore
+location:
+  city: Austin
+  state: TX
+  country: us
+  international: true
+  wiki: Austin, Texas
+employeesBefore:
+  type: approximately
+  upperBound: 91000
+  year: 2018
+summary: Though Amazon touts a work-from-home policy for engineers and pay raises for service workers, there are additional reports of mandatory overtime and complaints of management not immediately reporting COVID-19 cases.
+citations:
+  - summary: Whole Foods Market employees have received Amazon parent company's benefit of providing two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19
+    positivity: 0
+    type: publication
+    sources:
+      - source: Amazon Blog
+        title: COVID-19 Update
+        link: https://blog.aboutamazon.com/working-at-amazon/covid-19-update-more-ways-amazon-is-supporting-employees-and-contractors
+        date: 2020-03-11T20:00:12.347Z
+      - source: Whole Foods Market Newsroom
+        link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
+        date: 2020-03-13T12:00:00Z # Estimate based on entry date of 03/13/2020.
