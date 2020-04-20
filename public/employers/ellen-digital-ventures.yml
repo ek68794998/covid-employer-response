@@ -1,0 +1,31 @@
+name: The Ellen DeGeneres Show
+aliases:
+  - Ellen Digital Ventures
+  - WarnerMedia # Production partner; not currently worth its own parent page.
+wiki: The Ellen DeGeneres Show
+image: ellen-digital-ventures.svg
+officialWebsite: https://www.linkedin.com/company/the-ellen-degeneres-show/about/ # A decent profile and links to the marketing site.
+industries:
+  - entertainment
+location:
+  city: Burbank
+  state: CA
+  country: us
+  international: false
+  wiki: Burbank, California
+employeesBefore:
+  source: Variety
+  sourceLink: https://variety.com/2020/tv/news/ellen-crew-furious-over-poor-communication-regarding-pay-non-union-workers-during-coronavirus-shutdown-exclusive-1234582735/
+  lowerBound: 30
+  type: range
+  upperBound: 0
+  year: 2020
+summary: Crew on Ellen DeGeneres' show have received significant pay cuts in the midst of little-to-no communication from their production staff, who publicly state that they are "committed to taking care of" their staff.
+citations:
+  - summary: In addition to receiving a 60% reduction in pay, crew on *The Ellen Degeneres Show* received no written communication about their hours or pay. Meanwhile, filming of the show has continued remotely and even increased to five shows a week instead of four.
+    positivity: -2
+    type: statement
+    sources:
+      - source: Variety
+        link: https://web.archive.org/web/20200418013144/https://variety.com/2020/tv/news/ellen-crew-furious-over-poor-communication-regarding-pay-non-union-workers-during-coronavirus-shutdown-exclusive-1234582735/
+        date: 2020-04-16T17:11:00-07:00

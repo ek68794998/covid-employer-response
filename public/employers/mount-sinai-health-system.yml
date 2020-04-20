@@ -1,0 +1,26 @@
+name: Mount Sinai Health System
+shortName: Mount Sinai
+wiki: Mount Sinai Health System
+image: mount-sinai-health-system.svg
+officialWebsite: https://www.mountsinai.org/about
+industries:
+  - healthCare
+location:
+  city: New York City
+  state: NY
+  country: us
+  international: false
+  wiki: New York City
+employeesBefore:
+  type: approximately
+  upperBound: 42000
+  year: 2019
+summary: Rather than resort to layoffs and furloughs, Mount Sinai has covered COVID-19 costs with executive pay cuts.
+citations:
+  - summary: Mount Sinai executives have taken pay cuts up to 50% to cover costs incurred during the COVID-19 crisis.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Patch
+        link: https://web.archive.org/web/20200407200830/https://patch.com/new-york/upper-east-side-nyc/mount-sinai-execs-take-pay-cut-offset-coronavirus-costs
+        date: 2020-04-06T11:28:17-04:00

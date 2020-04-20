@@ -142,3 +142,10 @@ citations:
       - source: The Guardian
         link: https://web.archive.org/web/20200413154214/https://www.theguardian.com/technology/2020/apr/02/amazon-chris-smalls-smart-articulate-leaked-memo
         date: 2020-04-02T19:47:00-04:00
+  - summary: Amazon has deleted employees' calendar invites in an attempt to shut down a virtual event organized to let workers speak out about warehouse working conditions.
+    positivity: -2
+    type: statement
+    sources:
+      - source: Business Insider
+        link: https://web.archive.org/web/20200419214818/https://www.businessinsider.com/amazon-attempted-shut-down-warehouse-conditions-protest-deleted-calendar-invite-2020-4
+        date: 2020-04-17T21:33:41Z
