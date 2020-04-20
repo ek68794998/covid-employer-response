@@ -26,8 +26,7 @@ appTitle: Coronavirus Employer Response Tracker
 appTitleShort: Cempres
 backToTop: Top of page
 citationTypeDescriptions:
-  publication: Published articles such as a company blog, PR statement, government
-    report, or leaked document.
+  publication: Published articles such as a company blog, PR statement, government report, or leaked document.
   statement: Published statements from employees (former, anonymous, or otherwise).
   hearsay: Word-of-mouth, rumors, or unconfirmed information.
 citationTypes:
@@ -281,11 +280,9 @@ countryNames:
   zm: Zambia
   zw: Zimbabwe
 detailDescriptions:
-  aka: Alternative names for the employer, including aliases, parent companies, and
-    child companies.
+  aka: Alternative names for the employer, including aliases, parent companies, and child companies.
   edit: The employer's data file where edits can be made.
-  employees: The approximate number of employees the company had prior to the Coronavirus
-    pandemic.
+  employees: The approximate number of employees the company had prior to the Coronavirus pandemic.
   linkToEmployer: The link directly to this employer's profile.
   location: Where the employer's headquarters are located.
   industry: The industries in which the employer is active.
