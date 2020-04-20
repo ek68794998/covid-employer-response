@@ -6,22 +6,18 @@ export class EmployerRecordMetadata extends EmployerRecordBase {
 
 	public readonly positiveCount: number;
 
-	public readonly ratingValue: EmployerRating;
+	public readonly rating: EmployerRating;
 
 	public constructor(
 		negativeCount: number,
 		positiveCount: number,
-		ratingValue: EmployerRating) {
+		rating: EmployerRating) {
 
 		super();
 
 		this.negativeCount = negativeCount;
 		this.positiveCount = positiveCount;
-		this.ratingValue = ratingValue;
-	}
-
-	public get rating(): EmployerRating {
-		return this.ratingValue;
+		this.rating = rating;
 	}
 
 	public static getTrendIcon(e: EmployerRecordMetadata): "trending_up" | "trending_flat" | "trending_down" {

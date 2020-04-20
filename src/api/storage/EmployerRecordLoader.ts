@@ -3,6 +3,7 @@ import util from "util";
 import yaml from "yaml";
 
 import { EmployerRecord } from "../../common/EmployerRecord";
+import { EmployerRecordMetadata } from "../../common/EmployerRecordMetadata";
 
 import { CachedDataFileLoader } from "./CachedDataFileLoader";
 import { DataLoadOptions } from "./DataLoadOptions";
@@ -109,6 +110,23 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 		this.cachedIds = loadedEmployers.map((e: EmployerRecord) => e.id);
 
 		return loadedEmployers;
+	}
+
+	public async getAllMetadataAsync(options: DataLoadOptions): Promise<EmployerRecordMetadata[]> {
+		const employers: EmployerRecord[] = await this.getAllAsync(options);
+		const employersMap: { [key: string]: EmployerRecord } = {};
+
+		employers.forEach((e: EmployerRecord) => {
+			employersMap[e.id] = e;
+		});
+
+		const returnedEmployers: EmployerRecordMetadata[] = [];
+
+		for (const employerRecord of Object.values(employers)) {
+			returnedEmployers.push(EmployerRecord.toMetadata(employerRecord, employersMap));
+		}
+
+		return returnedEmployers;
 	}
 
 	private getFileName(id: string): string {

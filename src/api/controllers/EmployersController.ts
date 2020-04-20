@@ -75,21 +75,9 @@ class EmployersController extends RoutedControllerBase {
 		};
 
 		const employers: EmployerRecord[] = await this.recordLoader.getAllAsync(loaderOptions);
-		const employersMap: { [key: string]: EmployerRecord } = {};
 
-		employers.forEach((e: EmployerRecord) => {
-			employersMap[e.id] = e;
-		});
-
-		const returnedEmployers: EmployerRecordBase[] = [];
-
-		for (const employerRecord of Object.values(employers)) {
-			returnedEmployers.push(EmployerRecord.toMetadata(employerRecord, employersMap));
-
-			if (returnedEmployers.length === EmployersController.MAX_GETEMPLOYERS_STANDARD) {
-				break;
-			}
-		}
+		const returnedEmployers: EmployerRecordBase[] =
+			(await this.recordLoader.getAllMetadataAsync({})).slice(0, EmployersController.MAX_GETEMPLOYERS_STANDARD);
 
 		res.setHeader("Results-Total", Object.keys(employers).length);
 		res.setHeader("Results-Returned", returnedEmployers.length);
