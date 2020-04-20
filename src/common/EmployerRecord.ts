@@ -1,6 +1,7 @@
 import { Citation } from "./Citation";
 import { EmployerRecordBase } from "./EmployerRecordBase";
 import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
+import { EmployerRating } from "./EmployerRating";
 
 export class EmployerRecord extends EmployerRecordBase {
 	public childIds: string[] = [];
@@ -35,59 +36,39 @@ export class EmployerRecord extends EmployerRecordBase {
 
 		citationRatings = citationRatings.sort();
 
-		// Tweaking this to be larger than zero results in a broader range for "fair".
-		let normalizedScore: number = 0;
+		const fairNeutralRatio: number = 0.78;
 
 		let negatives: number = 0;
 		let positives: number = 0;
-		let score: number = 0;
+		let sum: number = 0;
 
-		if (citationRatings.length === 1) {
-			score = citationRatings[0];
-		} else if (citationRatings.length > 1) {
-			normalizedScore = 1;
+		for (const rating of citationRatings) {
+			sum += rating;
 
-			let i: number = 0;
-			let j: number = citationRatings.length - 1;
-
-			while (j > i) {
-				const left: number = citationRatings[i];
-				const right: number = citationRatings[j];
-
-				if (-left > right) {
-					score += left + right;
-					i++;
-
-					continue;
-				}
-
-				if (right > -left) {
-					score += left + right;
-					j--;
-
-					continue;
-				}
-
-				i++;
-				j--;
+			if (rating < 0) {
+				negatives++;
 			}
 
-			for (i = 0; i < citationRatings.length; i++) {
-				if (citationRatings[i] < 0) {
-					negatives++;
-				}
-
-				if (citationRatings[i] > 0) {
-					positives++;
-				}
+			if (rating > 0) {
+				positives++;
 			}
+		}
+
+		const neutrals: number = citationRatings.length - negatives - positives;
+
+		let ratingResult: EmployerRating = "fair";
+
+		if (sum !== 0 && negatives + positives > 0 && neutrals / citationRatings.length < fairNeutralRatio) {
+			const score: number = Math.log10((negatives + positives) * Math.abs(sum)) + 1;
+
+			ratingResult = sum > score ? "good" : (sum < -score ? "poor" : "fair");
 		}
 
 		const metadata: EmployerRecordMetadata =
 			new EmployerRecordMetadata(
 				negatives,
 				positives,
-				score > normalizedScore ? "good" : (score < -normalizedScore ? "poor" : "fair"));
+				ratingResult);
 
 		EmployerRecordBase.copyTo(original, metadata);
 
