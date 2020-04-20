@@ -15,13 +15,17 @@ describe("EmployerRecord", () => {
 		[ [ 1 ], er("good") ],
 		[ [ 0 ], er("fair") ],
 		[ [ 0, 0, 0, 0, 0 ], er("fair") ],
-		[ [ -2, 0, 0, 0, 0 ], er("fair") ],
+		[ [ -2, 0, 0, 0, 0 ], er("poor") ],
+		[ [ 1, 1, 1, 0, 0, -1 ], er("good") ],
+		[ [ 1, -1, -1, 0, 0, -1 ], er("poor") ],
 	])(
-		"getRating properly generates based on EmployerRecord fields (%#)",
+		"properly calculates %p ratings as %p (%#)",
 		(ratings: number[], expected: EmployerRating) => {
-			const sum: number = ratings.reduce((prev: number, curr: number) => prev + curr, 0);
+			const record: EmployerRecord = new EmployerRecord();
 
-			expect(EmployerRecord.calculateRating(ratings.length, sum)).toBe(expected);
+			record.citations = ratings.map((r: number) => ({ positivity: r, summary: "N/A", type: "hearsay" }));
+
+			expect(EmployerRecord.toMetadata(record).rating).toBe(expected);
 		},
 	);
 

@@ -9,7 +9,7 @@ describe("LocalizedStrings", () => {
 		[ "a{b}c", { b: "c" }, "acc" ],
 		[ "a{B}c", { b: "c" }, "aBc" ],
 	])(
-		"formats '%p' with arguments (%#)",
+		"formats %p with arguments (%#)",
 		(input: string, args: {}, expected: string) => {
 			expect(format(input, args)).toBe(expected);
 		},

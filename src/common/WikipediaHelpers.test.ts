@@ -9,7 +9,7 @@ describe("WikipediaHelpers", () => {
 		[ "Example Test 2", "https://en.wikipedia.org/wiki/Example_Test_2" ],
 		[ "Example    Test         2", "https://en.wikipedia.org/wiki/Example_Test_2" ],
 	])(
-		"gets Wikipedia URL for '%p' (%#)",
+		"gets Wikipedia URL for %p (%#)",
 		(input: string, expected: string | null) => {
 			expect(WikipediaHelpers.getWikipediaUrl(input)).toBe(expected);
 		},

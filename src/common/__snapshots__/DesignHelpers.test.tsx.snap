@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DesignHelpers creates a material icon for "add" with class "" (1) 1`] = `
+<i
+  className="material-icons"
+>
+  add
+</i>
+`;
+
+exports[`DesignHelpers creates a material icon for "add" with class "ClassName OtherClassName" (3) 1`] = `
+<i
+  className="material-icons ClassName OtherClassName"
+>
+  add
+</i>
+`;
+
+exports[`DesignHelpers creates a material icon for "add" with class "ClassName" (2) 1`] = `
+<i
+  className="material-icons ClassName"
+>
+  add
+</i>
+`;
+
+exports[`DesignHelpers creates a material icon for "add" with class undefined (0) 1`] = `
+<i
+  className="material-icons"
+>
+  add
+</i>
+`;
+
+exports[`DesignHelpers creates a material icon for "full_icon" with class "" (5) 1`] = `
+<i
+  className="material-icons"
+>
+  full_icon
+</i>
+`;
+
+exports[`DesignHelpers creates a material icon for "full_icon" with class "ClassName OtherClassName" (7) 1`] = `
+<i
+  className="material-icons ClassName OtherClassName"
+>
+  full_icon
+</i>
+`;
+
+exports[`DesignHelpers creates a material icon for "full_icon" with class "ClassName" (6) 1`] = `
+<i
+  className="material-icons ClassName"
+>
+  full_icon
+</i>
+`;
+
+exports[`DesignHelpers creates a material icon for "full_icon" with class undefined (4) 1`] = `
+<i
+  className="material-icons"
+>
+  full_icon
+</i>
+`;

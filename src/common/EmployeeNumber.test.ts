@@ -16,7 +16,7 @@ describe("EmployeeNumber", () => {
 		[ 89012345, "89 million" ],
 		[ 901234567, "901.2 million" ],
 		[ 1234567890, "1.2 billion" ],
-	])("toString converts '%p' to normal string '%p' (%#)", (n: number, expected: string) => {
+	])("toString converts %p to normal string %p (%#)", (n: number, expected: string) => {
 		expect(new EmployeeNumber(n).toString()).toBe(expected);
 	});
 
@@ -35,7 +35,7 @@ describe("EmployeeNumber", () => {
 		[ 89012345, "89m" ],
 		[ 901234567, "901.2m" ],
 		[ 1234567890, "1.2b" ],
-	])("toString converts '%p' to short string '%p' (%#)", (n: number, expected: string) => {
+	])("toString converts %p to short string %p (%#)", (n: number, expected: string) => {
 		expect(new EmployeeNumber(n).toString(true)).toBe(expected);
 	});
 

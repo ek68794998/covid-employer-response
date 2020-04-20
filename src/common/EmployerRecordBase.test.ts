@@ -4,7 +4,7 @@ import { EmployerRecord } from "./EmployerRecord";
 import { EmployerRecordBase } from "./EmployerRecordBase";
 
 describe("EmployerRecordBase", () => {
-	test("copyTo properly copies attributes (%#)", () => {
+	test("copyTo properly copies attributes", () => {
 		const record: EmployerRecord =
 			Object.assign(
 				new EmployerRecord(),
