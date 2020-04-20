@@ -1,0 +1,28 @@
+name: New Japan Pro-Wrestling Co., Ltd.
+shortName: NJPW
+wiki: New Japan Pro-Wrestling
+image: new-japan-pro-wrestling.svg#ff160b
+officialWebsite: https://www.njpw1972.com/company/
+industries:
+  - sports
+location:
+  city: Nakano
+  state: Tokyo # Prefecture
+  country: jp
+  international: false
+  wiki: Nakano, Tokyo
+employeesBefore:
+  source: NJPW
+  sourceLink: https://www.njpw.co.jp/company
+  type: approximately
+  upperBound: 83
+  year: 2019
+summary: Despite events being cancelled for several weeks, NJPW has committed to full pay and benefits for its employees.
+citations:
+  - summary: NJPW has announced that they will continue to provide all employees (and talent) with full pay and benefits, despite all events being cancelled through at least May 4.
+    positivity: 1
+    type: hearsay
+    sources:
+      - source: Pro Wrestling Post
+        link: https://web.archive.org/web/20200420044118/https://prowrestlingpost.com/njpw-continues-to-pay-staff-and-talent-during-pandemic/
+        date: 2020-04-18T14:30:03Z
