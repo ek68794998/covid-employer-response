@@ -26,10 +26,20 @@ citations:
       - source: Market Watch
         link: https://www.marketwatch.com/story/united-airlines-reduces-us-flights-asks-workers-to-take-unpaid-leave-amid-coronavirus-outbreak-2020-03-04
         date: 2020-03-04T17:48:00-04:00
-  - summary: United received a portion of a $25 billion government bailout, with the stipulation that they not lay off any workers through September 30. They then immediately warned that they expected to cut a number of jobs after September 30.
+  - summary: United received a portion of a $58 billion government bailout, with the stipulation that they not lay off any workers through September 30. They then immediately warned that they expected to cut a number of jobs after September 30.
     positivity: -1
     type: publication
     sources:
       - source: CNBC
         link: https://www.cnbc.com/2020/03/27/corovanirus-fallout-united-airlines-warns-aid-isnt-enough-to-avoid-workforce-cuts.html
         date: 2020-03-27T15:40:00-04:00
+      - source: Forbes
+        link: https://web.archive.org/web/20200329012731/https://www.forbes.com/sites/jeremybogaisky/2020/03/27/united-airlines-to-workers-expect-layoffs-after-bailout-restrictions-end/
+        date: 2020-03-27T16:59:00-04:00
+  - summary: After confirmation of receiving $5 billion from the government bailout, United announced that it was planning significant layoffs on October 1.
+    positivity: -1
+    type: publication
+    sources:
+      - source: CNN
+        link: https://web.archive.org/web/20200418050632/https://www.cnn.com/2020/04/16/business/united-schedule-staff-cuts/index.html
+        date: 2020-04-16T12:27:24Z
