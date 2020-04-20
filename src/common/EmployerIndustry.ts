@@ -1,4 +1,6 @@
-export const EmployerIndustryValues: string[] = [
+// For maintainability of union types, do not require a typedef.
+// eslint-disable-next-line
+export const EmployerIndustryValues = [
 	"advertising",
 	"agriculture",
 	"airline",
@@ -54,6 +56,6 @@ export const EmployerIndustryValues: string[] = [
 	"videoGames",
 	"waste",
 	"water",
-];
+] as const;
 
 export type EmployerIndustry = typeof EmployerIndustryValues[number];

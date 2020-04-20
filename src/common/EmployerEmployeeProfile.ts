@@ -1,10 +1,12 @@
 import { EmployeeNumber } from "./EmployeeNumber";
 
-export const EmployerEmployeeProfileTypeValues: string[] = [
+// For maintainability of union types, do not require a typedef.
+// eslint-disable-next-line
+export const EmployerEmployeeProfileTypeValues = [
 	"range",
 	"approximately",
 	"exactly",
-];
+] as const;
 
 export type EmployerEmployeeProfileType = typeof EmployerEmployeeProfileTypeValues[number];
 

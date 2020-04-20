@@ -8,24 +8,46 @@ const er = (t: EmployerRating): EmployerRating => t;
 describe("EmployerRecord", () => {
 	test.each([
 		[ [], er("fair") ],
-		[ [ -2 ], er("poor") ],
-		[ [ -2, 2, 0 ], er("fair") ],
 		[ [ 2 ], er("good") ],
-		[ [ -1 ], er("poor") ],
-		[ [ 1 ], er("good") ],
+		[ [ 1 ], er("fair") ],
 		[ [ 0 ], er("fair") ],
+		[ [ -1 ], er("fair") ],
+		[ [ -2 ], er("poor") ],
+		[ [ -1, 1 ], er("fair") ],
+		[ [ 0, 2 ], er("good") ],
+		[ [ 0, 1 ], er("fair") ],
+		[ [ -1, 0 ], er("fair") ],
+		[ [ -2, 0 ], er("poor") ],
+		[ [ -1, -1, 1 ], er("fair") ],
+		[ [ -1, 0, 1 ], er("fair") ],
+		[ [ -2, 0, 2 ], er("fair") ],
+		[ [ -1, 1, 1, 2 ], er("good") ],
+		[ [ 1, 1, 0, 0 ], er("good") ],
+		[ [ -1, 0, 1, 1 ], er("fair") ],
+		[ [ -2, -1, 0, 0, 1 ], er("poor") ],
 		[ [ 0, 0, 0, 0, 0 ], er("fair") ],
 		[ [ -2, 0, 0, 0, 0 ], er("fair") ],
+		[ [ 0, 0, 0, 1, 2 ], er("good") ],
+		[ [ -1, 0, 0, 1, 1, 1 ], er("good") ],
+		[ [ -1, -1, -1, 0, 0, 1 ], er("poor") ],
+		[ [ -2, -2, -1, 0, 1, 1 ], er("poor") ],
+		[ [ 0, 0, 0, 0, 0, 0, 1 ], er("fair") ],
+		[ [ -1, 0, 0, 0, 1, 1, 1 ], er("good") ],
+		[ [ -1, -1, -1, -1, 0, 0, 0 ], er("poor") ],
+		[ [ 1, 1, 1, 1, 1, 1, 1 ], er("good") ],
+		[ [ -1, -1, -1, -1, -1, -1, -1 ], er("poor") ],
 	])(
-		"getRating properly generates based on EmployerRecord fields (%#)",
+		"properly calculates %p ratings as %p (%#)",
 		(ratings: number[], expected: EmployerRating) => {
-			const sum: number = ratings.reduce((prev: number, curr: number) => prev + curr, 0);
+			const record: EmployerRecord = new EmployerRecord();
 
-			expect(EmployerRecord.calculateRating(ratings.length, sum)).toBe(expected);
+			record.citations = ratings.map((r: number) => ({ positivity: r, summary: "N/A", type: "hearsay" }));
+
+			expect(EmployerRecord.toMetadata(record).rating).toBe(expected);
 		},
 	);
 
-	test("toMetadata properly creates an object (%#)", () => {
+	test("toMetadata properly creates an object", () => {
 		const record: EmployerRecord = new EmployerRecord();
 
 		record.citations.push(
@@ -39,7 +61,6 @@ describe("EmployerRecord", () => {
 
 		expect(metadata.positiveCount).toBe(2);
 		expect(metadata.negativeCount).toBe(1);
-		expect(metadata.rating).toBe("good");
 
 		expect(metadata.aliases).toBe(record.aliases);
 		expect(metadata.employeesAfter).toBe(record.employeesAfter);
