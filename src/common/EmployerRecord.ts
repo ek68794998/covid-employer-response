@@ -35,6 +35,9 @@ export class EmployerRecord extends EmployerRecordBase {
 
 		citationRatings = citationRatings.sort();
 
+		// Tweaking this to be larger than zero results in a broader range for "fair".
+		let normalizedScore: number = 0;
+
 		let negatives: number = 0;
 		let positives: number = 0;
 		let score: number = 0;
@@ -42,6 +45,8 @@ export class EmployerRecord extends EmployerRecordBase {
 		if (citationRatings.length === 1) {
 			score = citationRatings[0];
 		} else if (citationRatings.length > 1) {
+			normalizedScore = 1;
+
 			let i: number = 0;
 			let j: number = citationRatings.length - 1;
 
@@ -77,9 +82,6 @@ export class EmployerRecord extends EmployerRecordBase {
 				}
 			}
 		}
-
-		// Tweaking this to be larger than zero results in a broader range for "fair".
-		const normalizedScore: number = 1;
 
 		const metadata: EmployerRecordMetadata =
 			new EmployerRecordMetadata(
