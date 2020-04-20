@@ -12,16 +12,14 @@ export class EmployerRecord extends EmployerRecordBase {
 		original: EmployerRecord,
 		employerReferenceMap?: { [key: string]: EmployerRecord },
 	): EmployerRecordMetadata {
-		let citationRatings: number[] = [];
+		let citations: Citation[] = [];
 
 		const addCitations = (e?: EmployerRecord): void => {
 			if (!e?.citations) {
 				return;
 			}
 
-			e.citations.forEach((c: Citation) => {
-				citationRatings.push(c.positivity);
-			});
+			citations = citations.concat(e.citations);
 		};
 
 		addCitations(original);
@@ -34,15 +32,21 @@ export class EmployerRecord extends EmployerRecordBase {
 			original.childIds.forEach((childId: string) => addCitations(employerReferenceMap[childId]));
 		}
 
-		citationRatings = citationRatings.sort();
-
 		const fairNeutralRatio: number = 0.78;
 
 		let negatives: number = 0;
 		let positives: number = 0;
 		let sum: number = 0;
 
-		for (const rating of citationRatings) {
+		for (const citation of citations) {
+			let rating: number = citation.positivity;
+
+			if (!citation.sources || !citation.sources.length) {
+				rating *= 0.25;
+			} else if (citation.type === "hearsay") {
+				rating *= 0.75;
+			}
+
 			sum += rating;
 
 			if (rating < 0) {
@@ -54,11 +58,11 @@ export class EmployerRecord extends EmployerRecordBase {
 			}
 		}
 
-		const neutrals: number = citationRatings.length - negatives - positives;
+		const neutrals: number = citations.length - negatives - positives;
 
 		let ratingResult: EmployerRating = "fair";
 
-		if (sum !== 0 && negatives + positives > 0 && neutrals / citationRatings.length < fairNeutralRatio) {
+		if (sum !== 0 && negatives + positives > 0 && neutrals / citations.length < fairNeutralRatio) {
 			const score: number = Math.log10((negatives + positives) * Math.abs(sum)) + 1;
 
 			ratingResult = sum > score ? "good" : (sum < -score ? "poor" : "fair");
