@@ -1,5 +1,4 @@
 import { Citation } from "./Citation";
-import { EmployerRating } from "./EmployerRating";
 import { EmployerRecordBase } from "./EmployerRecordBase";
 import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
 
@@ -8,61 +7,82 @@ export class EmployerRecord extends EmployerRecordBase {
 
 	public citations: Citation[] = [];
 
-	public static calculateRating(
-		citationCount: number,
-		score: number,
-	): EmployerRating {
-		if (citationCount === 0) {
-			return "fair";
-		}
-
-		const normalizedScore: number = citationCount / 2;
-
-		if (score < normalizedScore && score > -normalizedScore) {
-			return "fair";
-		}
-
-		return score > 0 ? "good" : "poor";
-	}
-
 	public static toMetadata(
 		original: EmployerRecord,
 		employerReferenceMap?: { [key: string]: EmployerRecord },
 	): EmployerRecordMetadata {
-		let citationCount: number = 0;
-		let score: number = 0;
-		let positives: number = 0;
-		let negatives: number = 0;
+		let citationRatings: number[] = [];
 
-		const updateRatings = (e?: EmployerRecord): void => {
-			if (!e) {
+		const addCitations = (e?: EmployerRecord): void => {
+			if (!e?.citations) {
 				return;
 			}
 
-			for (const citation of e.citations) {
-				citationCount++;
-				score += citation.positivity;
-
-				if (citation.positivity > 0) {
-					positives++;
-				} else if (citation.positivity < 0) {
-					negatives++;
-				}
-			}
+			e.citations.forEach((c: Citation) => {
+				citationRatings.push(c.positivity);
+			});
 		};
 
-		updateRatings(original);
+		addCitations(original);
 
 		if (employerReferenceMap) {
 			if (original.parentId) {
-				updateRatings(employerReferenceMap[original.parentId]);
+				addCitations(employerReferenceMap[original.parentId]);
 			}
 
-			original.childIds.forEach((childId: string) => updateRatings(employerReferenceMap[childId]));
+			original.childIds.forEach((childId: string) => addCitations(employerReferenceMap[childId]));
+		}
+
+		citationRatings = citationRatings.sort();
+
+		let negatives: number = 0;
+		let positives: number = 0;
+		let score: number = 0;
+
+		if (citationRatings.length === 1) {
+			score = citationRatings[0];
+		} else if (citationRatings.length > 1) {
+			let i: number = 0;
+			let j: number = citationRatings.length - 1;
+
+			while (j > i) {
+				const left: number = citationRatings[i];
+				const right: number = citationRatings[j];
+
+				if (-left > right) {
+					score += left + right;
+					i++;
+
+					continue;
+				}
+
+				if (right > -left) {
+					score += left + right;
+					j--;
+
+					continue;
+				}
+
+				i++;
+				j--;
+			}
+
+			for (i = 0; i < citationRatings.length; i++) {
+				if (citationRatings[i] < 0) {
+					negatives++;
+				}
+
+				if (citationRatings[i] > 0) {
+					positives++;
+				}
+			}
 		}
 
 		const metadata: EmployerRecordMetadata =
-			new EmployerRecordMetadata(negatives, positives, this.calculateRating(citationCount, score));
+			new EmployerRecordMetadata(
+				negatives,
+				positives,
+				score === 0 ? "fair" : (score > 0 ? "good" : "poor"));
 
 		EmployerRecordBase.copyTo(original, metadata);
 
