@@ -24,7 +24,7 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     >
       řèƥôřƭƨÂñδÇℓáï₥ƨHèáδèř
     </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(řèƥôřƭƨÂñδÇℓáï₥ƨÞářáϱřáƥλ: ƥúβℓïçáƭïôñ) /]
+    [component: ReactMarkdown linkTarget=(_blank) source=(řèƥôřƭƨÂñδÇℓáï₥ƨÞářáϱřáƥλ) /]
     <h2
       id="claim-processing"
     >
@@ -40,9 +40,9 @@ exports[`<AboutPage /> renders without exploding 1`] = `
     <h2
       id="citation-types"
     >
-      çïƭáƭïôñT¥ƥèƨHèáδèř: ƥúβℓïçáƭïôñ / ƨƭáƭè₥èñƭ / λèářƨá¥
+      çïƭáƭïôñT¥ƥèƨHèáδèř
     </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(çïƭáƭïôñT¥ƥèƨÞářáϱřáƥλ: ƥúβℓïçáƭïôñ / ƨƭáƭè₥èñƭ / λèářƨá¥; ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ / ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ / λèářƨá¥Ðèƨçřïƥƭïôñ) /]
+    [component: ReactMarkdown className=(AboutPage__CitationTypes) linkTarget=(_blank) source=(çïƭáƭïôñT¥ƥèƨÞářáϱřáƥλ: ƥúβℓïçáƭïôñ / ƨƭáƭè₥èñƭ / λèářƨá¥; ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ / ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ / λèářƨá¥Ðèƨçřïƥƭïôñ) /]
     <h2
       id="employer-ratings"
     >

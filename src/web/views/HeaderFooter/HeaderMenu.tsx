@@ -79,7 +79,7 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 							{strings.appTitleShort}
 							{!isProd && <span style={{ color: "red" }}>&nbsp; [DEV]</span>}
 						</NavLink>
-						<div className="HeaderMenu__BrandLarge">{strings.appTitle}</div>
+						<div className="HeaderMenu__Subtitle">{strings.appTitle}</div>
 					</div>
 					{navLinks}
 				</div>

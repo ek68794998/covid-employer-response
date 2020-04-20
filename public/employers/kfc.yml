@@ -1,0 +1,27 @@
+name: Kentucky Fried Chicken
+shortName: KFC
+wiki: KFC
+image: kfc.png
+officialWebsite: https://www.kfc.com/about
+industries:
+  - restaurant
+location:
+  city: Louisville
+  state: KY
+  country: us
+  international: true
+  wiki: Louisville, Kentucky
+summary: KFC has implemented its parent company's policies which includes a two-week sick-leave policy, but only for employees who are required to self-quarantine.
+citations:
+  - summary: KFC has been issuing sick leave for employees who are required by a doctor or the government to self-quarantine. They have encouraged the same policy of their franchisees.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Yum! In The News
+        link: https://web.archive.org/web/20200412170301/https://www.yum.com/wps/portal/yumbrands/Yumbrands/news/press-releases/the+latest+on+yum+brands+response+to+the+coronavirus
+        date: 2020-03-25T12:00:00Z # Estimate based on update date of 03/25/2020.
+      - source: Eater
+        link: https://web.archive.org/web/20200403081720/https://www.eater.com/2020/3/16/21181862/are-mcdonalds-starbucks-and-other-chains-offering-paid-sick-leave-for-coronavirus # Unknown date. Constantly updated.
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

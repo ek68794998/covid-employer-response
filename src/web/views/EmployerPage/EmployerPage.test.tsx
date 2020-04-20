@@ -9,6 +9,8 @@ import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
+import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
@@ -24,6 +26,8 @@ describe("<EmployerPage />", () => {
 			strings: {
 				appTitle: ploc("appTitle"),
 				home: ploc("home"),
+				loading: ploc("loading"),
+				notFound: ploc("notFound"),
 			},
 		});
 
@@ -49,20 +53,27 @@ describe("<EmployerPage />", () => {
 	});
 
 	test("displays an employer record", () => {
+		const fakeEmployer: Partial<EmployerRecordBase> = {
+			employeesBefore: new EmployerEmployeeProfile(),
+			id: "e1",
+			location: new EmployerLocation(),
+			name: "Alpha",
+		};
+
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsComplete: {
-					e1: Object.assign(new EmployerRecord(), {
-						employeesBefore: new EmployerEmployeeProfile(),
-						id: "e1",
-						location: new EmployerLocation(),
-						name: "Alpha",
-					}),
+					[fakeEmployer.id as string]: Object.assign(new EmployerRecord(), fakeEmployer),
+				},
+				itemsMetadata: {
+					[fakeEmployer.id as string]: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), fakeEmployer),
 				},
 			},
 			strings: {
 				appTitle: ploc("appTitle"),
 				home: ploc("home"),
+				loading: ploc("loading"),
+				notFound: ploc("notFound"),
 			},
 		});
 
@@ -75,7 +86,7 @@ describe("<EmployerPage />", () => {
 							location={{} as any}
 							match={{
 								isExact: true,
-								params: { id: "e1" },
+								params: { id: fakeEmployer.id as string },
 								path: "/employers",
 								url: "//notused",
 							}}

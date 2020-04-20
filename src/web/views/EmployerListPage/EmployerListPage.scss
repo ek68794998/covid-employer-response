@@ -7,14 +7,10 @@ main#employer-list {
 	margin: 0 auto;
 	width: 100%;
 
-	> div {
-		margin: 0 auto;
-		padding: 0 $page-padding;
-	}
-
 	div.EmployerListPage__Filters {
 		box-shadow: 0 0 8px $box-shadow-color;
 		background: $background;
+		margin: 0 auto;
 		padding: $division-padding;
 		position: sticky;
 		top: 0;
@@ -27,8 +23,13 @@ main#employer-list {
 			width: 50%;
 		}
 	}
-	
+
+	div.EmployerListPage__Container {
+		padding: 0 $page-padding;
+	}
+
 	div.EmployerListPage__Content {
+		margin: 0 auto;
 		max-width: $body-max-width;
 		padding-bottom: $division-padding;
 		padding-top: $division-padding;
@@ -36,8 +37,8 @@ main#employer-list {
 }
 
 @media (max-width: $body-narrow-width) {
-	main#home {
-		> div {
+	main#employer-list {
+		div.EmployerListPage__Container {
 			padding: 0 $page-padding-narrow;
 		}
 

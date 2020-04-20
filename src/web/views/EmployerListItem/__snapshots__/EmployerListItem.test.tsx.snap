@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerListItem /> renders details without exploding 1`] = `
+<div
+  className="EmployerListItem__Container EmployerListItem__Container--Detailed"
+>
+  [component: EmployerDetailsHeader employer=([object Object]) onClickEmployerName=([Function]) useShortText=(true) /]
+  <div
+    className="EmployerListItem__Summary"
+    onClick={[Function]}
+  >
+    <div
+      className="EmployerListItem__OverflowScreen"
+    />
+  </div>
+  <div
+    className="EmployerListItem__Actions"
+  >
+    [component: EmployerActionLinks employer=([object Object]) /]
+    <a
+      className="EmployerListItem__ReadMore"
+      onClick={[Function]}
+    >
+      řèáδMôřè
+      <i
+        className="material-icons"
+      >
+        fullscreen
+      </i>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<EmployerListItem /> renders standard without exploding 1`] = `
+<div
+  className="EmployerListItem__Container EmployerListItem__Container--Simple EmployerListItem__Rating--fair"
+  onClick={[Function]}
+>
+  <span
+    className="EmployerListItem__Name"
+  >
+    
+  </span>
+  <span
+    className="EmployerListItem__RatingText"
+  >
+    ƒáïř
+    <i
+      className="material-icons EmployerListItem__RatingIcon"
+    >
+      trending_flat
+    </i>
+  </span>
+</div>
+`;

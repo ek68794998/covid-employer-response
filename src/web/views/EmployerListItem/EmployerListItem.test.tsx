@@ -10,7 +10,7 @@ import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import EmployerListDetails from "./EmployerListDetails";
+import EmployerListItem from "./EmployerListItem";
 
 jest.mock(
 	"../EmployerDetailsHeader/EmployerDetailsHeader",
@@ -20,9 +20,46 @@ jest.mock(
 	"../EmployerActionLinks/EmployerActionLinks",
 	() => mockComponent("EmployerActionLinks"));
 
-describe("<EmployerListDetails />", () => {
-	test("renders without exploding", () => {
+describe("<EmployerListItem />", () => {
+	test("renders standard without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
+			employers: {
+				itemsMetadata: {
+					foo: new EmployerRecordMetadata(0, 0, "fair"),
+				},
+			},
+			strings: {
+				ratingLabels: {
+					fair: ploc("fair"),
+					good: ploc("good"),
+					poor: ploc("poor"),
+				},
+				readMore: ploc("readMore"),
+			},
+		});
+
+		const renderedValue: ReactTestRendererJSON | null =
+			renderer.create(
+				<Provider store={store}>
+					<BrowserRouter>
+						<EmployerListItem
+							employerId={"foo"}
+							showDetails={false}
+						/>
+					</BrowserRouter>
+				</Provider>,
+			).toJSON();
+
+		expect(renderedValue).toMatchSnapshot();
+	});
+
+	test("renders details without exploding", () => {
+		const store: Store<AppState, AnyAction> = configureStore({
+			employers: {
+				itemsMetadata: {
+					foo: new EmployerRecordMetadata(0, 0, "fair"),
+				},
+			},
 			strings: {
 				readMore: ploc("readMore"),
 			},
@@ -32,9 +69,9 @@ describe("<EmployerListDetails />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListDetails
-							employer={new EmployerRecordMetadata(0, 0, "fair")}
-							onClick={(): void => { /* Do nothing. */ }}
+						<EmployerListItem
+							employerId={"foo"}
+							showDetails={true}
 						/>
 					</BrowserRouter>
 				</Provider>,

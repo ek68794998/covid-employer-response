@@ -1,5 +1,5 @@
 @import "../Colors.scss";
-@import "../ReactModal.scss";
+@import "../Dimensions.scss";
 
 $card-min-width: 374px;
 $close-button-size: 48px;
@@ -48,7 +48,7 @@ button.EmployerList__CloseModal {
 
 @media (max-width: $body-2column-width) {
 	div.EmployerList__Container {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
 
 	button.EmployerList__CloseModal {
@@ -66,6 +66,6 @@ button.EmployerList__CloseModal {
 
 @media (max-width: $body-3column-width) and (min-width: $body-2column-width) {
 	div.EmployerList__Container {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }

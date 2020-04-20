@@ -17,9 +17,9 @@ exports[`<EmployerPage /> renders without exploding 1`] = `
   id="employer-page"
 >
   <div
-    className="EmployerPage__Content"
+    className="EmployerPage__Content EmployerPage__Content--Loading"
   >
-    Not found.
+    ℓôáδïñϱ
   </div>
 </main>
 `;

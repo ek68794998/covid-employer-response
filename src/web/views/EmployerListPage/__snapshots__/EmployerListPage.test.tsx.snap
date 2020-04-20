@@ -10,9 +10,13 @@ exports[`<EmployerListPage /> renders without exploding 1`] = `
     [component: EmployerListSearch onChange=([Function]) /]
   </div>
   <div
-    className="EmployerListPage__Content"
+    className="EmployerListPage__Container"
   >
-    [component: EmployerList searchFilter=([object Object]) /]
+    <div
+      className="EmployerListPage__Content"
+    >
+      [component: EmployerList searchFilter=([object Object]) /]
+    </div>
   </div>
 </main>
 `;

@@ -1,24 +1,179 @@
+@import "../Colors.scss";
 @import "../Dimensions.scss";
 
-$padding-interior: 18px;
+$padding-interior: 12px;
 
-div.EmployerPageDetails__Container {
-	font-size: 16px;
+.EmployerPageDetails__Header {
+	align-items: center;
+	display: flex;
 
-	a.EmployerActionLinks__Link {
-		opacity: 1.0 !important;
-	}
-
-	.EmployerDetailsHeader__Subtitle {
-		margin-bottom: 6px;
+	.EmployerLogo__Image {
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	}
 }
 
-div.EmployerPageDetails__Body > div {
-	margin-top: $padding-interior;
+.EmployerPageDetails__Title {
+	flex: 1;
+	font: 100 64px 'Baloo Chettan 2';
+	margin: 0;
+	overflow: hidden;
+	padding: 0 16px;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 
-	&.EmployerPageDetails__Summary {
-		line-height: 180%;
-		margin-top: 6px;
+	&:hover i {
+		visibility: visible;
 	}
+
+	a {
+		align-items: center;
+		color: inherit !important;
+		display: flex;
+	}
+
+	i {
+		position: absolute;
+		visibility: hidden;
+	}
+}
+
+.EmployerPageDetails__Rating {
+	align-items: center;
+	background: $indicator-neutral;
+	color: #fff;
+	cursor: default;
+	display: flex;
+
+	&.EmployerPageDetails__Rating--good {
+		background: $indicator-positive;
+	}
+
+	&.EmployerPageDetails__Rating--poor {
+		background: $indicator-negative;
+	}
+}
+
+.EmployerPageDetails__Summary {
+	font-size: 18px;
+	line-height: 170%;
+	padding: 0 15% $padding-interior;
+	text-align: center;
+}
+
+.EmployerPageDetails__MetaFooter {
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-gap: 16px;
+	grid-template-columns: 60% 40%;
+}
+
+.EmployerPageDetails__ProfileDetails {
+	color: #555;
+	line-height: 180%;
+	table-layout: fixed;
+	width: 100%;
+
+	td {
+		vertical-align: top;
+
+		&.EmployerPageDetails__ProfileLabel {
+			padding-right: 8px;
+			text-align: center;
+			width: 36px;
+		}
+	
+		&.EmployerPageDetails__ProfileValue {
+			padding: 2px 2px 8px;
+
+			i {
+				font-size: 10px;
+				line-height: 0;
+			}
+
+			h3 {
+				font-size: 110%;
+				margin: 4px 0 0;
+			}
+
+			.EmployerPageDetails__ProfileSublist {
+				font-size: 80%;
+				line-height: 160%;
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	img.EmployerPageDetails__ProfileFlag {
+		border-radius: 4px;
+		margin: 4px 0;
+		width: 20px;
+	}
+}
+
+.EmployerPageDetails__LinkedCompanies {
+	.EmployerListItem__Container {
+		margin-bottom: 8px;
+
+		& + h2 {
+			margin-top: 24px;
+		}
+	}
+}
+
+@mixin scaled-page($scale-base, $icon-multiplier, $pill-multiplier) {
+	.EmployerPageDetails__Header .EmployerLogo__Image {
+		height: ($scale-base * $icon-multiplier) * 2;
+		width: ($scale-base * $icon-multiplier) * 2;
+	}
+
+	.EmployerPageDetails__Title {
+		i {
+			font-size: ($scale-base / 1.5);
+			left: -($scale-base * 1.75);
+			padding: ($scale-base * 5 / 7);
+		}
+	}
+
+	.EmployerPageDetails__Rating {
+		border-radius: ($scale-base * $pill-multiplier);
+		font: 600 ($scale-base * $pill-multiplier * 0.5) 'Baloo Chettan 2';
+		height: ($scale-base * $pill-multiplier);
+		padding: 0 ($scale-base * $pill-multiplier / 2);
+	
+		i {
+			font-size: ($scale-base * $pill-multiplier * 0.75);
+			line-height: 0;
+			margin-left: 12px;
+		}
+	}
+}
+
+@include scaled-page(48px, 0.6, 1.0);
+
+@media (max-width: $body-reduced-width) {
+	.EmployerPageDetails__MetaFooter {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+@media (max-width: $body-narrow-width) {
+	.EmployerPageDetails__Header {
+		flex-direction: column;
+	}
+
+	.EmployerPageDetails__Title {
+		font-size: 56px;
+		line-height: 110%;
+		margin: ($padding-interior / 2) 0 $padding-interior;
+		text-align: center;
+		white-space: normal;
+	}
+
+	@include scaled-page(32px, 1.2, 1.5);
 }

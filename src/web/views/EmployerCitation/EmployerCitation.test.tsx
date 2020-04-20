@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
+import { ploc } from "../../../__tests__/TestUtils";
 import { Citation } from "../../../common/Citation";
 
 import { AppState } from "../../state/AppState";
@@ -13,16 +14,21 @@ import EmployerCitation from "./EmployerCitation";
 
 describe("<EmployerCitation />", () => {
 	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({});
+		const store: Store<AppState, AnyAction> = configureStore({
+			strings: {
+				citationTypes: {
+					hearsay: ploc("hearsay"),
+					publication: ploc("publication"),
+					statement: ploc("statement"),
+				},
+			},
+		});
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerCitation
-							citation={new Citation()}
-							citationSourceBase={0}
-						/>
+						<EmployerCitation citation={new Citation()} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

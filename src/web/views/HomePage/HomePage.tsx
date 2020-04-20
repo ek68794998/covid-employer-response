@@ -1,54 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { useSelector, useDispatch } from "react-redux";
-import { Link, withRouter, useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link, withRouter } from "react-router-dom";
 
-import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
-import { AppState } from "../../state/AppState";
-import { getEmployerById } from "../../state/ducks/employers/actions";
-import { getEmployer, getEmployerIds } from "../../state/ducks/employers/selectors";
+import { getEmployerIds } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import BackToTopButton from "../BackToTopButton/BackToTopButton";
-import EmployerListDetails from "../EmployerListDetails/EmployerListDetails";
+import EmployerListItem from "../EmployerListItem/EmployerListItem";
 
 import "./HomePage.scss";
 
 const HomePage: React.FC = (): React.ReactElement => {
-	const dispatch: React.Dispatch<any> = useDispatch();
-
 	const strings: LocalizedStrings = useSelector(getStrings);
 
-	const { push } = useHistory();
-
 	const [ randomEmployerId, setRandomEmployerId ] = useState<string | undefined>(undefined);
-
-	const randomEmployer: EmployerRecord | undefined =
-		useSelector((state: AppState) => getEmployer(state, randomEmployerId || ""));
 
 	const employerIds: string[] | undefined = useSelector(getEmployerIds);
 	const employerCount: number = employerIds ? employerIds.length : 0;
 
 	useEffect(
 		() => {
-			console.log("Employer IDs changed.", employerIds);
-
 			setRandomEmployerId(
 				employerIds && employerIds[Math.floor(Math.random() * employerIds.length)]);
 		},
 		[ employerIds?.length ]);
-
-	useEffect(
-		() => {
-			console.log("Random changed.", randomEmployerId);
-
-			if (randomEmployerId) {
-				dispatch(getEmployerById(randomEmployerId));
-			}
-		},
-		[ randomEmployerId ]);
 
 	return (
 		<main id="home">
@@ -82,11 +60,8 @@ const HomePage: React.FC = (): React.ReactElement => {
 				</div>
 				<div className="HomePage__SampleSpacer" />
 				<div className="HomePage__SampleCard">
-					{randomEmployer && (
-						<EmployerListDetails
-							employer={EmployerRecord.toMetadata(randomEmployer)}
-							onClick={(): void => push(`/employers/${randomEmployer.id}`)}
-						/>
+					{randomEmployerId && (
+						<EmployerListItem employerId={randomEmployerId} showDetails={true} />
 					)}
 				</div>
 			</section>

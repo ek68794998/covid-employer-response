@@ -18,6 +18,7 @@ describe("EmployerRecordBase", () => {
 					location: new EmployerLocation(),
 					name: "3",
 					officialWebsite: "4",
+					parentId: "9",
 					shortName: "5",
 					status: "active",
 					summary: "6",
@@ -38,6 +39,7 @@ describe("EmployerRecordBase", () => {
 		expect(copiedRecord.location).toEqual(record.location);
 		expect(copiedRecord.name).toBe(record.name);
 		expect(copiedRecord.officialWebsite).toBe(record.officialWebsite);
+		expect(copiedRecord.parentId).toBe(record.parentId);
 		expect(copiedRecord.shortName).toBe(record.shortName);
 		expect(copiedRecord.status).toBe(record.status);
 		expect(copiedRecord.summary).toBe(record.summary);

@@ -1,8 +1,5 @@
 name: Yum! Brands, Inc.
 aliases:
-  - KFC
-  - Pizza Hut
-  - Taco Bell
   - The Habit Burger Grill
   - Tricon Global Restaurants, Inc.
   - WingStreet
@@ -24,7 +21,7 @@ employeesBefore:
   upperBound: 34000
   year: 2019
   yearQuarter: Q4
-summary: Taco Bell, Pizza Hut, and KFC&mdash;Yum! Brands subsidiaries&mdash;all sport a two-week sick-leave policy, but only for employees who are required to self-quarantine.
+summary: Yum! Brands subsidiaries all sport a two-week sick-leave policy, but only for employees who are required to self-quarantine.
 citations:
   - summary: Yum! Brands employees have been provided with PPE such as non-surgical-grade masks and gloves as well as giving employees regular tests for symptoms.
     positivity: 1
@@ -33,7 +30,7 @@ citations:
       - source: Yum! In The News
         link: https://web.archive.org/web/20200412170301/https://www.yum.com/wps/portal/yumbrands/Yumbrands/news/press-releases/the+latest+on+yum+brands+response+to+the+coronavirus
         date: 2020-04-09T12:00:00Z # Estimate based on update date of 04/09/2020.
-  - summary: Yum! Brands corporate-owned stores under such brands as Taco Bell, Pizza Hut, and KFC, have been issuing sick leave for employees who are required by a doctor or the government to self-quarantine. They have encouraged the same policy of their franchisees.
+  - summary: Yum! Brands corporate-owned stores have been issuing sick leave for employees who are required by a doctor or the government to self-quarantine. They have encouraged the same policy of their franchisees.
     positivity: 0
     type: publication
     sources:

@@ -17,9 +17,6 @@ const AboutPage: React.FC = (): React.ReactElement => {
 	const coronavirusWikipediaUrl: string = "https://en.wikipedia.org/wiki/Coronavirus_disease_2019";
 	const coronavirusPandemicWikipediaUrl: string = "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic";
 
-	const makeExternalLink = (url: string, text: string): JSX.Element =>
-		<a href={url} rel="noopener noreferrer" target="_blank">{text}</a>;
-
 	return (
 		<main id="about">
 			<Helmet>
@@ -58,13 +55,7 @@ const AboutPage: React.FC = (): React.ReactElement => {
 				<h2 id="reports-and-claims">{strings.aboutSectionHeaders.reportsAndClaims}</h2>
 				<ReactMarkdown
 					linkTarget="_blank"
-					source={(
-						format(
-							strings.aboutSectionParagraphs.reportsAndClaims,
-							{
-								publication: strings.citationTypes.publication,
-							})
-					)}
+					source={strings.aboutSectionParagraphs.reportsAndClaims}
 				/>
 
 				<h2 id="claim-processing">{strings.aboutSectionHeaders.claimProcessing}</h2>
@@ -85,16 +76,9 @@ const AboutPage: React.FC = (): React.ReactElement => {
 					)}
 				/>
 
-				<h2 id="citation-types">
-					{format(
-						strings.aboutSectionHeaders.citationTypes,
-						{
-							hearsay: strings.citationTypes.hearsay,
-							publication: strings.citationTypes.publication,
-							statement: strings.citationTypes.statement,
-						})}
-				</h2>
+				<h2 id="citation-types">{strings.aboutSectionHeaders.citationTypes}</h2>
 				<ReactMarkdown
+					className="AboutPage__CitationTypes"
 					linkTarget="_blank"
 					source={(
 						format(
@@ -102,7 +86,7 @@ const AboutPage: React.FC = (): React.ReactElement => {
 							{
 								hearsay: strings.citationTypes.hearsay,
 								hearsayDescription: strings.citationTypeDescriptions.hearsay,
-								publication: strings.citationTypes.publication,
+								publication: `${strings.citationTypes.publication}`,
 								publicationDescription: strings.citationTypeDescriptions.publication,
 								statement: strings.citationTypes.statement,
 								statementDescription: strings.citationTypeDescriptions.statement,

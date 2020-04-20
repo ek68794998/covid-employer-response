@@ -19,11 +19,9 @@ describe("EmployerRecord", () => {
 	])(
 		"getRating properly generates based on EmployerRecord fields (%#)",
 		(ratings: number[], expected: EmployerRating) => {
-			const e: EmployerRecord = new EmployerRecord();
+			const sum: number = ratings.reduce((prev: number, curr: number) => prev + curr, 0);
 
-			ratings.forEach((value: number) => e.citations.push({ positivity: value, summary: "", type: "hearsay" }));
-
-			expect(EmployerRecord.getRating(e)).toBe(expected);
+			expect(EmployerRecord.calculateRating(ratings.length, sum)).toBe(expected);
 		},
 	);
 

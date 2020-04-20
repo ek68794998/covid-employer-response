@@ -6,13 +6,14 @@ aboutSectionHeaders:
   reportsAndClaims: What are employer claims and reports?
   claimProcessing: How do claims get processed?
   submitClaims: How do I add, change, or dispute claims?
-  citationTypes: What is the difference between "{publication}", "{statement}", and "{hearsay}"?
+  citationTypes: What does the icon next to a claim mean?
   employerRatings: What determines the rating of an employer?
 aboutSectionParagraphs:
   whatIs: "**{app}** ({appFullName}) is a collaborative, open-source project designed to track the responses of employers to the [coronavirus]({covidWikiUrl}) (COVID-19) [pandemic of 2019&ndash;2020]({pandemicWikiUrl}). It is built using information sourced from a number of places and categorizes it based on how reliable the original information source is considered to be. For more information, please visit [the project's page on GitHub]({githubUrl})."
   contributing: Yes! {app} is open-source and open-data and we'd love to have your help! You can help by submitting new employer claims and changes, or by submitting code changes to the site through [GitHub]({githubUrl}).
   reportsAndClaims: |
-    An **employer claim** is one or more declarations about an employer which include a summary and citations to back it up. This appears as a single bullet-point in the employer's listing beneath a header such as "{publication}".
+    An **employer claim** is one or more declarations about an employer which include a summary and citations to back it up. This appears as a single bullet-point in the employer's listing.
+
     An **employer report** is a collection of claims about an employer as well as an overall rating of how well that employer has handled the COVID-19 pandemic crisis.
   claimProcessing: Once a claim is submitted, it must be reviewed by a contributor to the project before it will be approved and appear on the site. This review process will require the contributor to go through each of the sources and validate that the claim made is substantiated by the source. Once the submitter and contributor(s) agree on the submitted information, the claim is completed and will appear the next time the site is updated.
   submitClaims: To submit a claim change of any kind, please click the "{submit}" link in the navigation menu. From there, ou can either submit a request for someone to update our data files, or submit a GitHub pull request to update the files yourself.
@@ -30,8 +31,8 @@ citationTypeDescriptions:
   statement: Published statements from employees (former, anonymous, or otherwise).
   hearsay: Word-of-mouth, rumors, or unconfirmed information.
 citationTypes:
-  publication: Publications
-  statement: Statements
+  publication: Publication
+  statement: Statement
   hearsay: Hearsay
 countryNames:
   af: Afghanistan
@@ -286,7 +287,9 @@ detailDescriptions:
   employees: The approximate number of employees the company had prior to the Coronavirus
     pandemic.
   linkToEmployer: The link directly to this employer's profile.
-  location: The city in which the employer's headquarters are located.
+  location: Where the employer's headquarters are located.
+  industry: The industries in which the employer is active.
+  name: The incorporated name of the employer.
   officialWebsite: The employer's official website link.
   rating: The general rating of the employer.
   ratingCounts: Aggregate counts of the good and bad actions an employer has taken.
@@ -360,9 +363,15 @@ industries:
   videoGames: Video games
   waste: Waste
   water: Water
+linkTypes:
+  children: Subsidiaries
+  parent: Parent company
+  related: Related
 loading: Loading...
 more: "{number} more"
 noResults: No results.
+notFound: Not found.
+profile: Employer profile
 ratingLabels:
   poor: Poor
   fair: Fair

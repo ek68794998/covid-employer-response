@@ -15,6 +15,7 @@ plugins:
 - import
 - prefer-arrow
 - react
+- unused-imports
 settings:
   react:
     version: detect
@@ -80,12 +81,12 @@ rules:
     - UPPER_CASE
   "@typescript-eslint/no-empty-function": error
   "@typescript-eslint/no-empty-interface": error
-  "@typescript-eslint/no-explicit-any": 'off'
+  "@typescript-eslint/no-explicit-any": "off"
   "@typescript-eslint/no-misused-new": error
   "@typescript-eslint/no-namespace": error
-  "@typescript-eslint/no-parameter-properties": 'off'
+  "@typescript-eslint/no-parameter-properties": "off"
   "@typescript-eslint/no-this-alias": error
-  "@typescript-eslint/no-use-before-define": 'off'
+  "@typescript-eslint/no-use-before-define": "off"
   "@typescript-eslint/no-var-requires": error
   "@typescript-eslint/prefer-for-of": error
   "@typescript-eslint/prefer-function-type": error
@@ -143,12 +144,12 @@ rules:
     imports: always-multiline
     exports: always-multiline
     functions: always-multiline
-  complexity: 'off'
+  complexity: "off"
   constructor-super: error
   curly: error
   default-case: error
   dot-notation: error
-  eol-last: 'off'
+  eol-last: "off"
   eqeqeq:
   - error
   - smart
@@ -160,7 +161,7 @@ rules:
   - undefined
   id-match: error
   import/no-extraneous-dependencies: error
-  import/no-internal-modules: 'off'
+  import/no-internal-modules: "off"
   import/order: error
   max-classes-per-file:
   - error
@@ -168,13 +169,13 @@ rules:
   max-len:
   - error
   - code: 120
-    ignorePattern: '[`"'']\)*;?$'
+    ignorePattern: '[`"''](\)*;|\})?$'
     ignoreStrings: true
   new-parens: error
   no-bitwise: error
   no-caller: error
   no-cond-assign: error
-  no-console: 'off'
+  no-console: "off"
   no-debugger: error
   no-duplicate-case: error
   no-duplicate-imports: error
@@ -182,7 +183,7 @@ rules:
   no-eval: error
   no-extra-bind: error
   no-fallthrough: error
-  no-invalid-this: 'off'
+  no-invalid-this: "off"
   no-multiple-empty-lines: error
   no-new-func: error
   no-new-wrappers: error
@@ -206,6 +207,7 @@ rules:
   no-unsafe-finally: error
   no-unused-expressions: error
   no-unused-labels: error
+  no-unused-vars: "off"
   no-var: error
   object-shorthand: error
   one-var:
@@ -224,9 +226,10 @@ rules:
   react/jsx-curly-spacing: error
   react/jsx-equals-spacing: error
   react/jsx-key: error
-  react/jsx-no-bind: 'off'
+  react/jsx-no-bind: "off"
   react/no-string-refs: error
-  react/no-unescaped-entities: 'off'
+  react/no-unescaped-entities: "off"
+  react/prop-types: "off"
   space-before-function-paren:
   - error
   - anonymous: never
@@ -236,5 +239,7 @@ rules:
   - error
   - never
   spaced-comment: error
+  unused-imports/no-unused-imports-ts: 2
+  unused-imports/no-unused-vars-ts: 1
   use-isnan: error
-  valid-typeof: 'off'
+  valid-typeof: "off"

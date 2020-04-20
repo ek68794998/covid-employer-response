@@ -1,6 +1,4 @@
 name: Amazon
-aliases:
-  - Whole Foods Market
 ticker: AMZN
 wiki: Amazon (company)
 image: amazon.svg
@@ -36,7 +34,7 @@ citations:
         title: COVID-19 Blog
         link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
         date: 2020-03-06T12:00:00Z # Estimate based on entry date of 03/06/2020.
-  - summary: Amazon has provided two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19. Whole Foods Market employees have received the same benefit.
+  - summary: Amazon has provided two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19.
     positivity: 0
     type: publication
     sources:
@@ -44,9 +42,6 @@ citations:
         title: COVID-19 Update
         link: https://blog.aboutamazon.com/working-at-amazon/covid-19-update-more-ways-amazon-is-supporting-employees-and-contractors
         date: 2020-03-11T20:00:12.347Z
-      - source: Whole Foods Market Newsroom
-        link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
-        date: 2020-03-13T12:00:00Z # Estimate based on entry date of 03/13/2020.
   - summary: Due to the scarcity of testing in places like New York, Amazon was asked to expand their sick leave policy to include employees who had not been able to get a positive diagnosis for COVID-19. It was only after pressure from 14 states' Attorneys General that they actually instated it.
     positivity: -1
     type: publication

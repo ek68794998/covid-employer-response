@@ -4,7 +4,6 @@ aliases:
   - Cheddar's Scratch Kitchen
   - Eddie V's Prime Seafood
   - LongHorn Steakhouse
-  - Olive Garden
   - Seasons 52
   - The Capital Grille
   - Yard House USA
@@ -51,10 +50,3 @@ citations:
       - source: Darden Restaurants updates
         link: https://web.archive.org/web/20200404183541/https://www.darden.com/our-company/our-commitment-to-you
         date: 2020-03-19T12:30:00-04:00
-  - summary: Olive Garden, a subsidiary of Darden, has provided paid time off for employees who have tested positive for COVID-19.
-    positivity: 0
-    type: publication
-    sources:
-      - source: BuzzFeed News
-        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
-        date: 2020-04-10T15:19:00-04:00

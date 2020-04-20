@@ -23,4 +23,18 @@ export class EmployerRecordMetadata extends EmployerRecordBase {
 	public get rating(): EmployerRating {
 		return this.ratingValue;
 	}
+
+	public static getTrendIcon(e: EmployerRecordMetadata): "trending_up" | "trending_flat" | "trending_down" {
+		switch (e.rating) {
+			case "good":
+				return "trending_up";
+
+			case "poor":
+				return "trending_down";
+
+			case "fair":
+			default:
+				return "trending_flat";
+		}
+	}
 }

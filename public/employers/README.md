@@ -4,12 +4,12 @@ Each `yml` ([YAML](https://yaml.org/)) file in this directory each represents an
 
 ### Creating a data file
 
-We recommend you make a copy of `sample.yml` and adjust it to fit your needs. The name of the file should be the employer's name in all lowercase with spaces replaced by `-`.
+We recommend you make a copy of `_sample.yml` and adjust it to fit your needs. The name of the file should be the employer's name in all lowercase with spaces replaced by `-`.
 
 ### Fields
 
 - `name`: The official name of the company.
-- `aliases`: An optional list of aliases for the company, if they have changed names or have a parent company.
+- `aliases`: An optional list of aliases for the company, if they have changed names or have an acronym. Child companies which are not relevant enough to have their own employer entries can also go here.
 - `shortName`: An optional shortened version of the company's name.
 - `ticker`: The stock ticker symbol for the company, if they are publicly traded.
 - `wiki`: The subpath for the company's English Wikipedia page, if any. Spaces will be converted to underscores.

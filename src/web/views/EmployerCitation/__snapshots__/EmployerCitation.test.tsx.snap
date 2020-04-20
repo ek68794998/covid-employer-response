@@ -9,8 +9,22 @@ exports[`<EmployerCitation /> renders without exploding 1`] = `
   >
     error_outline
   </i>
-  <span
+  <div
     className="EmployerCitation__Summary"
-  />
+  >
+    <span
+      className="EmployerCitation__References"
+    >
+      <span
+        title="λèářƨá¥"
+      >
+        <i
+          className="material-icons"
+        >
+          hearing
+        </i>
+      </span>
+    </span>
+  </div>
 </div>
 `;

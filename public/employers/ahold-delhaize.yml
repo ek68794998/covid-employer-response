@@ -2,8 +2,6 @@ name: Ahold Delhaize N.V.
 aliases:
   - Bfresh
   - Food Lion
-  - Giant-Landover
-  - Giant Food of Maryland
   - Giant Food Stores
   - Hannaford
   - Koninklijke Ahold Delhaize N.V.
@@ -35,20 +33,3 @@ citations:
       - source: Ahold Delhaize corporate news
         link: https://web.archive.org/web/20200416055621/https://www.aholddelhaize.com/en/media/latest/media-releases/ahold-delhaize-and-local-brands-deploy-more-than-170-million-on-covid-19-care-to-meet-associate-customer-and-community-needs/
         date: 2020-04-07T12:00:00Z # Estimate based on entry date of 04/07/2020.
-  - summary: Giant, an Ahold Delhaize subsidiary in Maryland, has limited the number of people in their stores at once and moved to one-way aisles, suggesting that customer capacity has been reduced to 20%.
-    positivity: 0
-    type: publication
-    sources:
-      - source: WTOP News
-        link: https://web.archive.org/web/20200411042130/https://wtop.com/business-finance/2020/04/giant-food-to-significantly-limit-customers-in-stores/
-        date: 2020-04-07T14:40:00-04:00
-  - summary: A mother, whose daughter died of the coronavirus while employed at Ahold Delhaize subsidiary Giant Food, has stated that her daughter had not been given any kind of PPE at work, such as gloves. The employee was forced to bring her own hand sanitizer from home, despite receiving paychecks as low as approximately $20.
-    positivity: -2
-    type: statement
-    sources:
-      - source: CBS News
-        link: https://web.archive.org/web/20200414015744/https://www.cbsnews.com/amp/news/grocery-store-worker-leilani-jordan-died-coroanvirus-kept-working-wanted-to-help-people/
-        date: 2020-04-09T15:22:00-04:00
-      - source: WUSA9
-        link: https://web.archive.org/web/20200414164032/https://www.wusa9.com/article/news/health/coronavirus/largo-giant-food-employee-coronavirus/65-e85e695d-6988-4284-b5b6-7e1c7631e469
-        date: 2020-04-05T16:14:51Z

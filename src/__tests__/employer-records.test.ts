@@ -41,8 +41,8 @@ describe("employer records", () => {
 	test.each(
 		recordIds.map((recordId: string) => [ recordId ]),
 	)("can load and parse %p (%#)", async (id: string) => {
-		if (id === "sample") {
-			// The sample file has some invalid dates, etc., so don't include it here.
+		if (id.startsWith("_")) {
+			// Sample and metadata files cannot be parsed as records.
 			return;
 		}
 
@@ -126,8 +126,8 @@ describe("employer records", () => {
 			return fail(`Employer summary for ${id} contains invalid punctuation or capitalization.`);
 		}
 
-		if (!record.citations || record.citations.length === 0) {
-			return fail(`Citations list for ${id} must not be empty.`);
+		if (record.childIds.length === 0 && (!record.citations || record.citations.length === 0)) {
+			return fail(`Citations list for (non-parent) ${id} must not be empty.`);
 		}
 
 		for (let i: number = 1; i <= record.citations.length; i++) {
@@ -192,9 +192,9 @@ describe("employer records", () => {
 	});
 
 	test("have correct sample data", async () => {
-		const record: EmployerRecord = await loader.getAsync("sample", {});
+		const record: EmployerRecord = await loader.getAsync("_sample", {});
 
-		expect(record.id).toBe("sample");
+		expect(record.id).toBe("_sample");
 		expect(record.name).toBe("Contoso");
 		expect(record.aliases?.[0]).toBe("MyContoso");
 		expect(record.aliases?.[1]).toBe("TheContoso");

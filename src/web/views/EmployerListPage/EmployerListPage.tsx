@@ -27,8 +27,10 @@ const EmployerListPage: React.FC = (): React.ReactElement => {
 			<div className="EmployerListPage__Filters">
 				<EmployerListSearch onChange={setSearchFilters} />
 			</div>
-			<div className="EmployerListPage__Content">
-				<EmployerList searchFilter={searchFilters} />
+			<div className="EmployerListPage__Container">
+				<div className="EmployerListPage__Content">
+					<EmployerList searchFilter={searchFilters} />
+				</div>
 			</div>
 			<BackToTopButton />
 		</main>

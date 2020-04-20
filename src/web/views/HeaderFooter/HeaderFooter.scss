@@ -31,16 +31,17 @@ header {
 		flex: 1;
 		font-weight: 600;
 		margin-top: -4px;
+		text-transform: uppercase;
 
 		&.HeaderMenu__HiddenBrand {
 			visibility: hidden;
 		}
 
-		.HeaderMenu__BrandLarge {
+		.HeaderMenu__Subtitle {
 			display: block;
 			font-size: 70%;
 			font-weight: 400;
-			margin-top: -10px;
+			margin-top: -6px;
 			opacity: 0.7;
 		}
 	}
@@ -173,7 +174,7 @@ footer {
 	header {
 		padding: 0 $page-padding-narrow;
 
-		div#brand .HeaderMenu__BrandLarge {
+		div#brand .HeaderMenu__Subtitle {
 			display: none;
 		}
 

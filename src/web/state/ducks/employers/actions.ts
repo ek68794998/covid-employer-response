@@ -7,6 +7,8 @@ import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadat
 import {
 	getEmployerByIdApi,
 	GetEmployerByIdApiResponse,
+	getEmployersByIdApi,
+	GetEmployersByIdApiResponse,
 	getEmployersListApi,
 	GetEmployersListApiResponse,
 } from "./api";
@@ -32,12 +34,25 @@ export const getEmployerById =
 	(id: string): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
 		(dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> =>
 			getEmployerByIdApi(id).then((result: GetEmployerByIdApiResponse) => {
-				if (result.response.status === 200) {
+				if (result.employer) {
 					dispatch(getEmployerByIdSuccess(result.employer));
 				} else {
 					dispatch(getEmployerByIdError());
 				}
 			});
+
+export const getEmployersById =
+	(ids: string[]): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
+		async (dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> => {
+			getEmployersByIdApi(ids).then((result: GetEmployersByIdApiResponse) => {
+				if (result.employers) {
+					result.employers.forEach(
+						(employer: EmployerRecord) => dispatch(getEmployerByIdSuccess(employer)));
+				} else {
+					dispatch(getEmployerByIdError());
+				}
+			});
+		};
 
 export const getEmployersListError = (): GetEmployersListActionTypes => ({
 	type: GetEmployersListErrorType,
@@ -51,7 +66,7 @@ export const getEmployersListSuccess = (payload: EmployerRecordMetadata[]): GetE
 export const getEmployersList =
 	(dispatch: React.Dispatch<GetEmployersListActionTypes>): Promise<void> =>
 		getEmployersListApi().then((result: GetEmployersListApiResponse) => {
-			if (result.response.status === 200) {
+			if (result.employers) {
 				dispatch(getEmployersListSuccess(result.employers));
 			} else {
 				dispatch(getEmployersListError());

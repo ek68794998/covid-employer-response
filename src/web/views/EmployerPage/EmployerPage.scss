@@ -3,16 +3,28 @@
 
 main#employer-page {
 	margin: 0 auto;
+	padding: 0 $page-padding;
 	width: 100%;
 
 	> div {
 		margin: 0 auto;
-		padding: 0 $page-padding;
 	}
 	
-	div.EmployerPage__Content {
+	.EmployerPage__Content {
 		max-width: $body-max-width;
 		padding-bottom: 16px;
 		padding-top: 16px;
+	}
+
+	.EmployerPage__Content--Loading, .EmployerPage__Content--NotFound {
+		font: 400 20px 'Baloo Chettan 2';
+		margin-top: 16px;
+		text-align: center;
+	}
+}
+
+@media (max-width: $body-narrow-width) {
+	main#employer-page {
+		padding: 0 $page-padding-narrow;
 	}
 }

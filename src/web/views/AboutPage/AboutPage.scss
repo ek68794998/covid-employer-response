@@ -4,11 +4,36 @@ main#about {
 	margin: 0 auto;
 	width: 100%;
 
-	div.AboutPage__Content {
+	.AboutPage__Content {
 		line-height: 180%;
 		margin: 0 auto;
 		max-width: 1440px;
 		padding: $page-padding;
+
+		.AboutPage__CitationTypes ul {
+			line-height: 220%;
+			list-style: none;
+			position: relative;
+
+			li::before {
+				font-family: 'Material Icons';
+				font-size: 18px;
+				left: 16px;
+				position: absolute;
+			}
+
+			li:nth-child(1)::before {
+				content: "description";
+			}
+
+			li:nth-child(2)::before {
+				content: "how_to_reg";
+			}
+
+			li:nth-child(3)::before {
+				content: "hearing";
+			}
+		}
 	}
 
 	h2 {
@@ -25,7 +50,7 @@ main#about {
 }
 
 @media (max-width: $body-narrow-width) {
-	main#about div.AboutPage__Content {
+	main#about .AboutPage__Content {
 		padding: $page-padding-narrow;
 	}
 }

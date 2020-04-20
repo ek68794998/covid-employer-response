@@ -1,0 +1,21 @@
+name: Olive Garden
+wiki: Olive Garden
+image: olive-garden.svg#54311d
+officialWebsite: https://www.olivegarden.com/about-us
+industries:
+  - restaurant
+location:
+  city: Orlando
+  state: FL
+  country: us
+  international: true
+  wiki: Orlando, Florida
+summary: In addition to parent company Darden's policies, Olive Garden has provided paid time off for COVID-19 diagnoses.
+citations:
+  - summary: Olive Garden has provided paid time off for employees who have tested positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BuzzFeed News
+        link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
+        date: 2020-04-10T15:19:00-04:00

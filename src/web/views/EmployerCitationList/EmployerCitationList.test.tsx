@@ -37,11 +37,7 @@ describe("<EmployerCitationList />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerCitationList
-							citations={[ new Citation() ]}
-							citationSourceBase={0}
-							citationType={"publication"}
-						/>
+						<EmployerCitationList citations={[ new Citation() ]} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
