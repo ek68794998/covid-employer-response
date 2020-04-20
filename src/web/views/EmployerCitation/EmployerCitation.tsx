@@ -66,17 +66,12 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 			<i className={iconClass}>{indicatorIcon}</i>
 			<div className="EmployerCitation__Summary">
 				<ReactMarkdown source={citation.summary} />
-				{citation.sources && citation.sources.length && (
-					<span className="EmployerCitation__References">
-						<span title={strings.citationTypes[citation.type]}>{DesignHelpers.materialIcon(icon)}</span>
-						{citation.sources.map(getLinkComponent)}
-					</span>
-				)}
-				{(!citation.sources || !citation.sources.length) && (
-					<span className="EmployerCitation__References">
-						<span title={strings.citationTypes[citation.type]}>{DesignHelpers.materialIcon(icon)}</span>
-					</span>
-				)}
+				<span className="EmployerCitation__References">
+					<span title={strings.citationTypes[citation.type]}>{DesignHelpers.materialIcon(icon)}</span>
+					{citation.sources && citation.sources.length > 0
+						? citation.sources.map(getLinkComponent)
+						: <span className="EmployerCitation__Unsourced">{strings.noSources}</span>}
+				</span>
 			</div>
 		</div>
 	);

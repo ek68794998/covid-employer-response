@@ -53,12 +53,8 @@ $indicator-glow-size: 3px;
 	.EmployerCitation__ReferenceContainer:not(:last-child)::after {
 		content: ", ";
 	}
-}
 
-@media (max-width: $body-reduced-width) {
-	.citation-references {
-		font-size: inherit;
-		margin-left: 4px;
-		vertical-align: initial;
+	.EmployerCitation__Unsourced {
+		color: #c62828;
 	}
 }
