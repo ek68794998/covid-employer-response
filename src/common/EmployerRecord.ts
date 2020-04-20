@@ -78,11 +78,14 @@ export class EmployerRecord extends EmployerRecordBase {
 			}
 		}
 
+		// Tweaking this to be larger than zero results in a broader range for "fair".
+		const normalizedScore: number = 1;
+
 		const metadata: EmployerRecordMetadata =
 			new EmployerRecordMetadata(
 				negatives,
 				positives,
-				score === 0 ? "fair" : (score > 0 ? "good" : "poor"));
+				score > normalizedScore ? "good" : (score < -normalizedScore ? "poor" : "fair"));
 
 		EmployerRecordBase.copyTo(original, metadata);
 

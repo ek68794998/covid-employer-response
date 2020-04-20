@@ -11,8 +11,10 @@ describe("EmployerRecord", () => {
 		[ [ -2 ], er("poor") ],
 		[ [ -2, 2, 0 ], er("fair") ],
 		[ [ 2 ], er("good") ],
-		[ [ -1 ], er("poor") ],
-		[ [ 1 ], er("good") ],
+		[ [ 1, 0 ], er("fair") ],
+		[ [ -1 ], er("fair") ],
+		[ [ -1, 0 ], er("fair") ],
+		[ [ 1 ], er("fair") ],
 		[ [ 0 ], er("fair") ],
 		[ [ 0, 0, 0, 0, 0 ], er("fair") ],
 		[ [ -2, 0, 0, 0, 0 ], er("poor") ],
@@ -29,7 +31,7 @@ describe("EmployerRecord", () => {
 		},
 	);
 
-	test("toMetadata properly creates an object (%#)", () => {
+	test("toMetadata properly creates an object", () => {
 		const record: EmployerRecord = new EmployerRecord();
 
 		record.citations.push(
@@ -43,7 +45,6 @@ describe("EmployerRecord", () => {
 
 		expect(metadata.positiveCount).toBe(2);
 		expect(metadata.negativeCount).toBe(1);
-		expect(metadata.rating).toBe("good");
 
 		expect(metadata.aliases).toBe(record.aliases);
 		expect(metadata.employeesAfter).toBe(record.employeesAfter);
