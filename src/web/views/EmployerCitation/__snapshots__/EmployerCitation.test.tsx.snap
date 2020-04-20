@@ -24,6 +24,9 @@ exports[`<EmployerCitation /> renders without exploding 1`] = `
           hearing
         </i>
       </span>
+      <span
+        className="EmployerCitation__Unsourced"
+      />
     </span>
   </div>
 </div>

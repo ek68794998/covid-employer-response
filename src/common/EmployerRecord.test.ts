@@ -1,3 +1,5 @@
+import { Citation } from "./Citation";
+import { CitationSource } from "./CitationSource";
 import { EmployerRating } from "./EmployerRating";
 import { EmployerRecord } from "./EmployerRecord";
 import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
@@ -41,7 +43,13 @@ describe("EmployerRecord", () => {
 		(ratings: number[], expected: EmployerRating) => {
 			const record: EmployerRecord = new EmployerRecord();
 
-			record.citations = ratings.map((r: number) => ({ positivity: r, summary: "N/A", type: "hearsay" }));
+			record.citations =
+				ratings.map((r: number): Citation => ({
+					positivity: r,
+					sources: [ new CitationSource() ],
+					summary: "N/A",
+					type: "statement",
+				}));
 
 			expect(EmployerRecord.toMetadata(record).rating).toBe(expected);
 		},
