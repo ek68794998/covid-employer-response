@@ -1,0 +1,48 @@
+name: The Walt Disney Company
+aliases:
+  - Walt Disney Productions
+  - Walt Disney Studio
+shortName: Disney
+ticker: DIS
+wiki: The Walt Disney Company
+image: disney.svg
+officialWebsite: https://thewaltdisneycompany.com/about/
+industries:
+  - entertainment
+location:
+  city: Burbank
+  state: CA
+  country: us
+  international: true
+  wiki: Burbank, California
+employeesBefore:
+  type: approximately
+  upperBound: 223000
+  year: 2019
+  yearQuarter: Q3
+summary: Disney has resorted to furloughs even with significant cash reserves still on hand, while electing to not cut executive bonuses, or stock dividends.
+citations:
+  - summary: Some executives, such as Bob Iger and Bob Chapek, will give up at least half their 2020 salaries. However, Chapek&mdash;and likely others&mdash;are still expected to receive their bonuses, potentially in the tens of millions of dollars.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Los Angeles Times
+        link: https://www.latimes.com/business/story/2020-04-19/disney-stops-paying-100000-workers
+        date: 2020-04-19T16:15:17Z
+  - summary: Even with over $20 billion USD in cash reserves on hand, Disney has furloughed over 100,000 people (about half its workforce) without pay.
+    positivity: -1
+    type: publication
+    sources:
+      - source: San Gabriel Valley Tribune
+        link: https://web.archive.org/web/20200421210239/https://www.sgvtribune.com/2020/04/20/disney-to-stop-paying-half-its-workforce-but-is-still-on-track-to-deliver-1-5-billion-dividend/
+        date: 2020-04-20T18:58:44Z
+      - source: Los Angeles Times
+        link: https://www.latimes.com/business/story/2020-04-19/disney-stops-paying-100000-workers
+        date: 2020-04-19T16:15:17Z
+  - summary: Despite resorting to furloughs, Disney intends to continue paying executive bonuses and a $1.5-billion-USD stock dividend this year.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Los Angeles Times
+        link: https://www.latimes.com/business/story/2020-04-19/disney-stops-paying-100000-workers
+        date: 2020-04-19T16:15:17Z
