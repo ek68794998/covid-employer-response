@@ -5,6 +5,7 @@ wiki: Papa John's Pizza
 image: papa-johns.svg#077954
 officialWebsite: https://www.papajohns.com/company/
 industries:
+  - foodDelivery
   - restaurant
 location:
   city: Jeffersontown
