@@ -26,8 +26,9 @@ describe("employer records", () => {
 		&& !!p.toString();
 
 	const isValidParagraph = (sentence: string): boolean =>
-		/^[A-Z].*\.$/.exec(sentence)
-			&& !/\. [a-z]/g.exec(sentence)
+		/^([A-Z]|[0-9])?[^ ]*[a-zA-Z][^ ]* .*\.[)"]?$/.exec(sentence)
+			&& !/ [a-zA-Z]+\.[)"]? [a-z]/g.exec(sentence)
+			&& sentence.indexOf("\n") < 0
 			&& sentence.indexOf("  ") < 0
 			|| false;
 
@@ -143,7 +144,7 @@ describe("employer records", () => {
 				return fail(`Citation #${i} summary for ${id} has invalid length ${citationSummaryLength}.`);
 			}
 
-			if (!isValidParagraph(record.summary)) {
+			if (!isValidParagraph(citation.summary)) {
 				return fail(`Citation #${i} summary for ${id} contains invalid punctuation or capitalization.`);
 			}
 
