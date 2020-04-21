@@ -1,7 +1,7 @@
 name: GameStop
 ticker: GME
 wiki: GameStop
-image: gamestop.png
+image: gamestop.svg#000000
 officialWebsite: http://news.gamestop.com/about-gamestop
 industries:
   - retail
