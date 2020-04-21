@@ -3,6 +3,7 @@ wiki: Pizza Hut
 image: pizza-hut.svg
 officialWebsite: https://blog.pizzahut.com/our-story/
 industries:
+  - foodDelivery
   - restaurant
 location:
   city: Louisville
