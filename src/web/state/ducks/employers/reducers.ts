@@ -32,7 +32,7 @@ export const getEmployers = (state: EmployersState | null = null, action: any): 
 							new EmployerRecordMetadata(
 								c.negativeCount,
 								c.positiveCount,
-								c.ratingValue);
+								c.rating);
 
 						p[c.id] = Object.assign(complete, c);
 

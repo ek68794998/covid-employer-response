@@ -16,11 +16,13 @@ import { AnyAction, Store } from "redux";
 import { LocalizationMiddleware } from "./api/middleware/LocalizationMiddleware";
 import { HttpRequest } from "./api/models/HttpRequest";
 import apiRoutes from "./api/routes";
+import { EmployerRecordLoader } from "./api/storage/EmployerRecordLoader";
 import { LocaleLoader } from "./api/storage/LocaleLoader";
 import { LocalizedStrings } from "./common/LocalizedStrings";
 import App from "./web/App";
 import { AppState } from "./web/state/AppState";
 import configureStore from "./web/state/configureStore";
+import { getEmployersListSuccess } from "./web/state/ducks/employers/actions";
 import { getIsProd } from "./web/state/ducks/environment/selectors";
 import { getLocalizedStringsSuccess } from "./web/state/ducks/localization/actions";
 
@@ -33,6 +35,9 @@ const syncLoadAssets = (): void => {
 };
 
 syncLoadAssets();
+
+const employerRecordLoader: EmployerRecordLoader =
+	new EmployerRecordLoader(process.env.RAZZLE_PUBLIC_DIR || "/", "employers");
 
 const localeLoader: LocaleLoader =
 	new LocaleLoader(process.env.RAZZLE_PUBLIC_DIR || "", "strings");
@@ -58,6 +63,8 @@ const server: express.Application = express()
 		const localeData: LocalizedStrings = deepmerge(defaultLocaleData, currentLocaleData);
 
 		const store: Store<AppState, AnyAction> = configureStore(preloadedState);
+
+		store.dispatch(getEmployersListSuccess(await employerRecordLoader.getAllMetadataAsync({})));
 		store.dispatch(getLocalizedStringsSuccess(localeData));
 
 		const baseUrl: string =
