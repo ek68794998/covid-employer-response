@@ -36,8 +36,8 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => {
 				const nameMatcher: RegExp = /^(The |A )?(.*)$/i;
 
-				const aName: string | undefined = nameMatcher.exec(a.name)?.[2];
-				const bName: string | undefined = nameMatcher.exec(b.name)?.[2];
+				const aName: string | undefined = nameMatcher.exec(a.shortName || a.name)?.[2];
+				const bName: string | undefined = nameMatcher.exec(b.shortName || b.name)?.[2];
 
 				return (aName || "").localeCompare(bName || "");
 			});
