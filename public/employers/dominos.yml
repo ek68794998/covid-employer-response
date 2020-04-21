@@ -54,3 +54,12 @@ citations:
         title: Domino's New Zealand
         link: https://twitter.com/dominos_NZ/status/1242639683596607488
         date: 2020-03-24T19:24:00-07:00
+  - summary: According to an employee of a Domino's franchise, the manager of his location in California continues to operate the store despite having COVID-19 symptoms, and refuses to get tested, sanitize the shop, or shut down operations. Three other workers have since gotten sick as well, and no one is being given sufficient PPE. The employee has "left multiple messages and emails" for Domino's corporate and not received a reply.
+    positivity: -2
+    type: hearsay
+    sources:
+      - source: Reddit r/IAmA
+        link: https://www.reddit.com/r/IAmA/comments/g4y2uf/iama_driver_for_dominos_pizza_ama/
+        date: 2020-04-20T11:15:10-07:00
+      - source: Reddit r/IAmA [PasteBin archive]
+        link: https://pastebin.com/ZWncYzf7
