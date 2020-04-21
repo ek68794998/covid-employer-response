@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { RouteComponentProps } from "react-router-dom";
 
@@ -44,6 +45,9 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	if (hasLoadedEmployers && !employerExists) {
 		return (
 			<main id="employer-page">
+				<Helmet>
+					<title>{strings.notFound} | {strings.appTitle}</title>
+				</Helmet>
 				<div className="EmployerPage__Content EmployerPage__Content--NotFound">
 					{strings.notFound}
 				</div>
@@ -54,6 +58,9 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	if (!hasLoadedEmployers || !employer) {
 		return (
 			<main id="employer-page">
+				<Helmet>
+					<title>{strings.loading} | {strings.appTitle}</title>
+				</Helmet>
 				<div className="EmployerPage__Content EmployerPage__Content--Loading">
 					{strings.loading}
 				</div>
@@ -63,6 +70,9 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	return (
 		<main id="employer-page">
+			<Helmet>
+				<title>{employer.name} | {strings.appTitle}</title>
+			</Helmet>
 			<div className="EmployerPage__Content">
 				<EmployerPageDetails employer={employer} />
 			</div>
