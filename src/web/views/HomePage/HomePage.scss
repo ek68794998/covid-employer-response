@@ -148,7 +148,11 @@ main#home {
 			padding: 0 $page-padding-narrow !important;
 
 			&.HomePage__Primer > div {
-				padding: 0 $page-padding-narrow $page-padding !important;
+				padding: 0 0 $page-padding !important;
+
+				h1 {
+					font-size: 64px;
+				}
 			}
 		}
 	}
