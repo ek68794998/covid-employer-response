@@ -8,7 +8,10 @@ wiki: The Walt Disney Company
 image: disney.svg
 officialWebsite: https://thewaltdisneycompany.com/about/
 industries:
+  - apparel
   - entertainment
+  - hospitality
+  - media
 location:
   city: Burbank
   state: CA
