@@ -66,7 +66,7 @@ citations:
       - source: ABC-7 Chicago
         link: https://abc7chicago.com/business/gamestop-says-its-an-essential-business-amid-state-covid-19-shutdowns/6035735/
         date: 2020-03-21T12:00:00Z # Estimate based on article date of 03/21/2020.
-  - summary: GameStop continues to operate in Massachusetts with curbside service, violating a government order to shut down all nonessential businesses. They have implemented a requirement that employees wrap their hands in plastic bags when handling customer payment cards.
+  - summary: GameStop continued to operate in Massachusetts with curbside service, violating a government order to shut down all nonessential businesses. They have implemented a requirement that employees wrap their hands in plastic bags when handling customer payment cards.
     positivity: -2
     type: publication
     sources:
@@ -76,3 +76,17 @@ citations:
       - source: Mass.gov
         link: https://www.mass.gov/info-details/covid-19-essential-services-faqs
         date: 2020-03-23T12:00:00Z # Estimate based on emergency order date of 03/23/2020.
+  - summary: In the second half of April, GameStop announced a plan to cut executive salaries by 30%&ndash;50%, cut salaries of other workers by 10%&ndash;30%, and offer options to work half-time or receive temporary furloughs.
+    positivity: 0
+    type: publication
+    sources:
+      - source: IGN
+        link: https://www.ign.com/articles/gamestop-plans-to-reopen-stores-cut-exec-salaries
+        date: 2020-04-21T17:34:00-07:00
+  - summary: GameStop started reopening stores in various countries and announced plans to reopen in the US states of South Carolina and Georgia. They have not declared plans to reopen stores in locations still on lockdown.
+    positivity: 0
+    type: publication
+    sources:
+      - source: IGN
+        link: https://www.ign.com/articles/gamestop-plans-to-reopen-stores-cut-exec-salaries
+        date: 2020-04-21T17:34:00-07:00
