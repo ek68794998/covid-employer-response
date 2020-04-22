@@ -1,0 +1,22 @@
+name: HomeTown Pharmacy
+image: hometown-pharmacy.png
+officialWebsite: https://hometownpharmacy.com/retail/about-us
+industries:
+  - healthCare
+  - retail
+location:
+  # Not 100% sure this is the headquarters. It is the city where their HR department is, but corporate HQ is not listed.
+  city: New Era
+  state: MI
+  country: us
+  international: false
+  wiki: New Era, Michigan
+summary: Little is known about HomeTown Pharmacy's general practices during COVID-19, but they do not appear to allow employees to work remotely&mdash;even if able to do so&mdash;despite a firm stay-at-home order in home state Michigan.
+citations:
+  - summary: A retail sales manager at HomeTown Pharmacy was fired after a staff meeting where she made the case that she should work from home, due to Michigan's stay-at-home order only exempting employees whose physical presence at work is "essential to sustain or protect life."
+    positivity: -1
+    type: statement
+    sources:
+      - source: Detroit Free Press
+        link: https://www.freep.com/story/news/local/michigan/2020/04/21/amber-gordy-fired-whitemer-stay-home-order-enforced-phar/5143169002/
+        date: 2020-04-21T10:00:14Z
