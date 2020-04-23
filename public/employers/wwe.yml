@@ -1,0 +1,34 @@
+name: World Wrestling Entertainment, Inc.
+shortName: WWE
+ticker: WWE
+wiki: WWE
+image: wwe.svg#000
+officialWebsite: https://corporate.wwe.com/who-we-are/company-overview
+industries:
+  - sports
+location:
+  city: Stamford
+  state: CT
+  country: us
+  international: false
+  wiki: Stamford, Connecticut
+employeesBefore:
+  type: approximately
+  upperBound: 850
+  year: 2017
+summary: WWE made both positive and negative changes in their business management during COVID-19, including cutting executive salaries and resorting to employee furloughs.
+citations:
+  - summary: WWE cut executive salaries, decreased operating expenses, and deferred spending to ease financial burden.
+    positivity: 1
+    type: publication
+    sources:
+      - source: NBC Connecticut
+        link: https://www.nbcconnecticut.com/news/local/wwe-to-furlough-workers-cut-executive-pay-due-to-impact-from-covid-19/2255969/
+        date: 2020-04-15T16:58:12-04:00
+  - summary: WWE furloughed an undisclosed portion of its workforce, in addition to cutting "talent expenses" and third-party staffing.
+    positivity: -1
+    type: publication
+    sources:
+      - source: NBC Connecticut
+        link: https://www.nbcconnecticut.com/news/local/wwe-to-furlough-workers-cut-executive-pay-due-to-impact-from-covid-19/2255969/
+        date: 2020-04-15T16:58:12-04:00
