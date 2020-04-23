@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EmployerLogo /> renders without exploding 1`] = `null`;
+exports[`<EmployerLogo /> renders without exploding 1`] = `
+<img
+  className="EmployerLogo__Image"
+  src="/images/employers/test.svg"
+  style={
+    Object {
+      "background": "#123",
+    }
+  }
+/>
+`;
