@@ -1,4 +1,6 @@
 name: Walmart
+aliases:
+  - Sam's Club
 ticker: WMT
 wiki: Walmart
 image: walmart.svg
@@ -69,10 +71,29 @@ citations:
       - source: Walmart corporate news
         link: https://corporate.walmart.com/newsroom/2020/03/10/new-covid-19-policy-to-support-the-health-of-our-associates
         date: 2020-03-10T12:00:00Z # Estimate based on article date of 03/10/2020.
-  - summary: Walmart requires a government-ordered quarantine to claim paid sick leave during the COVID-19 crisis.
-    positivity: -1
+  - summary: Walmart instated an emergency leave policy, extended through at least the end of May, which required a government-ordered quarantine or positive COVID-19 diagnosis to claim paid sick leave during the COVID-19 crisis.
+    positivity: 0
     type: publication
     sources:
+      - source: Walmart
+        link: https://one.walmart.com/content/dam/us-wire-wm1/documents/me@/pdfs/COVID-19_Emergency_Leave_visual_resources_and_FAQ_040520.pdf # Unknown date.
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00
+  - summary: Walmart started requiring all front-line employees to wear facial protection.
+    positivity: 1
+    type: publication
+    sources:
+      - source: USA Today
+        link: https://web.archive.org/web/20200422003601/https://www.usatoday.com/story/money/2020/04/18/coronavirus-prevention-walmart-requiring-employees-wear-face-masks/5158840002/
+        date: 2020-04-18T00:44:24Z
+  - summary: Walmart created over 150,000 jobs in an attempt to address demand during the pandemic, and on April 17, announced plans to create 50,000 more positions.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Wall Street Journal
+        link: https://www.wsj.com/articles/walmart-to-pay-550-million-in-staff-bonuses-hire-150-000-temporary-workers-11584664622
+        date: 2020-03-20T13:39:00-04:00
+      - source: USA Today
+        link: https://web.archive.org/web/20200421121819/https://www.usatoday.com/story/money/2020/04/17/walmart-adding-more-new-jobs-coronavirus/5155225002/
+        date: 2020-04-18T00:44:24Z
