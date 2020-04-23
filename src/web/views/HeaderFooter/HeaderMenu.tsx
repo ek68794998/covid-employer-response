@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
 
+import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { ProjectIssueSubmissionUrl } from "../../../common/constants/UrlConstants";
+
 import { getIsProd, getIsTest } from "../../state/ducks/environment/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
-
-import { ProjectIssueSubmissionUrl } from "../../../common/constants/UrlConstants";
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import "./HeaderFooter.scss";
 

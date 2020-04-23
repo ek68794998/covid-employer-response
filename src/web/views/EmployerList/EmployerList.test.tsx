@@ -5,8 +5,8 @@ import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { mockComponent, ploc } from "../../../__tests__/TestUtils";
-import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
+import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 

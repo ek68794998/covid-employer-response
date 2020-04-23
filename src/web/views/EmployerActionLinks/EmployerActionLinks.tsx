@@ -2,11 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
-import { ProjectUrl } from "../../../common/constants/UrlConstants";
 import { DesignHelpers } from "../../../common/DesignHelpers";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
+import { ProjectUrl } from "../../../common/constants/UrlConstants";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
