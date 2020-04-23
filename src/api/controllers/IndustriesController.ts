@@ -1,9 +1,9 @@
 import express from "express";
 
 import { EmployerRecord } from "../../common/EmployerRecord";
+import { MimeTypes } from "../../common/MimeTypes";
 import { HttpRequestHeaders } from "../../common/http/HttpRequestHeaders";
 import { HttpResponseHeaders } from "../../common/http/HttpResponseHeaders";
-import { MimeTypes } from "../../common/MimeTypes";
 
 import { DataLoadOptions } from "../storage/DataLoadOptions";
 import { EmployerRecordLoader } from "../storage/EmployerRecordLoader";

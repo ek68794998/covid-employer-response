@@ -1,7 +1,7 @@
 import { Citation } from "./Citation";
+import { EmployerRating } from "./EmployerRating";
 import { EmployerRecordBase } from "./EmployerRecordBase";
 import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
-import { EmployerRating } from "./EmployerRating";
 
 export class EmployerRecord extends EmployerRecordBase {
 	public childIds: string[] = [];
