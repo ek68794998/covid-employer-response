@@ -1,0 +1,66 @@
+name: Ford Motor Company
+aliases:
+  - Lincoln
+  - Troller
+shortName: Ford
+ticker: F
+wiki: Ford Motor Company
+image: ford.svg
+officialWebsite: https://corporate.ford.com/company.html
+industries:
+  - automotive
+location:
+  city: Dearborn
+  state: MI
+  country: us
+  international: true
+  wiki: Dearborn, Michigan
+employeesBefore:
+  type: approximately
+  upperBound: 190000
+  year: 2019
+  yearQuarter: Q4
+summary: Ford initially facilitated remote work and continued to pay factory employees who were unable to work due to production shutdowns. However, in April, Ford furloughed the majority of its workforce without pay.
+citations:
+  - summary: All Ford employees capable of working from home were instructed to do so early on in the pandemic.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200408122924/https://www.cnbc.com/2020/03/13/ford-gm-instruct-employees-to-work-from-home-due-to-coronavirus.html
+        date: 2020-03-13T14:49:00Z
+  - summary: Ford employees out of work due to factory closures were receiving 75% of their pay but not laid off as of April 9.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Car and Driver
+        link: https://web.archive.org/web/20200418022056/https://www.caranddriver.com/news/a32083482/automakers-layoffs-coronavirus/
+        date: 2020-04-09T00:00:41Z
+  - summary: Ford told all employees in March that if they felt like they were showing symptoms of COVID-19, they should seek medical attention; however, as of that time, no specific sick leave policy was announced to address this scenario.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Verge
+        link: https://web.archive.org/web/20200318131230/https://www.theverge.com/2020/3/13/21178309/automakers-ford-gm-fca-coronavirus-covid-19-remote-work-factory
+        date: 2020-03-13T18:37:33Z
+  - summary: Ford furloughed around 80% of its workforce and cut the salaries of its remaining workers by more than 10%. The announcement did not include what, if any, changes were made to executive salaries or compensation.
+    positivity: -1
+    type: publication
+    sources:
+      - source: "WXYZ: ABC Detroit"
+        link: https://web.archive.org/web/20200405183844/https://www.wxyz.com/news/coronavirus/the-henry-ford-announces-temporary-layoffs-salary-cuts-amid-covid-19
+        date: 2020-04-03T08:37:42Z
+  - summary: Under pressure of the autoworkers union, Ford shut down its factories in mid-March.
+    positivity: 0
+    type: publication
+    sources:
+      - source: New York Times
+        link: https://web.archive.org/web/20200421123538/https://www.nytimes.com/2020/03/18/business/economy/gm-ford-fiatchrysler-factories-virus.html
+        date: 2020-03-18T18:00:13-04:00
+  - summary: Ford announced intentions to begin production of respirators to help treat COVID-19 by reopening some of its closed factories, with a target date of mid-April. As of April 23, this had not yet come to fruition.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Design News
+        link: https://web.archive.org/web/20200413042524/https://www.designnews.com/covid-19/ford-and-gm-resuscitate-shuttered-auto-plants-make-covid-19-respirators/29455018762765
+        date: 2020-04-06T06:15:04-04:00

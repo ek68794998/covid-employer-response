@@ -1,0 +1,61 @@
+name: General Motors Company
+aliases:
+  - Cadillac
+  - Chevrolet
+  - Buick
+  - GMC
+shortName: General Motors
+ticker: GM
+wiki: General Motors
+image: general-motors.svg
+officialWebsite: https://www.gm.com/our-company/about-gm.html
+industries:
+  - automotive
+location:
+  city: Detroit
+  state: MI
+  country: us
+  international: true
+  wiki: Detroit
+employeesBefore:
+  type: approximately
+  upperBound: 161000
+  year: 2019
+  yearQuarter: Q4
+summary: GM facilitated remote work and continued to pay factory employees who were unable to work due to production shutdowns. Pay cuts were made for executives and some salaried employees.
+citations:
+  - summary: All GM employees capable of working from home were instructed to do so early on in the pandemic.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200408122924/https://www.cnbc.com/2020/03/13/ford-gm-instruct-employees-to-work-from-home-due-to-coronavirus.html
+        date: 2020-03-13T14:49:00Z
+  - summary: GM employees out of work due to factory closures were receiving 75% of their pay but not laid off as of April 9.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Car and Driver
+        link: https://web.archive.org/web/20200418022056/https://www.caranddriver.com/news/a32083482/automakers-layoffs-coronavirus/
+        date: 2020-04-09T00:00:41Z
+  - summary: GM executives were given pay cuts of 5&ndash;10 percent, while an additional 20% was deferred until an improvement in economic conditions.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Car and Driver
+        link: https://web.archive.org/web/20200418022056/https://www.caranddriver.com/news/a32083482/automakers-layoffs-coronavirus/
+        date: 2020-04-09T00:00:41Z
+  - summary: Under pressure of the autoworkers union, GM shut down its factories in mid-March.
+    positivity: 0
+    type: publication
+    sources:
+      - source: New York Times
+        link: https://web.archive.org/web/20200421123538/https://www.nytimes.com/2020/03/18/business/economy/gm-ford-fiatchrysler-factories-virus.html
+        date: 2020-03-18T18:00:13-04:00
+  - summary: GM announced intentions to begin production of respirators to help treat COVID-19 by reopening some of its closed factories, with a target date of mid-April. As of April 23, this had not yet come to fruition.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Design News
+        link: https://web.archive.org/web/20200413042524/https://www.designnews.com/covid-19/ford-and-gm-resuscitate-shuttered-auto-plants-make-covid-19-respirators/29455018762765
+        date: 2020-04-06T06:15:04-04:00
