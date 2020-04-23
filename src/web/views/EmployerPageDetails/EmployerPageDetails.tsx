@@ -148,6 +148,14 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 								<>{DesignHelpers.materialIcon("people")}</>,
 								<>{EmployerEmployeeProfile.toString(employer.employeesBefore, true, false)}</>,
 							)}
+							{employer.ticker && getProfileRow(
+								strings.detailDescriptions.ticker,
+								<>{DesignHelpers.materialIcon("attach_money")}</>,
+								<a href={`https://finance.yahoo.com/quote/${employer.ticker}`}>
+									${employer.ticker}
+									&nbsp;{DesignHelpers.materialIcon("launch")}
+								</a>,
+							)}
 							{employer.wiki && getProfileRow(
 								strings.detailDescriptions.wikipedia,
 								<>{DesignHelpers.materialIcon("language")}</>,
