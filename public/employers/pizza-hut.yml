@@ -16,9 +16,9 @@ employeesBefore:
   upperBound: 34000
   year: 2019
   yearQuarter: Q4
-summary: Pizza Hut has implemented its parent company's policies which includes a two-week sick-leave policy, but only for employees who are required to self-quarantine.
+summary: Pizza Hut implemented its parent company's policies which includes a two-week sick-leave policy, but only for employees who are required to self-quarantine.
 citations:
-  - summary: Pizza Hut has been issuing sick leave for employees who are required by a doctor or the government to self-quarantine. They have encouraged the same policy of their franchisees.
+  - summary: Pizza Hut issued sick leave for employees who are required by a doctor or the government to self-quarantine. They encouraged the same policy of their franchisees.
     positivity: 0
     type: publication
     sources:

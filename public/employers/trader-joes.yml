@@ -14,9 +14,9 @@ employeesBefore:
   type: exactly
   upperBound: 10001
   year: 2019
-summary: Though Trader Joe's boasts a solid two weeks of paid sick leave, it has been accused of not taking appropriate action at store locations where employees have tested positive for COVID-19.
+summary: Though Trader Joe's boasts a solid two weeks of paid sick leave, it was accused of not taking appropriate action at store locations where employees tested positive for COVID-19.
 citations:
-  - summary: Since March 2, Trader Joe's has extended a full two weeks of paid sick leave to anyone showing symptoms of COVID-19, regardless of whether they are able to get tested.
+  - summary: As of March 2, Trader Joe's started extending a full two weeks of paid sick leave to anyone showing symptoms of COVID-19, regardless of whether they are able to get tested.
     positivity: 1
     type: publication
     sources:
@@ -26,7 +26,7 @@ citations:
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00
-  - summary: Multiple Trader Joe's locations which have had confirmed cases of COVID-19 have remained open with workers expected to show up as usual.
+  - summary: Multiple Trader Joe's locations which had confirmed cases of COVID-19 remained open with workers expected to show up as usual.
     positivity: -1
     type: statement
     sources:

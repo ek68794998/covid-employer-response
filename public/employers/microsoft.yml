@@ -18,7 +18,7 @@ employeesBefore:
   type: exactly
   upperBound: 151163
   year: 2019
-summary: Microsoft has gone all-in on King County's advice to urge staff to work from home, and has taken steps upon learning of employees testing positive for COVID-19.
+summary: Microsoft went all-in on King County's advice to urge staff to work from home, and took steps upon learning of employees testing positive for COVID-19.
 citations:
   - summary: Microsoft employees were advised to stay home on the evening of March 4, and by March 6, less than 7,000 Seattle-area employees were working in-office.
     positivity: 1
@@ -30,7 +30,7 @@ citations:
       - source: Microsoft News
         link: https://news.microsoft.com/2020/03/04/kurt-delbenes-march-4-guidance-to-king-county-employees/
         date: 2020-03-04T16:44:14Z
-  - summary: Two Microsoft employees tested positive for COVID-19, and have received full support from the company.
+  - summary: Two Microsoft employees tested positive for COVID-19, and received full support from the company.
     positivity: 1
     type: publication
     sources:
@@ -50,10 +50,10 @@ citations:
   - summary: The work-from-home policy for Microsoft employees is in effect until at least May 4.
     positivity: 1
     type: hearsay
-  - summary: Buildings affected by employees who tested positive for COVID-19 have reportedly been sanitized.
+  - summary: Buildings affected by employees who tested positive for COVID-19 were reportedly sanitized.
     positivity: 1
     type: hearsay
-  - summary: Microsoft has provided 12 weeks of parental leave to employees who are dealing with extended school closures caused by COVID-19.
+  - summary: Microsoft provided 12 weeks of parental leave to employees who are dealing with extended school closures caused by COVID-19.
     positivity: 1
     type: publication
     sources:

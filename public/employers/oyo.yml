@@ -13,9 +13,9 @@ location:
   country: in
   international: true
   wiki: Gurgaon
-summary: Oyo is backed by significant capital but has elected to furlough an undisclosed number of international employees indefinitely. However, they have indicated that they have no intention of performing job cuts.
+summary: Oyo is backed by significant capital but elected to furlough an undisclosed number of international employees indefinitely. However, they indicated that they have no intention of performing job cuts.
 citations:
-  - summary: Despite being backed by [SoftBank](https://en.wikipedia.org/wiki/SoftBank_Group) and having over $1 billion USD in cash, Oyo has furloughed an undisclosed "thousands" of employees indefinitely. Employees in their India offices have not been affected by the furloughs.
+  - summary: Despite being backed by [SoftBank](https://en.wikipedia.org/wiki/SoftBank_Group) and having over $1 billion USD in cash, Oyo furloughed an undisclosed "thousands" of employees indefinitely. Employees in their India offices were not been affected by the furloughs.
     positivity: -1
     type: publication
     sources:
@@ -24,7 +24,7 @@ citations:
         date: 2020-04-08T08:56:53Z
       - source: CNBC
         link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
-  - summary: Oyo has said that, despite thousands of furloughs, they do not intend to cut jobs.
+  - summary: Oyo said that, despite thousands of furloughs, they do not intend to cut jobs.
     positivity: 1
     type: publication
     sources:
