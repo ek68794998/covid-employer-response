@@ -19,7 +19,7 @@ employeesBefore:
   upperBound: 96000
   year: 2020
   yearQuarter: Q1
-summary: Despite a small number of complaints from employees, 3M's took steps to help its employees work remotely and receive PTO, while also increasing production of respirators and masks to help serve increased global demand.
+summary: Despite a small number of complaints from employees, 3M took steps to help its employees work remotely and receive PTO, while also increasing production of respirators and masks to help serve increased global demand.
 citations:
   - summary: 3M shipped 10 million N95 masks from Singapore to various countries to help combat COVID-19. However, the US government ordered 3M to ship those masks to the US instead and they refused, violating the Defense Production Act.
     positivity: 0
