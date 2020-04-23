@@ -10,7 +10,7 @@ location:
   city: Chicago
   state: IL
   country: us
-  international: true
+  international: false
   wiki: Chicago
 employeesBefore:
   type: approximately

@@ -22,6 +22,8 @@ We recommend you make a copy of `_sample.yml` and adjust it to fit your needs. T
 	- Multinational companies should indicate `international: true`.
 - `employeesBefore`: The number of company employees prior to 2020.
 	- `lowerBound`: The lower bound of the employee count. Used only if specifying a range.
+	- `source`: The name of the site from where the data was retrieved. This is optional but encouraged.
+	- `sourceLink`: If `source` was provided, this is the direct link to the page where the data was found.
 	- `type`: `range`, `approximately`, or `exactly`.
 	- `upperBound`: The upper bound of the employee count, or the true number if not specifying a range.
 	- `year`: The year in which the measure was reported.
