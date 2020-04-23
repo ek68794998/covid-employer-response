@@ -26,16 +26,16 @@ employeesBefore:
   upperBound: 53000
   year: 2019
   yearQuarter: Q3
-summary: Ascena's executive staff have all slashed their salaries by half to counterbalance unpaid furloughs and pay cuts to corporate employees in high pay grades.
+summary: Ascena's entire executive staff slashed their salaries by half to counterbalance unpaid furloughs and pay cuts to corporate employees in high pay grades.
 citations:
-  - summary: All store associates and close to half of corporate associates have been furloughed indefinitely with medical benefits but no pay.
+  - summary: All store associates and close to half of corporate associates were furloughed indefinitely with medical benefits but no pay.
     positivity: -1
     type: publication
     sources:
       - source: Ascena News Releases
         link: https://web.archive.org/web/20200413022620/https://ascenaretailgroupinc.gcs-web.com/news-releases/news-release-details/ascena-retail-group-provides-additional-business-update-covid-19
         date: 2020-03-30T16:05:00-04:00
-  - summary: Ascena executives have taken cuts in their salaries by 50%.
+  - summary: Ascena executives took cuts in their salaries by 50%.
     positivity: 1
     type: publication
     sources:
@@ -45,7 +45,7 @@ citations:
       - source: The Business Journals
         link: https://www.bizjournals.com/bizwomen/news/latest-news/2020/03/gap-inc-ascena-brandsjoin-mass-retail-layoffs.html?page=all
         date: 2020-03-31T08:59:00-04:00
-  - summary: Salaried employees at Ascena who are above a certain pay grade will receive pay cuts of between 10% and 45%; however, the range of employees affected by this has not been disclosed.
+  - summary: Salaried employees at Ascena who are above a certain pay grade were stated to receive pay cuts of between 10% and 45%; however, the salary ranges affected by this were not disclosed.
     positivity: 0
     type: publication
     sources:

@@ -17,7 +17,7 @@ employeesBefore:
   upperBound: 254000
   year: 2019
   yearQuarter: Q4
-summary: Costco has always treated its retail employees well before the pandemic, but its response to the pandemic has been mostly negative such as needing approval for its corporate employees to work from home.
+summary: Costco has always treated its retail employees well before the pandemic, but its response to the pandemic has been mostly negative, such as its corporate employees needing approval to work from home.
 citations:
   - summary: Frontline employees are testing positive for COVID and are not given proper protection.
     positivity: -2
@@ -38,7 +38,7 @@ citations:
       - source: Buzzfeed News
         link: https://www.buzzfeednews.com/article/briannasacks/costco-coronavirus-covid-death-office-open
         date: 2020-04-18T12:00:00-04:00
-  - summary: Costco has not expanded its sick-leave policies in response to COVID-19, as of March 26. Employees who do not show up for work are not currently being penalized or fired; however, they are not receiving pay.
+  - summary: Costco did not expand its sick-leave policies in response to COVID-19, as of March 26. Their absentee policy was relaxed, meaning that employees who did not show up for work would not be penalized or fired; however, they would not receive pay.
     positivity: -1
     type: publication
     sources:
@@ -49,7 +49,7 @@ citations:
         title: Employees not properly protected on "front lines"
         link: https://www.buzzfeednews.com/article/briannasacks/costco-employees-coronavirus-fears
         date: 2020-03-20T23:21:00-04:00
-  - summary: According to five anonymous employees in east-coast US states, Costco has begun providing additional sick leave to some employees age 65 or higher, but has not expanded its policies for workers below 65.
+  - summary: According to five anonymous employees in east-coast US states, Costco began providing additional sick leave to some employees age 65 or higher, but did not expand its policies for workers below 65.
     positivity: 0
     type: statement
     sources:
@@ -63,7 +63,7 @@ citations:
       - source: Business Insider
         link: https://web.archive.org/web/20200401230304/https://www.businessinsider.com/costco-pays-workers-2-dollars-an-hour-more-coronavirus-2020-3
         date: 2020-03-23T20:33:14Z
-  - summary: Costco has implemented policies to limit number of guests entering, cuts weekly hours, and revised its return policies.
+  - summary: Costco implemented policies to limit number of guests entering, cut weekly hours, and revised its return policies.
     positivity: 1
     type: publication
     sources:

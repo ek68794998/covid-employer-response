@@ -24,9 +24,9 @@ employeesBefore:
   type: approximately
   upperBound: 372000
   year: 2018
-summary: Ahold Delhaize owns several local grocery stores which remain open with employees working in conditions which may expose them to COVID-19. While they have taken steps to reduce customer exposure to COVID-19, some subsidiaries have been accused of neglecting to provide basic PPE, such as gloves, to their staff.
+summary: Ahold Delhaize owns several local grocery stores which remain open with employees working in conditions which may expose them to COVID-19. Steps were introduced to reduce customer exposure to COVID-19, but some subsidiaries were accused of neglecting to provide basic PPE, such as gloves, to their staff.
 citations:
-  - summary: Ahold Delhaize has dedicated $185 million USD to its subsidiary stores to provide safety measures for employees and customers, as well as to donate to food banks, medical facilities, and first-responder charities.
+  - summary: Ahold Delhaize dedicated $185 million USD to its subsidiary stores to provide safety measures for employees and customers, as well as to donate to food banks, medical facilities, and first-responder charities.
     positivity: 1
     type: publication
     sources:
