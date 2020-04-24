@@ -1,0 +1,34 @@
+name: BuzzFeed
+wiki: BuzzFeed
+image: buzzfeed.svg
+officialWebsite: https://www.buzzfeed.com/about
+industries:
+  - entertainment
+  - media
+location:
+  city: New York City
+  state: NY
+  country: us
+  international: false
+  wiki: New York City
+employeesBefore:
+  type: approximately
+  upperBound: 1700
+  year: 2017
+  yearQuarter: Q4
+summary: BuzzFeed announced plans to avoid layoffs by significantly cutting executive salaries and giving gradual pay cuts to other salaried employees.
+citations:
+  - summary: BuzzFeed executives took pay cuts of over 14% with the CEO taking no salary until the company is "on the other side of this crisis."
+    positivity: 1
+    type: publication
+    sources:
+      - source: The Daily Beast
+        link: https://web.archive.org/web/20200411141723/https://www.thedailybeast.com/buzzfeed-slashing-employee-pay-amid-the-coronavirus-crisis?ref=author
+        date: 2020-03-25T14:20:15-04:00
+  - summary: Salaried employees at BuzzFeed took pay cuts; however, the cuts were very fair, being as low as 5% for those making under $65,000 USD per year, up to 10% for those making over $90,000 USD per year.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Daily Beast
+        link: https://web.archive.org/web/20200411141723/https://www.thedailybeast.com/buzzfeed-slashing-employee-pay-amid-the-coronavirus-crisis?ref=author
+        date: 2020-03-25T14:20:15-04:00
