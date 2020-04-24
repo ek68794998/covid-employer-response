@@ -1,0 +1,48 @@
+name: Cinemark Theatres
+shortName: Cinemark
+ticker: CNK
+wiki: Cinemark Theatres
+image: cinemark.svg
+officialWebsite: https://www.cinemark.com/about-cinemark
+industries:
+  - entertainment
+location:
+  city: Seattle
+  state: WA
+  country: us
+  international: false
+  wiki: Seattle
+employeesBefore:
+  type: exactly
+  upperBound: 19915
+  year: 2019
+  yearQuarter: Q1
+summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.
+citations:
+  - summary: Cinemark shuttered all movie theaters indefinitely starting on March 18 due to the ongoing pandemic.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Cinemark corporate news
+        link: https://web.archive.org/web/20200413101557/https://www.cinemark.com/covid-19-update
+        date: 2020-03-17T15:40:00-05:00
+  - summary: After securing a $250 million USD debt offering, Cinemark laid off over 17,500 hourly employees.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Motley Fool
+        link: https://www.fool.com/investing/2020/04/15/layoffs-at-cinemark-highlight-the-dire-state-of-th.aspx
+        date: 2020-04-15T14:42:00Z
+      - source: New York Post
+        link: https://web.archive.org/web/20200420111932/https://nypost.com/2020/04/15/cinemark-movie-theater-chain-hit-by-layoffs-furloughs/
+        date: 2020-04-15T11:04:46-04:00
+  - summary: Cinemark furloughed half of corporate employees, though it promised to pay 20% of their salary during the furlough in addition to benefits. Pay was cut in half for salaried employees who were not furloughed.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Motley Fool
+        link: https://www.fool.com/investing/2020/04/15/layoffs-at-cinemark-highlight-the-dire-state-of-th.aspx
+        date: 2020-04-15T14:42:00Z
+      - source: New York Post
+        link: https://web.archive.org/web/20200420111932/https://nypost.com/2020/04/15/cinemark-movie-theater-chain-hit-by-layoffs-furloughs/
+        date: 2020-04-15T11:04:46-04:00

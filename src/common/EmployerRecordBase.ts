@@ -4,7 +4,7 @@ import { EmployerLocation } from "./EmployerLocation";
 import { EmployerStatus } from "./EmployerStatus";
 
 export abstract class EmployerRecordBase {
-	public static readonly IMAGE_REGEX: RegExp = /^([a-z0-9-]+\.(?:png|svg|jpe?g))(#[a-f0-9]{6})?$/;
+	public static readonly IMAGE_REGEX: RegExp = /^([a-z0-9-]+\.(?:png|svg|jpe?g))(#[a-f0-9]{3}(?:[a-f0-9]{3})?)?$/;
 
 	public aliases?: string[];
 

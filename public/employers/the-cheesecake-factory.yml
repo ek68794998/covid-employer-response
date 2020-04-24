@@ -26,7 +26,7 @@ citations:
         link: https://web.archive.org/web/20200409145858/https://www.usatoday.com/story/money/2020/03/27/coronavirus-cheesecake-factory-furloughs-41-000-hourly-employees/2925331001/
         date: 2020-03-27T15:41:28Z
   - summary: Corporate and administrative employees at The Cheesecake Factory will receive a pay cut between 10% and 20% depending on their current pay.
-    positivity: 1
+    positivity: 0
     type: publication
     sources:
       - source: The Motley Fool
