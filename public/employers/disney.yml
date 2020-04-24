@@ -23,7 +23,7 @@ employeesBefore:
   upperBound: 223000
   year: 2019
   yearQuarter: Q3
-summary: Disney has resorted to furloughs even with significant cash reserves still on hand, while electing to not cut executive bonuses, or stock dividends.
+summary: Disney resorted to furloughs even with significant cash reserves still on hand, while electing to not cut executive bonuses, or stock dividends.
 citations:
   - summary: Some executives, such as Bob Iger and Bob Chapek, will give up at least half their 2020 salaries. However, Chapek&mdash;and likely others&mdash;are still expected to receive their bonuses, potentially in the tens of millions of dollars.
     positivity: 0
@@ -32,7 +32,7 @@ citations:
       - source: Los Angeles Times
         link: https://www.latimes.com/business/story/2020-04-19/disney-stops-paying-100000-workers
         date: 2020-04-19T16:15:17Z
-  - summary: Even with over $20 billion USD in cash reserves on hand, Disney has furloughed over 100,000 people (about half its workforce) without pay.
+  - summary: Even with over $20 billion USD in cash reserves on hand, Disney furloughed over 100,000 people (about half its workforce) without pay.
     positivity: -1
     type: publication
     sources:

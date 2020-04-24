@@ -15,9 +15,9 @@ employeesBefore:
   type: approximately
   upperBound: 42000
   year: 2019
-summary: Rather than resort to layoffs and furloughs, Mount Sinai has covered COVID-19 costs with executive pay cuts.
+summary: Rather than resort to layoffs and furloughs, Mount Sinai covered COVID-19 costs with executive pay cuts.
 citations:
-  - summary: Mount Sinai executives have taken pay cuts up to 50% to cover costs incurred during the COVID-19 crisis.
+  - summary: Mount Sinai executives took pay cuts up to 50% to cover costs incurred during the COVID-19 crisis.
     positivity: 1
     type: publication
     sources:

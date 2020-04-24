@@ -19,7 +19,7 @@ employeesBefore:
   type: exactly
   upperBound: 48016
   year: 2019
-summary: Tesla has made great promises to assist with COVID-19 in the form of ventilators, but thus far has manufactured none and only distributed equipment incapable of combating COVID-19. Additionally, they have gone against government orders to shut down their Fremont vehicle production factory and performed massive layoffs.
+summary: Tesla made great promises to assist with COVID-19 in the form of ventilators, but as of mid-April, had manufactured none and only distributed equipment incapable of combating COVID-19. Additionally, they went against government orders to shut down their Fremont vehicle production factory and performed massive layoffs.
 citations:
   - summary: Tesla was ordered to shut down its Fremont factory on March 18, but continued operating through March 23. However, some employers were forced to continue working after this date, and Tesla later argued (incorrectly) that it was "national critical infrastructure" and continued to operate.
     positivity: -2
@@ -39,29 +39,29 @@ citations:
         title: Factory a "public health risk"
         link: https://www.theverge.com/2020/3/31/21201651/tesla-fremont-factory-covid-19-coronavirus-shutdown-shelter-in-place
         date: 2020-03-31T17:00:00-04:00
-  - summary: Tesla had two employees test positive for COVID-19 and disclosed this only in an internal email. It did not indicate at which locations the employees worked, and brushed off the infections as having "a low likelihood of transmission."
+  - summary: Two Tesla employees tested positive for COVID-19 and Tesla disclosed this only in an internal email. It did not indicate at which locations the employees worked, and brushed off the infections as having "a low likelihood of transmission."
     positivity: -1
     type: publication
     sources:
       - source: TechCrunch
         link: https://techcrunch.com/2020/03/26/tesla-email-reveals-two-employees-have-tested-positive-for-covid-19/
         date: 2020-03-26T10:52:00-07:00
-  - summary: Tesla has announced a cut of 75% to its workforce in its Gigafactory in Storey County, Nevada, with no mention of severance pay or furloughs.
+  - summary: Tesla announced a cut of 75% to its workforce in its Gigafactory in Storey County, Nevada, with no mention of severance pay or furloughs.
     positivity: -1
     type: publication
     sources:
       - source: CNBC
         link: https://www.cnbc.com/2020/03/27/tesla-to-reportedly-cut-on-site-staff-at-nevada-factory-by-75percent.html
         date: 2020-03-27T13:26:00-04:00
-  - summary: Tesla employees designated as "non-critical" have been furloughed without pay, but will remain employees and keep their benefits. They are expected to be asked to return on May 4, the day after the stay-at-home measure is expected to be lifted on US factories.
+  - summary: Tesla employees designated as "non-critical" were furloughed without pay, but will remain employees and keep their benefits. They are expected to be asked to return on May 4, the day after the stay-at-home measure is expected to be lifted on US factories.
     positivity: 0
     type: publication
     sources:
       - source: Bloomberg
         link: https://web.archive.org/web/20200409135552/https://www.bloomberg.com/news/articles/2020-04-08/tesla-to-cut-employees-pay-as-much-as-30-to-curb-costs-k8qrmfkl
         date: 2020-04-08T03:20:55Z
-  - summary: Tesla has cut salaries of executives by up to 30%, while also cutting salaries of director-level positions (by about 20%) and "others" (by about 10%). The pay cuts are expected to last until the end of Q2 2020.
-    positivity: 0
+  - summary: Tesla cut salaries of executives by up to 30%, while also cutting salaries of director-level positions (by about 20%) and "others" (by about 10%). The pay cuts are expected to last until the end of Q2 2020.
+    positivity: 1
     type: publication
     sources:
       - source: Bloomberg
@@ -77,7 +77,7 @@ citations:
       - source: Forbes
         link: https://www.forbes.com/sites/billroberson/2020/04/04/health-officials-say-ventilators-donated-by-tesla-are-wrong-type-and-not-powerful-enough/#26d87acb6264
         date: 2020-04-04T15:00:00-04:00
-  - summary: Elon Musk has announced a repurposing of Tesla's solar-panel factory in New York to produce ventilators to combat COVID-19. However, this plan has yet to come to fruition as of April 4.
+  - summary: Elon Musk announced a repurposing of Tesla's solar-panel factory in New York to produce ventilators to combat COVID-19. However, this plan has yet to come to fruition as of April 4.
     positivity: 0
     type: publication
     sources:

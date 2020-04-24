@@ -17,7 +17,7 @@ employeesBefore:
   type: approximately
   upperBound: 137000
   year: 2019
-summary: Apple has shut down its retail locations and requested employees work remotely, while still offering full pay to both salaried and hourly workers. Though employee statements about potential layoffs and remote connectivity issues have arisen, these have not manifested into long-term issues.
+summary: Apple shut down its retail locations and requested employees work remotely, while still offering full pay to both salaried and hourly workers. Though there were employee statements about potential layoffs and remote connectivity issues, no long-term issues manifested as a result.
 citations:
   - summary: Apple requested employees to work from home "if \[their\] job allows" for the week of March 9 through 13. This work-from-home order was later extended indefinitely.
     positivity: 1
@@ -29,7 +29,7 @@ citations:
       - source: Apple Newsroom
         link: https://web.archive.org/web/20200314064555/https://www.apple.com/newsroom/2020/03/apples-covid-19-response/
         date: 2020-03-13T12:00:00Z # Estimate based on post date of 03/13/2020.
-  - summary: An Apple spokesperson and official statement have announced that "hourly workers will continue to receive pay" during the COVID-19 pandemic, even if they are not working. Janitors, drivers, and others are included in this set of workers, but a comprehensive list of all roles covered was not included.
+  - summary: An Apple spokesperson announced in an official statement that "hourly workers will continue to receive pay" during the COVID-19 pandemic, even if they are not working. Janitors, drivers, and others are included in this set of workers, but a comprehensive list of all roles covered was not included.
     positivity: 2
     type: publication
     sources:
@@ -51,14 +51,14 @@ citations:
         date: 2020-03-14T00:31:08-07:00
       - source: Apple FAQs
         link: https://web.archive.org/web/20200406040750/https://www.apple.com/shop/browse/store/temporary_closures
-  - summary: Apple employees working remotely have reportedly run into numerous security and connectivity issues. This has resulted in employees unable to complete their work, and feeling compelled to go into their office to do so. Employees working in the office are subject to daily health screenings.
+  - summary: Apple employees working remotely reported running into numerous security and connectivity issues. As a result, employees made statements about being unable to complete their work, and feeling compelled to go into their office to do so. Employees working in the office are subject to daily health screenings.
     positivity: 0
     type: statement
     sources:
       - source: Apple Insider
         link: https://web.archive.org/web/20200327193903/https://appleinsider.com/articles/20/03/14/apple-employees-working-from-home-stumbling-over-confusing-security-guidelines
         date: 2020-03-14T13:05:00-07:00
-  - summary: Early reports&mdash;which did not come to fruition&mdash;from [SEIU-USWW](https://www.seiu-usww.org/) and from janitors within Apple state that Apple had originally planned to cut pay and benefits for 75% of unionized janitors due to the crisis.
+  - summary: Early reports&mdash;which did not come to fruition&mdash;from [SEIU-USWW](https://www.seiu-usww.org/) and from janitors within Apple state that Apple originally planned to cut pay and benefits for 75% of unionized janitors due to the crisis.
     positivity: 0
     type: statement
     sources:

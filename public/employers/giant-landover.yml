@@ -17,16 +17,16 @@ employeesBefore:
   type: approximately
   upperBound: 22000
   year: 2017
-summary: Though Giant Food boasts a solid policy to reduce customer and employee exposure to COVID-19, they have been accused of not equipping their employees with appropriate PPE, such as gloves and hand sanitizer.
+summary: Though Giant Food boasts a solid policy to reduce customer and employee exposure to COVID-19, they were accused of not equipping their employees with appropriate PPE, such as gloves and hand sanitizer.
 citations:
-  - summary: Giant Food has limited the number of people in their stores at once and moved to one-way aisles, suggesting that customer capacity has been reduced to 20%.
+  - summary: Giant Food limited the number of people in their stores at once and moved to one-way aisles, stating that customer capacity was reduced to 20%.
     positivity: 0
     type: publication
     sources:
       - source: WTOP News
         link: https://web.archive.org/web/20200411042130/https://wtop.com/business-finance/2020/04/giant-food-to-significantly-limit-customers-in-stores/
         date: 2020-04-07T14:40:00-04:00
-  - summary: A mother, whose daughter died of the coronavirus while employed at Giant Food, has stated that her daughter had not been given any kind of PPE at work, such as gloves. The employee was forced to bring her own hand sanitizer from home, despite receiving paychecks as low as approximately $20.
+  - summary: A mother, whose daughter died of the coronavirus while employed at Giant Food, stated that her daughter had not been given any kind of PPE at work, such as gloves. The employee was forced to bring her own hand sanitizer from home, despite receiving paychecks as low as approximately $20.
     positivity: -2
     type: statement
     sources:

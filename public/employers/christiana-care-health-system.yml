@@ -17,16 +17,16 @@ employeesBefore:
   type: exactly
   upperBound: 11856
   year: 2018
-summary: Though ChristianaCare claims that it follows CDC guidelines and provides PPE to its caregivers as such, it has been publicly stated that they are no longer allowing the use of N95 respirators among employees working with COVID-19 patients, despite CDC guidelines to do so.
+summary: Though ChristianaCare made claims that it follows CDC guidelines and provides PPE to its caregivers as such, they publicly stated that they are no longer allowing the use of N95 respirators among employees working with COVID-19 patients, despite CDC guidelines to do so.
 citations:
-  - summary: ChristianaCare has said that its workers are given PPE based closely on the CDC's provided guidelines and Delaware's public health office.
+  - summary: ChristianaCare stated that its workers are given PPE based closely on the CDC's provided guidelines and Delaware's public health office.
     positivity: 1
     type: publication
     sources:
       - source: ChristianaCare
         link: https://web.archive.org/web/20200417000018/https://news.christianacare.org/2020/04/protecting-our-caregivers/
         date: 2020-04-15T19:49:23-04:00
-  - summary: Statements by employees at ChristianaCare subsidiaries say that caregivers working with COVID-19 patients have been forbidden to wear N95 respirators, saying, "It was written on our huddle board in the morning that airborne precautions are no longer needed." This is backed by an official statement from the chief infection prevention officer, saying the data "really doesn't support that using an N95 is necessary." This decision was apparently made based on data from the WHO and the CDC, despite the CDC issuing a statement telling all individuals to wear facial protection.
+  - summary: Statements by caregivers at ChristianaCare subsidiaries say that those working with COVID-19 patients were forbidden to wear N95 respirators, saying, "It was written on our huddle board in the morning that airborne precautions are no longer needed." This is backed by an official statement from the chief infection prevention officer, saying the data "really doesn't support that using an N95 is necessary." This decision was apparently made based on data from the WHO and the CDC, despite the CDC issuing a statement telling all individuals to wear facial protection.
     positivity: -2
     type: publication
     sources:

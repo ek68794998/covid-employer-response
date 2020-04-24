@@ -18,14 +18,14 @@ employeesBefore:
   year: 2019
 summary: Walgreens is allowing employees who are sick or dealing with situations affecting their families to take time off. However, their paid-leave policies only apply if an employee is given a positive diagnosis for COVID-19.
 citations:
-  - summary: Walgreens has relaxed its absence policies through April so that employees who are dealing with childcare or coronavirus-like symptoms can take time off. However, it is implied that such employees would not receive pay.
+  - summary: Walgreens relaxed its absence policies through April so that employees who are dealing with childcare or coronavirus-like symptoms can take time off. However, it is implied that such employees would not receive pay.
     positivity: 0
     type: publication
     sources:
       - source: Walgreens Newsroom
         link: https://web.archive.org/web/20200403202253/https://news.walgreens.com/our-stories/covid-19-faq.htm#hourlypay
         date: 2020-03-31T12:00:00Z # Estimate based on post date of 03/31/2020.
-  - summary: Walgreens has provided two weeks of paid time off for employees who have tested positive for COVID-19.
+  - summary: Walgreens provided two weeks of paid time off for employees who tested positive for COVID-19.
     positivity: 0
     type: publication
     sources:

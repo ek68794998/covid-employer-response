@@ -23,16 +23,16 @@ employeesBefore:
   type: approximately
   upperBound: 22000
   year: 2019
-summary: After furloughing over 14,500 employees, most of them shop workers, Arcadia Group has requested and used taxpayer money to pay wages instead of using money from its own accounts and wealthy executives.
+summary: After furloughing over 14,500 employees, most of them shop workers, Arcadia Group requested and used taxpayer money to pay wages instead of using money from its own accounts and wealthy executives.
 citations:
-  - summary: Multibillionaire Philip Green, the chairman of Arcadia Group and director of Arcadia's owner, Taveta Investments, has requested and used taxpayer funds to help pay employee wages after furloughing 14,500 workers.
+  - summary: Multibillionaire Philip Green, the chairman of Arcadia Group and director of Arcadia's owner, Taveta Investments, requested and used taxpayer funds to help pay employee wages after furloughing 14,500 workers.
     positivity: -1
     type: publication
     sources:
       - source: Daily Mail UK
         link: https://web.archive.org/web/20200403135504/https://www.dailymail.co.uk/news/article-8183763/Sell-one-yachts-Outrage-billionaire-Sir-Philip-Green-asks-taxpayer-help.html
         date: 2020-04-03T05:45:00-04:00
-  - summary: A number of head-office Arcadia Group employees, including the senior leadership team, have taken pay cuts of up to 50% during the COVID-19 pandemic.
+  - summary: A number of head-office Arcadia Group employees, including the senior leadership team, took pay cuts of up to 50% during the COVID-19 pandemic.
     positivity: 1
     type: publication
     sources:

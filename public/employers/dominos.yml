@@ -17,9 +17,9 @@ employeesBefore:
   type: approximately
   upperBound: 290000
   year: 2017
-summary: In the US, Canada, and Europe, Domino's has continued to operate but is taking safety measures and providing paid leave to corporate-owned store employees. Other locations, such as New Zealand, have shuttered completely.
+summary: In the US, Canada, and Europe, Domino's continued to operate but is taking safety measures and providing paid leave to corporate-owned store employees. Other locations, such as New Zealand, were shuttered completely.
 citations:
-  - summary: Though only 6% of Domino's locations are corporate-owned, the company has provided paid leave to anyone working in corporate-owned locations who feels unwell and stays home as a result. Domino's corporate is unable to enforce this policy for franchisee-operated locations, but have nevertheless recommended that they adopt the same policy.
+  - summary: Though only 6% of Domino's locations are corporate-owned, the company started providing paid leave to anyone working in corporate-owned locations who felt unwell and stayed home as a result. Domino's corporate is unable to enforce this policy for franchisee-operated locations, but nevertheless recommended that they adopt the same policy.
     positivity: 1
     type: publication
     sources:
@@ -29,21 +29,21 @@ citations:
   - summary: Prior to March 20, stores in Bellevue started using physical barricades between the customer areas and cash registers to enforce social distancing, and employees began using gloves and specific safe-handling procedures when making deliveries.
     positivity: 1
     type: hearsay
-  - summary: Domino's has begun hiring 10,000 employees amid increasing demand during the COVID-19 pandemic.
+  - summary: Domino's began hiring 10,000 employees amid increasing demand during the COVID-19 pandemic.
     positivity: 1
     type: publication
     sources:
       - source: The Motley Fool
         link: https://www.fool.com/investing/2020/03/28/dominos-pizza-a-lockdown-winner-any-way-you-slice.aspx
         date: 2020-03-31T10:01:00-07:00
-  - summary: Domino's has implemented a custom contactless delivery option as part of social distancing during the COVID-19 crisis.
+  - summary: Domino's implemented a custom contactless delivery option as part of social distancing during the COVID-19 crisis.
     positivity: 1
     type: publication
     sources:
       - source: Nation's Restaurant News
         link: https://www.nrn.com/delivery-takeout-solutions/domino-s-launches-custom-contactless-delivery-during-coronavirus-crisis
         date: 2020-03-16T19:28:00Z
-  - summary: Domino's New Zealand has temporarily shut down during the COVID-19 crisis. The wording of their press release does not explicitly state how workers are being handled during this time.
+  - summary: Domino's New Zealand temporarily shut down during the COVID-19 crisis. The wording of their press release does not explicitly state how workers are being handled during this time.
     positivity: 0
     type: publication
     sources:
@@ -54,7 +54,7 @@ citations:
         title: Domino's New Zealand
         link: https://twitter.com/dominos_NZ/status/1242639683596607488
         date: 2020-03-24T19:24:00-07:00
-  - summary: According to an employee of a Domino's franchise, the manager of his location in California continues to operate the store despite having COVID-19 symptoms, and refuses to get tested, sanitize the shop, or shut down operations. Three other workers have since gotten sick as well, and no one is being given sufficient PPE. The employee has "left multiple messages and emails" for Domino's corporate and not received a reply.
+  - summary: According to an employee of a Domino's franchise, the manager of his location in California continued to operate the store for days or weeks after showing COVID-19 symptoms, and still refused to get tested, sanitize the shop, or shut down operations. In that time, three other workers began showing symptoms, and no one was given sufficient PPE. The reporting employee "left multiple messages and emails" for Domino's corporate and had not received a reply as of April 20.
     positivity: -2
     type: hearsay
     sources:

@@ -19,16 +19,16 @@ employeesBefore:
   upperBound: 176100
   year: 2018
   yearQuarter: Q1
-summary: Dollar Tree has implemented standard, heightened sanitation practices in addition to providing all employees with two additional weeks of paid sick leave; however, they may only take that leave if they receive a positive diagnosis for COVID-19.
+summary: Dollar Tree implemented standard, heightened sanitation practices in addition to providing all employees with two additional weeks of paid sick leave; however, they may only take that leave if they receive a positive diagnosis for COVID-19.
 citations:
-  - summary: Dollar Tree has implemented cleaning and sanitation practices in line with CDC guidelines at all locations.
+  - summary: Dollar Tree implemented cleaning and sanitation practices in line with CDC guidelines at all locations.
     positivity: 0
     type: publication
     sources:
       - source: Dollar Tree corporate news
         link: https://web.archive.org/web/20200414033425/https://www.dollartree.com/coronavirus-response
         date: 2020-04-09T12:00:00Z # Estimate based on update date of 04/09/2020.
-  - summary: Dollar Tree has provided two supplemental weeks of paid time off for employees who have tested positive for COVID-19, in addition to the paid time off they have already accumulated.
+  - summary: Dollar Tree provided two supplemental weeks of paid time off for employees who tested positive for COVID-19, in addition to the paid time off they had already accumulated.
     positivity: 0
     type: publication
     sources:

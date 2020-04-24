@@ -17,7 +17,7 @@ employeesBefore:
   upperBound: 4800
   year: 2020
   yearQuarter: Q1
-summary: Twitter's employees have been able to fully work remotely while receiving full pay, and Twitter's CEO has donated over a quarter of his net worth to global COVID-19 relief.
+summary: Twitter's employees were able to fully work remotely while receiving full pay, and Twitter's CEO donated over a quarter of his net worth to global COVID-19 relief.
 citations:
   - summary: Twitter "strongly encouraged" all U.S. employees to work from home starting March 2, while making that order mandatory for some international employees due to varying countries' national decrees. On March 11, it made the work-from-home order mandatory for all employees.
     positivity: 1
@@ -29,7 +29,7 @@ citations:
       - source: The Verge
         link: https://web.archive.org/web/20200406113448/https://www.theverge.com/2020/3/12/21176211/twitter-employees-work-from-home-covid-19-coronavirus
         date: 2020-04-07T21:21:43Z
-  - summary: Twitter CEO Jack Dorsey has donated over $1 billion USD (about 28% of his net worth) to global COVID-19 relief.
+  - summary: Twitter CEO Jack Dorsey donated over $1 billion USD (about 28% of his net worth) to global COVID-19 relief.
     positivity: 1
     type: publication
     sources:

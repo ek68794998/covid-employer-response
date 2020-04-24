@@ -15,30 +15,30 @@ employeesBefore:
   type: exactly
   upperBound: 6101
   year: 2018
-summary: Shake Shack has had to perform corporate layoffs, though they have reduced executive salaries and pulled down credit to build cash reserves. They also returned a government loan that they had applied for so that it could go to businesses more in need.
+summary: Shake Shack performed corporate layoffs, though they reduced executive salaries and pulled down credit to build cash reserves. They also returned a government loan that they had applied for so that it could go to businesses more in need.
 citations:
-  - summary: Despite struggling, Shake Shack has returned a government loan of $10 million in its entirety, saying that it should be directed at smaller businesses that "need it most."
+  - summary: Despite struggling, Shake Shack returned a government loan of $10 million in its entirety, saying that it should be directed at smaller businesses that "need it most."
     positivity: 1
     type: publication
     sources:
       - source: NBC News
         link: https://web.archive.org/web/20200420152659/https://www.nbcnews.com/news/us-news/shake-shack-returning-10-million-government-loan-meant-small-businesses-n1187541
         date: 2020-04-19T21:18:00-07:00
-  - summary: Shake Shack has shut down 9 restaurants temporarily and the remainder are serving only by pickup or delivery.
+  - summary: Shake Shack shut down 9 restaurants temporarily and the remainder are serving only by pickup or delivery.
     positivity: 0
     type: publication
     sources:
       - source: Restaurant Business
         link: https://web.archive.org/web/20200420230346/https://www.restaurantbusinessonline.com/operations/shake-shack-reports-dire-impacts-covid-19-its-business
         date: 2020-04-02T16:18:51Z
-  - summary: Shake Shack has reduced salaries for all executives and frozen hiring.
+  - summary: Shake Shack reduced salaries for all executives and frozen hiring.
     positivity: 1
     type: publication
     sources:
       - source: Restaurant Business
         link: https://web.archive.org/web/20200420230346/https://www.restaurantbusinessonline.com/operations/shake-shack-reports-dire-impacts-covid-19-its-business
         date: 2020-04-02T16:18:51Z
-  - summary: Shake Shack has laid off or furloughed 20% of its corporate staff, though specific numbers affected were not given.
+  - summary: Shake Shack laid off or furloughed 20% of its corporate staff, though specific numbers affected were not given.
     positivity: -1
     type: publication
     sources:

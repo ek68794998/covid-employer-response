@@ -17,9 +17,9 @@ employeesBefore:
   upperBound: 39000
   year: 2019
   yearQuarter: Q1
-summary: Though Dillard's states that it will provide paid time off for employees who have been diagnosed with COVID-19, there are reports that employees have been unable to take time off that they have rightfully accumulated.
+summary: Though Dillard's states that it will provide paid time off for employees diagnosed with COVID-19, there are reports that employees were unable to take time off that they rightfully accumulated.
 citations:
-  - summary: Dillard's has provided two weeks of paid time off for employees who have tested positive for COVID-19.
+  - summary: Dillard's provided two weeks of paid time off for employees who have tested positive for COVID-19.
     positivity: 0
     type: publication
     sources:
