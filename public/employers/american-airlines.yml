@@ -1,0 +1,52 @@
+name: American Airlines, Inc.
+aliases:
+  - AA
+shortName: American Airlines
+ticker: AAL
+wiki: American Airlines
+image: american-airlines.svg
+officialWebsite: https://www.aa.com/i18n/customer-service/about-us/about-us.jsp
+industries:
+  - airline
+location:
+  city: Fort Worth
+  state: TX
+  country: us
+  international: true # All corporate offices are in the US, but they have reservation offices, etc. in other countries.
+  wiki: Fort Worth, Texas
+employeesBefore:
+  source: Statista
+  sourceLink: https://www.statista.com/statistics/422354/number-of-employees-of-american-airlines-group/
+  type: approximately
+  upperBound: 133700
+  year: 2020
+  yearQuarter: Q1
+summary: American Airlines eventually offered paid leave options to all employees, though flight attendants were initially excluded from being able to take advantage of this.
+citations:
+  - summary: American Airlines offered pilots an option to take 1, 3, or 6 months of leave at approximately 70% of their usual pay. Pilots aged 62 or older could opt to "retire early" and be paid out at about 60% of their usual pay until the age of 65.
+    positivity: 1
+    type: publication
+    sources:
+      - source: One Mile at a Time
+        link: https://web.archive.org/web/20200407023834/https://onemileatatime.com/american-airlines-employees-paid-leave/
+        date: 2020-03-31T07:45:18-04:00
+  - summary: Despite their initial generous offer for pilots, American Airlines flights attendants were offered only unpaid leave options at that time.
+    positivity: -1
+    type: publication
+    sources:
+      - source: One Mile at a Time
+        link: https://web.archive.org/web/20200407023834/https://onemileatatime.com/american-airlines-employees-paid-leave/
+        date: 2020-03-31T07:45:18-04:00
+  - summary: Two weeks after their initial offers, American Airlines began offering reasonably generous paid leave options to all employees.
+    positivity: 1
+    type: publication
+    sources:
+      - source: One Mile at a Time
+        link: https://web.archive.org/web/20200407023834/https://onemileatatime.com/american-airlines-employees-paid-leave/
+        date: 2020-03-31T07:45:18-04:00
+  - summary: American Airlines offered retirement packages to anyone with 15 years or more of company service.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html

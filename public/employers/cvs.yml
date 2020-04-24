@@ -35,7 +35,21 @@ citations:
     sources:
       - source: CVS Health Newsroom
         link: https://web.archive.org/web/20200414083401/https://cvshealth.com/newsroom/press-releases/covid-19-update-workplace-policies-and-practices
-        date: 2020-03-18T12:00:00Z
+        date: 2020-03-18T12:00:00Z # Estimate based on post date of 03/18/2020.
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00
+  - summary: CVS handed out bonuses between $150 and $500 USD and started providing dependent-care benefits to employees.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CVS Health Newsroom
+        link: https://web.archive.org/web/20200417211908/https://cvshealth.com/newsroom/press-releases/cvs-health-provide-bonuses-add-benefits-and-hire-50000-response-pandemic
+        date: 2020-03-18T12:00:00Z # Estimate based on post date of 03/23/2020.
+  - summary: CVS sought to create 50,000 jobs to meet demand during the pandemic.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CVS Health Newsroom
+        link: https://web.archive.org/web/20200417211908/https://cvshealth.com/newsroom/press-releases/cvs-health-provide-bonuses-add-benefits-and-hire-50000-response-pandemic
+        date: 2020-03-18T12:00:00Z # Estimate based on post date of 03/23/2020.
