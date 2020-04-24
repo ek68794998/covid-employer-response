@@ -8,6 +8,7 @@ export const EmployerIndustryValues = [
 	"automotive",
 	"aviation",
 	"cannabis",
+	"childCare",
 	"clothing",
 	"coffeeShop",
 	"construction",
