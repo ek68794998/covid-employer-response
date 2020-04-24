@@ -9,6 +9,8 @@ import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
+import { EmployerRouteContext, DefaultContextData } from "../EmployerRoute/EmployerRouteContext";
+
 import EmployerListSearch from "./EmployerListSearch";
 
 jest.mock(
@@ -34,7 +36,9 @@ describe("<EmployerListSearch />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListSearch onChange={(): void => { /* Do nothing. */ }} />
+						<EmployerRouteContext.Provider value={DefaultContextData}>
+							<EmployerListSearch />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			);
@@ -49,7 +53,9 @@ describe("<EmployerListSearch />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListSearch onChange={(): void => { /* Do nothing. */ }} />
+						<EmployerRouteContext.Provider value={DefaultContextData}>
+							<EmployerListSearch />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			);

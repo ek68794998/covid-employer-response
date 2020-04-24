@@ -18,7 +18,7 @@ employeesBefore:
   type: exactly
   upperBound: 198545
   year: 2018
-summary: Though white-collar employees have been forced to take pay cuts for several months, these are expected to be repaid in 2021. Executives, meanwhile, have all taken significant pay cuts or forgone their 2020 compensation.
+summary: Though white-collar employees were been forced to take pay cuts for several months, these are expected to be repaid in 2021. All executives, meanwhile, took significant pay cuts or forwent their 2020 compensation.
 citations:
   - summary: Salaried, "white-collar" workers received pay cuts of 20% which are expected for about three months. These cuts were expected to be repaid to employees by March 15, 2021.
     positivity: 0

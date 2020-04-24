@@ -16,9 +16,9 @@ employeesBefore:
   type: approximately
   upperBound: 45600
   year: 2019
-summary: Despite not paying rent for the month of April, The Cheesecake Factory has furloughed 41,000 workers without pay and done company-wide corporate pay cuts of up to 20%. However, this includes executives, and furloughed employees will retain benefits and receive routine free meals.
+summary: Despite not paying rent for the month of April, The Cheesecake Factory furloughed 41,000 workers without pay and done company-wide corporate pay cuts of up to 20%. However, this includes executives, and furloughed employees will retain benefits and receive routine free meals.
 citations:
-  - summary: The Cheesecake Factory has furloughed about 41,000 hourly workers. These workers will not be paid but will retain benefits and insurance until June 1, and will be provided one free meal per day at their restaurant of employment.
+  - summary: The Cheesecake Factory furloughed about 41,000 hourly workers. These workers will not be paid but will retain benefits and insurance until June 1, and will be provided one free meal per day at their restaurant of employment.
     positivity: 0
     type: publication
     sources:
@@ -26,13 +26,13 @@ citations:
         link: https://web.archive.org/web/20200409145858/https://www.usatoday.com/story/money/2020/03/27/coronavirus-cheesecake-factory-furloughs-41-000-hourly-employees/2925331001/
         date: 2020-03-27T15:41:28Z
   - summary: Corporate and administrative employees at The Cheesecake Factory will receive a pay cut between 10% and 20% depending on their current pay.
-    positivity: 1
+    positivity: 0
     type: publication
     sources:
       - source: The Motley Fool
         link: https://web.archive.org/web/20200403063237/https://www.fool.com/investing/2020/03/30/cheesecake-factory-furloughs-41000-hourly-workers.aspx
         date: 2020-03-30T10:17:00-04:00
-  - summary: Executives and board members for The Cheesecake Factory have received a 20% in their salaries and compensation.
+  - summary: Executives and board members for The Cheesecake Factory received a 20% cut in their salaries and compensation.
     positivity: 1
     type: publication
     sources:

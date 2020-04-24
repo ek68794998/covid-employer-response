@@ -365,6 +365,7 @@ linkTypes:
   parent: Parent company
   related: Related
 loading: Loading...
+loadMore: Load {count} more
 more: "{number} more"
 noResults: No results.
 noSources: Word of mouth; no citation

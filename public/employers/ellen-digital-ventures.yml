@@ -20,12 +20,15 @@ employeesBefore:
   type: range
   upperBound: 0
   year: 2020
-summary: Crew on Ellen DeGeneres' show have received significant pay cuts in the midst of little-to-no communication from their production staff, who publicly state that they are "committed to taking care of" their staff.
+summary: Crew on Ellen DeGeneres' show received significant pay cuts in the midst of little-to-no communication from their production staff, who publicly state that they are "committed to taking care of" their staff.
 citations:
-  - summary: In addition to receiving a 60% reduction in pay, crew on *The Ellen Degeneres Show* received no written communication about their hours or pay. Meanwhile, filming of the show has continued remotely and even increased to five shows a week instead of four.
+  - summary: In addition to receiving a 60% reduction in pay, crew on *The Ellen Degeneres Show* received no written communication about their hours or pay, and many of them were replaced with non-unionized workers. Meanwhile, filming of the show continued remotely and even increased to five shows a week instead of four.
     positivity: -2
     type: statement
     sources:
       - source: Variety
         link: https://web.archive.org/web/20200418013144/https://variety.com/2020/tv/news/ellen-crew-furious-over-poor-communication-regarding-pay-non-union-workers-during-coronavirus-shutdown-exclusive-1234582735/
         date: 2020-04-16T17:11:00-07:00
+      - source: Daily Beast
+        link: https://web.archive.org/web/20200423125836/https://www.thedailybeast.com/people-are-finally-starting-to-see-the-real-ellen-degeneres-and-it-isnt-pretty
+        date: 2020-04-21T04:46:37-04:00

@@ -8,64 +8,51 @@ $close-button-size-small: 32px;
 $body-2column-width: ($card-min-width * 2 + 40px);
 $body-3column-width: ($card-min-width * 3 + 120px);
 
-div.EmployerList__Container--Loading, div.EmployerList__Container--NoResults {
+.EmployerList__Container--Loading, .EmployerList__Container--NoResults {
 	font: 400 20px 'Baloo Chettan 2';
 	margin: 16px auto;
 	text-align: center;
 }
 
-div.EmployerList__Container {
+.EmployerList__LoadMore {
+	background: $background;
+	border: 1px solid $header;
+	border-radius: 32px;
+	color: $header;
+	cursor: pointer;
+	display: block;
+	font-family: inherit;
+	font-size: 24px;
+	height: 64px;
+	margin: 30px auto;
+	outline: none;
+	padding: 16px 48px;
+
+	&:hover {
+		background: $header;
+		color: $background;
+	}
+}
+
+.EmployerList__Grid {
 	display: grid;
 	grid-auto-rows: max-content;
 	grid-gap: 16px;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-div.EmployerList__Item {
+.EmployerList__Item {
 	height: 100%;
 }
 
-button.EmployerList__CloseModal {
-	background: $background;
-	border: 0;
-	border-radius: ($close-button-size / 2);
-	box-shadow: 0 2px 6px $box-shadow-color;
-	cursor: pointer;
-	position: fixed;
-	height: $close-button-size;
-	outline: none;
-	pointer-events: initial;
-	right: ($page-padding / 2);
-	top: ($page-padding / 2);
-	width: $close-button-size;
-	z-index: 21;
-
-	i {
-		font-size: 36px;
-		margin-top: 2px;
-	}
-}
-
 @media (max-width: $body-2column-width) {
-	div.EmployerList__Container {
+	.EmployerList__Grid {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
-	}
-
-	button.EmployerList__CloseModal {
-		height: $close-button-size-small;
-		right: ($page-padding-narrow / 2);
-		top: ($page-padding-narrow / 2);
-		width: $close-button-size-small;
-
-		i {
-			font-size: 24px;
-			margin-left: -2px;
-		}
 	}
 }
 
 @media (max-width: $body-3column-width) and (min-width: $body-2column-width) {
-	div.EmployerList__Container {
+	.EmployerList__Grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }

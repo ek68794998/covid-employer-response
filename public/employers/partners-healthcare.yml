@@ -14,7 +14,7 @@ employeesBefore:
   type: approximately
   upperBound: 75000
   year: 2019
-summary: Partners has provided PPE to its employees and paid time off for employees whose work has been cancelled or deferred. However, it refuses to provide hazard pay or paid overtime to workers in critical roles.
+summary: Partners provided PPE to its employees and paid time off for employees whose work was cancelled or deferred. However, it refuses to provide hazard pay or paid overtime to workers in critical roles.
 citations:
   - summary: The CEO of Partners, Anne Klibanski, signed a letter to employees stating that they would not be receiving hazard pay, despite continuing to take in an annual salary of at least $2 million USD.
     positivity: -1
@@ -23,7 +23,7 @@ citations:
       - source: Mother Jones
         link: https://www.motherjones.com/politics/2020/04/health-care-ceo-who-makes-millions-says-no-to-hazard-pay-for-coronavirus-workers/
         date: 2020-04-04T08:38:13-04:00
-  - summary: Employees whose non-urgent work (such as elective surgeries) has been cancelled or deferred have been given up to eight weeks of benefits and paid leave, and furloughs are not planned as of March 31.
+  - summary: Employees whose non-urgent work (such as elective surgeries) was cancelled or deferred were given up to eight weeks of benefits and paid leave, and furloughs are not planned as of March 31.
     positivity: 1
     type: publication
     sources:
@@ -33,14 +33,14 @@ citations:
       - source: Mother Jones
         link: https://www.motherjones.com/politics/2020/04/health-care-ceo-who-makes-millions-says-no-to-hazard-pay-for-coronavirus-workers/
         date: 2020-04-04T08:38:13-04:00
-  - summary: An employee who has been forced to drastically increase work hours has not received an increase in pay from his base salary of $90,000 USD.
+  - summary: An employee who was forced to drastically increase work hours did not receive an increase in pay from his base salary of $90,000 USD.
     positivity: -1
     type: statement
     sources:
       - source: Mother Jones
         link: https://www.motherjones.com/politics/2020/04/health-care-ceo-who-makes-millions-says-no-to-hazard-pay-for-coronavirus-workers/
         date: 2020-04-04T08:38:13-04:00
-  - summary: Employees have been provided with masks which they are required to wear at all times when on duty.
+  - summary: Employees were provided with masks which they are required to wear at all times when on duty.
     positivity: 1
     type: publication
     sources:

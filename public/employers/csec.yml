@@ -21,9 +21,9 @@ employeesBefore:
   type: approximately
   upperBound: 300
   year: 2020
-summary: The Calgary Sports and Entertainment Corporation (who are owners of not only NHL team Calgary Flames, but other sports properties in Calgary), have thus far elected to resort to temporary layoffs and pay cuts for part-time workers during the sports season pause associated with the COVID-19 pandemic.
+summary: The Calgary Sports and Entertainment Corporation, the owners of famous Calgary sports properties, elected to resort to temporary layoffs and pay cuts for part-time workers during the sports season pause associated with the COVID-19 pandemic.
 citations:
-  - summary: Employees hired by CSEC, notably those working with the Calgary Flames, had their pay suspended indefinitely starting March 12. (CSEC later reversed this decision after intense backlash.)
+  - summary: Pay was suspended indefinitely for employees hired by CSEC, notably those working with the Calgary Flames, starting March 12. (CSEC later reversed this decision after intense backlash.)
     positivity: -1
     type: publication
     sources:
@@ -33,7 +33,7 @@ citations:
       - source: Sporting News
         link: https://web.archive.org/web/20200315135823/https://www.sportingnews.com/us/nhl/news/flames-will-not-pay-part-time-arena-workers-for-events-canceled-due-to-coronavirus-report-says/1890c7l53z97wz4ej8hmzkpv4
         date: 2020-03-16T00:19:00Z
-  - summary: After several weeks of the NHL being on pause, CSEC decided to furlough approximately 50% of its workforce for at least 60 days. CSEC has applied for, and been granted, an increase in employment insurance payments for the furloughed workers. Remaining employees will see salary reductions of at least 10%.
+  - summary: After several weeks of the NHL being on pause, CSEC decided to furlough approximately 50% of its workforce for at least 60 days. CSEC applied for, and was granted, an increase in employment insurance payments for the furloughed workers. Remaining employees will see salary reductions of at least 10%.
     positivity: -1
     type: publication
     sources:

@@ -34,8 +34,8 @@ const EmployerCitation: React.FC<Props> = (props: Props): React.ReactElement => 
 			}
 
 			return (
-				<span className="EmployerCitation__ReferenceContainer">
-					<a key={i} href={s.link} rel="noopener noreferrer" target="_blank" title={title}>
+				<span key={i} className="EmployerCitation__ReferenceContainer">
+					<a href={s.link} rel="noopener noreferrer" target="_blank" title={title}>
 						{s.source}
 					</a>
 				</span>
