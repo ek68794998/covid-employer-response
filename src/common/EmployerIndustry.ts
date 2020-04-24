@@ -26,6 +26,7 @@ export const EmployerIndustryValues = [
 	"foodProcessing",
 	"furniture",
 	"groceryStore",
+	"healthAndFitness",
 	"healthCare",
 	"hemp",
 	"hospitality",
