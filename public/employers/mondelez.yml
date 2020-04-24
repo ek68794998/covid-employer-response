@@ -1,0 +1,38 @@
+name: Mondelez International, Inc.
+aliases:
+  - Kraft Foods
+  - Mr. Christie
+shortName: Mondelēz
+ticker: MDLZ
+wiki: Mondelez International
+image: mondelez.svg
+officialWebsite: https://www.mondelezinternational.com/about-us
+industries:
+  - foodProcessing
+location:
+  # There is a secondary HQ in Mississauga, Ontario, for Canadian distribution.
+  city: Chicago
+  state: IL
+  country: us
+  international: true
+  wiki: Chicago
+employeesBefore:
+  type: approximately
+  upperBound: 83000
+  year: 2018
+summary: TODO
+citations:
+  - summary: Mondelēz distributors and representatives received an increase of $2 USD per hour and a recurring weekly bonus of $125 USD.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://web.archive.org/web/20200408085454/https://www.reuters.com/article/us-health-coronavirus-mondelez-intl/mondelez-raises-hourly-wage-hands-out-weekly-bonus-as-virus-worries-fuel-demand-idUSKBN21A3Z3
+        date: 2020-03-23T23:51:46Z
+  - summary: Mondelēz provided two supplemental weeks of paid time off for employees who test positive for COVID-19.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Daily Herald
+        link: https://web.archive.org/web/20200324185032/https://www.dailyherald.com/business/20200323/mondelez-to-hire-1000-to-meet-increased-demand-due-to-covid-19
+        date: 2020-03-23T20:45:00Z
