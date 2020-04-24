@@ -42,3 +42,10 @@ citations:
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00
+  - summary: Yum! Brands CEO David Gibbs forwent the remainder of his 2020 salary to give one-time bonuses of $1,000 USD to individual store managers, as well as fund COVID-19 relief.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200414045559/https://www.cnbc.com/2020/03/30/yum-brands-ceo-to-forgo-2020-salary-to-fund-general-manager-bonuses.html
+        date: 2020-03-30T09:20:00-04:00
