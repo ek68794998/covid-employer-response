@@ -1,0 +1,41 @@
+name: Lyft, Inc.
+shortName: Lyft
+ticker: LYFT
+wiki: Lyft
+image: lyft.svg
+officialWebsite: https://www.lyft.com/careers/life-at-lyft
+industries:
+  - transport
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: true
+  wiki: San Francisco
+employeesBefore:
+  type: exactly
+  upperBound: 5380
+  year: 2019
+summary: Lyft initially appeared to be providing bare-minimum sick leave to employees diagnosed, but reversed this decision quietly and accusations have been made that the company had actively neglected to give its drivers paid leave.
+citations:
+  - summary: A class-action lawsuit was launched against Lyft, declaring that they did not provide sick leave to employees, resulting in employees working while sick. As of April 24, the case has not been settled.
+    positivity: 0
+    type: publication
+    sources:
+      - source: JDSupra
+        link: https://web.archive.org/web/20200424204941/https://www.jdsupra.com/legalnews/covid-19-class-actions-by-state-78157/
+        date: 2020-03-12T12:00:00Z # Estimate based on lawsuit date of 03/12/2020.
+  - summary: A Lyft driver who had a positive COVID-19 diagnosis was able to get leave after mailing his doctor's letter to Lyft, but even days afterward he had still not been cleared to receive pay during his leave.
+    positivity: -1
+    type: statement
+    sources:
+      - source: CNET
+        link: https://web.archive.org/web/20200419080303/https://www.cnet.com/news/lyft-quietly-adjusts-its-coronavirus-sick-pay-policy-for-drivers/
+        date: 2020-04-08T05:00:00-07:00
+  - summary: Lyft previously stated that sick employees would receive pay based on "rides they provided on the Lyft platform over the last four weeks." This phrasing was quietly removed from the leave policy at some point thereafter. [Lyft's driver-focused help page](https://web.archive.org/web/20200422145201/https://www.lyft.com/safety/coronavirus/driver) does not provide any information about sick leave.
+    positivity: -1
+    type: publication
+    sources:
+      - source: CNET
+        link: https://web.archive.org/web/20200419080303/https://www.cnet.com/news/lyft-quietly-adjusts-its-coronavirus-sick-pay-policy-for-drivers/
+        date: 2020-04-08T05:00:00-07:00
