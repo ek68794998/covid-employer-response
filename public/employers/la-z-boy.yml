@@ -1,0 +1,49 @@
+name: La-Z-Boy
+aliases:
+  - Lazy Boy
+ticker: LZB
+wiki: La-Z-Boy
+image: la-z-boy.svg#0070af
+officialWebsite: https://www.la-z-boy.com/content/AboutLaZBoy
+industries:
+  - furniture
+location:
+  city: Monroe
+  state: MI
+  country: us
+  international: false
+  wiki: Monroe, Michigan
+employeesBefore:
+  type: approximately
+  upperBound: 8950
+  year: 2017
+summary: La-Z-Boy's furloughed and cut pay for thousands of workers, but share buybacks and dividends were also halted to make up for capital shortfall.
+citations:
+  - summary: La-Z-Boy furloughed about 6,800 workers.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://web.archive.org/web/20200331151331/https://www.reuters.com/article/health-coronavirus-lazboy/la-z-boy-puts-most-staff-on-furlough-cancels-june-dividend-amid-coronavirus-idUSL1N2BM0DI
+        date: 2020-03-29T23:32:48Z
+  - summary: Salaried, non-executive employees at La-Z-Boy had their pay cut by 25%.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://web.archive.org/web/20200331151331/https://www.reuters.com/article/health-coronavirus-lazboy/la-z-boy-puts-most-staff-on-furlough-cancels-june-dividend-amid-coronavirus-idUSL1N2BM0DI
+        date: 2020-03-29T23:32:48Z
+  - summary: La-Z-Boy "senior management" had their pay cut by 50%.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://web.archive.org/web/20200331151331/https://www.reuters.com/article/health-coronavirus-lazboy/la-z-boy-puts-most-staff-on-furlough-cancels-june-dividend-amid-coronavirus-idUSL1N2BM0DI
+        date: 2020-03-29T23:32:48Z
+  - summary: La-Z-Boy halted its share-buyback program and eliminated its June stock dividend.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://web.archive.org/web/20200331151331/https://www.reuters.com/article/health-coronavirus-lazboy/la-z-boy-puts-most-staff-on-furlough-cancels-june-dividend-amid-coronavirus-idUSL1N2BM0DI
+        date: 2020-03-29T23:32:48Z
