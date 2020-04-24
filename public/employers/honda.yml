@@ -16,7 +16,7 @@ employeesBefore:
   type: exactly
   upperBound: 215638
   year: 2018
-summary: "Honda has responded to the crisis by halting production and deep-cleaning its facilities, without detriment to its workers' salaries or benefits."
+summary: "Honda responded to the crisis by halting production and deep-cleaning its facilities, without detriment to its workers' salaries or benefits."
 citations:
   - summary: Honda factories in Wuhan, China, were closed for holidays but did not reopen afterward due to the coronavirus outbreak there. Most employees were evacuated from Wuhan. The plants eventually reopened in the first half of March.
     positivity: 0
@@ -41,7 +41,7 @@ citations:
       - source: The Lima News
         link: https://web.archive.org/web/20200327154311/https://www.limaohio.com/news/403133/covid-19-causes-closures-layoffs-at-lima-area-factories
         date: 2020-03-19T07:05:54Z
-  - summary: Honda extended its initial production shutdown, with employees returning to work on April 10. It has continued to pay employees during this time.
+  - summary: Honda extended its initial production shutdown, with employees returning to work on April 10. It continued to pay employees during this time.
     positivity: 1
     type: publication
     sources:
@@ -51,7 +51,7 @@ citations:
       - source: CNET Road Show
         link: https://web.archive.org/web/20200402005422/https://www.cnet.com/roadshow/news/covid-19-automakers-plant-shutdowns-coronavirus/
         date: 2020-04-03T11:32:00-07:00
-  - summary: Honda has put over 10,000 workers in US factories on temporary leave until the end of April. Salaries were paid through April 12.
+  - summary: Honda put over 10,000 workers in US factories on temporary leave until the end of April. Salaries were paid through April 12.
     positivity: -1
     type: publication
     sources:
