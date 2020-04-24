@@ -42,10 +42,13 @@ citations:
       - source: Nation's Restaurant News
         link: https://web.archive.org/web/20200401100012/https://www.nrn.com/finance/ruths-chris-steak-house-closes-23-restaurants-wake-coronavirus-pandemic
         date: 2020-03-30T18:20:59Z
-  - summary: Despite closing a number of locations, an annual revenue of almost $470 million USD, and cash reserves of around $86 million USD, Ruth's Chris has, in less than a week, burned through their entire $20 million USD government loan.
-    positivity: -1
+  - summary: Despite closing a number of locations, an annual revenue of almost $470 million USD, and cash reserves of around $86 million USD, Ruth's Chris applied for and received $20 million USD government loan. They later announced that they would repay the entire $20 million.
+    positivity: 0
     type: publication
     sources:
       - source: GQ
         link: https://web.archive.org/web/20200421004811/https://www.gq.com/story/ruths-chris-small-business-steakhouse
         date: 2020-04-20T15:30:42Z
+      - source: CNBC
+        link: https://web.archive.org/web/20200424002742/https://www.cnbc.com/2020/04/23/ruths-chris-steakhouse-owner-says-it-will-repay-20-million-in-small-business-loan.html
+        date: 2020-04-23T20:14:58Z
