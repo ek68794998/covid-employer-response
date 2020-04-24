@@ -16,7 +16,7 @@ employeesBefore:
   lowerBound: 83000
   type: range
   year: 2019
-summary: While Chipotle offers an above-average sick-leave policy for their industry, employees have claimed that they have faced reproach for using their sick leave, as well as not been notified of coworkers testing positive for COVID-19.
+summary: While Chipotle offers an above-average sick-leave policy for their industry, employees claims state that they faced reproach for using their sick leave, as well as not been notified of coworkers testing positive for COVID-19.
 citations:
   - summary: Chipotle offers three days of paid sick leave with no accrual, which is a policy considered above average in the fast-food service industry.
     positivity: 1
@@ -32,7 +32,7 @@ citations:
       - source: Gothamist
         link: https://web.archive.org/web/20200307135030/https://gothamist.com/news/chipotle-workers-demand-company-comply-sick-leave-laws-amid-covid-19-outbreak
         date: 2020-03-06T05:00:00-05:00
-  - summary: An employee at Chipotle in New York has claimed that a coworker tested positive for COVID-19, but corporate office deemed that staff at that location not been notified, and no further action was taken by the company on the matter.
+  - summary: An employee at Chipotle in New York claimed that a coworker tested positive for COVID-19, but corporate office deemed that staff at that location not been notified, and no further action was taken by the company on the matter.
     positivity: -2
     type: hearsay
     sources:

@@ -1,7 +1,7 @@
-import { AppState } from "../../AppState";
-
 import { EmployerRecord } from "../../../../common/EmployerRecord";
 import { EmployerRecordMetadata } from "../../../../common/EmployerRecordMetadata";
+
+import { AppState } from "../../AppState";
 
 const isNotNullOrUndefined = <T >(input: null | undefined | T): input is T => !!input;
 

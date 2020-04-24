@@ -160,9 +160,19 @@ rules:
   - Undefined
   - undefined
   id-match: error
+  import/no-absolute-path: 2
   import/no-extraneous-dependencies: error
   import/no-internal-modules: "off"
-  import/order: error
+  import/order:
+  - error
+  - alphabetize:
+      order: asc
+    groups:
+    - - builtin
+      - external
+    - parent
+    - sibling
+    newlines-between: always-and-inside-groups
   max-classes-per-file:
   - error
   - 1

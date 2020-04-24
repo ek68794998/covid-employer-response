@@ -19,9 +19,9 @@ employeesBefore:
   upperBound: 96000
   year: 2020
   yearQuarter: Q1
-summary: Though there have been a small number of complaints from employees, 3M has taken initiatives to help its employees work remotely and receive PTO, while also increasing production of respirators and masks to help serve increased global demand.
+summary: Despite a small number of complaints from employees, 3M took steps to help its employees work remotely and receive PTO, while also increasing production of respirators and masks to help serve increased global demand.
 citations:
-  - summary: 3M has shipped 10 million N95 masks from Singapore to various countries to help combat COVID-19. However, the US government ordered 3M to ship those masks to the US instead and they refused, violating the Defense Production Act.
+  - summary: 3M shipped 10 million N95 masks from Singapore to various countries to help combat COVID-19. However, the US government ordered 3M to ship those masks to the US instead and they refused, violating the Defense Production Act.
     positivity: 0
     type: publication
     sources:
@@ -31,21 +31,21 @@ citations:
       - source: Vox
         link: https://www.vox.com/2020/4/3/21206779/coronavirus-update-trump-p-act-comfort-face-coverings
         date: 2020-04-03T17:50:00Z
-  - summary: 3M has significantly increased production of N95 masks in an effort to meet demand and prevent price gouging.
+  - summary: 3M significantly increased production of N95 masks in an effort to meet demand and prevent price gouging.
     positivity: 1
     type: publication
     sources:
       - source: Chemical Week
         link: https://chemweek.com/CW/Document/110197/COVID-19-3M-to-ramp-up-respirator-production-take-steps-to-prevent-price-gouging
         date: 2020-04-01T00:22:00Z
-  - summary: 3M has declared that they are "proud of" their employees and committed to supporting them. Though specifics have not been announced, they have increased cleaning and medical screening and instituted a pandemic-leave policy.
+  - summary: 3M declared that they are "proud of" their employees and committed to supporting them. Though specifics were not announced, they increased cleaning and medical screening and instituted a pandemic-leave policy.
     positivity: 0
     type: publication
     sources:
       - source: LinkedIn
         link: https://www.linkedin.com/pulse/update-3ms-response-covid-19-mike-roman/
         date: 2020-03-22T12:00:00Z # Estimate based on post date of 03/22/2020.
-  - summary: Some employees at 3M have claimed that internal messaging about COVID-19 has been vague and the company is not supporting employees working remotely. 3M has replied, stating that they have taken several steps (including reducing travel, staying home, and two extra weeks of paid time off) to ensure safety.
+  - summary: Some employees at 3M claimed that internal messaging about COVID-19 was vague and the company is not supporting employees working remotely. 3M replied, stating that they were taking several steps (including reducing travel, staying home, and two extra weeks of paid time off) to ensure safety.
     positivity: 0
     type: hearsay
     sources:

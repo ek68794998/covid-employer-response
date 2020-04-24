@@ -17,9 +17,9 @@ employeesBefore:
   upperBound: 16000
   year: 2020
   yearQuarter: Q1
-summary: Under Armour has closed down all outlet stores in North America and continued to pay employees during the closures. However, they still laid off a number of employees during this time.
+summary: Under Armour closed down all outlet stores in North America and continued to pay employees during the closures. However, they still laid off a number of employees during this time.
 citations:
-  - summary: All Under Armour locations in North America were shut down starting on March 16. They were slated to reopen March 28, but this was indefinitely extended due to the ongoing nature of the outbreak. Employees have continued to receive pay during the closures.
+  - summary: All Under Armour locations in North America were shut down starting on March 16. They were slated to reopen March 28, but this was indefinitely extended due to the ongoing nature of the outbreak. Employees continued to receive pay during the closures.
     positivity: 2
     type: publication
     sources:
@@ -29,7 +29,7 @@ citations:
       - source: TheStreet
         link: https://www.thestreet.com/investing/under-armour-layoffs-store-closings-restructuring
         date: 2020-04-03T09:56:53-04:00
-  - summary: Under Armour has laid off over at least 600 employees in its US distribution centers and outlets.
+  - summary: Under Armour laid off over at least 600 employees in its US distribution centers and outlets.
     positivity: -1
     type: publication
     sources:

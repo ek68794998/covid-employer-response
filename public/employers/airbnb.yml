@@ -15,9 +15,9 @@ employeesBefore:
   type: exactly
   upperBound: 12736
   year: 2019
-summary: By compensating hosts for cancelled reservations, as well as dedicating both funds and homes to front-line responders, Airbnb has demonstrated a commitment to assisting with COVID-19 above their own profits.
+summary: By compensating hosts for cancelled reservations, as well as dedicating both funds and homes to front-line responders, Airbnb commitment to assisting with COVID-19 above their own profits is generally positive.
 citations:
-  - summary: Airbnb has dedicated $250 million USD to its hosts to help cover 25% the costs of cancellations incurred by the lack of travel during the COVID-19 pandemic.
+  - summary: Airbnb dedicated $250 million USD to its hosts to help cover 25% the costs of cancellations incurred by the lack of travel during the COVID-19 pandemic.
     positivity: 1
     type: publication
     sources:
@@ -38,7 +38,7 @@ citations:
       - source: Reddit r/AirBnB
         link: https://www.reddit.com/r/AirBnB/comments/f3lhui/psa_corona_virus_and_airbnb/
         date: 2020-02-13T18:38:06-08:00
-  - summary: Airbnb has launched an initiative to provide free housing for 100,000 global front-line responders dealing with COVID-19.
+  - summary: Airbnb launched an initiative to provide free housing for 100,000 global front-line responders dealing with COVID-19.
     positivity: 1
     type: publication
     sources:

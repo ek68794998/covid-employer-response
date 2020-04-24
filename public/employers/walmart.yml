@@ -15,7 +15,7 @@ employeesBefore:
   type: approximately
   upperBound: 2200000
   year: 2018
-summary: As an essential retail chain, Walmart must remain open amidst the pandemic. During the early stages of the pandemic, Walmart did not give any special treatments to its workers. However, Walmart has increased wages for its employees, devised new retail procedures, and provided more protection for its workers.
+summary: As an essential retail chain, Walmart must remain open amidst the pandemic. During the early stages of the pandemic, Walmart did not give any special treatments to its workers. However, Walmart increased wages for its employees, devised new retail procedures, and provided more protection for its workers.
 citations:
   - summary: Walmart introduces huge changes to its stores, notably to increase social distancing.
     positivity: 1
@@ -38,14 +38,14 @@ citations:
       - source: Reddit r/walmart
         link: https://www.reddit.com/r/walmart/comments/fszn8j/this_is_why_this_pandemic_is_going_ro_continue/
         date: 2020-04-01T06:19:59-07:00
-  - summary: Walmart has increased wages for its warehouse workers but not its retail workers.
+  - summary: Walmart increased wages for its warehouse workers but not its retail workers.
     positivity: 0
     type: publication
     sources:
       - source: Reuters
         link: https://www.reuters.com/article/us-health-coronavirus-walmart/walmart-ups-minimum-wage-in-e-commerce-warehouses-by-2-as-orders-surge-on-virus-worries-idUSKBN21A0BO
         date: 2020-03-22T21:04:00-07:00
-  - summary: Walmart has given out bonuses and hired temporary staffers amidst the pandemic, and provided two weeks of paid time off if an employee tests positive for COVID-19.
+  - summary: Walmart gave out bonuses and hired temporary staffers amidst the pandemic, and provided two weeks of paid time off if an employee tests positive for COVID-19.
     positivity: 1
     type: publication
     sources:
@@ -55,14 +55,14 @@ citations:
       - source: Wall Street Journal
         link: https://www.wsj.com/articles/walmart-to-pay-550-million-in-staff-bonuses-hire-150-000-temporary-workers-11584664622
         date: 2020-03-20T13:39:00-04:00
-  - summary: Walmart employees have feared for their job and their health.
+  - summary: Walmart employees feared for their job and their health.
     positivity: -1
     type: statement
     sources:
       - source: Business Insider
         link: https://www.businessinsider.com/walmart-target-workers-describe-working-conditions-during-coronavirus-2020-3
         date: 2020-03-05T14:37:53Z
-  - summary: Walmart has waived its "attendance occurrence policy" through the end of April, allowing workers who are unable or uncomfortable working to stay home without their job being in jeopardy. However, they would not be paid for these absences unless they used standard paid-time-off options.
+  - summary: Walmart waived its "attendance occurrence policy" through the end of April, allowing workers who are unable or uncomfortable working to stay home without their job being in jeopardy. However, they would not be paid for these absences unless they used standard paid-time-off options.
     positivity: 1
     type: publication
     sources:

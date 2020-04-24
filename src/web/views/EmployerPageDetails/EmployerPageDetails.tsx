@@ -8,6 +8,7 @@ import { DesignHelpers } from "../../../common/DesignHelpers";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
+import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
@@ -21,7 +22,6 @@ import EmployerListItem from "../EmployerListItem/EmployerListItem";
 import EmployerLogo from "../EmployerLogo/EmployerLogo";
 
 import "./EmployerPageDetails.scss";
-import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
 
 interface Props extends RouteProps {
 	employer: EmployerRecord;

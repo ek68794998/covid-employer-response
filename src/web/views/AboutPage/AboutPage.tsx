@@ -4,10 +4,10 @@ import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import { getStrings } from "../../state/ducks/localization/selectors";
-
-import { ProjectUrl } from "../../../common/constants/UrlConstants";
 import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
+import { ProjectUrl } from "../../../common/constants/UrlConstants";
+
+import { getStrings } from "../../state/ducks/localization/selectors";
 
 import "./AboutPage.scss";
 

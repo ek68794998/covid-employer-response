@@ -42,6 +42,10 @@ div.EmployerListSearch__InputContainer {
 		flex: 1;
 		padding: $input-buffer;
 		white-space: nowrap;
+
+		input {
+			margin-left: 4px;
+		}
 	}
 
 	.EmployerListSearch__ExpandFilters {

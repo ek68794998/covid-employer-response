@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useSelector } from "react-redux";
-import { RouteProps } from "react-router-dom";
 
 import { DesignHelpers } from "../../../common/DesignHelpers";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
+
+import { EmployerRouteContext, EmployerRouteContextData } from "../EmployerRoute/EmployerRouteContext";
 
 import EmployeeCountFilterControl from "./EmployerListFilterControl/EmployeeCountFilterControl";
 import InternationalTypeFilterControl from "./EmployerListFilterControl/InternationalTypeFilterControl";
@@ -13,20 +14,17 @@ import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
 import "./EmployerListSearch.scss";
 
-interface Props extends RouteProps {
-	onChange: (value: EmployerListSearchFilter) => void;
-}
+const EmployerListSearch: React.FC = (): React.ReactElement => {
+	const listContext: EmployerRouteContextData = useContext(EmployerRouteContext);
 
-const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement => {
-	const [ searchFilters, setSearchFilters ] = useState(new EmployerListSearchFilter());
+	const [ searchFilters, setSearchFilters ] = useState(listContext.searchFilters);
 	const [ isFiltersetVisible, setIsFiltersetVisible ] = useState(false);
 
 	const strings: LocalizedStrings = useSelector(getStrings);
-	const { onChange } = props;
 
 	useEffect(
 		(): void => {
-			onChange(searchFilters);
+			listContext.setSearchFilters(searchFilters);
 		},
 		[ searchFilters ]);
 
@@ -43,6 +41,7 @@ const EmployerListSearch: React.FC<Props> = (props: Props): React.ReactElement =
 				<div className="EmployerListSearch__Input">
 					{DesignHelpers.materialIcon("search")}
 					<input
+						defaultValue={searchFilters.text}
 						onInput={onInput}
 						placeholder={strings.search}
 						type="search"

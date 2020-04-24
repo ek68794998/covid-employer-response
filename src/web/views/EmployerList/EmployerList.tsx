@@ -1,26 +1,34 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { RouteProps } from "react-router-dom";
 
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
 import { getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListItem from "../EmployerListItem/EmployerListItem";
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
+import { EmployerRouteContext, EmployerRouteContextData } from "../EmployerRoute/EmployerRouteContext";
 
 import "./EmployerList.scss";
 
-interface Props extends RouteProps {
-	searchFilter: EmployerListSearchFilter;
-}
+const loadChunkSize: number = 3;
+const loadMoreRowCount: number = 4;
+const loadMoreCount: number = loadChunkSize * loadMoreRowCount;
 
-const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
+const EmployerList: React.FC = (): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const employersList: EmployerRecordMetadata[] | undefined = useSelector(getEmployersList);
 
-	const { searchFilter } = props;
+	const listContext: EmployerRouteContextData = useContext(EmployerRouteContext);
+
+	const [ listChunksLoaded, setListChunksLoaded ] = useState(listContext.listChunksLoaded);
+
+	useEffect(
+		(): void => {
+			listContext.setListChunksLoaded(listChunksLoaded);
+		},
+		[ listChunksLoaded ]);
 
 	if (!employersList) {
 		return (
@@ -32,7 +40,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	const filteredEmployers: EmployerRecordMetadata[] =
 		employersList
-			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(searchFilter, e))
+			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(listContext.searchFilters, e))
 			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => {
 				const nameMatcher: RegExp = /^(The |A )?(.*)$/i;
 
@@ -50,13 +58,27 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 		);
 	}
 
+	const visibleItemCount: number = listChunksLoaded * loadMoreCount;
+
 	return (
 		<div className="EmployerList__Container">
-			{filteredEmployers.map((e: EmployerRecordMetadata, i: number): JSX.Element => (
-				<div className="EmployerList__Item" key={`${i}-${e.id}`}>
-					<EmployerListItem employerId={e.id} showDetails={true} />
-				</div>
-			))}
+			<div className="EmployerList__Grid">
+				{filteredEmployers.slice(0, visibleItemCount).map(
+					(e: EmployerRecordMetadata, i: number): JSX.Element => (
+						<div className="EmployerList__Item" key={`${i}-${e.id}`}>
+							<EmployerListItem employerId={e.id} showDetails={true} />
+						</div>
+					))}
+			</div>
+			{visibleItemCount < filteredEmployers.length && (
+				<button className="EmployerList__LoadMore" onClick={(): void => setListChunksLoaded(listChunksLoaded + 1)}>
+					{format(
+						strings.loadMore,
+						{
+							count: Math.min(filteredEmployers.length - visibleItemCount, loadMoreCount),
+						})}
+				</button>
+			)}
 		</div>
 	);
 };

@@ -16,9 +16,9 @@ employeesBefore:
   type: exactly
   upperBound: 644124
   year: 2017
-summary: Postmaster General and CEO of USPS, Megan Brennan, has issued statements to workers to follow CDC guidelines and stay home if sick. However, additional paid leave and provisions of hand sanitizer and other PPE were not available to workers until April, and employees have been working significant overtime without hazard pay for several weeks.
+summary: Postmaster General and CEO of USPS, Megan Brennan, issued statements to workers to follow CDC guidelines and stay home if sick. However, additional paid leave and provisions of hand sanitizer and other PPE were not available to workers until April, and employees were working significant overtime without hazard pay for several weeks.
 citations:
-  - summary: USPS workers have been given mandatory overtime, resulting in shifts of over 12 hours per day, and have not received hazard pay. Over 437,000 people have signed a petition requesting hazard pay for workers, with no response from USPS as of April 4.
+  - summary: USPS workers were given mandatory overtime, resulting in shifts of over 12 hours per day, and did not receive hazard pay. Over 437,000 people signed a petition requesting hazard pay for workers, with no response from USPS as of April 4.
     positivity: -1
     type: publication
     sources:
@@ -37,7 +37,7 @@ citations:
       - source: CBS News
         link: https://www.cbsnews.com/news/usps-drivers-bringing-mail-to-areas-hardest-hit-by-coronavirus-demand-hazard-pay/
         date: 2020-04-04T16:48:00-04:00
-  - summary: According to employees who filed a hazard-pay petition, USPS has thus far not provided workers with hand sanitizer or masks, while simultaneously telling employees to follow CDC guidelines which would mandate such things.
+  - summary: According to employees who filed a hazard-pay petition on March 25 (and which had over 650,000 signatures as of April 22), USPS did not provide workers with hand sanitizer or masks, while simultaneously telling employees to follow CDC guidelines which would mandate such things.
     positivity: -1
     type: statement
     sources:

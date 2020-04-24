@@ -1,12 +1,12 @@
 import express from "express";
 
-import { Production } from "../../common/constants/EnvironmentConstants";
 import { EmployerRecord } from "../../common/EmployerRecord";
 import { EmployerRecordBase } from "../../common/EmployerRecordBase";
+import { MimeTypes } from "../../common/MimeTypes";
+import { Production } from "../../common/constants/EnvironmentConstants";
 import { HttpRequestHeaders } from "../../common/http/HttpRequestHeaders";
 import { HttpResponseHeaders } from "../../common/http/HttpResponseHeaders";
 import { HttpStatusCodes } from "../../common/http/HttpStatusCodes";
-import { MimeTypes } from "../../common/MimeTypes";
 
 import { DataLoadOptions } from "../storage/DataLoadOptions";
 import { EmployerRecordLoader } from "../storage/EmployerRecordLoader";

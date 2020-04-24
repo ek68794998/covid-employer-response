@@ -11,9 +11,9 @@ location:
   country: us
   international: false # Other Safeways (e.g. Canada) are no longer associated.
   wiki: Pleasanton, California
-summary: Safeway, as a subsidiary of Albertsons, has been providing temporary raises to hourly employees; however, employees do not appear to be able to get paid sick leave without a positive diagnosis of COVID-19.
+summary: Safeway, as a subsidiary of Albertsons, provided temporary raises to hourly employees; however, employees do not appear to be able to get paid sick leave without a positive diagnosis of COVID-19.
 citations:
-  - summary: Safeway has provided two weeks of paid time off for employees who have tested positive for COVID-19.
+  - summary: Safeway provided two weeks of paid time off for employees who tested positive for COVID-19.
     positivity: 0
     type: publication
     sources:

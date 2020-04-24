@@ -16,16 +16,16 @@ employeesBefore:
   type: approximately
   upperBound: 400000
   year: 2018
-summary: Home Depot is showing good practices in terms of social distancing and sanitation, and has given between 40 and 160 hours of paid sick leave to employees depending on status and age.
+summary: Home Depot is showing good practices in terms of social distancing and sanitation, and gave between 40 and 160 hours of paid sick leave to employees depending on status and age.
 citations:
-  - summary: Home Depot is limiting store promotions, cutting down on the number of customers in the stores, and enforcing social distancing on the premises.
+  - summary: Home Depot limited store promotions, cut down on the number of customers in the stores, and enforced social distancing on the premises.
     positivity: 0
     type: publication
     sources:
       - source: Home Depot Company Stories
         link: https://web.archive.org/web/20200414034056/https://corporate.homedepot.com/newsroom/covid-19-update-how-home-depot-preparing-and-responding
         date: 2020-04-01T11:14:56-04:00
-  - summary: Home Depot has provided 80 hours of paid sick leave to full-time employees and 40 hours to part-timers, and has doubled those numbers respectively for employees over the age of 65.
+  - summary: Home Depot provided 80 hours of paid sick leave to full-time employees and 40 hours to part-timers, and doubled those numbers respectively for employees over the age of 65.
     positivity: 1
     type: publication
     sources:

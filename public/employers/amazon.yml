@@ -18,7 +18,7 @@ employeesBefore:
   year: 2019
 summary: Though Amazon touts a work-from-home policy for engineers and pay raises for service workers, there are additional reports of mandatory overtime and complaints of management not immediately reporting COVID-19 cases.
 citations:
-  - summary: Amazon has begun canceling large events and tours, and has stated that they are routinely and thoroughly sanitizing "all facilities globally."
+  - summary: Amazon took the initiative to cancel large events and tours, and stated that they would routinely and thoroughly sanitize "all facilities globally."
     positivity: 1
     type: publication
     sources:
@@ -34,7 +34,7 @@ citations:
         title: COVID-19 Blog
         link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
         date: 2020-03-06T12:00:00Z # Estimate based on entry date of 03/06/2020.
-  - summary: Amazon has provided two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19.
+  - summary: Amazon started providing two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19.
     positivity: 0
     type: publication
     sources:
@@ -58,7 +58,7 @@ citations:
         title: Amazon ramps hiring, opening 100,000 new roles
         link: https://blog.aboutamazon.com/operations/amazon-opening-100000-new-roles
         date: 2020-03-16T19:55:21.478Z
-  - summary: Employees in roles that continue to work through COVID-19 have been advised to stay six feet apart from each other.
+  - summary: Employees in roles that continue to work through COVID-19 were advised to stay six feet apart from each other.
     positivity: 1
     type: statement
     sources:
@@ -72,7 +72,7 @@ citations:
       - source: WDRB
         link: https://www.wdrb.com/in-depth/kentucky-amazon-warehouse-with-covid--cases-to-remain-closed/article_01f47e9a-6ecd-11ea-83dc-9f73f2c6a979.html
         date: 2020-03-25T20:15:00-04:00
-  - summary: Amazon has cut ties with several independent delivery contractors. Given that the timing coincides with the COVID-19 pandemic, it is speculated to be related to the ongoing crisis; however, this has not yet been publicly confirmed.
+  - summary: Amazon cut ties with several independent delivery contractors. Given that the timing coincides with the COVID-19 pandemic, it is speculated to be related to the ongoing crisis; however, this has not yet been publicly confirmed.
     positivity: 0
     type: publication
     sources:
