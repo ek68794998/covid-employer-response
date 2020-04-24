@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useSelector } from "react-redux";
-import { RouteProps } from "react-router-dom";
 
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
@@ -9,6 +8,7 @@ import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerListItem from "../EmployerListItem/EmployerListItem";
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
+import { EmployerRouteContext, EmployerRouteContextData } from "../EmployerRoute/EmployerRouteContext";
 
 import "./EmployerList.scss";
 
@@ -16,17 +16,13 @@ const loadChunkSize: number = 3;
 const loadMoreRowCount: number = 4;
 const loadMoreCount: number = loadChunkSize * loadMoreRowCount;
 
-interface Props extends RouteProps {
-	searchFilter: EmployerListSearchFilter;
-}
-
-const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
+const EmployerList: React.FC = (): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const employersList: EmployerRecordMetadata[] | undefined = useSelector(getEmployersList);
 
-	const [ visibleItemCount, setVisibleItemCount ] = useState(loadMoreCount);
+	const listContext: EmployerRouteContextData = useContext(EmployerRouteContext);
 
-	const { searchFilter } = props;
+	const [ visibleItemCount, setVisibleItemCount ] = useState(loadMoreCount);
 
 	if (!employersList) {
 		return (
@@ -38,7 +34,7 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	const filteredEmployers: EmployerRecordMetadata[] =
 		employersList
-			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(searchFilter, e))
+			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(listContext.searchFilters, e))
 			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => {
 				const nameMatcher: RegExp = /^(The |A )?(.*)$/i;
 

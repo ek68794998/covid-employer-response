@@ -14,6 +14,7 @@ import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
+import { EmployerRouteContext, EmployerRouteContextData } from "../EmployerRoute/EmployerRouteContext";
 
 import EmployerList from "./EmployerList";
 
@@ -36,13 +37,18 @@ describe("<EmployerList />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
+		const contextValue: EmployerRouteContextData = {
+			searchFilters: new EmployerListSearchFilter(),
+			setSearchFilters: jest.fn(),
+		};
+
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerList
-							searchFilter={new EmployerListSearchFilter()}
-						/>
+						<EmployerRouteContext.Provider value={contextValue}>
+							<EmployerList />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
@@ -71,13 +77,18 @@ describe("<EmployerList />", () => {
 
 		filter.text = "NORESULTSPLEASE";
 
+		const contextValue: EmployerRouteContextData = {
+			searchFilters: filter,
+			setSearchFilters: jest.fn(),
+		};
+
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerList
-							searchFilter={filter}
-						/>
+						<EmployerRouteContext.Provider value={contextValue}>
+							<EmployerList />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
@@ -116,13 +127,18 @@ describe("<EmployerList />", () => {
 
 		filter.text = "TA";
 
+		const contextValue: EmployerRouteContextData = {
+			searchFilters: filter,
+			setSearchFilters: jest.fn(),
+		};
+
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerList
-							searchFilter={filter}
-						/>
+						<EmployerRouteContext.Provider value={contextValue}>
+							<EmployerList />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

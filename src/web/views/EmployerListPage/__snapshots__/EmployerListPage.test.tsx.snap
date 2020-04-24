@@ -7,7 +7,7 @@ exports[`<EmployerListPage /> renders without exploding 1`] = `
   <div
     className="EmployerListPage__Filters"
   >
-    [component: EmployerListSearch onChange=([Function]) /]
+    [component: EmployerListSearch /]
   </div>
   <div
     className="EmployerListPage__Container"
@@ -15,7 +15,7 @@ exports[`<EmployerListPage /> renders without exploding 1`] = `
     <div
       className="EmployerListPage__Content"
     >
-      [component: EmployerList searchFilter=([object Object]) /]
+      [component: EmployerList /]
     </div>
   </div>
 </main>
