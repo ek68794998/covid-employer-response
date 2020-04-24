@@ -10,7 +10,7 @@ location:
   city: Chicago
   state: IL
   country: us
-  international: false
+  international: true # All corporate offices are in the US, but they have reservation offices, etc. in other countries.
   wiki: Chicago
 employeesBefore:
   type: approximately

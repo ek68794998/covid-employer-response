@@ -12,7 +12,7 @@ location:
   city: Fort Worth
   state: TX
   country: us
-  international: false
+  international: true # All corporate offices are in the US, but they have reservation offices, etc. in other countries.
   wiki: Fort Worth, Texas
 employeesBefore:
   source: Statista
