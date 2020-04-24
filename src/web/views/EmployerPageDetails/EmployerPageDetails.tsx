@@ -50,17 +50,22 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		return null;
 	}
 
-	const getProfileRow = (labelText: string, label: JSX.Element, value: JSX.Element): JSX.Element => (
-		<tr>
-			<td
-				className="EmployerPageDetails__ProfileLabel"
-				title={labelText}
-			>
-				{label}
-			</td>
-			<td className="EmployerPageDetails__ProfileValue">{value}</td>
-		</tr>
-	);
+	const getProfileRow =
+		(labelText: string, icon: string, data: JSX.Element, linkUrl?: string): JSX.Element => (
+			<tr>
+				<td
+					className="EmployerPageDetails__ProfileLabel"
+					title={labelText}
+				>
+					{DesignHelpers.materialIcon(icon)}
+				</td>
+				<td className="EmployerPageDetails__ProfileValue">
+					{linkUrl
+						? <a href={linkUrl} rel="noopener noreferrer" target="_blank">{data}&nbsp;{DesignHelpers.materialIcon("launch")}</a>
+						: data}
+				</td>
+			</tr>
+		);
 
 	const maxRelatedEmployers: number = 5;
 
@@ -111,7 +116,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 						<tbody>
 							{getProfileRow(
 								strings.detailDescriptions.name,
-								<>{DesignHelpers.materialIcon("work")}</>,
+								"work",
 								<>
 									{employer.name}
 									{employer.aliases && employer.aliases.length > 0 && (
@@ -126,7 +131,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 							)}
 							{employer.industries && employer.industries.length > 0 && getProfileRow(
 								strings.detailDescriptions.industry,
-								<>{DesignHelpers.materialIcon("category")}</>,
+								"category",
 								<ul>
 									{employer.industries.map(
 										(a: string, i: number) => <li key={i}>{strings.industries[a]}</li>)}
@@ -134,43 +139,38 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 							)}
 							{employer.location && getProfileRow(
 								strings.detailDescriptions.location,
-								<img
-									className="EmployerPageDetails__ProfileFlag"
-									src={`/images/flags/${employer.location.country}.svg`}
-								/>,
-								<a href={WikipediaHelpers.getWikipediaUrl(employer.location.wiki) || ""}>
+								"place",
+								<>
 									{EmployerLocation.toString(employer.location, strings.countryNames)}
-									&nbsp;{DesignHelpers.materialIcon("launch")}
-								</a>,
+									<img
+										className="EmployerPageDetails__ProfileFlag"
+										src={`/images/flags/${employer.location.country}.svg`}
+									/>
+								</>,
+								WikipediaHelpers.getWikipediaUrl(employer.location.wiki) || "",
 							)}
 							{employer.employeesBefore && getProfileRow(
 								strings.detailDescriptions.employees,
-								<>{DesignHelpers.materialIcon("people")}</>,
+								"people",
 								<>{EmployerEmployeeProfile.toString(employer.employeesBefore, true, false)}</>,
 							)}
 							{employer.ticker && getProfileRow(
 								strings.detailDescriptions.ticker,
-								<>{DesignHelpers.materialIcon("attach_money")}</>,
-								<a href={`https://finance.yahoo.com/quote/${employer.ticker}`}>
-									${employer.ticker}
-									&nbsp;{DesignHelpers.materialIcon("launch")}
-								</a>,
+								"attach_money",
+								<>${employer.ticker}</>,
+								`https://finance.yahoo.com/quote/${employer.ticker}`,
 							)}
 							{employer.wiki && getProfileRow(
 								strings.detailDescriptions.wikipedia,
-								<>{DesignHelpers.materialIcon("language")}</>,
-								<a href={WikipediaHelpers.getWikipediaUrl(employer.wiki) || ""}>
-									Wikipedia
-									&nbsp;{DesignHelpers.materialIcon("launch")}
-								</a>,
+								"language",
+								<>Wikipedia</>,
+								WikipediaHelpers.getWikipediaUrl(employer.wiki) || "",
 							)}
 							{employer.officialWebsite && getProfileRow(
 								strings.detailDescriptions.officialWebsite,
-								<>{DesignHelpers.materialIcon("home")}</>,
-								<a href={employer.officialWebsite}>
-									Homepage
-									&nbsp;{DesignHelpers.materialIcon("launch")}
-								</a>,
+								"home",
+								<>Homepage</>,
+								employer.officialWebsite,
 							)}
 						</tbody>
 					</table>
