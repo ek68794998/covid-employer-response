@@ -1,0 +1,28 @@
+name: Cisco Systems, Inc.
+shortName: Cisco
+ticker: CSCO
+wiki: Cisco Systems
+image: cisco.svg#049fd9
+officialWebsite: https://www.cisco.com/c/en/us/about.html
+industries:
+  - electronics
+  - software
+location:
+  city: San Jose
+  state: CA
+  country: us
+  international: true
+  wiki: San Jose, California
+employeesBefore:
+  type: approximately
+  upperBound: 75900
+  year: 2019
+summary: Cisco, as one of the world's leading network companies, provides remote work access for employes, and assured them that their jobs are not in danger of being cut.
+citations:
+  - summary: Cisco's CEO stated that staff should not worry about losing their jobs, and urged other companies with stable financial situations to avoid cuts as well.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Bloomberg
+        link: https://web.archive.org/web/20200415132616/https://www.bloomberg.com/news/articles/2020-04-08/cisco-ceo-tells-staff-jobs-are-safe-urges-others-to-avoid-cuts
+        date: 2020-04-08T13:26:00Z
