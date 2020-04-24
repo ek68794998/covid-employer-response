@@ -16,6 +16,7 @@ exports[`<EmployerListSearch /> opens 'filters' dropdown 1`] = `
         search
       </i>
       <input
+        defaultValue=""
         onInput={[Function]}
         placeholder="ƨèářçλ"
         type="search"
@@ -57,6 +58,7 @@ exports[`<EmployerListSearch /> renders without exploding 1`] = `
         search
       </i>
       <input
+        defaultValue=""
         onInput={[Function]}
         placeholder="ƨèářçλ"
         type="search"

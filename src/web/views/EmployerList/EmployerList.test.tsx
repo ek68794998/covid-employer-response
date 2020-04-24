@@ -14,6 +14,7 @@ import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
+import { EmployerRouteContext, EmployerRouteContextData, DefaultContextData } from "../EmployerRoute/EmployerRouteContext";
 
 import EmployerList from "./EmployerList";
 
@@ -40,9 +41,9 @@ describe("<EmployerList />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerList
-							searchFilter={new EmployerListSearchFilter()}
-						/>
+						<EmployerRouteContext.Provider value={DefaultContextData}>
+							<EmployerList />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
@@ -71,13 +72,18 @@ describe("<EmployerList />", () => {
 
 		filter.text = "NORESULTSPLEASE";
 
+		const contextValue: EmployerRouteContextData = {
+			...DefaultContextData,
+			searchFilters: filter,
+		};
+
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerList
-							searchFilter={filter}
-						/>
+						<EmployerRouteContext.Provider value={contextValue}>
+							<EmployerList />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
@@ -116,13 +122,18 @@ describe("<EmployerList />", () => {
 
 		filter.text = "TA";
 
+		const contextValue: EmployerRouteContextData = {
+			...DefaultContextData,
+			searchFilters: filter,
+		};
+
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerList
-							searchFilter={filter}
-						/>
+						<EmployerRouteContext.Provider value={contextValue}>
+							<EmployerList />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

@@ -13,14 +13,18 @@ exports[`<EmployerList /> renders list of employers 1`] = `
   className="EmployerList__Container"
 >
   <div
-    className="EmployerList__Item"
+    className="EmployerList__Grid"
   >
-    [component: EmployerListItem employerId=(e2) showDetails=(true) /]
-  </div>
-  <div
-    className="EmployerList__Item"
-  >
-    [component: EmployerListItem employerId=(e3) showDetails=(true) /]
+    <div
+      className="EmployerList__Item"
+    >
+      [component: EmployerListItem employerId=(e2) showDetails=(true) /]
+    </div>
+    <div
+      className="EmployerList__Item"
+    >
+      [component: EmployerListItem employerId=(e3) showDetails=(true) /]
+    </div>
   </div>
 </div>
 `;
