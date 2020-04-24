@@ -20,16 +20,16 @@ employeesBefore:
   upperBound: 0
   year: 2020
   yearQuarter: Q1
-summary: Though Dollar General typically provides no sick leave, it has instituted a two-week paid-leave policy for employees who have received a positive COVID-19 diagnosis for themselves or family members. They are, however, vastly expanding their hiring policies.
+summary: Though Dollar General typically provides no sick leave, it instituted a two-week paid-leave policy for employees who received a positive COVID-19 diagnosis for themselves or family members. They are, however, vastly expanding their hiring policies.
 citations:
-  - summary: Dollar General has begun hiring up to 50,000 new employees.
+  - summary: Dollar General started hiring for up to 50,000 new employees.
     positivity: 1
     type: publication
     sources:
       - source: Dollar General News Center
         link: https://web.archive.org/web/20200412174359/https://newscenter.dollargeneral.com/covid-19/dollar-general-to-hire-up-to-50000-new-employees-to-support-operations.htm
         date: 2020-03-23T12:00:00Z # Estimate based on entry date of 03/23/2020.
-  - summary: Dollar General has provided two weeks of paid time off for employees if either diagnosed with COVID-19 or dealing with a household member who has been.
+  - summary: Dollar General provided two weeks of paid time off for employees if either diagnosed with COVID-19 or dealing with a household member who was.
     positivity: 0
     type: publication
     sources:

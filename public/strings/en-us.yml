@@ -328,7 +328,7 @@ industries:
   foodDelivery: Food delivery
   foodProcessing: Food processing
   furniture: Furniture
-  groceryStore: Grocery store
+  groceryStore: Grocery
   healthCare: Healthcare
   hemp: Hemp
   hospitality: Hospitality
@@ -366,6 +366,7 @@ linkTypes:
   parent: Parent company
   related: Related
 loading: Loading...
+loadMore: Load {count} more
 more: "{number} more"
 noResults: No results.
 noSources: Word of mouth; no citation

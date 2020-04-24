@@ -1,0 +1,36 @@
+name: Netflix, Inc.
+shortName: Netflix
+ticker: NFLX
+wiki: Netflix
+image: netflix.svg#000
+officialWebsite: https://media.netflix.com/en/about-netflix
+industries:
+  - entertainment
+  - internet
+  - media
+location:
+  city: Los Gatos
+  state: CA
+  country: us
+  international: true
+  wiki: Los Gatos, California
+employeesBefore:
+  type: approximately
+  upperBound: 6700
+  year: 2019
+summary: Netflix allowed corporate employees to work from home, and set aside over $100 million USD for cast and crew reimbursement, and for pandemic relief.
+citations:
+  - summary: Netflix set up a $100 million USD fund to financially assist cast and crew of productions that were suspended as a result of COVID-19. An additional $15 million USD fund was dispersed to a number of disaster and relief funds.
+    positivity: 2
+    type: publication
+    sources:
+      - source: The Hollywood Reporter
+        link: https://web.archive.org/web/20200421053819/https://www.hollywoodreporter.com/news/netflix-creates-100-million-relief-fund-entertainment-community-left-unemployed-by-coronvirus-crisis-1285711
+        date: 2020-03-20T12:00:00-07:00
+  - summary: Netflix employees were subject to shelter-at-home orders and leadership helped employees work remotely despite their jobs not usually allowing it.
+    positivity: 0
+    type: publication
+    sources:
+      - source: ZDNet
+        link: https://web.archive.org/web/20200329135104/https://www.zdnet.com/article/how-netflix-is-adjusting-network-operations-during-the-covid-19-outbreak/
+        date: 2020-03-25T22:15:00Z

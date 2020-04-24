@@ -1,0 +1,34 @@
+name: Instacart
+wiki: Instacart
+image: instacart.svg
+officialWebsite: https://aboutinstacart.com/press/
+industries:
+  - foodDelivery
+  - groceryStore
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: true
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 152000 # 140k contract, 12k other
+  year: 2020
+  yearQuarter: Q1
+summary: Instacart announced a sick-leave policy about average for its industry, but created 300,000 jobs amidst the mass unemployment caused by the pandemic.
+citations:
+  - summary: Instacart provided paid time off for employees with positive COVID-19 diagnoses or mandated quarantine orders.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNN Business
+        link: https://web.archive.org/web/20200415020537/https://www.cnn.com/2020/03/23/tech/instacart-hiring/index.html
+        date: 2020-03-23T19:00:52Z
+  - summary: Instacart initiated hiring to fill over 300,000 newly created positions, more than doubling its workforce.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNN Business
+        link: https://web.archive.org/web/20200415020537/https://www.cnn.com/2020/03/23/tech/instacart-hiring/index.html
+        date: 2020-03-23T19:00:52Z

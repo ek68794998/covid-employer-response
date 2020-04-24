@@ -20,12 +20,12 @@ employeesBefore:
   upperBound: 453000
   year: 2019
   yearQuarter: Q4
-summary: Though Kroger's initial sick-leave policy was only for positive diagnoses, it has since expanded to any employees who show symptoms. Additionally, all employees have received compensation for hazard pay as they continue to work during the COVID-19 crisis.
+summary: Though Kroger's initial sick-leave policy was only for positive diagnoses, it later expanded to any employees who show symptoms. Additionally, all employees began receiving compensation for hazard pay as they continue to work during the COVID-19 crisis.
 citations:
-  - summary: Various QFC stores have started instituting one-way aisles as of about the start of April, to facilitate social distancing.
+  - summary: Various QFC stores started instituting one-way aisles as of about the start of April, to facilitate social distancing.
     positivity: 0
     type: hearsay
-  - summary: As of March 14, Kroger has provided two weeks of paid time off for employees who have tested positive for COVID-19 or otherwise procure a note from their doctor.
+  - summary: As of March 14, Kroger had provided two weeks of paid time off for employees who have tested positive for COVID-19 or otherwise procure a note from their doctor.
     positivity: 0
     type: publication
     sources:
@@ -35,7 +35,7 @@ citations:
       - source: Human Resource Executive
         link: https://web.archive.org/web/20200416021906/https://hrexecutive.com/kroger-handing-out-bonuses-adding-covid-19-leave/
         date: 2020-03-26T18:26:18Z
-  - summary: Kroger employees hired before March 1 have received a bonus of up to $300 as hazard pay, as well as provided $25 gift cards to employees to help with grocery expenses.
+  - summary: Kroger employees hired before March 1 received a bonus of up to $300 as hazard pay, as well as $25 gift cards to help with grocery expenses.
     positivity: 1
     type: publication
     sources:
@@ -49,7 +49,7 @@ citations:
       - source: Popular Information
         link: https://web.archive.org/web/20200411180256/https://popular.info/p/update-kroger-expands-paid-sick-leave
         date: 2020-03-21T10:59:33-07:00
-  - summary: Kroger has started providing all employees 20 oz. Pepsi soft drinks for $1.
+  - summary: Kroger started providing all employees 20 oz. Pepsi soft drinks for $1.
     positivity: 0
     type: hearsay
     sources:

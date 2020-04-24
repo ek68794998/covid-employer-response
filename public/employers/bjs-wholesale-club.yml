@@ -1,0 +1,39 @@
+name: BJ's Wholesale Club Holdings, Inc.
+shortName: BJ's Wholesale Club
+ticker: BJ
+wiki: BJ's Wholesale Club
+image: bjs-wholesale-club.svg
+officialWebsite: https://investors.bjs.com/home/default.aspx
+industries:
+  - retail
+location:
+  city: Westborough
+  state: MA
+  country: us
+  international: false
+  wiki: Westborough, Massachusetts
+employeesBefore:
+  source: Forbes
+  sourceLink: https://www.forbes.com/companies/bjs-wholesale-club/#600538dd5b9c
+  type: exactly
+  upperBound: 26383
+  year: 2019
+  yearQuarter: Q2
+summary: BJ's announced a sick-leave policy about the same or slightly below its competitors, but provided generous hazard pay and bonuses to its front-line workers.
+citations:
+  - summary: BJ's front-line workers received a bump in pay of around $2 USD per hour as hazard pay. Managers and other personnel received bonuses between $500 and $1,000 USD.
+    positivity: 1
+    type: publication
+    sources:
+      - source: MassLive
+        link: https://web.archive.org/web/20200409101442/https://www.masslive.com/business/2020/03/coronavirus-bjs-wholesale-club-bumps-wages-up-2-an-hour-amid-covid-19-pandemic.html
+        date: 2020-03-23T17:22:21Z
+  - summary: BJ's provided paid sick leave to employees under mandated quarantine, and a "mixed" leave program (combined existing sick time, combined with company-paid time) for those with positive COVID-19 diagnoses.
+    positivity: 0
+    type: publication
+    sources:
+      - source: MassLive
+        link: https://web.archive.org/web/20200409101442/https://www.masslive.com/business/2020/03/coronavirus-bjs-wholesale-club-bumps-wages-up-2-an-hour-amid-covid-19-pandemic.html
+        date: 2020-03-23T17:22:21Z
+      - source: CNBC
+        link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html

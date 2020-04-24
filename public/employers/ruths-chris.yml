@@ -19,33 +19,36 @@ employeesBefore:
   upperBound: 0
   year: 2020
   yearQuarter: Q1
-summary: Ruth's Chris has cut salaries&mdash;including those of executives&mdash;and closed locations to cut costs. However, despite that and significant cash reserves, on top of government loans, it has still furloughed a significant number of employees.
+summary: Ruth's Chris cut salaries&mdash;including those of executives&mdash;and closed locations to cut costs. However, despite that and significant cash reserves, on top of government loans, it still furloughed a significant number of employees.
 citations:
-  - summary: Ruth's Chris has closed 23 restaurant locations (of about 135) temporarily, saying that takeout options were not viable at those locations. Some employees have been redeployed to locations which remain open for takeout or delivery.
+  - summary: Ruth's Chris closed 23 restaurant locations (of about 135) temporarily, saying that takeout options were not viable at those locations. Some employees were redeployed to locations which remain open for takeout or delivery.
     positivity: 1
     type: publication
     sources:
       - source: Nation's Restaurant News
         link: https://web.archive.org/web/20200401100012/https://www.nrn.com/finance/ruths-chris-steak-house-closes-23-restaurants-wake-coronavirus-pandemic
         date: 2020-03-30T18:20:59Z
-  - summary: Salaried employees, including executives, at Ruth's Chris have taken pay cuts. Details on how significant the cuts were have not been released.
+  - summary: Salaried employees, including executives, at Ruth's Chris took pay cuts. Details on the size of the cuts made was not released.
     positivity: 0
     type: publication
     sources:
       - source: Nation's Restaurant News
         link: https://web.archive.org/web/20200401100012/https://www.nrn.com/finance/ruths-chris-steak-house-closes-23-restaurants-wake-coronavirus-pandemic
         date: 2020-03-30T18:20:59Z
-  - summary: Ruth's Chris has furloughed a "significant number" of workers, though extensive details have not been provided. This has happened despite their application for a PPP loan which was created with the intent to pay employees rather than furlough them.
+  - summary: Ruth's Chris furloughed a "significant number" of workers, though extensive details were not provided. This happened despite their application for a PPP loan which was created with the intent to pay employees rather than furlough them.
     positivity: -1
     type: publication
     sources:
       - source: Nation's Restaurant News
         link: https://web.archive.org/web/20200401100012/https://www.nrn.com/finance/ruths-chris-steak-house-closes-23-restaurants-wake-coronavirus-pandemic
         date: 2020-03-30T18:20:59Z
-  - summary: Despite closing a number of locations, an annual revenue of almost $470 million USD, and cash reserves of around $86 million USD, Ruth's Chris has, in less than a week, burned through their entire $20 million USD government loan.
-    positivity: -1
+  - summary: Despite closing a number of locations, an annual revenue of almost $470 million USD, and cash reserves of around $86 million USD, Ruth's Chris applied for and received $20 million USD government loan. They later announced that they would repay the entire $20 million.
+    positivity: 0
     type: publication
     sources:
       - source: GQ
         link: https://web.archive.org/web/20200421004811/https://www.gq.com/story/ruths-chris-small-business-steakhouse
         date: 2020-04-20T15:30:42Z
+      - source: CNBC
+        link: https://web.archive.org/web/20200424002742/https://www.cnbc.com/2020/04/23/ruths-chris-steakhouse-owner-says-it-will-repay-20-million-in-small-business-loan.html
+        date: 2020-04-23T20:14:58Z

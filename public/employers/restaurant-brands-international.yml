@@ -22,9 +22,9 @@ employeesBefore:
   type: range
   upperBound: 0
   year: 2019
-summary: Restaurant Brands International corporate-owned locations have been given permission to allow employees to take paid sick leave under their managers' authority. Franchises have been left to make their own policies.
+summary: Restaurant Brands International corporate-owned locations were given permission to allow employees to take paid sick leave under their managers' authority. Franchises were left to make their own policies.
 citations:
-  - summary: Restaurant Brands International has provided managers at corporate-owned stores, under their various labels (Burger King, Popeyes, and Tim Hortons), the authority to grant two weeks' paid sick leave to employees even if there has been no COVID-19 diagnosis made.
+  - summary: Restaurant Brands International provided managers at corporate-owned stores, under their various labels (Burger King, Popeyes, and Tim Hortons), the authority to grant two weeks' paid sick leave to employees even without a COVID-19 diagnosis.
     positivity: 1
     type: publication
     sources:

@@ -27,23 +27,23 @@ employeesBefore:
   upperBound: 190000
   year: 2020
   yearQuarter: Q1
-summary: Since the start of COVID-19, Darden has begun providing emergency pay for employees who are unable to work as well as sick leave for employees working on the job more than 90 days.
+summary: Following the start of COVID-19, Darden implemented emergency pay for employees who are unable to work as well as sick leave for employees working on the job more than 90 days.
 citations:
-  - summary: Darden has promised that employees who are unable to work due to store closures will receive 50% pay for up to three weeks off the job.
+  - summary: Darden promised that employees who are unable to work due to store closures will receive 50% pay for up to three weeks off the job.
     positivity: 1
     type: publication
     sources:
       - source: Darden Restaurants updates
         link: https://web.archive.org/web/20200404183541/https://www.darden.com/our-company/our-commitment-to-you
         date: 2020-03-19T12:30:00-04:00
-  - summary: Darden has implemented heightened cleaning and sanitation practices based on CDC guidelines.
+  - summary: Darden implemented heightened cleaning and sanitation practices based on CDC guidelines.
     positivity: 0
     type: publication
     sources:
       - source: Darden Restaurants updates
         link: https://web.archive.org/web/20200404183541/https://www.darden.com/our-company/our-commitment-to-you
         date: 2020-03-19T12:30:00-04:00
-  - summary: Darden has implemented a sick-leave policy in light of COVID-19, allowing employees to take 1 hour of leave for every 30 hours worked, based on the past 26 weeks of work. This means that current full-time employees may receive as much as 35 hours of sick leave. However, newer workers may not use this sick leave until they have been employed for at least 90 days.
+  - summary: Darden implemented a sick-leave policy in light of COVID-19, allowing employees to take 1 hour of leave for every 30 hours worked, based on the past 26 weeks of work. This means that full-time employees could receive as much as 35 hours of sick leave. However, newer workers could not use this sick leave until they had been employed for at least 90 days.
     positivity: 0
     type: publication
     sources:

@@ -72,25 +72,20 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
               className="EmployerPageDetails__ProfileLabel"
               title="ℓôçáƭïôñ"
             >
-              <img
-                className="EmployerPageDetails__ProfileFlag"
-                src="/images/flags/us.svg"
-              />
+              <i
+                className="material-icons"
+              >
+                place
+              </i>
             </td>
             <td
               className="EmployerPageDetails__ProfileValue"
             >
-              <a
-                href=""
-              >
-                City, us (Multinational)
-                 
-                <i
-                  className="material-icons"
-                >
-                  launch
-                </i>
-              </a>
+              City, us (Multinational)
+              <img
+                className="EmployerPageDetails__ProfileFlag"
+                src="/images/flags/us.svg"
+              />
             </td>
           </tr>
           <tr>

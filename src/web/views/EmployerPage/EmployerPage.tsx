@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
-import { RouteComponentProps } from "react-router-dom";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
@@ -15,17 +14,15 @@ import EmployerPageDetails from "../EmployerPageDetails/EmployerPageDetails";
 
 import "./EmployerPage.scss";
 
-interface Params {
-	id: string;
+interface Props {
+	employerId: string;
 }
-
-type Props = RouteComponentProps<Params>;
 
 const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const dispatch: React.Dispatch<any> = useDispatch();
 
-	const employerId: string = props.match.params.id;
+	const employerId: string = props.employerId;
 
 	const hasLoadedEmployers: boolean =
 		useSelector((state: AppState) => !!getEmployersList(state)?.length);

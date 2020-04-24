@@ -35,16 +35,7 @@ describe("<EmployerPage />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerPage
-							history={{} as any}
-							location={{} as any}
-							match={{
-								isExact: true,
-								params: { id: "foo" },
-								path: "/employers",
-								url: "//notused",
-							}}
-						/>
+						<EmployerPage employerId="foo" />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
@@ -81,16 +72,7 @@ describe("<EmployerPage />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerPage
-							history={{} as any}
-							location={{} as any}
-							match={{
-								isExact: true,
-								params: { id: fakeEmployer.id as string },
-								path: "/employers",
-								url: "//notused",
-							}}
-						/>
+						<EmployerPage employerId={fakeEmployer.id || ""} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

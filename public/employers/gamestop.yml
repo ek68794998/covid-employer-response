@@ -1,7 +1,7 @@
 name: GameStop
 ticker: GME
 wiki: GameStop
-image: gamestop.svg#000000
+image: gamestop.svg#000
 officialWebsite: http://news.gamestop.com/about-gamestop
 industries:
   - retail
@@ -32,7 +32,7 @@ citations:
       - source: Polygon
         link: https://www.polygon.com/2020/3/17/21184063/gamestop-stores-coronavirus-covid-19-employees
         date: 2020-03-17T22:20:38Z
-  - summary: GameStop employees who "feel sick or in any way they may have been exposed to a confirmed case" will be paid for up to two weeks of leave at their normal pay rate.
+  - summary: GameStop employees who "feel sick or in any way they may have been exposed to a confirmed case" were confirmed to be paid for up to two weeks of leave at their normal pay rate.
     positivity: 1
     type: publication
     sources:
@@ -66,7 +66,7 @@ citations:
       - source: ABC-7 Chicago
         link: https://abc7chicago.com/business/gamestop-says-its-an-essential-business-amid-state-covid-19-shutdowns/6035735/
         date: 2020-03-21T12:00:00Z # Estimate based on article date of 03/21/2020.
-  - summary: GameStop continued to operate in Massachusetts with curbside service, violating a government order to shut down all nonessential businesses. They have implemented a requirement that employees wrap their hands in plastic bags when handling customer payment cards.
+  - summary: GameStop continued to operate in Massachusetts with curbside service, violating a government order to shut down all nonessential businesses. They implemented a requirement that employees wrap their hands in plastic bags when handling customer payment cards.
     positivity: -2
     type: publication
     sources:
@@ -83,7 +83,7 @@ citations:
       - source: IGN
         link: https://www.ign.com/articles/gamestop-plans-to-reopen-stores-cut-exec-salaries
         date: 2020-04-21T17:34:00-07:00
-  - summary: GameStop started reopening stores in various countries and announced plans to reopen in the US states of South Carolina and Georgia. They have not declared plans to reopen stores in locations still on lockdown.
+  - summary: GameStop started reopening stores in various countries and announced plans to reopen in the US states of South Carolina and Georgia. As of their announcement, their plans to reopen did not include locations still on lockdown.
     positivity: 0
     type: publication
     sources:

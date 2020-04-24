@@ -19,16 +19,18 @@ We recommend you make a copy of `_sample.yml` and adjust it to fit your needs. T
 - `industries`: A list of industries of which the company is considered to be a part. Please see the `EmployerIndustry.ts` file for possible values here. (If you think one is missing, please request to add it.)
 - `location`: Where the company is originally based.
 	- The country code should correspond to a country name in `./public/strings/en-us.json`'s list.
-	- Multinational companies should indicate `international: true`.
+	- Multinational companies (i.e. companies with offices or outlets in multiple countries) should indicate `international: true`.
 - `employeesBefore`: The number of company employees prior to 2020.
 	- `lowerBound`: The lower bound of the employee count. Used only if specifying a range.
+	- `source`: The name of the site from where the data was retrieved. This is optional but encouraged.
+	- `sourceLink`: If `source` was provided, this is the direct link to the page where the data was found.
 	- `type`: `range`, `approximately`, or `exactly`.
 	- `upperBound`: The upper bound of the employee count, or the true number if not specifying a range.
 	- `year`: The year in which the measure was reported.
 	- `yearQuarter`: The optional quarter (Q1, Q2, ...) of the calendar year in which the measure was reported.
 - `summary`: A general summary about the company. Should be 100-350 characters and avoid too many specific details. [Markdown](https://www.markdownguide.org/basic-syntax/) is supported here.
 - `citations`: A list of claims about the employer. Each one should indicate a number of things:
-	- `summary`: A textual summary of the claim. Should mention all specifics of the claim, and include dates when necessary. Generally, should be written in the past-passive tense, such as "Contoso has started ...", or "Contoso employees have been ...". Events that happened but are not ongoing can be written entirely in past tense, such as "Contoso issued a statement saying ...". [Markdown](https://www.markdownguide.org/basic-syntax/) is supported here.
+	- `summary`: A textual summary of the claim. Should mention all specifics of the claim, and include dates when necessary. Generally, should be written in the past tense, such as "Contoso fired ...", or "Contoso employees were ...". Events that are ongoing should be written from the perspective of the initial event, such as, "Contoso issued a statement saying ...". If a date is relevant, it should be written in a format such as "March 20". The year should be included if it is not clear from the context. [Markdown](https://www.markdownguide.org/basic-syntax/) is supported here.
 	- `positivity`: A value from 2 to -2 that indicates how positive the news is.
 		- 2: Highly positive. For example, going above and beyond mandated protocols to ensure employees are paid, executives paying out of pocket to ensure jobs or livelihoods, or redirecting capital or resources away from revenue efforts toward curbing COVID-19's spread and effect.
 		- 1: Positive. For example, not cutting employee salaries, following government mandates, or stepping up cleaning protocols.
