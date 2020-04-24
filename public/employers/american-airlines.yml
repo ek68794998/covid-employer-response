@@ -8,6 +8,7 @@ image: american-airlines.svg
 officialWebsite: https://www.aa.com/i18n/customer-service/about-us/about-us.jsp
 industries:
   - airline
+  - transport
 location:
   city: Fort Worth
   state: TX
