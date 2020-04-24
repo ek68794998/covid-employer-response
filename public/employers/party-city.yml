@@ -1,0 +1,45 @@
+name: Party City Holdco Inc.
+aliases:
+  - Amscan
+  - Halloween City
+  - Toy City
+shortName: Party City
+ticker: PRTY
+wiki: Party City
+image: party-city.svg
+officialWebsite: https://www.partycity.com/about-us
+industries:
+  - retail
+location:
+  city: Rockaway
+  state: NJ
+  country: us
+  international: true
+  wiki: Rockaway, New Jersey
+employeesBefore:
+  type: approximately
+  upperBound: 18300
+  year: 2020
+summary: The vast majority of the Party City employee base was furloughed without pay, though executives also took sizable pay cuts to offset capital losses.
+citations:
+  - summary: On April 8, Party City closed all stores "until further notice."
+    positivity: 0
+    type: publication
+    sources:
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200424221307/https://www.marketwatch.com/story/party-city-stocks-drops-after-stores-shuttered-until-further-notice-furloughs-90-of-store-workers-2020-04-08
+        date: 2020-04-08T07:22:00-04:00
+  - summary: Party City furloughed 90% of its store employees and 70% of other employee roles with benefits but without pay.
+    positivity: -1
+    type: publication
+    sources:
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200424221307/https://www.marketwatch.com/story/party-city-stocks-drops-after-stores-shuttered-until-further-notice-furloughs-90-of-store-workers-2020-04-08
+        date: 2020-04-08T07:22:00-04:00
+  - summary: Party City executives took pay cuts of 15% or more, with the CFO and CEO taking cuts of 30% and 50% respectively.
+    positivity: 1
+    type: publication
+    sources:
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200424221307/https://www.marketwatch.com/story/party-city-stocks-drops-after-stores-shuttered-until-further-notice-furloughs-90-of-store-workers-2020-04-08
+        date: 2020-04-08T07:22:00-04:00
