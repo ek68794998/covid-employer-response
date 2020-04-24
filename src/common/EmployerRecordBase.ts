@@ -68,7 +68,7 @@ export abstract class EmployerRecordBase {
 			if (matchingIndustries === a.industries.length && matchingIndustries === b.industries.length) {
 				score += matchingIndustries * 10;
 			} else {
-				score += matchingIndustries;
+				score += matchingIndustries * 3;
 			}
 		}
 
