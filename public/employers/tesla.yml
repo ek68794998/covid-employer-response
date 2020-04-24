@@ -77,8 +77,8 @@ citations:
       - source: Forbes
         link: https://www.forbes.com/sites/billroberson/2020/04/04/health-officials-say-ventilators-donated-by-tesla-are-wrong-type-and-not-powerful-enough/#26d87acb6264
         date: 2020-04-04T15:00:00-04:00
-  - summary: Elon Musk announced a repurposing of Tesla's solar-panel factory in New York to produce ventilators to combat COVID-19. Nothing more was heard of this plan until April 7, when Tesla showed off its new ventilator prototypes. As of April 23, nothing further had been announced or revealed.
-    positivity: 0
+  - summary: Elon Musk announced a repurposing of Tesla's solar-panel factory in New York to produce ventilators to combat COVID-19. Nothing more was heard of this plan until April 7, when Tesla showed off its new ventilator prototypes. On April 17, Tesla delivered a number of ventilators to hospitals; though they were not quite what the hospitals needed, they were able to adjust and make use of them.
+    positivity: 1
     type: publication
     sources:
       - source: CNET Road Show
@@ -87,3 +87,6 @@ citations:
       - source: The Hill
         link: https://web.archive.org/web/20200414161504/https://thehill.com/changing-america/well-being/prevention-cures/491630-tesla-debuts-first-look-at-ventilators-to-combat
         date: 2020-04-07T16:35:44-04:00
+      - source: Bloomberg
+        link: https://www.bloomberg.com/news/articles/2020-04-17/hospitals-made-use-of-modified-tesla-donated-breathing-machines
+        date: 2020-04-17T12:30-07:00
