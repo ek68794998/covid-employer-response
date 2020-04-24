@@ -1,0 +1,25 @@
+name: Getaround
+image: getaround.svg#ac19a2
+officialWebsite: https://www.getaround.com/about
+industries:
+  - transport
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: false
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 600
+  year: 2020
+  yearQuarter: Q1
+summary: In spite of the capital provided to Getaround by its backing investors, and laying off hundreds of employees only months earlier, Getaround issued layoffs to about 25% of its remaining staff in March.
+citations:
+  - summary: Getaround, despite being backed by [SoftBank](https://en.wikipedia.org/wiki/SoftBank_Group) and laying off 200 employees in early 2020, announced further layoffs of 100 employees.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Business Journals
+        link: https://web.archive.org/web/20200422082908/https://www.bizjournals.com/sanfrancisco/news/2020/03/27/getaround-issues-another-layoff-round-as-it-seeks.html
+        date: 2020-03-27T07:34:00-07:00
