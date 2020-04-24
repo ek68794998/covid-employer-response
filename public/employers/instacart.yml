@@ -16,7 +16,7 @@ employeesBefore:
   upperBound: 152000 # 140k contract, 12k other
   year: 2020
   yearQuarter: Q1
-summary: Instacart announced a sick-leave policy about average for its industry, but created 300,000 jobs amidst the mass unemployment caused by the pandemic.
+summary: Instacart announced a sick-leave policy about average for its industry, but created 300,000 jobs amidst the mass unemployment caused by the pandemic. However, employees say that they are still not receiving adequate PPE or being paid as promised for sick leave.
 citations:
   - summary: Instacart provided paid time off for employees with positive COVID-19 diagnoses or mandated quarantine orders.
     positivity: 0
@@ -32,3 +32,17 @@ citations:
       - source: CNN Business
         link: https://web.archive.org/web/20200415020537/https://www.cnn.com/2020/03/23/tech/instacart-hiring/index.html
         date: 2020-03-23T19:00:52Z
+  - summary: Instacart employees organized a protest after the company neglected to give them even the most basic PPE. Instacart later said it planned to start giving employees free hand sanitizer, but made no comments on other types of protective measures.
+    positivity: -1
+    type: publication
+    sources:
+      - source: CNET
+        link: https://web.archive.org/web/20200407134230/https://www.cnet.com/news/instacart-workers-strike-amid-covid-19-fears-call-company-response-a-sick-joke/
+        date: 2020-03-30T18:31:00-07:00
+  - summary: Instacart was accused of not providing sick pay to someone who had a positive COVID-19 diagnosis.
+    positivity: -1
+    type: statement
+    sources:
+      - source: CNET
+        link: https://web.archive.org/web/20200407134230/https://www.cnet.com/news/instacart-workers-strike-amid-covid-19-fears-call-company-response-a-sick-joke/
+        date: 2020-03-30T18:31:00-07:00
