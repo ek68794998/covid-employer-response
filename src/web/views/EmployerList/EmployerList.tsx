@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
 import { getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
@@ -12,6 +12,10 @@ import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSear
 
 import "./EmployerList.scss";
 
+const loadChunkSize: number = 3;
+const loadMoreRowCount: number = 4;
+const loadMoreCount: number = loadChunkSize * loadMoreRowCount;
+
 interface Props extends RouteProps {
 	searchFilter: EmployerListSearchFilter;
 }
@@ -19,6 +23,8 @@ interface Props extends RouteProps {
 const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
 	const employersList: EmployerRecordMetadata[] | undefined = useSelector(getEmployersList);
+
+	const [ visibleItemCount, setVisibleItemCount ] = useState(loadMoreCount);
 
 	const { searchFilter } = props;
 
@@ -52,11 +58,23 @@ const EmployerList: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	return (
 		<div className="EmployerList__Container">
-			{filteredEmployers.map((e: EmployerRecordMetadata, i: number): JSX.Element => (
-				<div className="EmployerList__Item" key={`${i}-${e.id}`}>
-					<EmployerListItem employerId={e.id} showDetails={true} />
-				</div>
-			))}
+			<div className="EmployerList__Grid">
+				{filteredEmployers.slice(0, visibleItemCount).map(
+					(e: EmployerRecordMetadata, i: number): JSX.Element => (
+						<div className="EmployerList__Item" key={`${i}-${e.id}`}>
+							<EmployerListItem employerId={e.id} showDetails={true} />
+						</div>
+					))}
+			</div>
+			{visibleItemCount < filteredEmployers.length && (
+				<button className="EmployerList__LoadMore" onClick={(): void => setVisibleItemCount(visibleItemCount + loadMoreCount)}>
+					{format(
+						strings.loadMore,
+						{
+							count: Math.min(filteredEmployers.length - visibleItemCount, loadMoreCount),
+						})}
+				</button>
+			)}
 		</div>
 	);
 };
