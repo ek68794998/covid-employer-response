@@ -1,0 +1,48 @@
+name: The Boeing Company
+shortName: Boeing
+ticker: BA
+wiki: Example
+image: boeing.svg
+officialWebsite: https://www.boeing.com/company/general-info/
+industries:
+  - aviation
+  - manufacturing
+location:
+  city: Chicago
+  state: IL
+  country: us
+  international: true
+  wiki: Chicago
+employeesBefore:
+  type: exactly
+  upperBound: 153027
+  year: 2019
+  yearQuarter: Q1
+summary: Boeing provided excellent support for employees unable to work remotely, though their plan to reopen factories in April was met with some skepticism.
+citations:
+  - summary: Boeing shut down production in both South Carolina and the Seattle area for a number of weeks, and later extended the shutdowns indefinitely.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200423114428/https://www.cnbc.com/2020/03/23/boeing-plans-two-week-shutdown-of-factories-in-puget-sound-area-because-of-coronavirus.html
+        date: 2020-03-23T12:50:00-04:00
+      - source: The Seattle Times
+        link: https://web.archive.org/web/20200417040358/https://www.seattletimes.com/business/boeing-aerospace/boeing-indefinitely-extends-production-shutdown-at-washington-state-plants-due-to-coronavirus/
+        date: 2020-04-05T13:53:17-07:00
+  - summary: Boeing reopened factories employing 27,000 workers and instituted staggered shifts, face masks, and other protections.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Q13 Fox
+        link: https://web.archive.org/web/20200421043756/https://q13fox.com/2020/04/20/boeing-other-major-u-s-manufacturers-reopening-amid-fierce-political-heat/
+        date: 2020-04-20T18:38:18Z
+  - summary: Boeing announced that employees unable to work remotely would be paid for 10 days, receive usual benefits, be eligible for unemployment assistance, and be able to use accrued paid time off.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Boeing News Releases
+        link: https://web.archive.org/web/20200423104843/https://boeing.mediaroom.com/2020-03-23-Boeing-to-Temporarily-Suspend-Puget-Sound-Production-Operations-in-Response-to-Escalating-COVID-19-Pandemic
+        date: 2020-03-23T12:00:00Z # Estimate based on post date of 03/23/2020.
+      - source: CNBC
+        link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
