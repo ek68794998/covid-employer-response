@@ -19,7 +19,7 @@ We recommend you make a copy of `_sample.yml` and adjust it to fit your needs. T
 - `industries`: A list of industries of which the company is considered to be a part. Please see the `EmployerIndustry.ts` file for possible values here. (If you think one is missing, please request to add it.)
 - `location`: Where the company is originally based.
 	- The country code should correspond to a country name in `./public/strings/en-us.json`'s list.
-	- Multinational companies should indicate `international: true`.
+	- Multinational companies (i.e. companies with offices or outlets in multiple countries) should indicate `international: true`.
 - `employeesBefore`: The number of company employees prior to 2020.
 	- `lowerBound`: The lower bound of the employee count. Used only if specifying a range.
 	- `source`: The name of the site from where the data was retrieved. This is optional but encouraged.
