@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
@@ -22,7 +22,13 @@ const EmployerList: React.FC = (): React.ReactElement => {
 
 	const listContext: EmployerRouteContextData = useContext(EmployerRouteContext);
 
-	const [ visibleItemCount, setVisibleItemCount ] = useState(loadMoreCount);
+	const [ listChunksLoaded, setListChunksLoaded ] = useState(listContext.listChunksLoaded);
+
+	useEffect(
+		(): void => {
+			listContext.setListChunksLoaded(listChunksLoaded);
+		},
+		[ listChunksLoaded ]);
 
 	if (!employersList) {
 		return (
@@ -52,6 +58,8 @@ const EmployerList: React.FC = (): React.ReactElement => {
 		);
 	}
 
+	const visibleItemCount: number = listChunksLoaded * loadMoreCount;
+
 	return (
 		<div className="EmployerList__Container">
 			<div className="EmployerList__Grid">
@@ -63,7 +71,7 @@ const EmployerList: React.FC = (): React.ReactElement => {
 					))}
 			</div>
 			{visibleItemCount < filteredEmployers.length && (
-				<button className="EmployerList__LoadMore" onClick={(): void => setVisibleItemCount(visibleItemCount + loadMoreCount)}>
+				<button className="EmployerList__LoadMore" onClick={(): void => setListChunksLoaded(listChunksLoaded + 1)}>
 					{format(
 						strings.loadMore,
 						{

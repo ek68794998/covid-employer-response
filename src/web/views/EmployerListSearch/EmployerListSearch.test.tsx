@@ -9,10 +9,9 @@ import { mockComponent, ploc } from "../../../__tests__/TestUtils";
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import { EmployerRouteContext, EmployerRouteContextData } from "../EmployerRoute/EmployerRouteContext";
+import { EmployerRouteContext, DefaultContextData } from "../EmployerRoute/EmployerRouteContext";
 
 import EmployerListSearch from "./EmployerListSearch";
-import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
 jest.mock(
 	"./EmployerListFilterControl/InternationalTypeFilterControl",
@@ -33,16 +32,11 @@ describe("<EmployerListSearch />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
-		const contextValue: EmployerRouteContextData = {
-			searchFilters: new EmployerListSearchFilter(),
-			setSearchFilters: jest.fn(),
-		};
-
 		const testRenderer: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerRouteContext.Provider value={contextValue}>
+						<EmployerRouteContext.Provider value={DefaultContextData}>
 							<EmployerListSearch />
 						</EmployerRouteContext.Provider>
 					</BrowserRouter>
@@ -55,16 +49,11 @@ describe("<EmployerListSearch />", () => {
 	test("opens 'filters' dropdown", () => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
-		const contextValue: EmployerRouteContextData = {
-			searchFilters: new EmployerListSearchFilter(),
-			setSearchFilters: jest.fn(),
-		};
-
 		const testRenderer: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerRouteContext.Provider value={contextValue}>
+						<EmployerRouteContext.Provider value={DefaultContextData}>
 							<EmployerListSearch />
 						</EmployerRouteContext.Provider>
 					</BrowserRouter>

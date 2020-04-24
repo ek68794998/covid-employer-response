@@ -14,7 +14,7 @@ import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
-import { EmployerRouteContext, EmployerRouteContextData } from "../EmployerRoute/EmployerRouteContext";
+import { EmployerRouteContext, EmployerRouteContextData, DefaultContextData } from "../EmployerRoute/EmployerRouteContext";
 
 import EmployerList from "./EmployerList";
 
@@ -37,16 +37,11 @@ describe("<EmployerList />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
-		const contextValue: EmployerRouteContextData = {
-			searchFilters: new EmployerListSearchFilter(),
-			setSearchFilters: jest.fn(),
-		};
-
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerRouteContext.Provider value={contextValue}>
+						<EmployerRouteContext.Provider value={DefaultContextData}>
 							<EmployerList />
 						</EmployerRouteContext.Provider>
 					</BrowserRouter>
@@ -78,8 +73,8 @@ describe("<EmployerList />", () => {
 		filter.text = "NORESULTSPLEASE";
 
 		const contextValue: EmployerRouteContextData = {
+			...DefaultContextData,
 			searchFilters: filter,
-			setSearchFilters: jest.fn(),
 		};
 
 		const renderedValue: ReactTestRendererJSON | null =
@@ -128,8 +123,8 @@ describe("<EmployerList />", () => {
 		filter.text = "TA";
 
 		const contextValue: EmployerRouteContextData = {
+			...DefaultContextData,
 			searchFilters: filter,
-			setSearchFilters: jest.fn(),
 		};
 
 		const renderedValue: ReactTestRendererJSON | null =
