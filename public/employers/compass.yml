@@ -29,8 +29,8 @@ citations:
     positivity: 1
     type: publication
     sources:
-      - source: Online Marketplaces
-        link: TechCrunch
+      - source: TechCrunch
+        link: https://web.archive.org/web/20200420161027/https://techcrunch.com/2020/03/23/with-the-real-estate-industry-facing-headwinds-softbank-backed-compass-lays-off-15-of-staff-after/
         date: 2020-03-24T01:00:11Z
   - summary: Compass executives took a pay cut of 25% with the CEO reducing his 2020 salary to zero.
     positivity: 1

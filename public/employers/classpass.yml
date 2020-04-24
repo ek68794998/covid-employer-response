@@ -12,6 +12,7 @@ location:
   international: false
   wiki: New York City
 employeesBefore:
+  type: approximately
   upperBound: 700
   year: 2020
   yearQuarter: Q1

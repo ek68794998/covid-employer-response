@@ -19,7 +19,7 @@ employeesBefore:
   type: exactly
   upperBound: 48016
   year: 2019
-summary: Tesla went against government orders to shut down their Fremont vehicle production factory and performed massive layoffs. They also showed an altruistic side, making great promises to assist with COVID-19 in the form of ventilators; they initially only distributed equipment incapable of combating COVID-19, but by late April were able to distribute partially useful ventilators to some hospitals.
+summary: Tesla went against government orders to shut down production factories and performed massive layoffs. They also displayed altruism, making promises to assist with COVID-19 in the form of ventilators; their initial equipment was incapable of combating COVID-19, but by late April ventilators which were partially useful went out to hospitals.
 citations:
   - summary: Tesla was ordered to shut down its Fremont factory on March 18, but continued operating through March 23. However, some employers were forced to continue working after this date, and Tesla later argued (incorrectly) that it was "national critical infrastructure" and continued to operate.
     positivity: -2

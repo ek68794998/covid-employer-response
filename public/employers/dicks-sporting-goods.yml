@@ -19,7 +19,7 @@ employeesBefore:
   type: approximately
   upperBound: 40000
   year: 2020
-summary: The majority of employees at Dick's were furloughed without pay.
+summary: After Dick's closed its physical store presence, it furloughed the majority of its employees without pay.
 citations:
   - summary: Dick's closed most of its stores, with some still operating online and curbside pickup operations.
     positivity: 0
