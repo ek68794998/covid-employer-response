@@ -4,7 +4,7 @@ aliases:
 shortName: Tesla
 ticker: TSLA
 wiki: Tesla, Inc.
-image: tesla.svg
+image: tesla.svg#e31937
 officialWebsite: https://www.tesla.com/about
 industries:
   - automotive

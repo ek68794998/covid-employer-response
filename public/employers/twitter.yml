@@ -2,7 +2,7 @@ name: Twitter
 shortName: Twitter
 ticker: TWTR
 wiki: Twitter
-image: twitter.svg
+image: twitter.svg#1da1f2
 officialWebsite: https://about.twitter.com/
 industries:
   - internet

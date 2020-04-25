@@ -2,7 +2,7 @@ name: Wells Fargo & Company
 shortName: Wells Fargo
 ticker: WFC
 wiki: Wells Fargo
-image: wells-fargo.svg
+image: wells-fargo.svg#b31e30
 officialWebsite: https://www.wellsfargo.com/about/
 industries:
   - financialServices
