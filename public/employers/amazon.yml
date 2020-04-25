@@ -156,3 +156,10 @@ citations:
       - source: The Verge
         link: https://web.archive.org/web/20200418211049/https://www.theverge.com/2020/4/18/21226356/amazon-thermal-cameras-warehouses-fevers-coronavirus
         date: 2020-04-18T17:10:56Z
+  - summary: Hourly employees at Amazon received an increase of $2 USD per hour.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Whole Foods Market Newsroom
+        link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
+        date: 2020-03-16T12:00:00Z # Estimate based on entry date of 03/16/2020.
