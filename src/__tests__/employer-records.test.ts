@@ -68,8 +68,17 @@ describe("employer records", () => {
 				return fail(`Image '${record.image}' for ${id} is not a valid image string.`);
 			}
 
-			if (!fs.existsSync(`./public/images/employers/${parsedImage[1]}`)) {
+			const imagePath: string = `./public/images/employers/${parsedImage[1]}`;
+
+			if (!fs.existsSync(imagePath)) {
 				return fail(`Image '${parsedImage[1]}' for ${id} does not exist in the image folder.`);
+			}
+
+			const imageMaxSizeBytes: number = 75000;
+			const imageStats: fs.Stats = fs.statSync(imagePath);
+
+			if (imageStats.size > imageMaxSizeBytes) {
+				return fail(`Image '${parsedImage[1]}' is ${imageStats.size / 1000} kB but should be less than ${imageMaxSizeBytes / 1000} kB.`);
 			}
 		}
 
