@@ -1,0 +1,46 @@
+name: Fidelity Investments Inc.
+aliases:
+  - Fidelity Management & Research
+  - FMR
+shortName: Fidelity
+wiki: Fidelity Investments
+image: fidelity.svg
+officialWebsite: https://www.fidelity.com/about-fidelity/overview
+industries:
+  - financialServices
+  - insurance
+location:
+  city: Boston
+  state: MA
+  country: us
+  international: true
+  wiki: Boston
+employeesBefore:
+  lowerBound: 45000
+  type: range
+  upperBound: 0
+  year: 2020
+  yearQuarter: Q1
+summary: Fidelity complied with shelter-at-home orders and facilitated work-from-home situations for employees, while also creating thousands of new jobs to support growth.
+citations:
+  - summary: Fidelity requested that employees work from home if they were able to do so.
+    positivity: 0
+    type: publication
+    sources:
+      - source: RIA Biz
+        link: https://riabiz.com/a/2020/3/16/as-covid-19-crisis-grows-schwab-charts-own-course-orders-office-workers-to-stay-put-while-fidelity-other-firms-urge-employees-to-work-from-home
+        date: 2020-03-16T16:09:53Z
+  - summary: A pair of anonymous tips were posted that suggested at least three people had been laid off and that there may have been more. However, even two weeks after the initial comment, no indication of layoffs at scale had been revealed.
+    positivity: 0
+    type: hearsay
+    sources:
+      - source: The Layoff
+        link: https://web.archive.org/web/20200425231200/https://www.thelayoff.com/t/14o5d1hD
+        date: 2020-04-09T14:30:29Z
+  - summary: Fidelity created 2,000 new positions to fulfill demands for retirement planning amidst the COVID-19 pandemic.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Boston Globe
+        link: https://web.archive.org/web/20200417142607/https://www.bostonglobe.com/2020/04/13/business/fidelity-plans-hire-2000-people-across-us-amid-economic-downturn/
+        date: 2020-04-13T18:07:32Z
