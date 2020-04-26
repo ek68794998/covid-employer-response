@@ -54,6 +54,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
+              title="ñá₥è"
             >
               <i
                 className="material-icons"
@@ -103,6 +104,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
               className="EmployerPageDetails__ProfileValue"
             >
               12,345 (2015)
+              
             </td>
           </tr>
         </tbody>
@@ -156,6 +158,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
+              title="ñá₥è"
             >
               <i
                 className="material-icons"

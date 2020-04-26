@@ -29,13 +29,23 @@ describe("<EmployerPageDetails />", () => {
 		strings: {
 			detailDescriptions: {
 				aka: ploc("aka"),
+				edit: ploc("edit"),
 				employees: ploc("employees"),
+				industry: ploc("industry"),
 				linkToEmployer: ploc("linkToEmployer"),
 				location: ploc("location"),
+				name: ploc("name"),
+				officialWebsite: ploc("officialWebsite"),
 				rating: ploc("rating"),
 				ratingCounts: ploc("ratingCounts"),
 				ticker: ploc("ticker"),
+				wikipedia: ploc("wikipedia"),
 			},
+			detailLabels: {
+				officialWebsite: ploc("officialWebsiteLabel"),
+				wikipedia: ploc("wikipediaLabel"),
+			},
+			employeeDelta: `${ploc("employeeDelta")}: {change} / {date}`,
 			ratingLabels: {
 				fair: ploc("fair"),
 				good: ploc("good"),

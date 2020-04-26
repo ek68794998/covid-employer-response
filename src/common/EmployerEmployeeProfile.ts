@@ -25,6 +25,34 @@ export class EmployerEmployeeProfile {
 
 	public yearQuarter?: "Q1" | "Q2" | "Q3" | "Q4";
 
+	public static getDateString(p: EmployerEmployeeProfile): string | null {
+		return p ? (p.yearQuarter ? `${p.yearQuarter} ${p.year}` : `${p.year}`) : null;
+	}
+
+	public static subtract(left: EmployerEmployeeProfile, right: EmployerEmployeeProfile): number {
+		if (!left || !right) {
+			return 0;
+		}
+
+		const toNumber = (p: EmployerEmployeeProfile): number => {
+			if (p.type !== "range") {
+				return p.upperBound;
+			}
+
+			if (!p.lowerBound || p.lowerBound <= 0) {
+				return p.upperBound;
+			}
+
+			if (p.upperBound <= 0) {
+				return p.lowerBound;
+			}
+
+			return Math.round((p.upperBound + p.lowerBound) / 2);
+		};
+
+		return toNumber(left) - toNumber(right);
+	}
+
 	public static toString(p: EmployerEmployeeProfile, includeDate: boolean, useShortText: boolean): string | null {
 		const lowerBound: EmployeeNumber | null =
 			(p.lowerBound && p.lowerBound > 0) ? new EmployeeNumber(p.lowerBound) : null;
