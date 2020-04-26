@@ -54,6 +54,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
+              title="ñá₥è"
             >
               <i
                 className="material-icons"
@@ -102,7 +103,14 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
             <td
               className="EmployerPageDetails__ProfileValue"
             >
-              12,345 (2015)
+              ~10,123 (2017)
+              <span
+                className="EmployerPageDetails__Delta EmployerPageDetails__Delta--Negative"
+              >
+                (
+                è₥ƥℓô¥èèÐèℓƭá: -2,222 / 2015
+                )
+              </span>
             </td>
           </tr>
         </tbody>
@@ -156,6 +164,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
+              title="ñá₥è"
             >
               <i
                 className="material-icons"
