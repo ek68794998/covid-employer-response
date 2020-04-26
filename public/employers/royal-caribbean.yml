@@ -1,0 +1,42 @@
+name: Royal Caribbean Cruises Ltd.
+aliases:
+  - Azamara Cruises
+  - Celebrity Cruises
+  - RCCL
+  - RCI
+  - Royal Caribbean Cruise Line
+  - Royal Caribbean International
+shortName: Royal Caribbean
+ticker: RCL
+wiki: Royal Caribbean Cruises
+image: royal-caribbean.svg#131c49
+officialWebsite: https://www.rclcorporate.com/about/
+industries:
+  - hospitality
+  - tourism
+location:
+  city: Miami
+  state: FL
+  country: us
+  international: true
+  wiki: Miami
+employeesBefore:
+  type: approximately
+  upperBound: 77000
+  year: 2018
+summary: With cruises halted for safety reasons, Royal Caribbean cut more than a quarter of its US workforce rather than reducing executive pay or implementing other cost-cutting measures.
+citations:
+  - summary: Royal Caribbean cut 26% of its US workforce, totaling about 1,300 people, a majority of whom were laid off (with the rest being furloughed for 90 days with continued benefits).
+    positivity: -1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://web.archive.org/web/20200424033119/https://www.reuters.com/article/us-royal-carib-crus-layoffs/royal-caribbean-sheds-26-of-u-s-workforce-as-coronavirus-hits-travel-idUSKCN21Y02S
+        date: 2020-04-16T00:50:19Z
+  - summary: Royal Caribbean workers affected by COVID-19 were given proper medical treatment, and those aboard ships were quarantined or treated, though PPE was sometimes difficult to procure.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Cruise Law News
+        link: https://web.archive.org/web/20200419031001/https://www.cruiselawnews.com/2020/04/articles/disease/four-additional-royal-caribbean-crew-members-with-covid-19-evacuated-from-oasis-of-the-seas/
+        date: 2020-04-08T14:11:12Z

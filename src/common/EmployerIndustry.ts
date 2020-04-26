@@ -52,6 +52,7 @@ export const EmployerIndustryValues = [
 	"technology",
 	"telecommunications",
 	"textile",
+	"tourism",
 	"transport",
 	"videoGames",
 	"waste",
