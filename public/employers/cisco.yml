@@ -26,3 +26,10 @@ citations:
       - source: Bloomberg
         link: https://web.archive.org/web/20200415132616/https://www.bloomberg.com/news/articles/2020-04-08/cisco-ceo-tells-staff-jobs-are-safe-urges-others-to-avoid-cuts
         date: 2020-04-08T13:26:00Z
+  - summary: Cisco paid out $2.5 billion USD for a 90-day "payment holiday" for enterprise customers, and allowed them to defer up to 95% of their payments to Cisco until 2021.
+    positivity: 1
+    type: publication
+    sources:
+      - source: SDX Central
+        link: https://web.archive.org/web/20200426062805/https://www.sdxcentral.com/articles/news/cisco-2-5b-financing-initiative-target-covid-19-impact/2020/04/
+        date: 2020-04-14T06:00:29-06:00

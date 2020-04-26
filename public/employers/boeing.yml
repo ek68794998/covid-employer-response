@@ -1,7 +1,7 @@
 name: The Boeing Company
 shortName: Boeing
 ticker: BA
-wiki: Example
+wiki: Boeing
 image: boeing.svg
 officialWebsite: https://www.boeing.com/company/general-info/
 industries:
@@ -46,3 +46,10 @@ citations:
         date: 2020-03-23T12:00:00Z # Estimate based on post date of 03/23/2020.
       - source: CNBC
         link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: Boeing was urged by the government to take federal aid via the CARES Act, but Boeing refrained, taking time to weigh options getting aid from banks instead.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200423124928/https://www.cnbc.com/2020/04/07/coronavirus-house-democrats-urge-boeing-to-take-federal-aid-as-plants-shut-down.html
+        date: 2020-04-07T15:18:07Z

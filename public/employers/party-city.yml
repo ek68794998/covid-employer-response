@@ -17,6 +17,8 @@ location:
   international: true
   wiki: Rockaway, New Jersey
 employeesBefore:
+  source: Yahoo! Finance via FactSet
+  sourceLink: https://finance.yahoo.com/quote/PRTY/
   type: approximately
   upperBound: 18300
   year: 2020

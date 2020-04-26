@@ -9,7 +9,7 @@ location:
   city: New York City
   state: NY
   country: us
-  international: false
+  international: true
   wiki: New York City
 employeesBefore:
   type: approximately

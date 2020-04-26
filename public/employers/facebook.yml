@@ -1,6 +1,6 @@
 name: Facebook
 ticker: FB
-wiki: Example
+wiki: Facebook
 image: facebook.svg#1977f3
 officialWebsite: https://about.fb.com/
 industries:
@@ -18,7 +18,7 @@ employeesBefore:
   upperBound: 44942
   year: 2019
   yearQuarter: Q4
-summary: Facebook announced that hourly workers, even if not working, would be paid through the pandemic, and provided financial assistance for remote workers get set up. However, contract employees were not eligible for additional paid leave or said financial assistance.
+summary: Facebook furloughed hourly workers with full pay through the pandemic, and provided financial assistance for remote workers get set up. However, contract employees were not eligible for additional paid leave or said financial assistance.
 citations:
   - summary: Facebook offered an additional four weeks of paid leave to full-time employees whose children are affected by school closures. The offer does not include contract employees.
     positivity: 1

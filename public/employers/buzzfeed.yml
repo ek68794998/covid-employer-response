@@ -16,7 +16,7 @@ employeesBefore:
   upperBound: 1700
   year: 2017
   yearQuarter: Q4
-summary: BuzzFeed announced plans to avoid layoffs by significantly cutting executive salaries and giving gradual pay cuts to other salaried employees.
+summary: BuzzFeed attempted to avoid layoffs by significantly cutting executive salaries and giving gradual pay cuts to other salaried employees, but was unable to do so.
 citations:
   - summary: BuzzFeed executives took pay cuts of over 14% with the CEO taking no salary until the company is "on the other side of this crisis."
     positivity: 1
@@ -32,3 +32,10 @@ citations:
       - source: The Daily Beast
         link: https://web.archive.org/web/20200411141723/https://www.thedailybeast.com/buzzfeed-slashing-employee-pay-amid-the-coronavirus-crisis?ref=author
         date: 2020-03-25T14:20:15-04:00
+  - summary: Due to a loss of funding from Twitter, BuzzFeed cancelled a weekday morning newscast and laid off all employees on the project. Corporate employees were not affected.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Variety
+        link: https://web.archive.org/web/20200419222736/https://variety.com/2020/digital/news/buzzfeed-layoffs-twitter-am-to-dm-shutting-down-1234582127/
+        date: 2020-04-16T07:22:00-07:00
