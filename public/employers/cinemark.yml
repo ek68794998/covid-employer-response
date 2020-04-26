@@ -7,11 +7,11 @@ officialWebsite: https://www.cinemark.com/about-cinemark
 industries:
   - entertainment
 location:
-  city: Seattle
-  state: WA
+  city: Plano
+  state: TX
   country: us
   international: false
-  wiki: Seattle
+  wiki: Plano, Texas
 employeesBefore:
   type: exactly
   upperBound: 19915
