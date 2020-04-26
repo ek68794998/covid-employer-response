@@ -1,0 +1,42 @@
+name: The Hertz Corporation
+aliases:
+  - Hertz Global Holdings
+shortName: Hertz
+ticker: HTZ
+wiki: The Hertz Corporation
+image: hertz.svg
+officialWebsite: https://www.hertz.com/rentacar/abouthertz/index.jsp?targetPage=CorporateProfile.jsp&c=aboutHertzCompaniesView
+industries:
+  - transport
+location:
+  city: Estero
+  state: FL
+  country: us
+  international: true
+  wiki: Estero, Florida
+employeesBefore:
+  type: approximately
+  upperBound: 38000
+  year: 2019
+  yearQuarter: Q4
+employeesAfter:
+  type: approximately
+  upperBound: 21000
+  year: 2020
+  yearQuarter: Q2
+summary: Despite its largest shareholder being worth over $16 billion USD, Hertz resorted to significant layoffs in late April. Hertz' CEO forwent her entire 2020 salary as additional aid for the company.
+citations:
+  - summary: Hertz laid off 10,000 North American employees, representing over a quarter of its global workforce.
+    positivity: -1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200423094735/https://www.cnbc.com/2020/04/21/us-car-rental-company-hertz-to-lay-off-10000-staff-on-coronavirus-hit.html
+        date: 2020-04-21T08:49:00-04:00
+  - summary: Hertz CEO, Kathryn V. Marinello, forwent her entire 2020 salary. The announcement did not include news of any other executive pay cuts.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Thinknum
+        link: https://web.archive.org/web/20200426013147/https://media.thinknum.com/articles/hertz-cuts-hiring-to-near-zero-as-the-company-furloughs-employees-ceo-cuts-salary/
+        date: 2020-04-17T15:36:56-04:00
