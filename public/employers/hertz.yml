@@ -34,7 +34,7 @@ citations:
         link: https://web.archive.org/web/20200423094735/https://www.cnbc.com/2020/04/21/us-car-rental-company-hertz-to-lay-off-10000-staff-on-coronavirus-hit.html
         date: 2020-04-21T08:49:00-04:00
   - summary: Hertz CEO, Kathryn V. Marinello, forwent her entire 2020 salary. The announcement did not include news of any other executive pay cuts.
-    positivity: -1
+    positivity: 1
     type: publication
     sources:
       - source: Thinknum
