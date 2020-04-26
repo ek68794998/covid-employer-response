@@ -1,0 +1,44 @@
+name: Compass
+wiki: Compass (company)
+image: compass.svg
+officialWebsite: https://www.compass.com/about/
+industries:
+  - realEstate
+location:
+  city: New York City
+  state: NY
+  country: us
+  international: false
+  wiki: New York City
+employeesBefore:
+  type: approximately
+  upperBound: 17500 # 15k agents, plus corporate employees such that 15% = 375.
+  year: 2019
+summary: Compass resorted to layoffs for hundreds of employees, but not without taking executive pay cuts and helping laid-off workers with insurance and job-search assistance.
+citations:
+  - summary: Compass laid off 15% of its corporate workforce, and 80% of its home improvement service providers.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Online Marketplaces
+        link: https://web.archive.org/web/20200424161701/https://www.onlinemarketplaces.com/articles/32257-compass-ceo-issues-email-explaining-company-layoffs
+        date: 2020-03-24T18:00:00-04:00
+      - source: CNBC
+        link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: Compass offered laid-off employees health benefits, enhanced severance packages, company laptops, and training and networking tools to help them find employment.
+    positivity: 1
+    type: publication
+    sources:
+      - source: TechCrunch
+        link: https://web.archive.org/web/20200420161027/https://techcrunch.com/2020/03/23/with-the-real-estate-industry-facing-headwinds-softbank-backed-compass-lays-off-15-of-staff-after/
+        date: 2020-03-24T01:00:11Z
+  - summary: Compass executives took a pay cut of 25% with the CEO reducing his 2020 salary to zero.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Online Marketplaces
+        link: https://web.archive.org/web/20200424161701/https://www.onlinemarketplaces.com/articles/32257-compass-ceo-issues-email-explaining-company-layoffs
+        date: 2020-03-24T18:00:00-04:00
+      - source: "The Motley Fool: Million Acres"
+        link: https://web.archive.org/web/20200407200728/https://www.fool.com/millionacres/real-estate-market/articles/real-estate-companies-that-have-announced-layoffs-due-to-covid-19/
+        date: 2020-03-30T10:57:21-04:00

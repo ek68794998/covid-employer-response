@@ -19,7 +19,7 @@ employeesBefore:
   upperBound: 52435
   year: 2019
   yearQuarter: Q1
-summary: While SNC-Lavalin executives took pay cuts of 20%, they forced all workers to take pay cuts of at least 10% (up to 20% if they don't explicitly opt out), while still showing strong indicators that the company has millions in spare capital.
+summary: While SNC-Lavalin executives took pay cuts of 20%, they forced all workers to take pay cuts of at least 10% (up to 20% if they don't explicitly opt out), while still showing strong indicators that the company had millions in spare capital.
 citations:
   - summary: SNC introduced a motion within the company which cuts all workers' pay by at least 10% for three months. They also requested that employees agree to elevate this cut to 20%, but allowed them to opt out by notifying their manager.
     positivity: -1

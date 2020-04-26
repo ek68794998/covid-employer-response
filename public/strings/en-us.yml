@@ -312,6 +312,7 @@ industries:
   automotive: Automotive
   aviation: Aviation
   cannabis: Cannabis
+  childCare: Child care
   clothing: Clothing
   coffeeShop: Coffee shop
   construction: Construction
@@ -326,8 +327,10 @@ industries:
   financialServices: Financial services
   fishing: Fishing
   foodDelivery: Food delivery
+  foodProcessing: Food processing
   furniture: Furniture
   groceryStore: Grocery
+  healthAndFitness: Health and fitness
   healthCare: Healthcare
   hemp: Hemp
   hospitality: Hospitality
@@ -356,6 +359,7 @@ industries:
   technology: Technology
   telecommunications: Telecommunications
   textile: Textile
+  ticketSales: Ticket sales
   transport: Transport
   videoGames: Video games
   waste: Waste

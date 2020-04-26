@@ -1,0 +1,34 @@
+name: ClassPass Inc.
+shortName: ClassPass
+wiki: ClassPass
+image: classpass.svg#0055fe
+officialWebsite: https://classpass.com/about
+industries:
+  - healthAndFitness
+location:
+  city: New York City
+  state: NY
+  country: us
+  international: true
+  wiki: New York City
+employeesBefore:
+  type: approximately
+  upperBound: 700
+  year: 2020
+  yearQuarter: Q1
+summary: ClassPass furloughed and laid off hundreds of its employees, affecting more than half of its workforce, though severance and training were offered to affected employees.
+citations:
+  - summary: ClassPass furloughed 31% of its staff and laid off 22%, affecting in total over half its employees.
+    positivity: -1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200422085548/https://www.cnbc.com/2020/04/02/classpass-reduces-staff-by-half-as-coronavirus-drives-fitness-home.html
+        date: 2020-04-02T16:49:00-04:00
+  - summary: ClassPass employees affected by the pandemic were offered severance packages, mental health services, and outplacement coaching.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200422085548/https://www.cnbc.com/2020/04/02/classpass-reduces-staff-by-half-as-coronavirus-drives-fitness-home.html
+        date: 2020-04-02T16:49:00-04:00

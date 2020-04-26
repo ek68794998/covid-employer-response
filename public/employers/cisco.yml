@@ -1,0 +1,35 @@
+name: Cisco Systems, Inc.
+shortName: Cisco
+ticker: CSCO
+wiki: Cisco Systems
+image: cisco.svg#049fd9
+officialWebsite: https://www.cisco.com/c/en/us/about.html
+industries:
+  - electronics
+  - software
+location:
+  city: San Jose
+  state: CA
+  country: us
+  international: true
+  wiki: San Jose, California
+employeesBefore:
+  type: approximately
+  upperBound: 75900
+  year: 2019
+summary: Cisco, as one of the world's leading network companies, provides remote work access for employes, and assured them that their jobs are not in danger of being cut.
+citations:
+  - summary: Cisco's CEO stated that staff should not worry about losing their jobs, and urged other companies with stable financial situations to avoid cuts as well.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Bloomberg
+        link: https://web.archive.org/web/20200415132616/https://www.bloomberg.com/news/articles/2020-04-08/cisco-ceo-tells-staff-jobs-are-safe-urges-others-to-avoid-cuts
+        date: 2020-04-08T13:26:00Z
+  - summary: Cisco paid out $2.5 billion USD for a 90-day "payment holiday" for enterprise customers, and allowed them to defer up to 95% of their payments to Cisco until 2021.
+    positivity: 1
+    type: publication
+    sources:
+      - source: SDX Central
+        link: https://web.archive.org/web/20200426062805/https://www.sdxcentral.com/articles/news/cisco-2-5b-financing-initiative-target-covid-19-impact/2020/04/
+        date: 2020-04-14T06:00:29-06:00

@@ -1,0 +1,34 @@
+name: Uber Technologies, Inc.
+shortName: Uber
+ticker: UBER
+wiki: Uber
+image: uber.svg
+officialWebsite: https://www.uber.com/us/en/about/
+industries:
+  - transport
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: true
+  wiki: San Francisco
+employeesBefore:
+  type: exactly
+  upperBound: 22263
+  year: 2018
+summary: Though Uber touts a standard sick-leave policy for drivers, accusations were made by multiple drivers who said that the company had not paid them as promised.
+citations:
+  - summary: Uber stated on March 15 that it would provide drivers who received a doctor's note with sick pay based on how much they had earned over the prior six months with the company.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNET
+        link: https://web.archive.org/web/20200421110908/https://www.cnet.com/features/gig-workers-with-covid-19-symptoms-say-its-hard-to-get-sick-leave-from-uber-lyft-instacart/
+        date: 2020-03-26T16:29:00Z
+  - summary: Uber employees with COVID-19 diagnoses stated that they were having difficulty getting Uber to give them the sick leave pay they had been promised.
+    positivity: -1
+    type: statement
+    sources:
+      - source: CNET
+        link: https://web.archive.org/web/20200421110908/https://www.cnet.com/features/gig-workers-with-covid-19-symptoms-say-its-hard-to-get-sick-leave-from-uber-lyft-instacart/
+        date: 2020-03-26T16:29:00Z

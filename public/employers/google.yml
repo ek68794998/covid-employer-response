@@ -58,3 +58,10 @@ citations:
       - source: The Verge
         link: https://www.theverge.com/2020/3/17/21184495/google-employees-memo-contract-workers-coronavirus-covid-19
         date: 2020-03-17T20:15:00-04:00
+  - summary: Google offered an additional two weeks of paid leave to full-time employees whose children are affected by school closures. The offer does not include contract employees.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Los Angeles Times
+        link: https://web.archive.org/web/20200423001942/https://www.latimes.com/business/technology/story/2020-03-31/coronavirus-google-facebook-paid-leave-school-closures
+        date: 2020-03-31T23:59:50Z

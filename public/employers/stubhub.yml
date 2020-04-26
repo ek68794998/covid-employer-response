@@ -1,0 +1,28 @@
+name: StubHub
+aliases:
+  - Viagogo
+wiki: StubHub
+image: stubhub.svg
+officialWebsite: https://www.stubhub.com/about-us
+industries:
+  - eCommerce
+  - ticketSales
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: true
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 1100
+  year: 2019
+summary: StubHub furloughed over half their workforce, with no announcements of executive pay cuts or other cost-cutting measures.
+citations:
+  - summary: StubHub furloughed a significant part of their workforce&mdash;approximately 67%, according to an internal email. This leaves around 150 employees who will remain until "at least June."
+    positivity: -1
+    type: publication
+    sources:
+      - source: ESPN
+        link: https://web.archive.org/web/20200401230414/https://www.espn.com/espn/story/_/id/28954901/stubhub-furloughs-employees-other-ticket-sites-face-challenges-wake-pandemic
+        date: 2020-03-25T22:30:00Z

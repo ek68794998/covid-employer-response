@@ -1,0 +1,41 @@
+name: Space Exploration Technologies Corp.
+shortName: SpaceX
+wiki: SpaceX
+image: spacex.svg
+officialWebsite: https://www.spacex.com/about
+industries:
+  - aviation
+location:
+  city: Hawthorne
+  state: CA
+  country: us
+  international: false
+  wiki: Hawthorne, California
+employeesBefore:
+  type: approximately
+  upperBound: 7000
+  year: 2019
+  yearQuarter: Q4
+summary: SpaceX, an essential defense contractor, was allowed to continue operating during the pandemic. They handed out PPE, sanitized properly, and provided generous sick-leave policies, though their work-from-home guidance could be considered stricter than average.
+citations:
+  - summary: SpaceX, classified as essential to the Department of Defense, continued to operate during COVID-19, and followed CDC guidelines to provide disinfectant wipes and routine sanitization.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Los Angeles Times
+        link: https://web.archive.org/web/20200423035926/https://www.latimes.com/business/story/2020-03-24/spacex-coronavirus
+        date: 2020-03-25T10:05:00-07:00
+  - summary: SpaceX provided 10 additional days of paid leave to employees sick with COVID-19 or who were in high-risk groups or in frequent contact with people who were.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Los Angeles Times
+        link: https://web.archive.org/web/20200423035926/https://www.latimes.com/business/story/2020-03-24/spacex-coronavirus
+        date: 2020-03-25T10:05:00-07:00
+  - summary: SpaceX employees concerned about having a physical presence in the office required manager approval to work from home, even if they could "productively" do so.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Los Angeles Times
+        link: https://web.archive.org/web/20200423035926/https://www.latimes.com/business/story/2020-03-24/spacex-coronavirus
+        date: 2020-03-25T10:05:00-07:00

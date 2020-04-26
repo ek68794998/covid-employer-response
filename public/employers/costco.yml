@@ -17,7 +17,7 @@ employeesBefore:
   upperBound: 254000
   year: 2019
   yearQuarter: Q4
-summary: Costco has always treated its retail employees well before the pandemic, but its response to the pandemic has been mostly negative, such as its corporate employees needing approval to work from home.
+summary: Costco has always treated its retail employees well before the pandemic, but took questionable actions with respect to the pandemic, such as requiring its corporate employees to get approval to work from home.
 citations:
   - summary: Frontline employees are testing positive for COVID and are not given proper protection.
     positivity: -2
