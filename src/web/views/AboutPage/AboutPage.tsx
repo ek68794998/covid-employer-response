@@ -99,6 +99,12 @@ const AboutPage: React.FC = (): React.ReactElement => {
 					linkTarget="_blank"
 					source={strings.aboutSectionParagraphs.employerRatings}
 				/>
+
+				<h2 id="layoffs-and-furloughs">{strings.aboutSectionHeaders.layoffsAndFurloughs}</h2>
+				<ReactMarkdown
+					linkTarget="_blank"
+					source={strings.aboutSectionParagraphs.layoffsAndFurloughs}
+				/>
 			</div>
 		</main>
 	);
