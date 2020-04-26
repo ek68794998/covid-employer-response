@@ -31,7 +31,7 @@ citations:
         date: 2020-04-17T15:33:35Z
       - source: CNBC
         link: https://web.archive.org/web/20200426010552/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
-  - summary: ServiceNow protected the jobs and pay of support staff (janitors, contractors, etc.) who were unable to work due to COVID-19 shutdowns.
+  - summary: ServiceNow protected the jobs and pay of support staff (janitors, contractors, and so on) who were unable to work due to COVID-19 shutdowns.
     positivity: 1
     type: publication
     sources:
