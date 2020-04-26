@@ -18,11 +18,28 @@ describe("EmployerEmployeeProfile", () => {
 	});
 
 	test.each([
+		[ { type: tc("exactly"), upperBound: 11 }, { type: tc("exactly"), upperBound: 12 }, -1 ],
+		[ { type: tc("exactly"), upperBound: 1150 }, { type: tc("approximately"), upperBound: 1250 }, -100 ],
+		[ { type: tc("approximately"), upperBound: 1670 }, { type: tc("exactly"), upperBound: 1500 }, 170 ],
+		[ { type: tc("range"), upperBound: 2 }, { type: tc("range"), upperBound: 12 }, -10 ],
+		[ { type: tc("range"), upperBound: 27 }, { type: tc("range"), lowerBound: 11 }, 16 ],
+		[ { type: tc("range"), lowerBound: 27 }, { type: tc("range"), upperBound: 11 }, 16 ],
+	])(
+		"properly subtracts %p from %p (%#)",
+		(leftPart: Partial<EmployerEmployeeProfile>, rightPart: Partial<EmployerEmployeeProfile>, expected: number) => {
+			const left: EmployerEmployeeProfile = { ...new EmployerEmployeeProfile(), ...leftPart };
+			const right: EmployerEmployeeProfile = { ...new EmployerEmployeeProfile(), ...rightPart };
+
+			expect(EmployerEmployeeProfile.subtract(left, right)).toBe(expected);
+		},
+	);
+
+	test.each([
 		[ { type: tc("approximately"), upperBound: 0, year: 2010 } ],
 		[ { type: tc("exactly"), upperBound: 0, year: 2010 } ],
 		[ { lowerBound: 50, type: tc("range"), upperBound: 5, year: 2010 } ],
 		[ { lowerBound: 0, type: tc("range"), upperBound: 0, year: 2010 } ],
-	])("errors out when invalid bounds are provided (%#)", (p: EmployerEmployeeProfile) => {
+	])("toString errors out when invalid bounds are provided (%#)", (p: EmployerEmployeeProfile) => {
 		expect(() => EmployerEmployeeProfile.toString(p, false, false)).toThrowError();
 	});
 

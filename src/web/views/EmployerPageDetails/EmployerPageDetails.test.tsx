@@ -99,6 +99,7 @@ describe("<EmployerPageDetails />", () => {
 					summary: "A very good summary about Contoso.",
 					type: "statement",
 				}],
+				employeesAfter: { type: "approximately", upperBound: 10123, year: 2017 },
 				employeesBefore: { type: "exactly", upperBound: 12345, year: 2015 },
 				id: "contoso",
 				image: "consoto.svg",
