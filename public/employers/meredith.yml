@@ -1,0 +1,34 @@
+name: Meredith Corporation
+shortName: Meredith
+ticker: MDP
+wiki: Meredith Corporation
+image: meredith.svg
+officialWebsite: https://ir.meredith.com/company-profile/default.aspx
+industries:
+  - media
+location:
+  city: Des Moines
+  state: IA
+  country: us
+  international: false
+  wiki: Des Moines, Iowa
+employeesBefore:
+  type: exactly
+  upperBound: 7915
+  year: 2018
+summary: Despite a "stong" financial position, pay cuts as high as 40% were handed down to employees, with no disclosure about CEO or board-member compensation. Meredith did, however, cut down on expenditures such as stock dividends and hiring costs.
+citations:
+  - summary: Around 60% of employees at Meredith will receive pay cuts. The cuts are graded from 15% to 40% based on existing pay and will last for a 4-month period.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Reuters via New York Times
+        link: https://web.archive.org/web/20200422105910/https://variety.com/2020/film/news/annapurna-pictures-lays-off-cfo-james-pong-film-and-tv-executives-exclusive-1234585621/
+        date: 2020-04-20T14:45:14-04:00
+  - summary: Stock dividends, raises, and hiring were put on pause, and Meredith reduced use of freelancers to reduce expenditures.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Reuters via New York Times
+        link: https://web.archive.org/web/20200422105910/https://variety.com/2020/film/news/annapurna-pictures-lays-off-cfo-james-pong-film-and-tv-executives-exclusive-1234585621/
+        date: 2020-04-20T14:45:14-04:00
