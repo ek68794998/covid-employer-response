@@ -1,0 +1,40 @@
+name: ServiceNow, Inc.
+aliases:
+  - MyContoso
+  - TheContoso
+shortName: ServiceNow
+ticker: NOW
+wiki: ServiceNow
+image: servicenow.svg#293e41
+officialWebsite: https://www.servicenow.com/company.html
+industries:
+  - software
+location:
+  city: Santa Clara
+  state: CA
+  country: us
+  international: true
+  wiki: Santa Clara, California
+employeesBefore:
+  lowerBound: 11000
+  type: range
+  upperBound: 0
+  year: 2019
+summary: ServiceNow committed to zero layoffs and significant hiring in 2020, while also supporting its contractors and support staff.
+citations:
+  - summary: ServiceNow committed to not laying off any employees in 2020, and confirmed that it was still hiring globally, expecting to fill over 1,000 new jobs.
+    positivity: 1
+    type: publication
+    sources:
+      - source: HRD New Zealand
+        link: https://web.archive.org/web/20200421114750/https://www.hcamag.com/nz/specialisation/hr-technology/we-are-committed-to-no-layoffs-for-2020/220012
+        date: 2020-04-17T15:33:35Z
+      - source: CNBC
+        link: https://web.archive.org/web/20200426010552/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: ServiceNow protected the jobs and pay of support staff (janitors, contractors, etc.) who were unable to work due to COVID-19 shutdowns.
+    positivity: 1
+    type: publication
+    sources:
+      - source: HRD New Zealand
+        link: https://web.archive.org/web/20200421114750/https://www.hcamag.com/nz/specialisation/hr-technology/we-are-committed-to-no-layoffs-for-2020/220012
+        date: 2020-04-17T15:33:35Z
