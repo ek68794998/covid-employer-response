@@ -8,21 +8,22 @@ wiki: Example
 image: _sample.svg
 officialWebsite: http://example.com/about
 industries:
-  - software
-  - videoGames
+  - water
+  - water
+  - water
 location:
-  city: Seattle
-  state: WA
+  city: Fake City
+  state: FS
   country: us
   international: false
-  wiki: Seattle
+  wiki: Fake City, Fakestate
 employeesBefore:
   lowerBound: 200
   type: range
   upperBound: 500
   year: 2019
   yearQuarter: Q1
-summary: Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.
+summary: Contoso did not give appropriate paid leave and did not send home those showing COVID-19 symptoms.
 citations:
   - summary: Business does not meet "essential" qualifications but requested to be classified as essential.
     positivity: 0
