@@ -8,6 +8,7 @@ aboutSectionHeaders:
   submitClaims: How do I add, change, or dispute claims?
   citationTypes: What does the icon next to a claim mean?
   employerRatings: What determines the rating of an employer?
+  layoffsAndFurloughs: What is the difference between a "layoff" and a "furlough"?
 aboutSectionParagraphs:
   whatIs: "**{app}** ({appFullName}) is a collaborative, open-source project designed to track the responses of employers to the [coronavirus]({covidWikiUrl}) (COVID-19) [pandemic of 2019&ndash;2020]({pandemicWikiUrl}). It is built using information sourced from a number of places and categorizes it based on how reliable the original information source is considered to be. For more information, please visit [the project's page on GitHub]({githubUrl})."
   contributing: Yes! {app} is open-source and open-data and we'd love to have your help! You can help by submitting new employer claims and changes, or by submitting code changes to the site through [GitHub]({githubUrl}).
@@ -22,6 +23,10 @@ aboutSectionParagraphs:
     - {statement}: {statementDescription}
     - {hearsay}: {hearsayDescription}
   employerRatings: Ratings are algorithmically determined based on the positivity and negativity of the claims that it has. Claims that are more safety-critical have a higher weight than those which are not, and thus are not factored as heavily.
+  layoffsAndFurloughs: |
+    For the purposes of this site, a **furlough** indicates that affected employees are not working, but are still marked as employed by the company. They may receive partial pay or benefits, and are generally expected to be rehired in the future. A **layoff** indicates that affected employees have been terminated from their jobs entirely. A more complete description is available [on Dictionary.com](https://www.dictionary.com/e/furlough-vs-layoff/).
+
+    Some dialects of English use the term "temporary layoff" to describe a furlough, but to avoid confusion, we avoid that term. As a result, information we cite from some sources may be erroneously written as "layoff" when they are instead referring to a furlough. Should you ever run into a situation like this, please submit a correction!
 appTitle: Coronavirus Employer Response Tracker
 appTitleShort: Cempres
 backToTop: Top of page
@@ -364,6 +369,7 @@ industries:
   telecommunications: Telecommunications
   textile: Textile
   ticketSales: Ticket sales
+  tourism: Tourism
   transport: Transport
   videoGames: Video games
   waste: Waste

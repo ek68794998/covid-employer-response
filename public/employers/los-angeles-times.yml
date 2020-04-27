@@ -1,0 +1,42 @@
+name: The Los Angeles Times
+aliases:
+  - California Times
+  - LA Times
+shortName: L.A. Times
+wiki: Los Angeles Times
+image: los-angeles-times.svg#000
+officialWebsite: https://www.latimes.com/about
+industries:
+  - media
+location:
+  city: El Segundo
+  state: CA
+  country: us
+  international: false
+  wiki: El Segundo, California
+employeesBefore:
+  type: approximately
+  upperBound: 4000
+  year: 2019
+summary: With advertising revenue low, the L.A. Times cut costs by reducing executive salaries and suspending 401k&mdash;and still furloughed or laid off a number of workers.
+citations:
+  - summary: The L.A. Times furloughed 40 of its non-union workers for 16 weeks, with no promise that they would be rehired at the end of the furlough.
+    positivity: -1
+    type: publication
+    sources:
+      - source: New York Times
+        link: https://web.archive.org/web/20200422035744/https://www.nytimes.com/2020/04/14/business/los-angeles-times-furloughs-cuts.html
+        date: 2020-04-14T16:37:43-04:00
+      - source: New York Post
+        link: https://web.archive.org/web/20200420162557/https://nypost.com/2020/04/15/la-times-newspaper-says-ad-revenue-nearly-eliminated-as-it-furloughs-workers/
+        date: 2020-04-15T12:46:11-04:00
+  - summary: Executive salaries were cut by 5%&ndash;15% for three months, and 401k matches were suspended.
+    positivity: 1
+    type: publication
+    sources:
+      - source: New York Times
+        link: https://web.archive.org/web/20200422035744/https://www.nytimes.com/2020/04/14/business/los-angeles-times-furloughs-cuts.html
+        date: 2020-04-14T16:37:43-04:00
+      - source: New York Post
+        link: https://web.archive.org/web/20200420162557/https://nypost.com/2020/04/15/la-times-newspaper-says-ad-revenue-nearly-eliminated-as-it-furloughs-workers/
+        date: 2020-04-15T12:46:11-04:00

@@ -211,24 +211,26 @@ describe("employer records", () => {
 		expect(record.shortName).toBe("Co.");
 		expect(record.ticker).toBe("CTS");
 		expect(record.wiki).toBe("Example");
+		expect(record.image).toBe("_sample.svg");
 		expect(record.officialWebsite).toBe("http://example.com/about");
 
-		expect(record.industries?.length).toBe(2);
-		expect(record.industries?.[0]).toBe("software");
-		expect(record.industries?.[1]).toBe("videoGames");
+		expect(record.industries?.length).toBe(3);
+		expect(record.industries?.[0]).toBe("water");
+		expect(record.industries?.[1]).toBe("water");
+		expect(record.industries?.[2]).toBe("water");
 
 		expect(record.employeesBefore?.lowerBound).toBe(200);
 		expect(record.employeesBefore?.type).toBe("range");
 		expect(record.employeesBefore?.upperBound).toBe(500);
 		expect(record.employeesBefore?.year).toBe(2019);
 		expect(record.employeesBefore?.yearQuarter).toBe("Q1");
-		expect(record.summary).toBe("Generally regarded as treating employees unfairly. Provided paid sick leave 9 days after requested by employees. Did not lay off employees. Many employees not allowed to work from home.");
+		expect(record.summary).toBe("Contoso did not give appropriate paid leave and did not send home those showing COVID-19 symptoms.");
 
-		expect(record.location?.city).toBe("Seattle");
-		expect(record.location?.state).toBe("WA");
+		expect(record.location?.city).toBe("Fake City");
+		expect(record.location?.state).toBe("FS");
 		expect(record.location?.country).toBe("us");
 		expect(record.location?.international).toBe(false);
-		expect(record.location?.wiki).toBe("Seattle");
+		expect(record.location?.wiki).toBe("Fake City, Fakestate");
 
 		expect(record.citations.length).toBe(3);
 

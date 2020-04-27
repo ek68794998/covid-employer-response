@@ -1,0 +1,43 @@
+name: Groupon, Inc.
+shortName: Groupon
+ticker: GRPN
+wiki: Groupon
+image: groupon.svg
+officialWebsite: https://press.groupon.com/about-groupon/
+industries:
+  - eCommerce
+location:
+  city: Chicago
+  state: IL
+  country: us
+  international: true
+  wiki: Chicago
+employeesBefore:
+  type: approximately
+  upperBound: 7000
+  year: 2020
+summary: Groupon implemented a number of useful cost-cutting measures, such as reducing marketing initiatives, but also resorted to furloughs while not reducing cash compensation for executive board members.
+citations:
+  - summary: Groupon let go of combined total of 2,800 workers&mdash;40% of their workforce&mdash;through layoffs and furloughs.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Motley Fool
+        link: https://web.archive.org/web/20200423022246/https://www.fool.com/investing/2020/04/15/groupon-to-lay-off-or-furlough-2800-workers-initia.aspx
+        date: 2020-04-15T13:09:00Z
+  - summary: Groupon implemented a hiring freeze, reduced marketing initiatives, and other cost-cutting measures.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Motley Fool
+        link: https://web.archive.org/web/20200423022246/https://www.fool.com/investing/2020/04/15/groupon-to-lay-off-or-furlough-2800-workers-initia.aspx
+        date: 2020-04-15T13:09:00Z
+      - source: CNBC
+        link: https://web.archive.org/web/20200426010552/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: Though cash compensation was cut to zero for some board members of Groupon, executive board members' compensation was not reduced. Additionally, no equity reductions were made for any board members.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Motley Fool
+        link: https://web.archive.org/web/20200423022246/https://www.fool.com/investing/2020/04/15/groupon-to-lay-off-or-furlough-2800-workers-initia.aspx
+        date: 2020-04-15T13:09:00Z

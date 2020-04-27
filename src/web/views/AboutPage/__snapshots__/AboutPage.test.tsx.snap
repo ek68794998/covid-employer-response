@@ -49,6 +49,12 @@ exports[`<AboutPage /> renders without exploding 1`] = `
       è₥ƥℓô¥èřRáƭïñϱƨHèáδèř
     </h2>
     [component: ReactMarkdown linkTarget=(_blank) source=(è₥ƥℓô¥èřRáƭïñϱƨÞářáϱřáƥλ) /]
+    <h2
+      id="layoffs-and-furloughs"
+    >
+      ℓá¥ôƒƒƨÂñδFúřℓôúϱλƨHèáδèř
+    </h2>
+    [component: ReactMarkdown linkTarget=(_blank) source=(ℓá¥ôƒƒƨÂñδFúřℓôúϱλƨÞářáϱřáƥλ) /]
   </div>
 </main>
 `;
