@@ -288,15 +288,19 @@ detailDescriptions:
   aka: Alternative names for the employer, including aliases, parent companies, and child companies.
   edit: The employer's data file where edits can be made.
   employees: The approximate number of employees the company had prior to the Coronavirus pandemic.
+  industry: The industries in which the employer is active.
   linkToEmployer: The link directly to this employer's profile.
   location: Where the employer's headquarters are located.
-  industry: The industries in which the employer is active.
   name: The incorporated name of the employer.
   officialWebsite: The employer's official website link.
   rating: The general rating of the employer.
   ratingCounts: Aggregate counts of the good and bad actions an employer has taken.
   ticker: The ticker symbol of the employee's publicly traded stock.
   wikipedia: The employer's page on the English Wikipedia.
+detailLabels:
+  officialWebsite: Homepage
+  wikipedia: "{page} on Wikipedia"
+employeeDelta: "{change} since {date}"
 employerList: Employers
 filter: Filters
 filters:
@@ -317,6 +321,7 @@ industries:
   automotive: Automotive
   aviation: Aviation
   cannabis: Cannabis
+  childCare: Child care
   clothing: Clothing
   coffeeShop: Coffee shop
   construction: Construction
@@ -331,8 +336,10 @@ industries:
   financialServices: Financial services
   fishing: Fishing
   foodDelivery: Food delivery
+  foodProcessing: Food processing
   furniture: Furniture
   groceryStore: Grocery
+  healthAndFitness: Health and fitness
   healthCare: Healthcare
   hemp: Hemp
   hospitality: Hospitality
@@ -361,6 +368,7 @@ industries:
   technology: Technology
   telecommunications: Telecommunications
   textile: Textile
+  ticketSales: Ticket sales
   tourism: Tourism
   transport: Transport
   videoGames: Video games

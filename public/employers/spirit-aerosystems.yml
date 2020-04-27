@@ -1,0 +1,37 @@
+name: Spirit AeroSystems
+ticker: SPR
+wiki: Spirit AeroSystems
+image: spirit-aerosystems.svg
+officialWebsite: https://www.spiritaero.com/company/overview/overview
+industries:
+  - aviation
+  - manufacturing
+location:
+  city: Wichita
+  state: KS
+  country: us
+  international: true
+  wiki: Wichita, Kansas
+employeesBefore:
+  type: approximately
+  upperBound: 18000
+  year: 2019
+summary: Due to suspended production, Spirit furloughed thousands of employees, but did not state what compensation they would receive. Meanwhile, Spirit executives took sizable pay cuts.
+citations:
+  - summary: In line with Boeing's production suspension, Spirit has indefinitely suspended work on Boeing's commercial programs at most US locations and furloughed about 3,200 employees on those projects. There was no word as to what compensation, if any, the workers would receive.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Spirit PR Newswire
+        link: https://web.archive.org/web/20200331124255/https://www.spiritaero.com/release/137060/spirit-aerosystems-suspends-boeing-production-work
+        date: 2020-03-24T12:00:00Z # Estimate based on post date of 03/24/2020.
+      - source: Seeking Alpha
+        link: https://web.archive.org/web/20200424181429/http://seekingalpha.com/news/3559305-spirit-aero-furloughs-workers-on-boeing-programs-cuts-exec-pay
+        date: 2020-04-08T09:11:00-04:00
+  - summary: Spirit executives based in the US, as well as members of the board of directories, took an indefinite pay cut of 20%.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Seeking Alpha
+        link: https://web.archive.org/web/20200424181429/http://seekingalpha.com/news/3559305-spirit-aero-furloughs-workers-on-boeing-programs-cuts-exec-pay
+        date: 2020-04-08T09:11:00-04:00

@@ -1,0 +1,37 @@
+name: Dick's Sporting Goods, Inc.
+aliases:
+  - Field & Stream
+  - Golf Galaxy
+shortName: Dick's
+ticker: DKS
+wiki: Dick's Sporting Goods
+image: dicks-sporting-goods.svg#006554
+officialWebsite: https://www.dickssportinggoods.com/s/about-us
+industries:
+  - retail
+location:
+  city: Coraopolis
+  state: PA
+  country: us
+  international: false
+  wiki: Coraopolis, Pennsylvania
+employeesBefore:
+  type: approximately
+  upperBound: 40000
+  year: 2020
+summary: After Dick's closed its physical store presence, it furloughed the majority of its employees without pay.
+citations:
+  - summary: Dick's closed most of its stores, with some still operating online and curbside pickup operations.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNN
+        link: https://web.archive.org/web/20200409043038/https://www.cnn.com/2020/04/08/business/dicks-sporting-goods-furloughs/index.html
+        date: 2020-04-08T15:00:11Z
+  - summary: Dick's furloughed a majority of its workforce, with benefits but without pay.
+    positivity: -1
+    type: publication
+    sources:
+      - source: CNN
+        link: https://web.archive.org/web/20200409043038/https://www.cnn.com/2020/04/08/business/dicks-sporting-goods-furloughs/index.html
+        date: 2020-04-08T15:00:11Z

@@ -1,0 +1,26 @@
+name: Toast, Inc.
+shortName: Toast
+wiki: Toast, Inc.
+image: toast.svg#ef4b24
+officialWebsite: https://pos.toasttab.com/about
+industries:
+  - software
+location:
+  city: Boston
+  state: MA
+  country: us
+  international: false
+  wiki: Boston
+employeesBefore:
+  type: approximately
+  upperBound: 2600
+  year: 2020
+summary: Despite a valuation of $5 billion USD after operating for eight years, Toast completely laid off 50% of its staff in response to decreased restaurant demand.
+citations:
+  - summary: Toast completely cut 50% of its staff in response to declining restaurant sales caused by the pandemic.
+    positivity: -1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200422124825/https://www.cnbc.com/2020/04/07/toast-cuts-50percent-of-staff-as-coronavirus-forces-restaurants-to-close.html
+        date: 2020-04-07T18:04:00-04:00

@@ -29,13 +29,23 @@ describe("<EmployerPageDetails />", () => {
 		strings: {
 			detailDescriptions: {
 				aka: ploc("aka"),
+				edit: ploc("edit"),
 				employees: ploc("employees"),
+				industry: ploc("industry"),
 				linkToEmployer: ploc("linkToEmployer"),
 				location: ploc("location"),
+				name: ploc("name"),
+				officialWebsite: ploc("officialWebsite"),
 				rating: ploc("rating"),
 				ratingCounts: ploc("ratingCounts"),
 				ticker: ploc("ticker"),
+				wikipedia: ploc("wikipedia"),
 			},
+			detailLabels: {
+				officialWebsite: ploc("officialWebsiteLabel"),
+				wikipedia: ploc("wikipediaLabel"),
+			},
+			employeeDelta: `${ploc("employeeDelta")}: {change} / {date}`,
 			ratingLabels: {
 				fair: ploc("fair"),
 				good: ploc("good"),
@@ -89,6 +99,7 @@ describe("<EmployerPageDetails />", () => {
 					summary: "A very good summary about Contoso.",
 					type: "statement",
 				}],
+				employeesAfter: { type: "approximately", upperBound: 10123, year: 2017 },
 				employeesBefore: { type: "exactly", upperBound: 12345, year: 2015 },
 				id: "contoso",
 				image: "consoto.svg",

@@ -1,0 +1,26 @@
+name: Wonderschool
+image: wonderschool.svg
+officialWebsite: https://www.wonderschool.com/about
+industries:
+  - childCare
+  - education
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: false
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 65
+  year: 2020
+  yearQuarter: Q1
+summary: Even after sizable layoffs in late 2019, Wonderschool laid off more than half its remaining employees in response to shelter-at-home orders.
+citations:
+  - summary: Despite layoffs in November, Wonderschool laid off 75% of its staff in March, representing about 50 people.
+    positivity: -1
+    type: publication
+    sources:
+      - source: EdSurge
+        link: https://web.archive.org/web/20200412224835/https://www.edsurge.com/news/2020-03-25-report-covid-19-causes-wonderschool-to-lay-off-75-percent-of-workforce
+        date: 2020-03-26T08:32:43+08:00

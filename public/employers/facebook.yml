@@ -1,0 +1,50 @@
+name: Facebook
+ticker: FB
+wiki: Facebook
+image: facebook.svg#1977f3
+officialWebsite: https://about.fb.com/
+industries:
+  - internet
+location:
+  city: Menlo Park
+  state: CA
+  country: us
+  international: true
+  wiki: Menlo Park, California
+employeesBefore:
+  source: Statista
+  sourceLink: https://www.statista.com/statistics/273563/number-of-facebook-employees/
+  type: exactly
+  upperBound: 44942
+  year: 2019
+  yearQuarter: Q4
+summary: Facebook furloughed hourly workers with full pay through the pandemic, and provided financial assistance for remote workers get set up. However, contract employees were not eligible for additional paid leave or said financial assistance.
+citations:
+  - summary: Facebook offered an additional four weeks of paid leave to full-time employees whose children are affected by school closures. The offer does not include contract employees.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Los Angeles Times
+        link: https://web.archive.org/web/20200423001942/https://www.latimes.com/business/technology/story/2020-03-31/coronavirus-google-facebook-paid-leave-school-closures
+        date: 2020-03-31T23:59:50Z
+  - summary: To facilitate remote work, Facebook provided every full-time employee with an additional $1,000 USD to assist with associated expenses.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNN
+        link: https://web.archive.org/web/20200414065849/https://www.cnn.com/2020/03/17/tech/facebook-coronavirus-1000-dollars-employees/index.html
+        date: 2020-03-17T18:59:14Z
+  - summary: Facebook continued to pay wages for janitors, cafeteria workers, and other hourly employees during the COVID-19 crisis.
+    positivity: 2
+    type: publication
+    sources:
+      - source: CNN
+        link: https://web.archive.org/web/20200414065849/https://www.cnn.com/2020/03/17/tech/facebook-coronavirus-1000-dollars-employees/index.html
+        date: 2020-03-17T18:59:14Z
+  - summary: Facebook dedicated $100 million USD to help small businesses affected by COVID-19.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNN
+        link: https://web.archive.org/web/20200414065849/https://www.cnn.com/2020/03/17/tech/facebook-coronavirus-1000-dollars-employees/index.html
+        date: 2020-03-17T18:59:14Z

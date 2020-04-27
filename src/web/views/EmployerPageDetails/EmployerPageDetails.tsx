@@ -10,7 +10,7 @@ import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 import { EmployerRecordBase } from "../../../common/EmployerRecordBase";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
 import { WikipediaHelpers } from "../../../common/WikipediaHelpers";
 
 import { AppState } from "../../state/AppState";
@@ -91,6 +91,36 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			})
 			.slice(0, maxRelatedEmployers);
 
+	let employeeDeltaClass: string = "";
+	let employeeDeltaString: string = "";
+	let currentEmployees: EmployerEmployeeProfile | undefined;
+
+	if (employer.employeesBefore && employer.employeesAfter) {
+		currentEmployees = employer.employeesAfter;
+		const employeeDelta: number =
+			EmployerEmployeeProfile.subtract(employer.employeesAfter, employer.employeesBefore);
+
+		let employeeDeltaValue: string = employeeDelta.toLocaleString();
+
+		if (employeeDelta > 0) {
+			employeeDeltaValue = `+${employeeDeltaValue}`;
+			employeeDeltaClass = "EmployerPageDetails__Delta EmployerPageDetails__Delta--Positive";
+		} else {
+			employeeDeltaClass = "EmployerPageDetails__Delta EmployerPageDetails__Delta--Negative";
+		}
+
+		const employeeDeltaDateString: string | null = EmployerEmployeeProfile.getDateString(employer.employeesBefore);
+
+		employeeDeltaString =
+			employeeDeltaDateString
+				? format(
+					strings.employeeDelta,
+					{ change: employeeDeltaValue, date: employeeDeltaDateString })
+				: employeeDeltaValue;
+	} else {
+		currentEmployees = employer.employeesBefore || employer.employeesAfter;
+	}
+
 	return (
 		<div className="EmployerPageDetails__Container">
 			<div className="EmployerPageDetails__Header">
@@ -149,10 +179,15 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 								</>,
 								WikipediaHelpers.getWikipediaUrl(employer.location.wiki) || "",
 							)}
-							{employer.employeesBefore && getProfileRow(
+							{currentEmployees && getProfileRow(
 								strings.detailDescriptions.employees,
 								"people",
-								<>{EmployerEmployeeProfile.toString(employer.employeesBefore, true, false)}</>,
+								<>
+									{EmployerEmployeeProfile.toString(currentEmployees, true, false)}
+									{employeeDeltaString && (
+										<span className={employeeDeltaClass}>({employeeDeltaString})</span>
+									)}
+								</>,
 							)}
 							{employer.ticker && getProfileRow(
 								strings.detailDescriptions.ticker,
@@ -163,13 +198,13 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 							{employer.wiki && getProfileRow(
 								strings.detailDescriptions.wikipedia,
 								"language",
-								<>Wikipedia</>,
+								<>{format(strings.detailLabels.wikipedia, { page: employer.wiki })}</>,
 								WikipediaHelpers.getWikipediaUrl(employer.wiki) || "",
 							)}
 							{employer.officialWebsite && getProfileRow(
 								strings.detailDescriptions.officialWebsite,
 								"home",
-								<>Homepage</>,
+								<>{strings.detailLabels.officialWebsite}</>,
 								employer.officialWebsite,
 							)}
 						</tbody>

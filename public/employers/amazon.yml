@@ -72,7 +72,7 @@ citations:
       - source: WDRB
         link: https://www.wdrb.com/in-depth/kentucky-amazon-warehouse-with-covid--cases-to-remain-closed/article_01f47e9a-6ecd-11ea-83dc-9f73f2c6a979.html
         date: 2020-03-25T20:15:00-04:00
-  - summary: Amazon cut ties with several independent delivery contractors. Given that the timing coincides with the COVID-19 pandemic, it is speculated to be related to the ongoing crisis; however, this has not yet been publicly confirmed.
+  - summary: Amazon cut ties with several independent delivery contractors. Given that the timing coincides with the COVID-19 pandemic, it is speculated to be related to the ongoing crisis; however, this was not publicly confirmed.
     positivity: 0
     type: publication
     sources:
@@ -125,7 +125,7 @@ citations:
       - source: CNBC
         link: https://www.cnbc.com/2020/04/08/amazon-warehouse-workers-say-they-struggle-to-get-paid-despite-sick-leave-policy.html
         date: 2020-04-08T17:48:00-04:00
-  - summary: Amid the 74th death from COVID-19 among Amazon workers, two employees have been fired after they spoke out against the working conditions in Amazon's warehouses. Amazon has denied that this was due to the criticism, but states that it was for "repeatedly violating internal policies," though the company did not specify further details.
+  - summary: Amid the 74th death from COVID-19 among Amazon workers, two employees have been fired after they spoke out against the working conditions in Amazon's warehouses. Amazon denied that this was due to the criticism, but states that it was for "repeatedly violating internal policies," though the company did not specify further details.
     positivity: 0
     type: publication
     sources:
@@ -142,7 +142,7 @@ citations:
       - source: The Guardian
         link: https://web.archive.org/web/20200413154214/https://www.theguardian.com/technology/2020/apr/02/amazon-chris-smalls-smart-articulate-leaked-memo
         date: 2020-04-02T19:47:00-04:00
-  - summary: Amazon has deleted employees' calendar invites in an attempt to shut down a virtual event organized to let workers speak out about warehouse working conditions.
+  - summary: Amazon deleted employees' calendar invites in an attempt to shut down a virtual event organized to let workers speak out about warehouse working conditions.
     positivity: -2
     type: statement
     sources:
@@ -156,3 +156,10 @@ citations:
       - source: The Verge
         link: https://web.archive.org/web/20200418211049/https://www.theverge.com/2020/4/18/21226356/amazon-thermal-cameras-warehouses-fevers-coronavirus
         date: 2020-04-18T17:10:56Z
+  - summary: Hourly employees at Amazon received an increase of $2 USD per hour.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Whole Foods Market Newsroom
+        link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
+        date: 2020-03-16T12:00:00Z # Estimate based on entry date of 03/16/2020.

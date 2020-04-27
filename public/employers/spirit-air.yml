@@ -1,0 +1,35 @@
+name: Spirit Airlines, Inc.
+shortName: Spirit Air
+ticker: SAVE
+wiki: Spirit Airlines
+image: spirit-air.svg
+officialWebsite: https://www.spirit.com/about-us
+industries:
+  - airline
+  - transport
+location:
+  city: Miramar
+  state: FL
+  country: us
+  international: true # All corporate offices are in the US, but they have reservation offices, etc. in other countries.
+  wiki: Miramar, Florida
+employeesBefore:
+  type: exactly
+  upperBound: 8938
+  year: 2020
+summary: Spirit Air provided minimal PPE to employees and suspended a number of flights, but announcements generally lacked details about compensation and continued employment.
+citations:
+  - summary: Spirit Air expressed that they do not want employees wearing face masks, but provided them with other PPE supplies such as alcohol wipes.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Business Insider
+        link: https://web.archive.org/web/20200419072526/https://www.businessinsider.com/coronavirus-flight-attendants-jobs-hours-sick-2020-3
+        date: 2020-03-10T14:39:00Z
+  - summary: Spirit Air suspended a number of flights through May 6 due to significant drops in demand. Details regarding employee compensation during this time were not released.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Cleveland.com
+        link: https://web.archive.org/web/20200414162054/https://www.cleveland.com/business/2020/04/spirit-airlines-suspending-service-at-cleveland-hopkins-other-airports-for-one-month.html
+        date: 2020-04-02T15:24:24

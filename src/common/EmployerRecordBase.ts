@@ -68,7 +68,7 @@ export abstract class EmployerRecordBase {
 			if (matchingIndustries === a.industries.length && matchingIndustries === b.industries.length) {
 				score += matchingIndustries * 10;
 			} else {
-				score += matchingIndustries;
+				score += matchingIndustries * 7;
 			}
 		}
 
@@ -82,6 +82,10 @@ export abstract class EmployerRecordBase {
 					? ((a.location.international === b.location.international ? 1 : 0)
 						+ (a.location.city === b.location.city ? 5 : 3))
 					: 0;
+		}
+
+		if ((a.id === "lyft" || b.id === "lyft") && (a.id === "gap" || b.id === "gap")) {
+			console.log(a, b, score);
 		}
 
 		return score;

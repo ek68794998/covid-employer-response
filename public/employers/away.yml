@@ -1,0 +1,30 @@
+name: Away
+aliases:
+  - JRSK, Inc.
+wiki: Away (luggage)
+image: away.svg#284859
+officialWebsite: https://www.awaytravel.com/our-story
+industries:
+  - retail
+location:
+  city: New York City
+  state: NY
+  country: us
+  international: true
+  wiki: New York City
+summary: Though Away furloughed and laid off more than half its workforce, it committed to severance pay and healthcare for those affected.
+citations:
+  - summary: Away furloughed 50% of its workforce with benefits but no pay, and laid off an additional 10%.
+    positivity: -1
+    type: publication
+    sources:
+      - source: TechCrunch
+        link: https://techcrunch.com/2020/04/07/away-the-high-flying-travel-brand-startup-just-furloughed-half-its-employees-and-laid-off-10/
+        date: 2020-04-07T13:27:00-07:00
+  - summary: Laid off employees received eight weeks of severance pay and healthcare coverage through the end of June, while furloughed employees were eligible through government assistance to receive 100% of their wages.
+    positivity: 1
+    type: publication
+    sources:
+      - source: TechCrunch
+        link: https://techcrunch.com/2020/04/07/away-the-high-flying-travel-brand-startup-just-furloughed-half-its-employees-and-laid-off-10/
+        date: 2020-04-07T13:27:00-07:00

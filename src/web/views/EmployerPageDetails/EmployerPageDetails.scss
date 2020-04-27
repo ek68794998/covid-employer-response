@@ -114,6 +114,19 @@ $padding-interior: 12px;
 		margin-left: 6px;
 		width: 16px;
 	}
+
+	.EmployerPageDetails__Delta {
+		font-size: 85%;
+		margin-left: 8px;
+
+		&.EmployerPageDetails__Delta--Positive {
+			color: $indicator-positive;
+		}
+
+		&.EmployerPageDetails__Delta--Negative {
+			color: $indicator-negative;
+		}
+	}
 }
 
 .EmployerPageDetails__LinkedCompanies {
