@@ -26,7 +26,7 @@ citations:
         link: https://web.archive.org/web/20200423022246/https://www.fool.com/investing/2020/04/15/groupon-to-lay-off-or-furlough-2800-workers-initia.aspx
         date: 2020-04-15T13:09:00Z
   - summary: Groupon implemented a hiring freeze, reduced marketing initiatives, and other cost-cutting measures.
-    positivity: 1
+    positivity: 0
     type: publication
     sources:
       - source: The Motley Fool
