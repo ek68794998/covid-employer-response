@@ -1,0 +1,44 @@
+name: "&pizza"
+aliases:
+  - And Pizza
+wiki: "&pizza"
+image: and-pizza.svg#000
+officialWebsite: https://andpizza.com/ # No specific 'about' page.
+industries:
+  - foodDelivery
+  - restaurant
+location:
+  city: Washington, D.C.
+  country: us
+  international: false
+  wiki: Washington, D.C.
+summary: Despite its size, &pizza implemented a sick-leave policy well above other fast-food companies such as McDonald's, and went as far as to give raises, free food, and subsidized transport to its employees.
+citations:
+  - summary: Employees of &pizza received a raise of $1 USD per hour.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Restaurant Dive
+        link: https://web.archive.org/web/20200426020949/https://www.restaurantdive.com/news/pizzas-coronavirus-response-plan-pay-workers-more-not-less/574400/
+        date: 2020-03-18T10:36:35Z
+  - summary: "&pizza began providing employees with free pizza and partial reimbursements for Lyft rides to and from work."
+    positivity: 1
+    type: publication
+    sources:
+      - source: Restaurant Dive
+        link: https://web.archive.org/web/20200426020949/https://www.restaurantdive.com/news/pizzas-coronavirus-response-plan-pay-workers-more-not-less/574400/
+        date: 2020-03-18T10:36:35Z
+  - summary: "&pizza expanded its sick-leave policy to include new hires and those caring for family members."
+    positivity: 1
+    type: publication
+    sources:
+      - source: Restaurant Dive
+        link: https://web.archive.org/web/20200426020949/https://www.restaurantdive.com/news/pizzas-coronavirus-response-plan-pay-workers-more-not-less/574400/
+        date: 2020-03-18T10:36:35Z
+  - summary: "&pizza's sick-leave policy included 14 paid sick days to staff who received a positive COVID-19 diagnosis or were in contact with someone who did."
+    positivity: 0
+    type: publication
+    sources:
+      - source: Restaurant Dive
+        link: https://web.archive.org/web/20200426020949/https://www.restaurantdive.com/news/pizzas-coronavirus-response-plan-pay-workers-more-not-less/574400/
+        date: 2020-03-18T10:36:35Z

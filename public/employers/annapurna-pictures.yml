@@ -1,0 +1,41 @@
+name: Annapurna Pictures, LLC
+aliases:
+  - Annapurna Interactive
+  - Annapurna International
+  - Annapurna Television
+  - Panorama Media
+shortName: Annapurna Pictures
+wiki: Annapurna Pictures
+image: annapurna-pictures.png
+officialWebsite: http://annapurna.pictures/mission
+industries:
+  - entertainment
+  - media
+  - videoGames
+location:
+  city: Los Angeles
+  state: CA
+  country: us
+  international: false
+  wiki: Los Angeles
+employeesBefore:
+  type: approximately
+  upperBound: 70
+  year: 2020
+  yearQuarter: Q1
+summary: Annapurna Pictures took reasonably balanced actions to keep the company healthy, including both layoffs and executive pay cuts, though details on the extent of each are somewhat scarce.
+citations:
+  - summary: Annapurna Pictures laid off about 10% of its workforce, including its chief financial officer.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Variety
+        link: https://web.archive.org/web/20200422105910/https://variety.com/2020/film/news/annapurna-pictures-lays-off-cfo-james-pong-film-and-tv-executives-exclusive-1234585621/
+        date: 2020-04-20T21:55:00-07:00
+  - summary: Senior leadership at Annapurna Pictures took pay cuts of undisclosed amounts.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Variety
+        link: https://web.archive.org/web/20200422105910/https://variety.com/2020/film/news/annapurna-pictures-lays-off-cfo-james-pong-film-and-tv-executives-exclusive-1234585621/
+        date: 2020-04-20T21:55:00-07:00

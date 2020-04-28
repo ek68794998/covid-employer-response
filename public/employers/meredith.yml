@@ -1,0 +1,36 @@
+name: Meredith Corporation
+shortName: Meredith
+ticker: MDP
+wiki: Meredith Corporation
+image: meredith.svg
+officialWebsite: https://ir.meredith.com/company-profile/default.aspx
+industries:
+  - media
+location:
+  city: Des Moines
+  state: IA
+  country: us
+  international: true
+  wiki: Des Moines, Iowa
+employeesBefore:
+  type: exactly
+  upperBound: 7915
+  year: 2018
+summary: Despite a "stong" financial position, pay cuts as high as 40% were handed down to employees, with no disclosure about CEO or board-member compensation. Meredith did, however, cut down on expenditures such as stock dividends and hiring costs.
+citations:
+  - summary: Around 60% of employees at Meredith will receive pay cuts for a 4-month period. Though some cuts are as high as 40%, most are in the 15%&ndash;20% range, and affected employees will be given one day of paid leave a week to compensate.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Reuters via New York Times
+        link: https://web.archive.org/web/20200422105910/https://variety.com/2020/film/news/annapurna-pictures-lays-off-cfo-james-pong-film-and-tv-executives-exclusive-1234585621/
+        date: 2020-04-20T14:45:14-04:00
+      - source: CNBC
+        link: https://web.archive.org/web/20200426010552/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: Stock dividends, raises, and hiring were put on pause, and Meredith reduced use of freelancers to reduce expenditures.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Reuters via New York Times
+        link: https://web.archive.org/web/20200422105910/https://variety.com/2020/film/news/annapurna-pictures-lays-off-cfo-james-pong-film-and-tv-executives-exclusive-1234585621/
+        date: 2020-04-20T14:45:14-04:00

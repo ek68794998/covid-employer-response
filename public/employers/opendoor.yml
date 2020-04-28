@@ -1,0 +1,35 @@
+name: Opendoor
+wiki: Opendoor
+image: opendoor.svg#3f80c2
+officialWebsite: https://www.opendoor.com/w/about
+industries:
+  - realEstate
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: false
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 1700
+  year: 2020
+  yearQuarter: Q1
+summary: Opendoor laid off over a third of its workforce in response to COVID-19, but ensured that laid-off employees were given above-average severance packages.
+citations:
+  - summary: Opendoor committed to its severance package for laid-off employees, including eight weeks of full pay and double that for healthcare coverage. Executives also committed to donate to an employee relief fund, though the extent of said donation was not disclosed.
+    positivity: 1
+    type: publication
+    sources:
+      - source: TechCrunch
+        link: https://web.archive.org/web/20200423121029/https://techcrunch.com/2020/04/15/softbank-backed-opendoor-has-announced-a-massive-layoff-cutting-35-of-its-employees/
+        date: 2020-04-15T13:17:00-07:00
+      - source: CNBC
+        link: https://web.archive.org/web/20200426010552/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: Opendoor laid off 35% of its workforce, amounting to about 600 employees.
+    positivity: -1
+    type: publication
+    sources:
+      - source: TechCrunch
+        link: https://web.archive.org/web/20200423121029/https://techcrunch.com/2020/04/15/softbank-backed-opendoor-has-announced-a-massive-layoff-cutting-35-of-its-employees/
+        date: 2020-04-15T13:17:00-07:00

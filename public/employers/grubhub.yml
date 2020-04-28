@@ -1,0 +1,41 @@
+name: Grubhub Inc.
+aliases:
+  - BiteGrabber
+  - Eat24
+  - LevelUp
+  - Seamless
+  - Tango
+shortName: Grubhub
+ticker: GRUB
+wiki: Grubhub
+image: grubhub.svg
+officialWebsite: https://about.grubhub.com/about-us/what-is-grubhub/default.aspx
+industries:
+  - foodDelivery
+location:
+  city: Chicago
+  state: IL
+  country: us
+  international: false
+  wiki: Chicago
+employeesBefore:
+  type: exactly
+  upperBound: 2773
+  year: 2020
+  yearQuarter: Q1
+summary: Grubhub started allowing customers to give matched donations to a fund for driver financial relief; however, even as of late April, the company had done nothing to provide drivers with paid sick leave.
+citations:
+  - summary: Though Grubhub encouraged employees who felt sick to stay home, they did not provide any form of paid sick leave.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Grubhub for Drivers
+        link: https://web.archive.org/web/20200426022254/https://driver-support.grubhub.com/hc/en-us/articles/360041988391-Should-I-stay-home-or-continue-delivering-as-normal-
+        date: 2020-04-25T21:49:21Z # Update date. Unsure of original post date.
+  - summary: Grubhub started a fund for customers to round up their order to the dollar to provide relief money to employees, which would be matched by the company.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Grubhub PR Newswire
+        link: https://web.archive.org/web/20200406062129/https://media.grubhub.com/media/press-releases/press-release-details/2020/Grubhub-and-Major-Cities-Across-the-US-Launch-Economic-Relief-Effort-up-to-100-Million-for-Independent-Restaurants-and-Delivery-Partners-Impacted-by-COVID-19/default.aspx
+        date: 2020-03-13T12:00:00Z # Estimate based on entry date of 03/13/2020.
