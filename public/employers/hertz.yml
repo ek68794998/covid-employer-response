@@ -7,6 +7,7 @@ wiki: The Hertz Corporation
 image: hertz.svg
 officialWebsite: https://www.hertz.com/rentacar/abouthertz/index.jsp?targetPage=CorporateProfile.jsp&c=aboutHertzCompaniesView
 industries:
+  - automotive
   - transport
 location:
   city: Estero

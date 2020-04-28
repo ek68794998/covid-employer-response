@@ -10,7 +10,7 @@ location:
   city: Des Moines
   state: IA
   country: us
-  international: false
+  international: true
   wiki: Des Moines, Iowa
 employeesBefore:
   type: exactly
