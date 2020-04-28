@@ -1,0 +1,34 @@
+name: JetBlue Airways
+shortName: jetBlue
+ticker: JBLU
+wiki: JetBlue
+image: jetblue.svg
+officialWebsite: http://investor.jetblue.com/media-room/about-jetblue-airways
+industries:
+  - airline
+location:
+  city: Long Island City
+  state: NY
+  country: us
+  international: true
+  wiki: Long Island City
+employeesBefore:
+  type: approximately
+  upperBound: 22000
+  year: 2018
+summary: Contoso did not give appropriate paid leave and did not send home those showing COVID-19 symptoms.
+citations:
+  - summary: JetBlue was the first US airline to implement, as of May 4, a requirement that passengers wear face masks during JetBlue flights, for the safety of employees and customers alike.
+    positivity: 1
+    type: publication
+    sources:
+      - source: NBC News
+        link: https://web.archive.org/web/20200428204713/https://www.nbcnews.com/news/us-news/jetblue-becomes-first-airline-require-passengers-wear-masks-n1194091
+        date: 2020-04-28T05:15:00-07:00
+  - summary: JetBlue implemented a heightened standard of sanitation by cleaning planes, providing PPE such as gloves and hand sanitizer to employees, and other measures.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Boston 25 News
+        link: https://web.archive.org/web/20200424160038/https://www.boston25news.com/news/boston-based-jetblue-flight-attendant-dies-covid-19/ASKAG6ZEHRHJRBTT2XFQAAC5XE/
+        date: 2020-04-16T01:44:56.652Z
