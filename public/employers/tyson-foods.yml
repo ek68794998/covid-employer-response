@@ -1,0 +1,56 @@
+name: Tyson Foods, Inc.
+aliases:
+  - Aidells
+  - Ball Park
+  - Hillshire Farm
+  - Jimmy Dean
+  - Sara Lee
+  - State Fair
+  - Wright Brand
+shortName: Tyson
+ticker: TSN
+wiki: Tyson Foods
+image: tyson-foods.svg
+officialWebsite: https://www.tysonfoods.com/who-we-are
+industries:
+  - foodProcessing
+location:
+  city: Springdale
+  state: AR
+  country: us
+  international: true
+  wiki: Springdale, Arkansas
+employeesBefore:
+  type: approximately
+  upperBound: 122000
+  year: 2015
+summary: Tyson took proactive and reactive measures to keep employees safe and shut down facilities where there were perceived safety issues. However, it received criticism for its slow response and for keeping non-essential product lines operating.
+citations:
+  - summary: Tyson promised to compensate all employees affected by Waterloo plant closures.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNN
+        link: https://www.cnn.com/2020/04/22/us/tyson-waterloo-iowa-plant-employees-coronavirus/index.html
+        date: 2020-04-23T01:05:04Z
+  - summary: Tyson closed down a pork plant in Waterloo due to concerns regarding COVID-19; however, officials and staff criticized Tyson for waiting too long to do so.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNN
+        link: https://www.cnn.com/2020/04/22/us/tyson-waterloo-iowa-plant-employees-coronavirus/index.html
+        date: 2020-04-23T01:05:04Z
+  - summary: Tyson was deemed essential due to being not only involved in food service, but pet food as well, and therefore continued to operate its plants during the pandemic.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNN
+        link: https://edition.cnn.com/2020/04/28/business/tyson-dog-treat-factory-covid-19/index.html
+        date: 2020-04-28T04:49:14Z
+  - summary: An employee at a Tyson dog-treat plant died from COVID-19. Though staff confirm that Tyson implemented a number of social distancing measures&mdash;such as spacing out cafeteria seats&mdash;they feel the company is not doing enough.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNN
+        link: https://edition.cnn.com/2020/04/28/business/tyson-dog-treat-factory-covid-19/index.html
+        date: 2020-04-28T04:49:14Z
