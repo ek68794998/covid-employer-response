@@ -20,7 +20,7 @@ employeesBefore:
   upperBound: 205 # 43 corporate, 25 managers, 137 foodservice. But this does not appear to include franchises, since there are over 1,400 stores.
   year: 2018
   yearQuarter: Q1
-summary: Contoso did not give appropriate paid leave and did not send home those showing COVID-19 symptoms.
+summary: Nathan's began either closing or operating its locations on a takeout-only basis, and returned loans from government programs that were not needed.
 citations:
   - summary: Nathan's applied for and received a loan of $1.2 million USD under the government's Paycheck Protection Program, but later returned the entire amount after guidance was released, discouraging applications from public companies.
     positivity: 1
