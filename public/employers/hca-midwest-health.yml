@@ -1,0 +1,30 @@
+name: HCA Midwest Health
+aliases:
+  - HCA Midwest Division
+  - Research Medical Center (RMC) # This has a Wikipedia page but HCA does not.
+image: hca-midwest-health.svg
+officialWebsite: https://hcamidwest.com/about/
+industries:
+  - healthCare
+location:
+  city: Overland Park
+  state: KS
+  country: us
+  international: false
+  wiki: Overland Park, Kansas
+summary: Though HCA published information saying they were following strict guidelines in terms of handling visitors, nurses at its subsidiary hospitals claim that not only were they not given proper PPE, but they were expected to report to work even after direct exposure to COVID-19.
+citations:
+  - summary: HCA Midwest Health tightened regulations for its subsidiaries, including reducing visitors, and screening visitors and vendors for COVID-19 symptoms before admittance. They did not publicize information about how employees were being checked or handled in that regard.
+    positivity: 0
+    type: publication
+    sources:
+      - source: HCA Midwest Coronavirus Resource Hub
+        link: https://web.archive.org/web/20200428014154/https://hcamidwest.com/covid-19/
+        date: 2020-03-17T12:00:00Z # Estimate based on "effective" date of 03/17/2020.
+  - summary: A nurse working at [Research Medical Center](https://en.wikipedia.org/wiki/Research_Medical_Center), an HCA subsidiary in Kansas City, MO, died of COVID-19 after raising claims that the company was not providing appropriate PPE for employees. According to statements, nurses were even expected to come into work after direct exposure to COVID-19.
+    positivity: -2
+    type: statement
+    sources:
+      - source: Newsweek
+        link: https://web.archive.org/web/20200428013301/https://www.newsweek.com/nurse-dies-coronavirus-raising-concerns-1500336
+        date: 2020-04-27T07:03:28-04:00
