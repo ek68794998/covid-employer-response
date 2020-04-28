@@ -25,7 +25,7 @@ employeesBefore:
   yearQuarter: Q2
 summary: Stanford Health Care provided a number of guidelines, aligning with those of the CDC, for workers to stay safe and use PPE. However, due to the lack of revenue through elective procedures, Stanford effectively either cut pay of, or furloughed, most or all workers through July.
 citations:
-  - summary: Safety and PPE guidelines provided by Stanford Health Care are generally in line with those suggested by the CDC.
+  - summary: Safety and PPE guidelines provided by Stanford Health Care are generally in line with those suggested by the CDC. The guidelines did not note whether appropriate PPE was made available to employees.
     positivity: 0
     type: publication
     sources:
