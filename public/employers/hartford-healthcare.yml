@@ -1,0 +1,30 @@
+name: Hartford Healthcare
+aliases:
+  - Backus Hospital
+# wiki: Hartford Hospital # This is only for the primary hospital, not the company itself.
+image: hartford-healthcare.svg
+officialWebsite: https://hartfordhealthcare.org/about-us
+industries:
+  - healthCare
+location:
+  city: Hartford
+  state: CT
+  country: us
+  international: false
+  wiki: Hartford, Connecticut
+summary: Hartford issued public statements saying that they provide sufficient masks and respirators to all staff. However, this contradicts reports filed by staff at Hartford's Backus Hospital, saying that nurses and patients are in danger from lack of appropriate PPE.
+citations:
+  - summary: The Chief Clinical officer at Hartford stated that all employees were given masks and respirators, consistent with or better than those outlined by the CDC.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Newsweek
+        link: https://www.newsweek.com/health-care-workers-10-states-file-complaints-about-ppe-shortages-during-coronavirus-pandemic-1500781
+        date: 2020-04-28T16:59:33-04:00
+  - summary: A nurse at Backus Hospital, owned by Hartford, made an official statement that the number of N95 masks was insufficient. She stated that there were enough masks for patients, but no requirement to wear them, and that there were no masks for employees working with unmasked patients.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Newsweek
+        link: https://www.newsweek.com/health-care-workers-10-states-file-complaints-about-ppe-shortages-during-coronavirus-pandemic-1500781
+        date: 2020-04-28T16:59:33-04:00
