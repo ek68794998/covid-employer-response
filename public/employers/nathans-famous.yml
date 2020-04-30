@@ -1,0 +1,38 @@
+name: Nathan's Famous, Inc.
+shortName: Nathan's Famous
+ticker: NATH
+wiki: Nathan's Famous
+image: nathans-famous.svg
+officialWebsite: https://nathansfamous.com/about-us/
+industries:
+  - foodProcessing
+  - restaurant
+location:
+  city: Jericho
+  state: NY
+  country: us
+  international: true
+  wiki: Jericho, New York
+employeesBefore:
+  source: Nathan's Famous, Annual Report
+  sourceLink: http://www.annualreports.com/HostedData/AnnualReports/PDF/NASDAQ_NATH_2018.pdf
+  type: exactly
+  upperBound: 205 # 43 corporate, 25 managers, 137 foodservice. But this does not appear to include franchises, since there are over 1,400 stores.
+  year: 2018
+  yearQuarter: Q1
+summary: Nathan's began either closing or operating its locations on a takeout-only basis, and returned loans from government programs that were not needed.
+citations:
+  - summary: Nathan's applied for and received a loan of $1.2 million USD under the government's Paycheck Protection Program, but later returned the entire amount after guidance was released, discouraging applications from public companies.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200428220428/https://www.cnbc.com/2020/04/27/nathans-famous-received-and-will-return-1point2-million-ppp-loan.html
+        date: 2020-04-27T18:24:00-04:00
+  - summary: Nathan's closed one of their four company-operated locations, with the other three remaining open for takeout and delivery. Most franchised locations were closed.
+    positivity: 0
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200428220428/https://www.cnbc.com/2020/04/27/nathans-famous-received-and-will-return-1point2-million-ppp-loan.html
+        date: 2020-04-27T18:24:00-04:00
