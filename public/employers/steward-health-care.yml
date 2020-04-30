@@ -1,0 +1,37 @@
+name: Steward Health Care
+aliases:
+  - Caritas Christi Health Care
+  - Cerberus Capital Management
+  - Hillside Rehabilitation Hospital
+wiki: Steward Health Care System
+image: steward-health-care.svg
+officialWebsite: https://www.steward.org/about
+industries:
+  - healthCare
+location:
+  city: Dallas
+  state: TX
+  country: us
+  international: false
+  wiki: Dallas
+employeesBefore:
+  lowerBound: 40000
+  type: range
+  upperBound: 0
+  year: 2018
+summary: Though Steward publicly boasted good guidelines for protecting visitors, patients, and employees, reports surfaced about nurses being exposed unnecessarily to COVID-19.
+citations:
+  - summary: Steward and the hospitals in its network were early to adopt a number of regulations to reduce visitors to zero and limit the possibility of COVID-19 exposure through employees and vendors.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Hillside Rehabilitation Hospital corporate news
+        link: https://www.hillsiderehabhospital.org/visitor-access-restrictions
+        date: 2020-03-06T12:00:00Z # Estimate based on post date of 03/06/2020.
+  - summary: A nurse stationed at a Steward-owned hospital, Hillside Rehabilitation Hospital, claimed that as many as 35 nurses were in "imminent danger" of infection due to exposure to COVID-19.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Newsweek
+        link: https://www.newsweek.com/health-care-workers-10-states-file-complaints-about-ppe-shortages-during-coronavirus-pandemic-1500781
+        date: 2020-04-28T16:59:33-04:00
