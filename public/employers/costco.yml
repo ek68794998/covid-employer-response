@@ -70,3 +70,10 @@ citations:
       - source: USA Today
         link: https://www.usatoday.com/story/money/2020/04/01/coronavirus-social-distancing-costco-limit-how-many-people-can-shop/5104661002/
         date: 2020-04-01T13:51:00-04:00
+  - summary: Costco implemented a policy in which both employees and customers are required to have a face mask on at all times.
+    positivity: 1
+    type: publication
+    sources:
+      - source: KOMO
+        link: https://web.archive.org/web/20200429171006/https://komonews.com/news/coronavirus/costco-announces-new-policy-requiring-all-guests-to-wear-face-masks
+        date: 2020-04-29T12:46:39Z
