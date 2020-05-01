@@ -26,6 +26,45 @@ exports[`<EmployerList /> renders list of employers 1`] = `
       [component: EmployerListItem employerId=(e3) showDetails=(true) /]
     </div>
   </div>
+  <div
+    className="EmployerList__Pages"
+  >
+    <button
+      className="App__BigButton"
+      disabled={true}
+      onClick={[Function]}
+    >
+      «
+    </button>
+    <button
+      className="App__BigButton"
+      disabled={true}
+      onClick={[Function]}
+    >
+      ‹
+    </button>
+    <span
+      className="EmployerList__PageNumber"
+    >
+      1
+       / 
+      1
+    </span>
+    <button
+      className="App__BigButton"
+      disabled={true}
+      onClick={[Function]}
+    >
+      ›
+    </button>
+    <button
+      className="App__BigButton"
+      disabled={true}
+      onClick={[Function]}
+    >
+      »
+    </button>
+  </div>
 </div>
 `;
 

@@ -61,4 +61,11 @@ a {
 		background: $header;
 		color: $background;
 	}
+
+	&:disabled {
+		background: $background !important;
+		border-color: transparent;
+		color: transparentize($color: $header, $amount: 0.5);
+		cursor: initial;
+	}
 }

@@ -5,24 +5,32 @@ import React from "react";
 
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 
+import { EmployerListViewMode } from "./EmployerListViewMode";
+
 type ContextDataSetter<T> = (value: T) => void;
 
 const getDefaultContextDataSetter = <T>(): ContextDataSetter<T> =>
 	(value: T): void => (((): void => { /* Noop. */ }) as any)(value);
 
 export const DefaultContextData: EmployerRouteContextData = {
-	listChunksLoaded: 1,
+	listViewMode: "cards",
+	pageIndex: 0,
 	searchFilters: new EmployerListSearchFilter(),
-	setListChunksLoaded: getDefaultContextDataSetter<number>(),
+	setListViewMode: getDefaultContextDataSetter<EmployerListViewMode>(),
+	setPageIndex: getDefaultContextDataSetter<number>(),
 	setSearchFilters: getDefaultContextDataSetter<EmployerListSearchFilter>(),
 };
 
 export interface EmployerRouteContextData {
-	listChunksLoaded: number;
+	listViewMode: EmployerListViewMode;
+
+	pageIndex: number;
 
 	searchFilters: EmployerListSearchFilter;
 
-	setListChunksLoaded: ContextDataSetter<number>;
+	setListViewMode: ContextDataSetter<EmployerListViewMode>;
+
+	setPageIndex: ContextDataSetter<number>;
 
 	setSearchFilters: ContextDataSetter<EmployerListSearchFilter>;
 }
