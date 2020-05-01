@@ -302,6 +302,7 @@ detailLabels:
   wikipedia: "{page} on Wikipedia"
 employeeDelta: "{change} since {date}"
 employerList: Employers
+employerUpdatedDate: Last updated {date}
 filter: Filters
 filters:
   employeesDefault: Size

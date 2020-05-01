@@ -59,6 +59,15 @@ $padding-interior: 12px;
 	line-height: 170%;
 	padding: 0 15% $padding-interior;
 	text-align: center;
+
+	p {
+		margin-bottom: 0.3em;
+	}
+
+	.EmployerPageDetails__LastUpdated {
+		font-size: 70%;
+		opacity: 0.7;
+	}
 }
 
 .EmployerPageDetails__MetaFooter {
