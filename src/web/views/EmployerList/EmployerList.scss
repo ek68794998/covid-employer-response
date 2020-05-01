@@ -31,15 +31,38 @@ $body-3column-width: ($card-min-width * 3 + 120px);
 
 	.App__BigButton {
 		display: inline-block;
-		margin: 0 6px;
+		font-size: 24px;
+		margin: 0 8px;
+		height: 48px;
 		padding: 0;
-		width: 64px;
+		width: 48px;
+	}
+
+	.EmployerList__PageNumber {
+		display: inline-block;
+		font-size: 140%;
+		text-align: center;
+		width: 120px;
 	}
 }
 
 @media (max-width: $body-2column-width) {
 	.EmployerList__Grid {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+
+	.EmployerList__Pages {
+		.App__BigButton {
+			font-size: 18px;
+			height: 36px;
+			width: 36px;
+		}
+
+		.EmployerList__PageNumber {
+			font-size: 120%;
+			margin: 0 8px;
+			width: 80px;
+		}
 	}
 }
 

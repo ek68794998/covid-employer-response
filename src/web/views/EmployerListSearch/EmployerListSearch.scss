@@ -4,11 +4,17 @@
 $input-buffer: 8px;
 $input-height: 40px;
 
-div.EmployerListSearch__Container {
+.EmployerListSearch__Container {
+	align-items: center;
+	display: flex;
+}
+
+.EmployerListSearch__SearchContainer {
 	align-items: center;
 	border: 1px solid $outline-color;
 	border-radius: ($input-height / 2);
 	display: flex;
+	flex: 1;
 	flex-direction: column;
 	font: 400 16px 'Baloo Chettan 2';
 
@@ -17,7 +23,28 @@ div.EmployerListSearch__Container {
 	}
 }
 
-div.EmployerListSearch__InputContainer {
+.EmployerListSearch__ViewTypeContainer {
+	margin-left: 8px;
+
+	button {
+		background: none;
+		border: none;
+		border-radius: ($input-height / 2);
+		cursor: pointer;
+		height: $input-height;
+		margin-left: 4px;
+		outline: none;
+		padding: 8px;
+		transition: 0.1s all;
+		width: $input-height;
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+
+.EmployerListSearch__InputContainer {
 	display: flex;
 	flex: 1;
 	height: 100%;
@@ -69,7 +96,7 @@ div.EmployerListSearch__InputContainer {
 	}
 }
 
-div.EmployerListSearch__FilterContainer {
+.EmployerListSearch__FilterContainer {
 	align-items: center;
 	border-top: 1px solid $outline-color;
 	display: flex;

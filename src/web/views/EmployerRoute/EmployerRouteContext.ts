@@ -5,22 +5,30 @@ import React from "react";
 
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 
+import { EmployerListViewMode } from "./EmployerListViewMode";
+
 type ContextDataSetter<T> = (value: T) => void;
 
 const getDefaultContextDataSetter = <T>(): ContextDataSetter<T> =>
 	(value: T): void => (((): void => { /* Noop. */ }) as any)(value);
 
 export const DefaultContextData: EmployerRouteContextData = {
-	pageIndex: 1,
+	listViewMode: "cards",
+	pageIndex: 0,
 	searchFilters: new EmployerListSearchFilter(),
+	setListViewMode: getDefaultContextDataSetter<EmployerListViewMode>(),
 	setPageIndex: getDefaultContextDataSetter<number>(),
 	setSearchFilters: getDefaultContextDataSetter<EmployerListSearchFilter>(),
 };
 
 export interface EmployerRouteContextData {
+	listViewMode: EmployerListViewMode;
+
 	pageIndex: number;
 
 	searchFilters: EmployerListSearchFilter;
+
+	setListViewMode: ContextDataSetter<EmployerListViewMode>;
 
 	setPageIndex: ContextDataSetter<number>;
 

@@ -62,28 +62,16 @@ const EmployerList: React.FC = (): React.ReactElement => {
 	const endIndex: number = startIndex + pageSize;
 
 	const pageCount: number = Math.ceil(filteredEmployers.length / pageSize);
-	const pageNumbers: (number | null)[] = [];
 
-	let showedPreviousPage: boolean = false;
-
-	for (let i: number = 0; i < pageCount; i++) {
-		const shouldShowPage: boolean =
-			i <= 1
-			|| i >= pageCount - 2
-			|| (i >= pageIndex - 1 && i <= pageIndex + 1);
-
-		if (shouldShowPage) {
-			pageNumbers.push(i + 1);
-
-			showedPreviousPage = true;
-		} else {
-			if (showedPreviousPage) {
-				pageNumbers.push(null);
-			}
-
-			showedPreviousPage = false;
-		}
-	}
+	const generatePageButton = (contents: JSX.Element, title: string, pageNumber: number): JSX.Element =>
+		<button
+			key={`${title}:${pageNumber}`}
+			className="App__BigButton"
+			disabled={pageNumber === pageIndex || pageNumber < 0 || pageNumber >= pageCount}
+			onClick={(): void => setPageIndex(pageNumber)}
+		>
+			{contents}
+		</button>;
 
 	return (
 		<div className="EmployerList__Container">
@@ -91,16 +79,18 @@ const EmployerList: React.FC = (): React.ReactElement => {
 				{filteredEmployers.slice(startIndex, endIndex).map(
 					(e: EmployerRecordMetadata, i: number): JSX.Element => (
 						<div className="EmployerList__Item" key={`${i}-${e.id}`}>
-							<EmployerListItem employerId={e.id} showDetails={true} />
+							<EmployerListItem employerId={e.id} showDetails={listContext.listViewMode === "cards"} />
 						</div>
 					))}
 			</div>
 			<div className="EmployerList__Pages">
-				{pageNumbers.map((v: number | null, i: number): JSX.Element => (
-					<button key={i} className="App__BigButton" disabled={!v} onClick={(): void => setPageIndex((v || 0) - 1)}>
-						{v || "..."}
-					</button>
-				))}
+				{generatePageButton(<>&laquo;</>, "First", 0)}
+				{generatePageButton(<>&lsaquo;</>, "Previous", pageIndex - 1)}
+				<span className="EmployerList__PageNumber">
+					{pageIndex + 1} / {pageCount}
+				</span>
+				{generatePageButton(<>&rsaquo;</>, "Next", pageIndex + 1)}
+				{generatePageButton(<>&raquo;</>, "Last", pageCount - 1)}
 			</div>
 		</div>
 	);

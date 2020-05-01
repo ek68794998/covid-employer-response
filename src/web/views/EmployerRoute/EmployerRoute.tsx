@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { RouteComponentProps } from "react-router-dom";
 
 import EmployerListPage from "../EmployerListPage/EmployerListPage";
-import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 import EmployerPage from "../EmployerPage/EmployerPage";
 
-import { EmployerRouteContext, EmployerRouteContextData } from "./EmployerRouteContext";
+import { DefaultContextData, EmployerRouteContext, EmployerRouteContextData } from "./EmployerRouteContext";
 
 interface Params {
 	id?: string;
@@ -14,12 +13,15 @@ interface Params {
 type Props = RouteComponentProps<Params>;
 
 const EmployerRoute: React.FC<Props> = (props: Props): React.ReactElement => {
-	const [ pageIndex, setPageIndex ] = useState(0);
-	const [ searchFilters, setSearchFilters ] = useState(new EmployerListSearchFilter());
+	const [ listViewMode, setListViewMode ] = useState(DefaultContextData.listViewMode);
+	const [ pageIndex, setPageIndex ] = useState(DefaultContextData.pageIndex);
+	const [ searchFilters, setSearchFilters ] = useState(DefaultContextData.searchFilters);
 
 	const contextData: EmployerRouteContextData = {
+		listViewMode,
 		pageIndex,
 		searchFilters,
+		setListViewMode,
 		setPageIndex,
 		setSearchFilters,
 	};
