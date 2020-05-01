@@ -9,6 +9,7 @@ import FooterMenu from "./views/HeaderFooter/FooterMenu";
 import HeaderMenu from "./views/HeaderFooter/HeaderMenu";
 import HomePage from "./views/HomePage/HomePage";
 import Overload from "./views/Overload/Overload";
+import SubmitPage from "./views/SubmitPage/SubmitPage";
 
 import "./App.scss";
 
@@ -29,6 +30,7 @@ const App: React.FC = (): React.ReactElement => {
 				<Route exact={true} path="/" component={HomePage} />
 				<Route path="/employers/:id?" component={EmployerRoute} />
 				<Route path="/about" component={AboutPage} />
+				<Route path="/submit" component={SubmitPage} />
 			</Switch>
 			<FooterMenu />
 		</>

@@ -20,6 +20,7 @@ describe("<AboutPage />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				about: ploc("about"),
+				aboutPageTitle: ploc("aboutPageTitle"),
 				aboutSectionHeaders: {
 					citationTypes: ploc("citationTypesHeader"),
 					claimProcessing: ploc("claimProcessingHeader"),
@@ -33,7 +34,7 @@ describe("<AboutPage />", () => {
 				aboutSectionParagraphs: {
 					citationTypes: `${ploc("citationTypesParagraph")}: {publication} / {statement} / {hearsay}; {publicationDescription} / {statementDescription} / {hearsayDescription}`,
 					claimProcessing: ploc("claimProcessingParagraph"),
-					contributing: `${ploc("contributingParagraph")}: {app} / {githubUrl}`,
+					contributing: `${ploc("contributingParagraph")}: {app}`,
 					employerRatings: ploc("employerRatingsParagraph"),
 					layoffsAndFurloughs: ploc("layoffsAndFurloughsParagraph"),
 					reportsAndClaims: ploc("reportsAndClaimsParagraph"),

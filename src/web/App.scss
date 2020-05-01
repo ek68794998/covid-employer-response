@@ -41,3 +41,24 @@ a {
 		color: $link-hover;
 	}
 }
+
+.App__BigButton {
+	background: $background;
+	border: 1px solid $header;
+	border-radius: 32px;
+	color: $header;
+	cursor: pointer;
+	display: block;
+	font-family: inherit;
+	font-size: 24px;
+	height: 64px;
+	margin: 30px auto;
+	outline: none;
+	padding: 16px 48px;
+	text-align: center;
+
+	&:hover {
+		background: $header;
+		color: $background;
+	}
+}

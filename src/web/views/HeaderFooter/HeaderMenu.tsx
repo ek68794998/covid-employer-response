@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
-import { ProjectIssueSubmissionUrl } from "../../../common/constants/UrlConstants";
 
 import { getIsProd, getIsTest } from "../../state/ducks/environment/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -37,15 +36,9 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/about">
 				{strings.about}
 			</NavLink>
-			<a
-				className="HeaderMenu__Link"
-				href={`${ProjectIssueSubmissionUrl}`}
-				onClick={closeHamburgerMenu}
-				rel="noopener noreferrer"
-				target="_blank"
-			>
+			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/submit">
 				{strings.submit}
-			</a>
+			</NavLink>
 		</>
 	);
 

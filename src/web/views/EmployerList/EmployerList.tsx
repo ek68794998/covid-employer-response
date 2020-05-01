@@ -71,7 +71,7 @@ const EmployerList: React.FC = (): React.ReactElement => {
 					))}
 			</div>
 			{visibleItemCount < filteredEmployers.length && (
-				<button className="EmployerList__LoadMore" onClick={(): void => setListChunksLoaded(listChunksLoaded + 1)}>
+				<button className="App__BigButton" onClick={(): void => setListChunksLoaded(listChunksLoaded + 1)}>
 					{format(
 						strings.loadMore,
 						{
