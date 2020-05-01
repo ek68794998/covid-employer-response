@@ -5,7 +5,7 @@ exports[`<HomePage /> renders without exploding 1`] = `
   id="home"
 >
   <section
-    className="HomePage__Primer"
+    className="HomePage__Row HomePage__Row--Alt HomePage__Primer"
   >
     <div>
       <div
@@ -19,68 +19,79 @@ exports[`<HomePage /> renders without exploding 1`] = `
       <h2
         className="HomePage__Subtitle--Loading"
       >
-        A free, open-data collection on
-        <a
-          href="/employers"
-          onClick={[Function]}
-        >
-          <strong>
-            0
-          </strong>
-           employers
-        </a>
-        (and growing) and how they've reacted to the COVID-19 crisis.
+        λô₥è§úβƭïƭℓèTèжƭ
       </h2>
     </div>
   </section>
   <section
-    className="HomePage__Sample"
+    className="HomePage__Row"
   >
-    <div
-      className="HomePage__SampleInfo"
-    >
-      <h3>
-        What can I learn?
-      </h3>
-      <p>
-        Each card shows you briefly 
-        <strong>
-          who
-        </strong>
-         the employer is, a 
-        <strong>
-          rating
-        </strong>
-         of their general response, and a 
-        <strong>
-          summary
-        </strong>
-         about the actions they've taken. You can also open up a more detailed view to find 
-        <strong>
-          cited news articles
-        </strong>
-        , or click various 
-        <strong>
-          links
-        </strong>
-         to go on Wikipedia, or see the employer's official website.
-      </p>
+    <div>
+      <div
+        className="HomePage__InfoBlock HomePage__TileBlock"
+      >
+        <h3>
+          λô₥è§á₥ƥℓèTïƭℓè
+        </h3>
+        <p>
+          λô₥è§á₥ƥℓèÐèƨçřïƥƭïôñ
+        </p>
+      </div>
+      <div
+        className="HomePage__Spacer"
+      />
+      <div
+        className="HomePage__SampleCard HomePage__TileBlock"
+      />
     </div>
-    <div
-      className="HomePage__SampleSpacer"
-    />
-    <div
-      className="HomePage__SampleCard"
-    />
   </section>
   <section
-    className="HomePage__Links"
+    className="HomePage__Row HomePage__Links"
   >
     <a
+      className="App__BigButton"
       href="/employers"
       onClick={[Function]}
     >
       λô₥è£ïƨƭ£ïñƙ
+    </a>
+  </section>
+  <section
+    className="HomePage__Row HomePage__Row--Alt HomePage__Row--Reverse HomePage__Submit"
+  >
+    <div>
+      <div
+        className="HomePage__TileBlock"
+      >
+        <img
+          src="/images/google-form.png"
+        />
+      </div>
+      <div
+        className="HomePage__Spacer"
+      />
+      <div
+        className="HomePage__InfoBlock HomePage__TileBlock"
+      >
+        <h3>
+          λô₥è§úβ₥ïƭTïƭℓè
+        </h3>
+        <p>
+          λô₥è§úβ₥ïƭÐèƨçřïƥƭïôñ
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    className="HomePage__Row HomePage__Row--Alt HomePage__Links"
+  >
+    <a
+      className="App__BigButton"
+      href="https://forms.gle/EEcp88X6sf1ocfuH8"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      λô₥èFôř₥£ïñƙ
     </a>
   </section>
 </main>

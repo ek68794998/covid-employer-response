@@ -20,6 +20,7 @@ describe("<AboutPage />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				about: ploc("about"),
+				aboutPageTitle: ploc("aboutPageTitle"),
 				aboutSectionHeaders: {
 					citationTypes: ploc("citationTypesHeader"),
 					claimProcessing: ploc("claimProcessingHeader"),

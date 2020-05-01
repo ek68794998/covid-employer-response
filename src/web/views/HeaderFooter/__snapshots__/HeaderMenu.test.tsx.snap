@@ -59,11 +59,10 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
       áβôúƭ
     </a>
     <a
+      aria-current={null}
       className="HeaderMenu__Link"
-      href="https://github.com/ekumlin/covid-employer-response/issues/new/choose"
+      href="/submit"
       onClick={[Function]}
-      rel="noopener noreferrer"
-      target="_blank"
     />
   </div>
 </header>

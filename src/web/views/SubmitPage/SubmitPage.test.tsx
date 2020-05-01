@@ -17,7 +17,26 @@ jest.mock(
 
 describe("<SubmitPage />", () => {
 	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({});
+		const store: Store<AppState, AnyAction> = configureStore({
+			strings: {
+				appTitle: ploc("appTitle"),
+				submit: ploc("submit"),
+				submitCodeGithub: {
+					description: ploc("submitCodeGithub.description"),
+					title: ploc("submitCodeGithub.title"),
+				},
+				submitDataForm: {
+					description: ploc("submitDataForm.description"),
+					title: ploc("submitDataForm.title"),
+				},
+				submitDataGithub: {
+					description: ploc("submitDataGithub.description"),
+					title: ploc("submitDataGithub.title"),
+				},
+				submitSubtitle: ploc("submitSubtitle"),
+				submitTitle: ploc("submitTitle"),
+			},
+		});
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

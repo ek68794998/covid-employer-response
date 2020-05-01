@@ -5,56 +5,63 @@ exports[`<AboutPage /> renders without exploding 1`] = `
   id="about"
 >
   <div
-    className="AboutPage__Content"
+    className="AboutPage__Container"
   >
-    <h2
-      id="what-is"
+    <div
+      className="AboutPage__Content"
     >
-      ωλáƭÌƨHèáδèř: áƥƥ
-    </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(ωλáƭÌƨÞářáϱřáƥλ: áƥƥ / áƥƥTïƭℓè / https://en.wikipedia.org/wiki/Coronavirus_disease_2019 / https://github.com/ekumlin/covid-employer-response / https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) /]
-    <h2
-      id="contributing"
-    >
-      çôñƭřïβúƭïñϱHèáδèř
-    </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(çôñƭřïβúƭïñϱÞářáϱřáƥλ: áƥƥ / https://github.com/ekumlin/covid-employer-response) /]
-    <h2
-      id="reports-and-claims"
-    >
-      řèƥôřƭƨÂñδÇℓáï₥ƨHèáδèř
-    </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(řèƥôřƭƨÂñδÇℓáï₥ƨÞářáϱřáƥλ) /]
-    <h2
-      id="claim-processing"
-    >
-      çℓáï₥ÞřôçèƨƨïñϱHèáδèř
-    </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(çℓáï₥ÞřôçèƨƨïñϱÞářáϱřáƥλ) /]
-    <h2
-      id="submit-claims"
-    >
-      ƨúβ₥ïƭÇℓáï₥ƨHèáδèř
-    </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(ƨúβ₥ïƭÇℓáï₥ƨÞářáϱřáƥλ: ƨúβ₥ïƭ) /]
-    <h2
-      id="citation-types"
-    >
-      çïƭáƭïôñT¥ƥèƨHèáδèř
-    </h2>
-    [component: ReactMarkdown className=(AboutPage__CitationTypes) linkTarget=(_blank) source=(çïƭáƭïôñT¥ƥèƨÞářáϱřáƥλ: ƥúβℓïçáƭïôñ / ƨƭáƭè₥èñƭ / λèářƨá¥; ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ / ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ / λèářƨá¥Ðèƨçřïƥƭïôñ) /]
-    <h2
-      id="employer-ratings"
-    >
-      è₥ƥℓô¥èřRáƭïñϱƨHèáδèř
-    </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(è₥ƥℓô¥èřRáƭïñϱƨÞářáϱřáƥλ) /]
-    <h2
-      id="layoffs-and-furloughs"
-    >
-      ℓá¥ôƒƒƨÂñδFúřℓôúϱλƨHèáδèř
-    </h2>
-    [component: ReactMarkdown linkTarget=(_blank) source=(ℓá¥ôƒƒƨÂñδFúřℓôúϱλƨÞářáϱřáƥλ) /]
+      <h1>
+        áβôúƭÞáϱèTïƭℓè
+      </h1>
+      <h2
+        id="what-is"
+      >
+        ωλáƭÌƨHèáδèř: áƥƥ
+      </h2>
+      [component: ReactMarkdown linkTarget=(_blank) source=(ωλáƭÌƨÞářáϱřáƥλ: áƥƥ / áƥƥTïƭℓè / https://en.wikipedia.org/wiki/Coronavirus_disease_2019 / https://github.com/ekumlin/covid-employer-response / https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) /]
+      <h2
+        id="contributing"
+      >
+        çôñƭřïβúƭïñϱHèáδèř
+      </h2>
+      [component: ReactMarkdown source=(çôñƭřïβúƭïñϱÞářáϱřáƥλ: áƥƥ) /]
+      <h2
+        id="reports-and-claims"
+      >
+        řèƥôřƭƨÂñδÇℓáï₥ƨHèáδèř
+      </h2>
+      [component: ReactMarkdown linkTarget=(_blank) source=(řèƥôřƭƨÂñδÇℓáï₥ƨÞářáϱřáƥλ) /]
+      <h2
+        id="claim-processing"
+      >
+        çℓáï₥ÞřôçèƨƨïñϱHèáδèř
+      </h2>
+      [component: ReactMarkdown linkTarget=(_blank) source=(çℓáï₥ÞřôçèƨƨïñϱÞářáϱřáƥλ) /]
+      <h2
+        id="submit-claims"
+      >
+        ƨúβ₥ïƭÇℓáï₥ƨHèáδèř
+      </h2>
+      [component: ReactMarkdown linkTarget=(_blank) source=(ƨúβ₥ïƭÇℓáï₥ƨÞářáϱřáƥλ: ƨúβ₥ïƭ) /]
+      <h2
+        id="citation-types"
+      >
+        çïƭáƭïôñT¥ƥèƨHèáδèř
+      </h2>
+      [component: ReactMarkdown className=(AboutPage__CitationTypes) linkTarget=(_blank) source=(çïƭáƭïôñT¥ƥèƨÞářáϱřáƥλ: ƥúβℓïçáƭïôñ / ƨƭáƭè₥èñƭ / λèářƨá¥; ƥúβℓïçáƭïôñÐèƨçřïƥƭïôñ / ƨƭáƭè₥èñƭÐèƨçřïƥƭïôñ / λèářƨá¥Ðèƨçřïƥƭïôñ) /]
+      <h2
+        id="employer-ratings"
+      >
+        è₥ƥℓô¥èřRáƭïñϱƨHèáδèř
+      </h2>
+      [component: ReactMarkdown linkTarget=(_blank) source=(è₥ƥℓô¥èřRáƭïñϱƨÞářáϱřáƥλ) /]
+      <h2
+        id="layoffs-and-furloughs"
+      >
+        ℓá¥ôƒƒƨÂñδFúřℓôúϱλƨHèáδèř
+      </h2>
+      [component: ReactMarkdown linkTarget=(_blank) source=(ℓá¥ôƒƒƨÂñδFúřℓôúϱλƨÞářáϱřáƥλ) /]
+    </div>
   </div>
 </main>
 `;

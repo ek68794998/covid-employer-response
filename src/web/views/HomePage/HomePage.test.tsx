@@ -18,7 +18,13 @@ describe("<HomePage />", () => {
 				appTitle: ploc("appTitle"),
 				appTitleShort: ploc("app"),
 				home: ploc("home"),
+				homeFormLink: ploc("homeFormLink"),
 				homeListLink: ploc("homeListLink"),
+				homeSampleDescription: ploc("homeSampleDescription"),
+				homeSampleTitle: ploc("homeSampleTitle"),
+				homeSubmitDescription: ploc("homeSubmitDescription"),
+				homeSubmitTitle: ploc("homeSubmitTitle"),
+				homeSubtitleText: ploc("homeSubtitleText"),
 			},
 		});
 

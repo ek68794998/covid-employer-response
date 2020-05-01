@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubmitPage /> renders without exploding 1`] = `
+<main
+  id="submit"
+>
+  <div
+    className="SubmitPage__Container"
+  >
+    <div
+      className="SubmitPage__Content"
+    >
+      <h1>
+        ƨúβ₥ïƭTïƭℓè
+      </h1>
+      [component: ReactMarkdown source=(ƨúβ₥ïƭ§úβƭïƭℓè) /]
+      <section
+        className="SubmitPage__Options"
+      >
+        <a
+          className="SubmitPage__Option SubmitPage__Option--DataForm"
+          href="https://forms.gle/EEcp88X6sf1ocfuH8"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <h2>
+            ƨúβ₥ïƭÐáƭáFôř₥.ƭïƭℓè
+          </h2>
+          [component: ReactMarkdown source=(ƨúβ₥ïƭÐáƭáFôř₥.δèƨçřïƥƭïôñ) /]
+          <div
+            className="SubmitPage__OptionIcon"
+          >
+            <img
+              src="/images/google-forms.svg"
+            />
+          </div>
+        </a>
+        <div
+          className="SubmitPage__Spacer"
+        />
+        <a
+          className="SubmitPage__Option SubmitPage__Option--DataGitHub"
+          href="https://github.com/ekumlin/covid-employer-response/issues/new/choose"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <h2>
+            ƨúβ₥ïƭÐáƭáGïƭλúβ.ƭïƭℓè
+          </h2>
+          [component: ReactMarkdown source=(ƨúβ₥ïƭÐáƭáGïƭλúβ.δèƨçřïƥƭïôñ) /]
+          <div
+            className="SubmitPage__OptionIcon"
+          >
+            <img
+              src="/images/github.svg"
+            />
+          </div>
+        </a>
+        <div
+          className="SubmitPage__Spacer"
+        />
+        <a
+          className="SubmitPage__Option SubmitPage__Option--CodeGitHub"
+          href="https://github.com/ekumlin/covid-employer-response"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <h2>
+            ƨúβ₥ïƭÇôδèGïƭλúβ.ƭïƭℓè
+          </h2>
+          [component: ReactMarkdown source=(ƨúβ₥ïƭÇôδèGïƭλúβ.δèƨçřïƥƭïôñ) /]
+          <div
+            className="SubmitPage__OptionIcon"
+          >
+            <img
+              src="/images/github.svg"
+            />
+          </div>
+        </a>
+      </section>
+    </div>
+  </div>
+</main>
+`;
