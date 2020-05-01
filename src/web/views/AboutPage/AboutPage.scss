@@ -4,11 +4,14 @@ main#about {
 	margin: 0 auto;
 	width: 100%;
 
+	.AboutPage__Container {
+		padding: 0 $page-padding;
+	}
+
 	.AboutPage__Content {
 		line-height: 180%;
 		margin: 0 auto;
-		max-width: 1440px;
-		padding: $page-padding;
+		max-width: $body-max-width;
 
 		.AboutPage__CitationTypes ul {
 			line-height: 220%;
@@ -50,7 +53,7 @@ main#about {
 }
 
 @media (max-width: $body-narrow-width) {
-	main#about .AboutPage__Content {
-		padding: $page-padding-narrow;
+	main#about .AboutPage__Container {
+		padding: 0 $page-padding-narrow;
 	}
 }

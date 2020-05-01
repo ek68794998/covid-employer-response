@@ -33,7 +33,7 @@ describe("<AboutPage />", () => {
 				aboutSectionParagraphs: {
 					citationTypes: `${ploc("citationTypesParagraph")}: {publication} / {statement} / {hearsay}; {publicationDescription} / {statementDescription} / {hearsayDescription}`,
 					claimProcessing: ploc("claimProcessingParagraph"),
-					contributing: `${ploc("contributingParagraph")}: {app} / {githubUrl}`,
+					contributing: `${ploc("contributingParagraph")}: {app}`,
 					employerRatings: ploc("employerRatingsParagraph"),
 					layoffsAndFurloughs: ploc("layoffsAndFurloughsParagraph"),
 					reportsAndClaims: ploc("reportsAndClaimsParagraph"),

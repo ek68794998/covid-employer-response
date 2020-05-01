@@ -1,0 +1,117 @@
+@import "../Colors.scss";
+@import "../Dimensions.scss";
+
+$body-vert-width: 990px;
+$card-padding: 16px;
+$github-color: #24292e;
+$google-forms-color: #673ab7;
+$icon-size: 32px;
+
+main#submit {
+	margin: 0 auto;
+	width: 100%;
+
+	.SubmitPage__Container {
+		padding: 0 $page-padding;
+	}
+
+	.SubmitPage__Content {
+		line-height: 180%;
+		margin: 0 auto $page-padding;
+		max-width: $body-max-width;
+	}
+
+	.SubmitPage__Options {
+		display: flex;
+
+		.SubmitPage__Option {
+			background: $background;
+			border: 1px solid $outline-color;
+			border-radius: $card-padding;
+			color: transparentize($color: $header, $amount: 0.3);
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			padding: $card-padding;
+			transition: 0.1s all;
+
+			&:hover {
+				box-shadow: 0px 3px 6px $card-shadow-color;
+				color: $background;
+				transform: translateY(-1px);
+
+				&.SubmitPage__Option--DataForm {
+					background: $google-forms-color;
+					border-color: $google-forms-color;
+				}
+
+				&.SubmitPage__Option--DataGitHub, &.SubmitPage__Option--CodeGitHub {
+					background: $github-color;
+					border-color: $github-color;
+				}
+			}
+
+			h2 {
+				margin: 0;
+			}
+
+			.SubmitPage__OptionIcon {
+				background: rgba(0, 0, 0, 0.4);
+				border-radius: ($icon-size / 2 + $card-padding);
+				line-height: 0;
+				margin: 0 auto;
+				padding: ($card-padding / 2);
+
+				img {
+					height: $icon-size;
+					width: $icon-size;
+				}
+			}
+		}
+
+		.SubmitPage__Spacer {
+			height: 24px;
+			width: 24px;
+		}
+	}
+}
+
+@media (max-width: $body-vert-width) {
+	main#submit {
+		.SubmitPage__Content {
+			margin-bottom: $page-padding-narrow;
+		}
+
+		.SubmitPage__Options {
+			flex-direction: column;
+		}
+	}
+}
+
+@media (max-width: $body-narrow-width) {
+	main#submit {
+		.SubmitPage__Container {
+			padding: 0 $page-padding-narrow;
+		}
+	}
+}
+
+@media (any-hover: none) {
+	main#submit {
+		.SubmitPage__Options {
+			.SubmitPage__Option {
+				color: $background;
+
+				&.SubmitPage__Option--DataForm {
+					background: $google-forms-color;
+					border-color: $google-forms-color;
+				}
+
+				&.SubmitPage__Option--DataGitHub, &.SubmitPage__Option--CodeGitHub {
+					background: $github-color;
+					border-color: $github-color;
+				}
+			}
+		}
+	}
+}

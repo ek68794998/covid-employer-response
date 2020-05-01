@@ -3,7 +3,6 @@
 
 $body-color: $outline-color;
 $border-radius: 12px;
-$card-shadow-color: rgba(0, 0, 0, 0.2);
 $icon-size: 32px;
 $padding-interior: 12px;
 $padding-sides: 16px;
@@ -14,9 +13,9 @@ $scale-base: 16px;
 	border: 1px solid $body-color;
 	border-radius: $border-radius;
 	display: flex;
-	width: 100%;
-	transition: 0.1s all;
 	padding: 0 $padding-sides;
+	transition: 0.1s all;
+	width: 100%;
 }
 
 .EmployerListItem__Container--NotFound {
