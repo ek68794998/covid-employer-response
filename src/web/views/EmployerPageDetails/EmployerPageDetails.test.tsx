@@ -56,6 +56,18 @@ describe("<EmployerPageDetails />", () => {
 		...preloaded,
 	});
 
+	const dateToLocaleStringPrototype: any = Date.prototype.toLocaleDateString;
+
+	afterEach(() => {
+		Date.prototype.toLocaleDateString = dateToLocaleStringPrototype;
+	});
+
+	beforeEach(() => {
+		Date.prototype.toLocaleDateString = function(): string {
+			return `${this.getFullYear()}-${this.getMonth() + 1}-${this.getDate()}`;
+		};
+	});
+
 	test("renders without exploding", () => {
 		const e: EmployerRecord = new EmployerRecord();
 
