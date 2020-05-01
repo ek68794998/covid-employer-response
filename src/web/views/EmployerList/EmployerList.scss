@@ -14,26 +14,6 @@ $body-3column-width: ($card-min-width * 3 + 120px);
 	text-align: center;
 }
 
-.EmployerList__LoadMore {
-	background: $background;
-	border: 1px solid $header;
-	border-radius: 32px;
-	color: $header;
-	cursor: pointer;
-	display: block;
-	font-family: inherit;
-	font-size: 24px;
-	height: 64px;
-	margin: 30px auto;
-	outline: none;
-	padding: 16px 48px;
-
-	&:hover {
-		background: $header;
-		color: $background;
-	}
-}
-
 .EmployerList__Grid {
 	display: grid;
 	grid-auto-rows: max-content;

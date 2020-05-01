@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
+import { ProjectIssueSubmissionUrl, SubmissionFormUrl } from "../../../common/constants/UrlConstants";
 
 import { getEmployerIds } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
@@ -33,40 +35,63 @@ const HomePage: React.FC = (): React.ReactElement => {
 			<Helmet>
 				<title>{strings.home} | {strings.appTitle}</title>
 			</Helmet>
-			<section className="HomePage__Primer">
+			<section className="HomePage__Row HomePage__Row--Alt HomePage__Primer">
 				<div>
 					<div className="HomePage__PreTitle">Welcome to</div>
 					<h1>
 						{strings.appTitleShort}
 					</h1>
 					<h2 className={`HomePage__Subtitle--${employerCount > 0 ? "Loaded" : "Loading"}`}>
-						A free, open-data collection on
-						<Link to="/employers">
-							<strong>{employerCount.toLocaleString()}</strong> employers
-						</Link>
-						(and growing) and how they've reacted to the COVID-19 crisis.
+						<ReactMarkdown
+							allowedTypes={[ "text", "strong", "emphasis", "link" ]}
+							source={format(strings.homeSubtitleText, { count: employerCount.toLocaleString() })}
+							unwrapDisallowed={true}
+						/>
 					</h2>
 				</div>
 			</section>
-			<section className="HomePage__Sample">
-				<div className="HomePage__SampleInfo">
-					<h3>What can I learn?</h3>
-					<p>
-						Each card shows you briefly <strong>who</strong> the employer is, a <strong>rating</strong> of
-						their general response, and a <strong>summary</strong> about the actions they've taken. You
-						can also open up a more detailed view to find <strong>cited news articles</strong>, or click
-						various <strong>links</strong> to go on Wikipedia, or see the employer's official website.
-					</p>
-				</div>
-				<div className="HomePage__SampleSpacer" />
-				<div className="HomePage__SampleCard">
-					{randomEmployerId && (
-						<EmployerListItem employerId={randomEmployerId} showDetails={true} />
-					)}
+			<section className="HomePage__Row">
+				<div>
+					<div className="HomePage__InfoBlock HomePage__TileBlock">
+						<h3>{strings.homeSampleTitle}</h3>
+						<ReactMarkdown source={strings.homeSampleDescription} />
+					</div>
+					<div className="HomePage__Spacer" />
+					<div className="HomePage__SampleCard HomePage__TileBlock">
+						{randomEmployerId && (
+							<EmployerListItem employerId={randomEmployerId} showDetails={true} />
+						)}
+					</div>
 				</div>
 			</section>
-			<section className="HomePage__Links">
-				<Link to="/employers">{strings.homeListLink}</Link>
+			<section className="HomePage__Row HomePage__Links">
+				<Link className="App__BigButton" to="/employers">{strings.homeListLink}</Link>
+			</section>
+			<section className="HomePage__Row HomePage__Row--Alt HomePage__Row--Reverse HomePage__Submit">
+				<div>
+					<div className="HomePage__TileBlock">
+						<img src={"/images/google-form.png"} />
+					</div>
+					<div className="HomePage__Spacer" />
+					<div className="HomePage__InfoBlock HomePage__TileBlock">
+						<h3>{strings.homeSubmitTitle}</h3>
+						<ReactMarkdown
+							source={(
+								format(strings.homeSubmitDescription, { githubIssueUrl: ProjectIssueSubmissionUrl })
+							)}
+						/>
+					</div>
+				</div>
+			</section>
+			<section className="HomePage__Row HomePage__Row--Alt HomePage__Links">
+				<a
+					className="App__BigButton"
+					href={SubmissionFormUrl}
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					{strings.homeFormLink}
+				</a>
 			</section>
 			<BackToTopButton />
 		</main>

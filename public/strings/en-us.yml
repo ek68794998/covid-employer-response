@@ -312,7 +312,13 @@ filters:
   locationNational: National
   locationInternational: Multinational
 home: Home
+homeFormLink: Open the form!
 homeListLink: Take me to the list!
+homeSampleDescription: Each card shows you briefly **who** the employer is, a **rating** of their general response, and a **summary** about the actions they've taken. You can also open up a more detailed view to find **cited news articles**, or click various **links** to go on Wikipedia, or see the employer's official website.
+homeSampleTitle: What can I learn?
+homeSubmitDescription: If you have new information, please submit it either through our [GitHub]({githubIssueUrl}) page, or by clicking below to submit a Google Form. Learn more about submissions [here](/submit).
+homeSubmitTitle: Can I add new info?
+homeSubtitleText: A free, open-data collection on [{count} employers](/employers) (and growing) and how they've reacted to the COVID-19 crisis.
 industries:
   advertising: Advertising
   agriculture: Agriculture
@@ -392,3 +398,7 @@ ratingLabels:
 readMore: Read more
 search: Search
 submit: Submit
+submitAltLink: Click here to submit through GitHub instead.
+submitLink: Jump to the form!
+submitSubtitle: Absolutely! {appTitle} is completely open-data. Just follow the link to the side to head to out form and submit new information.
+submitTitle: Can I submit new information?

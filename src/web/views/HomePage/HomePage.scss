@@ -1,7 +1,7 @@
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
-$body-vert-width: 920px;
+$body-vert-width: 990px;
 $card-area-padding: 16px;
 $cell-width: ($body-min-width - $card-area-padding * 2);
 
@@ -11,15 +11,63 @@ main#home {
 	margin: 0 auto;
 	width: 100%;
 
-	> section {
+	.HomePage__Row {
 		padding: 0 $page-padding;
 
-		&.HomePage__Primer {
+		&.HomePage__Row--Alt {
 			background: $header;
 			color: $background;
+		}
+
+		> div {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: ($cell-width * 2 + $card-area-padding * 2 + $page-padding);
+			padding: $page-padding $card-area-padding $card-area-padding;
+			width: 100%;
+		}
+
+		div.HomePage__InfoBlock {
+			align-self: center;
+
+			h3 {
+				font-size: 32px;
+				margin: 16px 0;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 200%;
+				padding: 0;
+			}
+		}
+
+		div.HomePage__Spacer {
+			width: $page-padding;
+		}
+
+		div.HomePage__TileBlock {
+			max-width: $cell-width;
+			width: 50%;
+		}
+
+		div.HomePage__HeroBlock {
+			width: 100%;
+		}
+
+		div.HomePage__SampleCard {
+			max-width: $cell-width;
 
 			> div {
-				margin: 0 auto;
+				height: 100%;
+			}
+		}
+
+		&.HomePage__Primer {
+			> div {
+				flex-direction: column;
 				max-width: $body-max-width;
 				padding: 0 $page-padding $page-padding;
 				text-align: center;
@@ -49,76 +97,39 @@ main#home {
 						transition: 2s opacity;
 						transition-delay: 0.5s;
 					}
-	
-					a {
-						margin: 0 6px;
-					}
 				}
 			}
 		}
 
-		&.HomePage__Sample {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			margin: 0 auto;
-			max-width: ($cell-width * 2 + $card-area-padding * 2 + $page-padding);
-			padding: $page-padding $card-area-padding !important;
-			width: 100%;
+		&.HomePage__Submit > div {
+			align-items: center;
 
-			> div.HomePage__SampleInfo {
-				align-self: center;
-				max-width: $cell-width;
-				width: 50%;
-
-				h3 {
-					font-size: 32px;
-					margin: 16px 0;
-				}
-
-				p {
-					font-size: 16px;
-					line-height: 200%;
-					padding: 0;
-				}
-			}
-
-			> div.HomePage__SampleSpacer {
-				width: $page-padding;
-			}
-
-			> div.HomePage__SampleCard {
-				max-width: $cell-width;
-				width: 50%;
-
-				> div {
-					height: 100%;
-				}
+			img {
+				min-width: 100%;
 			}
 		}
+	}
 
-		&.HomePage__Links {
+	.HomePage__Links {
+		display: flex;
+		flex: 1;
+		justify-items: space-between;
+		text-align: center;
+		width: 100%;
+
+		.App__BigButton {
+			margin: ($page-padding / 2) auto $page-padding;
+		}
+
+		&.HomePage__Row--Alt .App__BigButton {
 			background: $header;
-			flex: 1;
-			text-align: center;
-
-			a {
-				background: $header;
-				border: 1px solid $outline-color;
-				border-radius: 32px;
-				color: $outline-color;
-				cursor: pointer;
-				display: inline-block;
-				font-family: inherit;
-				font-size: 24px;
-				height: 64px;
-				margin: 30px auto;
-				padding: 16px 48px;
-
-				&:hover {
-					background: $outline-color;
-					color: $header;
-				}
+			border: 1px solid $outline-color;
+			color: $outline-color;
+			display: inline-block;
+		
+			&:hover {
+				background: $outline-color;
+				color: $header;
 			}
 		}
 	}
@@ -126,17 +137,24 @@ main#home {
 
 @media (max-width: $body-vert-width) {
 	main#home {
-		> section {
-			&.HomePage__Sample {
-				> div.HomePage__SampleInfo, > div.HomePage__SampleCard {
-					flex: 1;
-				}
+		.HomePage__Row {
+			> div {
+				flex-direction: column;
+			}
 
-				> div.HomePage__SampleSpacer {
-					flex-basis: 100%;
-					height: $page-padding-narrow;
-					width: 0;
-				}
+			&.HomePage__Row--Reverse > div {
+				flex-direction: column-reverse;
+			}
+
+			div.HomePage__TileBlock {
+				flex: 1;
+				margin: 0 auto;
+				width: 100%;
+			}
+
+			div.HomePage__Spacer {
+				height: $page-padding-narrow;
+				width: 0;
 			}
 		}
 	}
@@ -144,15 +162,39 @@ main#home {
 
 @media (max-width: $body-narrow-width) {
 	main#home {
-		> section {
-			padding: 0 $page-padding-narrow !important;
+		.HomePage__Row {
+			padding: 0 $page-padding-narrow;
+
+			> div {
+				padding: $page-padding-narrow $card-area-padding $card-area-padding;
+
+				h3 {
+					margin-top: 0 !important;
+				}
+			}
+
+			div.HomePage__Spacer {
+				height: 0;
+			}
 
 			&.HomePage__Primer > div {
-				padding: 0 0 $page-padding !important;
+				padding: 0 0 $page-padding-narrow;
 
 				h1 {
 					font-size: 64px;
 				}
+			}
+
+			&.HomePage__Submit > div {
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		.HomePage__Links {
+			.App__BigButton {
+				margin: ($page-padding-narrow / 2) auto $page-padding-narrow;
 			}
 		}
 	}
