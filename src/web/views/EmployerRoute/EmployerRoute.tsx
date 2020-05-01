@@ -14,13 +14,13 @@ interface Params {
 type Props = RouteComponentProps<Params>;
 
 const EmployerRoute: React.FC<Props> = (props: Props): React.ReactElement => {
-	const [ listChunksLoaded, setListChunksLoaded ] = useState(1);
+	const [ pageIndex, setPageIndex ] = useState(0);
 	const [ searchFilters, setSearchFilters ] = useState(new EmployerListSearchFilter());
 
 	const contextData: EmployerRouteContextData = {
-		listChunksLoaded,
+		pageIndex,
 		searchFilters,
-		setListChunksLoaded,
+		setPageIndex,
 		setSearchFilters,
 	};
 

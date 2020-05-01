@@ -11,18 +11,18 @@ const getDefaultContextDataSetter = <T>(): ContextDataSetter<T> =>
 	(value: T): void => (((): void => { /* Noop. */ }) as any)(value);
 
 export const DefaultContextData: EmployerRouteContextData = {
-	listChunksLoaded: 1,
+	pageIndex: 1,
 	searchFilters: new EmployerListSearchFilter(),
-	setListChunksLoaded: getDefaultContextDataSetter<number>(),
+	setPageIndex: getDefaultContextDataSetter<number>(),
 	setSearchFilters: getDefaultContextDataSetter<EmployerListSearchFilter>(),
 };
 
 export interface EmployerRouteContextData {
-	listChunksLoaded: number;
+	pageIndex: number;
 
 	searchFilters: EmployerListSearchFilter;
 
-	setListChunksLoaded: ContextDataSetter<number>;
+	setPageIndex: ContextDataSetter<number>;
 
 	setSearchFilters: ContextDataSetter<EmployerListSearchFilter>;
 }

@@ -27,7 +27,7 @@ aboutSectionParagraphs:
   layoffsAndFurloughs: |
     For the purposes of this site, a **furlough** indicates that affected employees are not working, but are still marked as employed by the company. They may receive partial pay or benefits, and are generally expected to be rehired in the future. A **layoff** indicates that affected employees have been terminated from their jobs entirely. A more complete description is available [on Dictionary.com](https://www.dictionary.com/e/furlough-vs-layoff/).
 
-    Some dialects of English use the term "temporary layoff" to describe a furlough, but to avoid confusion, we avoid that term. As a result, information we cite from some sources may be erroneously written as "layoff" when they are instead referring to a furlough. Should you ever run into a situation like this, please submit a correction!
+    Some dialects of English use the term "temporary layoff" to describe a furlough, but to avoid confusion, we avoid that term. As a result, information we cite from some sources may be erroneously written as "layoff" when they are instead referring to a furlough. Should you ever run into a situation like this, please [submit a correction](/submit)!
 appTitle: Coronavirus Employer Response Tracker
 appTitleShort: Cempres
 backToTop: Top of page
@@ -319,7 +319,7 @@ homeFormLink: Open the form!
 homeListLink: Take me to the list!
 homeSampleDescription: Each card shows you briefly **who** the employer is, a **rating** of their general response, and a **summary** about the actions they've taken. You can also open up a more detailed view to find **cited news articles**, or click various **links** to go on Wikipedia, or see the employer's official website.
 homeSampleTitle: What can I learn?
-homeSubmitDescription: The easiest way to submit new information is by following the link below to our submission form. To learn more about this or other ways to contribute, please check out [our submissions page](/submit).
+homeSubmitDescription: Yes! The easiest way to submit new information is by following the link below to our submission form. To learn more about this or other ways to contribute, please check out [our submissions page](/submit).
 homeSubmitTitle: Can I add new info?
 homeSubtitleText: A free, open-data collection on [{count} employers](/employers) (and growing) and how they've reacted to the COVID-19 crisis.
 industries:
@@ -388,7 +388,6 @@ linkTypes:
   parent: Parent company
   related: Related
 loading: Loading...
-loadMore: Load {count} more
 more: "{number} more"
 noResults: No results.
 noSources: Word of mouth; no citation

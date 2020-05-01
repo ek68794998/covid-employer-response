@@ -54,11 +54,18 @@ a {
 	height: 64px;
 	margin: 30px auto;
 	outline: none;
-	padding: 16px 48px;
+	padding: 0 48px;
 	text-align: center;
 
 	&:hover {
 		background: $header;
 		color: $background;
+	}
+
+	&:disabled {
+		background: $background !important;
+		border-color: transparent;
+		color: transparentize($color: $header, $amount: 0.5);
+		cursor: initial;
 	}
 }

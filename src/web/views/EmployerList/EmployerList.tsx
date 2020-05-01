@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
-import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
+import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
@@ -12,9 +12,9 @@ import { EmployerRouteContext, EmployerRouteContextData } from "../EmployerRoute
 
 import "./EmployerList.scss";
 
-const loadChunkSize: number = 3;
-const loadMoreRowCount: number = 4;
-const loadMoreCount: number = loadChunkSize * loadMoreRowCount;
+const itemChunkSize: number = 3;
+const itemRowCount: number = 4;
+const pageSize: number = itemChunkSize * itemRowCount;
 
 const EmployerList: React.FC = (): React.ReactElement => {
 	const strings: LocalizedStrings = useSelector(getStrings);
@@ -22,13 +22,13 @@ const EmployerList: React.FC = (): React.ReactElement => {
 
 	const listContext: EmployerRouteContextData = useContext(EmployerRouteContext);
 
-	const [ listChunksLoaded, setListChunksLoaded ] = useState(listContext.listChunksLoaded);
+	const [ pageIndex, setPageIndex ] = useState(listContext.pageIndex);
 
 	useEffect(
 		(): void => {
-			listContext.setListChunksLoaded(listChunksLoaded);
+			listContext.setPageIndex(pageIndex);
 		},
-		[ listChunksLoaded ]);
+		[ pageIndex ]);
 
 	if (!employersList) {
 		return (
@@ -58,27 +58,50 @@ const EmployerList: React.FC = (): React.ReactElement => {
 		);
 	}
 
-	const visibleItemCount: number = listChunksLoaded * loadMoreCount;
+	const startIndex: number = pageIndex * pageSize;
+	const endIndex: number = startIndex + pageSize;
+
+	const pageCount: number = Math.ceil(filteredEmployers.length / pageSize);
+	const pageNumbers: (number | null)[] = [];
+
+	let showedPreviousPage: boolean = false;
+
+	for (let i: number = 0; i < pageCount; i++) {
+		const shouldShowPage: boolean =
+			i <= 1
+			|| i >= pageCount - 2
+			|| (i >= pageIndex - 1 && i <= pageIndex + 1);
+
+		if (shouldShowPage) {
+			pageNumbers.push(i + 1);
+
+			showedPreviousPage = true;
+		} else {
+			if (showedPreviousPage) {
+				pageNumbers.push(null);
+			}
+
+			showedPreviousPage = false;
+		}
+	}
 
 	return (
 		<div className="EmployerList__Container">
 			<div className="EmployerList__Grid">
-				{filteredEmployers.slice(0, visibleItemCount).map(
+				{filteredEmployers.slice(startIndex, endIndex).map(
 					(e: EmployerRecordMetadata, i: number): JSX.Element => (
 						<div className="EmployerList__Item" key={`${i}-${e.id}`}>
 							<EmployerListItem employerId={e.id} showDetails={true} />
 						</div>
 					))}
 			</div>
-			{visibleItemCount < filteredEmployers.length && (
-				<button className="App__BigButton" onClick={(): void => setListChunksLoaded(listChunksLoaded + 1)}>
-					{format(
-						strings.loadMore,
-						{
-							count: Math.min(filteredEmployers.length - visibleItemCount, loadMoreCount),
-						})}
-				</button>
-			)}
+			<div className="EmployerList__Pages">
+				{pageNumbers.map((v: number | null, i: number): JSX.Element => (
+					<button key={i} className="App__BigButton" disabled={!v} onClick={(): void => setPageIndex((v || 0) - 1)}>
+						{v || "..."}
+					</button>
+				))}
+			</div>
 		</div>
 	);
 };

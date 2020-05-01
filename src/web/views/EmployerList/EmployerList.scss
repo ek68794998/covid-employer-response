@@ -25,6 +25,18 @@ $body-3column-width: ($card-min-width * 3 + 120px);
 	height: 100%;
 }
 
+.EmployerList__Pages {
+	margin: 30px 12px 12px;
+	text-align: center;
+
+	.App__BigButton {
+		display: inline-block;
+		margin: 0 6px;
+		padding: 0;
+		width: 64px;
+	}
+}
+
 @media (max-width: $body-2column-width) {
 	.EmployerList__Grid {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
