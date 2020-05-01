@@ -64,7 +64,7 @@ describe("<EmployerPageDetails />", () => {
 
 	beforeEach(() => {
 		Date.prototype.toLocaleDateString = function(): string {
-			return `${this.getFullYear()}-${this.getMonth() + 1}-${this.getDate()}`;
+			return `${this.getUTCFullYear()}-${this.getUTCMonth() + 1}-${this.getUTCDate()}`;
 		};
 	});
 
@@ -122,6 +122,8 @@ describe("<EmployerPageDetails />", () => {
 			});
 
 		e.lastUpdated = EmployerRecord.getLastUpdateDate(e).toISOString();
+
+		console.log(e.lastUpdated);
 
 		const store: Store<AppState, AnyAction> = createConfigStore({
 			employers: {

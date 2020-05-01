@@ -41,7 +41,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
     <div
       className="EmployerPageDetails__LastUpdated"
     >
-      è₥ƥℓô¥èřÛƥδáƭèδÐáƭè: 2020-5-31
+      è₥ƥℓô¥èřÛƥδáƭèδÐáƭè: 2020-6-1
     </div>
   </div>
   [component: EmployerCitationList citations=([object Object],[object Object],[object Object]) /]
