@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
-import { RouteProps } from "react-router-dom";
+import { RouteProps, Link } from "react-router-dom";
 
 import { Citation } from "../../../common/Citation";
 import { DesignHelpers } from "../../../common/DesignHelpers";
@@ -222,6 +222,16 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 								"home",
 								<>{strings.detailLabels.officialWebsite}</>,
 								employer.officialWebsite,
+							)}
+							{getProfileRow(
+								strings.detailDescriptions.officialWebsite,
+								"flag",
+								<Link className="EmployerPageDetails__SubmitLink" to="/submit">
+									{format(
+										strings.employerSubmitChange,
+										{ employer: employer.shortName || employer.name },
+									)}
+								</Link>,
 							)}
 						</tbody>
 					</table>

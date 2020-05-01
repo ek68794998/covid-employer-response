@@ -303,6 +303,7 @@ detailLabels:
   wikipedia: "{page} on Wikipedia"
 employeeDelta: "{change} since {date}"
 employerList: Employers
+employerSubmitChange: Submit update for {employer}
 employerUpdatedDate: Last updated {date}
 filter: Filters
 filters:
