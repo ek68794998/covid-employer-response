@@ -19,7 +19,6 @@ const EmployerListSearch: React.FC = (): React.ReactElement => {
 
 	const listContext: EmployerRouteContextData = useContext(EmployerRouteContext);
 
-	const [ listViewMode, setListViewMode ] = useState(listContext.listViewMode);
 	const [ searchFilters, setSearchFilters ] = useState(listContext.searchFilters);
 	const [ isFiltersetVisible, setIsFiltersetVisible ] = useState(false);
 
@@ -28,12 +27,6 @@ const EmployerListSearch: React.FC = (): React.ReactElement => {
 			listContext.setSearchFilters(searchFilters);
 		},
 		[ searchFilters ]);
-
-	useEffect(
-		(): void => {
-			listContext.setListViewMode(listViewMode);
-		},
-		[ listViewMode ]);
 
 	const updateSearchFilters = (updates?: Partial<EmployerListSearchFilter>): void => {
 		setSearchFilters({ ...searchFilters, ...updates });
@@ -72,12 +65,12 @@ const EmployerListSearch: React.FC = (): React.ReactElement => {
 			</div>
 			<div className="EmployerListSearch__ViewTypeContainer">
 				<button
-					onClick={(): void => setListViewMode("rows")}
+					onClick={(): void => listContext.setListViewMode("rows")}
 				>
 					{DesignHelpers.materialIcon("view_headline")}
 				</button>
 				<button
-					onClick={(): void => setListViewMode("cards")}
+					onClick={(): void => listContext.setListViewMode("cards")}
 				>
 					{DesignHelpers.materialIcon("view_module")}
 				</button>
