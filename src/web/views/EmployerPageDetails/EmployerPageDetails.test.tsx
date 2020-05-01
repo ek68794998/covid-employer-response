@@ -46,6 +46,7 @@ describe("<EmployerPageDetails />", () => {
 				wikipedia: ploc("wikipediaLabel"),
 			},
 			employeeDelta: `${ploc("employeeDelta")}: {change} / {date}`,
+			employerSubmitChange: `${ploc("employerSubmitChange")}: {employer}`,
 			employerUpdatedDate: `${ploc("employerUpdatedDate")}: {date}`,
 			ratingLabels: {
 				fair: ploc("fair"),

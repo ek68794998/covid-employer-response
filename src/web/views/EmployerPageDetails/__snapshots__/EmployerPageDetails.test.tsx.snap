@@ -118,6 +118,29 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
               </span>
             </td>
           </tr>
+          <tr>
+            <td
+              className="EmployerPageDetails__ProfileLabel"
+              title="ôƒƒïçïáℓWèβƨïƭè"
+            >
+              <i
+                className="material-icons"
+              >
+                flag
+              </i>
+            </td>
+            <td
+              className="EmployerPageDetails__ProfileValue"
+            >
+              <a
+                className="EmployerPageDetails__SubmitLink"
+                href="/submit"
+                onClick={[Function]}
+              >
+                è₥ƥℓô¥èř§úβ₥ïƭÇλáñϱè: Contoso
+              </a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -181,6 +204,29 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
               className="EmployerPageDetails__ProfileValue"
             >
               
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="EmployerPageDetails__ProfileLabel"
+              title="ôƒƒïçïáℓWèβƨïƭè"
+            >
+              <i
+                className="material-icons"
+              >
+                flag
+              </i>
+            </td>
+            <td
+              className="EmployerPageDetails__ProfileValue"
+            >
+              <a
+                className="EmployerPageDetails__SubmitLink"
+                href="/submit"
+                onClick={[Function]}
+              >
+                è₥ƥℓô¥èř§úβ₥ïƭÇλáñϱè: employer
+              </a>
             </td>
           </tr>
         </tbody>

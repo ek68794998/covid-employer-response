@@ -83,6 +83,10 @@ $padding-interior: 12px;
 	table-layout: fixed;
 	width: 100%;
 
+	.material-icons {
+		user-select: none;
+	}
+
 	td {
 		vertical-align: top;
 
@@ -135,6 +139,10 @@ $padding-interior: 12px;
 		&.EmployerPageDetails__Delta--Negative {
 			color: $indicator-negative;
 		}
+	}
+
+	.EmployerPageDetails__SubmitLink {
+		font-weight: 700;
 	}
 }
 
