@@ -124,8 +124,6 @@ describe("<EmployerPageDetails />", () => {
 
 		e.lastUpdated = EmployerRecord.getLastUpdateDate(e).toISOString();
 
-		console.log(e.lastUpdated);
-
 		const store: Store<AppState, AnyAction> = createConfigStore({
 			employers: {
 				itemsComplete: {

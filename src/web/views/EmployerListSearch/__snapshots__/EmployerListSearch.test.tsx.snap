@@ -5,39 +5,65 @@ exports[`<EmployerListSearch /> opens 'filters' dropdown 1`] = `
   className="EmployerListSearch__Container"
 >
   <div
-    className="EmployerListSearch__InputContainer"
+    className="EmployerListSearch__SearchContainer"
   >
     <div
-      className="EmployerListSearch__Input"
+      className="EmployerListSearch__InputContainer"
     >
-      <i
-        className="material-icons"
+      <div
+        className="EmployerListSearch__Input"
       >
-        search
-      </i>
-      <input
-        defaultValue=""
-        onInput={[Function]}
-        placeholder="ƨèářçλ"
-        type="search"
-      />
+        <i
+          className="material-icons"
+        >
+          search
+        </i>
+        <input
+          defaultValue=""
+          onInput={[Function]}
+          placeholder="ƨèářçλ"
+          type="search"
+        />
+      </div>
+      <button
+        className="EmployerListSearch__ExpandFilters EmployerListSearch__ExpandFilters--Open"
+        onClick={[Function]}
+      >
+        <i
+          className="material-icons"
+        >
+          filter_list
+        </i>
+      </button>
     </div>
+    <div
+      className="EmployerListSearch__FilterContainer"
+    >
+      [component: InternationalTypeFilterControl filter=([object Object]) onUpdateFilter=([Function]) /]
+      [component: EmployeeCountFilterControl filter=([object Object]) onUpdateFilter=([Function]) /]
+    </div>
+  </div>
+  <div
+    className="EmployerListSearch__ViewTypeContainer"
+  >
     <button
-      className="EmployerListSearch__ExpandFilters EmployerListSearch__ExpandFilters--Open"
       onClick={[Function]}
     >
       <i
         className="material-icons"
       >
-        filter_list
+        view_headline
       </i>
     </button>
-  </div>
-  <div
-    className="EmployerListSearch__FilterContainer"
-  >
-    [component: InternationalTypeFilterControl filter=([object Object]) onUpdateFilter=([Function]) /]
-    [component: EmployeeCountFilterControl filter=([object Object]) onUpdateFilter=([Function]) /]
+    <button
+      onClick={[Function]}
+    >
+      <i
+        className="material-icons"
+      >
+        view_module
+      </i>
+    </button>
   </div>
 </div>
 `;
@@ -47,31 +73,57 @@ exports[`<EmployerListSearch /> renders without exploding 1`] = `
   className="EmployerListSearch__Container"
 >
   <div
-    className="EmployerListSearch__InputContainer"
+    className="EmployerListSearch__SearchContainer"
   >
     <div
-      className="EmployerListSearch__Input"
+      className="EmployerListSearch__InputContainer"
     >
-      <i
-        className="material-icons"
+      <div
+        className="EmployerListSearch__Input"
       >
-        search
-      </i>
-      <input
-        defaultValue=""
-        onInput={[Function]}
-        placeholder="ƨèářçλ"
-        type="search"
-      />
+        <i
+          className="material-icons"
+        >
+          search
+        </i>
+        <input
+          defaultValue=""
+          onInput={[Function]}
+          placeholder="ƨèářçλ"
+          type="search"
+        />
+      </div>
+      <button
+        className="EmployerListSearch__ExpandFilters EmployerListSearch__ExpandFilters--Closed"
+        onClick={[Function]}
+      >
+        <i
+          className="material-icons"
+        >
+          filter_list
+        </i>
+      </button>
     </div>
+  </div>
+  <div
+    className="EmployerListSearch__ViewTypeContainer"
+  >
     <button
-      className="EmployerListSearch__ExpandFilters EmployerListSearch__ExpandFilters--Closed"
       onClick={[Function]}
     >
       <i
         className="material-icons"
       >
-        filter_list
+        view_headline
+      </i>
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      <i
+        className="material-icons"
+      >
+        view_module
       </i>
     </button>
   </div>
