@@ -121,6 +121,17 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		currentEmployees = employer.employeesBefore || employer.employeesAfter;
 	}
 
+	let updateDate: Date | null = null;
+
+	if (employer.lastUpdated) {
+		const updateCutoffDate: Date = new Date("2020-01-01T12:00:00Z");
+		const actualUpdateDate: Date = new Date(employer.lastUpdated);
+
+		if (actualUpdateDate >= updateCutoffDate) {
+			updateDate = actualUpdateDate;
+		}
+	}
+
 	return (
 		<div className="EmployerPageDetails__Container">
 			<div className="EmployerPageDetails__Header">
@@ -135,6 +146,11 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 			</div>
 			<div className="EmployerPageDetails__Summary">
 				<ReactMarkdown source={employer.summary} />
+				{updateDate && (
+					<div className="EmployerPageDetails__LastUpdated">
+						{format(strings.employerUpdatedDate, { date: updateDate.toLocaleDateString() })}
+					</div>
+				)}
 			</div>
 
 			<EmployerCitationList citations={employer.citations.sort(citationSort)} />

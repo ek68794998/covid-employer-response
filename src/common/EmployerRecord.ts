@@ -1,4 +1,5 @@
 import { Citation } from "./Citation";
+import { CitationSource } from "./CitationSource";
 import { EmployerRating } from "./EmployerRating";
 import { EmployerRecordBase } from "./EmployerRecordBase";
 import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
@@ -7,6 +8,41 @@ export class EmployerRecord extends EmployerRecordBase {
 	public childIds: string[] = [];
 
 	public citations: Citation[] = [];
+
+	public static getLastUpdateDate(employer: EmployerRecord): Date {
+		const baseDate: Date =
+			new Date(employer.lastUpdated || "2000-01-01T12:00:00Z");
+
+		if (employer.citations) {
+			return (
+				employer.citations.reduce(
+					(prev: Date, curr: Citation): Date => {
+						if (!curr.sources) {
+							return prev;
+						}
+
+						let lastUpdateDate: Date = new Date(prev);
+
+						curr.sources.forEach((source: CitationSource): void => {
+							if (!source.date) {
+								return;
+							}
+
+							const sourceDate: Date = new Date(source.date);
+
+							if (sourceDate > lastUpdateDate) {
+								lastUpdateDate = sourceDate;
+							}
+						});
+
+						return lastUpdateDate;
+					},
+					baseDate)
+			);
+		}
+
+		return baseDate;
+	}
 
 	public static toMetadata(
 		original: EmployerRecord,

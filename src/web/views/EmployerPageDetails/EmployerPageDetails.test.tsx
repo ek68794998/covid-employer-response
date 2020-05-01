@@ -46,6 +46,7 @@ describe("<EmployerPageDetails />", () => {
 				wikipedia: ploc("wikipediaLabel"),
 			},
 			employeeDelta: `${ploc("employeeDelta")}: {change} / {date}`,
+			employerUpdatedDate: `${ploc("employerUpdatedDate")}: {date}`,
 			ratingLabels: {
 				fair: ploc("fair"),
 				good: ploc("good"),
@@ -90,12 +91,12 @@ describe("<EmployerPageDetails />", () => {
 					type: "hearsay",
 				}, {
 					positivity: 0,
-					sources: [ { name: "CBS", link: "http://cbs", date: "2015-01-01T01:01:01Z" } ],
+					sources: [ { name: "CBS", link: "http://cbs", date: "2020-05-01T01:01:01Z" } ],
 					summary: "A very good summary about Contoso.",
 					type: "publication",
 				}, {
 					positivity: -1,
-					sources: [ { name: "NBC", link: "http://nbc", date: "2016-01-01T01:01:01Z" } ],
+					sources: [ { name: "NBC", link: "http://nbc", date: "2020-06-01T01:01:01Z" } ],
 					summary: "A very good summary about Contoso.",
 					type: "statement",
 				}],
@@ -107,6 +108,8 @@ describe("<EmployerPageDetails />", () => {
 				name: "Contoso",
 				summary: "Contoso is a good company.",
 			});
+
+		e.lastUpdated = EmployerRecord.getLastUpdateDate(e).toISOString();
 
 		const store: Store<AppState, AnyAction> = createConfigStore({
 			employers: {

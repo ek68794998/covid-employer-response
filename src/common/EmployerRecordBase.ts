@@ -18,6 +18,8 @@ export abstract class EmployerRecordBase {
 
 	public industries?: EmployerIndustry[];
 
+	public lastUpdated?: string;
+
 	public location?: EmployerLocation;
 
 	public name: string = "";

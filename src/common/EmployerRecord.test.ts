@@ -7,7 +7,64 @@ import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
 // This is a hack for the test thinking that the value passed as the expected result of a test data row is a string.
 const er = (t: EmployerRating): EmployerRating => t;
 
+const mockDatedSource =
+	(d: string): CitationSource => ({ ...new CitationSource(), date: d });
+
 describe("EmployerRecord", () => {
+	test("getLastUpdateDate properly determines the date", () => {
+		const record1: EmployerRecord = {
+			...new EmployerRecord(),
+			citations: [
+				{ positivity: 2, sources: [ mockDatedSource("2020-03-05T12:00:00Z") ], summary: "a", type: "statement" },
+				{ positivity: 1, sources: [ mockDatedSource("2020-03-01T00:00:00Z") ], summary: "b", type: "statement" },
+				{ positivity: 0, summary: "c", type: "hearsay" },
+				{ positivity: -1, summary: "d", type: "hearsay" },
+			],
+		};
+
+		const record2: EmployerRecord = {
+			...new EmployerRecord(),
+			citations: [
+				{ positivity: 2, sources: [ mockDatedSource("2020-03-01T00:00:00Z") ], summary: "a", type: "statement" },
+				{ positivity: 1, sources: [ mockDatedSource("2025-03-01T00:00:00Z") ], summary: "b", type: "statement" },
+				{ positivity: 0, summary: "c", type: "hearsay" },
+				{ positivity: -1, summary: "d", type: "hearsay" },
+			],
+		};
+
+		const record3: EmployerRecord = {
+			...new EmployerRecord(),
+			citations: [
+				{ positivity: 2, sources: [ mockDatedSource("2020-03-06T00:00:00Z") ], summary: "a", type: "statement" },
+				{
+					positivity: 1,
+					sources: [ mockDatedSource("2020-03-01T00:00:00Z"), mockDatedSource("2020-03-12T00:00:00Z") ],
+					summary: "b",
+					type: "statement",
+				},
+				{ positivity: 0, sources: [ mockDatedSource("2020-03-01T00:00:00Z") ], summary: "c", type: "hearsay" },
+				{ positivity: -1, summary: "d", type: "hearsay" },
+			],
+		};
+
+		const record4: EmployerRecord = {
+			...new EmployerRecord(),
+			citations: [
+				{ positivity: -1, summary: "d", type: "hearsay" },
+			],
+		};
+
+		const result1: Date = EmployerRecord.getLastUpdateDate(record1);
+		const result2: Date = EmployerRecord.getLastUpdateDate(record2);
+		const result3: Date = EmployerRecord.getLastUpdateDate(record3);
+		const result4: Date = EmployerRecord.getLastUpdateDate(record4);
+
+		expect(result1.toISOString()).toBe("2020-03-05T12:00:00.000Z");
+		expect(result2.toISOString()).toBe("2025-03-01T00:00:00.000Z");
+		expect(result3.toISOString()).toBe("2020-03-12T00:00:00.000Z");
+		expect(result4.toISOString()).toBe("2000-01-01T12:00:00.000Z");
+	});
+
 	test.each([
 		[ [], er("fair") ],
 		[ [ 2 ], er("good") ],
@@ -39,7 +96,7 @@ describe("EmployerRecord", () => {
 		[ [ 1, 1, 1, 1, 1, 1, 1 ], er("good") ],
 		[ [ -1, -1, -1, -1, -1, -1, -1 ], er("poor") ],
 	])(
-		"properly calculates %p ratings as %p (%#)",
+		"toMetadata properly calculates %p ratings as %p (%#)",
 		(ratings: number[], expected: EmployerRating) => {
 			const record: EmployerRecord = new EmployerRecord();
 
