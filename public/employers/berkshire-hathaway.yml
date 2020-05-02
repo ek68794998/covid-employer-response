@@ -13,8 +13,8 @@ image: berkshire-hathaway.svg
 officialWebsite: https://www.berkshirehathaway.com/
 industries:
   # As a conglomerate, BH has a -ton- of industries. These are some of the most prevalent.
-  - aerospace
   - apparel
+  - aviation
   - energy
   - financialServices
   - foodProcessing
