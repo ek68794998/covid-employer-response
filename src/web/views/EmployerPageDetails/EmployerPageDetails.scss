@@ -54,6 +54,13 @@ $padding-interior: 12px;
 	}
 }
 
+.EmployerPageDetails__ConnectedNote {
+	float: right;
+	font-size: 75%;
+	margin: -16px 8px 0 0;
+	opacity: 0.7;
+}
+
 .EmployerPageDetails__Summary {
 	font-size: 18px;
 	line-height: 170%;
@@ -203,6 +210,13 @@ $padding-interior: 12px;
 		margin: ($padding-interior / 2) 0 $padding-interior;
 		text-align: center;
 		white-space: normal;
+	}
+
+	.EmployerPageDetails__ConnectedNote {
+		clear: both;
+		float: none;
+		margin: 6px 0 0;
+		text-align: center;
 	}
 
 	@include scaled-page(32px, 1.2, 1.5);
