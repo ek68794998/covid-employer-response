@@ -1,0 +1,44 @@
+name: Berkshire Hathaway Inc.
+aliases:
+  # BH has a ton of subsidiaries so these are just the 5 most valuable subsidiaries that don't have their own profiles.
+  - Berkshire Hathaway Energy
+  - Dairy Queen
+  - Fruit of the Loom
+  - NetJets
+  - Scott Fetzer Company
+shortName: Berkshire Hathaway
+ticker: BRK-B # Also BRK-A but BRK-B is the higher listing in the S&P.
+wiki: Berkshire Hathaway
+image: berkshire-hathaway.svg
+officialWebsite: https://www.berkshirehathaway.com/
+industries:
+  # As a conglomerate, BH has a -ton- of industries. These are some of the most prevalent.
+  - aerospace
+  - apparel
+  - energy
+  - financialServices
+  - foodProcessing
+  - insurance
+  - media
+  - rail
+  - realEstate
+  - restaurant
+location:
+  city: Omaha
+  state: NE
+  country: us
+  international: true
+  wiki: Omaha, Nebraska
+employeesBefore:
+  type: exactly
+  upperBound: 389373
+  year: 2018
+summary: Though details on Berkshire Hathaway's own activities were largely scarce, they did elect to cancel large events. Their subsidiaries, however, took significant actions of their own, including some that resulted in federal charges.
+citations:
+  - summary: Berkshire's annual general meeting&mdash;typically attracting over 30,000 people&mdash;was converted to be online-only in a move to increase social distancing by reducing the number of events and gatherings held by the company.
+    positivity: 1
+    type: publication
+    sources:
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200318080743/https://www.marketwatch.com/story/nearly-90-year-old-warren-buffett-will-make-a-decision-on-working-from-home-on-day-by-day-basis-amid-coronavirus-panic-2020-03-16
+        date: 2020-03-16T13:54:00-04:00
