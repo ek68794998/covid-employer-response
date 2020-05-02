@@ -132,6 +132,9 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 		}
 	}
 
+	const isParentCompany: boolean = !!(employer.childIds.length);
+	const isChildCompany: boolean = !!(employer.parentId);
+
 	return (
 		<div className="EmployerPageDetails__Container">
 			<div className="EmployerPageDetails__Header">
@@ -141,9 +144,15 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				</h1>
 				<div className={`EmployerPageDetails__Rating EmployerPageDetails__Rating--${employerMetadata.rating}`}>
 					{strings.ratingLabels[employerMetadata.rating]}
+					{(isParentCompany || isChildCompany) && "*"}
 					{DesignHelpers.materialIcon(EmployerRecordMetadata.getTrendIcon(employerMetadata))}
 				</div>
 			</div>
+			{(isParentCompany || isChildCompany) && (
+				<div className="EmployerPageDetails__ConnectedNote">
+					* {isParentCompany ? strings.connectedChild : strings.connectedParent}
+				</div>
+			)}
 			<div className="EmployerPageDetails__Summary">
 				<ReactMarkdown source={employer.summary} />
 				{updateDate && (

@@ -39,6 +39,8 @@ citationTypes:
   publication: Publication
   statement: Statement
   hearsay: Hearsay
+connectedChild: Includes all subsidiaries.
+connectedParent: Includes parent company.
 countryNames:
   af: Afghanistan
   al: Albania
@@ -304,7 +306,7 @@ detailLabels:
 employeeDelta: "{change} since {date}"
 employerList: Employers
 employerSubmitChange: Submit update for {employer}
-employerUpdatedDate: Last updated {date}
+employerUpdatedDate: "Latest information: {date}"
 filter: Filters
 filters:
   employeesDefault: Size

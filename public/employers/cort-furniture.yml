@@ -1,0 +1,55 @@
+name: CORT Furniture
+aliases:
+  - CORT Business Services
+image: cort-furniture.svg
+officialWebsite: https://www.cort.com/about-cort
+industries:
+  - furniture
+location:
+  city: Chantilly
+  state: VA
+  country: us
+  international: true
+  wiki: Chantilly, Virginia
+employeesBefore:
+  source: Careers at CORT
+  sourceLink: https://www.cort.com/about-cort/careers
+  type: approximately
+  upperBound: 2500
+  year: 2019
+summary: CORT, backed by Berkshire Hathaway's over-100-billion-dollars in cash equivalents, provided no sick leave and insufficient PPE, did not facilitate social-distancing protocols, and fired workers who spoke out against the company or attempted to unionize.
+citations:
+  - summary: Federal charges filed against CORT state that 19 workers were fired&mdash;and replaced with contractors&mdash;for speaking out against poor coronavirus safety practices, and attempting to unionize for worker protections during the pandemic.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Yahoo! Finance
+        link: https://web.archive.org/web/20200404174338/https://finance.yahoo.com/news/federal-charges-filed-teamsters-against-201900772.html
+        date: 2020-04-02T20:19:00Z
+      - source: New York Times
+        link: https://web.archive.org/web/20200430041904/https://www.nytimes.com/2020/04/28/business/coronavirus-unions-layoffs.html
+        date: 2020-04-28T05:00:30-04:00
+      - source: Raw Story
+        link: https://web.archive.org/web/20200427020003/https://www.rawstory.com/2020/04/workers-at-warren-buffetts-furniture-rental-company-were-given-bad-gear-and-dared-to-complain-about-it/
+        date: 2020-04-28T05:00:30-04:00
+  - summary: CORT delivery workers were told to keep working, without receiving any paid sick leave. When this issue was raised, they were told to use vacation days or stay home with no pay.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Raw Story
+        link: https://web.archive.org/web/20200427020003/https://www.rawstory.com/2020/04/workers-at-warren-buffetts-furniture-rental-company-were-given-bad-gear-and-dared-to-complain-about-it/
+        date: 2020-04-28T05:00:30-04:00
+  - summary: Workers were not provided with PPE until weeks after they initially complained; when they finally received it, the gloves were too small to be worn by most employees.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Raw Story
+        link: https://web.archive.org/web/20200427020003/https://www.rawstory.com/2020/04/workers-at-warren-buffetts-furniture-rental-company-were-given-bad-gear-and-dared-to-complain-about-it/
+        date: 2020-04-28T05:00:30-04:00
+  - summary: Claims in the federal charges filed against CORT included CORT not providing PPE until weeks into the pandemic and disregarding social distancing guidelines.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Yahoo! Finance
+        link: https://web.archive.org/web/20200404174338/https://finance.yahoo.com/news/federal-charges-filed-teamsters-against-201900772.html
+        date: 2020-04-02T20:19:00Z
