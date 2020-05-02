@@ -33,3 +33,10 @@ citations:
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200404005346/https://www.buzzfeednews.com/article/juliareinstein/coronavirus-trader-joes
         date: 2020-03-31T16:04:00-04:00
+  - summary: An employee of Trader Joe's was fired after he started a Facebook page to discuss the company's actions during the pandemic. This occurred admist signals that the company was attempting to prevent workers from unionizing.
+    positivity: -1
+    type: statement
+    sources:
+      - source: New York Times
+        link: https://web.archive.org/web/20200428210409/https://www.nytimes.com/2020/04/02/business/trader-joes-unionization-coronavirus.html
+        date: 2020-04-02T16:18:41-04:00
