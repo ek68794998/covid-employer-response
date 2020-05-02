@@ -1,0 +1,35 @@
+name: Zillow Group, Inc.
+shortName: Zillow
+ticker: ZG
+wiki: Zillow
+image: zillow.svg#006aff
+officialWebsite: https://www.zillow.com/corp/About.htm
+industries:
+  - realEstate
+location:
+  city: Seattle
+  state: WA
+  country: us
+  international: true # US & Canada only.
+  wiki: Seattle
+employeesBefore:
+  type: approximately
+  upperBound: 5249
+  year: 2019
+  yearQuarter: Q4
+summary: Zillow committed to a strong WFH policy for employees through the end of 2020, and reduced costly operations to avoid resorting to layoffs or furloughs.
+citations:
+  - summary: Like other companies, Zillow allowed employees to work from home if possible, and later extended this policy to the remainder of 2020.
+    positivity: 0
+    type: publication
+    sources:
+      - source: GeekWire
+        link: https://web.archive.org/web/20200425174752/https://www.geekwire.com/2020/zillow-approves-remote-work-policy-rest-2020-ceo-says-views-wfh-turned-upside/
+        date: 2020-04-25T06:54:09Z
+  - summary: Zillow cut expenses, froze hiring, and paused most home-buying operations, while retaining all employees without pay cuts.
+    positivity: 1
+    type: publication
+    sources:
+      - source: GeekWire
+        link: https://web.archive.org/web/20200404011547/https://www.geekwire.com/2020/rich-barton-lays-zillows-coronavirus-playbook-freeze-hiring-cut-expenses-pause-home-buying/
+        date: 2020-03-25T05:24:22Z

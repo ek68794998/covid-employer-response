@@ -1,0 +1,50 @@
+name: Redfin
+ticker: RDFN
+wiki: Redfin
+image: redfin.svg#c82021
+officialWebsite: https://www.redfin.com/why-choose-redfin
+industries:
+  - realEstate
+location:
+  city: Seattle
+  state: WA
+  country: us
+  international: true # US & Canada only.
+  wiki: Seattle
+employeesBefore:
+  source: GeekWire
+  sourceLink: https://www.geekwire.com/2020/redfin-lays-off-7-staff-furloughs-hundreds-agents-due-covid-19-impact-housing-demand/
+  type: exactly
+  upperBound: 3377
+  year: 2019
+  yearQuarter: Q4
+summary: Though Redfin's CEO cut his salary and employee bonuses were cancelled for 2020, Redfin still resorted to laying off and cutting pay of its corporate staff and real-estate agents.
+citations:
+  - summary: Redfin laid off 7% of its corporate employees, and either laid off or furloughed 41% of their agent workforce.
+    positivity: -1
+    type: publication
+    sources:
+      - source: GeekWire
+        link: https://web.archive.org/web/20200421161139/https://www.geekwire.com/2020/redfin-lays-off-7-staff-furloughs-hundreds-agents-due-covid-19-impact-housing-demand/
+        date: 2020-04-07T16:06:25Z
+  - summary: Despite layoffs, CEO salary cuts, and a capital infusion of $110 million USD from its stock, remaining Redfin staff will see cuts of 10%&ndash;15%.
+    positivity: -1
+    type: publication
+    sources:
+      - source: GeekWire
+        link: https://web.archive.org/web/20200421161139/https://www.geekwire.com/2020/redfin-lays-off-7-staff-furloughs-hundreds-agents-due-covid-19-impact-housing-demand/
+        date: 2020-04-07T16:06:25Z
+  - summary: Redfin cut corporate bonuses for the first half of 2020, and later extended the cuts through the end of 2020.
+    positivity: 1
+    type: publication
+    sources:
+      - source: GeekWire
+        link: https://web.archive.org/web/20200421161139/https://www.geekwire.com/2020/redfin-lays-off-7-staff-furloughs-hundreds-agents-due-covid-19-impact-housing-demand/
+        date: 2020-04-07T16:06:25Z
+  - summary: Redfin's CEO forwent the remainder of his 2020 salary after March.
+    positivity: 1
+    type: publication
+    sources:
+      - source: GeekWire
+        link: https://web.archive.org/web/20200421161139/https://www.geekwire.com/2020/redfin-lays-off-7-staff-furloughs-hundreds-agents-due-covid-19-impact-housing-demand/
+        date: 2020-04-07T16:06:25Z
