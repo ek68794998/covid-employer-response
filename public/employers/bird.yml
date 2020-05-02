@@ -1,0 +1,58 @@
+name: Bird Rides, Inc.
+aliases:
+  - Scoot
+shortName: Bird
+wiki: Bird (company)
+image: bird.svg
+officialWebsite: https://www.bird.co/about/
+industries:
+  - transport
+location:
+  city: Santa Monica
+  state: CA
+  country: us
+  international: true
+  wiki: Santa Monica, California
+employeesAfter:
+  source: dot.LA
+  sourceLink: https://dot.la/bird-layoffs-meeting-story-2645612465.html
+  type: approximately
+  upperBound: 600
+  year: 2020
+  yearQuarter: Q2
+employeesBefore:
+  source: dot.LA
+  sourceLink: https://dot.la/bird-layoffs-meeting-story-2645612465.html
+  type: approximately
+  upperBound: 1000
+  year: 2020
+  yearQuarter: Q1
+summary: Bird laid off over 30% of its workforce through a conference call that was widely criticized for being impersonal and potentially prerecorded. However, Bird did promise a reasonable amount of compensation for those being laid off.
+citations:
+  - summary: An unidentified Bird executive laid off 406 employees&mdash;between 30% and 40% of the company's staff&mdash;via Zoom two weeks after the employees had started working from home.
+    positivity: -1
+    type: publication
+    sources:
+      - source: dot.LA
+        link: https://web.archive.org/web/20200428173404/https://dot.la/bird-layoffs-meeting-story-2645612465.html
+        date: 2020-04-02T00:10:12Z
+  - summary: Bird was widely criticized for their poor handling of the company's layoffs. This was primarily due to the fact that the call lasted only two of the scheduled 30 minutes, and that the executive on the call was unidentified, had a "robotic" voice, and did not take any questions; this led to speculation that it was a recording, and not a live person. This event came on the heels of historical incidents wherein executives had sworn at employees or pulled pranks on them, pretending to fire them over Slack.
+    positivity: -1
+    type: publication
+    sources:
+      - source: dot.LA
+        link: https://web.archive.org/web/20200428173404/https://dot.la/bird-layoffs-meeting-story-2645612465.html
+        date: 2020-04-02T00:10:12Z
+      - source: Business Insider
+        link: https://web.archive.org/web/20200424024904/https://www.businessinsider.com/bird-coo-drunk-pretend-fired-workers-slack-joke-prank-report-2020-4
+        date: 2020-04-23T22:06:51Z
+      - source: The Verge
+        link: https://web.archive.org/web/20200427114827/https://www.theverge.com/2020/4/23/21231802/bird-electric-scooter-company-workplace-culture-layoffs
+        date: 2020-04-23T16:00:00Z
+  - summary: Bird provided four weeks of pay, three months of health coverage, and additional time to exercise stock options.
+    positivity: 1
+    type: publication
+    sources:
+      - source: TechCrunch
+        link: https://web.archive.org/web/20200428182610/https://techcrunch.com/2020/03/27/bird-lays-off-about-30-of-workforce-amid-covid-19-pandemic/
+        date: 2020-03-27T18:26:19Z
