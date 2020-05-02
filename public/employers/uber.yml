@@ -13,9 +13,12 @@ location:
   international: true
   wiki: San Francisco
 employeesBefore:
-  type: exactly
-  upperBound: 22263
-  year: 2018
+  source: USA Today
+  sourceLink: https://www.usatoday.com/story/tech/2020/04/28/uber-report-considering-laying-off-employees/3043960001/
+  type: approximately
+  upperBound: 27000
+  year: 2020
+  yearQuarter: Q2
 summary: Though Uber touts a standard sick-leave policy for drivers, accusations were made by multiple drivers who said that the company had not paid them as promised.
 citations:
   - summary: Uber stated on March 15 that it would provide drivers who received a doctor's note with sick pay based on how much they had earned over the prior six months with the company.
@@ -32,3 +35,10 @@ citations:
       - source: CNET
         link: https://web.archive.org/web/20200421110908/https://www.cnet.com/features/gig-workers-with-covid-19-symptoms-say-its-hard-to-get-sick-leave-from-uber-lyft-instacart/
         date: 2020-03-26T16:29:00Z
+  - summary: A report surfaced saying that Uber was reportedly considering layoffs of 20% of its staff, which would total about 5,400 people.
+    positivity: 0
+    type: statement
+    sources:
+      - source: USA Today
+        link: https://web.archive.org/web/20200502021748/https://www.usatoday.com/story/tech/2020/04/28/uber-report-considering-laying-off-employees/3043960001/
+        date: 2020-04-27T12:30:20Z

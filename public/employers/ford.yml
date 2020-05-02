@@ -64,3 +64,10 @@ citations:
       - source: Design News
         link: https://web.archive.org/web/20200413042524/https://www.designnews.com/covid-19/ford-and-gm-resuscitate-shuttered-auto-plants-make-covid-19-respirators/29455018762765
         date: 2020-04-06T06:15:04-04:00
+  - summary: Ford began producing masks and personal-care kits for employees, and implemented a number of distancing and safety protocols at its European factories, stating that it planned to reopen them on May 4.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200501191951/https://www.cnbc.com/2020/04/28/ford-to-reopen-european-plants-with-coronavirus-safety-protocols.html
+        date: 2020-04-28T13:46:06Z

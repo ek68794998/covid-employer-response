@@ -31,10 +31,13 @@ citations:
     sources:
       - source: Stanford Health Care
         link: https://stanfordhealthcare.org/stanford-health-care-now/2020/novel-coronavirus/cdc-advice-on-personal-protective-equipment-ppe.html # Unknown date.
-  - summary: Stanford Health Care sent a letter to employees to notify them that they must either take a 20% pay cut or use paid time off for the period of April 27 through July 4.
+  - summary: Stanford Health Care sent a letter to employees to notify them that they must either take a 20% pay cut or use paid time off for the period of April 27 through July 4. In a response, employees noted that executives have not taken any pay cuts to offset the losses.
     positivity: -1
     type: publication
     sources:
       - source: The Hill
         link: https://thehill.com/homenews/state-watch/495099-calif-hospital-system-implements-pay-cuts-furloughs-for-14000-workers
         date: 2020-04-28T16:27:00-04:00
+      - source: Palo Alto Online
+        link: https://web.archive.org/web/20200502101529/https://www.paloaltoonline.com/news/2020/04/24/stanford-health-care-to-cut-workers-wages-by-20
+        date: 2020-04-24T17:17:00-07:00
