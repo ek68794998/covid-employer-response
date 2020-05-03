@@ -19,10 +19,12 @@ import EmployerLogo from "../EmployerLogo/EmployerLogo";
 import "./EmployerListItem.scss";
 import EmployerRatingPill from "../EmployerRatingPill/EmployerRatingPill";
 
+export type EmployerMetric = "lastUpdated" | "rating" | "score";
+
 interface Props extends RouteProps {
 	employerId: string;
 
-	metric: "lastUpdated" | "rating" | "score";
+	metric: EmployerMetric;
 
 	onClick?: () => void;
 
@@ -104,6 +106,34 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 
 	const displayName: string = employer.shortName || employer.name;
 
+	let indicatorControl: JSX.Element;
+
+	switch (metric) {
+		case "lastUpdated":
+			indicatorControl =
+				employer.lastUpdated
+					? <>{new Date(employer.lastUpdated).toLocaleDateString()}</>
+					: <></>;
+
+			break;
+
+		case "score":
+			indicatorControl = <>{employer.score > 0 ? "+" : ""}{Math.round(employer.score)}</>;
+
+			break;
+
+		case "rating":
+		default:
+			indicatorControl =
+				<EmployerRatingPill
+					employer={employer}
+					isAnnotated={false}
+					isLowContrast={!showDetails}
+				/>;
+
+			break;
+	}
+
 	if (!showDetails) {
 		return (
 			<div
@@ -114,11 +144,7 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 				<span className="EmployerListItem__Name">
 					{displayName}
 				</span>
-				<EmployerRatingPill
-					employer={employer}
-					isAnnotated={false}
-					isLowContrast={true}
-				/>
+				{indicatorControl}
 			</div>
 		);
 	}
@@ -130,11 +156,7 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 				<h2>
 					<a onClick={onClickEvent} title={employer.name !== displayName ? employer.name : ""}>{displayName}</a>
 				</h2>
-				<span className="EmployerListItem__TitleGap" />
-				<EmployerRatingPill
-					employer={employer}
-					isAnnotated={false}
-				/>
+				{indicatorControl}
 			</div>
 			<div className="EmployerListItem__Subtitle">
 				{getLocationWikipediaComponent(employer, strings)}

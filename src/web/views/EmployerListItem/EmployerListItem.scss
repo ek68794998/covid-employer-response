@@ -1,13 +1,14 @@
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
+$scale-base: 16px;
+
 $body-color: $outline-color;
 $border-radius: 12px;
 $flag-size: 20px;
-$icon-size: 32px;
+$icon-size: ($scale-base * 2);
 $padding-interior: 12px;
 $padding-sides: 16px;
-$scale-base: 16px;
 
 .EmployerListItem__Container {
 	background: $background;
@@ -17,6 +18,12 @@ $scale-base: 16px;
 	padding: 0 $padding-sides;
 	transition: 0.1s all;
 	width: 100%;
+
+	.EmployerLogo__Image {
+		height: $icon-size;
+		margin-right: $padding-interior;
+		width: $icon-size;
+	}
 }
 
 .EmployerListItem__Container--NotFound {
@@ -49,7 +56,7 @@ $scale-base: 16px;
 
 	&:hover {
 		&, & .EmployerRatingPill__Box {
-			color: #fff;
+			color: #fff !important;
 		}
 
 		&.EmployerListItem__Rating--fair {
@@ -66,12 +73,6 @@ $scale-base: 16px;
 			background: $indicator-negative;
 			border-color: $indicator-negative;
 		}
-	}
-
-	.EmployerLogo__Image {
-		height: ($scale-base) * 2;
-		margin-right: $padding-interior;
-		width: ($scale-base) * 2;
 	}
 }
 
@@ -94,14 +95,6 @@ $scale-base: 16px;
 		a.EmployerActionLinks__Link {
 			opacity: 1.0;
 		}
-	}
-
-	.EmployerListItem__Title h2 {
-		flex: 1;
-	}
-
-	.EmployerListItem__TitleGap {
-		display: none;
 	}
 
 	.EmployerListItem__Summary {
@@ -152,6 +145,7 @@ $scale-base: 16px;
 	font-family: 'Baloo Chettan 2';
 
 	h2 {
+		flex: 1;
 		font-weight: 400;
 		margin: 0 4px;
 		overflow: hidden;
@@ -161,20 +155,10 @@ $scale-base: 16px;
 		a {
 			color: inherit;
 		}
-
-		+ .EmployerActionLinks__Link {
-			margin-left: 12px;
-		}
 	}
 
 	.EmployerLogo__Image {
-		height: $icon-size;
 		margin-right: ($padding-interior / 2);
-		width: $icon-size;
-	}
-
-	.EmployerListItem__TitleGap {
-		flex: 1;
 	}
 }
 

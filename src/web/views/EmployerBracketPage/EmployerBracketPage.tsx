@@ -60,11 +60,13 @@ const EmployerBracketPage: React.FC<Props> = (props: Props): React.ReactElement 
 					<div className="EmployerBracketPage__Content">
 						<EmployerBracketList
 							employers={topEmployers}
+							metric="score"
 							title={strings.employerListRankingBestTitle}
 						/>
 						<div className="EmployerBracketPage__ContentSpacer" />
 						<EmployerBracketList
 							employers={bottomEmployers}
+							metric="score"
 							title={strings.employerListRankingWorstTitle}
 						/>
 					</div>
@@ -80,6 +82,7 @@ const EmployerBracketPage: React.FC<Props> = (props: Props): React.ReactElement 
 					<div className="EmployerBracketPage__Content">
 						<EmployerBracketList
 							employers={topEmployers}
+							metric="lastUpdated"
 							title={strings.employerListRecentTitle}
 						/>
 					</div>

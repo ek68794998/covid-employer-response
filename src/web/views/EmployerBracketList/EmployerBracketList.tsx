@@ -2,18 +2,20 @@ import React from "react";
 
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
-import EmployerListItem from "../EmployerListItem/EmployerListItem";
+import EmployerListItem, { EmployerMetric } from "../EmployerListItem/EmployerListItem";
 
 import "./EmployerBracketList.scss";
 
 interface Props {
 	employers: EmployerRecordMetadata[];
 
+	metric: EmployerMetric;
+
 	title: string;
 }
 
 const EmployerBracketList: React.FC<Props> = (props: Props): React.ReactElement => {
-	const { employers, title } = props;
+	const { employers, metric, title } = props;
 
 	return (
 		<div className="EmployerBracketList__Container">
@@ -24,7 +26,7 @@ const EmployerBracketList: React.FC<Props> = (props: Props): React.ReactElement 
 						<div className="EmployerBracketList__Item" key={`${i}-${e.id}`}>
 							<EmployerListItem
 								employerId={e.id}
-								metric="rating"
+								metric={metric}
 								showDetails={false}
 							/>
 						</div>

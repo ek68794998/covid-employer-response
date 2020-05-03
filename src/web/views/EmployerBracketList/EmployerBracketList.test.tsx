@@ -26,7 +26,7 @@ describe("<EmployerList />", () => {
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerRouteContext.Provider value={DefaultContextData}>
-							<EmployerBracketList employers={[]} title="Title" />
+							<EmployerBracketList employers={[]} metric="rating" title="Title" />
 						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
