@@ -1,0 +1,29 @@
+@import "../Colors.scss";
+@import "../Dimensions.scss";
+
+$padding-interior: 12px;
+
+.EmployerRatingPill__Box {
+	background: $indicator-neutral;
+	border-radius: 16px;
+	color: #fff;
+	cursor: default;
+	font: 600 18px 'Baloo Chettan 2';
+	height: 32px;
+	margin-left: $padding-interior;
+	padding: 3px 12px 13px 12px;
+
+	&.EmployerRatingPill__Box--good {
+		background: $indicator-positive;
+	}
+
+	&.EmployerRatingPill__Box--poor {
+		background: $indicator-negative;
+	}
+
+	.material-icons {
+		margin-left: $padding-interior;
+		user-select: none;
+		vertical-align: bottom;
+	}
+}

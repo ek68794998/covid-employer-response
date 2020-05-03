@@ -10,6 +10,11 @@ $padding-interior: 12px;
 	.EmployerLogo__Image {
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	}
+
+	.EmployerRatingPill__Box {
+		align-items: center;
+		display: flex;
+	}
 }
 
 .EmployerPageDetails__Title {
@@ -35,22 +40,6 @@ $padding-interior: 12px;
 	i {
 		position: absolute;
 		visibility: hidden;
-	}
-}
-
-.EmployerPageDetails__Rating {
-	align-items: center;
-	background: $indicator-neutral;
-	color: #fff;
-	cursor: default;
-	display: flex;
-
-	&.EmployerPageDetails__Rating--good {
-		background: $indicator-positive;
-	}
-
-	&.EmployerPageDetails__Rating--poor {
-		background: $indicator-negative;
 	}
 }
 
@@ -164,9 +153,22 @@ $padding-interior: 12px;
 }
 
 @mixin scaled-page($scale-base, $icon-multiplier, $pill-multiplier) {
-	.EmployerPageDetails__Header .EmployerLogo__Image {
-		height: ($scale-base * $icon-multiplier) * 2;
-		width: ($scale-base * $icon-multiplier) * 2;
+	.EmployerPageDetails__Header {
+		.EmployerLogo__Image {
+			height: ($scale-base * $icon-multiplier) * 2;
+			width: ($scale-base * $icon-multiplier) * 2;
+		}
+
+		.EmployerRatingPill__Box {
+			border-radius: ($scale-base * $pill-multiplier);
+			font-size: ($scale-base * $pill-multiplier * 0.5);
+			height: ($scale-base * $pill-multiplier);
+			padding: 0 ($scale-base * $pill-multiplier / 2);
+		
+			i {
+				font-size: ($scale-base * $pill-multiplier * 0.75);
+			}
+		}
 	}
 
 	.EmployerPageDetails__Title {
@@ -177,18 +179,6 @@ $padding-interior: 12px;
 		}
 	}
 
-	.EmployerPageDetails__Rating {
-		border-radius: ($scale-base * $pill-multiplier);
-		font: 600 ($scale-base * $pill-multiplier * 0.5) 'Baloo Chettan 2';
-		height: ($scale-base * $pill-multiplier);
-		padding: 0 ($scale-base * $pill-multiplier / 2);
-	
-		i {
-			font-size: ($scale-base * $pill-multiplier * 0.75);
-			line-height: 0;
-			margin-left: 12px;
-		}
-	}
 }
 
 @include scaled-page(48px, 0.6, 1.0);

@@ -13,6 +13,7 @@ import { getStrings } from "../../state/ducks/localization/selectors";
 
 import EmployerActionLinks from "../EmployerActionLinks/EmployerActionLinks";
 import EmployerLogo from "../EmployerLogo/EmployerLogo";
+import EmployerRatingPill from "../EmployerRatingPill/EmployerRatingPill";
 
 import "./EmployerDetailsHeader.scss";
 
@@ -156,13 +157,10 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 				</h2>
 				{!useShortText && <EmployerActionLinks employer={employer} />}
 				<span className="EmployerDetailsHeader__TitleGap" />
-				<span
-					className={`EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--${employer.rating}`}
-					title={strings.detailDescriptions.rating}
-				>
-					{strings.ratingLabels[employer.rating]}
-					{DesignHelpers.materialIcon(EmployerRecordMetadata.getTrendIcon(employer))}
-				</span>
+				<EmployerRatingPill
+					employer={employer}
+					isAnnotated={false}
+				/>
 			</div>
 			<div className="EmployerDetailsHeader__Subtitle">
 				{getLocationWikipediaComponent(employer, strings, useShortText || false)}

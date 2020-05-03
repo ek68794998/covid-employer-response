@@ -37,17 +37,7 @@ Array [
     <span
       className="EmployerDetailsHeader__TitleGap"
     />
-    <span
-      className="EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--fair"
-      title="řáƭïñϱ"
-    >
-      ƒáïř
-      <i
-        className="material-icons"
-      >
-        trending_flat
-      </i>
-    </span>
+    [component: EmployerRatingPill employer=([object Object]) isAnnotated=(undefined) /]
   </div>,
   <div
     className="EmployerDetailsHeader__Subtitle"
@@ -121,17 +111,7 @@ Array [
     <span
       className="EmployerDetailsHeader__TitleGap"
     />
-    <span
-      className="EmployerDetailsHeader__Rating EmployerDetailsHeader__Rating--fair"
-      title="řáƭïñϱ"
-    >
-      ƒáïř
-      <i
-        className="material-icons"
-      >
-        trending_flat
-      </i>
-    </span>
+    [component: EmployerRatingPill employer=([object Object]) isAnnotated=(undefined) /]
   </div>,
   <div
     className="EmployerDetailsHeader__Subtitle"
