@@ -1,0 +1,29 @@
+name: Laboratory Corporation of America Holdings
+aliases:
+  - Roche BioMedical
+shortName: LabCorp
+ticker: LH
+wiki: LabCorp
+image: labcorp.svg
+officialWebsite: https://www.labcorp.com/about-us
+industries:
+  - healthCare
+location:
+  city: Fake City
+  state: FS
+  country: us
+  international: false
+  wiki: Fake City, Fakestate
+employeesBefore:
+  type: approximately
+  upperBound: 61000
+  year: 2018
+summary: Despite a spike in business through COVID-19 testing, LabCorp's other drops in business led it to furlough and let go of workers.
+citations:
+  - summary: LabCorp furloughed an undisclosed number of employees, let go of all contract workers, and suspended 401k contributions.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Times News
+        link: https://www.thetimesnews.com/news/20200430/labcorp-furloughs-employees-as-non-covid-19-testing-business-craters
+        date: 2020-04-30T19:07:25Z

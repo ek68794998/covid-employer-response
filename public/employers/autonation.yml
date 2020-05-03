@@ -1,0 +1,57 @@
+name: AutoNation, Inc.
+shortName: AutoNation
+ticker: AN
+wiki: AutoNation
+image: autonation.svg
+officialWebsite: https://www.autonation.com/about#/overview
+industries:
+  - automotive
+location:
+  city: Burlington
+  state: NC
+  country: us
+  international: true
+  wiki: Burlington, North Carolina
+employeesBefore:
+  source: Forbes
+  sourceLink: https://www.forbes.com/companies/autonation/#4758294e73c4
+  type: approximately
+  upperBound: 26000
+  year: 2019
+  yearQuarter: Q2
+summary: After furloughing employees and cutting salaries, AutoNation applied for and received a significant government loan and, instead of using it to pay out employees, subsequently returned it to the government. AutoNation also introduced a number of cost-cutting measures to keep the company afloat.
+citations:
+  - summary: AutoNation furloughed about 7,000 employees without pay.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://www.reuters.com/article/us-health-coronavirus-autonation/autonation-returning-77-million-in-us-payroll-assistance-coronavirus-relief-loans-idUSKCN2263FW
+        date: 2020-04-24T22:48:14Z
+      - source: South Florida Sun Sentinel
+        link: https://web.archive.org/web/20200425020339/https://www.sun-sentinel.com/coronavirus/fl-ne-coronavirus-auto-nation-furloughs-7000-20200403-l7rnbxkq4fapnib25zbwt274vu-story.html
+        date: 2020-04-03T23:47:28Z
+  - summary: AutoNation cut the pay of remaining workers by an undisclosed amount.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://www.reuters.com/article/us-health-coronavirus-autonation/autonation-returning-77-million-in-us-payroll-assistance-coronavirus-relief-loans-idUSKCN2263FW
+        date: 2020-04-24T22:48:14Z
+      - source: South Florida Sun Sentinel
+        link: https://web.archive.org/web/20200425020339/https://www.sun-sentinel.com/coronavirus/fl-ne-coronavirus-auto-nation-furloughs-7000-20200403-l7rnbxkq4fapnib25zbwt274vu-story.html
+        date: 2020-04-03T23:47:28Z
+  - summary: AutoNation returned a $77 million USD loan to the government based on new guidance, despite the fact that it could have been used to pay furloughed employees.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://www.reuters.com/article/us-health-coronavirus-autonation/autonation-returning-77-million-in-us-payroll-assistance-coronavirus-relief-loans-idUSKCN2263FW
+        date: 2020-04-24T22:48:14Z
+  - summary: AutoNation CEOs and executives took pay cuts of up to 50%, froze hiring, and reduced various expenditures.
+    positivity: 1
+    type: publication
+    sources:
+      - source: South Florida Sun Sentinel
+        link: https://web.archive.org/web/20200425020339/https://www.sun-sentinel.com/coronavirus/fl-ne-coronavirus-auto-nation-furloughs-7000-20200403-l7rnbxkq4fapnib25zbwt274vu-story.html
+        date: 2020-04-03T23:47:28Z
