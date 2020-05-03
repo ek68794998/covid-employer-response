@@ -23,7 +23,7 @@ employeesBefore:
   type: approximately
   upperBound: 50000
   year: 2019
-summary: Contoso did not give appropriate paid leave and did not send home those showing COVID-19 symptoms.
+summary: VF Corporation closed stores as mandated, and committed to full pay and benefits for those affected by the closures, while also allowing remote work when possible. Additionally, they made significant donations to COVID-19 relief.
 citations:
   - summary: According to a report by the [WRC](https://www.workersrights.org/), VF committed to paying for all orders, sourced from Bangladesh, which were completed or still in production after the start of the pandemic.
     positivity: 1
