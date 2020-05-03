@@ -1,0 +1,30 @@
+name: Sunday River Brewing Company
+shortName: Sunday River Brewing Co.
+ticker: CTS
+wiki: Example
+image: sunday-river-brewing-company.jpg
+officialWebsite: http://sundayriverbrewingcompany.com/ # A lot of the site is just dummy text, but... it's what we have.
+industries:
+  - restaurant
+location:
+  city: Bethel
+  state: ME
+  country: us
+  international: false
+  wiki: Bethel, Maine
+employeesBefore:
+  source: Bangor Daily News - Business
+  sourceLink: https://bangordailynews.com/2020/05/01/business/more-than-100-show-up-to-dine-at-oxford-county-restaurant-defying-maine-virus-orders/
+  type: approximately
+  upperBound: 65
+  year: 2020
+  yearQuarter: Q2
+summary: Sunday River Brewing Co. initially closed per government orders, but reopened while those orders were still in effect, endangering employees and customers and causing the restaurant to lose its operating licenses.
+citations:
+  - summary: Sunday River Brewing Co. reopened against government orders to remain shut. As a result, the restaurant lost its health and liquor licenses, becoming unable to serve customers. The owner stated that after losing $650,000, he could not afford to "keep bleeding money every day."
+    positivity: -2
+    type: publication
+    sources:
+      - source: Bangor Daily News - Business
+        link: https://web.archive.org/web/20200502032128/https://bangordailynews.com/2020/05/01/business/more-than-100-show-up-to-dine-at-oxford-county-restaurant-defying-maine-virus-orders/
+        date: 2020-05-01T16:41:24-04:00
