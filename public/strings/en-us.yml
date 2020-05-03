@@ -305,6 +305,9 @@ detailLabels:
   wikipedia: "{page} on Wikipedia"
 employeeDelta: "{change} since {date}"
 employerList: Employers
+employerListAll: All
+employerListRanking: Best & worst
+employerListRecent: New
 employerSubmitChange: Submit update for {employer}
 employerUpdatedDate: "Latest information: {date}"
 filter: Filters

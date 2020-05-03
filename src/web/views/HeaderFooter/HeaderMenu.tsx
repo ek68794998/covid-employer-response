@@ -11,6 +11,7 @@ import "./HeaderFooter.scss";
 
 const HeaderMenu: React.FC = (): React.ReactElement => {
 	const [ isHamburgerMenuOpen, setIsHamburgerMenuOpen ] = useState<boolean | undefined>(undefined);
+	const [ isEmployerListSubmenuOpen, setIsEmployerListSubmenuOpen ] = useState(false);
 
 	const { pathname } = useLocation();
 
@@ -30,8 +31,32 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 
 	const navLinks: JSX.Element = (
 		<>
-			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers">
+			<NavLink
+				exact={true}
+				className="HeaderMenu__Link HeaderMenu__Link--HasSubmenu"
+				onMouseEnter={(): void => setIsEmployerListSubmenuOpen(true)}
+				onMouseLeave={(): void => setIsEmployerListSubmenuOpen(false)}
+				onClick={closeHamburgerMenu}
+				to="/employers"
+			>
 				{strings.employerList}
+				<ul className={`HeaderMenu__Submenu HeaderMenu__Submenu--${isEmployerListSubmenuOpen ? "Open" : "Closed"}`}>
+					<li>
+						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers">
+							{strings.employerListAll}
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers/ranking">
+							{strings.employerListRanking}
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers/recent">
+							{strings.employerListRecent}
+						</NavLink>
+					</li>
+				</ul>
 			</NavLink>
 			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/about">
 				{strings.about}
