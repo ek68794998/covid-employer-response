@@ -1,0 +1,41 @@
+name: Britannia Hotels Limited
+aliases:
+  - Ambassador Hotels
+  - Birmingham International
+  - Britannia Adelphi
+  - Wolverhampton
+shortName: Britannia Hotels
+wiki: Britannia Hotels
+image: britannia-hotels.svg#7e1631
+officialWebsite: https://www.britanniahotels.com/about-us
+industries:
+  - hospitality
+location:
+  city: Hale
+  state: GTM
+  country: gb
+  international: false
+  wiki: Hale, Greater Manchester
+employeesBefore:
+  type: approximately
+  upperBound: 12000
+  year: 2016
+summary: Britannia fired and evicted a number of employees without any advance notice, until they faced backlash forcing them to undo the decision. Additionally, they went against government agreements by evicting a number of homeless patrons.
+citations:
+  - summary: Approximately 30 employees at Coylumbridge Hotel, owned by Britannia, were told that they were fired and to vacate the premises immediately. They reverted the announcement some days later, blaming an administrative error.
+    positivity: -1
+    type: publication
+    sources:
+      - source: BBC
+        link: https://web.archive.org/web/20200320143725/https://www.dailyrecord.co.uk/news/scottish-news/scots-hotel-slammed-after-firing-21722233
+        date: 2020-03-21T10:05:33Z
+      - source: Daily Record
+        link: https://web.archive.org/web/20200325223705/https://www.bbc.com/news/uk-scotland-highlands-islands-51972372
+        date: 2020-03-19T20:46:43Z
+  - summary: Britannia evicted a number of homeless people from two of their hotels, in spite of an agreement with the government to accommodate them.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Manchester Evening News
+        link: https://web.archive.org/web/20200404161304/https://www.manchestereveningnews.co.uk/news/greater-manchester-news/hotel-slammed-for-evicting-homeless-17980941
+        date: 2020-03-25T16:54:57Z
