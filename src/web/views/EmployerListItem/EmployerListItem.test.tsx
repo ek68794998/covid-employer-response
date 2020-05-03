@@ -44,6 +44,7 @@ describe("<EmployerListItem />", () => {
 					<BrowserRouter>
 						<EmployerListItem
 							employerId={"foo"}
+							metric="rating"
 							showDetails={false}
 						/>
 					</BrowserRouter>
@@ -71,6 +72,7 @@ describe("<EmployerListItem />", () => {
 					<BrowserRouter>
 						<EmployerListItem
 							employerId={"foo"}
+							metric="rating"
 							showDetails={true}
 						/>
 					</BrowserRouter>

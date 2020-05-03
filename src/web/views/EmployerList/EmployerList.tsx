@@ -76,7 +76,11 @@ const EmployerList: React.FC = (): React.ReactElement => {
 				{filteredEmployers.slice(startIndex, endIndex).map(
 					(e: EmployerRecordMetadata, i: number): JSX.Element => (
 						<div className="EmployerList__Item" key={`${i}-${e.id}`}>
-							<EmployerListItem employerId={e.id} showDetails={listContext.listViewMode === "cards"} />
+							<EmployerListItem
+								employerId={e.id}
+								metric="rating"
+								showDetails={listContext.listViewMode === "cards"}
+							/>
 						</div>
 					))}
 			</div>

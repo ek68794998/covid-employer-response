@@ -21,6 +21,27 @@ $padding-interior: 12px;
 		background: $indicator-negative;
 	}
 
+	&.EmployerRatingPill__Box--LowContrast {
+		font-size: 24px;
+		font-weight: 400;
+		padding: 0;
+
+		&.EmployerRatingPill__Box--fair {
+			background: none;
+			color: $indicator-neutral;
+		}
+	
+		&.EmployerRatingPill__Box--good {
+			background: none;
+			color: $indicator-positive;
+		}
+	
+		&.EmployerRatingPill__Box--poor {
+			background: none;
+			color: $indicator-negative;
+		}
+	}
+
 	.material-icons {
 		margin-left: $padding-interior;
 		user-select: none;

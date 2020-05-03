@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { RouteComponentProps } from "react-router-dom";
 
-import EmployerBracketList from "../EmployerBracketList/EmployerBracketList";
+import EmployerBracketPage from "../EmployerBracketPage/EmployerBracketPage";
 import EmployerListPage from "../EmployerListPage/EmployerListPage";
 import EmployerPage from "../EmployerPage/EmployerPage";
 
@@ -58,9 +58,9 @@ const EmployerRoute: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	if (employerId) {
 		if (employerId === RecentsRoute) {
-			employerRoutedComponent = <EmployerBracketList mode="recent" />;
+			employerRoutedComponent = <EmployerBracketPage mode="recent" />;
 		} else if (employerId === RankingsRoute) {
-			employerRoutedComponent = <EmployerBracketList mode="ranking" />;
+			employerRoutedComponent = <EmployerBracketPage mode="ranking" />;
 		} else {
 			employerRoutedComponent = <EmployerPage employerId={employerId} />;
 		}

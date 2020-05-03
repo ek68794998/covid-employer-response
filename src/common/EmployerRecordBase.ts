@@ -86,10 +86,6 @@ export abstract class EmployerRecordBase {
 					: 0;
 		}
 
-		if ((a.id === "lyft" || b.id === "lyft") && (a.id === "gap" || b.id === "gap")) {
-			console.log(a, b, score);
-		}
-
 		return score;
 	}
 

@@ -13,16 +13,18 @@ import "./EmployerRatingPill.scss";
 interface Props extends RouteProps {
 	employer: EmployerRecordMetadata;
 
-	isAnnotated: boolean;
+	isAnnotated?: boolean;
+
+	isLowContrast?: boolean;
 }
 
 const EmployerRatingPill: React.FC<Props> = (props: Props): React.ReactElement | null => {
 	const strings: LocalizedStrings = useSelector(getStrings);
-	const { employer, isAnnotated } = props;
+	const { employer, isAnnotated, isLowContrast } = props;
 
 	return (
 		<span
-			className={`EmployerRatingPill__Box EmployerRatingPill__Box--${employer.rating}`}
+			className={`EmployerRatingPill__Box EmployerRatingPill__Box--${employer.rating} ${isLowContrast ? "EmployerRatingPill__Box--LowContrast" : ""}`}
 			title={strings.detailDescriptions.rating}
 		>
 			{strings.ratingLabels[employer.rating]}

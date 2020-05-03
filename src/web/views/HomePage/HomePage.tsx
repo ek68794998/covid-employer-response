@@ -59,7 +59,11 @@ const HomePage: React.FC = (): React.ReactElement => {
 					<div className="HomePage__Spacer" />
 					<div className="HomePage__SampleCard HomePage__TileBlock">
 						{randomEmployerId && (
-							<EmployerListItem employerId={randomEmployerId} showDetails={true} />
+							<EmployerListItem
+								employerId={randomEmployerId}
+								metric="rating"
+								showDetails={true}
+							/>
 						)}
 					</div>
 				</div>

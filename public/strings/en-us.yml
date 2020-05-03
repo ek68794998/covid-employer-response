@@ -307,7 +307,10 @@ employeeDelta: "{change} since {date}"
 employerList: Employers
 employerListAll: All
 employerListRanking: Best & worst
+employerListRankingBestTitle: Top employers
+employerListRankingWorstTitle: Bottom employers
 employerListRecent: New
+employerListRecentTitle: Latest updates
 employerSubmitChange: Submit update for {employer}
 employerUpdatedDate: "Latest information: {date}"
 filter: Filters
