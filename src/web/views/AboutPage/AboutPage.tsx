@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -8,6 +7,8 @@ import { format, LocalizedStrings } from "../../../common/LocalizedStrings";
 import { ProjectUrl } from "../../../common/constants/UrlConstants";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
+
+import AppHelmet from "../AppHelmet/AppHelmet";
 
 import "./AboutPage.scss";
 
@@ -19,9 +20,9 @@ const AboutPage: React.FC = (): React.ReactElement => {
 
 	return (
 		<main id="about">
-			<Helmet>
-				<title>{strings.aboutPageTitle} | {strings.appTitle}</title>
-			</Helmet>
+			<AppHelmet
+				title={strings.aboutPageTitle}
+			/>
 			<div className="AboutPage__Container">
 				<div className="AboutPage__Content">
 					<h1>{strings.aboutPageTitle}</h1>

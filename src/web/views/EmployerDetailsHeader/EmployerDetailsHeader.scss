@@ -44,16 +44,6 @@ $padding-interior: 12px;
 	.EmployerDetailsHeader__TitleGap {
 		flex: 1;
 	}
-
-	.EmployerDetailsHeader__Ticker {
-		color: #1b5e20;
-		margin-left: 8px;
-		opacity: 0.8;
-
-		&:hover {
-			opacity: 1.0;
-		}
-	}
 }
 
 .EmployerDetailsHeader__Subtitle {
