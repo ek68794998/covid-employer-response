@@ -43,7 +43,7 @@ Array [
     >
       ƒáïř
       <i
-        className="material-icons EmployerDetailsHeader__RatingIcon"
+        className="material-icons"
       >
         trending_flat
       </i>
@@ -127,7 +127,7 @@ Array [
     >
       ƒáïř
       <i
-        className="material-icons EmployerDetailsHeader__RatingIcon"
+        className="material-icons"
       >
         trending_flat
       </i>

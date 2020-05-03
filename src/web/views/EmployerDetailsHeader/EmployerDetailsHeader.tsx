@@ -161,8 +161,7 @@ const EmployerDetailsHeader: React.FC<Props> = (props: Props): React.ReactElemen
 					title={strings.detailDescriptions.rating}
 				>
 					{strings.ratingLabels[employer.rating]}
-					{DesignHelpers.materialIcon(
-						EmployerRecordMetadata.getTrendIcon(employer), "EmployerDetailsHeader__RatingIcon")}
+					{DesignHelpers.materialIcon(EmployerRecordMetadata.getTrendIcon(employer))}
 				</span>
 			</div>
 			<div className="EmployerDetailsHeader__Subtitle">
