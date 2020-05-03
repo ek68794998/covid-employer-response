@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
 
@@ -7,6 +6,7 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import AppHelmet from "../AppHelmet/AppHelmet";
 import BackToTopButton from "../BackToTopButton/BackToTopButton";
 import EmployerList from "../EmployerList/EmployerList";
 import EmployerListSearch from "../EmployerListSearch/EmployerListSearch";
@@ -18,9 +18,9 @@ const EmployerListPage: React.FC = (): React.ReactElement => {
 
 	return (
 		<main id="employer-list">
-			<Helmet>
-				<title>{strings.employerList} | {strings.appTitle}</title>
-			</Helmet>
+			<AppHelmet
+				title={strings.employerList}
+			/>
 			<div className="EmployerListPage__Filters">
 				<EmployerListSearch />
 			</div>

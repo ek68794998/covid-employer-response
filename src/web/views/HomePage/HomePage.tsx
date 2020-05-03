@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
@@ -10,6 +9,7 @@ import { ProjectIssueSubmissionUrl, SubmissionFormUrl } from "../../../common/co
 import { getEmployerIds } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import AppHelmet from "../AppHelmet/AppHelmet";
 import BackToTopButton from "../BackToTopButton/BackToTopButton";
 import EmployerListItem from "../EmployerListItem/EmployerListItem";
 
@@ -32,9 +32,9 @@ const HomePage: React.FC = (): React.ReactElement => {
 
 	return (
 		<main id="home">
-			<Helmet>
-				<title>{strings.home} | {strings.appTitle}</title>
-			</Helmet>
+			<AppHelmet
+				title={strings.home}
+			/>
 			<section className="HomePage__Row HomePage__Row--Alt HomePage__Primer">
 				<div>
 					<div className="HomePage__PreTitle">Welcome to</div>

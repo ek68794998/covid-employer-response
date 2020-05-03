@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -9,6 +8,8 @@ import { ProjectIssueSubmissionUrl, ProjectUrl, SubmissionFormUrl } from "../../
 
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import AppHelmet from "../AppHelmet/AppHelmet";
+
 import "./SubmitPage.scss";
 
 const SubmitPage: React.FC = (): React.ReactElement => {
@@ -16,9 +17,9 @@ const SubmitPage: React.FC = (): React.ReactElement => {
 
 	return (
 		<main id="submit">
-			<Helmet>
-				<title>{strings.submit} | {strings.appTitle}</title>
-			</Helmet>
+			<AppHelmet
+				title={strings.submit}
+			/>
 			<div className="SubmitPage__Container">
 				<div className="SubmitPage__Content">
 					<h1>{strings.submitTitle}</h1>
