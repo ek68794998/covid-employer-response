@@ -2,16 +2,4 @@
 
 exports[`<BackToTopButton /> renders without exploding 1`] = `null`;
 
-exports[`<BackToTopButton /> shows button when scrolled down 1`] = `
-<button
-  className="BackToTopButton__Link"
-  onClick={[Function]}
-  title="βáçƙTôTôƥ"
->
-  <i
-    className="material-icons"
-  >
-    arrow_upward
-  </i>
-</button>
-`;
+exports[`<BackToTopButton /> shows button when scrolled down 1`] = `null`;

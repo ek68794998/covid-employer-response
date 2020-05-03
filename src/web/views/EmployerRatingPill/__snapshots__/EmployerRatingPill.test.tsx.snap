@@ -3,9 +3,9 @@
 exports[`<EmployerRatingPill /> renders without exploding 1`] = `
 <span
   className="EmployerRatingPill__Box EmployerRatingPill__Box--good"
-  title="řáƭïñϱ"
+  title="Tλè ϱèñèřáℓ řáƭïñϱ ôƒ ƭλè è₥ƥℓô¥èř."
 >
-  ϱôôδ
+  Gôôδ
   *
   <i
     className="material-icons"

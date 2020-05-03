@@ -1,10 +1,10 @@
 import React from "react";
-import { Provider } from "react-redux";
+import * as ReactRedux from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
@@ -21,29 +21,30 @@ jest.mock(
 	() => mockComponent("EmployerPageDetails"));
 
 describe("<EmployerPage />", () => {
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				appTitle: ploc("appTitle"),
-				home: ploc("home"),
-				loading: ploc("loading"),
-				notFound: ploc("notFound"),
-			},
-		});
+	beforeEach(() => {
+		jest.spyOn(ReactRedux, "useDispatch").mockReturnValue(jest.fn());
+	});
+
+	afterEach(() => {
+		(ReactRedux.useDispatch as any).mockRestore();
+	});
+
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
-				<Provider store={store}>
+				<ReactRedux.Provider store={store}>
 					<BrowserRouter>
 						<EmployerPage employerId="foo" />
 					</BrowserRouter>
-				</Provider>,
+				</ReactRedux.Provider>,
 			).toJSON();
 
 		expect(renderedValue).toMatchSnapshot();
 	});
 
-	test("displays an employer record", () => {
+	test("displays an employer record", async () => {
 		const fakeEmployer: Partial<EmployerRecordBase> = {
 			employeesBefore: new EmployerEmployeeProfile(),
 			id: "e1",
@@ -60,21 +61,16 @@ describe("<EmployerPage />", () => {
 					[fakeEmployer.id as string]: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), fakeEmployer),
 				},
 			},
-			strings: {
-				appTitle: ploc("appTitle"),
-				home: ploc("home"),
-				loading: ploc("loading"),
-				notFound: ploc("notFound"),
-			},
+			strings: await getPlocStringsAsync(),
 		});
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
-				<Provider store={store}>
+				<ReactRedux.Provider store={store}>
 					<BrowserRouter>
 						<EmployerPage employerId={fakeEmployer.id || ""} />
 					</BrowserRouter>
-				</Provider>,
+				</ReactRedux.Provider>,
 			).toJSON();
 
 		expect(renderedValue).toMatchSnapshot();

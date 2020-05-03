@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EmployeeCountFilterControl /> renders without exploding 1`] = `"[component: EmployerListFilterControl getDisplayText=([Function]) isActive=(undefined) onClear=([Function]) popupTitle=(è₥ƥℓô¥èèƨÐèƒáúℓƭ) selectorPropsList=([object Object],[object Object],[object Object]) /]"`;
+exports[`<EmployeeCountFilterControl /> renders without exploding 1`] = `"[component: EmployerListFilterControl getDisplayText=([Function]) isActive=(undefined) onClear=([Function]) popupTitle=(§ïƺè) selectorPropsList=([object Object],[object Object],[object Object]) /]"`;

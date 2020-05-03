@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -16,46 +16,8 @@ jest.mock(
 	() => mockComponent("ReactMarkdown"));
 
 describe("<AboutPage />", () => {
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				about: ploc("about"),
-				aboutPageTitle: ploc("aboutPageTitle"),
-				aboutSectionHeaders: {
-					citationTypes: ploc("citationTypesHeader"),
-					claimProcessing: ploc("claimProcessingHeader"),
-					contributing: ploc("contributingHeader"),
-					employerRatings: ploc("employerRatingsHeader"),
-					layoffsAndFurloughs: ploc("layoffsAndFurloughsHeader"),
-					reportsAndClaims: ploc("reportsAndClaimsHeader"),
-					submitClaims: ploc("submitClaimsHeader"),
-					whatIs: `${ploc("whatIsHeader")}: {app}`,
-				},
-				aboutSectionParagraphs: {
-					citationTypes: `${ploc("citationTypesParagraph")}: {publication} / {statement} / {hearsay}; {publicationDescription} / {statementDescription} / {hearsayDescription}`,
-					claimProcessing: ploc("claimProcessingParagraph"),
-					contributing: `${ploc("contributingParagraph")}: {app}`,
-					employerRatings: ploc("employerRatingsParagraph"),
-					layoffsAndFurloughs: ploc("layoffsAndFurloughsParagraph"),
-					reportsAndClaims: ploc("reportsAndClaimsParagraph"),
-					submitClaims: `${ploc("submitClaimsParagraph")}: {submit}`,
-					whatIs: `${ploc("whatIsParagraph")}: {app} / {appFullName} / {covidWikiUrl} / {githubUrl} / {pandemicWikiUrl}`,
-				},
-				appTitle: ploc("appTitle"),
-				appTitleShort: ploc("app"),
-				citationTypeDescriptions: {
-					hearsay: ploc("hearsayDescription"),
-					publication: ploc("publicationDescription"),
-					statement: ploc("statementDescription"),
-				},
-				citationTypes: {
-					hearsay: ploc("hearsay"),
-					publication: ploc("publication"),
-					statement: ploc("statement"),
-				},
-				submit: ploc("submit"),
-			},
-		});
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

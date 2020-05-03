@@ -7,7 +7,7 @@ Array [
     href="https://en.wikipedia.org/wiki/Example"
     rel="noopener noreferrer"
     target="_blank"
-    title="ωïƙïƥèδïáÐèƨçřïƥƭïôñ"
+    title="Tλè è₥ƥℓô¥èř'ƨ ƥáϱè ôñ ƭλè Éñϱℓïƨλ Wïƙïƥèδïá."
   >
     <i
       className="material-icons"
@@ -20,7 +20,7 @@ Array [
     href="http://example.com"
     rel="noopener noreferrer"
     target="_blank"
-    title="ôƒƒïçïáℓWèβƨïƭèÐèƨçřïƥƭïôñ"
+    title="Tλè è₥ƥℓô¥èř'ƨ ôƒƒïçïáℓ ωèβƨïƭè ℓïñƙ."
   >
     <i
       className="material-icons"
@@ -33,7 +33,7 @@ Array [
     href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/e1.yml"
     rel="noopener noreferrer"
     target="_blank"
-    title="èδïƭÐèƨçřïƥƭïôñ"
+    title="Tλè è₥ƥℓô¥èř'ƨ δáƭá ƒïℓè ωλèřè èδïƭƨ çáñ βè ₥áδè."
   >
     <i
       className="material-icons"
@@ -44,7 +44,7 @@ Array [
   <a
     className="EmployerActionLinks__Link"
     href="/employers/e1"
-    title="ℓïñƙTôÉ₥ƥℓô¥èř"
+    title="Tλè ℓïñƙ δïřèçƭℓ¥ ƭô ƭλïƨ è₥ƥℓô¥èř'ƨ ƥřôƒïℓè."
   >
     <i
       className="material-icons"
@@ -61,7 +61,7 @@ exports[`<EmployerActionLinks /> renders without exploding 1`] = `
   href="https://github.com/ekumlin/covid-employer-response/blob/master/public/employers/.yml"
   rel="noopener noreferrer"
   target="_blank"
-  title="èδïƭÐèƨçřïƥƭïôñ"
+  title="Tλè è₥ƥℓô¥èř'ƨ δáƭá ƒïℓè ωλèřè èδïƭƨ çáñ βè ₥áδè."
 >
   <i
     className="material-icons"

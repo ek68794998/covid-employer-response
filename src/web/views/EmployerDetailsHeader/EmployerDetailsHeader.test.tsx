@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
@@ -21,23 +21,8 @@ jest.mock(
 	() => mockComponent("EmployerRatingPill"));
 
 describe("<EmployerDetailsHeader />", () => {
-	const createConfigStore = (): Store<AppState, AnyAction> =>
-		configureStore({
-			strings: {
-				detailDescriptions: {
-					aka: ploc("aka"),
-					employees: ploc("employees"),
-					linkToEmployer: ploc("linkToEmployer"),
-					location: ploc("location"),
-					rating: ploc("rating"),
-					ratingCounts: ploc("ratingCounts"),
-					ticker: ploc("ticker"),
-				},
-			},
-		});
-
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
@@ -54,8 +39,8 @@ describe("<EmployerDetailsHeader />", () => {
 		expect(renderedValue).toMatchSnapshot();
 	});
 
-	test("renders using a complete employer record", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+	test("renders using a complete employer record", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const e: EmployerRecordMetadata =
 			new EmployerRecordMetadata(1, 1, "fair");

@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 
 import { AppState } from "../../state/AppState";
@@ -21,21 +21,14 @@ jest.mock(
 	() => mockComponent("EmployerActionLinks"));
 
 describe("<EmployerListItem />", () => {
-	test("renders standard without exploding", () => {
+	test("renders standard without exploding", async () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
 					foo: new EmployerRecordMetadata(0, 0, "fair"),
 				},
 			},
-			strings: {
-				ratingLabels: {
-					fair: ploc("fair"),
-					good: ploc("good"),
-					poor: ploc("poor"),
-				},
-				readMore: ploc("readMore"),
-			},
+			strings: await getPlocStringsAsync(),
 		});
 
 		const renderedValue: ReactTestRendererJSON | null =
@@ -53,16 +46,14 @@ describe("<EmployerListItem />", () => {
 		expect(renderedValue).toMatchSnapshot();
 	});
 
-	test("renders details without exploding", () => {
+	test("renders details without exploding", async () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
 					foo: new EmployerRecordMetadata(0, 0, "fair"),
 				},
 			},
-			strings: {
-				readMore: ploc("readMore"),
-			},
+			strings: await getPlocStringsAsync(),
 		});
 
 		const renderedValue: ReactTestRendererJSON | null =

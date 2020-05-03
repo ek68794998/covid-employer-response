@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -12,15 +12,8 @@ import configureStore from "../../state/configureStore";
 import BackToTopButton from "./BackToTopButton";
 
 describe("<BackToTopButton />", () => {
-	const createConfigStore = (): Store<AppState, AnyAction> =>
-		configureStore({
-			strings: {
-				backToTop: ploc("backToTop"),
-			},
-		});
-
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		(global as any).scrollY = 0;
 
@@ -36,8 +29,8 @@ describe("<BackToTopButton />", () => {
 		expect(renderedValue).toMatchSnapshot();
 	});
 
-	test("shows button when scrolled down", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+	test("shows button when scrolled down", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		(global as any).scrollY = 50;
 

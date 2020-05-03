@@ -26,7 +26,7 @@ Array [
         href="https://finance.yahoo.com/quote/CTS"
         rel="noopener noreferrer"
         target="_blank"
-        title="ƭïçƙèř"
+        title="Tλè ƭïçƙèř ƨ¥₥βôℓ ôƒ ƭλè è₥ƥℓô¥èè'ƨ ƥúβℓïçℓ¥ ƭřáδèδ ƨƭôçƙ."
       >
         ($
         CTS
@@ -43,10 +43,10 @@ Array [
     className="EmployerDetailsHeader__Subtitle"
   >
     <span>
-      City, us (Multinational)
+      City, Ûñïƭèδ §ƭáƭèƨ (Multinational)
     </span>
     <span
-      title="áƙá"
+      title="ÂℓƭèřñáƭïƲè ñá₥èƨ ƒôř ƭλè è₥ƥℓô¥èř, ïñçℓúδïñϱ áℓïáƨèƨ, ƥářèñƭ çô₥ƥáñïèƨ, áñδ çλïℓδ çô₥ƥáñïèƨ."
     >
       <i
         className="material-icons"
@@ -56,7 +56,7 @@ Array [
       MyContoso
     </span>
     <span
-      title="è₥ƥℓô¥èèƨ"
+      title="Tλè áƥƥřôжï₥áƭè ñú₥βèř ôƒ è₥ƥℓô¥èèƨ ƭλè çô₥ƥáñ¥ λáδ ƥřïôř ƭô ƭλè ÇôřôñáƲïřúƨ ƥáñδè₥ïç."
     >
       <i
         className="material-icons"
@@ -67,7 +67,7 @@ Array [
     </span>
     <span
       className="EmployerDetailsHeader__AggregateRatings"
-      title="řáƭïñϱÇôúñƭƨ"
+      title="Âϱϱřèϱáƭè çôúñƭƨ ôƒ ƭλè ϱôôδ áñδ βáδ áçƭïôñƨ áñ è₥ƥℓô¥èř λáƨ ƭáƙèñ."
     >
       <span
         className="EmployerDetailsHeader__GoodRatings"
@@ -118,7 +118,7 @@ Array [
   >
     <span
       className="EmployerDetailsHeader__AggregateRatings"
-      title="řáƭïñϱÇôúñƭƨ"
+      title="Âϱϱřèϱáƭè çôúñƭƨ ôƒ ƭλè ϱôôδ áñδ βáδ áçƭïôñƨ áñ è₥ƥℓô¥èř λáƨ ƭáƙèñ."
     >
       <span
         className="EmployerDetailsHeader__GoodRatings"
