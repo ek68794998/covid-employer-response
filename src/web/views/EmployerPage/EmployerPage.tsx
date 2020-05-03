@@ -10,6 +10,7 @@ import { getEmployerById as fetchEmployerById } from "../../state/ducks/employer
 import { getEmployer, getEmployerMetadata, getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import AppHelmet from "../AppHelmet/AppHelmet";
 import EmployerPageDetails from "../EmployerPageDetails/EmployerPageDetails";
 
 import "./EmployerPage.scss";
@@ -42,9 +43,9 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	if (hasLoadedEmployers && !employerExists) {
 		return (
 			<main id="employer-page">
-				<Helmet>
-					<title>{strings.notFound} | {strings.appTitle}</title>
-				</Helmet>
+				<AppHelmet
+					title={strings.notFound}
+				/>
 				<div className="EmployerPage__Content EmployerPage__Content--NotFound">
 					{strings.notFound}
 				</div>
@@ -55,9 +56,9 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	if (!hasLoadedEmployers || !employer) {
 		return (
 			<main id="employer-page">
-				<Helmet>
-					<title>{strings.loading} | {strings.appTitle}</title>
-				</Helmet>
+				<AppHelmet
+					title={strings.loading}
+				/>
 				<div className="EmployerPage__Content EmployerPage__Content--Loading">
 					{strings.loading}
 				</div>
@@ -67,9 +68,10 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	return (
 		<main id="employer-page">
-			<Helmet>
-				<title>{employer.name} | {strings.appTitle}</title>
-			</Helmet>
+			<AppHelmet
+				description={employer.summary}
+				title={employer.name}
+			/>
 			<div className="EmployerPage__Content">
 				<EmployerPageDetails employer={employer} />
 			</div>
