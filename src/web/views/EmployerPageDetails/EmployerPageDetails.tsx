@@ -22,6 +22,7 @@ import EmployerListItem from "../EmployerListItem/EmployerListItem";
 import EmployerLogo from "../EmployerLogo/EmployerLogo";
 
 import "./EmployerPageDetails.scss";
+import EmployerRatingPill from "../EmployerRatingPill/EmployerRatingPill";
 
 interface Props extends RouteProps {
 	employer: EmployerRecord;
@@ -142,11 +143,10 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				<h1 className="EmployerPageDetails__Title">
 					{employer.shortName || employer.name}
 				</h1>
-				<div className={`EmployerPageDetails__Rating EmployerPageDetails__Rating--${employerMetadata.rating}`}>
-					{strings.ratingLabels[employerMetadata.rating]}
-					{(isParentCompany || isChildCompany) && "*"}
-					{DesignHelpers.materialIcon(EmployerRecordMetadata.getTrendIcon(employerMetadata))}
-				</div>
+				<EmployerRatingPill
+					employer={employerMetadata}
+					isAnnotated={isParentCompany || isChildCompany}
+				/>
 			</div>
 			{(isParentCompany || isChildCompany) && (
 				<div className="EmployerPageDetails__ConnectedNote">

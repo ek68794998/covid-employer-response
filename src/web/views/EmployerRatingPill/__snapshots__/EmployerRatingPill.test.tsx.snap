@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmployerRatingPill /> renders without exploding 1`] = `
+<span
+  className="EmployerRatingPill__Box EmployerRatingPill__Box--good"
+  title="řáƭïñϱ"
+>
+  ϱôôδ
+  *
+  <i
+    className="material-icons"
+  >
+    trending_up
+  </i>
+</span>
+`;

@@ -16,6 +16,10 @@ jest.mock(
 	"../EmployerActionLinks/EmployerActionLinks",
 	() => mockComponent("EmployerActionLinks"));
 
+jest.mock(
+	"../EmployerRatingPill/EmployerRatingPill",
+	() => mockComponent("EmployerRatingPill"));
+
 describe("<EmployerDetailsHeader />", () => {
 	const createConfigStore = (): Store<AppState, AnyAction> =>
 		configureStore({
@@ -28,11 +32,6 @@ describe("<EmployerDetailsHeader />", () => {
 					rating: ploc("rating"),
 					ratingCounts: ploc("ratingCounts"),
 					ticker: ploc("ticker"),
-				},
-				ratingLabels: {
-					fair: ploc("fair"),
-					good: ploc("good"),
-					poor: ploc("poor"),
 				},
 			},
 		});

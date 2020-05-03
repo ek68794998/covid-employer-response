@@ -13,16 +13,16 @@ import configureStore from "../../state/configureStore";
 import EmployerPageDetails from "./EmployerPageDetails";
 
 jest.mock(
-	"../EmployerDetailsHeader/EmployerDetailsHeader",
-	() => mockComponent("EmployerDetailsHeader"));
-
-jest.mock(
 	"../EmployerCitationList/EmployerCitationList",
 	() => mockComponent("EmployerCitationList"));
 
 jest.mock(
 	"../EmployerListItem/EmployerListItem",
 	() => mockComponent("EmployerListItem"));
+
+jest.mock(
+	"../EmployerRatingPill/EmployerRatingPill",
+	() => mockComponent("EmployerRatingPill"));
 
 describe("<EmployerPageDetails />", () => {
 	const createConfigStore = (preloaded: Partial<AppState> = {}): Store<AppState, AnyAction> => configureStore({
@@ -48,11 +48,6 @@ describe("<EmployerPageDetails />", () => {
 			employeeDelta: `${ploc("employeeDelta")}: {change} / {date}`,
 			employerSubmitChange: `${ploc("employerSubmitChange")}: {employer}`,
 			employerUpdatedDate: `${ploc("employerUpdatedDate")}: {date}`,
-			ratingLabels: {
-				fair: ploc("fair"),
-				good: ploc("good"),
-				poor: ploc("poor"),
-			},
 		},
 		...preloaded,
 	});

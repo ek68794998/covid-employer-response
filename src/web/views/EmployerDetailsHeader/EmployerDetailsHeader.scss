@@ -45,26 +45,6 @@ $padding-interior: 12px;
 		flex: 1;
 	}
 
-	.EmployerDetailsHeader__Rating {
-		background: $indicator-neutral;
-		border-radius: 16px;
-		color: #fff;
-		cursor: default;
-		font-size: 18px;
-		font-weight: 600;
-		height: 32px;
-		margin-left: $padding-interior;
-		padding: 3px 12px 13px 12px;
-
-		&.EmployerDetailsHeader__Rating--good {
-			background: $indicator-positive;
-		}
-
-		&.EmployerDetailsHeader__Rating--poor {
-			background: $indicator-negative;
-		}
-	}
-
 	.EmployerDetailsHeader__Ticker {
 		color: #1b5e20;
 		margin-left: 8px;
@@ -74,11 +54,6 @@ $padding-interior: 12px;
 			opacity: 1.0;
 		}
 	}
-}
-
-.EmployerDetailsHeader__RatingIcon {
-	margin-left: $padding-interior;
-	vertical-align: bottom;
 }
 
 .EmployerDetailsHeader__Subtitle {
@@ -167,7 +142,7 @@ $padding-interior: 12px;
 		}
 	}
 
-	.EmployerDetailsHeader__RatingIcon {
+	.EmployerRatingPill__Box .material-icons {
 		display: none;
 	}
 }
