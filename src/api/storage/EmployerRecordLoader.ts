@@ -88,8 +88,7 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 		loadedEmployer.lastUpdated = EmployerRecord.getLastUpdateDate(loadedEmployer).toISOString();
 
 		if (loadedEmployer.industries) {
-			loadedEmployer.industries =
-				loadedEmployer.industries.sort((a: string, b: string) => a.localeCompare(b));
+			loadedEmployer.industries.sort((a: string, b: string) => a.localeCompare(b));
 		}
 
 		this.cachedItems[id] = loadedEmployer;

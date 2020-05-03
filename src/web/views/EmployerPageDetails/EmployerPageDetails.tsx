@@ -162,7 +162,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				)}
 			</div>
 
-			<EmployerCitationList citations={employer.citations.sort(citationSort)} />
+			<EmployerCitationList citations={employer.citations.concat().sort(citationSort)} />
 
 			<div className="EmployerPageDetails__MetaFooter">
 				<div className="EmployerPageDetails__Profile">
