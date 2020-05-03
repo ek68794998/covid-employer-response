@@ -1,3 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EmployerList /> renders without exploding 1`] = `"[component: LoadingIndicator /]"`;
+exports[`<EmployerList /> renders without exploding 1`] = `
+<div
+  className="EmployerBracketList__Container"
+>
+  <h2>
+    Title
+  </h2>
+  <div
+    className="EmployerBracketList__Grid"
+  />
+</div>
+`;

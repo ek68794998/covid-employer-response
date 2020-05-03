@@ -40,7 +40,7 @@ const employerRecordLoader: EmployerRecordLoader =
 	new EmployerRecordLoader(process.env.RAZZLE_PUBLIC_DIR || "/", "employers");
 
 const localeLoader: LocaleLoader =
-	new LocaleLoader(process.env.RAZZLE_PUBLIC_DIR || "", "strings");
+	new LocaleLoader(process.env.RAZZLE_PUBLIC_DIR || "/", "strings");
 
 const localizationMiddleware: LocalizationMiddleware =
 	new LocalizationMiddleware(defaultLanguage, localeLoader);

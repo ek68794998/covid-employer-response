@@ -18,12 +18,12 @@ exports[`<EmployerList /> renders list of employers 1`] = `
     <div
       className="EmployerList__Item"
     >
-      [component: EmployerListItem employerId=(e2) showDetails=(true) /]
+      [component: EmployerListItem employerId=(e2) metric=(rating) showDetails=(true) /]
     </div>
     <div
       className="EmployerList__Item"
     >
-      [component: EmployerListItem employerId=(e3) showDetails=(true) /]
+      [component: EmployerListItem employerId=(e3) metric=(rating) showDetails=(true) /]
     </div>
   </div>
   <div

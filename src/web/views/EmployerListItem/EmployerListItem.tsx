@@ -106,22 +106,18 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 
 	const displayName: string = employer.shortName || employer.name;
 
-	let indicatorControl: JSX.Element;
+	let indicatorControl: JSX.Element | null;
 
 	switch (metric) {
 		case "lastUpdated":
 			indicatorControl =
 				employer.lastUpdated
-					? <>{new Date(employer.lastUpdated).toLocaleDateString()}</>
-					: <></>;
+					? <span className="EmployerListItem__Date">{new Date(employer.lastUpdated).toLocaleDateString()}</span>
+					: null;
 
 			break;
 
 		case "score":
-			indicatorControl = <>{employer.score > 0 ? "+" : ""}{Math.round(employer.score)}</>;
-
-			break;
-
 		case "rating":
 		default:
 			indicatorControl =
@@ -129,6 +125,7 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 					employer={employer}
 					isAnnotated={false}
 					isLowContrast={!showDetails}
+					showGrade={metric === "score"}
 				/>;
 
 			break;
