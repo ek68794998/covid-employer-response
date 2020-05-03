@@ -60,7 +60,7 @@ describe("<EmployerPage />", () => {
 					[fakeEmployer.id as string]: Object.assign(new EmployerRecord(), fakeEmployer),
 				},
 				itemsMetadata: {
-					[fakeEmployer.id as string]: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), fakeEmployer),
+					[fakeEmployer.id as string]: Object.assign(new EmployerRecordMetadata(0, 0, 0, "fair"), fakeEmployer),
 				},
 			},
 			strings: {

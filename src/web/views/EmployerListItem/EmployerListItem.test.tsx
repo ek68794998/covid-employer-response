@@ -25,7 +25,7 @@ describe("<EmployerListItem />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
-					foo: new EmployerRecordMetadata(0, 0, "fair"),
+					foo: new EmployerRecordMetadata(0, 0, 0, "fair"),
 				},
 			},
 			strings: {
@@ -57,7 +57,7 @@ describe("<EmployerListItem />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
-					foo: new EmployerRecordMetadata(0, 0, "fair"),
+					foo: new EmployerRecordMetadata(0, 0, 0, "fair"),
 				},
 			},
 			strings: {

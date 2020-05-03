@@ -8,15 +8,20 @@ export class EmployerRecordMetadata extends EmployerRecordBase {
 
 	public readonly rating: EmployerRating;
 
+	public readonly score: number;
+
 	public constructor(
 		negativeCount: number,
 		positiveCount: number,
-		rating: EmployerRating) {
+		score: number,
+		rating: EmployerRating,
+	) {
 
 		super();
 
 		this.negativeCount = negativeCount;
 		this.positiveCount = positiveCount;
+		this.score = score;
 		this.rating = rating;
 	}
 

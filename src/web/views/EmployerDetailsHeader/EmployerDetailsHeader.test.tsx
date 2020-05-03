@@ -44,7 +44,7 @@ describe("<EmployerDetailsHeader />", () => {
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerDetailsHeader
-							employer={new EmployerRecordMetadata(0, 0, "fair")}
+							employer={new EmployerRecordMetadata(0, 0, 0, "fair")}
 							onClickEmployerName={(): void => { /* Do nothing. */ }}
 						/>
 					</BrowserRouter>
@@ -58,7 +58,7 @@ describe("<EmployerDetailsHeader />", () => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
 		const e: EmployerRecordMetadata =
-			new EmployerRecordMetadata(1, 1, "fair");
+			new EmployerRecordMetadata(1, 1, 0, "fair");
 
 		Object.assign(e, {
 			aliases: [ "MyContoso" ],

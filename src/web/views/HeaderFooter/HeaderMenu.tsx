@@ -7,6 +7,8 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { getIsProd, getIsTest } from "../../state/ducks/environment/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import { RankingsRoute, RecentsRoute } from "../EmployerRoute/EmployerRoute";
+
 import "./HeaderFooter.scss";
 
 const HeaderMenu: React.FC = (): React.ReactElement => {
@@ -51,12 +53,12 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers/ranking">
+						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to={`/employers/${RankingsRoute}`}>
 							{strings.employerListRanking}
 						</NavLink>
 					</li>
 					<li>
-						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers/recent">
+						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to={`/employers/${RecentsRoute}`}>
 							{strings.employerListRecent}
 						</NavLink>
 					</li>

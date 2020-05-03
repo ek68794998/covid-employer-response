@@ -100,6 +100,7 @@ export abstract class EmployerRecordBase {
 		target.id = original.id;
 		target.image = original.image;
 		target.industries = original.industries;
+		target.lastUpdated = original.lastUpdated;
 		target.location = original.location;
 		target.name = original.name;
 		target.officialWebsite = original.officialWebsite;

@@ -2,11 +2,12 @@ import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
 
 describe("EmployerRecordMetadata", () => {
 	test("constructs", () => {
-		const record: EmployerRecordMetadata = new EmployerRecordMetadata(-5, 3, "fair");
+		const record: EmployerRecordMetadata = new EmployerRecordMetadata(-5, 3, 2, "fair");
 
 		expect(record.negativeCount).toBe(-5);
 		expect(record.positiveCount).toBe(3);
 		expect(record.rating).toBe("fair");
+		expect(record.score).toBe(2);
 	});
 
 	test.each([
@@ -16,7 +17,7 @@ describe("EmployerRecordMetadata", () => {
 		[ "NOT_VALID", "trending_flat" ],
 	])("gets trend icons", (rating: string, expectedIcon: string) => {
 		const record: EmployerRecordMetadata =
-			new EmployerRecordMetadata(-5, 3, rating as any);
+			new EmployerRecordMetadata(-5, 3, 0, rating as any);
 
 		expect(EmployerRecordMetadata.getTrendIcon(record)).toBe(expectedIcon);
 	});

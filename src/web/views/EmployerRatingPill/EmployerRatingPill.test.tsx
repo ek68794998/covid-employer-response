@@ -28,7 +28,7 @@ describe("<EmployerRatingPill />", () => {
 		});
 
 		const employer: EmployerRecordMetadata =
-			new EmployerRecordMetadata(3, 1, "good");
+			new EmployerRecordMetadata(3, 1, 0, "good");
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

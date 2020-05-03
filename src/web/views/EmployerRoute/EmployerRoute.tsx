@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { RouteComponentProps } from "react-router-dom";
 
+import EmployerBracketList from "../EmployerBracketList/EmployerBracketList";
 import EmployerListPage from "../EmployerListPage/EmployerListPage";
 import EmployerPage from "../EmployerPage/EmployerPage";
 
 import { EmployerListViewMode, EmployerListViewModeValues } from "./EmployerListViewMode";
 import { DefaultContextData, EmployerRouteContext, EmployerRouteContextData } from "./EmployerRouteContext";
+
+export const RankingsRoute: string = "ranking";
+export const RecentsRoute: string = "recent";
 
 interface Params {
 	id?: string;
@@ -50,9 +54,23 @@ const EmployerRoute: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	const employerId: string | undefined = props.match.params.id;
 
+	let employerRoutedComponent: JSX.Element;
+
+	if (employerId) {
+		if (employerId === RecentsRoute) {
+			employerRoutedComponent = <EmployerBracketList mode="recent" />;
+		} else if (employerId === RankingsRoute) {
+			employerRoutedComponent = <EmployerBracketList mode="ranking" />;
+		} else {
+			employerRoutedComponent = <EmployerPage employerId={employerId} />;
+		}
+	} else {
+		employerRoutedComponent = <EmployerListPage />;
+	}
+
 	return (
 		<EmployerRouteContext.Provider value={contextData}>
-			{employerId ? <EmployerPage employerId={employerId} /> : <EmployerListPage />}
+			{employerRoutedComponent}
 		</EmployerRouteContext.Provider>
 	);
 };
