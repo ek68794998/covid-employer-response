@@ -31,16 +31,20 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 
 	const navLinks: JSX.Element = (
 		<>
-			<NavLink
-				exact={true}
-				className="HeaderMenu__Link HeaderMenu__Link--HasSubmenu"
+			<div
+				className={`HeaderMenu__SubmenuContainer HeaderMenu__SubmenuContainer--${isEmployerListSubmenuOpen ? "Open" : "Closed"}`}
 				onMouseEnter={(): void => setIsEmployerListSubmenuOpen(true)}
 				onMouseLeave={(): void => setIsEmployerListSubmenuOpen(false)}
-				onClick={closeHamburgerMenu}
-				to="/employers"
 			>
-				{strings.employerList}
-				<ul className={`HeaderMenu__Submenu HeaderMenu__Submenu--${isEmployerListSubmenuOpen ? "Open" : "Closed"}`}>
+				<NavLink
+					exact={true}
+					className="HeaderMenu__Link HeaderMenu__Link--HasSubmenu"
+					onClick={closeHamburgerMenu}
+					to="/employers"
+				>
+					{strings.employerList}
+				</NavLink>
+				<ul className="HeaderMenu__Submenu">
 					<li>
 						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers">
 							{strings.employerListAll}
@@ -57,7 +61,7 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 						</NavLink>
 					</li>
 				</ul>
-			</NavLink>
+			</div>
 			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/about">
 				{strings.about}
 			</NavLink>

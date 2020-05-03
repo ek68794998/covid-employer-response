@@ -44,12 +44,46 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
         áƥƥTïƭℓè
       </div>
     </div>
-    <a
-      aria-current={null}
-      className="HeaderMenu__Link"
-      href="/employers"
-      onClick={[Function]}
-    />
+    <div
+      className="HeaderMenu__SubmenuContainer HeaderMenu__SubmenuContainer--Closed"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <a
+        aria-current={null}
+        className="HeaderMenu__Link HeaderMenu__Link--HasSubmenu"
+        href="/employers"
+        onClick={[Function]}
+      />
+      <ul
+        className="HeaderMenu__Submenu"
+      >
+        <li>
+          <a
+            aria-current={null}
+            className="HeaderMenu__Link"
+            href="/employers"
+            onClick={[Function]}
+          />
+        </li>
+        <li>
+          <a
+            aria-current={null}
+            className="HeaderMenu__Link"
+            href="/employers/ranking"
+            onClick={[Function]}
+          />
+        </li>
+        <li>
+          <a
+            aria-current={null}
+            className="HeaderMenu__Link"
+            href="/employers/recent"
+            onClick={[Function]}
+          />
+        </li>
+      </ul>
+    </div>
     <a
       aria-current={null}
       className="HeaderMenu__Link"

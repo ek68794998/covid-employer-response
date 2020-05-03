@@ -56,7 +56,6 @@ header {
 		transition: 0.3s opacity;
 	
 		&:hover {
-			background: $navlink-hover-color;
 			color: inherit;
 			opacity: 1.0;
 			transition: 0.05s opacity;
@@ -69,10 +68,10 @@ header {
 			font-size: 18px;
 			height: 100%;
 			padding: ($navlink-padding-vertical - 2px) $navlink-padding-horizontal $navlink-padding-vertical;
-			position: relative;
 			white-space: nowrap;
 
 			&:hover {
+				background: $navlink-hover-color;
 				border-bottom-color: transparent !important;
 			}
 	
@@ -84,33 +83,42 @@ header {
 					top: calc(100% + #{$navlink-active-border-width});
 				}
 			}
+		}
+	}
 
-			.HeaderMenu__Submenu {
-				background: $navlink-hover-color;
-				box-shadow: 0 4px 5px $box-shadow-color;
-				display: none;
-				left: 0;
-				list-style: none;
-				margin: 0;
-				min-width: 160px;
-				padding: 0;
-				position: absolute;
-				top: 100%;
-		
-				&.HeaderMenu__Submenu--Open {
-					display: block;
-				}
+	.HeaderMenu__SubmenuContainer {
+		position: relative;
 
-				a {
-					margin: 0;
-					padding: ($navlink-padding-vertical * 2) $navlink-padding-horizontal;
+		.HeaderMenu__Submenu {
+			box-shadow: 0 4px 5px $box-shadow-color;
+			display: none;
+			left: 0;
+			list-style: none;
+			margin: 0;
+			min-width: 160px;
+			padding: 0;
+			position: absolute;
+			top: 100%;
 	
-					&.active {
-						border-bottom: 0;
-						border-left: $navlink-active-border-width solid $link-normal;
-						padding-left: ($navlink-padding-horizontal - $navlink-active-border-width);
-					}
+			.HeaderMenu__Link {
+				margin: 0;
+				padding: ($navlink-padding-vertical * 2) $navlink-padding-horizontal;
+	
+				&.active {
+					border-bottom: 0;
+					border-left: $navlink-active-border-width solid $link-normal;
+					padding-left: ($navlink-padding-horizontal - $navlink-active-border-width);
 				}
+			}
+		}
+	
+		&.HeaderMenu__SubmenuContainer--Open {
+			.HeaderMenu__Submenu {
+				display: block;
+			}
+
+			.HeaderMenu__Submenu, > a {
+				background: $navlink-hover-color;
 			}
 		}
 	}
@@ -199,7 +207,7 @@ footer {
 			margin: 0;
 			padding: 0;
 
-			a {
+			.HeaderMenu__Link {
 				padding-left: ($burger-button-padding * 2);
 			}
 		}
