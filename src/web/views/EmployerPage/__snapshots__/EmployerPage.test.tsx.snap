@@ -16,10 +16,6 @@ exports[`<EmployerPage /> renders without exploding 1`] = `
 <main
   id="employer-page"
 >
-  <div
-    className="EmployerPage__Content EmployerPage__Content--Loading"
-  >
-    ℓôáδïñϱ
-  </div>
+  [component: LoadingIndicator /]
 </main>
 `;

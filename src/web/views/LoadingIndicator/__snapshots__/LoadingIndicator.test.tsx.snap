@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingIndicator /> renders without exploding 1`] = `
+<div
+  className="LoadingIndicator__Container"
+/>
+`;

@@ -20,13 +20,16 @@ jest.mock(
 	"../EmployerPageDetails/EmployerPageDetails",
 	() => mockComponent("EmployerPageDetails"));
 
+jest.mock(
+	"../LoadingIndicator/LoadingIndicator",
+	() => mockComponent("LoadingIndicator"));
+
 describe("<EmployerPage />", () => {
 	test("renders without exploding", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			strings: {
 				appTitle: ploc("appTitle"),
 				home: ploc("home"),
-				loading: ploc("loading"),
 				notFound: ploc("notFound"),
 			},
 		});

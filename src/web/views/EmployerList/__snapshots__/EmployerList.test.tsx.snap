@@ -68,10 +68,4 @@ exports[`<EmployerList /> renders list of employers 1`] = `
 </div>
 `;
 
-exports[`<EmployerList /> renders without exploding 1`] = `
-<div
-  className="EmployerList__Container--Loading"
->
-  ℓôáδïñϱ
-</div>
-`;
+exports[`<EmployerList /> renders without exploding 1`] = `"[component: LoadingIndicator /]"`;

@@ -23,12 +23,11 @@ jest.mock(
 	() => mockComponent("EmployerListItem"));
 
 jest.mock(
-	"../EmployerPageDetails/EmployerPageDetails",
-	() => mockComponent("EmployerPageDetails"));
+	"../LoadingIndicator/LoadingIndicator",
+	() => mockComponent("LoadingIndicator"));
 
 describe("<EmployerList />", () => {
 	const strings: LocalizedStrings = {
-		loading: ploc("loading"),
 		noResults: ploc("noResults"),
 	};
 

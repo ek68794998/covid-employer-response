@@ -8,12 +8,6 @@ $close-button-size-small: 32px;
 $body-2column-width: ($card-min-width * 2 + 40px);
 $body-3column-width: ($card-min-width * 3 + 120px);
 
-.EmployerList__Container--Loading, .EmployerList__Container--NoResults {
-	font: 400 20px 'Baloo Chettan 2';
-	margin: 16px auto;
-	text-align: center;
-}
-
 .EmployerList__Grid {
 	display: grid;
 	grid-auto-rows: max-content;

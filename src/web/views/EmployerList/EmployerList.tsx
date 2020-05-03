@@ -9,6 +9,7 @@ import { getStrings } from "../../state/ducks/localization/selectors";
 import EmployerListItem from "../EmployerListItem/EmployerListItem";
 import { EmployerListSearchFilter } from "../EmployerListSearch/EmployerListSearchFilter";
 import { EmployerRouteContext, EmployerRouteContextData } from "../EmployerRoute/EmployerRouteContext";
+import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 
 import "./EmployerList.scss";
 
@@ -31,11 +32,7 @@ const EmployerList: React.FC = (): React.ReactElement => {
 		[ pageIndex ]);
 
 	if (!employersList) {
-		return (
-			<div className="EmployerList__Container--Loading">
-				{strings.loading}
-			</div>
-		);
+		return <LoadingIndicator />;
 	}
 
 	const filteredEmployers: EmployerRecordMetadata[] =
