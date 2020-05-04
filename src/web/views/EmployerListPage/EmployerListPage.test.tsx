@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -20,12 +20,9 @@ jest.mock(
 	() => mockComponent("EmployerList"));
 
 describe("<EmployerListPage />", () => {
-	test("renders without exploding", () => {
+	test("renders without exploding", async () => {
 		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				appTitle: ploc("appTitle"),
-				employerList: ploc("employerList"),
-			},
+			strings: await getPlocStringsAsync(),
 		});
 
 		const renderedValue: ReactTestRendererJSON | null =

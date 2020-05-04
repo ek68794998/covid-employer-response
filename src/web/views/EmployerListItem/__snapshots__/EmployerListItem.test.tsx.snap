@@ -21,7 +21,7 @@ exports[`<EmployerListItem /> renders details without exploding 1`] = `
       className="EmployerListItem__ReadMore"
       onClick={[Function]}
     >
-      řèáδMôřè
+      Rèáδ ₥ôřè
       <i
         className="material-icons"
       >
@@ -45,7 +45,7 @@ exports[`<EmployerListItem /> renders standard without exploding 1`] = `
   <span
     className="EmployerListItem__RatingText"
   >
-    ƒáïř
+    Fáïř
     <i
       className="material-icons EmployerListItem__RatingIcon"
     >

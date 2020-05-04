@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync } from "../../../__tests__/TestUtils";
 import { Citation } from "../../../common/Citation";
 
 import { AppState } from "../../state/AppState";
@@ -13,16 +13,8 @@ import configureStore from "../../state/configureStore";
 import EmployerCitation from "./EmployerCitation";
 
 describe("<EmployerCitation />", () => {
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				citationTypes: {
-					hearsay: ploc("hearsay"),
-					publication: ploc("publication"),
-					statement: ploc("statement"),
-				},
-			},
-		});
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

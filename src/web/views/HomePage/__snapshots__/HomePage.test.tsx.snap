@@ -14,12 +14,18 @@ exports[`<HomePage /> renders without exploding 1`] = `
         Welcome to
       </div>
       <h1>
-        áƥƥ
+        Çè₥ƥřèƨ
       </h1>
       <h2
         className="HomePage__Subtitle--Loading"
       >
-        λô₥è§úβƭïƭℓèTèжƭ
+        Â ƒřèè, ôƥèñ-δáƭá çôℓℓèçƭïôñ ôñ 
+        <a
+          href="/è₥ƥℓô¥èřƨ"
+        >
+          0 è₥ƥℓô¥èřƨ
+        </a>
+         (áñδ ϱřôωïñϱ) áñδ λôω ƭλè¥'Ʋè řèáçƭèδ ƭô ƭλè ÇÓVÌÐ-19 çřïƨïƨ.
       </h2>
     </div>
   </section>
@@ -31,10 +37,30 @@ exports[`<HomePage /> renders without exploding 1`] = `
         className="HomePage__InfoBlock HomePage__TileBlock"
       >
         <h3>
-          λô₥è§á₥ƥℓèTïƭℓè
+          Wλáƭ çáñ Ì ℓèářñ?
         </h3>
         <p>
-          λô₥è§á₥ƥℓèÐèƨçřïƥƭïôñ
+          Éáçλ çářδ ƨλôωƨ ¥ôú βřïèƒℓ¥ 
+          <strong>
+            ωλô
+          </strong>
+           ƭλè è₥ƥℓô¥èř ïƨ, á 
+          <strong>
+            řáƭïñϱ
+          </strong>
+           ôƒ ƭλèïř ϱèñèřáℓ řèƨƥôñƨè, áñδ á 
+          <strong>
+            ƨú₥₥ář¥
+          </strong>
+           áβôúƭ ƭλè áçƭïôñƨ ƭλè¥'Ʋè ƭáƙèñ. Ýôú çáñ áℓƨô ôƥèñ úƥ á ₥ôřè δèƭáïℓèδ Ʋïèω ƭô ƒïñδ 
+          <strong>
+            çïƭèδ ñèωƨ ářƭïçℓèƨ
+          </strong>
+          , ôř çℓïçƙ Ʋářïôúƨ 
+          <strong>
+            ℓïñƙƨ
+          </strong>
+           ƭô ϱô ôñ Wïƙïƥèδïá, ôř ƨèè ƭλè è₥ƥℓô¥èř'ƨ ôƒƒïçïáℓ ωèβƨïƭè.
         </p>
       </div>
       <div
@@ -53,7 +79,7 @@ exports[`<HomePage /> renders without exploding 1`] = `
       href="/employers"
       onClick={[Function]}
     >
-      λô₥è£ïƨƭ£ïñƙ
+      Táƙè ₥è ƭô ƭλè ℓïƨƭ!
     </a>
   </section>
   <section
@@ -74,10 +100,16 @@ exports[`<HomePage /> renders without exploding 1`] = `
         className="HomePage__InfoBlock HomePage__TileBlock"
       >
         <h3>
-          λô₥è§úβ₥ïƭTïƭℓè
+          Çáñ Ì áδδ ñèω ïñƒô?
         </h3>
         <p>
-          λô₥è§úβ₥ïƭÐèƨçřïƥƭïôñ
+          Ýèƨ! Tλè èáƨïèƨƭ ωá¥ ƭô ƨúβ₥ïƭ ñèω ïñƒôř₥áƭïôñ ïƨ β¥ ƒôℓℓôωïñϱ ƭλè ℓïñƙ βèℓôω ƭô ôúř ƨúβ₥ïƨƨïôñ ƒôř₥. Tô ℓèářñ ₥ôřè áβôúƭ ƭλïƨ ôř ôƭλèř ωá¥ƨ ƭô çôñƭřïβúƭè, ƥℓèáƨè çλèçƙ ôúƭ 
+          <a
+            href="/ƨúβ₥ïƭ"
+          >
+            ôúř ƨúβ₥ïƨƨïôñƨ ƥáϱè
+          </a>
+          .
         </p>
       </div>
     </div>
@@ -91,7 +123,7 @@ exports[`<HomePage /> renders without exploding 1`] = `
       rel="noopener noreferrer"
       target="_blank"
     >
-      λô₥èFôř₥£ïñƙ
+      Óƥèñ ƭλè ƒôř₥!
     </a>
   </section>
 </main>

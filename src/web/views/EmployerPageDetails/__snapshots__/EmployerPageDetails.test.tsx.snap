@@ -32,7 +32,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
     <div
       className="EmployerPageDetails__LastUpdated"
     >
-      è₥ƥℓô¥èřÛƥδáƭèδÐáƭè: 2020-6-1
+      £áƭèƨƭ ïñƒôř₥áƭïôñ: 2020-6-1
     </div>
   </div>
   [component: EmployerCitationList citations=([object Object],[object Object],[object Object]) /]
@@ -42,7 +42,9 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
     <div
       className="EmployerPageDetails__Profile"
     >
-      <h2 />
+      <h2>
+        É₥ƥℓô¥èř ƥřôƒïℓè
+      </h2>
       <table
         className="EmployerPageDetails__ProfileDetails"
       >
@@ -50,7 +52,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
-              title="ñá₥è"
+              title="Tλè ïñçôřƥôřáƭèδ ñá₥è ôƒ ƭλè è₥ƥℓô¥èř."
             >
               <i
                 className="material-icons"
@@ -67,7 +69,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
-              title="ℓôçáƭïôñ"
+              title="Wλèřè ƭλè è₥ƥℓô¥èř'ƨ λèáδ9úářƭèřƨ ářè ℓôçáƭèδ."
             >
               <i
                 className="material-icons"
@@ -78,7 +80,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
             <td
               className="EmployerPageDetails__ProfileValue"
             >
-              City, us (Multinational)
+              City, Ûñïƭèδ §ƭáƭèƨ (Multinational)
               <img
                 className="EmployerPageDetails__ProfileFlag"
                 src="/images/flags/us.svg"
@@ -88,7 +90,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
-              title="è₥ƥℓô¥èèƨ"
+              title="Tλè áƥƥřôжï₥áƭè ñú₥βèř ôƒ è₥ƥℓô¥èèƨ ƭλè çô₥ƥáñ¥ λáδ ƥřïôř ƭô ƭλè ÇôřôñáƲïřúƨ ƥáñδè₥ïç."
             >
               <i
                 className="material-icons"
@@ -104,7 +106,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
                 className="EmployerPageDetails__Delta EmployerPageDetails__Delta--Negative"
               >
                 (
-                è₥ƥℓô¥èèÐèℓƭá: -2,222 / 2015
+                -2,222 ƨïñçè 2015
                 )
               </span>
             </td>
@@ -112,7 +114,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
-              title="ôƒƒïçïáℓWèβƨïƭè"
+              title="Tλè è₥ƥℓô¥èř'ƨ ôƒƒïçïáℓ ωèβƨïƭè ℓïñƙ."
             >
               <i
                 className="material-icons"
@@ -128,7 +130,7 @@ exports[`<EmployerPageDetails /> renders using an employer record 1`] = `
                 href="/submit"
                 onClick={[Function]}
               >
-                è₥ƥℓô¥èř§úβ₥ïƭÇλáñϱè: Contoso
+                §úβ₥ïƭ úƥδáƭè ƒôř Contoso
               </a>
             </td>
           </tr>
@@ -166,7 +168,9 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
     <div
       className="EmployerPageDetails__Profile"
     >
-      <h2 />
+      <h2>
+        É₥ƥℓô¥èř ƥřôƒïℓè
+      </h2>
       <table
         className="EmployerPageDetails__ProfileDetails"
       >
@@ -174,7 +178,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
-              title="ñá₥è"
+              title="Tλè ïñçôřƥôřáƭèδ ñá₥è ôƒ ƭλè è₥ƥℓô¥èř."
             >
               <i
                 className="material-icons"
@@ -191,7 +195,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
           <tr>
             <td
               className="EmployerPageDetails__ProfileLabel"
-              title="ôƒƒïçïáℓWèβƨïƭè"
+              title="Tλè è₥ƥℓô¥èř'ƨ ôƒƒïçïáℓ ωèβƨïƭè ℓïñƙ."
             >
               <i
                 className="material-icons"
@@ -207,7 +211,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
                 href="/submit"
                 onClick={[Function]}
               >
-                è₥ƥℓô¥èř§úβ₥ïƭÇλáñϱè: employer
+                §úβ₥ïƭ úƥδáƭè ƒôř employer
               </a>
             </td>
           </tr>

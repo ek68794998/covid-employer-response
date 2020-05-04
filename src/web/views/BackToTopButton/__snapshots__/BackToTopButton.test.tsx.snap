@@ -6,7 +6,7 @@ exports[`<BackToTopButton /> shows button when scrolled down 1`] = `
 <button
   className="BackToTopButton__Link"
   onClick={[Function]}
-  title="βáçƙTôTôƥ"
+  title="Tôƥ ôƒ ƥáϱè"
 >
   <i
     className="material-icons"

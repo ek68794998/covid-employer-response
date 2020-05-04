@@ -8,13 +8,15 @@ import { getStrings } from "../../state/ducks/localization/selectors";
 
 import "./BackToTopButton.scss";
 
+const getIsVisible = (): boolean => typeof window === "undefined" ? false : window.scrollY > 0;
+
 const BackToTopButton: React.FC = (): React.ReactElement | null => {
-	const [ isVisible, setIsVisible ] = useState(false);
+	const [ isVisible, setIsVisible ] = useState(getIsVisible());
 	const strings: LocalizedStrings = useSelector(getStrings);
 
 	if (typeof window !== "undefined") {
 		const trackScrolling = (): void => {
-			setIsVisible(window.scrollY > 0);
+			setIsVisible(getIsVisible());
 		};
 
 		useEffect(

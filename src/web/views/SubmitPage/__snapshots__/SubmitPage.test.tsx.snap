@@ -11,9 +11,9 @@ exports[`<SubmitPage /> renders without exploding 1`] = `
       className="SubmitPage__Content"
     >
       <h1>
-        ƨúβ₥ïƭTïƭℓè
+        §úβ₥ïƭƭïñϱ ñèω ïñƒôř₥áƭïôñ
       </h1>
-      [component: ReactMarkdown source=(ƨúβ₥ïƭ§úβƭïƭℓè) /]
+      [component: ReactMarkdown source=(**ÇôřôñáƲïřúƨ É₥ƥℓô¥èř Rèƨƥôñƨè Třáçƙèř** ïƨ çô₥ƥℓèƭèℓ¥ ôƥèñ-δáƭá áñδ ôƥèñ-ƨôúřçè. Wè ωôúℓδ ℓôƲè ƭô áççèƥƭ ¥ôúř ñèω è₥ƥℓô¥èř èñƭřïèƨ, ñèω δèƭáïℓƨ ôř çℓáï₥ƨ, ôř ¥ôúř çôδè çλáñϱèƨ. HáƲè á ℓôôƙ áƭ ƭλè ôƥƭïôñƨ βèℓôω ƭô ƨèè λôω ¥ôú çáñ λèℓƥ ƨλáƥè ôúř ƒúƭúřè!) /]
       <section
         className="SubmitPage__Options"
       >
@@ -24,9 +24,9 @@ exports[`<SubmitPage /> renders without exploding 1`] = `
           target="_blank"
         >
           <h2>
-            ƨúβ₥ïƭÐáƭáFôř₥.ƭïƭℓè
+            §úβ₥ïƭ δáƭá Ʋïá ƒôř₥
           </h2>
-          [component: ReactMarkdown source=(ƨúβ₥ïƭÐáƭáFôř₥.δèƨçřïƥƭïôñ) /]
+          [component: ReactMarkdown source=(Tλè èáƨïèƨƭ ωá¥ ƭô ƨúβ₥ïƭ ñèω è₥ƥℓô¥èřƨ ôř èδïƭ èжïƨƭïñϱ ôñèƨ ïƨ ƭλřôúϱλ ôúř **ôñℓïñè Gôôϱℓè ƒôř₥**. Júƨƭ ƒïℓℓ ôúƭ á ƒèω ƒïèℓδƨ áñδ ωè'ℓℓ ₥áƙè ƭλè çλáñϱèƨ βèλïñδ ƭλè ƨçèñèƨ.) /]
           <div
             className="SubmitPage__OptionIcon"
           >
@@ -45,9 +45,9 @@ exports[`<SubmitPage /> renders without exploding 1`] = `
           target="_blank"
         >
           <h2>
-            ƨúβ₥ïƭÐáƭáGïƭλúβ.ƭïƭℓè
+            §úβ₥ïƭ δáƭá Ʋïá GïƭHúβ
           </h2>
-          [component: ReactMarkdown source=(ƨúβ₥ïƭÐáƭáGïƭλúβ.δèƨçřïƥƭïôñ) /]
+          [component: ReactMarkdown source=(Âñôƭλèř ωá¥ ƭô áδδ ôř úƥδáƭè è₥ƥℓô¥èřƨ ïƨ ƭλřôúϱλ ôúř **GïƭHúβ ïƨƨúèƨ ƥáϱè**. Júƨƭ ôƥèñ áñ ïƨƨúè ôř ₥áƙè ƭλè çλáñϱè ¥ôúřƨèℓƒ áñδ ƨƭářƭ á ƥúℓℓ řè9úèƨƭ.) /]
           <div
             className="SubmitPage__OptionIcon"
           >
@@ -66,9 +66,9 @@ exports[`<SubmitPage /> renders without exploding 1`] = `
           target="_blank"
         >
           <h2>
-            ƨúβ₥ïƭÇôδèGïƭλúβ.ƭïƭℓè
+            §úβ₥ïƭ çôδè Ʋïá GïƭHúβ
           </h2>
-          [component: ReactMarkdown source=(ƨúβ₥ïƭÇôδèGïƭλúβ.δèƨçřïƥƭïôñ) /]
+          [component: ReactMarkdown source=(Wè'δ ℓôƲè ƭô ƨèè ¥ôúř ïδèáƨ ôñ λôω ƭô ƨλáƥè ƭλïƨ ωèβƨïƭè. Júƨƭ ƒôřƙ **ôúř GïƭHúβ řèƥôƨïƭôř¥** áñδ ƨƭářƭ á ƥúℓℓ řè9úèƨƭ ƭô ƨúβ₥ïƭ ¥ôúř çôδè çλáñϱèƨ.) /]
           <div
             className="SubmitPage__OptionIcon"
           >

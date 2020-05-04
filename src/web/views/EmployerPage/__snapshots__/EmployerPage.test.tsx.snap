@@ -19,7 +19,7 @@ exports[`<EmployerPage /> renders without exploding 1`] = `
   <div
     className="EmployerPage__Content EmployerPage__Content--Loading"
   >
-    ℓôáδïñϱ
+    £ôáδïñϱ...
   </div>
 </main>
 `;
