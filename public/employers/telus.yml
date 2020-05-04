@@ -1,0 +1,55 @@
+name: Telus Communications Inc.
+shortName: TELUS
+ticker: TU
+wiki: Telus Corporation
+image: telus.svg
+officialWebsite: https://www.telus.com/en/about
+industries:
+  - internet
+  - telecommunications
+location:
+  city: Vancouver
+  state: BC
+  country: ca
+  international: true # Under "Telus International".
+  wiki: Vancouver
+employeesBefore:
+  type: approximately
+  upperBound: 59300
+  year: 2018
+summary: On the heels of a major restructuring in February, TELUS did not resort to layoffs during the COVID-19 pandemic. They did, however, make significant donation contributions, including the CEO giving up three months of salary to COVID-19 nonprofits.
+citations:
+  - summary: The CEO of TELUS dedicated his entire salary for the months of April through June to COVID-19 relief.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Light Reading
+        link: https://web.archive.org/web/20200412100134/https://www.lightreading.com/services/after-job-cuts-telus-ceo-trims-pay-in-covid-19-response/d/d-id/758788
+        date: 2020-04-23T20:50:32Z
+  - summary: In addition to their efforts to consumers to waive overages and roaming fees, TELUS delievered over 10,000 free mobile devices to vulnerable, isolated people or those hospitalized due to COVID-19.
+    positivity: 1
+    type: publication
+    sources:
+      - source: TELUS corporate news
+        link: https://web.archive.org/web/20200426180613/https://www.telus.com/en/about/covid-19-updates
+        date: 2020-04-23T12:00:00Z # Estimate based on latest update date of 04/23/2020. Announcement may be older.
+      - source: MarketWatch
+        link: https://www.marketwatch.com/press-release/telus-delivering-over-10000-free-mobile-devices-to-help-isolated-seniors-hospitalized-patients-and-vulnerable-canadians-stay-connected-during-the-covid-19-pandemic-2020-04-20-719713
+        date: 2020-04-20T08:01:03-04:00
+  - summary: Multiple TELUS boards donated combined totals of over $265,000 CAD to COVID-19 nonprofits. Additional contributions amounting to over $450,000 CAD were committed for sometime in 2020.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Bloomberg
+        link: https://www.bloomberg.com/press-releases/2020-04-21/telus-ottawa-community-board-gives-150-000-to-nonprofits-to-aid-in-covid-19-response
+        date: 2020-04-21T11:00:09Z
+      - source: Yahoo! Finance
+        link: https://finance.yahoo.com/news/telus-victoria-community-board-gives-110010759.html
+        date: 2020-04-21T11:00:10Z
+  - summary: TELUS International set up new systems to allow over 10,000 employees to work from home.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Google Cloud Blog
+        link: https://cloud.google.com/blog/topics/remote-work/telus-runs-vdi-on-google-cloud-during-covid-closures
+        date: 2020-04-23T16:41:44Z

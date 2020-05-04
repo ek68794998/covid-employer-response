@@ -26,7 +26,7 @@ citations:
         title: COVID-19 Blog
         link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
         date: 2020-02-28T12:00:00Z # Estimate based on entry date of 02/28/2020.
-  - summary: Amazon requested that "all employees who can work from home to do so through April 10."
+  - summary: Amazon requested that "all employees who can work from home to do so through April 10." They later extended this date to October 2.
     positivity: 1
     type: publication
     sources:
@@ -34,6 +34,9 @@ citations:
         title: COVID-19 Blog
         link: https://blog.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19
         date: 2020-03-06T12:00:00Z # Estimate based on entry date of 03/06/2020.
+      - source: Reuters
+        link: https://web.archive.org/web/20200501220806/https://www.reuters.com/article/us-health-coronavirus-amazon-com/amazon-extends-work-from-home-regime-till-october-2-idUSKBN22D4TK
+        date: 2020-05-01T08:14:55Z
   - summary: Amazon started providing two weeks of paid time off for employees who were quarantined after being diagnosed with COVID-19.
     positivity: 0
     type: publication
@@ -163,6 +166,13 @@ citations:
       - source: Whole Foods Market Newsroom
         link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
         date: 2020-03-16T12:00:00Z # Estimate based on entry date of 03/16/2020.
+  - summary: Amazon committed to spend its entire Q2 profits&mdash;an expected $4 billion USD&mdash;on COVID-19-related relief efforts for its employees and customers.
+    positivity: 1
+    type: publication
+    sources:
+      - source: The Independent
+        link: https://web.archive.org/web/20200501051715/https://www.independent.co.uk/news/world/americas/amazon-earnings-q2-jeff-bezos-shareholders-profit-coronavirus-a9493466.html
+        date: 2020-05-01T07:29:48+01:00
   - summary: Amazon terminated a program allowing employees to take unlimited, unpaid time off if fearful of contracting COVID-19. Employees instead would have to apply for a leave of absence, around which the requirements for such requests were not made clear.
     positivity: -1
     type: publication
@@ -173,7 +183,7 @@ citations:
       - source: CBS News
         link: https://web.archive.org/web/20200503225347/https://www.cbsnews.com/news/amazon-unlimited-unpaid-time-off/
         date: 2020-04-28T19:01:00-04:00
-  - summary: An Amazon vice president of six years quit his job, claiming that two more employees had been fired for speaking out against working conditions, and that the situation had become "a vein of toxicity running through the company culture."
+  - summary: An Amazon vice president of six years quit his job in "dismay" after claiming that two more employees had been fired for speaking out against working conditions, and that the situation had become "a vein of toxicity running through the company culture."
     positivity: -1
     type: statement
     sources:
