@@ -9,11 +9,11 @@ officialWebsite: https://www.labcorp.com/about-us
 industries:
   - healthCare
 location:
-  city: Fake City
-  state: FS
+  city: Burlington
+  state: NC
   country: us
   international: false
-  wiki: Fake City, Fakestate
+  wiki: Burlington, North Carolina
 employeesBefore:
   type: approximately
   upperBound: 61000

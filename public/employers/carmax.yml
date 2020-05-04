@@ -1,7 +1,4 @@
 name: CarMax, Inc.
-aliases:
-  - MyContoso
-  - TheContoso
 shortName: CarMax
 ticker: KMX
 wiki: CarMax
@@ -10,11 +7,11 @@ officialWebsite: https://www.carmax.com/about-carmax
 industries:
   - automotive
 location:
-  city: Fake City
-  state: FS
+  city: Richmond
+  state: VA
   country: us
-  international: false
-  wiki: Fake City, Fakestate
+  international: true
+  wiki: Richmond, Virginia
 employeesBefore:
   type: approximately
   upperBound: 25000
