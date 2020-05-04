@@ -1,0 +1,29 @@
+name: Sidwell Friends School
+shortName: Sidwell Friends
+wiki: Sidwell Friends School
+image: sidwell-friends.svg#971c30
+officialWebsite: https://www.sidwell.edu/about
+industries:
+  - education
+location:
+  city: Bethesda
+  state: MD
+  country: us
+  international: false
+  wiki: Bethesda, Maryland
+summary: As mandated, Sidwell Friends, known as a private school which educates children of political fame, transitioned to an online learning experience for kids. However, they openly stated that despite their significant endowments, they would accept over $5 million USD in loans intended for small businesses.
+citations:
+  - summary: Sidwell Friends transitioned to "distance learning" as of March 16. Though the plan is worded fairly vaguely, it indicated that students would be taught using a variety of online methods.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Sidwell Friends
+        link: https://www.sidwell.edu/about/coronavirus
+        date: 2020-03-12T13:14:00-07:00 # Based on time of tweet linking to this page.
+  - summary: Sidwell Friends kept a $5.2 million USD government loan granted through the PPP, despite having over $50 million USD in endowments.
+    positivity: -1
+    type: publication
+    sources:
+      - source: New York Times
+        link: https://web.archive.org/web/20200430082221/https://www.nytimes.com/2020/04/29/us/prep-schools-coronavirus-loans.html
+        date: 2020-04-29T17:21:54-04:00
