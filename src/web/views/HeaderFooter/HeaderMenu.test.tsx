@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -12,15 +12,8 @@ import configureStore from "../../state/configureStore";
 import HeaderMenu from "./HeaderMenu";
 
 describe("<HeaderMenu />", () => {
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				about: ploc("about"),
-				appTitle: ploc("appTitle"),
-				appTitleShort: ploc("app"),
-				home: ploc("home"),
-			},
-		});
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

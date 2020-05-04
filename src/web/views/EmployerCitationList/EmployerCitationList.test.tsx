@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 import { Citation } from "../../../common/Citation";
 
 import { AppState } from "../../state/AppState";
@@ -17,21 +17,8 @@ jest.mock(
 	() => mockComponent("EmployerCitation"));
 
 describe("<EmployerCitationList />", () => {
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = configureStore({
-			strings: {
-				citationTypeDescriptions: {
-					hearsay: ploc("hearsayDescription"),
-					publication: ploc("publicationDescription"),
-					statement: ploc("statementDescription"),
-				},
-				citationTypes: {
-					hearsay: ploc("hearsay"),
-					publication: ploc("publication"),
-					statement: ploc("statement"),
-				},
-			},
-		});
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

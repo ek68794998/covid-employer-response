@@ -4,8 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -23,16 +22,8 @@ jest.mock(
 	() => mockComponent("LoadingIndicator"));
 
 describe("<EmployerBracketPage />", () => {
-	const strings: LocalizedStrings = {
-		employerListRankingBestTitle: ploc("employerListRankingBestTitle"),
-		employerListRankingWorstTitle: ploc("employerListRankingWorstTitle"),
-		employerListRecentTitle: ploc("employerListRecentTitle"),
-	};
-
-	const createConfigStore = (): Store<AppState, AnyAction> => configureStore({ strings });
-
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

@@ -4,7 +4,58 @@ exports[`<EmployerListItem /> renders details without exploding 1`] = `
 <div
   className="EmployerListItem__Container EmployerListItem__Container--Detailed"
 >
-  [component: EmployerDetailsHeader employer=([object Object]) onClickEmployerName=([Function]) useShortText=(true) /]
+  <div
+    className="EmployerListItem__Title"
+  >
+    <h2>
+      <a
+        onClick={[Function]}
+        title=""
+      >
+        
+      </a>
+    </h2>
+    <span
+      className="EmployerRatingPill__Box EmployerRatingPill__Box--fair "
+      title="Tλè ϱèñèřáℓ řáƭïñϱ ôƒ ƭλè è₥ƥℓô¥èř."
+    >
+      Fáïř
+      <i
+        className="material-icons"
+      >
+        trending_flat
+      </i>
+    </span>
+  </div>
+  <div
+    className="EmployerListItem__Subtitle"
+  >
+    <span
+      className="EmployerListItem__AggregateRatings"
+      title="Âϱϱřèϱáƭè çôúñƭƨ ôƒ ƭλè ϱôôδ áñδ βáδ áçƭïôñƨ áñ è₥ƥℓô¥èř λáƨ ƭáƙèñ."
+    >
+      <span
+        className="EmployerListItem__GoodRatings"
+      >
+        <i
+          className="material-icons"
+        >
+          add
+        </i>
+        0
+      </span>
+      <span
+        className="EmployerListItem__PoorRatings"
+      >
+        <i
+          className="material-icons"
+        >
+          remove
+        </i>
+        0
+      </span>
+    </span>
+  </div>
   <div
     className="EmployerListItem__Summary"
     onClick={[Function]}
@@ -21,7 +72,7 @@ exports[`<EmployerListItem /> renders details without exploding 1`] = `
       className="EmployerListItem__ReadMore"
       onClick={[Function]}
     >
-      řèáδMôřè
+      Rèáδ ₥ôřè
       <i
         className="material-icons"
       >
@@ -43,11 +94,12 @@ exports[`<EmployerListItem /> renders standard without exploding 1`] = `
     
   </span>
   <span
-    className="EmployerListItem__RatingText"
+    className="EmployerRatingPill__Box EmployerRatingPill__Box--fair EmployerRatingPill__Box--LowContrast"
+    title="Tλè ϱèñèřáℓ řáƭïñϱ ôƒ ƭλè è₥ƥℓô¥èř."
   >
-    ƒáïř
+    Fáïř
     <i
-      className="material-icons EmployerListItem__RatingIcon"
+      className="material-icons"
     >
       trending_flat
     </i>

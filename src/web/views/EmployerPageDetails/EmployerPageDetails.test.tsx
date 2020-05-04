@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 import { EmployerRecord } from "../../../common/EmployerRecord";
 
 import { AppState } from "../../state/AppState";
@@ -25,33 +25,6 @@ jest.mock(
 	() => mockComponent("EmployerRatingPill"));
 
 describe("<EmployerPageDetails />", () => {
-	const createConfigStore = (preloaded: Partial<AppState> = {}): Store<AppState, AnyAction> => configureStore({
-		strings: {
-			detailDescriptions: {
-				aka: ploc("aka"),
-				edit: ploc("edit"),
-				employees: ploc("employees"),
-				industry: ploc("industry"),
-				linkToEmployer: ploc("linkToEmployer"),
-				location: ploc("location"),
-				name: ploc("name"),
-				officialWebsite: ploc("officialWebsite"),
-				rating: ploc("rating"),
-				ratingCounts: ploc("ratingCounts"),
-				ticker: ploc("ticker"),
-				wikipedia: ploc("wikipedia"),
-			},
-			detailLabels: {
-				officialWebsite: ploc("officialWebsiteLabel"),
-				wikipedia: ploc("wikipediaLabel"),
-			},
-			employeeDelta: `${ploc("employeeDelta")}: {change} / {date}`,
-			employerSubmitChange: `${ploc("employerSubmitChange")}: {employer}`,
-			employerUpdatedDate: `${ploc("employerUpdatedDate")}: {date}`,
-		},
-		...preloaded,
-	});
-
 	const dateToLocaleStringPrototype: any = Date.prototype.toLocaleDateString;
 
 	afterEach(() => {
@@ -64,10 +37,10 @@ describe("<EmployerPageDetails />", () => {
 		};
 	});
 
-	test("renders without exploding", () => {
+	test("renders without exploding", async () => {
 		const e: EmployerRecord = new EmployerRecord();
 
-		const store: Store<AppState, AnyAction> = createConfigStore({
+		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsComplete: {
 					[e.id]: e,
@@ -76,6 +49,7 @@ describe("<EmployerPageDetails />", () => {
 					[e.id]: EmployerRecord.toMetadata(e),
 				},
 			},
+			strings: await getPlocStringsAsync(),
 		});
 
 		const renderedValue: ReactTestRendererJSON | null =
@@ -90,7 +64,7 @@ describe("<EmployerPageDetails />", () => {
 		expect(renderedValue).toMatchSnapshot();
 	});
 
-	test("renders using an employer record", () => {
+	test("renders using an employer record", async () => {
 		const e: EmployerRecord =
 			Object.assign(new EmployerRecord(), {
 				citations: [{
@@ -119,7 +93,7 @@ describe("<EmployerPageDetails />", () => {
 
 		e.lastUpdated = EmployerRecord.getLastUpdateDate(e).toISOString();
 
-		const store: Store<AppState, AnyAction> = createConfigStore({
+		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsComplete: {
 					[e.id]: e,
@@ -128,6 +102,7 @@ describe("<EmployerPageDetails />", () => {
 					[e.id]: EmployerRecord.toMetadata(e),
 				},
 			},
+			strings: await getPlocStringsAsync(),
 		});
 
 		const renderedValue: ReactTestRendererJSON | null =

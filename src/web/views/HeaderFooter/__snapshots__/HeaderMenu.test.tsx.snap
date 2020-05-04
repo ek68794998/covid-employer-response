@@ -25,9 +25,9 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
         href="/"
         onClick={[Function]}
         style={Object {}}
-        title="λô₥è"
+        title="Hô₥è"
       >
-        áƥƥ
+        Çè₥ƥřèƨ
         <span
           style={
             Object {
@@ -41,7 +41,7 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
       <div
         className="HeaderMenu__Subtitle"
       >
-        áƥƥTïƭℓè
+        ÇôřôñáƲïřúƨ É₥ƥℓô¥èř Rèƨƥôñƨè Třáçƙèř
       </div>
     </div>
     <div
@@ -54,7 +54,9 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
         className="HeaderMenu__Link HeaderMenu__Link--HasSubmenu"
         href="/employers"
         onClick={[Function]}
-      />
+      >
+        É₥ƥℓô¥èřƨ
+      </a>
       <ul
         className="HeaderMenu__Submenu"
       >
@@ -64,7 +66,9 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
             className="HeaderMenu__Link"
             href="/employers"
             onClick={[Function]}
-          />
+          >
+            Âℓℓ
+          </a>
         </li>
         <li>
           <a
@@ -72,7 +76,9 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
             className="HeaderMenu__Link"
             href="/employers/ranking"
             onClick={[Function]}
-          />
+          >
+            ßèƨƭ & ωôřƨƭ
+          </a>
         </li>
         <li>
           <a
@@ -80,7 +86,9 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
             className="HeaderMenu__Link"
             href="/employers/recent"
             onClick={[Function]}
-          />
+          >
+            Nèω
+          </a>
         </li>
       </ul>
     </div>
@@ -90,14 +98,16 @@ exports[`<HeaderMenu /> renders without exploding 1`] = `
       href="/about"
       onClick={[Function]}
     >
-      áβôúƭ
+      FÂQƨ
     </a>
     <a
       aria-current={null}
       className="HeaderMenu__Link"
       href="/submit"
       onClick={[Function]}
-    />
+    >
+      §úβ₥ïƭ
+    </a>
   </div>
 </header>
 `;

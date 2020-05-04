@@ -4,11 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestRendererJSON } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 import { EmployerEmployeeProfile } from "../../../common/EmployerEmployeeProfile";
 import { EmployerLocation } from "../../../common/EmployerLocation";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
-import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -27,14 +26,8 @@ jest.mock(
 	() => mockComponent("LoadingIndicator"));
 
 describe("<EmployerList />", () => {
-	const strings: LocalizedStrings = {
-		noResults: ploc("noResults"),
-	};
-
-	const createConfigStore = (): Store<AppState, AnyAction> => configureStore({ strings });
-
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(
@@ -50,7 +43,7 @@ describe("<EmployerList />", () => {
 		expect(renderedValue).toMatchSnapshot();
 	});
 
-	test("renders empty list of employers", () => {
+	test("renders empty list of employers", async () => {
 		const record: EmployerRecordMetadata = new EmployerRecordMetadata(0, 0, 0, "fair");
 
 		record.employeesBefore = new EmployerEmployeeProfile();
@@ -64,7 +57,7 @@ describe("<EmployerList />", () => {
 					[record.id]: record,
 				},
 			},
-			strings,
+			strings: await getPlocStringsAsync(),
 		});
 
 		const filter: EmployerListSearchFilter = new EmployerListSearchFilter();
@@ -90,7 +83,7 @@ describe("<EmployerList />", () => {
 		expect(renderedValue).toMatchSnapshot();
 	});
 
-	test("renders list of employers", () => {
+	test("renders list of employers", async () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
@@ -114,7 +107,7 @@ describe("<EmployerList />", () => {
 					}),
 				},
 			},
-			strings,
+			strings: await getPlocStringsAsync(),
 		});
 
 		const filter: EmployerListSearchFilter = new EmployerListSearchFilter();

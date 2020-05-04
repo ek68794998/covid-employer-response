@@ -4,7 +4,7 @@ exports[`<EmployerList /> renders empty list of employers 1`] = `
 <div
   className="EmployerList__Container--NoResults"
 >
-  ñôRèƨúℓƭƨ
+  Nô řèƨúℓƭƨ.
 </div>
 `;
 

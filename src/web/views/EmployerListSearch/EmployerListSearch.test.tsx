@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import renderer, { ReactTestInstance, ReactTestRenderer, act } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
-import { mockComponent, ploc } from "../../../__tests__/TestUtils";
+import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
 
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
@@ -22,15 +22,8 @@ jest.mock(
 	() => mockComponent("EmployeeCountFilterControl"));
 
 describe("<EmployerListSearch />", () => {
-	const createConfigStore = (): Store<AppState, AnyAction> =>
-		configureStore({
-			strings: {
-				search: ploc("search"),
-			},
-		});
-
-	test("renders without exploding", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+	test("renders without exploding", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const testRenderer: ReactTestRenderer =
 			renderer.create(
@@ -46,8 +39,8 @@ describe("<EmployerListSearch />", () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	test("opens 'filters' dropdown", () => {
-		const store: Store<AppState, AnyAction> = createConfigStore();
+	test("opens 'filters' dropdown", async () => {
+		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const testRenderer: ReactTestRenderer =
 			renderer.create(
