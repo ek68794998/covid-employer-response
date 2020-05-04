@@ -1,0 +1,37 @@
+name: The North Face, Inc.
+aliases:
+  - VF Corporation
+shortName: The North Face
+wiki: The North Face
+image: the-north-face.svg#da2427
+officialWebsite: https://www.thenorthface.com/about-us/our-story.html
+industries:
+  - apparel
+  - retail
+location:
+  city: Alameda
+  state: CA
+  country: us
+  international: true
+  wiki: Alameda, California
+employeesBefore:
+  source: Owler
+  sourceLink: https://www.owler.com/company/thenorthface
+  type: approximately
+  upperBound: 3000
+  year: 2019
+summary: The North Face generally shared its parent company's generosity during COVID-19, providing full pay to furloughed employees and product discounts to frontline workers.
+citations:
+  - summary: The North Face made a significant contribution of $1 million USD to COVID-19 relief efforts. However, it's unclear if this was a part of its parent company's contribution, or an additional sum.
+    positivity: 0
+    type: publication
+    sources:
+      - source: SGB Media
+        link: https://sgbonline.com/the-north-face-commits-1-million-in-grants-to-covid-19-recovery-efforts/
+        date: 2020-04-06T13:55:54Z
+  - summary: The North Face began providing a 50% discount on its wares to all frontline healthcare workers.
+    positivity: 1
+    type: publication
+    sources:
+      - source: The North Face corporate news
+        link: https://web.archive.org/web/20200502120244/https://www.thenorthface.com/help/the-north-face-healthcare-workers-discount-program.html # Probably April 14, but uncertain.
