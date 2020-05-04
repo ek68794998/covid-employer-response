@@ -1,0 +1,20 @@
+name: Pak-A-Sak # Of Indiana fame, NOT the one in Texas.
+image: pak-a-sak.svg#49a1d1
+officialWebsite: https://www.pakasak.com/aboutus.html
+industries:
+  - groceryStore # Technically convenience store / gas station.
+location:
+  city: Portland
+  state: IN
+  country: us
+  international: false
+  wiki: Portland, Indiana
+summary: Contoso did not give appropriate paid leave and did not send home those showing COVID-19 symptoms.
+citations:
+  - summary: On top of not receiving hazard pay, an employee at Pak-A-Sack in Bluffton, IN posted a resignation notice stating that they had not received proper PPE to continue doing their job.
+    positivity: -1
+    type: hearsay
+    sources:
+      - source: Reddit r/FortWayne
+        link: https://web.archive.org/web/20200504222623/https://www.reddit.com/r/fortwayne/comments/g2qw4y/posted_on_the_door_of_the_pakasak_in_bluffton/
+        date: 2020-04-16T17:00:41-07:00
