@@ -163,3 +163,20 @@ citations:
       - source: Whole Foods Market Newsroom
         link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
         date: 2020-03-16T12:00:00Z # Estimate based on entry date of 03/16/2020.
+  - summary: Amazon terminated a program allowing employees to take unlimited, unpaid time off if fearful of contracting COVID-19. Employees instead would have to apply for a leave of absence, around which the requirements for such requests were not made clear.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Vice
+        link: https://web.archive.org/web/20200504165251/https://www.vice.com/en_us/article/z3bjpj/amazon-vp-tim-bray-resigns-calls-company-chickenshit-for-firing-protesting-workers
+        date: 2020-05-04T12:09:14Z
+      - source: CBS News
+        link: https://web.archive.org/web/20200503225347/https://www.cbsnews.com/news/amazon-unlimited-unpaid-time-off/
+        date: 2020-04-28T19:01:00-04:00
+  - summary: An Amazon vice president of six years quit his job, claiming that two more employees had been fired for speaking out against working conditions, and that the situation had become "a vein of toxicity running through the company culture."
+    positivity: -1
+    type: statement
+    sources:
+      - source: Vice
+        link: https://web.archive.org/web/20200504165251/https://www.vice.com/en_us/article/z3bjpj/amazon-vp-tim-bray-resigns-calls-company-chickenshit-for-firing-protesting-workers
+        date: 2020-05-04T12:09:14Z
