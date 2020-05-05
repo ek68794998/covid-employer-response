@@ -58,3 +58,10 @@ citations:
       - source: Reddit r/CustomerService
         link: https://www.reddit.com/r/AirBnB/comments/f3lhui/psa_corona_virus_and_airbnb/
         date: 2020-03-28T21:34:49-07:00
+  - summary: Airbnb laid off 1,900 employees, amounting to a quarter of its global workforce.
+    positivity: -1
+    type: publication
+    sources:
+      - source: TechCrunch
+        link: https://web.archive.org/web/20200505203006/https://techcrunch.com/2020/05/05/citing-revenue-declines-airbnb-cuts-1900-jobs-or-around-25-of-its-global-workforce/
+        date: 2020-05-05T19:12:49Z
