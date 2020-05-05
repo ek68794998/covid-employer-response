@@ -1,4 +1,6 @@
 name: Pak-A-Sak # Of Indiana fame, NOT the one in Texas.
+aliases:
+  - Jay Petroleum, Inc.
 image: pak-a-sak.svg#49a1d1
 officialWebsite: https://www.pakasak.com/aboutus.html
 industries:
@@ -11,7 +13,7 @@ location:
   wiki: Portland, Indiana
 summary: An employee who resigned from their job at Pak-A-Sak claimed that in addition to not receiving hazard pay, they were not given sufficient PPE to keep themselves or customers safe.
 citations:
-  - summary: On top of not receiving hazard pay, an employee at Pak-A-Sack in Bluffton, IN posted a resignation notice stating that they had not received proper PPE to continue doing their job.
+  - summary: On top of not receiving hazard pay, an employee at Pak-A-Sak in Bluffton, IN posted a resignation notice stating that they had not received proper PPE to continue doing their job.
     positivity: -1
     type: hearsay
     sources:
