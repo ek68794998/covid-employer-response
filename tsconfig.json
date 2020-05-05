@@ -28,6 +28,7 @@
     "coverage",
     "jest",
     "node_modules",
+    "ploc.js",
     "razzle.config.js",
     "scripts",
     "webpack"
