@@ -57,3 +57,10 @@ citations:
         title: k-dubs (hero)
         link: https://twitter.com/DubsHero/status/1250629873615413253
         date: 2020-04-15T20:39:00-07:00
+  - summary: Kroger bought up over 200,000 gallons of excess milk supply (brought on by the lack of demand during the pandemic) to redistribute to food banks.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Food Navigator USA
+        link: https://web.archive.org/web/20200505011045/https://www.foodnavigator-usa.com/Article/2020/05/01/Kroger-buys-and-redirects-dairy-farmers-surplus-milk-to-Feeding-America-food-banks
+        date: 2020-05-01T16:46:00+01:00
