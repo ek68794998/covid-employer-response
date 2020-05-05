@@ -1,0 +1,20 @@
+name: Big Daddy Zane's
+image: big-daddy-zanes.svg
+officialWebsite: https://www.facebook.com/BigDaddyZanes1996/ # Notes the website as https://bigdaddyzanes.webs.com/, but that doesn't seem to have any content.
+industries:
+  - restaurant
+location:
+  city: Odessa
+  state: TX
+  country: us
+  international: false
+  wiki: Odessa, Texas
+summary: Big Daddy Zane's not only violated Texas state's staged-reopening orders, but encouraged patrons to turn up in a show of armed force supporting the move.
+citations:
+  - summary: Big Daddy Zane's reopened their bar on May 4, despite state orders at the time explicitly forbidding bars from reopening. The owners went as far as posting an event, scheduled for May 4, depicting a show of armed force and prompting many patrons to show up to the establishment with firearms, leading to a number of arrests&mdash;including the bar's owner.
+    positivity: -2
+    type: publication
+    sources:
+      - source: ABC News
+        link: https://web.archive.org/web/20200505230609/https://abcnews.go.com/US/cops-arrest-armed-men-texas-bar-owner-violated/story?id=70509866
+        date: 2020-05-05T19:57:00Z
