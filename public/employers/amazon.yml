@@ -53,14 +53,14 @@ citations:
         title: Coronavirus IV, 14:31
         link: https://youtu.be/6s4Bx7mzNkM?t=871
         date: 2020-04-12T12:00:00-07:00 # Estimate based on upload date of 04/12/2020.
-  - summary: Amazon opened 100,000 new roles and increased pay though the end of April for employees working in roles related to fulfillment, transport, delivery, and other similar roles.
-    positivity: 2
+  - summary: Amazon began hiring against 100,000 new job positions in various roles.
+    positivity: 1
     type: publication
     sources:
       - source: Amazon Blog
         title: Amazon ramps hiring, opening 100,000 new roles
         link: https://blog.aboutamazon.com/operations/amazon-opening-100000-new-roles
-        date: 2020-03-16T19:55:21.478Z
+        date: 2020-03-16T19:55:21Z
   - summary: Employees in roles that continue to work through COVID-19 were advised to stay six feet apart from each other.
     positivity: 1
     type: statement
@@ -166,6 +166,9 @@ citations:
       - source: Whole Foods Market Newsroom
         link: https://web.archive.org/web/20200402013503/https://media.wholefoodsmarket.com/news/how-whole-foods-market-is-responding-to-covid-19
         date: 2020-03-16T12:00:00Z # Estimate based on entry date of 03/16/2020.
+      - source: Amazon Blog
+        link: https://blog.aboutamazon.com/operations/amazon-opening-100000-new-roles
+        date: 2020-03-16T19:55:21Z
   - summary: Amazon committed to spend its entire Q2 profits&mdash;an expected $4 billion USD&mdash;on COVID-19-related relief efforts for its employees and customers.
     positivity: 1
     type: publication
