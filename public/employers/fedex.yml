@@ -38,7 +38,7 @@ citations:
         title: Service Impact [PDF]
         link: https://www.fedex.com/content/dam/fedex/us-united-states/Service-Alerts/images/2020/Q4/2019_nCoV_Service_Impacts_Apr_3.pdf # Current version is from April 3, but no indication of when the first publication was.
   - summary: FedEx provided employees with general guidance on safe sanitation practices as well as information for customers on what to expect and how to stay safe when handling deliveries.
-    positivity: 1
+    positivity: 0
     type: publication
     sources:
       - source: FedEx

@@ -1,0 +1,37 @@
+name: CarMax, Inc.
+shortName: CarMax
+ticker: KMX
+wiki: CarMax
+image: carmax.svg#00529f
+officialWebsite: https://www.carmax.com/about-carmax
+industries:
+  - automotive
+location:
+  city: Richmond
+  state: VA
+  country: us
+  international: true
+  wiki: Richmond, Virginia
+employeesBefore:
+  type: approximately
+  upperBound: 25000
+  year: 2018
+summary: CarMax balanced out a furlough of over half its workforce with executive pay cuts and general cost-cutting measures.
+citations:
+  - summary: CarMax furloughed about 15,500 workers without pay, but with healthcare benefits. "Transition pay" of an undisclosed amount was provided prior to the furlough.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Reuters
+        link: https://www.reuters.com/article/us-health-coronavirus-autonation/autonation-returning-77-million-in-us-payroll-assistance-coronavirus-relief-loans-idUSKCN2263FW
+        date: 2020-04-24T22:48:14Z
+      - source: Automotive News
+        link: https://web.archive.org/web/20200418072225/https://www.autonews.com/dealers/carmaxs-difficult-decision-furlough-15500-workers
+        date: 2020-04-13T00:00:01-04:00
+  - summary: CarMax's CEO forwent half his 2020 salary starting in April, and all other leadership members took an undisclosed reduction "until further notice." This accompanied general cost-cutting measures such as freezing hiring.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Automotive News
+        link: https://web.archive.org/web/20200418072225/https://www.autonews.com/dealers/carmaxs-difficult-decision-furlough-15500-workers
+        date: 2020-04-13T00:00:01-04:00

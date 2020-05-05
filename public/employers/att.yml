@@ -1,0 +1,77 @@
+name: AT&T Inc.
+aliases:
+  - WarnerMedia
+shortName: AT&T
+ticker: T
+wiki: AT&T
+image: att.svg
+officialWebsite: https://about.att.com/pages/corporate_profile
+industries:
+  - media
+  - telecommunications
+location:
+  city: Dallas
+  state: TX
+  country: us
+  international: true
+  wiki: Dallas
+employeesBefore:
+  type: approximately
+  upperBound: 247800
+  year: 2019
+summary: AT&T took myriad positive actions during the pandemic, including helping employees work from home, giving raises to employees working the front lines, increasing sick leave, implementing social-distancing measures, and donating millions of dollars to COVID-19 causes.
+citations:
+  - summary: A pay increase of 20% was given to front-line AT&T employees starting March 25.
+    positivity: 1
+    type: publication
+    sources:
+      - source: AT&T corporate news
+        link: https://web.archive.org/web/20200425183148/https://about.att.com/pages/COVID-19/updates.html
+        date: 2020-03-25T15:30:00-05:00
+  - summary: To further facilitate social distancing, AT&T implemented curbside pickup and made express shipping free.
+    positivity: 0
+    type: publication
+    sources:
+      - source: AT&T corporate news
+        link: https://web.archive.org/web/20200425183148/https://about.att.com/pages/COVID-19/updates.html
+        date: 2020-03-30T11:00:00-05:00
+  - summary: AT&T provided a number of smartphone devices for free to first-responder agencies.
+    positivity: 1
+    type: publication
+    sources:
+      - source: AT&T corporate news
+        link: https://web.archive.org/web/20200425183148/https://about.att.com/pages/COVID-19/updates.html
+        date: 2020-03-31T11:30:00-05:00
+  - summary: AT&T donated over $5.5 million USD to supplying meals to first responders and medical personnel, as well as over $1.2 million USD to small-business remote-work solutions.
+    positivity: 1
+    type: publication
+    sources:
+      - source: AT&T corporate news
+        title: April 2 update
+        link: https://web.archive.org/web/20200425183148/https://about.att.com/pages/COVID-19/updates.html
+        date: 2020-04-02T11:00:00-05:00
+      - source: AT&T corporate news
+        title: April 14 update
+        link: https://web.archive.org/web/20200425183148/https://about.att.com/pages/COVID-19/updates.html
+        date: 2020-04-14T17:30:00-05:00
+  - summary: AT&T allowed all call-center employees to work from home.
+    positivity: 0
+    type: publication
+    sources:
+      - source: AT&T corporate news
+        link: https://web.archive.org/web/20200425183148/https://about.att.com/pages/COVID-19/updates.html
+        date: 2020-04-16T11:45:00-05:00
+  - summary: AT&T closed many retail locations, but ensured that a number remained open to assist first-responders and other essential customers. Stores that remained open implemented social-distancing measures such as reducing the number of customers allowed in the store.
+    positivity: 0
+    type: publication
+    sources:
+      - source: AT&T corporate news
+        link: https://web.archive.org/web/20200425183148/https://about.att.com/pages/COVID-19/updates.html
+        date: 2020-03-20T12:00:00Z # Estimate based on update date of 03/20/2020.
+  - summary: AT&T, which already had a paid sick leave program, added 80 more sick hours to any employee with a positive COVID-19 diagnosis or in a high-risk group, or anyone taking care of someone in such a situation.
+    positivity: 1
+    type: publication
+    sources:
+      - source: AT&T corporate news
+        link: https://web.archive.org/web/20200425183148/https://about.att.com/pages/COVID-19/updates.html
+        date: 2020-03-21T12:00:00Z # Estimate based on update date of 03/21/2020.
