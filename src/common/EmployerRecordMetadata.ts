@@ -16,7 +16,6 @@ export class EmployerRecordMetadata extends EmployerRecordBase {
 		score: number,
 		rating: EmployerRating,
 	) {
-
 		super();
 
 		this.negativeCount = negativeCount;
