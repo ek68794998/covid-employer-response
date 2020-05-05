@@ -15,7 +15,7 @@ employeesBefore:
   type: exactly
   upperBound: 12736
   year: 2019
-summary: By compensating hosts for cancelled reservations, as well as dedicating both funds and homes to front-line responders, Airbnb commitment to assisting with COVID-19 above their own profits is generally positive.
+summary: Airbnb's commitment to assisting with COVID-19 above their own profits was generally positive, by compensating hosts for cancelled reservations, as well as dedicating both funds and homes to front-line responders. However, they also resorted to layoffs of over a quarter of their employees.
 citations:
   - summary: Airbnb dedicated $250 million USD to its hosts to help cover 25% the costs of cancellations incurred by the lack of travel during the COVID-19 pandemic.
     positivity: 1
