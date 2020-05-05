@@ -16,16 +16,16 @@ employeesBefore:
   type: approximately
   upperBound: 45600
   year: 2019
-summary: Despite not paying rent for the month of April, The Cheesecake Factory furloughed 41,000 workers without pay and done company-wide corporate pay cuts of up to 20%. However, this includes executives, and furloughed employees will retain benefits and receive routine free meals.
+summary: Despite not paying rent for the month of April, The Cheesecake Factory furloughed 41,000 workers without pay and done company-wide corporate pay cuts of up to 20%. However, this included executives, and furloughed employees retained benefits and received routine free meals.
 citations:
-  - summary: The Cheesecake Factory furloughed about 41,000 hourly workers. These workers will not be paid but will retain benefits and insurance until June 1, and will be provided one free meal per day at their restaurant of employment.
+  - summary: The Cheesecake Factory furloughed about 41,000 hourly workers. These workers were not paid but retained benefits and insurance until June 1, and were provided one free meal per day at their restaurant of employment.
     positivity: 0
     type: publication
     sources:
       - source: USA Today
         link: https://web.archive.org/web/20200409145858/https://www.usatoday.com/story/money/2020/03/27/coronavirus-cheesecake-factory-furloughs-41-000-hourly-employees/2925331001/
         date: 2020-03-27T15:41:28Z
-  - summary: Corporate and administrative employees at The Cheesecake Factory will receive a pay cut between 10% and 20% depending on their current pay.
+  - summary: Corporate and administrative employees at The Cheesecake Factory received a pay cut between 10% and 20% depending on their current pay.
     positivity: 0
     type: publication
     sources:
@@ -39,7 +39,7 @@ citations:
       - source: USA Today
         link: https://web.archive.org/web/20200409145858/https://www.usatoday.com/story/money/2020/03/27/coronavirus-cheesecake-factory-furloughs-41-000-hourly-employees/2925331001/
         date: 2020-03-27T15:41:28Z
-  - summary: News of furloughs and pay cuts comes amidst The Cheesecake Factory stating that it will not be paying landlords rent for April.
+  - summary: News of furloughs and pay cuts comes amidst The Cheesecake Factory stating that it would not be paying landlords rent for April.
     positivity: -1
     type: publication
     sources:
