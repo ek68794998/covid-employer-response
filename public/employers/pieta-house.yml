@@ -1,0 +1,35 @@
+name: Pieta House
+# wiki: Pieta House # Just redirects to the founder's page.
+image: pieta-house.svg
+officialWebsite: https://www.pieta.ie/about/
+industries:
+  - healthCare
+location:
+  city: Lucan
+  state: DUB
+  country: ie
+  international: false
+  wiki: Lucan, Dublin
+summary: Pieta House, as a provider of free suicide-prevention services, waited several weeks too many into the pandemic to begin fundraising, and resorted to pay cuts and significant layoffs as a result.
+citations:
+  - summary: Pieta House launched a fundraising campaign to keep itself afloat during the pandemic, due to the cancellation of fundraising events; however, the campaign was considered to have started much too late to be helpful.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Irish Mirror
+        link: https://web.archive.org/web/20200502091834/https://www.irishmirror.ie/news/irish-news/pieta-house-launches-urgent-fundraising-21912909
+        date: 2020-04-23T08:19:39Z
+  - summary: Pieta House cut all staff salaries by up to 30%, with no reported changes to executive salaries.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Journal
+        link: https://web.archive.org/web/20200502091834/https://www.irishmirror.ie/news/irish-news/pieta-house-launches-urgent-fundraising-21912909
+        date: 2020-05-02T21:28:41Z
+  - summary: Pieta House fired most staff, including therapists and the fundraising department.
+    positivity: -1
+    type: hearsay
+    sources:
+      - source: Reddit r/Ireland
+        link: https://web.archive.org/web/20200503191000/https://www.reddit.com/r/ireland/comments/gco9a2/my_thoughts_about_pieta_house/
+        date: 2020-05-03T03:16:55-07:00
