@@ -1,12 +1,14 @@
 @import "../Colors.scss";
 @import "../Dimensions.scss";
 
+$scale-base: 16px;
+
 $body-color: $outline-color;
 $border-radius: 12px;
-$icon-size: 32px;
+$flag-size: 20px;
+$icon-size: ($scale-base * 2);
 $padding-interior: 12px;
 $padding-sides: 16px;
-$scale-base: 16px;
 
 .EmployerListItem__Container {
 	background: $background;
@@ -16,6 +18,12 @@ $scale-base: 16px;
 	padding: 0 $padding-sides;
 	transition: 0.1s all;
 	width: 100%;
+
+	.EmployerLogo__Image {
+		height: $icon-size;
+		margin-right: $padding-interior;
+		width: $icon-size;
+	}
 }
 
 .EmployerListItem__Container--NotFound {
@@ -36,30 +44,19 @@ $scale-base: 16px;
 		white-space: nowrap;
 	}
 
-	.EmployerListItem__RatingText {
+	.EmployerRatingPill__Box {
 		align-items: center;
+		cursor: pointer;
 		display: flex;
 
-		.EmployerListItem__RatingIcon {
+		.material-icons {
 			margin-left: 8px;
 		}
 	}
 
-	&.EmployerListItem__Rating--fair .EmployerListItem__RatingText {
-		color: $indicator-neutral;
-	}
-
-	&.EmployerListItem__Rating--good .EmployerListItem__RatingText {
-		color: $indicator-positive;
-	}
-
-	&.EmployerListItem__Rating--poor .EmployerListItem__RatingText {
-		color: $indicator-negative;
-	}
-
 	&:hover {
-		&, & .EmployerListItem__RatingText {
-			color: #fff;
+		&, & .EmployerRatingPill__Box {
+			color: #fff !important;
 		}
 
 		&.EmployerListItem__Rating--fair {
@@ -77,12 +74,6 @@ $scale-base: 16px;
 			border-color: $indicator-negative;
 		}
 	}
-
-	.EmployerLogo__Image {
-		height: ($scale-base) * 2;
-		margin-right: $padding-interior;
-		width: ($scale-base) * 2;
-	}
 }
 
 .EmployerListItem__Container--Detailed {
@@ -97,21 +88,13 @@ $scale-base: 16px;
 		box-shadow: 0px 3px 6px $card-shadow-color;
 		transform: translateY(-1px);
 
-		.EmployerDetailsHeader__AggregateRatings {
+		.EmployerListItem__AggregateRatings {
 			opacity: 1.0;
 		}
 
 		a.EmployerActionLinks__Link {
 			opacity: 1.0;
 		}
-	}
-
-	.EmployerDetailsHeader__Title h2 {
-		flex: 1;
-	}
-
-	.EmployerDetailsHeader__TitleGap {
-		display: none;
 	}
 
 	.EmployerListItem__Summary {
@@ -155,3 +138,133 @@ $scale-base: 16px;
 		}
 	}
 }
+
+.EmployerListItem__Title {
+	align-items: center;
+	display: flex;
+	font-family: 'Baloo Chettan 2';
+
+	h2 {
+		flex: 1;
+		font-weight: 400;
+		margin: 0 4px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	.EmployerLogo__Image {
+		margin-right: ($padding-interior / 2);
+	}
+}
+
+.EmployerListItem__Subtitle {
+	color: #757575;
+	cursor: default;
+	display: flex;
+	font-size: 12px;
+	margin: ($padding-interior / 2) 0 $padding-interior;
+
+	> a, > span {
+		align-items: center;
+		display: flex;
+		margin-right: ($padding-interior * 2);
+		transition: 0.2s all;
+
+		&:hover {
+			color: #212121;
+		}
+	}
+
+	a {
+		color: inherit;
+	}
+
+	i {
+		font-size: 18px;
+		margin-right: 4px;
+		vertical-align: bottom;
+	}
+
+	.EmployerListItem__AggregateRatings {
+		align-items: center;
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+		margin: 0;
+		opacity: 0.5;
+		transition: 0.2s opacity;
+
+		i {
+			font-size: 24px;
+			margin-right: 2px;
+		}
+
+		span {
+			align-items: center;
+			cursor: default;
+			display: flex;
+			margin-right: 8px;
+
+			&.EmployerListItem__GoodRatings {
+				color: $indicator-positive;
+			}
+
+			&.EmployerListItem__PoorRatings {
+				color: $indicator-negative;
+			}
+		}
+	}
+}
+
+.EmployerListItem__Date {
+	font-size: 80%;
+}
+
+.EmployerListItem__Location img {
+	background: #a1a1a1;
+	border-radius: 4px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	height: ($flag-size * 3 / 4);
+	margin: 0 ($padding-interior + 4px) 0 ($padding-interior / 2);
+	width: $flag-size;
+}
+
+@media (max-width: $body-reduced-width) {
+	.EmployerListItem__Title {
+		flex-wrap: wrap;
+	}
+
+	.EmployerListItem__Title--noShort {
+		.EmployerListItem__Subtitle {
+			> a, > span {
+				display: block;
+				margin-top: 8px;
+			}
+		}
+
+		.EmployerListItem__Links i {
+			margin: 8px 6px 0 0 !important;
+		}
+	
+		.EmployerListItem__LinkBreak {
+			flex-basis: 100%;
+			height: 0;
+		}
+	}
+
+	.EmployerRatingPill__Box .material-icons {
+		display: none;
+	}
+}
+
+@media (any-hover: none) {
+	.EmployerListItem__Subtitle .EmployerListItem__AggregateRatings {
+		opacity: 1.0 !important;
+	}
+}
+

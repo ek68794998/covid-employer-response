@@ -20,7 +20,7 @@ describe("<EmployerActionLinks />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerActionLinks employer={new EmployerRecordMetadata(0, 0, "fair")} />
+						<EmployerActionLinks employer={new EmployerRecordMetadata(0, 0, 0, "fair")} />
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();
@@ -32,7 +32,7 @@ describe("<EmployerActionLinks />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const record: EmployerRecordMetadata =
-			Object.assign(new EmployerRecordMetadata(0, 0, "fair"), {
+			Object.assign(new EmployerRecordMetadata(0, 0, 0, "fair"), {
 				id: "e1",
 				name: "Alpha",
 				officialWebsite: "http://example.com",

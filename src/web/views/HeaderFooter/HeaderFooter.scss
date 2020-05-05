@@ -2,9 +2,12 @@
 @import "../Dimensions.scss";
 
 $burger-button-padding: 24px;
-$burger-highlight-width: 4px;
 $burger-menu-width: 300px;
 $burger-zindex: 50;
+$navlink-active-border-width: 4px;
+$navlink-hover-color: lighten($color: $header, $amount: 10);
+$navlink-padding-horizontal: 16px;
+$navlink-padding-vertical: 6px;
 
 header, footer {
 	flex: 0;
@@ -51,27 +54,75 @@ header {
 		opacity: 0.7;
 		text-decoration: none;
 		transition: 0.3s opacity;
-
+	
 		&:hover {
 			color: inherit;
 			opacity: 1.0;
 			transition: 0.05s opacity;
 		}
+
+		&.HeaderMenu__Link {
+			align-items: center;
+			display: flex;
+			flex: 0;
+			font-size: 18px;
+			height: 100%;
+			padding: ($navlink-padding-vertical - 2px) $navlink-padding-horizontal $navlink-padding-vertical;
+			white-space: nowrap;
+
+			&:hover {
+				background: $navlink-hover-color;
+			}
+	
+			&.active {
+				border-bottom: $navlink-active-border-width solid $link-normal;
+				padding-bottom: ($navlink-padding-vertical - $navlink-active-border-width);
+
+				.HeaderMenu__Submenu {
+					top: calc(100% + #{$navlink-active-border-width});
+				}
+			}
+		}
 	}
 
-	a.HeaderMenu__Link {
-		align-items: center;
-		display: flex;
-		flex: 0;
-		font-size: 18px;
-		height: 100%;
-		margin-left: 16px;
-		padding: 4px 8px 6px;
-		white-space: nowrap;
+	.HeaderMenu__SubmenuContainer {
+		position: relative;
 
-		&.active {
-			border-bottom: 4px solid $link-normal;
-			padding-bottom: 2px;
+		.HeaderMenu__Submenu {
+			box-shadow: 0 4px 5px $box-shadow-color;
+			display: none;
+			left: 0;
+			list-style: none;
+			margin: 0;
+			min-width: 160px;
+			padding: 0;
+			position: absolute;
+			top: 100%;
+	
+			.HeaderMenu__Link {
+				margin: 0;
+				padding: ($navlink-padding-vertical * 2) $navlink-padding-horizontal;
+	
+				&.active {
+					border-bottom: 0;
+					border-left: $navlink-active-border-width solid $link-normal;
+					padding-left: ($navlink-padding-horizontal - $navlink-active-border-width);
+				}
+			}
+		}
+	
+		&.HeaderMenu__SubmenuContainer--Open {
+			.HeaderMenu__Link {
+				border-bottom-color: transparent !important;
+			}
+
+			.HeaderMenu__Submenu {
+				display: block;
+			}
+
+			.HeaderMenu__Submenu, > a {
+				background: $navlink-hover-color;
+			}
 		}
 	}
 
@@ -153,9 +204,21 @@ footer {
 		flex-direction: column;
 		font: 400 24px 'Baloo Chettan 2';
 
-		a {
+		ul {
+			font-size: 80%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			.HeaderMenu__Link {
+				padding-left: ($burger-button-padding * 2);
+			}
+		}
+
+		.HeaderMenu__Link {
 			color: $background;
-			padding: ($burger-button-padding / 2) $burger-button-padding;
+			display: block;
+			padding: ($burger-button-padding / 2) 0 ($burger-button-padding / 2) $burger-button-padding;
 			opacity: 0.7;
 
 			&:hover {
@@ -163,8 +226,11 @@ footer {
 			}
 
 			&.active {
-				border-left: $burger-highlight-width solid $link-normal;
-				padding-left: ($burger-button-padding - $burger-highlight-width);
+				border-right: $navlink-active-border-width solid $link-normal;
+			}
+
+			&.HeaderMenu__Link--HasSubmenu {
+				border: none;
 			}
 		}
 	}
@@ -182,7 +248,7 @@ footer {
 			display: block;
 		}
 
-		.HeaderMenu__Link {
+		.HeaderMenu__Link, .HeaderMenu__Submenu {
 			display: none !important;
 		}
 	}

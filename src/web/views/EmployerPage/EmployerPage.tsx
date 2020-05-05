@@ -11,6 +11,7 @@ import { getStrings } from "../../state/ducks/localization/selectors";
 
 import AppHelmet from "../AppHelmet/AppHelmet";
 import EmployerPageDetails from "../EmployerPageDetails/EmployerPageDetails";
+import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 
 import "./EmployerPage.scss";
 
@@ -58,9 +59,7 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 				<AppHelmet
 					title={strings.loading}
 				/>
-				<div className="EmployerPage__Content EmployerPage__Content--Loading">
-					{strings.loading}
-				</div>
+				<LoadingIndicator />
 			</main>
 		);
 	}

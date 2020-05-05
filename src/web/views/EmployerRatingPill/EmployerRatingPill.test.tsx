@@ -17,7 +17,7 @@ describe("<EmployerRatingPill />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const employer: EmployerRecordMetadata =
-			new EmployerRecordMetadata(3, 1, "good");
+			new EmployerRecordMetadata(3, 1, 0, "good");
 
 		const renderedValue: ReactTestRendererJSON | null =
 			renderer.create(

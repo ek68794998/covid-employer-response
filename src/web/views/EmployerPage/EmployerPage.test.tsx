@@ -20,6 +20,10 @@ jest.mock(
 	"../EmployerPageDetails/EmployerPageDetails",
 	() => mockComponent("EmployerPageDetails"));
 
+jest.mock(
+	"../LoadingIndicator/LoadingIndicator",
+	() => mockComponent("LoadingIndicator"));
+
 describe("<EmployerPage />", () => {
 	beforeEach(() => {
 		jest.spyOn(ReactRedux, "useDispatch").mockReturnValue(jest.fn());
@@ -58,7 +62,7 @@ describe("<EmployerPage />", () => {
 					[fakeEmployer.id as string]: Object.assign(new EmployerRecord(), fakeEmployer),
 				},
 				itemsMetadata: {
-					[fakeEmployer.id as string]: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), fakeEmployer),
+					[fakeEmployer.id as string]: Object.assign(new EmployerRecordMetadata(0, 0, 0, "fair"), fakeEmployer),
 				},
 			},
 			strings: await getPlocStringsAsync(),

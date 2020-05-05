@@ -13,10 +13,6 @@ import configureStore from "../../state/configureStore";
 import EmployerListItem from "./EmployerListItem";
 
 jest.mock(
-	"../EmployerDetailsHeader/EmployerDetailsHeader",
-	() => mockComponent("EmployerDetailsHeader"));
-
-jest.mock(
 	"../EmployerActionLinks/EmployerActionLinks",
 	() => mockComponent("EmployerActionLinks"));
 
@@ -25,7 +21,7 @@ describe("<EmployerListItem />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
-					foo: new EmployerRecordMetadata(0, 0, "fair"),
+					foo: new EmployerRecordMetadata(0, 0, 0, "fair"),
 				},
 			},
 			strings: await getPlocStringsAsync(),
@@ -37,6 +33,7 @@ describe("<EmployerListItem />", () => {
 					<BrowserRouter>
 						<EmployerListItem
 							employerId={"foo"}
+							metric="rating"
 							showDetails={false}
 						/>
 					</BrowserRouter>
@@ -50,7 +47,7 @@ describe("<EmployerListItem />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
-					foo: new EmployerRecordMetadata(0, 0, "fair"),
+					foo: new EmployerRecordMetadata(0, 0, 0, "fair"),
 				},
 			},
 			strings: await getPlocStringsAsync(),
@@ -62,6 +59,7 @@ describe("<EmployerListItem />", () => {
 					<BrowserRouter>
 						<EmployerListItem
 							employerId={"foo"}
+							metric="rating"
 							showDetails={true}
 						/>
 					</BrowserRouter>

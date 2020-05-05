@@ -22,8 +22,8 @@ jest.mock(
 	() => mockComponent("EmployerListItem"));
 
 jest.mock(
-	"../EmployerPageDetails/EmployerPageDetails",
-	() => mockComponent("EmployerPageDetails"));
+	"../LoadingIndicator/LoadingIndicator",
+	() => mockComponent("LoadingIndicator"));
 
 describe("<EmployerList />", () => {
 	test("renders without exploding", async () => {
@@ -44,7 +44,7 @@ describe("<EmployerList />", () => {
 	});
 
 	test("renders empty list of employers", async () => {
-		const record: EmployerRecordMetadata = new EmployerRecordMetadata(0, 0, "fair");
+		const record: EmployerRecordMetadata = new EmployerRecordMetadata(0, 0, 0, "fair");
 
 		record.employeesBefore = new EmployerEmployeeProfile();
 		record.id = "e1";
@@ -87,19 +87,19 @@ describe("<EmployerList />", () => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
-					e1: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), {
+					e1: Object.assign(new EmployerRecordMetadata(0, 0, 0, "fair"), {
 						employeesBefore: new EmployerEmployeeProfile(),
 						id: "e1",
 						location: new EmployerLocation(),
 						name: "Alpha",
 					}),
-					e2: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), {
+					e2: Object.assign(new EmployerRecordMetadata(0, 0, 0, "fair"), {
 						employeesBefore: new EmployerEmployeeProfile(),
 						id: "e2",
 						location: new EmployerLocation(),
 						name: "Beta",
 					}),
-					e3: Object.assign(new EmployerRecordMetadata(0, 0, "fair"), {
+					e3: Object.assign(new EmployerRecordMetadata(0, 0, 0, "fair"), {
 						employeesBefore: new EmployerEmployeeProfile(),
 						id: "e3",
 						location: new EmployerLocation(),

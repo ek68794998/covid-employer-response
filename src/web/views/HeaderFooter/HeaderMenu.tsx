@@ -7,10 +7,13 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { getIsProd, getIsTest } from "../../state/ducks/environment/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import { RankingsRoute, RecentsRoute } from "../EmployerRoute/EmployerRoute";
+
 import "./HeaderFooter.scss";
 
 const HeaderMenu: React.FC = (): React.ReactElement => {
 	const [ isHamburgerMenuOpen, setIsHamburgerMenuOpen ] = useState<boolean | undefined>(undefined);
+	const [ isEmployerListSubmenuOpen, setIsEmployerListSubmenuOpen ] = useState(false);
 
 	const { pathname } = useLocation();
 
@@ -30,9 +33,37 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 
 	const navLinks: JSX.Element = (
 		<>
-			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers">
-				{strings.employerList}
-			</NavLink>
+			<div
+				className={`HeaderMenu__SubmenuContainer HeaderMenu__SubmenuContainer--${isEmployerListSubmenuOpen ? "Open" : "Closed"}`}
+				onMouseEnter={(): void => setIsEmployerListSubmenuOpen(true)}
+				onMouseLeave={(): void => setIsEmployerListSubmenuOpen(false)}
+			>
+				<NavLink
+					exact={true}
+					className="HeaderMenu__Link HeaderMenu__Link--HasSubmenu"
+					onClick={closeHamburgerMenu}
+					to="/employers"
+				>
+					{strings.employerList}
+				</NavLink>
+				<ul className="HeaderMenu__Submenu">
+					<li>
+						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/employers">
+							{strings.employerListAll}
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to={`/employers/${RankingsRoute}`}>
+							{strings.employerListRanking}
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to={`/employers/${RecentsRoute}`}>
+							{strings.employerListRecent}
+						</NavLink>
+					</li>
+				</ul>
+			</div>
 			<NavLink exact={true} className="HeaderMenu__Link" onClick={closeHamburgerMenu} to="/about">
 				{strings.about}
 			</NavLink>

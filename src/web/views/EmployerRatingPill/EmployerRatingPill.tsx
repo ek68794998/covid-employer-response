@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { RouteProps } from "react-router-dom";
 
 import { DesignHelpers } from "../../../common/DesignHelpers";
+import { EmployerRating } from "../../../common/EmployerRating";
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
 import { LocalizedStrings } from "../../../common/LocalizedStrings";
 
@@ -13,21 +14,36 @@ import "./EmployerRatingPill.scss";
 interface Props extends RouteProps {
 	employer: EmployerRecordMetadata;
 
-	isAnnotated: boolean;
+	isAnnotated?: boolean;
+
+	isLowContrast?: boolean;
+
+	showGrade?: boolean;
 }
 
 const EmployerRatingPill: React.FC<Props> = (props: Props): React.ReactElement | null => {
 	const strings: LocalizedStrings = useSelector(getStrings);
-	const { employer, isAnnotated } = props;
+	const { employer, isAnnotated, isLowContrast, showGrade } = props;
+
+	let text: string;
+	let classSubtype: EmployerRating;
+
+	if (showGrade) {
+		classSubtype = employer.score > 0 ? "good" : employer.score < 0 ? "poor" : "fair";
+		text = `${employer.score > 0 ? "+" : ""}${Math.round(employer.score)}`;
+	} else {
+		classSubtype = employer.rating;
+		text = strings.ratingLabels[employer.rating];
+	}
 
 	return (
 		<span
-			className={`EmployerRatingPill__Box EmployerRatingPill__Box--${employer.rating}`}
+			className={`EmployerRatingPill__Box EmployerRatingPill__Box--${classSubtype} ${isLowContrast ? "EmployerRatingPill__Box--LowContrast" : ""}`}
 			title={strings.detailDescriptions.rating}
 		>
-			{strings.ratingLabels[employer.rating]}
+			{text}
 			{isAnnotated && "*"}
-			{DesignHelpers.materialIcon(EmployerRecordMetadata.getTrendIcon(employer))}
+			{!showGrade && DesignHelpers.materialIcon(EmployerRecordMetadata.getTrendIcon(employer))}
 		</span>
 	);
 };

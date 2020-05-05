@@ -9,17 +9,19 @@ import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils
 import { AppState } from "../../state/AppState";
 import configureStore from "../../state/configureStore";
 
-import EmployerListPage from "./EmployerListPage";
+import { EmployerRouteContext, DefaultContextData } from "../EmployerRoute/EmployerRouteContext";
+
+import EmployerBracketPage from "./EmployerBracketPage";
 
 jest.mock(
-	"../EmployerListSearch/EmployerListSearch",
-	() => mockComponent("EmployerListSearch"));
+	"../EmployerBracketList/EmployerBracketList",
+	() => mockComponent("EmployerBracketList"));
 
 jest.mock(
-	"../EmployerList/EmployerList",
-	() => mockComponent("EmployerList"));
+	"../LoadingIndicator/LoadingIndicator",
+	() => mockComponent("LoadingIndicator"));
 
-describe("<EmployerListPage />", () => {
+describe("<EmployerBracketPage />", () => {
 	test("renders without exploding", async () => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
@@ -27,7 +29,9 @@ describe("<EmployerListPage />", () => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerListPage />
+						<EmployerRouteContext.Provider value={DefaultContextData}>
+							<EmployerBracketPage mode="ranking" />
+						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
 			).toJSON();

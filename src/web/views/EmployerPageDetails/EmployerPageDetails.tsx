@@ -162,7 +162,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				)}
 			</div>
 
-			<EmployerCitationList citations={employer.citations.sort(citationSort)} />
+			<EmployerCitationList citations={employer.citations.concat().sort(citationSort)} />
 
 			<div className="EmployerPageDetails__MetaFooter">
 				<div className="EmployerPageDetails__Profile">
@@ -249,14 +249,23 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 					{employer.parentId && (
 						<>
 							<h2>{strings.linkTypes.parent}</h2>
-							<EmployerListItem employerId={employer.parentId} showDetails={false} />
+							<EmployerListItem
+								employerId={employer.parentId}
+								metric="rating"
+								showDetails={false}
+							/>
 						</>
 					)}
 					{employer.childIds.length > 0 && (
 						<>
 							<h2>{strings.linkTypes.children}</h2>
 							{employer.childIds.map((id: string) => (
-								<EmployerListItem key={id} employerId={id} showDetails={false} />
+								<EmployerListItem
+									key={id}
+									employerId={id}
+									metric="rating"
+									showDetails={false}
+								/>
 							))}
 						</>
 					)}
@@ -264,7 +273,12 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 						<>
 							<h2>{strings.linkTypes.related}</h2>
 							{relatedEmployers.map((value: [string, number]) => (
-								<EmployerListItem key={value[0]} employerId={value[0]} showDetails={false} />
+								<EmployerListItem
+									key={value[0]}
+									employerId={value[0]}
+									metric="rating"
+									showDetails={false}
+								/>
 							))}
 						</>
 					)}

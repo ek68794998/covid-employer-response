@@ -12,7 +12,7 @@
     "start:prod": "node build/server.js",
     "test": "razzle test --env=jsdom",
     "test:ci": "npm run pretest && cross-env CI=true razzle test --env=jsdom --watchAll=false",
-    "test:coverage": "razzle test --env=jsdom --coverage"
+    "test:coverage": "npm run pretest && razzle test --env=jsdom --coverage"
   },
   "dependencies": {
     "accept-language-parser": "^1.5.0",

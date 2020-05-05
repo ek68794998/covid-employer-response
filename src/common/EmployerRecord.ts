@@ -72,7 +72,7 @@ export class EmployerRecord extends EmployerRecordBase {
 
 		let negatives: number = 0;
 		let positives: number = 0;
-		let sum: number = 0;
+		let score: number = 0;
 
 		for (const citation of citations) {
 			let rating: number = citation.positivity;
@@ -83,13 +83,11 @@ export class EmployerRecord extends EmployerRecordBase {
 				rating *= 0.75;
 			}
 
-			sum += rating;
+			score += rating;
 
 			if (rating < 0) {
 				negatives++;
-			}
-
-			if (rating > 0) {
+			} else if (rating > 0) {
 				positives++;
 			}
 		}
@@ -98,16 +96,17 @@ export class EmployerRecord extends EmployerRecordBase {
 
 		let ratingResult: EmployerRating = "fair";
 
-		if (sum !== 0 && negatives + positives > 0 && neutrals / citations.length < fairNeutralRatio) {
-			const score: number = Math.log10((negatives + positives) * Math.abs(sum)) + 1;
+		if (score !== 0 && negatives + positives > 0 && neutrals / citations.length < fairNeutralRatio) {
+			const bound: number = Math.log10((negatives + positives) * Math.abs(score)) + 1;
 
-			ratingResult = sum > score ? "good" : (sum < -score ? "poor" : "fair");
+			ratingResult = score > bound ? "good" : (score < -bound ? "poor" : "fair");
 		}
 
 		const metadata: EmployerRecordMetadata =
 			new EmployerRecordMetadata(
 				negatives,
 				positives,
+				score,
 				ratingResult);
 
 		EmployerRecordBase.copyTo(original, metadata);

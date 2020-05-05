@@ -1,0 +1,47 @@
+@import "../Colors.scss";
+@import "../Dimensions.scss";
+
+$division-padding: 16px;
+
+main#employer-bracket {
+	margin: 0 auto;
+	width: 100%;
+
+	.EmployerBracketPage__Container {
+		padding: 0 $page-padding;
+	}
+
+	.EmployerBracketPage__Content {
+		display: flex;
+		flex-basis: 0;
+		margin: 0 auto;
+		max-width: $body-max-width;
+		padding-bottom: $division-padding;
+		padding-top: $division-padding;
+
+		.EmployerBracketPage__ContentSpacer {
+			width: $division-padding;
+		}
+
+		.EmployerBracketList__Container {
+			flex: 1;
+			width: 0;
+		}
+	}
+}
+
+@media (max-width: $body-narrow-width) {
+	main#employer-bracket {
+		.EmployerBracketPage__Container {
+			padding: 0 $page-padding-narrow;
+		}
+
+		.EmployerBracketPage__Content {
+			flex-direction: column;
+
+			.EmployerBracketList__Container {
+				width: auto;
+			}
+		}
+	}
+}
