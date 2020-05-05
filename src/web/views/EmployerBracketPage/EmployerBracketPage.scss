@@ -13,17 +13,19 @@ main#employer-bracket {
 
 	.EmployerBracketPage__Content {
 		display: flex;
+		flex-basis: 0;
 		margin: 0 auto;
 		max-width: $body-max-width;
 		padding-bottom: $division-padding;
 		padding-top: $division-padding;
 
 		.EmployerBracketPage__ContentSpacer {
-			width: 48px;
+			width: $division-padding;
 		}
 
 		.EmployerBracketList__Container {
 			flex: 1;
+			width: 0;
 		}
 	}
 }
@@ -32,6 +34,14 @@ main#employer-bracket {
 	main#employer-bracket {
 		.EmployerBracketPage__Container {
 			padding: 0 $page-padding-narrow;
+		}
+
+		.EmployerBracketPage__Content {
+			flex-direction: column;
+
+			.EmployerBracketList__Container {
+				width: auto;
+			}
 		}
 	}
 }
