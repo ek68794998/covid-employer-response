@@ -1,0 +1,36 @@
+name: Virgin Group
+aliases:
+  # Virgin Group has a -ton- of child companies, but they're all called 'Virgin ___'. These are some of the most well-known.
+  - Virgin Care
+  - Virgin Galactic
+  - Virgin Hotels
+  - Virgin Media
+  - Virgin Mobile
+  - Virgin Vacations
+wiki: Virgin Group
+image: virgin-group.svg
+officialWebsite: https://www.virgin.com/virgingroup/content/about-us
+industries:
+  - airline
+  - aviation
+  - rail
+  - retail
+  - telecommunications
+location:
+  city: London
+  country: gb
+  international: true
+  wiki: London
+employeesBefore:
+  type: approximately
+  upperBound: 71000
+  year: 2016
+summary: Virgin Group's founder supported his companies financially with loans against his personal assets, but individual companies began taking both positive and negative actions of their own.
+citations:
+  - summary: Richard Branson, founder of Virgin Group and many of its subsidiaries, took out numerous loans against his private island (worth an estimated $100 million USD) to fund loans to support struggling Virgin entities.
+    positivity: 1
+    type: publication
+    sources:
+      - source: National Post
+        link: https://nationalpost.com/news/world/as-covid-19-batters-his-businesses-richard-branson-offers-private-island-as-collateral-for-loans
+        date: 2020-04-21T11:45:36-04:00

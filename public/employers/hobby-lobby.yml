@@ -23,7 +23,7 @@ citations:
       - source: CBS News
         link: https://www.cbsnews.com/news/hobby-lobby-open-essential-business-stay-at-home-orders/
         date: 2020-04-01T13:14:00-04:00
-  - summary: Employees who work at stores which are closed will be paid 75% of their total wage for a temporary, undisclosed period, then allowed to use PTO for any further compensation.
+  - summary: Employees who work at stores which are closed were to be paid 75% of their total wage for a temporary, undisclosed period, then allowed to use PTO for any further compensation.
     positivity: 1
     type: publication
     sources:
@@ -61,7 +61,7 @@ citations:
       - source: New York Times
         link: https://www.nytimes.com/2020/04/02/us/hobby-lobby-colorado-virus.html
         date: 2020-04-02T00:52:02-04:00
-  - summary: Hobby Lobby closed all stores and furloughed its employees with no pay, but will continue their benefits.
+  - summary: Hobby Lobby closed all stores and furloughed its employees with no pay, but continued their benefits.
     positivity: -1
     type: publication
     sources:

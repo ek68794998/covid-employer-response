@@ -29,7 +29,7 @@ employeesBefore:
   yearQuarter: Q1
 summary: Following the start of COVID-19, Darden implemented emergency pay for employees who are unable to work as well as sick leave for employees working on the job more than 90 days.
 citations:
-  - summary: Darden promised that employees who are unable to work due to store closures will receive 50% pay for up to three weeks off the job.
+  - summary: Darden promised that employees who are unable to work due to store closures would receive 50% pay for up to three weeks off the job.
     positivity: 1
     type: publication
     sources:

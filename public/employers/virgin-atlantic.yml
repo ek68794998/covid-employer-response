@@ -1,0 +1,34 @@
+name: Virgin Atlantic Airways Limited
+aliases:
+  - Virgin Atlantic International Limited
+shortName: Virgin Atlantic
+wiki: Virgin Atlantic
+image: virgin-atlantic.svg
+officialWebsite: https://corporate.virginatlantic.com/gb/en/our-story.html
+industries:
+  - airline
+location:
+  city: Crawley
+  country: gb
+  international: true
+  wiki: Crawley
+employeesBefore:
+  type: exactly
+  upperBound: 8571
+  year: 2018
+summary: Even though it made executive pay cuts, Virgin Atlantic laid off around a third of its staff two months later.
+citations:
+  - summary: Virgin Atlantic cut its executives' pay by upwards of 15%.
+    positivity: 1
+    type: publication
+    sources:
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200409155919/https://www.marketwatch.com/story/virgin-atlantic-cuts-ceo-pay-as-airline-industry-predicts-113-billion-hit-from-coronavirus-2020-03-05
+        date: 2020-03-06T10:50:00-05:00
+  - summary: Virgin Atlantic laid off around 3,150 employees, or about a third of its workforce.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Yahoo! Finance UK
+        link: https://uk.finance.yahoo.com/news/coronavirus-virgin-atlantic-to-slash-more-than-3000-jobs-as-air-travel-collapses-125338813.html
+        date: 2020-05-05T12:53:38Z

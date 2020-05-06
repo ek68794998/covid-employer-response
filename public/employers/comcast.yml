@@ -23,7 +23,7 @@ employeesBefore:
   yearQuarter: Q4
 summary: Comcast's executives set aside significant money to pay those whose work is affected by COVID-19, in addition to donating out of their own pockets for COVID-19 relief.
 citations:
-  - summary: Comcast's CEO announced that $500 million USD will be set aside for employees affected by the COVID-19 pandemic, "where operations have been paused or impacted."
+  - summary: Comcast's CEO announced that $500 million USD would be set aside for employees affected by the COVID-19 pandemic, "where operations have been paused or impacted."
     positivity: 1
     type: publication
     sources:
