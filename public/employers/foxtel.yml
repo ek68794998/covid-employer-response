@@ -20,10 +20,10 @@ employeesBefore:
   type: approximately
   upperBound: 2800
   year: 2020
-  yearQuarter: Q2
+  yearQuarter: Q1
 summary: Despite layoffs, restructuring, and refinancing efforts preceding COVID-19, Foxtel laid off or furloughed about 15% of its workforce as a result of the outbreak.
 citations:
-  - summary: After layoffs and refinancing in late 2019, Foxtel laid off 200 employees and furloughed another 140 in early April.
+  - summary: Though Foxtel performed layoffs and refinancing in late 2019, they laid off an additional 200 and furloughed another 140 in early April.
     positivity: -1
     type: publication
     sources:
