@@ -22,7 +22,7 @@ employeesBefore:
   year: 2018
 summary: Caterpillar is avoiding layoffs and furloughs, but is having to withhold pay increases and bonuses for eligible employees in all roles.
 citations:
-  - summary: To prevent layoffs, furloughs, and pay cuts, Caterpillar announced that it would withhold salary increases for executives, managers, and salaried employees.
+  - summary: Caterpillar announced that it would withhold salary increases in 2020 for executives, managers, and salaried employees.
     positivity: 1
     type: publication
     sources:
@@ -36,3 +36,10 @@ citations:
       - source: NASDAQ
         link: https://www.nasdaq.com/articles/caterpillar-withholds-salary-increases-to-deal-with-pandemic-fallout-2020-03-31
         date: 2020-03-31T18:13:55-04:00
+  - summary: Caterpillar distributed $500 million USD to shareholders in early April, after some of their plants shut down amid the pandemic. They refused to make a comment on how many workers were affected or how pay was being handled.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Washington Post
+        link: https://www.washingtonpost.com/business/2020/05/05/dividends-layoffs-coronavirus/
+        date: 2020-05-05T14:51:26Z
