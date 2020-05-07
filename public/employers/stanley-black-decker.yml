@@ -1,0 +1,37 @@
+name: Stanley Black & Decker, Inc.
+aliases:
+  - The Stanley Works
+shortName: Stanley Black & Decker
+ticker: SWK
+wiki: Stanley Black & Decker
+image: stanley-black-decker.svg#ffd20b
+officialWebsite: https://www.stanleyblackanddecker.com/who-we-are/about-us
+industries:
+  - industrial
+  - manufacturing
+location:
+  city: New Britain
+  state: CT
+  country: us
+  international: true
+  wiki: New Britain, Connecticut
+employeesBefore:
+  type: exactly
+  upperBound: 60767
+  year: 2018
+summary: Despite a strong financial position backed by cash and revolving credit, Stanley Black & Decker cut a significant, but undisclosed, number of employees through layoffs and furloughs.
+citations:
+  - summary: Stanley issued a dividend despite their preceding layoffs.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Washington Post
+        link: https://www.washingtonpost.com/business/2020/05/05/dividends-layoffs-coronavirus/
+        date: 2020-05-05T14:51:26Z
+  - summary: Stanley claimed that their financial position was strong and that they had lots of cash on hand, but proceeded to furlough and lay off an undisclosed number of employees.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Hardford Business
+        link: https://www.hartfordbusiness.com/article/stanley-black-decker-prepares-layoffs-spending-cuts-halts-ma-activity
+        date: 2020-04-02T12:00:00Z # Estimate based on article date of 04/02/2020.
