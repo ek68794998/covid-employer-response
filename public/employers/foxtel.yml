@@ -1,0 +1,42 @@
+name: Foxtel Management Pty Limited
+aliases:
+  - Fox Sports Australia Pty Limited
+  - Kayo Sports
+shortName: Foxtel
+wiki: Foxtel
+image: foxtel.svg
+officialWebsite: https://www.foxtel.com.au/about.html
+industries:
+  - entertainment
+location:
+  city: North Ryde
+  state: NSW
+  country: au
+  international: false
+  wiki: North Ryde, New South Wales
+employeesBefore:
+  source: The Hollywood Reporter
+  sourceLink: https://www.hollywoodreporter.com/news/australian-pay-tv-giant-foxtel-lays-200-virus-crisis-1289512
+  type: approximately
+  upperBound: 2800
+  year: 2020
+  yearQuarter: Q1
+summary: Despite layoffs, restructuring, and refinancing efforts preceding COVID-19, Foxtel laid off or furloughed about 15% of its workforce as a result of the outbreak.
+citations:
+  - summary: Though Foxtel performed layoffs and refinancing in late 2019, they laid off an additional 200 and furloughed another 140 in early April.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Hollywood Reporter
+        link: https://web.archive.org/web/20191205134815/https://www.afr.com/companies/media-and-marketing/foxtel-cuts-jobs-after-restructure-locks-in-refinance-20191205-p53h2q
+        date: 2019-12-05T04:53:26Z
+      - source: The Hollywood Reporter
+        link: https://web.archive.org/web/20200417092950/https://www.hollywoodreporter.com/news/australian-pay-tv-giant-foxtel-lays-200-virus-crisis-1289512
+        date: 2020-04-09T02:46:12-07:00
+  - summary: After an initial round of layoffs, Foxtel laid off another 70 employees, bringing the total number of affected employees to 410 (about 15%) by the end of April.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Sydney Morning Herald
+        link: https://web.archive.org/web/20200430225022/https://www.smh.com.au/business/companies/foxtel-axes-another-70-jobs-in-latest-restructure-20200430-p54ojr.html
+        date: 2020-04-30T14:07:00+10:00
