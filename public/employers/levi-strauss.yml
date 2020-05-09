@@ -1,0 +1,58 @@
+name: Levi Strauss & Co.
+aliases:
+  - Levi's
+shortName: Levi Strauss
+ticker: LEVI
+wiki: Levi Strauss & Co.
+image: levi-strauss.svg#a8112e
+officialWebsite: https://www.levistrauss.com/levis-history/
+industries:
+  - apparel
+  - retail
+  - manufacturing
+location:
+  city: San Francisco
+  state: CA
+  country: us
+  international: true
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 15100
+  year: 2018
+summary: Levi Strauss closed its stores as required and initially committed to paying furloughed employees, but later cut their pay entirely. Meanwhile, it issued dividends to shareholders while also reducing their CEO's salary.
+citations:
+  - summary: Levi Strauss issued a dividend of $32 million USD despite laying off a large number of employees.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Washington Post
+        link: https://www.washingtonpost.com/business/2020/05/05/dividends-layoffs-coronavirus/
+        date: 2020-05-05T14:51:26Z
+  - summary: The CEO of Levi Strauss took a pay cut of 50%.
+    positivity: 1
+    type: publication
+    sources:
+      - source: WBUR Here & Now
+        link: https://web.archive.org/web/20200507214910/https://www.wbur.org/hereandnow/2020/05/07/levi-strauss-ceo-retail-coronavirus
+        date: 2020-05-07T11:18:58Z
+  - summary: Levi Strauss began closing stores in China in January, along with stores in other countries in mid-March.
+    positivity: 0
+    type: publication
+    sources:
+      - source: WBUR Here & Now
+        link: https://web.archive.org/web/20200507214910/https://www.wbur.org/hereandnow/2020/05/07/levi-strauss-ceo-retail-coronavirus
+        date: 2020-05-07T11:18:58Z
+  - summary: Levi Strauss furloughed over 4,000 store workers. They initially intended to keep paying employees, but as of April 7, reversed that commitment and stopped paying them.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Washington Post
+        link: https://www.washingtonpost.com/business/2020/05/05/dividends-layoffs-coronavirus/
+        date: 2020-05-05T14:51:26Z
+      - source: MarketWatch
+        link: https://web.archive.org/web/20200507215357/https://www.marketwatch.com/story/levi-strauss-closing-stores-starting-march-16-due-to-the-coronavirus-pandemic-2020-03-16
+        date: 2020-03-16T08:52:26-04:00
+      - source: WWD
+        link: https://web.archive.org/web/20200422085649/https://wwd.com/business-news/financial/levi-strauss-earnings-chip-bergh-coronavirus-1203556091/
+        date: 2020-04-07T16:15:37Z

@@ -1,0 +1,56 @@
+name: Steelcase Inc.
+shortName: Steelcase
+ticker: SCS
+wiki: Steelcase
+image: steelcase.svg
+officialWebsite: https://www.steelcase.com/corporate-information/
+industries:
+  - furniture
+  - manufacturing
+location:
+  city: Grand Rapids
+  state: MI
+  country: us
+  international: true
+  wiki: Grand Rapids, Michigan
+employeesBefore:
+  type: approximately
+  upperBound: 12650
+  year: 2017
+summary: Though Steelcase cut executive pay and shifted gears to produce masks for the healthcare industry, they furloughed nearly all hourly employees and cut salaried employees' pay in half.
+citations:
+  - summary: Steelcase furloughed nearly all its hourly manufacturing employees without pay, leaving only those providing services to the healthcare industry.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Woodworking Network
+        link: https://web.archive.org/web/20200507212426/https://www.woodworkingnetwork.com/news/covid-19/stay-home-order-prompts-huge-pay-cuts-and-temporary-layoffs-steelcase
+        date: 2020-03-25T15:32:00Z
+  - summary: Steelcase CEO James Keane gave up his entire base salary, while other executives took pay cuts of about 60%.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Woodworking Network
+        link: https://web.archive.org/web/20200507212426/https://www.woodworkingnetwork.com/news/covid-19/stay-home-order-prompts-huge-pay-cuts-and-temporary-layoffs-steelcase
+        date: 2020-03-25T15:32:00Z
+  - summary: Salaried employees at Steelcase received pay cuts of 50%.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Woodworking Network
+        link: https://web.archive.org/web/20200507212426/https://www.woodworkingnetwork.com/news/covid-19/stay-home-order-prompts-huge-pay-cuts-and-temporary-layoffs-steelcase
+        date: 2020-03-25T15:32:00Z
+  - summary: Steelcase ramped up production of masks and face shields for hospitals.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Woodworking Network
+        link: https://web.archive.org/web/20200507212426/https://www.woodworkingnetwork.com/news/covid-19/stay-home-order-prompts-huge-pay-cuts-and-temporary-layoffs-steelcase
+        date: 2020-03-25T15:32:00Z
+  - summary: Steelcase performed a share buyback in early March, and proceeded with an $8 million USD share dividend.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Washington Post
+        link: https://www.washingtonpost.com/business/2020/05/05/dividends-layoffs-coronavirus/
+        date: 2020-05-05T14:51:26Z
