@@ -193,3 +193,10 @@ citations:
       - source: Vice
         link: https://web.archive.org/web/20200504165251/https://www.vice.com/en_us/article/z3bjpj/amazon-vp-tim-bray-resigns-calls-company-chickenshit-for-firing-protesting-workers
         date: 2020-05-04T12:09:14Z
+  - summary: Amazon violated an executive order in California requiring paid sick leave for "workers at warehouses where food is stored," with employees saying that HR stated wrongfully that their warehouses are exempt from the order.
+    positivity: -2
+    type: statement
+    sources:
+      - source: The Guardian
+        link: https://web.archive.org/web/20200507165026/https://www.theguardian.com/technology/2020/may/07/amazon-warehouse-workers-coronavirus-time-off-california
+        date: 2020-05-07T09:48:05-04:00
