@@ -65,3 +65,10 @@ citations:
       - source: Los Angeles Times
         link: https://web.archive.org/web/20200423001942/https://www.latimes.com/business/technology/story/2020-03-31/coronavirus-google-facebook-paid-leave-school-closures
         date: 2020-03-31T23:59:50Z
+  - summary: Google extended its work-from-home flexibility into 2021, but employees who feel the need to return would be allowed to do so starting in July, amidst increased safety measures.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Independent
+        link: https://web.archive.org/web/20200508212621/https://www.independent.co.uk/news/world/americas/coronavirus-google-facebook-work-from-home-2021-latest-a9505936.html
+        date: 2020-05-08T12:30:00+01:00

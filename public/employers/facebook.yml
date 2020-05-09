@@ -48,3 +48,10 @@ citations:
       - source: CNN
         link: https://web.archive.org/web/20200414065849/https://www.cnn.com/2020/03/17/tech/facebook-coronavirus-1000-dollars-employees/index.html
         date: 2020-03-17T18:59:14Z
+  - summary: Facebook extended its work-from-home flexibility into 2021, and barred any gatherings of 50+ people until at least July 2021.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Independent
+        link: https://web.archive.org/web/20200508212621/https://www.independent.co.uk/news/world/americas/coronavirus-google-facebook-work-from-home-2021-latest-a9505936.html
+        date: 2020-05-08T12:30:00+01:00
