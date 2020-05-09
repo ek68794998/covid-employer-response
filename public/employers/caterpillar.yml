@@ -22,17 +22,31 @@ employeesBefore:
   year: 2018
 summary: Caterpillar is avoiding layoffs and furloughs, but is having to withhold pay increases and bonuses for eligible employees in all roles.
 citations:
-  - summary: To prevent layoffs, furloughs, and pay cuts, Caterpillar announced that it would withhold salary increases for executives, managers, and salaried employees.
+  - summary: Caterpillar announced that it would withhold salary increases in 2020 for executives, managers, and salaried employees.
     positivity: 1
     type: publication
     sources:
       - source: NASDAQ
         link: https://www.nasdaq.com/articles/caterpillar-withholds-salary-increases-to-deal-with-pandemic-fallout-2020-03-31
         date: 2020-03-31T18:13:55-04:00
-  - summary: Due to the "extremely challenging" situation Caterpillar is facing having to shut down operations due to the COVID-19 pandemic, they elected to not pay out bonuses "next year" (likely referring to FY2021).
+  - summary: Caterpillar shut down a number of facilities to prevent the spread of COVID-19, but did not disclose how employees were handled during these closures.
+    positivity: 0
+    type: publication
+    sources:
+      - source: Caterpillar Corporate Press Releases
+        link: https://web.archive.org/web/20200329120401/https://www.caterpillar.com/en/news/corporate-press-releases/h/caterpillar-announces-updates-and-response-to-covid-19.html
+        date: 2020-03-26T12:00:00Z # Estimate based on post date of 03/26/2020.
+  - summary: Due to the "extremely challenging" situation Caterpillar faced with its closures, they elected to not pay out bonuses "next year" (likely referring to FY2021).
     positivity: 0
     type: publication
     sources:
       - source: NASDAQ
         link: https://www.nasdaq.com/articles/caterpillar-withholds-salary-increases-to-deal-with-pandemic-fallout-2020-03-31
         date: 2020-03-31T18:13:55-04:00
+  - summary: Caterpillar distributed $500 million USD to shareholders in early April, even after some of their plants shut down amid the pandemic.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Washington Post
+        link: https://www.washingtonpost.com/business/2020/05/05/dividends-layoffs-coronavirus/
+        date: 2020-05-05T14:51:26Z

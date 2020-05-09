@@ -32,3 +32,10 @@ citations:
       - source: NBC Connecticut
         link: https://www.nbcconnecticut.com/news/local/wwe-to-furlough-workers-cut-executive-pay-due-to-impact-from-covid-19/2255969/
         date: 2020-04-15T16:58:12-04:00
+  - summary: Following workforce cuts, WWE authorized $9 million USD in dividends for shareholders.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Washington Post
+        link: https://www.washingtonpost.com/business/2020/05/05/dividends-layoffs-coronavirus/
+        date: 2020-05-05T14:51:26Z

@@ -1,0 +1,37 @@
+name: Williams-Sonoma, Inc.
+shortName: Williams-Sonoma
+ticker: WSM
+wiki: Williams-Sonoma, Inc.
+image: williams-sonoma.svg
+officialWebsite: https://www.williams-sonomainc.com/company-overview/
+industries:
+  - retail
+location:
+  city: San Francisco
+  state: FS
+  country: us
+  international: false
+  wiki: San Francisco
+employeesBefore:
+  type: approximately
+  upperBound: 28200
+  year: 2019
+summary: Williams-Sonoma's store closures reached up to two months in some areas, but the company continued to provide employees with full pay and benefits.
+citations:
+  - summary: After initially closing its stores on March 18, Williams-Sonoma extended its closures multiple times, until at least May 17. A small number of stores reopened on May 4 due to local restrictions being lifted.
+    positivity: 0
+    type: publication
+    sources:
+      - source: BusinessWire
+        link: https://web.archive.org/web/20200426111606/https://www.businesswire.com/news/home/20200331005784/en/Williams-Sonoma-Extends-Temporary-Store-Closures
+        date: 2020-03-31T21:00:00Z
+      - source: HomeWorld Business
+        link: https://web.archive.org/web/20200507173447/https://www.homeworldbusiness.com/williams-sonoma-to-extend-temporary-closures-reopen-some-stores/
+        date: 2020-05-04T09:44:29-04:00
+  - summary: Williams-Sonoma continued full pay and benefits during store closures for employees whose weekly hours were 12 or higher.
+    positivity: 2
+    type: publication
+    sources:
+      - source: BusinessWire
+        link: https://web.archive.org/web/20200507173639/https://www.businesswire.com/news/home/20200415005582/en/Williams-Sonoma-Extends-Temporary-Store-Closures
+        date: 2020-04-15T20:05:00Z
