@@ -1,0 +1,62 @@
+name: NYC Health + Hospitals
+aliases:
+  - Elmhurst Hospital Center (EHC)
+  - Jacobi Medical Center
+  - New York City Health and Hospitals Corporation (HHC)
+wiki: NYC Health + Hospitals
+image: nyc-health-hospitals.svg
+officialWebsite: https://www.nychealthandhospitals.org/about-nyc-health-hospitals/
+industries:
+  - healthCare
+location:
+  city: New York City
+  state: NY
+  country: us
+  international: false
+  wiki: New York City
+summary: NYC Health + Hospitals implemented safety measures above those of many healthcare companies, and provided rewards to those working the front lines; however, there was criticism about lack of PPE and requirements around sick leave being too strict.
+citations:
+  - summary: NYC Health + Hospitals launched a number of citywide programs to combat COVID-19, including programs to monitor discharged COVID-19 patients and to track the spread of the disease.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Becker's Hospital Review
+        link: https://www.beckershospitalreview.com/public-health/nyc-health-hospitals-to-lead-city-effort-to-track-covid-19-spread.html
+        date: 2020-05-08T14:13:11Z
+      - source: Healthcare Innovation Group
+        link: https://www.hcinnovationgroup.com/covid-19/news/21134092/nyc-health-hospitals-launches-athome-covid19-monitoring-program
+        date: 2020-04-15T15:07:51Z
+      - source: NYC Health + Hospitals
+        link: https://www.nychealthandhospitals.org/pressrelease/nyc-health-hospitals-launches-covid-19-text-message-based-symptom-monitoring-program/
+        date: 2020-04-13T12:00:00Z # Estimate based on post date of 04/13/2020.
+  - summary: Front-line employees were given a 3-day paid vacation in recognition of their efforts fighting COVID-19.
+    positivity: 1
+    type: publication
+    sources:
+      - source: CNN
+        link: https://web.archive.org/web/20200510030158/https://www.cnn.com/2020/05/09/us/elmhurst-hospital-staff-free-vacations-coronavirus-trnd/index.html
+        date: 2020-05-09T21:55:31Z
+  - summary: NYC Health + Hospitals provided free COVID-19 tests to its workforce, and hotel rooms for staff not wanting to transmit the disease back to their households.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Becker's Hospital Review
+        link: https://www.beckershospitalreview.com/workforce/nyc-health-hospitals-requires-nurses-to-have-physician-s-note-after-1-absence.html
+        date: 2020-04-20T20:22:24Z
+      - source: NYC Health + Hospitals
+        link: https://www.nychealthandhospitals.org/pressrelease/nyc-health-hospitals-will-offer-free-covid-19-tests-to-its-health-care-workforce/
+        date: 2020-04-01T12:00:00Z # Estimate based on post date of 04/01/2020.
+  - summary: The New York State Nurses Association stated that nurses with NYC Health + Hospitals had limited access to PPE, but provided little detail. The company rebutted, stating that they had implemented "conservation efforts" and that "all staff who need PPE" would have access.
+    positivity: 0
+    type: statement
+    sources:
+      - source: Becker's Hospital Review
+        link: https://www.beckershospitalreview.com/workforce/nyc-health-hospitals-requires-nurses-to-have-physician-s-note-after-1-absence.html
+        date: 2020-04-20T20:22:24Z
+  - summary: Nurses at NYC Health + Hospitals were required to get a physician's note after a single sick-leave absence during the pandemic.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Becker's Hospital Review
+        link: https://www.beckershospitalreview.com/workforce/nyc-health-hospitals-requires-nurses-to-have-physician-s-note-after-1-absence.html
+        date: 2020-04-20T20:22:24Z
