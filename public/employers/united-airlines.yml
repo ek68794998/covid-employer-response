@@ -51,7 +51,7 @@ citations:
       - source: United Hub
         link: https://web.archive.org/web/20200427070524/https://hub.united.com/united-coronavirus-covid19-safety-update-2645397564.html # Unknown date.
   - summary: United announced a social-distancing measure that would block middle seats from being occupied, but later clarified that this only affected *seat selection*, not *capacity*, so a fully-booked flight would have no social distancing measures.
-    positivity: 0
+    positivity: -1
     type: publication
     sources:
       - source: One Mile at a Time
