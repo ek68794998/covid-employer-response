@@ -90,8 +90,8 @@ citations:
       - source: Bloomberg
         link: https://www.bloomberg.com/news/articles/2020-04-17/hospitals-made-use-of-modified-tesla-donated-breathing-machines
         date: 2020-04-17T12:30:00-07:00
-  - summary: Tesla intended to violate Alameda County's stay-at-home order on May 8, stating that it would bring 30% of employees back to work at its Fremont factory. The company then filed a lawsuit against Alameda County to allow it to reopen, and included threats to move Tesla's HQ and associated programs to Texas or Nevada immediately. The factory later reopened, prompting a response from the government to limit Tesla's operations.
-    positivity: -2
+  - summary: Tesla stated that it intended to violate Alameda County's stay-at-home order and did so, bringing 30% of employees back to work at its Fremont factory on May 11. The company also filed a lawsuit against Alameda County to permit its reopening, and included threats to move Tesla's HQ and associated programs to Texas or Nevada immediately. The factory's reopening prompting both a response from the county to limit Tesla's operations, and a call from the mayor for Tesla to work with the county to resume operations safely.
+    positivity: -1
     type: publication
     sources:
       - source: TechCrunch
@@ -100,3 +100,6 @@ citations:
       - source: The Verge
         link: https://web.archive.org/web/20200510143041/https://techcrunch.com/2020/05/09/tesla-sues-alameda-county-to-force-california-factory-reopening/
         date: 2020-05-11T21:15:18Z
+      - source: ABC-7 News
+        link: https://web.archive.org/web/20200512210542/https://abc7news.com/tesla-elon-musk-fremont-factory/6172737/
+        date: 2020-05-11T20:07:00Z
