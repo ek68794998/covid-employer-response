@@ -35,10 +35,16 @@ citations:
       - source: CNET
         link: https://web.archive.org/web/20200421110908/https://www.cnet.com/features/gig-workers-with-covid-19-symptoms-say-its-hard-to-get-sick-leave-from-uber-lyft-instacart/
         date: 2020-03-26T16:29:00Z
-  - summary: A report surfaced saying that Uber was reportedly considering layoffs of 20% of its staff, which would total about 5,400 people.
-    positivity: 0
-    type: statement
+  - summary: A report that Uber was considering layoffs of 20% of its staff was revealed in April; Uber later laid off 3,500 employees (a little under 15%), primarily in front-line customer-support roles.
+    positivity: -1
+    type: publication
     sources:
       - source: USA Today
         link: https://web.archive.org/web/20200502021748/https://www.usatoday.com/story/tech/2020/04/28/uber-report-considering-laying-off-employees/3043960001/
         date: 2020-04-27T12:30:20Z
+      - source: New York Post
+        link: https://web.archive.org/web/20200514174553/https://nypost.com/2020/05/11/uber-lays-off-3500-workers-in-3-minute-zoom-call/
+        date: 2020-05-11T13:46:29-04:00
+      - source: Forbes
+        link: https://web.archive.org/web/20200514174737/https://www.forbes.com/sites/jackkelly/2020/05/13/uber-lays-off-3500-employees-over-a-zoom-call-the-way-in-which-a-company-downsizes-its-staff-says-a-lot-about-the-organization/
+        date: 2020-05-13T19:12:40-04:00
