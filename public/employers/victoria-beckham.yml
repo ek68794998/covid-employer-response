@@ -1,0 +1,43 @@
+name: Victoria Beckham Ltd.
+aliases:
+  - Victoria Beckham Fashion
+shortName: Victoria Beckham
+# wiki: "Victoria Beckham#Launch of fashion label" # This is a decent reference but doesn't have enough info to be useful.
+image: victoria-beckham.svg
+officialWebsite: https://us.victoriabeckham.com/pages/about
+industries:
+  - apparel
+location:
+  city: London
+  country: gb
+  international: true
+  wiki: London
+employeesBefore:
+  source: The Guardian
+  sourceLink: https://www.theguardian.com/fashion/2020/apr/30/victoria-beckham-reverses-decision-to-furlough-fashion-label-staff
+  type: approximately
+  upperBound: 120
+  year: 2020
+summary: Victoria Beckham, as owner of her own fashion line, furloughed around 25% of her workforce. Only after facing intense backlash from critics did she reverse the decision.
+citations:
+  - summary: Despite a net worth of over $400 million USD, Beckham furloughed about a quarter of staff (25&ndash;30 people) on her fashion line. She stated that it would be on an "enhanced package," but did not elect to state what the package entailed.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Metro News
+        link: https://web.archive.org/web/20200508040320/https://metro.co.uk/2020/04/22/victoria-beckham-upset-unfair-backlash-furloughs-staff-amid-pandemic-12591376/
+        date: 2020-04-22T07:48:12Z
+  - summary: Beckham forwent her own salary following employee furloughs.
+    positivity: 1
+    type: publication
+    sources:
+      - source: Metro News
+        link: https://web.archive.org/web/20200508040320/https://metro.co.uk/2020/04/22/victoria-beckham-upset-unfair-backlash-furloughs-staff-amid-pandemic-12591376/
+        date: 2020-04-22T07:48:12Z
+  - summary: Beckham reversed the decision to furlough her staff after a week of intense backlash from critics.
+    positivity: 0
+    type: publication
+    sources:
+      - source: The Guardian
+        link: https://web.archive.org/web/20200511074548/https://www.theguardian.com/fashion/2020/apr/30/victoria-beckham-reverses-decision-to-furlough-fashion-label-staff
+        date: 2020-04-30T11:01:55-04:00

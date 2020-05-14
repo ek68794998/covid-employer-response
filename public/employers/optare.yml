@@ -1,0 +1,36 @@
+name: Optare
+aliases:
+  - Ashok Leyland
+# ticker: OPE # Only on the LSE, which we don't support.
+wiki: Optare
+image: optare.svg
+officialWebsite: http://www.optare.com/about
+industries:
+  - transport
+location:
+  city: Sherburn in Elmet
+  state: YSN
+  country: gb
+  international: false
+  wiki: Sherburn in Elmet
+employeesBefore:
+  source: Optare Annual Report and Accounts 2017
+  type: exactly
+  upperBound: 366 # This number seems to be only corporate and not include "indirect jobs" which number in the thousands.
+  year: 2017
+summary: Even though the family owning Optare's parent company reported a net worth in the tens-of-billions, they applied for government aid to pay employees, and furloughed a number of them despite that.
+citations:
+  - summary: An undisclosed number of Optare employees were furloughed.
+    positivity: -1
+    type: publication
+    sources:
+      - source: Maza Inside
+        link: https://web.archive.org/web/20200512181913/https://mazainside.com/britains-richest-men-worth-22-billion-use-taxpayers-cash-to-furlough-staff/
+        date: 2020-05-10T20:58:46Z
+  - summary: Despite a net worth approximately $27 million USD, the Hinduja family, owners of Optare's parent company, applied for government aid to pay employees through the [JRS](https://commonslibrary.parliament.uk/research-briefings/cbp-8880/).
+    positivity: -1
+    type: publication
+    sources:
+      - source: Maza Inside
+        link: https://web.archive.org/web/20200512181913/https://mazainside.com/britains-richest-men-worth-22-billion-use-taxpayers-cash-to-furlough-staff/
+        date: 2020-05-10T20:58:46Z
