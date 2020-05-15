@@ -200,3 +200,10 @@ citations:
       - source: The Guardian
         link: https://web.archive.org/web/20200507165026/https://www.theguardian.com/technology/2020/may/07/amazon-warehouse-workers-coronavirus-time-off-california
         date: 2020-05-07T09:48:05-04:00
+  - summary: Amazon announced in mid-May that it would end its hourly "hazard pay" raises as of the end of the month, despite their significant increase in revenue and the projected likelihood that the pandemic would be ongoing at that time.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Business Insider
+        link: https://web.archive.org/web/20200515181402/https://www.businessinsider.com/amazon-dropping-covid-19-hazard-pay-warehouse-workers-may-2020-5
+        date: 2020-05-14T13:56:00Z
