@@ -64,3 +64,27 @@ citations:
       - source: Food Navigator USA
         link: https://web.archive.org/web/20200505011045/https://www.foodnavigator-usa.com/Article/2020/05/01/Kroger-buys-and-redirects-dairy-farmers-surplus-milk-to-Feeding-America-food-banks
         date: 2020-05-01T16:46:00+01:00
+  - summary: Kroger began giving employees hazard pay of $2 USD per hour on March 31. The program terminated on May 17, just short of 7 weeks later.
+    positivity: 1
+    type: publication
+    sources:
+      - source: TDU
+        link: https://web.archive.org/web/20200409203500/http://www.tdu.org/kroger_finally_agrees_to_2_per_hour_hazard_pay
+        date: 2020-04-01T12:00:00Z # Estimate based on post date of 04/01/2020.
+  - summary: After Kroger ended its hazard-pay program, it sent letters to employees forcing them to return some of the money they were paid.
+    positivity: -1
+    type: statement
+    sources:
+      - source: Dissent
+        link: https://web.archive.org/web/20200519173307/https://www.dissentmagazine.org/blog/what-happened-to-krogers-hero-pay
+        date: 2020-05-14T12:00:00Z # Estimate based on post date of 05/14/2020.
+      - source: Twitter
+        link: https://web.archive.org/web/20200519150034/https://twitter.com/laborseller/status/1262509741676298242
+        date: 2020-05-18T15:25:00-07:00
+  - summary: Kroger replaced its hazard-pay program with two bonus payments (in late May and mid-June) of $400 USD each for full-time employees and $200 USD each for part-time employees.
+    positivity: 0 # Given that they ended their hazard-pay program before doing this, it should be considered neutral.
+    type: publication
+    sources:
+      - source: KLTV
+        link: https://web.archive.org/web/20200519173123/https://www.kltv.com/2020/05/18/kroger-announces-new-bonuses-after-cutting-hazard-pay-workers/
+        date: 2020-05-18T18:10:07Z
