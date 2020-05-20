@@ -13,7 +13,7 @@ location:
   wiki: Chicago
 employeesBefore:
   type: approximately
-  upperBound: 210000
+  upperBound: 210000 # Stated to be about 850,000 including franchises. Will keep this as their officially reported numbers, though.
   year: 2018
 summary: McDonald's actions during the COVID-19 pandemic were generally positive, closing public areas but continuing drive-thru, and providing free lunches and free delivery.
 citations:
@@ -69,3 +69,10 @@ citations:
       - source: BuzzFeed News
         link: https://web.archive.org/web/20200414001149/https://www.buzzfeednews.com/article/albertsamaha/coronavirus-paid-leave-big-companies
         date: 2020-04-10T15:19:00-04:00
+  - summary: Hundreds of McDonald's workers in a number of cities began striking in May, under organization of a $15-minimum-wage campaign. They stated that their managers had instructed them not to wear masks or gloves and that they felt pressured not to call in sick. However, McDonald's rebutted this, stating that they had instituted new safety measures including providing masks and gloves, and installing protective barriers.
+    positivity: 0
+    type: hearsay
+    sources:
+      - source: UPI
+        link: https://web.archive.org/web/20200520234007/https://www.upi.com/Top_News/US/2020/05/20/McDonalds-workers-striking-Wednesday-over-COVID-19-conditions/6531589941526/?sl=4
+        date: 2020-05-20T06:46:50-04:00
