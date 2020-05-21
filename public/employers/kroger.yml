@@ -75,7 +75,7 @@ citations:
     positivity: -1
     type: statement
     sources:
-      - source: Dissent
+      - source: Dissent Magazine
         link: https://web.archive.org/web/20200519173307/https://www.dissentmagazine.org/blog/what-happened-to-krogers-hero-pay
         date: 2020-05-14T12:00:00Z # Estimate based on post date of 05/14/2020.
       - source: Twitter
