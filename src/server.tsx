@@ -8,7 +8,7 @@ import deepmerge from "deepmerge";
 import express from "express";
 import React from "react";
 import { renderToString } from "react-dom/server";
-import { FilledContext, HelmetProvider } from "react-helmet-async";
+import { Helmet, HelmetData } from "react-helmet";
 import { Provider } from "react-redux";
 import { StaticRouter } from "react-router-dom";
 import { AnyAction, Store } from "redux";
@@ -77,19 +77,15 @@ const server: express.Application = express()
 			localizationMiddleware.languages
 				.map((key: string) => `<meta property="og:locale:alternate" content="${key}" />`);
 
-		const helmetContext: Partial<FilledContext> = {};
-
 		const markup: string = renderToString(
 			<Provider store={store}>
-				<HelmetProvider context={helmetContext}>
-					<StaticRouter context={context} location={req.url}>
-						<App />
-					</StaticRouter>
-				</HelmetProvider>
+				<StaticRouter context={context} location={req.url}>
+					<App />
+				</StaticRouter>
 			</Provider>,
 		);
 
-		const { helmet } = helmetContext as FilledContext;
+		const helmet: HelmetData = Helmet.renderStatic();
 
 		const appState: AppState = store.getState();
 
