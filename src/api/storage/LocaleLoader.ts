@@ -85,7 +85,7 @@ export class LocaleLoader extends DataFileLoader<LocalizedStrings> {
 
 	private getFileName(id: string): string {
 		if (!fs.existsSync(this.directoryPath)) {
-			throw new Error("Employer record data folder not found.");
+			throw new Error("Locale record data folder not found.");
 		}
 
 		return `${this.directoryPath}/${id}.yml`;

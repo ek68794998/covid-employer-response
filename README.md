@@ -1,7 +1,7 @@
 ![Continuous integration](https://github.com/ekumlin/covid-employer-response/workflows/Continuous%20integration/badge.svg)
 
 # Cempres (**C**oronavirus **Emp**loyer **Res**ponse Tracker)
-This website tracks and cites sources for information about how employers have acted during the Coronavirus (COVID-19) pandemic. Cempres aims to have an open, Wikipedia-style organization of data where users can freely submit, edit, or change information regarding employers' response on the pandemic. 
+This website tracks and cites sources for information about how employers have acted during the Coronavirus (COVID-19) pandemic. Cempres aims to have an open, Wikipedia-style organization of data where users can freely submit, edit, or change information regarding employers' response on the pandemic.
 
 The main website can be found here: https://cempres.org/
 
