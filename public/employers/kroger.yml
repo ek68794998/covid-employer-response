@@ -2,6 +2,9 @@ name: The Kroger Company
 aliases:
   - Fred Meyer
   - QFC
+  - Quality Food Centers
+  - Ralphs
+  - Smith's
 shortName: Kroger
 ticker: KR
 wiki: Kroger
@@ -88,3 +91,10 @@ citations:
       - source: KLTV
         link: https://web.archive.org/web/20200519173123/https://www.kltv.com/2020/05/18/kroger-announces-new-bonuses-after-cutting-hazard-pay-workers/
         date: 2020-05-18T18:10:07Z
+  - summary: Ralphs, a Kroger subsidiary, was accused of ignoring employees' complaints of overcrowding in stores and lack of enforcement of social distancing, despite a claim from Ralphs that it had limited store capacity to 25%.
+    positivity: -1
+    type: statement
+    sources:
+      - source: LA Times
+        link: https://web.archive.org/web/20200816172921/https://www.latimes.com/california/story/2020-08-15/coronavirus-workers-retaliation-claims
+        date: 2020-08-15T12:00:03Z
