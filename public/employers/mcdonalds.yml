@@ -76,3 +76,10 @@ citations:
       - source: UPI
         link: https://web.archive.org/web/20200520234007/https://www.upi.com/Top_News/US/2020/05/20/McDonalds-workers-striking-Wednesday-over-COVID-19-conditions/6531589941526/?sl=4
         date: 2020-05-20T06:46:50-04:00
+  - summary: An employee at a McDonald's location in California claimed that, after requesting better PPE and enforcement of social distancing, she was retaliated against by management.
+    positivity: -1
+    type: statement
+    sources:
+      - source: LA Times
+        link: https://web.archive.org/web/20200816172921/https://www.latimes.com/california/story/2020-08-15/coronavirus-workers-retaliation-claims
+        date: 2020-08-15T12:00:03Z

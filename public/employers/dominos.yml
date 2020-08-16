@@ -77,3 +77,10 @@ citations:
       - source: The Herald Scotland
         link: https://web.archive.org/web/20200409081910/https://www.heraldscotland.com/news/18361460.dominos-delivery-drivers-banned-wearing-coronavirus-facemasks/
         date: 2020-04-06T15:11:21Z
+  - summary: Employees at a Domino's locaton in California went on strike, citing "several" COVID-19 cases at their store, and forcing the store to close for three weeks. Following the strike, employees involved had their hours cut in approximately half.
+    positivity: -1
+    type: statement
+    sources:
+      - source: LA Times
+        link: https://web.archive.org/web/20200816172921/https://www.latimes.com/california/story/2020-08-15/coronavirus-workers-retaliation-claims
+        date: 2020-08-15T12:00:03Z
