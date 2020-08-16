@@ -6,6 +6,7 @@ import { LocalizedStrings } from "../../../common/LocalizedStrings";
 import { getEmployersList } from "../../state/ducks/employers/selectors";
 import { getStrings } from "../../state/ducks/localization/selectors";
 
+import AppHelmet from "../AppHelmet/AppHelmet";
 import EmployerBracketList from "../EmployerBracketList/EmployerBracketList";
 import LoadingIndicator from "../LoadingIndicator/LoadingIndicator";
 
@@ -56,6 +57,9 @@ const EmployerBracketPage: React.FC<Props> = (props: Props): React.ReactElement 
 	if (mode === "ranking") {
 		return (
 			<main id="employer-bracket">
+				<AppHelmet
+					title={strings.employerListRanking}
+				/>
 				<div className="EmployerBracketPage__Container">
 					<div className="EmployerBracketPage__Content">
 						<EmployerBracketList
@@ -78,6 +82,9 @@ const EmployerBracketPage: React.FC<Props> = (props: Props): React.ReactElement 
 	if (mode === "recent") {
 		return (
 			<main id="employer-bracket">
+				<AppHelmet
+					title={strings.employerListRecentTitle}
+				/>
 				<div className="EmployerBracketPage__Container">
 					<div className="EmployerBracketPage__Content">
 						<EmployerBracketList
