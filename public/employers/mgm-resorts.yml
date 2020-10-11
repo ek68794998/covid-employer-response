@@ -1,0 +1,42 @@
+name: MGM Resorts International
+aliases:
+  - MGM Grand, Inc.
+  - MGM Mirage
+shortName: MGM Resorts
+ticker: MGM
+wiki: MGM Resorts International
+image: mgm-resorts.svg
+officialWebsite: https://www.mgmresorts.com/en/company.html
+industries:
+  - hospitality
+  - lodging
+location:
+  city: Paradise
+  state: NV
+  country: us
+  international: true
+  wiki: Paradise, Nevada
+employeesBefore:
+  type: approximately
+  upperBound: 74500
+  year: 2020
+  yearQuarter: Q1
+summary: MGM Resorts performed furloughs of over 80% of its staff early into the coronavirus pandemic, and laid off nearly 30% of those several months later.
+citations:
+  - summary: MGM Resorts furloughed over 63,000 employees in early 2020, with health benefits guaranteed through August 31. Under regulation, the company could not lay off employees until after August 31.
+    positivity: -1
+    type: publication
+    sources:
+      - source: My News 4
+        link: https://web.archive.org/web/20200604223754/https://mynews4.com/news/local/mgm-resorts-furloughs-could-turn-into-layoffs-in-august
+        date: 2020-05-06T19:46:30Z
+      - source: Card Player
+        link: https://web.archive.org/web/20200516191244/https://www.cardplayer.com/poker-news/24921-mgm-resorts-may-turn-63-000-furloughs-into-permanent-layoffs
+        date: 2020-05-07T12:00:00Z # Estimate based on publish date of 05/07/2020.
+  - summary: MGM Resorts laid off 18,000 employees who were initially furloughed.
+    positivity: -1
+    type: publication
+    sources:
+      - source: CNBC
+        link: https://web.archive.org/web/20200922183619/https://www.cnbc.com/2020/08/28/mgm-resorts-sends-separation-letters-to-18000-furloughed-employees.html
+        date: 2020-08-28T11:00:00-04:00
