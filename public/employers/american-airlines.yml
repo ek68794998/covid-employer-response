@@ -51,3 +51,10 @@ citations:
     sources:
       - source: CNBC
         link: https://web.archive.org/web/20200412193826/https://www.cnbc.com/2020/03/13/workforce-wire-coronavirus-heres-what-every-major-company-is-doing-about-the-pandemic.html
+  - summary: After receiving a bailout from the government under the stipulation that they not lay off any workers through September 30; on September 30, they announced that they would furlough 19,000 workers starting October 1 unless they received more stimulus money.
+    positivity: -1
+    type: publication
+    sources:
+      - source: The Hill
+        link: https://web.archive.org/web/20201004160525/https://thehill.com/policy/transportation/519065-american-airlines-to-furlough-19000-workers
+        date: 2020-09-30T20:50:01-04:00
