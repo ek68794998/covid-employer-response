@@ -18,22 +18,22 @@ import EmployerPage from "./EmployerPage";
 
 jest.mock(
 	"../EmployerPageDetails/EmployerPageDetails",
-	() => mockComponent("EmployerPageDetails"));
+	(): any => mockComponent("EmployerPageDetails"));
 
 jest.mock(
 	"../LoadingIndicator/LoadingIndicator",
-	() => mockComponent("LoadingIndicator"));
+	(): any => mockComponent("LoadingIndicator"));
 
-describe("<EmployerPage />", () => {
-	beforeEach(() => {
+describe("<EmployerPage />", (): void => {
+	beforeEach((): void => {
 		jest.spyOn(ReactRedux, "useDispatch").mockReturnValue(jest.fn());
 	});
 
-	afterEach(() => {
+	afterEach((): void => {
 		(ReactRedux.useDispatch as any).mockRestore();
 	});
 
-	test("renders without exploding", async () => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =
@@ -48,7 +48,7 @@ describe("<EmployerPage />", () => {
 		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("displays an employer record", async () => {
+	test("displays an employer record", async (): Promise<void> => {
 		const fakeEmployer: Partial<EmployerRecordBase> = {
 			employeesBefore: new EmployerEmployeeProfile(),
 			id: "e1",

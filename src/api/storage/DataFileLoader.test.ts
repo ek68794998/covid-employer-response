@@ -18,10 +18,10 @@ class MockDataFileLoader extends DataFileLoader<string> {
 	}
 }
 
-describe("DataFileLoader", () => {
-	test("throws exceptions if data path values are empty", async () => {
-		expect(() => new MockDataFileLoader("", "")).toThrowError();
-		expect(() => new MockDataFileLoader("real", "")).toThrowError();
-		expect(() => new MockDataFileLoader("", "real")).toThrowError();
+describe("DataFileLoader", (): void => {
+	test("throws exceptions if data path values are empty", async (): Promise<void> => {
+		expect((): MockDataFileLoader => new MockDataFileLoader("", "")).toThrowError();
+		expect((): MockDataFileLoader => new MockDataFileLoader("real", "")).toThrowError();
+		expect((): MockDataFileLoader => new MockDataFileLoader("", "real")).toThrowError();
 	});
 });

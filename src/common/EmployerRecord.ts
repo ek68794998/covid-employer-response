@@ -65,7 +65,7 @@ export class EmployerRecord extends EmployerRecordBase {
 				addCitations(employerReferenceMap[original.parentId]);
 			}
 
-			original.childIds.forEach((childId: string) => addCitations(employerReferenceMap[childId]));
+			original.childIds.forEach((childId: string): void => addCitations(employerReferenceMap[childId]));
 		}
 
 		const fairNeutralRatio: number = 0.78;

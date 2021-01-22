@@ -12,8 +12,8 @@ import configureStore from "../../state/configureStore";
 
 import EmployerCitation from "./EmployerCitation";
 
-describe("<EmployerCitation />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerCitation />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =

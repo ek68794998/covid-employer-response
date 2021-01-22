@@ -12,8 +12,8 @@ import configureStore from "../../state/configureStore";
 
 import EmployerActionLinks from "./EmployerActionLinks";
 
-describe("<EmployerActionLinks />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerActionLinks />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =
@@ -28,7 +28,7 @@ describe("<EmployerActionLinks />", () => {
 		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("properly shows all action links", async () => {
+	test("properly shows all action links", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const record: EmployerRecordMetadata =

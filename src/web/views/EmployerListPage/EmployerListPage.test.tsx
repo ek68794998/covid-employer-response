@@ -13,14 +13,14 @@ import EmployerListPage from "./EmployerListPage";
 
 jest.mock(
 	"../EmployerListSearch/EmployerListSearch",
-	() => mockComponent("EmployerListSearch"));
+	(): any => mockComponent("EmployerListSearch"));
 
 jest.mock(
 	"../EmployerList/EmployerList",
-	() => mockComponent("EmployerList"));
+	(): any => mockComponent("EmployerList"));
 
-describe("<EmployerListPage />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerListPage />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =

@@ -12,22 +12,22 @@ import configureStore from "./state/configureStore";
 
 jest.mock(
 	"./views/HomePage/HomePage",
-	() => mockComponent("HomePage"));
+	(): any => mockComponent("HomePage"));
 
 jest.mock(
 	"./views/EmployerRoute/EmployerRoute",
-	() => mockComponent("EmployerRoute"));
+	(): any => mockComponent("EmployerRoute"));
 
 jest.mock(
 	"./views/AboutPage/AboutPage",
-	() => mockComponent("AboutPage"));
+	(): any => mockComponent("AboutPage"));
 
 jest.mock(
 	"./views/SubmitPage/SubmitPage",
-	() => mockComponent("SubmitPage"));
+	(): any => mockComponent("SubmitPage"));
 
-describe("<App />", () => {
-	test("renders without exploding", () => {
+describe("<App />", (): void => {
+	test("renders without exploding", (): void => {
 		const div: HTMLDivElement = document.createElement("div");
 		const store: Store<AppState, AnyAction> = configureStore({});
 

@@ -9,18 +9,18 @@ import configureStore from "../../state/configureStore";
 
 import EmployerListSearchFiltersSelector from "./EmployerListSearchFiltersSelector";
 
-describe("<EmployerListSearchFiltersSelector />", () => {
-	beforeEach(() => {
+describe("<EmployerListSearchFiltersSelector />", (): void => {
+	beforeEach((): void => {
 		jest.spyOn(global.Math, "random").mockReturnValue(0.123456789);
 	});
 
-	afterEach(() => {
+	afterEach((): void => {
 		(global.Math.random as any).mockRestore();
 	});
 
 	const createConfigStore = (): Store<AppState, AnyAction> => configureStore({});
 
-	test("renders as checkboxes", () => {
+	test("renders as checkboxes", (): void => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
 		const testRenderer: ReactTestRenderer =
@@ -52,7 +52,7 @@ describe("<EmployerListSearchFiltersSelector />", () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	test("renders as radio buttons", () => {
+	test("renders as radio buttons", (): void => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
 		const testRenderer: ReactTestRenderer =
@@ -84,7 +84,7 @@ describe("<EmployerListSearchFiltersSelector />", () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	test("handles form changes", () => {
+	test("handles form changes", (): void => {
 		const store: Store<AppState, AnyAction> = createConfigStore();
 
 		const clickFn: jest.Mock<any, any> = jest.fn();

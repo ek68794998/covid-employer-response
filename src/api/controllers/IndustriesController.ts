@@ -34,7 +34,7 @@ class EmployersController extends RoutedControllerBase {
 				continue;
 			}
 
-			employer.industries.forEach((i: string) => industries[i] = true);
+			employer.industries.forEach((i: string): void => { industries[i] = true; });
 		}
 
 		res.setHeader(HttpResponseHeaders.CONTENT_TYPE, MimeTypes.APPLICATION_JSON);

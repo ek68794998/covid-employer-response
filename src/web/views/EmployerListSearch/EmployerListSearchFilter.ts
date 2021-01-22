@@ -101,10 +101,10 @@ export class EmployerListSearchFilter {
 		];
 
 		if (e.aliases) {
-			e.aliases.forEach((a: string) => fieldsToSearch.push(a?.toLowerCase()));
+			e.aliases.forEach((a: string): void => { fieldsToSearch.push(a?.toLowerCase()); });
 		}
 
-		return fieldsToSearch.some((field?: string) => field && field.indexOf(f.text.toLowerCase()) >= 0);
+		return fieldsToSearch.some((field?: string): boolean => !!field && field.indexOf(f.text.toLowerCase()) >= 0);
 	}
 
 	private static isMatchForLocation(f: EmployerListSearchFilter, e?: EmployerLocation): boolean {

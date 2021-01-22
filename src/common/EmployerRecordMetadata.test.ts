@@ -1,7 +1,7 @@
 import { EmployerRecordMetadata } from "./EmployerRecordMetadata";
 
-describe("EmployerRecordMetadata", () => {
-	test("constructs", () => {
+describe("EmployerRecordMetadata", (): void => {
+	test("constructs", (): void => {
 		const record: EmployerRecordMetadata = new EmployerRecordMetadata(-5, 3, 2, "fair");
 
 		expect(record.negativeCount).toBe(-5);
@@ -15,7 +15,7 @@ describe("EmployerRecordMetadata", () => {
 		[ "fair", "trending_flat" ],
 		[ "poor", "trending_down" ],
 		[ "NOT_VALID", "trending_flat" ],
-	])("gets trend icons", (rating: string, expectedIcon: string) => {
+	])("gets trend icons", (rating: string, expectedIcon: string): void => {
 		const record: EmployerRecordMetadata =
 			new EmployerRecordMetadata(-5, 3, 0, rating as any);
 

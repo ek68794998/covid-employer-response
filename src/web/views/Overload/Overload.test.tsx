@@ -9,8 +9,8 @@ import configureStore from "../../state/configureStore";
 
 import Overload from "./Overload";
 
-describe("<Overload />", () => {
-	test("renders without exploding", () => {
+describe("<Overload />", (): void => {
+	test("renders without exploding", (): void => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const renderedValue: ReactTestRenderer =

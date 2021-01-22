@@ -1,11 +1,18 @@
 export interface LocalizedStrings { [key: string]: LocalizedStringValue }
 
-export const format = (translation: string, args: { [key: string]: any }): string => {
+export const format = (translation: string, args?: Record<string, any>): string => {
 	if (!translation) {
 		throw new Error("Translated string must not be empty.");
 	}
 
-	return translation.replace(/\{([^\}]+)\}/g, (value: string, argName: string) => args[argName] || argName);
+	if (!args) {
+		return translation;
+	}
+
+	return translation.replace(
+		/\{([^\}]+)\}/g,
+		(value: string, argName: string): string => argName in args ? args[argName] : argName,
+	);
 };
 
 // Would prefer to use 'string | { [key: string]: LocalizedStringValue }' here.

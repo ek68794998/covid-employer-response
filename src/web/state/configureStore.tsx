@@ -19,7 +19,8 @@ const configureStore = (preloadedState: Partial<AppState>): Store<AppState, AnyA
 
 	if (module.hot) {
 		// Enable Webpack hot module replacement for reducers
-		module.hot.accept("./ducks", () => {
+		module.hot.accept("./ducks", (): void => {
+			// eslint-disable-next-line @typescript-eslint/no-var-requires
 			const nextRootReducer: any = require("./ducks").default;
 			store.replaceReducer(nextRootReducer);
 		});

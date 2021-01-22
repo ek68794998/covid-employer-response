@@ -14,10 +14,10 @@ import EmployerListItem from "./EmployerListItem";
 
 jest.mock(
 	"../EmployerActionLinks/EmployerActionLinks",
-	() => mockComponent("EmployerActionLinks"));
+	(): any => mockComponent("EmployerActionLinks"));
 
-describe("<EmployerListItem />", () => {
-	test("renders standard without exploding", async () => {
+describe("<EmployerListItem />", (): void => {
+	test("renders standard without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
@@ -43,7 +43,7 @@ describe("<EmployerListItem />", () => {
 		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("renders details without exploding", async () => {
+	test("renders details without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {

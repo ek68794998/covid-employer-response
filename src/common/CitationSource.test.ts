@@ -1,7 +1,7 @@
 import { CitationSource } from "./CitationSource";
 
-describe("CitationSource", () => {
-	test("initializes with default values", () => {
+describe("CitationSource", (): void => {
+	test("initializes with default values", (): void => {
 		const c: CitationSource = new CitationSource();
 
 		expect(c.date).toBeUndefined();

@@ -1,6 +1,6 @@
 import { format } from "./LocalizedStrings";
 
-describe("LocalizedStrings", () => {
+describe("LocalizedStrings", (): void => {
 	test.each([
 		[ "abc", {}, "abc" ],
 		[ "abc", { b: "c" }, "abc" ],
@@ -10,7 +10,7 @@ describe("LocalizedStrings", () => {
 		[ "a{B}c", { b: "c" }, "aBc" ],
 	])(
 		"formats %p with arguments (%#)",
-		(input: string, args: {}, expected: string) => {
+		(input: string, args: Record<string, any>, expected: string): void => {
 			expect(format(input, args)).toBe(expected);
 		},
 	);

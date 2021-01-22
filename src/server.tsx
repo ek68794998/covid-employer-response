@@ -50,9 +50,9 @@ const server: express.Application = express()
 	.use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
 	.use(localizationMiddleware.invokeAsync.bind(localizationMiddleware))
 	.use("/api", apiRoutes)
-	.get("/*", async (req: express.Request, res: express.Response) => {
+	.get("/*", async (req: express.Request, res: express.Response): Promise<void> => {
 		const request: HttpRequest = req as HttpRequest;
-		const context: {} = {};
+		const context: Record<string, any> = {};
 		const preloadedState: Partial<AppState> = {};
 
 		const localeCode: string = request.languageCode.toLowerCase();
@@ -75,7 +75,7 @@ const server: express.Application = express()
 
 		const alternateLocaleMetaTags: string[] =
 			localizationMiddleware.languages
-				.map((key: string) => `<meta property="og:locale:alternate" content="${key}" />`);
+				.map((key: string): string => `<meta property="og:locale:alternate" content="${key}" />`);
 
 		const markup: string = renderToString(
 			<Provider store={store}>

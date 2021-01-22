@@ -15,14 +15,14 @@ import EmployerListSearch from "./EmployerListSearch";
 
 jest.mock(
 	"./EmployerListFilterControl/InternationalTypeFilterControl",
-	() => mockComponent("InternationalTypeFilterControl"));
+	(): any => mockComponent("InternationalTypeFilterControl"));
 
 jest.mock(
 	"./EmployerListFilterControl/EmployeeCountFilterControl",
-	() => mockComponent("EmployeeCountFilterControl"));
+	(): any => mockComponent("EmployeeCountFilterControl"));
 
-describe("<EmployerListSearch />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerListSearch />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const testRenderer: ReactTestRenderer =
@@ -39,7 +39,7 @@ describe("<EmployerListSearch />", () => {
 		expect(testRenderer.toJSON()).toMatchSnapshot();
 	});
 
-	test("opens 'filters' dropdown", async () => {
+	test("opens 'filters' dropdown", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const testRenderer: ReactTestRenderer =
@@ -54,7 +54,7 @@ describe("<EmployerListSearch />", () => {
 			);
 
 		const selectors: ReactTestInstance[] =
-			testRenderer.root.findAll((node: ReactTestInstance) => node.type === "button");
+			testRenderer.root.findAll((node: ReactTestInstance): boolean => node.type === "button");
 
 		act((): void => {
 			selectors[0].props.onClick();

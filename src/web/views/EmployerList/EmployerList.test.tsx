@@ -19,14 +19,14 @@ import EmployerList from "./EmployerList";
 
 jest.mock(
 	"../EmployerListItem/EmployerListItem",
-	() => mockComponent("EmployerListItem"));
+	(): any => mockComponent("EmployerListItem"));
 
 jest.mock(
 	"../LoadingIndicator/LoadingIndicator",
-	() => mockComponent("LoadingIndicator"));
+	(): any => mockComponent("LoadingIndicator"));
 
-describe("<EmployerList />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerList />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =
@@ -43,7 +43,7 @@ describe("<EmployerList />", () => {
 		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("renders empty list of employers", async () => {
+	test("renders empty list of employers", async (): Promise<void> => {
 		const record: EmployerRecordMetadata = new EmployerRecordMetadata(0, 0, 0, "fair");
 
 		record.employeesBefore = new EmployerEmployeeProfile();
@@ -83,7 +83,7 @@ describe("<EmployerList />", () => {
 		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("renders list of employers", async () => {
+	test("renders list of employers", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {

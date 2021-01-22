@@ -1,6 +1,6 @@
 import { EmployeeNumber } from "./EmployeeNumber";
 
-describe("EmployeeNumber", () => {
+describe("EmployeeNumber", (): void => {
 	test.each([
 		[ 0, "0" ],
 		[ 1, "1" ],
@@ -16,7 +16,7 @@ describe("EmployeeNumber", () => {
 		[ 89012345, "89 million" ],
 		[ 901234567, "901.2 million" ],
 		[ 1234567890, "1.2 billion" ],
-	])("toString converts %p to normal string %p (%#)", (n: number, expected: string) => {
+	])("toString converts %p to normal string %p (%#)", (n: number, expected: string): void => {
 		expect(new EmployeeNumber(n).toString()).toBe(expected);
 	});
 
@@ -35,7 +35,7 @@ describe("EmployeeNumber", () => {
 		[ 89012345, "89m" ],
 		[ 901234567, "901.2m" ],
 		[ 1234567890, "1.2b" ],
-	])("toString converts %p to short string %p (%#)", (n: number, expected: string) => {
+	])("toString converts %p to short string %p (%#)", (n: number, expected: string): void => {
 		expect(new EmployeeNumber(n).toString(true)).toBe(expected);
 	});
 
@@ -54,7 +54,7 @@ describe("EmployeeNumber", () => {
 		[ 89012345, 6 ],
 		[ 901234567, 6 ],
 		[ 1234567890, 9 ],
-	])("sets the magnitude correctly (%#)", (n: number, expected: number | null) => {
+	])("sets the magnitude correctly (%#)", (n: number, expected: number | null): void => {
 		expect(new EmployeeNumber(n).magnitude).toBe(expected);
 	});
 });

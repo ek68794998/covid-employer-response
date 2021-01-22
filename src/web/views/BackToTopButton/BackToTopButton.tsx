@@ -20,7 +20,7 @@ const BackToTopButton: React.FC = (): React.ReactElement | null => {
 		};
 
 		useEffect(
-			() => {
+			(): void => {
 				trackScrolling();
 
 				window.addEventListener("scroll", trackScrolling);

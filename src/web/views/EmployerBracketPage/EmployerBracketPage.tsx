@@ -31,7 +31,7 @@ const EmployerBracketPage: React.FC<Props> = (props: Props): React.ReactElement 
 	const sortedEmployers: EmployerRecordMetadata[] =
 		employersList
 			.concat() // Copy the array.
-			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => {
+			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata): number => {
 				if (mode === "ranking") {
 					return a.score - b.score;
 				}

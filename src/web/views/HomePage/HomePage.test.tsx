@@ -11,8 +11,8 @@ import configureStore from "../../state/configureStore";
 
 import HomePage from "./HomePage";
 
-describe("<HomePage />", () => {
-	test("renders without exploding", async () => {
+describe("<HomePage />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =

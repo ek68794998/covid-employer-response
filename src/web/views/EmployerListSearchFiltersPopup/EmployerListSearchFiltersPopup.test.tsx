@@ -13,10 +13,10 @@ import EmployerListSearchFiltersPopup from "./EmployerListSearchFiltersPopup";
 
 jest.mock(
 	"../EmployerListSearchFiltersSelector/EmployerListSearchFiltersSelector",
-	() => mockComponent("EmployerListSearchFiltersSelector"));
+	(): any => mockComponent("EmployerListSearchFiltersSelector"));
 
-describe("<EmployerListSearchFiltersPopup />", () => {
-	test("renders without exploding", () => {
+describe("<EmployerListSearchFiltersPopup />", (): void => {
+	test("renders without exploding", (): void => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const renderedValue: ReactTestRenderer =

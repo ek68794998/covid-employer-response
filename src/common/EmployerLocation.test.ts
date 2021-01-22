@@ -1,7 +1,7 @@
 import { EmployerLocation } from "./EmployerLocation";
 
-describe("EmployerLocation", () => {
-	test("initializes with default values", () => {
+describe("EmployerLocation", (): void => {
+	test("initializes with default values", (): void => {
 		const l: EmployerLocation = new EmployerLocation();
 
 		expect(l.city).toBe("");
@@ -22,7 +22,7 @@ describe("EmployerLocation", () => {
 		[ { city: "Foo Ba", country: "Baz", international: true, state: "Den" }, "Foo Ba, Den, Baz (Multinational)" ],
 	])(
 		"toString properly generates based on EmployerLocation fields (%#)",
-		(l: EmployerLocation, expected: string) => {
+		(l: EmployerLocation, expected: string): void => {
 			expect(EmployerLocation.toString(l, {})).toBe(expected);
 		},
 	);

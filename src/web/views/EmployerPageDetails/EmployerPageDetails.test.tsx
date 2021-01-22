@@ -14,30 +14,30 @@ import EmployerPageDetails from "./EmployerPageDetails";
 
 jest.mock(
 	"../EmployerCitationList/EmployerCitationList",
-	() => mockComponent("EmployerCitationList"));
+	(): any => mockComponent("EmployerCitationList"));
 
 jest.mock(
 	"../EmployerListItem/EmployerListItem",
-	() => mockComponent("EmployerListItem"));
+	(): any => mockComponent("EmployerListItem"));
 
 jest.mock(
 	"../EmployerRatingPill/EmployerRatingPill",
-	() => mockComponent("EmployerRatingPill"));
+	(): any => mockComponent("EmployerRatingPill"));
 
-describe("<EmployerPageDetails />", () => {
+describe("<EmployerPageDetails />", (): void => {
 	const dateToLocaleStringPrototype: any = Date.prototype.toLocaleDateString;
 
-	afterEach(() => {
+	afterEach((): void => {
 		Date.prototype.toLocaleDateString = dateToLocaleStringPrototype;
 	});
 
-	beforeEach(() => {
+	beforeEach((): void => {
 		Date.prototype.toLocaleDateString = function(): string {
 			return `${this.getUTCFullYear()}-${this.getUTCMonth() + 1}-${this.getUTCDate()}`;
 		};
 	});
 
-	test("renders without exploding", async () => {
+	test("renders without exploding", async (): Promise<void> => {
 		const e: EmployerRecord = new EmployerRecord();
 
 		const store: Store<AppState, AnyAction> = configureStore({
@@ -64,7 +64,7 @@ describe("<EmployerPageDetails />", () => {
 		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("renders using an employer record", async () => {
+	test("renders using an employer record", async (): Promise<void> => {
 		const e: EmployerRecord =
 			Object.assign(new EmployerRecord(), {
 				citations: [{

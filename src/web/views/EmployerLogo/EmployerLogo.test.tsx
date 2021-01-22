@@ -11,8 +11,8 @@ import configureStore from "../../state/configureStore";
 
 import EmployerLogo from "./EmployerLogo";
 
-describe("<EmployerLogo />", () => {
-	test("renders without exploding", () => {
+describe("<EmployerLogo />", (): void => {
+	test("renders without exploding", (): void => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const employer: EmployerRecord = {

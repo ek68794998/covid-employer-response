@@ -12,8 +12,8 @@ import configureStore from "../../state/configureStore";
 
 import EmployerRatingPill from "./EmployerRatingPill";
 
-describe("<EmployerRatingPill />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerRatingPill />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const employer: EmployerRecordMetadata =

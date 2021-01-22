@@ -15,10 +15,10 @@ import EmployerBracketList from "./EmployerBracketList";
 
 jest.mock(
 	"../EmployerListItem/EmployerListItem",
-	() => mockComponent("EmployerListItem"));
+	(): any => mockComponent("EmployerListItem"));
 
-describe("<EmployerList />", () => {
-	test("renders without exploding", () => {
+describe("<EmployerList />", (): void => {
+	test("renders without exploding", (): void => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const renderedValue: ReactTestRenderer =

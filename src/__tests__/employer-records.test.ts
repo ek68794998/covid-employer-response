@@ -17,10 +17,10 @@ const dateToNumber = (date: string | Date | null): number => new Date(date || ""
 
 const recordIds: string[] =
 	fs.readdirSync(`${directory}/${subDirectory}`)
-		.filter((file: string) => file.indexOf(".yml") > 0)
-		.map((file: string) => file.split(".")[0]);
+		.filter((file: string): boolean => file.indexOf(".yml") > 0)
+		.map((file: string): string => file.split(".")[0]);
 
-describe("employer records", () => {
+describe("employer records", (): void => {
 	const isValidEmployeeCount = (p: EmployerEmployeeProfile): boolean =>
 		EmployerEmployeeProfileTypeValues.indexOf(p.type) >= 0
 		&& !!p.toString();
@@ -35,13 +35,13 @@ describe("employer records", () => {
 	const loader: EmployerRecordLoader =
 		new EmployerRecordLoader(directory, subDirectory);
 
-	test("exist", () => {
+	test("exist", (): void => {
 		expect(recordIds.length).toBeGreaterThan(0);
 	});
 
 	test.each(
-		recordIds.map((recordId: string) => [ recordId ]),
-	)("can load and parse %p (%#)", async (id: string) => {
+		recordIds.map((recordId: string): string[] => [ recordId ]),
+	)("can load and parse %p (%#)", async (id: string): Promise<void> => {
 		if (id.startsWith("_")) {
 			// Sample and metadata files cannot be parsed as records.
 			return;
@@ -201,7 +201,7 @@ describe("employer records", () => {
 		return;
 	});
 
-	test("have correct sample data", async () => {
+	test("have correct sample data", async (): Promise<void> => {
 		const record: EmployerRecord = await loader.getAsync("_sample", {});
 
 		expect(record.id).toBe("_sample");

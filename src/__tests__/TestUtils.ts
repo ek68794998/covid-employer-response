@@ -1,14 +1,14 @@
 import { LocaleLoader } from "../api/storage/LocaleLoader";
 import { LocalizedStrings } from "../common/LocalizedStrings";
 
-type ComponentGenerator = (props: {}) => string;
+type ComponentGenerator = (props: Record<string, any>) => string;
 
 const localeLoader: LocaleLoader = new LocaleLoader("./public", "strings");
 
 export const getPlocStringsAsync = async (): Promise<LocalizedStrings> => localeLoader.getAsync("ploc", {});
 
 export const mockComponent = (componentName: string): ComponentGenerator =>
-	(props: {}): string => {
+	(props: Record<string, any>): string => {
 		const openingTag: string = `[component: ${componentName}`;
 		const closingTag: string = "/]";
 

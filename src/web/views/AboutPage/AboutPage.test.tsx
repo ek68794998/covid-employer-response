@@ -13,10 +13,10 @@ import AboutPage from "./AboutPage";
 
 jest.mock(
 	"react-markdown",
-	() => mockComponent("ReactMarkdown"));
+	(): any => mockComponent("ReactMarkdown"));
 
-describe("<AboutPage />", () => {
-	test("renders without exploding", async () => {
+describe("<AboutPage />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =

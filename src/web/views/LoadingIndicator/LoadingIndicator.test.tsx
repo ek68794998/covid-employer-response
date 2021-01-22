@@ -9,8 +9,8 @@ import configureStore from "../../state/configureStore";
 
 import LoadingIndicator from "./LoadingIndicator";
 
-describe("<LoadingIndicator />", () => {
-	test("renders without exploding", () => {
+describe("<LoadingIndicator />", (): void => {
+	test("renders without exploding", (): void => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const renderedValue: ReactTestRenderer =

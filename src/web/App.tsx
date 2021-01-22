@@ -17,7 +17,7 @@ const App: React.FC = (): React.ReactElement => {
 	const dispatch: React.Dispatch<any> = useDispatch();
 
 	useEffect(
-		() => {
+		(): void => {
 			dispatch(getEmployersList);
 		},
 		[]);

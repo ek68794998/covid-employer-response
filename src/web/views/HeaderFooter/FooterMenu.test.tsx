@@ -11,8 +11,8 @@ import configureStore from "../../state/configureStore";
 
 import FooterMenu from "./FooterMenu";
 
-describe("<FooterMenu />", () => {
-	test("renders without exploding", async () => {
+describe("<FooterMenu />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =

@@ -29,8 +29,10 @@ const EmployerList: React.FC = (): React.ReactElement => {
 
 	const filteredEmployers: EmployerRecordMetadata[] =
 		employersList
-			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(listContext.searchFilters, e))
-			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => {
+			.filter(
+				(e: EmployerRecordMetadata): boolean => EmployerListSearchFilter.isMatch(listContext.searchFilters, e),
+			)
+			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata): number => {
 				const nameMatcher: RegExp = /^(The |A )?(.*)$/i;
 
 				const aName: string | undefined = nameMatcher.exec(a.shortName || a.name)?.[2];

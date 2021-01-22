@@ -9,8 +9,8 @@ import configureStore from "../../../state/configureStore";
 
 import EmployerListFilterControl from "./EmployerListFilterControl";
 
-describe("<EmployerListFilterControl />", () => {
-	test("renders without exploding", () => {
+describe("<EmployerListFilterControl />", (): void => {
+	test("renders without exploding", (): void => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const renderedValue: ReactTestRenderer =

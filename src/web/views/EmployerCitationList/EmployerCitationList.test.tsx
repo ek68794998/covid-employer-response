@@ -14,10 +14,10 @@ import EmployerCitationList from "./EmployerCitationList";
 
 jest.mock(
 	"../EmployerCitation/EmployerCitation",
-	() => mockComponent("EmployerCitation"));
+	(): any => mockComponent("EmployerCitation"));
 
-describe("<EmployerCitationList />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerCitationList />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =

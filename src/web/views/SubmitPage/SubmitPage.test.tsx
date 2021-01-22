@@ -13,10 +13,10 @@ import SubmitPage from "./SubmitPage";
 
 jest.mock(
 	"react-markdown",
-	() => mockComponent("ReactMarkdown"));
+	(): any => mockComponent("ReactMarkdown"));
 
-describe("<SubmitPage />", () => {
-	test("renders without exploding", async () => {
+describe("<SubmitPage />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
 		const renderedValue: ReactTestRenderer =

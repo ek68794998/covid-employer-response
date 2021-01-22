@@ -27,7 +27,7 @@ export const getEmployersById =
 	(state: AppState, ids: string[]): EmployerRecord[] =>
 		state.employers
 		&& state.employers.itemsComplete
-		&& ids.map((id: string) => getEmployer(state, id)).filter(isNotNullOrUndefined)
+		&& ids.map((id: string): EmployerRecord | undefined => getEmployer(state, id)).filter(isNotNullOrUndefined)
 		|| [];
 
 export const getEmployersList =
