@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { useSelector } from "react-redux";
 
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
@@ -22,14 +22,6 @@ const EmployerList: React.FC = (): React.ReactElement => {
 	const employersList: EmployerRecordMetadata[] | undefined = useSelector(getEmployersList);
 
 	const listContext: EmployerRouteContextData = useContext(EmployerRouteContext);
-
-	const [ pageIndex, setPageIndex ] = useState(listContext.pageIndex);
-
-	useEffect(
-		(): void => {
-			listContext.setPageIndex(pageIndex);
-		},
-		[ pageIndex ]);
 
 	if (!employersList) {
 		return <LoadingIndicator />;
@@ -55,17 +47,19 @@ const EmployerList: React.FC = (): React.ReactElement => {
 		);
 	}
 
+	const pageCount: number = Math.ceil(filteredEmployers.length / pageSize);
+
+	const pageIndex: number = Math.min(listContext.pageIndex, pageCount - 1);
+
 	const startIndex: number = pageIndex * pageSize;
 	const endIndex: number = startIndex + pageSize;
-
-	const pageCount: number = Math.ceil(filteredEmployers.length / pageSize);
 
 	const generatePageButton = (contents: JSX.Element, title: string, pageNumber: number): JSX.Element =>
 		<button
 			key={`${title}:${pageNumber}`}
 			className="App__BigButton"
 			disabled={pageNumber === pageIndex || pageNumber < 0 || pageNumber >= pageCount}
-			onClick={(): void => setPageIndex(pageNumber)}
+			onClick={(): void => listContext.setPageIndex(pageNumber)}
 		>
 			{contents}
 		</button>;
