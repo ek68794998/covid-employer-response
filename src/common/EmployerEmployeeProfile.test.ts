@@ -6,8 +6,8 @@ const tc = (t: EmployerEmployeeProfileType): EmployerEmployeeProfileType => t;
 // This is a hack for the test thinking that the value passed to the 'yearQuarter' field of a test data row is a string.
 const yq = (t: "Q1" | "Q2" | "Q3" | "Q4"): "Q1" | "Q2" | "Q3" | "Q4" => t;
 
-describe("EmployerEmployeeProfile", () => {
-	test("initializes with default values", () => {
+describe("EmployerEmployeeProfile", (): void => {
+	test("initializes with default values", (): void => {
 		const p: EmployerEmployeeProfile = new EmployerEmployeeProfile();
 
 		expect(p.lowerBound).toBeUndefined();
@@ -26,7 +26,11 @@ describe("EmployerEmployeeProfile", () => {
 		[ { type: tc("range"), lowerBound: 27 }, { type: tc("range"), upperBound: 11 }, 16 ],
 	])(
 		"properly subtracts %p from %p (%#)",
-		(leftPart: Partial<EmployerEmployeeProfile>, rightPart: Partial<EmployerEmployeeProfile>, expected: number) => {
+		(
+			leftPart: Partial<EmployerEmployeeProfile>,
+			rightPart: Partial<EmployerEmployeeProfile>,
+			expected: number,
+		): void => {
 			const left: EmployerEmployeeProfile = { ...new EmployerEmployeeProfile(), ...leftPart };
 			const right: EmployerEmployeeProfile = { ...new EmployerEmployeeProfile(), ...rightPart };
 
@@ -39,8 +43,8 @@ describe("EmployerEmployeeProfile", () => {
 		[ { type: tc("exactly"), upperBound: 0, year: 2010 } ],
 		[ { lowerBound: 50, type: tc("range"), upperBound: 5, year: 2010 } ],
 		[ { lowerBound: 0, type: tc("range"), upperBound: 0, year: 2010 } ],
-	])("toString errors out when invalid bounds are provided (%#)", (p: EmployerEmployeeProfile) => {
-		expect(() => EmployerEmployeeProfile.toString(p, false, false)).toThrowError();
+	])("toString errors out when invalid bounds are provided (%#)", (p: EmployerEmployeeProfile): void => {
+		expect((): string | null => EmployerEmployeeProfile.toString(p, false, false)).toThrowError();
 	});
 
 	test.each([
@@ -80,7 +84,7 @@ describe("EmployerEmployeeProfile", () => {
 		[ { type: tc("exactly"), upperBound: 1000, year: 2010, yearQuarter: yq("Q3") }, true, false, "1,000 (Q3 2010)" ],
 	])(
 		"toString properly generates based on EmployerEmployeeProfile fields (%#)",
-		(p: EmployerEmployeeProfile, useDate: boolean, short: boolean, expected: string) => {
+		(p: EmployerEmployeeProfile, useDate: boolean, short: boolean, expected: string): void => {
 			expect(EmployerEmployeeProfile.toString(p, useDate, short)).toBe(expected);
 		},
 	);

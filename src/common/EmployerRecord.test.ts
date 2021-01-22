@@ -10,8 +10,8 @@ const er = (t: EmployerRating): EmployerRating => t;
 const mockDatedSource =
 	(d: string): CitationSource => ({ ...new CitationSource(), date: d });
 
-describe("EmployerRecord", () => {
-	test("getLastUpdateDate properly determines the date", () => {
+describe("EmployerRecord", (): void => {
+	test("getLastUpdateDate properly determines the date", (): void => {
 		const record1: EmployerRecord = {
 			...new EmployerRecord(),
 			citations: [
@@ -97,7 +97,7 @@ describe("EmployerRecord", () => {
 		[ [ -1, -1, -1, -1, -1, -1, -1 ], er("poor") ],
 	])(
 		"toMetadata properly calculates %p ratings as %p (%#)",
-		(ratings: number[], expected: EmployerRating) => {
+		(ratings: number[], expected: EmployerRating): void => {
 			const record: EmployerRecord = new EmployerRecord();
 
 			record.citations =
@@ -112,7 +112,7 @@ describe("EmployerRecord", () => {
 		},
 	);
 
-	test("toMetadata properly creates an object", () => {
+	test("toMetadata properly creates an object", (): void => {
 		const record: EmployerRecord = new EmployerRecord();
 
 		record.citations.push(

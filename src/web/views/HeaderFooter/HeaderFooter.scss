@@ -17,7 +17,6 @@ header, footer {
 
 	.HeaderFooter__Container {
 		display: flex;
-		height: $footer-height;
 		margin: 0 auto;
 		max-width: 1440px;
 	}
@@ -28,6 +27,10 @@ header {
 	color: $background;
 	position: relative;
 	z-index: 12;
+
+	.HeaderFooter__Container {
+		height: $footer-height;
+	}
 
 	#brand {
 		align-self: center;
@@ -149,6 +152,7 @@ footer {
 	.HeaderFooter__Container {
 		align-items: center;
 		justify-content: space-between;
+		min-height: $footer-height;
 		opacity: 0.8;
 		transition: 0.2s opacity;
 
@@ -253,15 +257,19 @@ footer {
 		}
 	}
 
-	footer .HeaderFooter__Container {
-		flex-direction: column;
+	footer {
+		padding: 0 5%;
 
-		span {
-			margin-bottom: 12px;
-			text-align: center !important;
-
-			&:first-child {
-				margin-top: 12px;
+		.HeaderFooter__Container {
+			flex-direction: column;
+	
+			div {
+				padding: 12px;
+				text-align: center !important;
+	
+				&:first-child {
+					padding-bottom: 0;
+				}
 			}
 		}
 	}

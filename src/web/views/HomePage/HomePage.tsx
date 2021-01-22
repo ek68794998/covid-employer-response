@@ -24,7 +24,7 @@ const HomePage: React.FC = (): React.ReactElement => {
 	const employerCount: number = employerIds ? employerIds.length : 0;
 
 	useEffect(
-		() => {
+		(): void => {
 			setRandomEmployerId(
 				employerIds && employerIds[Math.floor(Math.random() * employerIds.length)]);
 		},

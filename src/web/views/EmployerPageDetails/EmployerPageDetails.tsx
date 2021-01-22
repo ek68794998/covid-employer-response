@@ -41,11 +41,10 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 
 	const { employer } = props;
 
-	const employersList: EmployerRecordMetadata[] | undefined =
-		useSelector((state: AppState) => getEmployersList(state));
+	const employersList: EmployerRecordMetadata[] | undefined = useSelector(getEmployersList);
 
 	const employerMetadata: EmployerRecordMetadata | undefined =
-		useSelector((state: AppState) => getEmployerMetadata(state, employer?.id));
+		useSelector((state: AppState): EmployerRecordMetadata | undefined => getEmployerMetadata(state, employer?.id));
 
 	if (!employer || !employerMetadata || !employersList) {
 		return null;
@@ -76,14 +75,14 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 				e.id,
 				EmployerRecordBase.calculateRelationshipStrength(employerMetadata, e),
 			])
-			.filter((value: [string, number]) => {
+			.filter((value: [string, number]): boolean => {
 				if (employer.parentId === value[0] || employer.childIds.indexOf(value[0]) >= 0) {
 					return false;
 				}
 
 				return value[1] > 0;
 			})
-			.sort((a: [string, number], b: [string, number]) => {
+			.sort((a: [string, number], b: [string, number]): number => {
 				if (a[1] === b[1]) {
 					return Math.random() - 0.5;
 				}
@@ -178,7 +177,9 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 										<div className="EmployerPageDetails__ProfileSublist">
 											<h3>AKA</h3>
 											<ul>
-												{employer.aliases.map((a: string, i: number) => <li key={i}>{a}</li>)}
+												{employer.aliases.map(
+													(a: string, i: number): JSX.Element => <li key={i}>{a}</li>,
+												)}
 											</ul>
 										</div>
 									)}
@@ -189,7 +190,8 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 								"category",
 								<ul>
 									{employer.industries.map(
-										(a: string, i: number) => <li key={i}>{strings.industries[a]}</li>)}
+										(a: string, i: number): JSX.Element => <li key={i}>{strings.industries[a]}</li>,
+									)}
 								</ul>,
 							)}
 							{employer.location && getProfileRow(
@@ -259,7 +261,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 					{employer.childIds.length > 0 && (
 						<>
 							<h2>{strings.linkTypes.children}</h2>
-							{employer.childIds.map((id: string) => (
+							{employer.childIds.map((id: string): JSX.Element => (
 								<EmployerListItem
 									key={id}
 									employerId={id}
@@ -272,7 +274,7 @@ const EmployerPageDetails: React.FC<Props> = (props: Props): React.ReactElement 
 					{relatedEmployers.length > 0 && (
 						<>
 							<h2>{strings.linkTypes.related}</h2>
-							{relatedEmployers.map((value: [string, number]) => (
+							{relatedEmployers.map((value: [string, number]): JSX.Element => (
 								<EmployerListItem
 									key={value[0]}
 									employerId={value[0]}

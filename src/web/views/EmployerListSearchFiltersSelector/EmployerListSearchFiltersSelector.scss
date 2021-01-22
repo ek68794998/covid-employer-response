@@ -1,0 +1,38 @@
+@import "../Colors.scss";
+
+$checkbox-size: 16px;
+
+label.EmployerListSearchFiltersSelector {
+	align-items: center;
+	display: flex;
+	padding: 4px;
+	position: relative;
+
+	input {
+		appearance: none;
+		margin-right: 8px;
+		outline: none;
+		width: $checkbox-size;
+
+		&:checked + span::before {
+			background: $link-normal;
+			border-color: $link-normal;
+		}
+	}
+
+	span::before {
+		background: $background;
+		border: 2px solid $outline-color;
+		border-radius: 2px;
+		color: $background;
+		content: "\2714\fe0e";
+		height: $checkbox-size;
+		left: 3px;
+		line-height: 110%;
+		margin: 2px 8px 0 0;
+		position: absolute;
+		text-align: center;
+		transition: 0.1s all;
+		width: $checkbox-size;
+	}
+}

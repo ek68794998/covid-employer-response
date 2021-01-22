@@ -1,7 +1,7 @@
 import { Citation } from "./Citation";
 
-describe("Citation", () => {
-	test("initializes with default values", () => {
+describe("Citation", (): void => {
+	test("initializes with default values", (): void => {
 		const c: Citation = new Citation();
 
 		expect(c.positivity).toBe(0);

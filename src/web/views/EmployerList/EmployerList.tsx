@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { useSelector } from "react-redux";
 
 import { EmployerRecordMetadata } from "../../../common/EmployerRecordMetadata";
@@ -23,22 +23,16 @@ const EmployerList: React.FC = (): React.ReactElement => {
 
 	const listContext: EmployerRouteContextData = useContext(EmployerRouteContext);
 
-	const [ pageIndex, setPageIndex ] = useState(listContext.pageIndex);
-
-	useEffect(
-		(): void => {
-			listContext.setPageIndex(pageIndex);
-		},
-		[ pageIndex ]);
-
 	if (!employersList) {
 		return <LoadingIndicator />;
 	}
 
 	const filteredEmployers: EmployerRecordMetadata[] =
 		employersList
-			.filter((e: EmployerRecordMetadata) => EmployerListSearchFilter.isMatch(listContext.searchFilters, e))
-			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata) => {
+			.filter(
+				(e: EmployerRecordMetadata): boolean => EmployerListSearchFilter.isMatch(listContext.searchFilters, e),
+			)
+			.sort((a: EmployerRecordMetadata, b: EmployerRecordMetadata): number => {
 				const nameMatcher: RegExp = /^(The |A )?(.*)$/i;
 
 				const aName: string | undefined = nameMatcher.exec(a.shortName || a.name)?.[2];
@@ -55,17 +49,19 @@ const EmployerList: React.FC = (): React.ReactElement => {
 		);
 	}
 
+	const pageCount: number = Math.ceil(filteredEmployers.length / pageSize);
+
+	const pageIndex: number = Math.min(listContext.pageIndex, pageCount - 1);
+
 	const startIndex: number = pageIndex * pageSize;
 	const endIndex: number = startIndex + pageSize;
-
-	const pageCount: number = Math.ceil(filteredEmployers.length / pageSize);
 
 	const generatePageButton = (contents: JSX.Element, title: string, pageNumber: number): JSX.Element =>
 		<button
 			key={`${title}:${pageNumber}`}
 			className="App__BigButton"
 			disabled={pageNumber === pageIndex || pageNumber < 0 || pageNumber >= pageCount}
-			onClick={(): void => setPageIndex(pageNumber)}
+			onClick={(): void => listContext.setPageIndex(pageNumber)}
 		>
 			{contents}
 		</button>;

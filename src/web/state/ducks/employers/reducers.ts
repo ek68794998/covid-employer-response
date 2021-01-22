@@ -27,7 +27,7 @@ export const getEmployers = (state: EmployersState | null = null, action: any): 
 			itemsMetadata: {
 				...state?.itemsMetadata,
 				...(
-					payload.reduce((p: {}, c: EmployerRecordMetadata) => {
+					payload.reduce((p: Record<string, any>, c: EmployerRecordMetadata): Record<string, any> => {
 						const complete: EmployerRecordMetadata =
 							new EmployerRecordMetadata(
 								c.negativeCount,

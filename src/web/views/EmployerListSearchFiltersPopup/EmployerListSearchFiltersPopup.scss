@@ -17,38 +17,6 @@
 		margin: 0;
 		padding: 4px;
 	}
-
-	span {
-		align-items: center;
-		display: flex;
-		padding: 4px;
-
-		input {
-			appearance: none;
-			background: $background;
-			border: 2px solid $outline-color;
-			border-radius: 2px;
-			margin-left: 0;
-			margin-right: 8px;
-			outline: none;
-			padding: 8px;
-			position: relative;
-			transition: 0.1s all;
-
-			&:checked {
-				background: $link-normal;
-				border-color: $link-normal;
-
-				&::after {
-					color: $background;
-					content: "\2714";
-					left: 2px;
-					position: absolute;
-					top: -3.5px;
-				}
-			}
-		}
-	}
 }
 
 .EmployerListSearchFiltersPopup__Overlay {

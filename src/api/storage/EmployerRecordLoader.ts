@@ -88,7 +88,7 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 		loadedEmployer.lastUpdated = EmployerRecord.getLastUpdateDate(loadedEmployer).toISOString();
 
 		if (loadedEmployer.industries) {
-			loadedEmployer.industries.sort((a: string, b: string) => a.localeCompare(b));
+			loadedEmployer.industries.sort((a: string, b: string): number => a.localeCompare(b));
 		}
 
 		this.cachedItems[id] = loadedEmployer;
@@ -108,7 +108,7 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 			loadedEmployers.push(await this.getAsync(recordId, options));
 		}
 
-		this.cachedIds = loadedEmployers.map((e: EmployerRecord) => e.id);
+		this.cachedIds = loadedEmployers.map((e: EmployerRecord): string => e.id);
 
 		return loadedEmployers;
 	}
@@ -117,7 +117,7 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 		const employers: EmployerRecord[] = await this.getAllAsync(options);
 		const employersMap: { [key: string]: EmployerRecord } = {};
 
-		employers.forEach((e: EmployerRecord) => {
+		employers.forEach((e: EmployerRecord): void => {
 			employersMap[e.id] = e;
 		});
 
@@ -148,10 +148,10 @@ export class EmployerRecordLoader extends CachedDataFileLoader<EmployerRecord> {
 
 		const relationships: { [key: string]: string[] } = yaml.parse(fileContents);
 
-		Object.keys(relationships).forEach((parentId: string) => {
+		Object.keys(relationships).forEach((parentId: string): void => {
 			this.parentToChildrenMap[parentId] = relationships[parentId];
 
-			relationships[parentId].forEach((childId: string) => {
+			relationships[parentId].forEach((childId: string): void => {
 				this.childToParentMap[childId] = parentId;
 			});
 		});

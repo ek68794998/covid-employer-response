@@ -89,7 +89,7 @@ const EmployerListItem: React.FC<Props> = (props: Props): React.ReactElement | n
 	const { employerId, metric, onClick, showDetails } = props;
 
 	const employer: EmployerRecordMetadata | undefined =
-		useSelector((state: AppState) => getEmployerMetadata(state, employerId));
+		useSelector((state: AppState): EmployerRecordMetadata | undefined => getEmployerMetadata(state, employerId));
 
 	const containerClass: string =
 		`EmployerListItem__Container EmployerListItem__Container--${showDetails ? "Detailed" : "Simple"}`;

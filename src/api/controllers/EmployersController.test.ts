@@ -5,8 +5,8 @@ import EmployersController from "./EmployersController";
 const employerRecordLoader: EmployerRecordLoader =
 	new EmployerRecordLoader(process.env.RAZZLE_PUBLIC_DIR || "/", "employers");
 
-describe("EmployersController", () => {
-	test("can initialize routes without exploding", () => {
+describe("EmployersController", (): void => {
+	test("can initialize routes without exploding", (): void => {
 		const controller: EmployersController =
 			new EmployersController(employerRecordLoader);
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import renderer, { ReactTestRenderer } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
@@ -14,10 +14,10 @@ import EmployerListItem from "./EmployerListItem";
 
 jest.mock(
 	"../EmployerActionLinks/EmployerActionLinks",
-	() => mockComponent("EmployerActionLinks"));
+	(): any => mockComponent("EmployerActionLinks"));
 
-describe("<EmployerListItem />", () => {
-	test("renders standard without exploding", async () => {
+describe("<EmployerListItem />", (): void => {
+	test("renders standard without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
@@ -27,7 +27,7 @@ describe("<EmployerListItem />", () => {
 			strings: await getPlocStringsAsync(),
 		});
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
@@ -38,12 +38,12 @@ describe("<EmployerListItem />", () => {
 						/>
 					</BrowserRouter>
 				</Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("renders details without exploding", async () => {
+	test("renders details without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
@@ -53,7 +53,7 @@ describe("<EmployerListItem />", () => {
 			strings: await getPlocStringsAsync(),
 		});
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
@@ -64,8 +64,8 @@ describe("<EmployerListItem />", () => {
 						/>
 					</BrowserRouter>
 				</Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 });

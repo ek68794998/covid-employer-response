@@ -15,6 +15,6 @@ const controllers: RoutedControllerBase[] = [
 	new IndustriesController(employerRecordLoader),
 ];
 
-controllers.forEach((controller: RoutedControllerBase) => router.use("/", controller.router));
+controllers.forEach((controller: RoutedControllerBase): void => { router.use("/", controller.router); });
 
 export default router;

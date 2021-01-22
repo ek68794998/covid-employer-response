@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import renderer, { ReactTestRenderer } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { getPlocStringsAsync } from "../../../__tests__/TestUtils";
@@ -12,19 +12,19 @@ import configureStore from "../../state/configureStore";
 
 import EmployerCitation from "./EmployerCitation";
 
-describe("<EmployerCitation />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerCitation />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerCitation citation={new Citation()} />
 					</BrowserRouter>
 				</Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 });

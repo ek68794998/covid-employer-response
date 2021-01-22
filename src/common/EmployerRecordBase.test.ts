@@ -3,8 +3,8 @@ import { EmployerLocation } from "./EmployerLocation";
 import { EmployerRecord } from "./EmployerRecord";
 import { EmployerRecordBase } from "./EmployerRecordBase";
 
-describe("EmployerRecordBase", () => {
-	test("copyTo properly copies attributes", () => {
+describe("EmployerRecordBase", (): void => {
+	test("copyTo properly copies attributes", (): void => {
 		const record: EmployerRecord =
 			Object.assign(
 				new EmployerRecord(),

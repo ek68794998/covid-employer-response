@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import renderer, { ReactTestRenderer } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
@@ -19,17 +19,17 @@ import EmployerList from "./EmployerList";
 
 jest.mock(
 	"../EmployerListItem/EmployerListItem",
-	() => mockComponent("EmployerListItem"));
+	(): any => mockComponent("EmployerListItem"));
 
 jest.mock(
 	"../LoadingIndicator/LoadingIndicator",
-	() => mockComponent("LoadingIndicator"));
+	(): any => mockComponent("LoadingIndicator"));
 
-describe("<EmployerList />", () => {
-	test("renders without exploding", async () => {
+describe("<EmployerList />", (): void => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
@@ -38,12 +38,12 @@ describe("<EmployerList />", () => {
 						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("renders empty list of employers", async () => {
+	test("renders empty list of employers", async (): Promise<void> => {
 		const record: EmployerRecordMetadata = new EmployerRecordMetadata(0, 0, 0, "fair");
 
 		record.employeesBefore = new EmployerEmployeeProfile();
@@ -69,7 +69,7 @@ describe("<EmployerList />", () => {
 			searchFilters: filter,
 		};
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
@@ -78,12 +78,12 @@ describe("<EmployerList />", () => {
 						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("renders list of employers", async () => {
+	test("renders list of employers", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsMetadata: {
@@ -119,7 +119,7 @@ describe("<EmployerList />", () => {
 			searchFilters: filter,
 		};
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
@@ -128,8 +128,8 @@ describe("<EmployerList />", () => {
 						</EmployerRouteContext.Provider>
 					</BrowserRouter>
 				</Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 });

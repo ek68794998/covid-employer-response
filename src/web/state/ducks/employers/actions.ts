@@ -33,7 +33,7 @@ export const getEmployerByIdSuccess = (payload: EmployerRecord): GetEmployerById
 export const getEmployerById =
 	(id: string): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
 		(dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> =>
-			getEmployerByIdApi(id).then((result: GetEmployerByIdApiResponse) => {
+			getEmployerByIdApi(id).then((result: GetEmployerByIdApiResponse): void => {
 				if (result.employer) {
 					dispatch(getEmployerByIdSuccess(result.employer));
 				} else {
@@ -44,10 +44,10 @@ export const getEmployerById =
 export const getEmployersById =
 	(ids: string[]): ThunkAction<Promise<void>, GetEmployerByIdActionTypes, undefined, Action> =>
 		async (dispatch: React.Dispatch<GetEmployerByIdActionTypes>): Promise<void> => {
-			getEmployersByIdApi(ids).then((result: GetEmployersByIdApiResponse) => {
+			getEmployersByIdApi(ids).then((result: GetEmployersByIdApiResponse): void => {
 				if (result.employers) {
 					result.employers.forEach(
-						(employer: EmployerRecord) => dispatch(getEmployerByIdSuccess(employer)));
+						(employer: EmployerRecord): void => dispatch(getEmployerByIdSuccess(employer)));
 				} else {
 					dispatch(getEmployerByIdError());
 				}
@@ -65,7 +65,7 @@ export const getEmployersListSuccess = (payload: EmployerRecordMetadata[]): GetE
 
 export const getEmployersList =
 	(dispatch: React.Dispatch<GetEmployersListActionTypes>): Promise<void> =>
-		getEmployersListApi().then((result: GetEmployersListApiResponse) => {
+		getEmployersListApi().then((result: GetEmployersListApiResponse): void => {
 			if (result.employers) {
 				dispatch(getEmployersListSuccess(result.employers));
 			} else {

@@ -1,7 +1,7 @@
 import React from "react";
 import * as ReactRedux from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import renderer, { ReactTestRenderer } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { getPlocStringsAsync, mockComponent } from "../../../__tests__/TestUtils";
@@ -18,37 +18,37 @@ import EmployerPage from "./EmployerPage";
 
 jest.mock(
 	"../EmployerPageDetails/EmployerPageDetails",
-	() => mockComponent("EmployerPageDetails"));
+	(): any => mockComponent("EmployerPageDetails"));
 
 jest.mock(
 	"../LoadingIndicator/LoadingIndicator",
-	() => mockComponent("LoadingIndicator"));
+	(): any => mockComponent("LoadingIndicator"));
 
-describe("<EmployerPage />", () => {
-	beforeEach(() => {
+describe("<EmployerPage />", (): void => {
+	beforeEach((): void => {
 		jest.spyOn(ReactRedux, "useDispatch").mockReturnValue(jest.fn());
 	});
 
-	afterEach(() => {
+	afterEach((): void => {
 		(ReactRedux.useDispatch as any).mockRestore();
 	});
 
-	test("renders without exploding", async () => {
+	test("renders without exploding", async (): Promise<void> => {
 		const store: Store<AppState, AnyAction> = configureStore({ strings: await getPlocStringsAsync() });
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<ReactRedux.Provider store={store}>
 					<BrowserRouter>
 						<EmployerPage employerId="foo" />
 					</BrowserRouter>
 				</ReactRedux.Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 
-	test("displays an employer record", async () => {
+	test("displays an employer record", async (): Promise<void> => {
 		const fakeEmployer: Partial<EmployerRecordBase> = {
 			employeesBefore: new EmployerEmployeeProfile(),
 			id: "e1",
@@ -68,15 +68,15 @@ describe("<EmployerPage />", () => {
 			strings: await getPlocStringsAsync(),
 		});
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<ReactRedux.Provider store={store}>
 					<BrowserRouter>
 						<EmployerPage employerId={fakeEmployer.id || ""} />
 					</BrowserRouter>
 				</ReactRedux.Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 });

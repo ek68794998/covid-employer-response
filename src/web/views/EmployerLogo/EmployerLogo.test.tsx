@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import renderer, { ReactTestRendererJSON } from "react-test-renderer";
+import renderer, { ReactTestRenderer } from "react-test-renderer";
 import { AnyAction, Store } from "redux";
 
 import { EmployerRecord } from "../../../common/EmployerRecord";
@@ -11,8 +11,8 @@ import configureStore from "../../state/configureStore";
 
 import EmployerLogo from "./EmployerLogo";
 
-describe("<EmployerLogo />", () => {
-	test("renders without exploding", () => {
+describe("<EmployerLogo />", (): void => {
+	test("renders without exploding", (): void => {
 		const store: Store<AppState, AnyAction> = configureStore({});
 
 		const employer: EmployerRecord = {
@@ -20,15 +20,15 @@ describe("<EmployerLogo />", () => {
 			image: "test.svg#123",
 		};
 
-		const renderedValue: ReactTestRendererJSON | null =
+		const renderedValue: ReactTestRenderer =
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
 						<EmployerLogo employer={employer} />
 					</BrowserRouter>
 				</Provider>,
-			).toJSON();
+			);
 
-		expect(renderedValue).toMatchSnapshot();
+		expect(renderedValue.toJSON()).toMatchSnapshot();
 	});
 });

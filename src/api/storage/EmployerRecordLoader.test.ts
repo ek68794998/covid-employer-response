@@ -1,7 +1,7 @@
 import { EmployerRecordLoader } from "./EmployerRecordLoader";
 
-describe("EmployerRecordLoader", () => {
-	test("throws exceptions if data folder does not exist", async () => {
+describe("EmployerRecordLoader", (): void => {
+	test("throws exceptions if data folder does not exist", async (): Promise<void> => {
 		const loader: EmployerRecordLoader =
 			new EmployerRecordLoader("./not-real", "employers");
 
@@ -10,7 +10,7 @@ describe("EmployerRecordLoader", () => {
 		expect(loader.getAllAsync({})).rejects.toBeInstanceOf(Error);
 	});
 
-	test("throws exception if loadAsync cannot find data file", async () => {
+	test("throws exception if loadAsync cannot find data file", async (): Promise<void> => {
 		const loader: EmployerRecordLoader =
 			new EmployerRecordLoader("./public", "employers");
 

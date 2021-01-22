@@ -16,7 +16,7 @@ const EmployerCitationList: React.FC<Props> = (props: Props): React.ReactElement
 
 	return (
 		<ul className="EmployerCitationList__Citations">
-			{citations.map((c: Citation, i: number) => (
+			{citations.map((c: Citation, i: number): JSX.Element => (
 				<li key={i}>
 					<EmployerCitation citation={c} />
 				</li>

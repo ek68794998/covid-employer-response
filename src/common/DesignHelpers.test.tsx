@@ -2,7 +2,7 @@
 
 import { DesignHelpers } from "./DesignHelpers";
 
-describe("DesignHelpers", () => {
+describe("DesignHelpers", (): void => {
 	test.each([
 		[ "add", undefined ],
 		[ "add", "" ],
@@ -12,7 +12,7 @@ describe("DesignHelpers", () => {
 		[ "full_icon", "" ],
 		[ "full_icon", "ClassName" ],
 		[ "full_icon", "ClassName OtherClassName" ],
-	])("creates a material icon for %p with class %p (%#)", (icon: string, className?: string) => {
+	])("creates a material icon for %p with class %p (%#)", (icon: string, className?: string): void => {
 		expect(DesignHelpers.materialIcon(icon, className)).toMatchSnapshot();
 	});
 });

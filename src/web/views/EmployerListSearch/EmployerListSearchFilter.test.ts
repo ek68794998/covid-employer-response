@@ -4,7 +4,7 @@ import { EmployerRecord } from "../../../common/EmployerRecord";
 
 import { EmployerListSearchFilter } from "./EmployerListSearchFilter";
 
-describe("EmployerListSearchFilter", () => {
+describe("EmployerListSearchFilter", (): void => {
 	const createEmployerRecordDataRow = (overrides: Partial<EmployerRecord>): EmployerRecord => {
 		const base: EmployerRecord = new EmployerRecord();
 
@@ -164,7 +164,7 @@ describe("EmployerListSearchFilter", () => {
 		],
 	])(
 		"properly matches inputs with isMatch (%# %p)",
-		(fo: {}, ro: {}, expected: boolean) => {
+		(fo: Record<string, any>, ro: Record<string, any>, expected: boolean): void => {
 			const f: EmployerListSearchFilter = createFilterDataRow(fo);
 			const r: EmployerRecord = createEmployerRecordDataRow(ro);
 

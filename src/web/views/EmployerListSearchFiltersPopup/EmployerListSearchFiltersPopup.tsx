@@ -26,7 +26,7 @@ interface Props extends RouteProps {
 const EmployerListSearchFiltersPopup: React.FC<Props> = (props: Props): React.ReactElement => {
 	const { childProps, multiselect, onClose, title } = props;
 
-	const children: JSX.Element[] = childProps.map((p: SelectorProps, i: number) => (
+	const children: JSX.Element[] = childProps.map((p: SelectorProps, i: number): JSX.Element => (
 		<EmployerListSearchFiltersSelector
 			key={i}
 			initialValue={p.initialValue}

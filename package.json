@@ -6,81 +6,86 @@
     "build": "razzle build",
     "build:stats": "cross-env STATS=yes razzle build && webpack-bundle-analyzer build\\public\\stats.json",
     "debug": "razzle start --inspect --inspect-port=9230",
-    "lint:ts": "eslint --ext=jsx,ts,tsx src",
+    "lint:ts": "eslint --ext=js,jsx,ts,tsx src",
     "pretest": "node ploc.js",
     "start": "razzle start",
     "start:prod": "node build/server.js",
     "test": "razzle test --env=jsdom",
-    "test:ci": "npm run pretest && cross-env CI=true razzle test --env=jsdom --watchAll=false",
+    "test:ci": "npm run pretest && cross-env CI=true razzle test --env=jsdom --coverage --watchAll=false",
     "test:coverage": "npm run pretest && razzle test --env=jsdom --coverage"
   },
   "dependencies": {
     "accept-language-parser": "^1.5.0",
     "deepmerge": "^4.2.2",
-    "express": "^4.16.3",
-    "prop-types": "^15.7.2",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-helmet": "^6.0.0",
-    "react-markdown": "^4.3.1",
-    "react-redux": "^7.0.3",
-    "react-router-dom": "^5.1.2",
-    "react-spinners": "^0.6.1",
-    "redux": "^4.0.1",
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^5.0.3",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-spinners": "^0.10.4",
+    "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "yaml": "^1.8.3"
+    "yaml": "^1.10.0"
   },
   "devDependencies": {
     "@types/accept-language-parser": "^1.5.1",
     "@types/express": "^4.11.1",
-    "@types/jest": "^25.1.4",
+    "@types/jest": "^26.0.16",
     "@types/node": "^12.12.31",
-    "@types/react": "^16.3.13",
-    "@types/react-dom": "^16.0.5",
-    "@types/react-helmet": "^6.0.0",
-    "@types/react-redux": "^7.0.8",
-    "@types/react-router-dom": "^5.1.3",
-    "@types/react-test-renderer": "^16.9.2",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-redux": "^7.1.12",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/react-test-renderer": "^17.0.0",
     "@types/webpack-env": "^1.13.6",
-    "@types/yaml": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^2.27.0",
-    "@typescript-eslint/eslint-plugin-tslint": "^2.27.0",
-    "@typescript-eslint/parser": "^2.27.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
     "cross-env": "^7.0.2",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-prefer-arrow": "^1.1.7",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-unused-imports": "^0.1.2",
-    "jest": "^25.2.3",
-    "razzle": "^3.0.0",
-    "razzle-plugin-scss": "^3.0.0",
-    "razzle-plugin-typescript": "^3.0.0",
-    "react-test-renderer": "^16.13.1",
-    "ts-jest": "^25.0.0",
-    "tslint": "^5.19.0",
-    "typescript": "^3.2.2",
+    "eslint": "^7.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-unused-imports": "^1.0.1",
+    "jest": "^26.6.3",
+    "razzle": "^3.3.8",
+    "razzle-plugin-scss": "^3.3.8",
+    "razzle-plugin-typescript": "^3.3.8",
+    "react-test-renderer": "^17.0.1",
+    "ts-jest": "^26.4.4",
+    "tslint": "^6.1.3",
+    "typescript": "4.0.3",
     "webpack-bundle-analyzer": "^3.6.1",
     "webpack-stats-plugin": "^0.3.1"
   },
   "jest": {
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest",
-      "\\.css$": "<rootDir>/node_modules/razzle/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
-    },
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*(spec|test).(ts|js)?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).(ts|js)?(x)"
-    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js",
       "json"
     ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 60,
+        "lines": 75,
+        "statements": 75
+      }
+    },
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}"
-    ]
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.(spec|test).(ts|tsx|js|jsx)"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest",
+      "\\.css$": "<rootDir>/node_modules/razzle/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
+    }
   }
 }

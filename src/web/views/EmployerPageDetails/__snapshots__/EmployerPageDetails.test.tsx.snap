@@ -154,7 +154,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
     <h1
       className="EmployerPageDetails__Title"
     >
-      
+      Employer
     </h1>
     [component: EmployerRatingPill employer=([object Object]) isAnnotated=(undefined) /]
   </div>
@@ -189,7 +189,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
             <td
               className="EmployerPageDetails__ProfileValue"
             >
-              
+              Employer
             </td>
           </tr>
           <tr>
@@ -211,7 +211,7 @@ exports[`<EmployerPageDetails /> renders without exploding 1`] = `
                 href="/submit"
                 onClick={[Function]}
               >
-                §úβ₥ïƭ úƥδáƭè ƒôř employer
+                §úβ₥ïƭ úƥδáƭè ƒôř Employer
               </a>
             </td>
           </tr>

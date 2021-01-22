@@ -26,16 +26,16 @@ const EmployerPage: React.FC<Props> = (props: Props): React.ReactElement => {
 	const employerId: string = props.employerId;
 
 	const hasLoadedEmployers: boolean =
-		useSelector((state: AppState) => !!getEmployersList(state)?.length);
+		useSelector((state: AppState): boolean => !!getEmployersList(state)?.length);
 
 	const employerExists: boolean =
-		useSelector((state: AppState) => !!getEmployerMetadata(state, employerId));
+		useSelector((state: AppState): boolean => !!getEmployerMetadata(state, employerId));
 
 	const employer: EmployerRecord | undefined =
-		useSelector((state: AppState) => getEmployer(state, employerId));
+		useSelector((state: AppState): EmployerRecord | undefined => getEmployer(state, employerId));
 
 	useEffect(
-		() => {
+		(): void => {
 			dispatch(fetchEmployerById(employerId));
 		},
 		[ employerId ]);
