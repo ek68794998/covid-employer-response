@@ -257,15 +257,19 @@ footer {
 		}
 	}
 
-	footer .HeaderFooter__Container {
-		flex-direction: column;
+	footer {
+		padding: 0 5%;
 
-		div {
-			padding: 12px;
-			text-align: center !important;
-
-			&:first-child {
-				padding-bottom: 0;
+		.HeaderFooter__Container {
+			flex-direction: column;
+	
+			div {
+				padding: 12px;
+				text-align: center !important;
+	
+				&:first-child {
+					padding-bottom: 0;
+				}
 			}
 		}
 	}
