@@ -6,12 +6,12 @@
     "build": "razzle build",
     "build:stats": "cross-env STATS=yes razzle build && webpack-bundle-analyzer build\\public\\stats.json",
     "debug": "razzle start --inspect --inspect-port=9230",
-    "lint:ts": "eslint --ext=jsx,ts,tsx src",
+    "lint:ts": "eslint --ext=js,jsx,ts,tsx src",
     "pretest": "node ploc.js",
     "start": "razzle start",
     "start:prod": "node build/server.js",
     "test": "razzle test --env=jsdom",
-    "test:ci": "npm run pretest && cross-env CI=true razzle test --env=jsdom --watchAll=false",
+    "test:ci": "npm run pretest && cross-env CI=true razzle test --env=jsdom --coverage --watchAll=false",
     "test:coverage": "npm run pretest && razzle test --env=jsdom --coverage"
   },
   "dependencies": {
@@ -47,11 +47,11 @@
     "@typescript-eslint/eslint-plugin-tslint": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "cross-env": "^7.0.2",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-prefer-arrow": "^1.1.7",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-unused-imports": "^0.1.2",
+    "eslint": "^7.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-unused-imports": "^1.0.1",
     "jest": "^25.2.3",
     "razzle": "^3.0.0",
     "razzle-plugin-scss": "^3.0.0",
@@ -64,23 +64,30 @@
     "webpack-stats-plugin": "^0.3.1"
   },
   "jest": {
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest",
-      "\\.css$": "<rootDir>/node_modules/razzle/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
-    },
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*(spec|test).(ts|js)?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).(ts|js)?(x)"
-    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js",
       "json"
     ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 75,
+        "statements": 75
+      }
+    },
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}"
-    ]
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.(spec|test).(ts|tsx|js|jsx)"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest",
+      "\\.css$": "<rootDir>/node_modules/razzle/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
+    }
   }
 }
