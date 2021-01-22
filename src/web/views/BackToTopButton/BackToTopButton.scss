@@ -14,8 +14,10 @@ $top-button-size-small: 32px;
 	position: fixed;
 	height: $top-button-size;
 	outline: none;
+	padding: 0;
 	pointer-events: initial;
 	right: ($page-padding / 2);
+	text-align: center;
 	width: $top-button-size;
 	z-index: 20;
 
@@ -34,7 +36,6 @@ $top-button-size-small: 32px;
 
 		i {
 			font-size: 24px;
-			margin-left: -2px;
 		}
 	}
 }
