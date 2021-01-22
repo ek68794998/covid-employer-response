@@ -17,9 +17,9 @@ header, footer {
 
 	.HeaderFooter__Container {
 		display: flex;
-		height: $footer-height;
 		margin: 0 auto;
 		max-width: 1440px;
+		min-height: $footer-height;
 	}
 }
 
@@ -256,12 +256,12 @@ footer {
 	footer .HeaderFooter__Container {
 		flex-direction: column;
 
-		span {
-			margin-bottom: 12px;
+		div {
+			padding: 12px;
 			text-align: center !important;
 
 			&:first-child {
-				margin-top: 12px;
+				padding-bottom: 0;
 			}
 		}
 	}

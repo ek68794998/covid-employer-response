@@ -14,12 +14,12 @@ const HeaderMenu: React.FC = (): React.ReactElement => {
 	return (
 		<footer>
 			<div className="HeaderFooter__Container">
-				<span id="maintained-by">
+				<div id="maintained-by">
 					Maintained by <a href={AuthorUrl}>Eric Kumlin</a>
-				</span>
-				<span id="project-source">
+				</div>
+				<div id="project-source">
 					<em>{strings.appTitle}</em> is open-source and open-data, hosted on <a href={ProjectUrl}>GitHub</a>.
-				</span>
+				</div>
 			</div>
 		</footer>
 	);

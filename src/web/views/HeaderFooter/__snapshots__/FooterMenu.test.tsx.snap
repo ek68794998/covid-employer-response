@@ -5,7 +5,7 @@ exports[`<FooterMenu /> renders without exploding 1`] = `
   <div
     className="HeaderFooter__Container"
   >
-    <span
+    <div
       id="maintained-by"
     >
       Maintained by 
@@ -14,8 +14,8 @@ exports[`<FooterMenu /> renders without exploding 1`] = `
       >
         Eric Kumlin
       </a>
-    </span>
-    <span
+    </div>
+    <div
       id="project-source"
     >
       <em>
@@ -28,7 +28,7 @@ exports[`<FooterMenu /> renders without exploding 1`] = `
         GitHub
       </a>
       .
-    </span>
+    </div>
   </div>
 </footer>
 `;
