@@ -40,6 +40,9 @@ describe("<EmployerPageDetails />", (): void => {
 	test("renders without exploding", async (): Promise<void> => {
 		const e: EmployerRecord = new EmployerRecord();
 
+		e.id = "employer";
+		e.name = "Employer";
+
 		const store: Store<AppState, AnyAction> = configureStore({
 			employers: {
 				itemsComplete: {
@@ -56,7 +59,7 @@ describe("<EmployerPageDetails />", (): void => {
 			renderer.create(
 				<Provider store={store}>
 					<BrowserRouter>
-						<EmployerPageDetails employer={new EmployerRecord()} />
+						<EmployerPageDetails employer={e} />
 					</BrowserRouter>
 				</Provider>,
 			);
