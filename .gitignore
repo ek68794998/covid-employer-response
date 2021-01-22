@@ -4,6 +4,9 @@ _dev/**/*
 # Build output
 build/**/*
 
+# Backups
+*.bkp
+
 # Logs
 logs
 *.log
