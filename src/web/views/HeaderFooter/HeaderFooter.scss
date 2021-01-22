@@ -19,7 +19,6 @@ header, footer {
 		display: flex;
 		margin: 0 auto;
 		max-width: 1440px;
-		min-height: $footer-height;
 	}
 }
 
@@ -28,6 +27,10 @@ header {
 	color: $background;
 	position: relative;
 	z-index: 12;
+
+	.HeaderFooter__Container {
+		height: $footer-height;
+	}
 
 	#brand {
 		align-self: center;
@@ -149,6 +152,7 @@ footer {
 	.HeaderFooter__Container {
 		align-items: center;
 		justify-content: space-between;
+		min-height: $footer-height;
 		opacity: 0.8;
 		transition: 0.2s opacity;
 
