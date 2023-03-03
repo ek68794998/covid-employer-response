@@ -1,9 +1,9 @@
-![Continuous integration](https://github.com/ekumlin/covid-employer-response/workflows/Continuous%20integration/badge.svg)
+![Continuous integration](https://github.com/ek68794998/covid-employer-response/workflows/Continuous%20integration/badge.svg)
 
 # Cempres (**C**oronavirus **Emp**loyer **Res**ponse Tracker)
 This website tracks and cites sources for information about how employers have acted during the Coronavirus (COVID-19) pandemic. Cempres aims to have an open, Wikipedia-style organization of data where users can freely submit, edit, or change information regarding employers' response on the pandemic. 
 
-The main website can be found here: https://cempres.org/
+The main website was previously found at `cempres.org`.
 
 ## Contributing information
 There are multiple ways to contribute employer information to this project.
@@ -28,7 +28,7 @@ If you'd like to run the service locally to make changes, follow the steps below
 1. [Yarn](https://classic.yarnpkg.com/en/docs/install)
 
 ### Building and running
-1. Clone the repository: `git clone https://github.com/ekumlin/covid-employer-response.git`
+1. Clone the repository: `git clone https://github.com/ek68794998/covid-employer-response.git`
 1. Navigate into the repository: `cd covid-employer-response`
 1. Install packages: `yarn install`
 1. Start the service: `yarn start`
